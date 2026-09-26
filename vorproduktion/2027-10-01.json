@@ -1,0 +1,864 @@
+{
+  "datum": "2027-10-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "anlass",
+        "themaId": "vwgo-666",
+        "themaTitel": "Anordnung der sofortigen Vollziehung",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "sachen-504",
+        "themaTitel": "Recht zum Besitz",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-732",
+        "themaTitel": "Beihilfe",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "schuldbt-490"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "schuldbt-490"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "strafbt-737"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "merksatz",
+        "themaId": "verwalt-640"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:53",
+        "art": "begriff",
+        "themaId": "staat-595"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "fehler",
+        "themaId": "revision-875"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "anlass",
+      "themaId": "vwgo-666",
+      "poolTitel": "Anordnung der sofortigen Vollziehung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 II Nr. 4, III VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-12",
+        "2027-03-29",
+        "2027-08-26"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "sachen-504",
+      "poolTitel": "Recht zum Besitz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 986 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-27",
+        "2027-01-28",
+        "2027-03-07"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-732",
+      "poolTitel": "Beihilfe",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 27 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-12",
+        "2027-09-12",
+        "2027-09-12"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-490",
+      "poolTitel": "Verjährung von Werkmängelansprüchen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 634a BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-490",
+      "poolTitel": "Verjährung von Werkmängelansprüchen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 634a BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-737",
+      "poolTitel": "Totschlag und Tötungsvorsatz",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 212 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-12",
+        "2027-06-11",
+        "2027-06-13"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "verwalt-640",
+      "poolTitel": "Bekanntgabe des Verwaltungsakts",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 41 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-26",
+        "2027-04-28",
+        "2027-07-24"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "staat-595",
+      "poolTitel": "Ausschließliche und konkurrierende Gesetzgebung",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 71-74 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-26",
+        "2027-07-09",
+        "2027-07-09"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "revision-875",
+      "poolTitel": "Welche Fristen und Formen gelten für Einlegung und Begründung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 32d StPO",
+        "§ 341 StPO",
+        "§ 344 StPO",
+        "§ 345 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-28",
+        "2027-07-28",
+        "2027-07-30"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "anlass",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-666",
+      "slug": "2027-10-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gute Gründe für den Bescheid sind keine für den Sofortvollzug",
+          "titelZeilen": [
+            "Gute Gründe für den",
+            "Bescheid sind keine",
+            "für den Sofortvollzug"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Vollzugsinteresse extra begründen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Zum Semesterstart ein Klassiker aus dem Eilrechtsschutz: Die Behörde untersagt G den Betrieb seiner Gaststätte und ordnet die sofortige Vollziehung an. Begründung: „Die Untersagung ist aus den genannten Gründen rechtmäßig und daher sofort zu vollziehen.“ G beantragt Eilrechtsschutz. Mit Erfolg?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Statthaft",
+              "text": "Antrag auf Wiederherstellung der aufschiebenden Wirkung, § 80 Abs. 5 S. 1 Alt. 2 VwGO."
+            },
+            {
+              "titel": "2. Formelle Rechtmäßigkeit der Anordnung",
+              "text": "Zuständig ist die Ausgangs- oder Widerspruchsbehörde. Eine Anhörung verlangt die h.M. nicht."
+            },
+            {
+              "titel": "3. Schriftliche Begründung",
+              "text": "§ 80 Abs. 3 S. 1 VwGO verlangt das besondere Interesse an der sofortigen Vollziehung – bezogen auf den Einzelfall."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Die Begründung wiederholt nur die Rechtmäßigkeit des Bescheids. Sie genügt nicht; der Antrag hat schon deshalb Erfolg."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Denkweg hakt",
+          "text": "Das Interesse am Erlass des Bescheids ist nicht dasselbe wie das Interesse, ihn schon vor Bestandskraft durchzusetzen. Die Begründung muss erklären, warum gerade hier nicht bis zum Ende des Rechtsbehelfsverfahrens gewartet werden kann – formelhafte Sätze reichen nicht."
+        },
+        {
+          "art": "text",
+          "titel": "Folgen des Begründungsmangels",
+          "punkte": [
+            "Das Gericht prüft die Interessenabwägung dann nicht mehr",
+            "Nach verbreiteter Ansicht hebt es nur die Vollziehungsanordnung auf",
+            "Die Behörde kann die Anordnung mit ordnungsgemäßer Begründung neu erlassen"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Warum der Bescheid rechtmäßig ist, sagt nichts darüber, warum er sofort vollzogen werden muss – genau das verlangt § 80 Abs. 3 S. 1 VwGO."
+        },
+        {
+          "art": "cta",
+          "titel": "Anordnung nach Nr. 4 prüfen",
+          "punkte": [
+            "Zuständige Behörde?",
+            "Schriftliche Begründung?",
+            "Einzelfallbezogenes Vollzugsinteresse?",
+            "Dann Interessenabwägung"
+          ],
+          "icons": [
+            "gebaeude",
+            "dokument",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Gute Gründe für den Bescheid sind keine Gründe für den Sofortvollzug. § 80 Abs. 3 S. 1 VwGO verlangt eine schriftliche, einzelfallbezogene Begründung des besonderen Vollzugsinteresses. Wiederholt die Behörde nur, warum der Bescheid rechtmäßig ist, hat der Antrag nach § 80 Abs. 5 VwGO schon deshalb Erfolg. Speichern für die erste Eilrechtsklausur im Semester.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#eilrechtsschutz",
+        "#80vwgo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sofortvollzug: Begründung nach § 80 III VwGO",
+      "coverText": "Vollzugsinteresse extra begründen",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Wer sofort vollziehen will, braucht eine eigene Begründung für die Eile – nicht nur für die Entscheidung.",
+        "handlung": "{B} tries to push a sealed document through an express hatch, but {A} hovers in front of the hatch and holds out an empty second form that still needs to be filled in.",
+        "hinweisRegie": "Place the note in the free space next to the empty second form, slightly tilted toward it, so the express hatch and the blocked document stay visible without covering the faces.",
+        "alternative": "{A} holds a stopwatch in front of a fast lane gate that stays closed, while {B} waves only a normal ticket."
+      },
+      "bildSzene": "express hatch blocked, empty form offered",
+      "bildSzeneAlt": "fast lane gate stays closed",
+      "quellen": [
+        "§ 80 Abs. 2 S. 1 Nr. 4 VwGO",
+        "§ 80 Abs. 3 S. 1 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "Themenpool: vwgo-666"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:43:49.770Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-504",
+      "slug": "2027-10-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Untermieter ohne Erlaubnis: herausgeben – aber an wen?",
+          "titelZeilen": [
+            "Untermieter ohne",
+            "Erlaubnis: heraus-",
+            "geben – an wen?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 986 Abs. 1 S. 2 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "E vermietet M eine Garage. M überlässt sie ohne Erlaubnis des E an U, der dort sein Motorrad abstellt. E verlangt von U die Herausgabe der Garage an sich selbst. Der Mietvertrag zwischen E und M läuft noch. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. § 985 BGB",
+              "text": "E ist Eigentümer, U unmittelbarer Besitzer. Grundsätzlich kann E herausverlangen."
+            },
+            {
+              "titel": "2. Eigenes Recht zum Besitz?",
+              "text": "U hat nur einen Vertrag mit M – gegenüber E wirkt der nicht."
+            },
+            {
+              "titel": "3. Abgeleitetes Recht",
+              "text": "U leitet sein Recht von M ab (§ 986 Abs. 1 S. 1 Alt. 2 BGB). M darf besitzen, aber ohne Erlaubnis nicht weiter überlassen (§ 540 BGB)."
+            },
+            {
+              "titel": "4. Rechtsfolge",
+              "text": "§ 986 Abs. 1 S. 2 BGB: E kann nur Herausgabe an M verlangen – an sich selbst nur, wenn M den Besitz nicht übernehmen kann oder will."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Viele lassen den Anspruch voll durchgehen, weil U „kein Recht zum Besitz“ habe. Übersehen wird § 986 Abs. 1 S. 2 BGB: Solange M besitzen darf, soll E über § 985 BGB nicht mehr bekommen, als ihm der Mietvertrag lässt."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "E kann von U Herausgabe verlangen, aber grundsätzlich nur an M. Gegen M selbst bleiben E die mietrechtlichen Rechte, etwa Unterlassung der unerlaubten Überlassung und unter Umständen die Kündigung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Darf der Mittelsmann besitzen, aber nicht weitergeben, geht die Herausgabe an ihn zurück – nicht an den Eigentümer."
+        },
+        {
+          "art": "cta",
+          "titel": "Recht zum Besitz prüfen",
+          "punkte": [
+            "Eigenes Besitzrecht?",
+            "Abgeleitet vom Mittelsmann?",
+            "Überlassung erlaubt?",
+            "Sonst: Herausgabe an ihn"
+          ],
+          "icons": [
+            "schluessel",
+            "personen",
+            "vertrag",
+            "tuer"
+          ]
+        }
+      ],
+      "caption": "Untermieter ohne Erlaubnis: Herausgeben muss er – aber an wen? § 986 Abs. 1 S. 2 BGB gibt die Antwort: Der Eigentümer kann grundsätzlich nur Herausgabe an den Hauptmieter verlangen, der zum Besitz berechtigt, aber nicht zur Überlassung befugt war. An sich selbst nur, wenn der Hauptmieter nicht übernehmen kann oder will. Speichern für die nächste EBV-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#986bgb",
+        "#985bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Untermieter: Herausgabe an den Hauptmieter",
+      "coverText": "§ 986 Abs. 1 S. 2 BGB",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Der Eigentümer bekommt die Sache nicht sofort zurück, sondern erst einmal geht sie an den berechtigten Mittelsmann.",
+        "handlung": "{A} carries a heavy crystal out of a small storage shed and, instead of handing it to the owner waiting at the gate, places it into the arms of {B} standing halfway between.",
+        "hinweisRegie": "Place the note in the free space between the shed and {B}, slightly tilted toward the handover, so the waiting owner at the gate and the crystal remain visible and the faces stay clear.",
+        "alternative": "{B} passes a key along a short chain of three hands, and the key stops at the middle hand instead of reaching the last one."
+      },
+      "bildSzene": "crystal handed to middle person",
+      "bildSzeneAlt": "key stops at middle hand",
+      "quellen": [
+        "§ 985 BGB",
+        "§ 986 Abs. 1 BGB",
+        "§ 540 BGB",
+        "Themenpool: sachen-504"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:43:49.770Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-732",
+      "slug": "2027-10-01-b3",
+      "titelZeilen": [
+        "Nur seinen Job",
+        "gemacht – und doch",
+        "Gehilfe"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nur seinen Job gemacht – und trotzdem Gehilfe",
+          "unter": "Beihilfe · § 27 StGB",
+          "text": "Auch ein alltägliches Geschäft kann Hilfe zur Tat sein.",
+          "norm": "§ 27 StGB",
+          "icon": "laden",
+          "sprecher": "Ein ganz normaler Verkauf – und trotzdem Beihilfe. Der Baumarkt verkauft ein Brecheisen, der Kunde bricht damit ein. Wann ist der Verkäufer Gehilfe?",
+          "marken": [
+            "Alltagsgeschäft"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Objektiv: Hilfeleisten",
+          "text": "Jede Förderung der Haupttat genügt – auch durch Alltagshandlungen.",
+          "norm": "§ 27 Abs. 1 StGB",
+          "sprecher": "Schritt eins: Objektiv hilft, wer die Haupttat fördert oder erleichtert. Das Brecheisen fördert den Einbruch. Objektiv liegt also Hilfeleisten vor.",
+          "marken": [
+            "gefördert"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Das Problem: neutrale Handlung",
+          "text": "Berufstypisches Verhalten – strafbar nur unter engeren Voraussetzungen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Das Problem. Verkaufen ist berufstypisch und sozial üblich. Die Rechtsprechung schränkt die Beihilfe deshalb über den Vorsatz ein.",
+          "marken": [
+            "neutral?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Er weiß es",
+          "text": "Kennt er den Tatentschluss, ist sein Handeln Beihilfe.",
+          "norm": null,
+          "sprecher": "Schritt drei: Weiß der Verkäufer, dass der Kunde damit einbrechen will, verliert sein Handeln den Alltagscharakter. Dann ist es Beihilfe.",
+          "marken": [
+            "Wissen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Er hält es nur für möglich",
+          "text": "Grundsätzlich keine Beihilfe – außer der Kunde ist erkennbar tatgeneigt.",
+          "norm": null,
+          "sprecher": "Schritt vier: Hält er es nur für möglich, ist das grundsätzlich keine Beihilfe. Anders, wenn das Risiko so hoch ist, dass er sich einen erkennbar tatgeneigten Täter angelegen sein lässt.",
+          "marken": [
+            "erkennbar tatgeneigt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Literatur",
+          "text": "Andere lösen das Problem schon im objektiven Tatbestand.",
+          "norm": null,
+          "sprecher": "Kurz zum Streit: Teile der Literatur setzen schon objektiv an, etwa über die Frage, ob die Handlung einen deliktischen Sinnbezug hat.",
+          "marken": [
+            "objektive Lösung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Wissen macht den Unterschied",
+          "text": "Weiß er es: Beihilfe. Ahnt er es nur: grundsätzlich nicht.",
+          "norm": "§ 27 StGB",
+          "sprecher": "Merke: Bei Alltagsgeschäften entscheidet das Wissen. Kennt der Helfer den Tatplan, ist er Gehilfe. Ahnt er ihn nur, grundsätzlich nicht.",
+          "marken": [
+            "Wissen vs. Ahnen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die AT-Klausur speichern",
+          "text": "Speichern für den nächsten Beteiligungsfall.",
+          "sprecher": "Speicher dir das für deinen nächsten Beteiligungsfall.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Nur seinen Job gemacht – und trotzdem Gehilfe? Bei berufstypischen, neutralen Handlungen stellt die Rspr. auf den Vorsatz ab: Weiß der Helfer vom Tatentschluss, ist es Beihilfe (§ 27 StGB). Hält er die Tat nur für möglich, grundsätzlich nicht – außer bei einem erkennbar tatgeneigten Täter. Teile der Literatur lösen das schon objektiv. Speichern für den nächsten Beteiligungsfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#beihilfe",
+        "#27stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Neutrale Beihilfe: Wissen entscheidet",
+      "coverText": "Wissen macht den Unterschied",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Ein alltägliches Geschäft wird erst dann zur Hilfe, wenn der Helfer den Tatplan kennt.",
+        "handlung": "{A} hands a crowbar across a shop counter to a hooded customer, while {B} stands behind the customer and reveals a crumpled plan sticking out of the customer's pocket.",
+        "hinweisRegie": "Place the note in the free space above the shop counter, slightly tilted toward the crumpled plan, so the handover and the revealed plan stay visible and nobody's face is covered.",
+        "alternative": "{B} sells a ladder to a customer, and {A} holds up a torch that lights up only half of the customer's intentions."
+      },
+      "bildSzene": "crowbar sold, plan in pocket",
+      "bildSzeneAlt": "ladder sold under half light",
+      "quellen": [
+        "§ 27 StGB",
+        "Themenpool: strafat-732"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:43:49.774Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-490",
+      "ueberzeile": "Prüfungsfrage Werkvertragsrecht",
+      "titel": "Die Werkstatt repariert die Bremsen von Bs Auto mangelhaft. Wann verjähren Bs Mängelansprüche?",
+      "optionen": [
+        "In drei Jahren ab Ende des Jahres der Kenntnis",
+        "In zwei Jahren ab der Abnahme",
+        "In fünf Jahren ab der Abnahme"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 634a BGB",
+        "Themenpool: schuldbt-490"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:43:49.774Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-490",
+      "ueberzeile": "Auflösung",
+      "titel": "In zwei Jahren ab Abnahme – es geht um die Reparatur einer Sache",
+      "text": "§ 634a Abs. 1 Nr. 1 BGB: zwei Jahre bei Herstellung, Wartung oder Veränderung einer Sache. Fünf Jahre gelten nur beim Bauwerk (Nr. 2), die regelmäßige Verjährung für sonstige Werke (Nr. 3). Die Frist beginnt bei Nr. 1 und 2 mit der Abnahme (§ 634a Abs. 2 BGB).",
+      "norm": "§ 634a Abs. 1 Nr. 1, Abs. 2 BGB",
+      "quellen": [
+        "§ 634a BGB",
+        "Themenpool: schuldbt-490"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:43:49.774Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "In drei Jahren ab Ende des Jahres der Kenntnis",
+        "In zwei Jahren ab der Abnahme",
+        "In fünf Jahren ab der Abnahme"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-737",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 212 StGB: Für den BGH ist Mord keine Qualifikation des Totschlags",
+      "text": "Die Rspr. sieht in § 211 StGB bislang einen eigenständigen Tatbestand, die h.L. eine Qualifikation des § 212 StGB. Das wirkt sich bei der Teilnahme aus: Täterbezogene Mordmerkmale behandelt die Rspr. nach § 28 Abs. 1 StGB, die h.L. nach § 28 Abs. 2 StGB.",
+      "norm": "§ 212 StGB",
+      "quellen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 28 StGB",
+        "Themenpool: strafbt-737"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:43:49.774Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-640",
+      "ueberzeile": "Merksatz Verwaltungsrecht",
+      "titel": "Zwei Adressaten, zwei Bekanntgaben",
+      "text": "Richtet sich ein Bescheid an Eheleute, muss er jedem bekanntgegeben werden. Erreicht er nur einen, ist er dem anderen gegenüber nicht wirksam – für ihn läuft keine Frist.",
+      "norm": "§§ 41, 43 Abs. 1 VwVfG",
+      "quellen": [
+        "§ 41 VwVfG",
+        "§ 43 Abs. 1 VwVfG",
+        "Themenpool: verwalt-640"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:43:49.774Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-595",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Erforderlichkeitsklausel",
+      "text": "Art. 72 Abs. 2 GG: In bestimmten Materien der konkurrierenden Gesetzgebung darf der Bund nur regeln, wenn es zur Herstellung gleichwertiger Lebensverhältnisse oder zur Wahrung der Rechts- oder Wirtschaftseinheit erforderlich ist. Das BVerfG prüft das nach.",
+      "norm": "Art. 72 Abs. 2 GG",
+      "quellen": [
+        "Art. 72 Abs. 2 GG",
+        "Themenpool: staat-595"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:43:49.774Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-875",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Revision direkt beim BGH eingelegt",
+      "falsch": "A wurde vom Landgericht verurteilt. Sein Verteidiger schickt die Revision innerhalb einer Woche direkt an den BGH, weil der ja entscheidet.",
+      "richtigText": "Die Revision ist bei dem Gericht einzulegen, dessen Urteil angefochten wird – hier beim Landgericht (§ 341 Abs. 1 StPO). Geht sie beim BGH ein, ist die Frist nur gewahrt, wenn sie noch rechtzeitig an das Landgericht weitergeleitet wird.",
+      "quellen": [
+        "§ 341 Abs. 1 StPO",
+        "§ 32d StPO",
+        "Themenpool: revision-875"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:43:49.774Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

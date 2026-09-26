@@ -1,0 +1,883 @@
+{
+  "datum": "2027-06-25",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "assessorz-815",
+        "themaTitel": "Wie lautet der Tenor nach zulässigem Einspruch?",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "anklage-796",
+        "themaTitel": "Plädoyer der Staatsanwaltschaft",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "europa-416",
+        "themaTitel": "Was ist die richtlinienkonforme Auslegung und wo endet sie?",
+        "fach": "europa",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "famerb-519"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "famerb-519"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "verwalt-384"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "merksatz",
+        "themaId": "stpo-077"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:02",
+        "art": "begriff",
+        "themaId": "bgbat-157"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "fehler",
+        "themaId": "stpo-926"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "assessorz-815",
+      "poolTitel": "Wie lautet der Tenor nach zulässigem Einspruch?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-26",
+        "2027-05-23",
+        "2027-05-23"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "anklage-796",
+      "poolTitel": "Plädoyer der Staatsanwaltschaft",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-26",
+        "2027-04-07"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "europa-416",
+      "poolTitel": "Was ist die richtlinienkonforme Auslegung und wo endet sie?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 288 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-22",
+        "2027-02-05",
+        "2027-04-07"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "famerb-519",
+      "poolTitel": "Ehegattenerbrecht",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1931, 1371 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-27",
+        "2026-12-27"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "famerb-519",
+      "poolTitel": "Ehegattenerbrecht",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1931, 1371 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-27",
+        "2026-12-27"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-384",
+      "poolTitel": "Was ist eine Ermessensreduzierung auf null?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-15",
+        "2027-01-29",
+        "2027-04-19"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "stpo-077",
+      "poolTitel": "Wann darf ohne richterliche Anordnung durchsucht werden?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 102 StPO",
+        "§ 105 StPO",
+        "Art. 13 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-22",
+        "2027-01-26",
+        "2027-04-23"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "bgbat-157",
+      "poolTitel": "Was ist der Unterschied zwischen Nichtigkeit und schwebender Unwirksamkeit?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 134 BGB",
+        "§ 108 BGB",
+        "§ 177 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "stpo-926",
+      "poolTitel": "Wann erlauben §§ 100a, 100b StPO Telekommunikationsüberwachung und Online-Durchsuchung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 100a StPO",
+        "§ 100b StPO",
+        "Art. 10 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18",
+        "2027-02-20",
+        "2027-04-23"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-815",
+      "slug": "2027-06-25-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Einspruch gewonnen – Säumniskosten trotzdem selbst tragen",
+          "titelZeilen": [
+            "Einspruch gewonnen –",
+            "Säumniskosten",
+            "trotzdem selbst",
+            "tragen"
+          ],
+          "coverBadge": "Tenorfrage",
+          "coverText": "§ 344 ZPO nicht vergessen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "K klagt gegen B auf Zahlung von 4.000 €. B erscheint im ersten Termin nicht; auf Antrag des K ergeht ein Versäumnisurteil. B legt fristgerecht Einspruch ein. Nach der Beweisaufnahme steht fest: K hat keinen Anspruch. Wie lautet der Tenor?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung",
+          "schritte": [
+            {
+              "titel": "Einspruch zulässig",
+              "text": "Statthaft (§ 338 ZPO), Notfrist von zwei Wochen ab Zustellung (§ 339 Abs. 1 ZPO), Form (§ 340 ZPO)."
+            },
+            {
+              "titel": "Wirkung",
+              "text": "Der Prozess wird in die Lage vor der Säumnis zurückversetzt (§ 342 ZPO)."
+            },
+            {
+              "titel": "Entscheidung in der Sache",
+              "text": "Die Klage ist unbegründet. Die neue Entscheidung weicht vom Versäumnisurteil ab – es wird aufgehoben (§ 343 S. 2 ZPO)."
+            },
+            {
+              "titel": "Kosten",
+              "text": "Grundsätzlich trägt K als Unterlegener (§ 91 ZPO). Die Säumniskosten trägt B, wenn das VU in gesetzlicher Weise erging (§ 344 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "1. Das Versäumnisurteil vom … wird aufgehoben. Die Klage wird abgewiesen. 2. Der Kläger trägt die Kosten des Rechtsstreits mit Ausnahme der durch die Säumnis des Beklagten veranlassten Kosten; diese trägt der Beklagte. 3. Vorläufige Vollstreckbarkeit nach §§ 708 ff. ZPO."
+        },
+        {
+          "art": "text",
+          "titel": "Worauf du achtest",
+          "punkte": [
+            "„In gesetzlicher Weise ergangen“: Säumnis, Antrag, ordnungsgemäße Ladung kurz prüfen",
+            "Stimmt die Entscheidung nur teilweise: „aufrechterhalten, soweit …, im Übrigen aufgehoben“",
+            "Wird das VU aufrechterhalten, § 709 ZPO für die Fortsetzung der Vollstreckung beachten"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Einspruch erfolgreich: VU aufheben, Klage abweisen – die Säumniskosten bleiben nach § 344 ZPO trotzdem beim Säumigen."
+        },
+        {
+          "art": "cta",
+          "titel": "Tenor nach Einspruch",
+          "punkte": [
+            "Einspruch zulässig?",
+            "Aufheben oder aufrechterhalten?",
+            "Säumniskosten nach § 344 ZPO"
+          ],
+          "icons": [
+            "dokument",
+            "waage",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Einspruch gewonnen – und die Säumniskosten trotzdem selbst tragen. Ist das Versäumnisurteil in gesetzlicher Weise ergangen, trägt der säumige Beklagte die durch seine Säumnis veranlassten Kosten nach § 344 ZPO auch dann, wenn er in der Sache gewinnt. Im Tenor: Versäumnisurteil aufheben, Klage abweisen, Kosten dem Kläger mit Ausnahme der Säumniskosten. Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#versäumnisurteil",
+        "#344zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Tenor nach erfolgreichem Einspruch",
+      "coverText": "§ 344 ZPO nicht vergessen",
+      "coverBadge": "Tenorfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Wer säumig war, trägt die Kosten seiner Säumnis – auch wenn er am Ende gewinnt.",
+        "handlung": "{A} proudly holds up a winner's ribbon, while {B} hovers beside him and calmly hands him a small separate bill for the missed appointment.",
+        "hinweisRegie": "Place the note in the free space between the ribbon and the small bill, slightly tilted toward the bill, so the leftover cost is the focus without covering {A}'s happy face.",
+        "alternative": "{B} stamps a large winning ticket while clipping off a tiny corner coupon that {A} has to keep and pay."
+      },
+      "bildSzene": "winner's ribbon plus small bill",
+      "bildSzeneAlt": "winning ticket with clipped coupon",
+      "quellen": [
+        "§ 338 ZPO",
+        "§ 339 ZPO",
+        "§ 340 ZPO",
+        "§ 342 ZPO",
+        "§ 343 ZPO",
+        "§ 344 ZPO",
+        "§ 91 ZPO",
+        "§ 709 ZPO",
+        "Themenpool: assessorz-815"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:14:55.684Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-796",
+      "slug": "2027-06-25-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Plädoyer bei zwei Taten: drei Schritte zur Gesamtstrafe",
+          "titelZeilen": [
+            "Plädoyer bei zwei",
+            "Taten: drei Schritte",
+            "zur Gesamtstrafe"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Über Einsatzstrafe, unter Summe",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A hat an zwei verschiedenen Tagen je einen Betrug begangen (§ 263 StGB); die Taten stehen in Tatmehrheit (§ 53 StGB). Du hältst für die Staatsanwaltschaft den Schlussvortrag (§ 258 StPO). Was beantragst du zur Strafe – und in welcher Reihenfolge?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Strafrahmen je Tat",
+              "text": "Regelstrafrahmen, besonders schwerer oder minder schwerer Fall, Milderung nach § 49 StGB – für jede Tat gesondert."
+            },
+            {
+              "titel": "2. Einzelstrafe je Tat",
+              "text": "Strafzumessung nach § 46 StGB: Schuld als Grundlage, Umstände für und gegen A. Für jede Tat eine konkrete Strafe."
+            },
+            {
+              "titel": "3. Gesamtstrafe",
+              "text": "Die höchste Einzelstrafe (Einsatzstrafe) wird erhöht (§ 54 Abs. 1 S. 2); die Summe der Einzelstrafen darf sie nicht erreichen (Abs. 2 S. 1)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Kurzweg",
+          "text": "Nur eine Gesamtstrafe beantragen, ohne Einzelstrafen zu nennen. Dann fehlt die Grundlage, aus der die Gesamtstrafe gebildet wird. Nenne jede Einzelstrafe und begründe die Gesamtstrafe mit einer zusammenfassenden Würdigung von Person und Taten (§ 54 Abs. 1 S. 3 StGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Danach",
+          "punkte": [
+            "Strafaussetzung zur Bewährung prüfen, wenn die Gesamtstrafe zwei Jahre nicht übersteigt (§ 56 StGB)",
+            "Nebenentscheidungen, etwa Einziehung (§§ 73 ff. StGB)",
+            "Kosten: § 465 StPO"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Strafrahmen, Einzelstrafen, Gesamtstrafe – in dieser Reihenfolge. Die Gesamtstrafe liegt über der Einsatzstrafe und unter der Summe."
+        },
+        {
+          "art": "cta",
+          "titel": "Strafantrag in drei Zügen",
+          "punkte": [
+            "Strafrahmen je Tat",
+            "Einzelstrafe je Tat",
+            "Gesamtstrafe nach § 54 StGB"
+          ],
+          "icons": [
+            "paragraf",
+            "waage",
+            "rechner"
+          ]
+        }
+      ],
+      "caption": "Plädoyer bei zwei Taten in Tatmehrheit: drei Schritte zur Gesamtstrafe. Erst der Strafrahmen je Tat, dann eine konkrete Einzelstrafe je Tat nach § 46 StGB, dann die Gesamtstrafe nach § 54 StGB – über der Einsatzstrafe, unter der Summe der Einzelstrafen. Wer nur die Gesamtstrafe nennt, überspringt die Grundlage. Speichern für den nächsten Schlussvortrag.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#plädoyer",
+        "#54stgb",
+        "#strafzumessung",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Plädoyer: Gesamtstrafe richtig beantragen",
+      "coverText": "Über Einsatzstrafe, unter Summe",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Die Gesamtstrafe entsteht erst aus den Einzelstrafen – nie ohne sie.",
+        "handlung": "{A} places two separate weights on a table one after the other, while {B} points his pointer at a larger combined weight that is clearly lighter than both stacked together.",
+        "hinweisRegie": "Place the note in the free space between the two single weights and the combined weight, slightly tilted toward the combined one, so the order of steps is visible without covering {A}'s hands.",
+        "alternative": "{B} builds a small tower from two blocks, shaving off the top so it stays below the height of both blocks together."
+      },
+      "bildSzene": "two weights, one combined weight",
+      "bildSzeneAlt": "tower of two blocks trimmed",
+      "quellen": [
+        "§ 258 StPO",
+        "§ 46 StGB",
+        "§ 53 StGB",
+        "§ 54 StGB",
+        "§ 56 StGB",
+        "§ 465 StPO",
+        "Themenpool: anklage-796"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-schritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:14:55.684Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "europa",
+      "klausur": 3,
+      "fachLabel": "Europarecht",
+      "themaId": "europa-416",
+      "slug": "2027-06-25-b3",
+      "titelZeilen": [
+        "Umsetzungsfrist",
+        "läuft noch: keine",
+        "Auslegungspflicht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Umsetzungsfrist läuft noch: keine Auslegungspflicht",
+          "unter": "Richtlinie · Art. 288 AEUV",
+          "text": "Die Richtlinie ist in Kraft, die Umsetzungsfrist läuft noch.",
+          "norm": "Art. 288 Abs. 3 AEUV",
+          "icon": "kalender",
+          "sprecher": "Richtlinie in Kraft? Auslegen musst du noch nicht. Die Pflicht zur richtlinienkonformen Auslegung beginnt grundsätzlich erst mit Ablauf der Umsetzungsfrist. Vier Schritte.",
+          "marken": [
+            "Frist",
+            "Auslegung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Grundlage",
+          "text": "Ziel der Richtlinie verbindlich (Art. 288 Abs. 3 AEUV), dazu die Loyalitätspflicht (Art. 4 Abs. 3 EUV).",
+          "norm": "Art. 288 Abs. 3 AEUV",
+          "sprecher": "Schritt eins, die Grundlage. Richtlinien sind hinsichtlich ihres Ziels verbindlich, Artikel 288 Absatz 3 AEUV. Zusammen mit der Loyalitätspflicht aus Artikel 4 Absatz 3 EUV bindet das auch die Gerichte.",
+          "marken": [
+            "Art. 288 AEUV"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Ab wann?",
+          "text": "Grundsätzlich ab Ablauf der Umsetzungsfrist. Vorher: das Ziel nicht ernsthaft gefährden.",
+          "norm": "Art. 4 Abs. 3 EUV",
+          "sprecher": "Schritt zwei, der Zeitpunkt. Nach dem EuGH besteht die Pflicht grundsätzlich erst ab Fristablauf. Vorher dürfen Gerichte das Recht aber nicht so auslegen, dass das Ziel der Richtlinie nach Ablauf der Frist ernsthaft gefährdet würde.",
+          "marken": [
+            "Fristablauf"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Was wird ausgelegt?",
+          "text": "Das gesamte nationale Recht – nicht nur das Umsetzungsgesetz.",
+          "norm": null,
+          "sprecher": "Schritt drei, der Gegenstand. Richtlinienkonform auszulegen ist das gesamte nationale Recht, nicht nur das Gesetz, das die Richtlinie umsetzen sollte. Auch ältere Normen gehören dazu.",
+          "marken": [
+            "ganzes Recht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Wo endet es?",
+          "text": "Keine Auslegung contra legem; Grenzen auch durch Rechtssicherheit und Rückwirkungsverbot.",
+          "norm": null,
+          "sprecher": "Schritt vier, die Grenze. Eine Auslegung gegen den eindeutigen Wortlaut und Willen des Gesetzgebers verlangt das Unionsrecht nicht. Grenzen ziehen auch Rechtssicherheit und Rückwirkungsverbot, im Strafrecht besonders deutlich.",
+          "marken": [
+            "contra legem"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Richtlinienkonforme Rechtsfortbildung",
+          "text": "Der BGH geht teils weiter: Rechtsfortbildung, wenn eine planwidrige Lücke besteht.",
+          "norm": null,
+          "sprecher": "Der BGH geht teils weiter und bildet das Recht richtlinienkonform fort, etwa durch teleologische Reduktion. Voraussetzung ist eine planwidrige Lücke, weil der Gesetzgeber eigentlich richtlinienkonform regeln wollte.",
+          "marken": [
+            "BGH"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Ab Fristablauf, für das ganze Recht, bis zur Grenze contra legem.",
+          "norm": null,
+          "sprecher": "Merke: ab Fristablauf, für das gesamte nationale Recht, bis zur Grenze des contra legem. Vorher gilt nur das Frustrationsverbot.",
+          "marken": [
+            "drei Punkte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst das Datum prüfen",
+          "text": "Speichern für die nächste Europarechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Europarechtsklausur. Und schau bei jeder Richtlinie zuerst auf die Umsetzungsfrist.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Richtlinie in Kraft, Umsetzungsfrist läuft noch – dann besteht grundsätzlich noch keine Pflicht zur richtlinienkonformen Auslegung. Nach dem EuGH gilt bis dahin nur das Frustrationsverbot: keine Auslegung, die das Ziel der Richtlinie ernsthaft gefährdet. Ab Fristablauf ist das gesamte nationale Recht richtlinienkonform auszulegen – bis zur Grenze des contra legem. Speichern für die nächste Europarechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#europarecht",
+        "#richtlinie",
+        "#288aeuv",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Richtlinienkonforme Auslegung: ab wann?",
+      "coverText": "Vorher nur Frustrationsverbot",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Die Pflicht zur richtlinienkonformen Auslegung beginnt erst, wenn die Umsetzungsfrist abgelaufen ist.",
+        "handlung": "{A} eagerly wants to open a sealed box, while {B} points his pointer at a large hourglass beside it whose sand has not yet run out.",
+        "hinweisRegie": "Place the note in the free space between the sealed box and the hourglass, slightly tilted toward the hourglass, so the timing is the focus without covering {A}'s reaching hands.",
+        "alternative": "{B} holds back a gate barrier while a countdown lamp above it is still glowing, and {A} waits on the other side."
+      },
+      "bildSzene": "sealed box beside running hourglass",
+      "bildSzeneAlt": "gate held back under countdown lamp",
+      "quellen": [
+        "Art. 288 Abs. 3 AEUV",
+        "Art. 4 Abs. 3 EUV",
+        "Themenpool: europa-416"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zeitpunkt",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:14:55.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-519",
+      "ueberzeile": "Prüfungsfrage Erbrecht",
+      "titel": "E stirbt ohne Testament. Er lebte mit F in Gütertrennung und hat ein Kind. Wie groß ist der Erbteil der F?",
+      "optionen": [
+        "Die Hälfte",
+        "Ein Viertel",
+        "Drei Viertel"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 1931 BGB",
+        "§ 1924 BGB",
+        "Themenpool: famerb-519"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:14:55.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-519",
+      "ueberzeile": "Auflösung",
+      "titel": "Die Hälfte – bei Gütertrennung teilen F und das Kind gleich",
+      "text": "Neben Abkömmlingen erbt der Ehegatte grundsätzlich ¼ (§ 1931 Abs. 1 BGB). Bei Gütertrennung gilt § 1931 Abs. 4 BGB: Sind ein oder zwei Kinder berufen, erben Ehegatte und jedes Kind zu gleichen Teilen – hier je ½. Ab drei Kindern bleibt es beim Viertel. Die Erhöhung nach § 1371 Abs. 1 BGB gibt es nur in der Zugewinngemeinschaft.",
+      "norm": "§ 1931 Abs. 4 BGB",
+      "quellen": [
+        "§ 1931 BGB",
+        "§ 1371 BGB",
+        "Themenpool: famerb-519"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:14:55.685Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Hälfte",
+        "Ein Viertel",
+        "Drei Viertel"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-384",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 40 VwVfG: Je schwerer die Gefahr, desto enger das Ermessen",
+      "text": "Ermessen ist nach dem Zweck der Ermächtigung auszuüben. Drohen erhebliche Gefahren für hochrangige Güter wie Leben und Gesundheit, kann jede andere Entscheidung als das Einschreiten fehlerhaft sein – Reduzierung auf null. Dann wird aus dem Anspruch auf fehlerfreie Ermessensentscheidung ein Anspruch auf genau diese Maßnahme, wenn die Norm den Kläger schützt.",
+      "norm": "§ 40 VwVfG",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "Themenpool: verwalt-384"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:14:55.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-077",
+      "ueberzeile": "Merksatz StPO",
+      "titel": "Gefahr im Verzug gehört in die Akte",
+      "text": "Wer ohne Richter durchsucht, muss die Eilgründe zeitnah dokumentieren – die Gerichte prüfen sie voll nach.",
+      "norm": "§ 105 Abs. 1 StPO · Art. 13 Abs. 2 GG",
+      "quellen": [
+        "§ 102 StPO",
+        "§ 105 StPO",
+        "Art. 13 Abs. 2 GG",
+        "Themenpool: stpo-077"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:14:55.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-157",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Schwebende Unwirksamkeit: noch nicht wirksam, aber heilbar",
+      "text": "Das Geschäft ist zunächst unwirksam, kann aber durch Genehmigung rückwirkend wirksam werden (§ 184 Abs. 1 BGB); mit der Verweigerung wird es endgültig unwirksam. Beispiele: Minderjähriger ohne Einwilligung (§ 108 Abs. 1 BGB), Vertreter ohne Vertretungsmacht (§ 177 Abs. 1 BGB). Nichtigkeit, etwa nach § 134 BGB, ist dagegen endgültig – eine Genehmigung hilft nicht.",
+      "norm": "§§ 108, 177, 184 BGB",
+      "quellen": [
+        "§ 108 BGB",
+        "§ 177 BGB",
+        "§ 184 BGB",
+        "§ 134 BGB",
+        "Themenpool: bgbat-157"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:14:55.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-926",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "TKÜ bei Gefahr im Verzug: Gilt die Anordnung der StA einfach weiter?",
+      "falsch": "Bei Gefahr im Verzug ordnet die Staatsanwaltschaft die Telekommunikationsüberwachung an – damit ist die Sache erledigt, ein Gericht muss nicht mehr entscheiden.",
+      "richtigText": "Grundsätzlich ordnet das Gericht auf Antrag der StA an (§ 100e Abs. 1 StPO). Bei Gefahr im Verzug darf die StA selbst anordnen. Bestätigt das Gericht die Anordnung nicht binnen drei Werktagen, tritt sie außer Kraft. Befristet wird auf höchstens drei Monate; Verlängerungen sind möglich.",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 100e Abs. 1 StPO",
+        "Themenpool: stpo-926"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:07:12.335Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

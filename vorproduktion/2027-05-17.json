@@ -1,0 +1,880 @@
+{
+  "datum": "2027-05-17",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zwangsv-826",
+        "themaTitel": "Wie prüft man die Vollstreckungsabwehrklage?",
+        "fach": "zwangsv",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "revision-788",
+        "themaTitel": "Beruhensprüfung",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-102",
+        "themaTitel": "Wann wendet man § 123 VwGO und wann § 80 Abs. 5 VwGO im einstweiligen Rechtsschutz an?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:17",
+        "art": "frage",
+        "themaId": "strafbt-324"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:17",
+        "art": "antwort",
+        "themaId": "strafbt-324"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "strafat-292"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "tipp",
+        "themaId": "strafbt-741"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "zahl",
+        "themaId": "revision-888"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:25",
+        "art": "streitstand",
+        "themaId": "assessorz-817"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zwangsv-826",
+      "poolTitel": "Wie prüft man die Vollstreckungsabwehrklage?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 767 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-16",
+        "2027-02-22",
+        "2027-05-03"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "revision-788",
+      "poolTitel": "Beruhensprüfung",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-29",
+        "2026-11-07"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-102",
+      "poolTitel": "Wann wendet man § 123 VwGO und wann § 80 Abs. 5 VwGO im einstweiligen Rechtsschutz an?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 Abs. 5 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "§ 80a VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2027-03-01",
+        "2027-05-04"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-324",
+      "poolTitel": "Wann liegt ein Gewahrsamsbruch trotz Einverständnis vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-17",
+        "2026-11-19",
+        "2027-04-07"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-324",
+      "poolTitel": "Wann liegt ein Gewahrsamsbruch trotz Einverständnis vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-17",
+        "2026-11-19",
+        "2027-04-07"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-292",
+      "poolTitel": "Was ist eine eigenverantwortliche Selbstgefährdung?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 222 StGB",
+        "§ 216 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "strafbt-741",
+      "poolTitel": "Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-14",
+        "2026-12-27",
+        "2027-03-18"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "revision-888",
+      "poolTitel": "Sach- oder Verfahrensrüge: Wie entscheidet man das schnell?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 344 StPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-26",
+        "2027-03-04"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-817",
+      "poolTitel": "Wann ist eine Drittwiderklage zulässig?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-19",
+        "2027-01-11",
+        "2027-03-15"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-826",
+      "slug": "2027-05-17-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Auf Auskunft verurteilt – der Gerichtsvollzieher kommt nicht",
+          "titelZeilen": [
+            "Auf Auskunft",
+            "verurteilt – der",
+            "Gerichtsvollzieher",
+            "kommt nicht"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Zwangsgeld statt Ersatzvornahme",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K hat gegen B ein rechtskräftiges Urteil: B muss K Auskunft über die Einnahmen aus ihrem gemeinsamen Geschäft erteilen und die Bretterwand auf Ks Grundstück entfernen. B unternimmt nichts. K beauftragt den Gerichtsvollzieher mit beidem. Wie wird richtig vollstreckt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Welche Vollstreckungsart?",
+              "text": "Nicht Geld, nicht Herausgabe: Es geht um die Vollstreckung von Handlungen (§§ 887, 888 ZPO)."
+            },
+            {
+              "titel": "2. Vertretbar?",
+              "text": "Kann ein Dritter die Handlung vornehmen, ohne dass es für K einen Unterschied macht? Dann § 887 ZPO, sonst § 888 ZPO."
+            },
+            {
+              "titel": "3. Die Wand",
+              "text": "Abreißen kann jeder Unternehmer: Das Prozessgericht ermächtigt K, die Wand auf Kosten des B entfernen zu lassen (§ 887 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "4. Die Auskunft",
+              "text": "Nur B kennt seine Zahlen – unvertretbar. Das Prozessgericht hält ihn durch Zwangsgeld oder Zwangshaft an (§ 888 Abs. 1 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Den Gerichtsvollzieher losschicken. Für §§ 887, 888 ZPO ist das Prozessgericht des ersten Rechtszugs zuständig, auf Antrag des Gläubigers. Und: Die Zwangsmittel des § 888 ZPO werden nicht vorher angedroht (§ 888 Abs. 2 ZPO)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Für die Wand ermächtigt das Prozessgericht K zur Ersatzvornahme; B kann zur Vorauszahlung der Kosten verurteilt werden (§ 887 Abs. 2 ZPO). Für die Auskunft setzt es gegen B Zwangsgeld fest, ersatzweise Zwangshaft. Der Gerichtsvollzieher ist für beides nicht zuständig."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vertretbare Handlung: Ersatzvornahme (§ 887 ZPO). Unvertretbare Handlung: Zwangsgeld oder Zwangshaft (§ 888 ZPO). Zuständig: das Prozessgericht."
+        },
+        {
+          "art": "cta",
+          "titel": "Handlungsvollstreckung in drei Fragen",
+          "punkte": [
+            "Geht es um eine Handlung?",
+            "Kann ein Dritter sie vornehmen?",
+            "Antrag beim Prozessgericht?"
+          ],
+          "icons": [
+            "werkzeug",
+            "person",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Auf Auskunft verurteilt – und der Gerichtsvollzieher kommt trotzdem nicht. Handlungen vollstreckt das Prozessgericht des ersten Rechtszugs: vertretbare durch Ermächtigung zur Ersatzvornahme (§ 887 ZPO), unvertretbare wie die Auskunft durch Zwangsgeld oder Zwangshaft (§ 888 ZPO), ohne vorherige Androhung. Speichern für die nächste ZPO-Klausur mit Vollstreckung.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#888zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Handlungen vollstrecken: § 887 oder § 888 ZPO",
+      "coverText": "Zwangsgeld statt Ersatzvornahme",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Vertretbare Handlungen vollstreckt man durch Ersatzvornahme, unvertretbare durch Zwangsgeld.",
+        "handlung": "{A} knocks down a wooden wall with a hired pickaxe, while {B} stands aside clutching a sealed notebook that only he can open.",
+        "hinweisRegie": "Put the note in the open space between the falling wall and {B}'s sealed notebook, slightly tilted toward the notebook, so the contrast between replaceable and personal acts is clear; keep the pickaxe visible.",
+        "alternative": "{B} receives a growing pile of fine coins on his doorstep each day until he finally opens his locked diary for {A}."
+      },
+      "bildSzene": "wall torn down, notebook kept sealed",
+      "bildSzeneAlt": "coins pile up at locked diary",
+      "quellen": [
+        "§ 887 ZPO",
+        "§ 888 ZPO",
+        "Themenpool: zwangsv-826"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:07:51.578Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-788",
+      "slug": "2027-05-17-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Beruhensprüfung in vier Schritten – der zweite spart dir Arbeit",
+          "titelZeilen": [
+            "Beruhensprüfung",
+            "in vier Schritten –",
+            "der zweite spart",
+            "dir Arbeit"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "§ 338 StPO zuerst",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Eine Gesetzesverletzung allein reicht nicht: Die Revision hat nur Erfolg, wenn das Urteil auf ihr beruht (§ 337 Abs. 1 StPO). Dafür genügt nach der Rspr., dass sich nicht ausschließen lässt, dass das Urteil ohne den Fehler anders ausgefallen wäre."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Rechtsfehler feststellen",
+              "text": "Verfahrensfehler nur, soweit formgerecht gerügt (§ 344 Abs. 2 S. 2 StPO); sachlich-rechtliche Fehler auf die Sachrüge."
+            },
+            {
+              "titel": "2. Absoluter Revisionsgrund?",
+              "text": "Liegt ein Fall des § 338 StPO vor, wird das Beruhen unwiderleglich vermutet – eine Beruhensprüfung entfällt."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Möglichkeit des Beruhens",
+              "text": "Relativer Revisionsgrund: Kann das Urteil anders ausgefallen sein? Nur wenn das sicher auszuschließen ist, scheitert die Rüge."
+            },
+            {
+              "titel": "4. Reichweite bestimmen",
+              "text": "Betrifft der Fehler nur den Strafausspruch, beruht auch nur dieser darauf – der Schuldspruch kann bestehen bleiben."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Heilung",
+          "text": "Wurde der Fehler noch in der Hauptverhandlung behoben – etwa indem eine fehlerhafte Verfahrenshandlung ordnungsgemäß wiederholt wurde –, beruht das Urteil regelmäßig nicht mehr auf ihm. Prüfe deshalb, was nach dem Verstoß noch geschah."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst § 338 StPO fragen. Sonst genügt, dass ein anderes Urteil nicht auszuschließen ist – und dann die Reichweite bestimmen."
+        },
+        {
+          "art": "cta",
+          "titel": "Beruhen in vier Zügen",
+          "punkte": [
+            "Fehler formgerecht gerügt?",
+            "Absoluter Grund nach § 338 StPO?",
+            "Anderes Urteil ausschließbar?",
+            "Schuld- oder nur Strafausspruch?"
+          ],
+          "icons": [
+            "lupe",
+            "warnung",
+            "waage",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Beruhensprüfung in vier Schritten: Rechtsfehler feststellen, § 338 StPO prüfen, die Möglichkeit des Beruhens bewerten, die Reichweite bestimmen. Bei den absoluten Revisionsgründen wird das Beruhen unwiderleglich vermutet – da sparst du dir die Prüfung. Bei relativen Gründen genügt, dass ein anderes Urteil nicht auszuschließen ist (§ 337 Abs. 1 StPO). Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#337stpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beruhensprüfung im Revisionsgutachten",
+      "coverText": "§ 338 StPO zuerst",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Ob ein Verfahrensfehler zur Aufhebung führt, hängt davon ab, ob das Urteil auf ihm beruhen kann.",
+        "handlung": "{A} points his pointer at one cracked brick at the base of a small tower, while {B} carefully tests whether the tower above still stands without it.",
+        "hinweisRegie": "Place the note in the free space beside the cracked brick, slightly tilted toward the tower top, so the question of what rests on the flaw stays visible without covering {B}'s testing hand.",
+        "alternative": "{B} removes one faulty gear from a clockwork and watches whether the clock hands still move, while {A} takes notes."
+      },
+      "bildSzene": "cracked brick under small tower",
+      "bildSzeneAlt": "faulty gear removed from clockwork",
+      "quellen": [
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "§ 344 StPO",
+        "Themenpool: revision-788"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:36.905Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-102",
+      "slug": "2027-05-17-b3",
+      "titelZeilen": [
+        "Genehmigung",
+        "abgelehnt? Dann",
+        "nicht § 80 Abs. 5"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Genehmigung abgelehnt? Dann nicht § 80 Abs. 5 VwGO",
+          "unter": "Eilrechtsschutz · §§ 80, 123 VwGO",
+          "text": "Die Hauptsache entscheidet: Anfechtung oder alles andere.",
+          "norm": "§ 123 Abs. 5 VwGO",
+          "icon": "waage",
+          "sprecher": "Genehmigung abgelehnt? Dann hilft dir § 80 Absatz 5 nicht. Welcher Eilantrag passt, entscheidet allein die Hauptsache. Und die klärst du in vier Schritten.",
+          "marken": [
+            "Hauptsache zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Klageart der Hauptsache bestimmen",
+          "text": "Was müsste der Antragsteller in der Hauptsache erheben?",
+          "norm": null,
+          "sprecher": "Schritt eins: Bestimme die Klageart der Hauptsache. Frag dich, welche Klage der Antragsteller erheben müsste, wenn er nicht eilig wäre.",
+          "marken": [
+            "welche Klage?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Anfechtungsklage? Dann § 80 Abs. 5",
+          "text": "Belastender VA, aufschiebende Wirkung entfällt: anordnen oder wiederherstellen.",
+          "norm": "§ 80 Abs. 5 VwGO",
+          "sprecher": "Schritt zwei: Wäre es eine Anfechtungsklage gegen einen belastenden Verwaltungsakt, dessen aufschiebende Wirkung entfällt? Dann ist der Antrag nach § 80 Absatz 5 statthaft.",
+          "marken": [
+            "Anfechtung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Drittwirkung? Dann § 80a",
+          "text": "Der Nachbar wehrt sich gegen die Genehmigung des Bauherrn.",
+          "norm": "§ 80a Abs. 3 VwGO",
+          "sprecher": "Schritt drei: Geht es um einen Verwaltungsakt mit Drittwirkung, etwa der Nachbar gegen die Baugenehmigung, dann läuft das über § 80a Absatz 3 in Verbindung mit § 80 Absatz 5.",
+          "marken": [
+            "Drittwirkung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Alles andere: § 123",
+          "text": "Verpflichtung, Leistung, Feststellung – Sicherungs- oder Regelungsanordnung.",
+          "norm": "§ 123 Abs. 1 VwGO",
+          "sprecher": "Schritt vier: Alles andere läuft über § 123. Will jemand eine abgelehnte Erlaubnis, ist die Hauptsache eine Verpflichtungsklage. Dann brauchst du eine Regelungsanordnung mit Anordnungsanspruch und Anordnungsgrund.",
+          "marken": [
+            "Verpflichtung",
+            "Regelungsanordnung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Warum die Reihenfolge?",
+          "text": "§ 123 Abs. 5 VwGO: §§ 80, 80a gehen vor.",
+          "norm": "§ 123 Abs. 5 VwGO",
+          "sprecher": "Warum diese Reihenfolge? Weil § 123 Absatz 5 sagt: Die einstweilige Anordnung gilt nicht für die Fälle der Paragrafen 80 und 80a. Die gehen also immer vor.",
+          "marken": [
+            "Vorrang"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Anfechtung: § 80 Abs. 5. Drittwirkung: § 80a. Sonst: § 123.",
+          "norm": null,
+          "sprecher": "Merke: Anfechtung heißt § 80 Absatz 5, Drittwirkung heißt § 80a, und alles andere heißt § 123.",
+          "marken": [
+            "80 · 80a · 123"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Hauptsache, dann der Antrag",
+          "text": "Speichern für die nächste Eilrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Eilrechtsklausur. Und schreib die Klageart der Hauptsache immer zuerst hin.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Genehmigung abgelehnt? Dann hilft dir § 80 Abs. 5 VwGO nicht. Welcher Eilantrag statthaft ist, entscheidet die Hauptsache: Anfechtungsklage bedeutet § 80 Abs. 5, bei Drittwirkung §§ 80a Abs. 3, 80 Abs. 5 VwGO. Alles andere – vor allem die Verpflichtungssituation – läuft über § 123 VwGO, der nach seinem Abs. 5 nachrangig ist. Speichern für die nächste Eilrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#eilrechtsschutz",
+        "#123vwgo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 80 V oder § 123 VwGO? Die Hauptsache entscheidet",
+      "coverText": "Erst die Klageart der Hauptsache",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Welcher Eilantrag passt, hängt davon ab, welche Klage in der Hauptsache zu erheben wäre.",
+        "handlung": "{A} curiously chooses between two differently shaped keys, while {B} holds up the heavy lock whose shape decides which key fits.",
+        "hinweisRegie": "Place the note in the free space between the two keys and the lock, slightly tilted toward the lock, so it reads as matching tool to situation without covering {A}'s hand.",
+        "alternative": "{B} sorts two differently shaped stones into matching slots of a heavy frame while {A} watches which slot stays empty."
+      },
+      "bildSzene": "two keys, one heavy lock",
+      "bildSzeneAlt": "stones sorted into matching slots",
+      "quellen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 80a VwGO",
+        "§ 123 VwGO",
+        "Themenpool: vwgo-102"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:36.906Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-324",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "A versteckt eine Flasche Whisky in einem Kasten Wasser und zahlt an der Kasse nur das Wasser. Welches Delikt?",
+      "optionen": [
+        "Diebstahl – über den Whisky hat die Kassiererin nicht verfügt",
+        "Betrug – die Kassiererin hat den Kasten samt Inhalt freigegeben",
+        "Nur Unterschlagung – A hatte den Whisky schon in der Hand"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 242 StGB",
+        "§ 263 StGB",
+        "Themenpool: strafbt-324"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:36.906Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-324",
+      "ueberzeile": "Auflösung",
+      "titel": "Diebstahl – das Einverständnis reicht nur so weit wie das Wissen",
+      "text": "Die Kassiererin ist mit dem Gewahrsamswechsel am Wasser einverstanden. Vom Whisky weiß sie nichts; über ihn trifft sie keine Verfügung, ihr Einverständnis erfasst ihn nicht. A bricht den Gewahrsam daran – nach h.M. Diebstahl, kein Betrug. Die Abgrenzung läuft über das Verfügungsbewusstsein.",
+      "norm": "§ 242 StGB · § 263 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 263 StGB",
+        "Themenpool: strafbt-324"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:36.906Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Diebstahl – über den Whisky hat die Kassiererin nicht verfügt",
+        "Betrug – die Kassiererin hat den Kasten samt Inhalt freigegeben",
+        "Nur Unterschlagung – A hatte den Whisky schon in der Hand"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-292",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 222 StGB: Wer den tödlichen Akt selbst in der Hand hat, trägt das Risiko",
+      "text": "Die bloße Beteiligung an einer eigenverantwortlichen Selbstgefährdung ist straflos – der Erfolg ist dem Mitwirkenden nicht zuzurechnen. Abzugrenzen ist die einverständliche Fremdgefährdung: Nach dem BGH entscheidet, wer die Herrschaft über das unmittelbar zum Tod führende Geschehen hat, orientiert an § 216 StGB. Grenze: Der Mitwirkende erkennt das Risiko besser als das Opfer.",
+      "norm": "§ 222 StGB · § 216 StGB",
+      "quellen": [
+        "§ 222 StGB",
+        "§ 216 StGB",
+        "Themenpool: strafat-292"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:36.906Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-741",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "Tritt mit dem Schuh: Nach § 223 StGB sofort an § 224 Abs. 1 Nr. 2 denken",
+      "text": "Prüfe zuerst den Grundtatbestand vollständig, dann die Qualifikation. Ein fester Schuh am Fuß kann nach der Rspr. ein gefährliches Werkzeug sein, wenn er nach Art und konkreter Verwendung erhebliche Verletzungen herbeiführen kann – typisch beim Tritt gegen den Kopf. Bei Nr. 5 genügt nach der Rspr., dass die Behandlung generell geeignet ist, das Leben zu gefährden.",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 224 Abs. 1 Nr. 2, 5 StGB",
+        "Themenpool: strafbt-741"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:36.906Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-888",
+      "ueberzeile": "3 Punkte Revision",
+      "titel": "Sach- oder Verfahrensrüge? Die Urteilsurkunde entscheidet",
+      "text": "Frag dich, woraus sich der Fehler ergibt – dann weißt du, welche Rüge du brauchst.",
+      "punkte": [
+        "Fehler steht im Urteil selbst? Sachrüge – auch bei lückenhafter Beweiswürdigung",
+        "Fehler liegt im Ablauf der Hauptverhandlung? Verfahrensrüge nach § 344 Abs. 2 S. 2 StPO",
+        "Verfahrenshindernis? Prüft das Revisionsgericht von Amts wegen"
+      ],
+      "quellen": [
+        "§ 337 StPO",
+        "§ 344 StPO",
+        "Themenpool: revision-888"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:36.906Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-817",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Drittwiderklage gegen D, der woanders wohnt: Gilt § 33 ZPO auch für ihn?",
+      "norm": "§§ 33, 36 ZPO",
+      "optionen": [
+        "BGH: nein – fehlt ein gemeinsamer Gerichtsstand, wird er nach § 36 Abs. 1 Nr. 3 ZPO bestimmt.",
+        "Teile der Lit.: § 33 ZPO analog – der Zusammenhang trägt auch gegenüber D."
+      ],
+      "text": "Klausur: Erst prüfen, ob für D ohnehin ein Gerichtsstand besteht oder er sich rügelos einlässt (§ 39 ZPO). Nur sonst kommt es auf den Streit an. Ausnahme der Rspr.: isolierte Drittwiderklage gegen den Zedenten – dort § 33 ZPO analog.",
+      "quellen": [
+        "§ 33 ZPO",
+        "§ 36 Abs. 1 Nr. 3 ZPO",
+        "§ 39 ZPO",
+        "Themenpool: assessorz-817"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:36.906Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

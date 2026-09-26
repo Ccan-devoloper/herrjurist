@@ -1,0 +1,891 @@
+{
+  "datum": "2027-08-09",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "assessorz-821",
+        "themaTitel": "Welchen Prüfungsumfang hat die Berufung?",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "strafat-723",
+        "themaTitel": "Erlaubnistatbestandsirrtum",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-602",
+        "themaTitel": "Konstruktives Misstrauensvotum und Vertrauensfrage",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "strafat-728"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "strafat-728"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "sachen-239"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:22",
+        "art": "tipp",
+        "themaId": "strafbt-752"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "zahl",
+        "themaId": "ipr-889"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "streitstand",
+        "themaId": "gesetzs-205"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "assessorz-821",
+      "poolTitel": "Welchen Prüfungsumfang hat die Berufung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 513 ZPO",
+        "§ 529 ZPO",
+        "§ 531 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-03",
+        "2027-01-16",
+        "2027-06-22"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafat-723",
+      "poolTitel": "Erlaubnistatbestandsirrtum",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 16, 17 StGB analog/streitig"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-602",
+      "poolTitel": "Konstruktives Misstrauensvotum und Vertrauensfrage",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 67, 68 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-18",
+        "2027-03-09",
+        "2027-06-04"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-728",
+      "poolTitel": "Rücktritt vom unbeendeten Versuch",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 I StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-05",
+        "2027-06-10",
+        "2027-08-02"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-728",
+      "poolTitel": "Rücktritt vom unbeendeten Versuch",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 I StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-05",
+        "2027-06-10",
+        "2027-08-02"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-239",
+      "poolTitel": "Wann kollidieren Sicherungsübereignung und verlängerter Eigentumsvorbehalt?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 398 BGB",
+        "§ 138 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-01",
+        "2027-07-05"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "strafbt-752",
+      "poolTitel": "Räuberischer Diebstahl",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 252 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-09",
+        "2027-05-04",
+        "2027-05-23"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "ipr-889",
+      "poolTitel": "In welcher Reihenfolge prüft man einen Fall mit Auslandsbezug?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "EuGVVO",
+        "Rom I-VO",
+        "EGBGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-27",
+        "2027-03-18",
+        "2027-05-18"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "gesetzs-205",
+      "poolTitel": "Was ist eine auch-fremde Geschäftsführung und ist sie GoA?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 677 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-07",
+        "2027-04-08",
+        "2027-06-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-821",
+      "slug": "2027-08-09-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Beweiswürdigung gerügt – geprüft wird mehr",
+          "titelZeilen": [
+            "Beweiswürdigung",
+            "gerügt – geprüft",
+            "wird mehr"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 529 II 2: keine Bindung an Rügen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Das LG verurteilt B nach Zeugenvernehmung zur Zahlung von 8.000 €. B greift in der Berufung allein die Beweiswürdigung an. Das Berufungsgericht hält sie für fehlerfrei, meint aber: Der festgestellte Sachverhalt trägt rechtlich nur die Hälfte. Darf es trotzdem abändern?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Zulässigkeit",
+              "text": "Die Begründung muss mindestens einen ordnungsgemäßen Angriff enthalten (§ 520 Abs. 3 ZPO). Die Rüge der Beweiswürdigung genügt dafür."
+            },
+            {
+              "titel": "Rahmen: die Anträge",
+              "text": "Geprüft und abgeändert wird nur im Rahmen der Anträge (§ 528 ZPO). B beantragt Klageabweisung – der ganze Betrag steht zur Prüfung."
+            },
+            {
+              "titel": "Tatsachen: § 529 Abs. 1 ZPO",
+              "text": "Grundsätzlich gelten die Feststellungen der ersten Instanz, außer konkrete Anhaltspunkte begründen Zweifel. Neues nur nach § 531 Abs. 2 ZPO."
+            },
+            {
+              "titel": "Recht: keine Bindung",
+              "text": "An die geltend gemachten Berufungsgründe ist das Gericht nicht gebunden (§ 529 Abs. 2 S. 2 ZPO). Die Rechtsanwendung prüft es insgesamt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nur prüfen, was gerügt ist. Das gilt allein für Verfahrensmängel, die nicht von Amts wegen zu beachten sind (§ 529 Abs. 2 S. 1 ZPO). Die materielle Rechtslage kontrolliert das Berufungsgericht im Rahmen der Anträge vollständig."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Die Berufung ist zulässig. Die Beweiswürdigung trägt, neue Feststellungen sind nicht veranlasst. Rechtlich ergibt der Sachverhalt aber nur 4.000 €. Das Berufungsgericht ändert ab und weist die Klage im Übrigen ab – obwohl B diesen Punkt nie gerügt hat."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tatsachen: grundsätzlich gebunden (§ 529 Abs. 1 ZPO). Recht: im Rahmen der Anträge voll geprüft (§ 529 Abs. 2 S. 2 ZPO)."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen im Berufungsurteil",
+          "punkte": [
+            "Wie weit reichen die Anträge?",
+            "Welche Tatsachen legst du zugrunde?",
+            "Trägt das Recht das Ergebnis – auch ungerügt?"
+          ],
+          "icons": [
+            "zielscheibe",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "B rügt nur die Beweiswürdigung – darf das Berufungsgericht trotzdem aus einem ganz anderen rechtlichen Grund abändern? Ja. An die Berufungsgründe ist es nicht gebunden (§ 529 Abs. 2 S. 2 ZPO), die Rechtsanwendung prüft es im Rahmen der Anträge (§ 528 ZPO) vollständig. Gebunden ist es grundsätzlich an die Tatsachenfeststellungen der ersten Instanz (§ 529 Abs. 1 ZPO) und bei nicht von Amts wegen zu prüfenden Verfahrensmängeln an die Rüge. Speichern für das nächste Berufungsurteil.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#berufung",
+        "#529zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Berufung: Rechtsprüfung auch ohne Rüge",
+      "coverText": "§ 529 II 2: keine Bindung an Rügen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Das Berufungsgericht schaut sich nicht nur die gerügte Stelle an, sondern die ganze rechtliche Konstruktion.",
+        "handlung": "{A} points a small flashlight at one marked crack in a stone bridge, while {B} calmly lifts a large lantern that lights up the whole bridge, revealing a second weak spot nobody had marked.",
+        "hinweisRegie": "Place the note in the open space beside the second, unmarked weak spot lit by the large lantern, slightly tilted toward it, so it reads as the point found without a complaint; keep both lights and faces free.",
+        "alternative": "{B} examines an entire clock mechanism with a magnifier while {A} had only pointed at a single loose gear."
+      },
+      "bildSzene": "lantern lights whole bridge, second crack",
+      "bildSzeneAlt": "whole clockwork examined, not one gear",
+      "quellen": [
+        "§ 513 ZPO",
+        "§ 520 Abs. 3 ZPO",
+        "§ 528 ZPO",
+        "§ 529 ZPO",
+        "§ 531 Abs. 2 ZPO",
+        "Themenpool: assessorz-821"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:27:55.597Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-723",
+      "slug": "2027-08-09-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Putativnotwehr: Diesen Schritt lassen viele aus",
+          "titelZeilen": [
+            "Putativnotwehr:",
+            "Diesen Schritt",
+            "lassen viele aus"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Auch die Vorstellung muss tragen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Schritt, den viele auslassen",
+          "text": "O greift in seine Jacke, T glaubt, er ziehe ein Messer, und schlägt ihn nieder. Viele stellen fest, dass T sich einen Angriff vorstellte, und springen zur Rechtsfolge. Übersehen: Auch nach seiner Vorstellung muss die Abwehr erforderlich und geboten sein."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Tatbestand",
+              "text": "Objektiver und subjektiver Tatbestand, etwa § 223 StGB. Der Vorsatz bezieht sich auf die Tatbestandsmerkmale – er liegt vor."
+            },
+            {
+              "titel": "2. Objektiv keine Rechtfertigung",
+              "text": "Es gab keinen Angriff, also keine Notwehrlage (§ 32 StGB). Die Tat ist rechtswidrig. Erst jetzt geht es um die Fehlvorstellung."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Vorstellung des Täters",
+              "text": "Nahm T Umstände an, die – wären sie wahr – eine Rechtfertigung ergäben? Hier: ein gegenwärtiger Messerangriff."
+            },
+            {
+              "titel": "4. Hypothetische Prüfung",
+              "text": "Wäre die Abwehr auf dieser Grundlage erforderlich und geboten? Genügte schon danach ein milderes Mittel, scheidet die Entlastung aus."
+            },
+            {
+              "titel": "5. Rechtsfolge",
+              "text": "H.M.: keine Strafe aus dem Vorsatzdelikt (§ 16 Abs. 1 S. 1 StGB analog). Danach Fahrlässigkeit prüfen (§ 16 Abs. 1 S. 2 StGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Wo und wie wirkt es?",
+          "text": "Streitig ist die Einordnung: Die eingeschränkte Schuldtheorie lässt den Vorsatz entfallen, die rechtsfolgenverweisende Schuldtheorie nur die Vorsatzschuld – dann bleibt eine vorsätzliche Haupttat für Teilnehmer. Die strenge Schuldtheorie wendet § 17 StGB an. Kurz darstellen, Ergebnis begründen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst objektive Rechtfertigung verneinen, dann die Vorstellung des Täters komplett durchprüfen – inklusive Erforderlichkeit."
+        },
+        {
+          "art": "cta",
+          "titel": "Eingebildeter Angriff in vier Zügen",
+          "punkte": [
+            "Objektiv: keine Notwehrlage",
+            "Was stellte sich der Täter vor?",
+            "Abwehr danach erforderlich und geboten?",
+            "Folge nach § 16 StGB analog, dann § 229 StGB"
+          ],
+          "icons": [
+            "lupe",
+            "person",
+            "waage",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Putativnotwehr ist ein Examensklassiker – und viele lassen dabei einen Schritt aus. Es reicht nicht, dass T sich einen Angriff vorstellte. Auch auf Grundlage seiner Vorstellung muss die Abwehr erforderlich und geboten gewesen sein; hätte schon danach ein milderes Mittel gereicht, gibt es keine Entlastung. Erst dann folgt der Streit um die Rechtsfolge (§ 16 StGB analog, Schuldtheorien) und die Prüfung der Fahrlässigkeit. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#putativnotwehr",
+        "#16stgb",
+        "#32stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Putativnotwehr: das vollständige Schema",
+      "coverText": "Auch die Vorstellung muss tragen",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer sich einen Angriff nur einbildet, wird nur entlastet, wenn seine Abwehr selbst in der eingebildeten Lage angemessen gewesen wäre.",
+        "handlung": "{A} swings a heavy wrench at {B}, who is only reaching into a pocket to pull out a harmless small flashlight; a faint shadow on the wall makes the flashlight look like a blade.",
+        "hinweisRegie": "Place the note in the free space near the blade-shaped shadow on the wall, slightly tilted toward the harmless flashlight, so it links imagination and reality without covering the wrench or faces.",
+        "alternative": "{A} stands on a balance scale weighing an imagined threat cloud against the size of his own raised shield."
+      },
+      "bildSzene": "flashlight shadow looks like blade",
+      "bildSzeneAlt": "imagined threat weighed against shield",
+      "quellen": [
+        "§ 16 StGB",
+        "§ 17 StGB",
+        "§ 32 StGB",
+        "§ 229 StGB",
+        "Themenpool: strafat-723"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:49:15.623Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-602",
+      "slug": "2027-08-09-b3",
+      "titelZeilen": [
+        "Zwei Wege aus",
+        "dem Kanzleramt –",
+        "beide mit Mehrheit"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zwei Wege aus dem Kanzleramt",
+          "unter": "Bundeskanzler · Art. 67, 68 GG",
+          "text": "Abwählen geht nur mit Nachfolger – und die Vertrauensfrage stellt der Kanzler selbst.",
+          "norm": "Art. 67, 68 GG",
+          "icon": "wahlurne",
+          "sprecher": "Den Kanzler einfach abwählen? Das geht nicht. Das Grundgesetz kennt genau zwei Wege, wie der Bundestag dem Kanzler das Vertrauen entzieht – und beide brauchen die Mehrheit der Mitglieder.",
+          "marken": [
+            "kein bloßes Abwählen",
+            "zwei Wege"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Misstrauen nur mit Nachfolger",
+          "text": "Der Bundestag wählt mit der Mehrheit seiner Mitglieder einen neuen Kanzler.",
+          "norm": "Art. 67 Abs. 1 GG",
+          "sprecher": "Weg eins: das konstruktive Misstrauensvotum. Der Bundestag spricht das Misstrauen nur aus, indem er mit der Mehrheit seiner Mitglieder einen Nachfolger wählt.",
+          "marken": [
+            "konstruktiv"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der Bundespräsident muss folgen",
+          "text": "Er entlässt den bisherigen und ernennt den Gewählten. 48 Stunden Abstand zur Wahl.",
+          "norm": "Art. 67 GG",
+          "sprecher": "Dann ersucht der Bundestag den Bundespräsidenten, den Kanzler zu entlassen. Der muss dem folgen und den Gewählten ernennen. Zwischen Antrag und Wahl müssen achtundvierzig Stunden liegen.",
+          "marken": [
+            "gebunden",
+            "48 Stunden"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vertrauensfrage: Der Kanzler fragt",
+          "text": "Keine Mehrheit der Mitglieder? Dann kann der Präsident auf Vorschlag auflösen.",
+          "norm": "Art. 68 Abs. 1 GG",
+          "sprecher": "Weg zwei geht vom Kanzler aus: die Vertrauensfrage. Findet sie nicht die Zustimmung der Mehrheit der Mitglieder, kann der Bundespräsident auf Vorschlag des Kanzlers binnen einundzwanzig Tagen den Bundestag auflösen.",
+          "marken": [
+            "kann, nicht muss"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Das Auflösungsrecht erlischt",
+          "text": "Wählt der Bundestag vorher mit Mehrheit einen anderen Kanzler, ist es vorbei.",
+          "norm": "Art. 68 Abs. 1 S. 2 GG",
+          "sprecher": "Aber: Das Auflösungsrecht erlischt, sobald der Bundestag mit der Mehrheit seiner Mitglieder einen anderen Kanzler wählt. Auch hier setzt sich also die konstruktive Idee durch.",
+          "marken": [
+            "erlischt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und einzelne Minister?",
+          "text": "Kein Misstrauensvotum gegen Minister – entlassen wird auf Vorschlag des Kanzlers.",
+          "norm": "Art. 64 Abs. 1 GG",
+          "sprecher": "Klausurfalle: Gegen einzelne Minister gibt es kein Misstrauensvotum. Sie werden auf Vorschlag des Kanzlers vom Bundespräsidenten ernannt und entlassen. Das ist die Lehre aus Weimar: keine Regierung stürzen ohne neue Mehrheit.",
+          "marken": [
+            "nur der Kanzler"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Art. 67: stürzen nur durch Neuwahl. Art. 68: Kanzler fragt, Präsident kann auflösen.",
+          "norm": "Art. 67, 68 GG",
+          "sprecher": "Merke: Stürzen nur durch Wahl eines Nachfolgers. Die Vertrauensfrage stellt der Kanzler, auflösen kann nur der Präsident.",
+          "marken": [
+            "Wahl statt Abwahl"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste Staatsorganisationsklausur",
+          "text": "Speichern und vor der Klausur wiederholen.",
+          "sprecher": "Speicher dir das für die nächste Staatsorganisationsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Den Kanzler einfach abwählen – das sieht das Grundgesetz nicht vor. Art. 67 GG verlangt, dass der Bundestag mit der Mehrheit seiner Mitglieder einen Nachfolger wählt; der Bundespräsident muss dann entlassen und ernennen. Art. 68 GG geht vom Kanzler aus: Scheitert die Vertrauensfrage, kann der Präsident auf Vorschlag binnen 21 Tagen auflösen – bis der Bundestag einen anderen Kanzler wählt. Gegen einzelne Minister gibt es kein Misstrauensvotum.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#staatsorganisationsrecht",
+        "#misstrauensvotum",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Misstrauensvotum und Vertrauensfrage",
+      "coverText": "Stürzen nur durch Neuwahl",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Wer den Kanzler stürzen will, muss sofort einen neuen mitbringen.",
+        "handlung": "{B} tries to lift a single chair off a small stage, but {A} hovers beside it and only releases it once {B} brings a second person to sit down immediately.",
+        "hinweisRegie": "Place the note in the free space above the chair being swapped, slightly tilted toward the newcomer, so it reads as the rule of replacement without covering the chair or either face.",
+        "alternative": "{A} holds a key that only turns when a second, new key is inserted into the same lock at the same time."
+      },
+      "bildSzene": "chair released only when successor sits",
+      "bildSzeneAlt": "lock opens only with second key",
+      "quellen": [
+        "Art. 63 GG",
+        "Art. 64 GG",
+        "Art. 67 GG",
+        "Art. 68 GG",
+        "Themenpool: staat-602"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-wege",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:49:15.624Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-728",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "A hält O nach dem Schuss für tödlich getroffen, sieht sofort: nur gestreift. Er schießt nicht nach. Rücktritt?",
+      "optionen": [
+        "Nein – er hielt den Versuch zunächst für beendet, also muss er retten",
+        "Ja – er korrigiert seine Vorstellung sofort, also genügt das Aufhören",
+        "Nein – nach dem ersten Schuss ist der Versuch fehlgeschlagen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "Themenpool: strafat-728"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:49:15.624Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-728",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – der korrigierte Rücktrittshorizont zählt, A darf einfach aufhören",
+      "text": "Maßgeblich ist die Vorstellung nach der letzten Ausführungshandlung. Korrigiert der Täter sie alsbald, in engem zeitlichem Zusammenhang, zählt nach der Rspr. die korrigierte Sicht. A erkennt, dass O nicht tödlich verletzt ist: Der Versuch ist unbeendet. Da A weiterschießen könnte, ist er nicht fehlgeschlagen – das freiwillige Aufgeben genügt (§ 24 Abs. 1 S. 1 Alt. 1 StGB).",
+      "norm": "§ 24 Abs. 1 S. 1 Alt. 1 StGB",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "Themenpool: strafat-728"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:49:15.624Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – er hielt den Versuch zunächst für beendet, also muss er retten",
+        "Ja – er korrigiert seine Vorstellung sofort, also genügt das Aufhören",
+        "Nein – nach dem ersten Schuss ist der Versuch fehlgeschlagen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-239",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 950 BGB: Verarbeitet der Käufer die Vorbehaltsware, soll der Lieferant trotzdem gesichert bleiben",
+      "text": "Wer aus fremden Stoffen eine neue Sache herstellt, wird ihr Eigentümer (§ 950 Abs. 1 BGB) – der Vorbehalt ginge unter. Der verlängerte Vorbehalt enthält daher eine Verarbeitungsklausel: Nach der Rspr. ist dann der Lieferant Hersteller. Die Bank, der das Lager nach § 930 BGB übereignet ist, erwirbt insoweit nichts vom Käufer. Teile der Lehre halten § 950 BGB für nicht abdingbar.",
+      "norm": "§ 950 BGB",
+      "quellen": [
+        "§ 950 BGB",
+        "§ 930 BGB",
+        "Themenpool: sachen-239"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:49:15.624Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-752",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "§ 252 StGB: Frag, warum der Dieb Gewalt anwendet",
+      "text": "Gewalt oder Drohung müssen eingesetzt werden, um sich im Besitz des gestohlenen Gutes zu erhalten. Will der Dieb nur entkommen oder unerkannt bleiben, scheidet § 252 StGB aus – dann bleiben etwa §§ 223, 240 StGB. Die Besitzerhaltung muss nicht das einzige Motiv sein. Deshalb im Sachverhalt genau hinsehen: Hält er die Beute fest oder lässt er sie fallen?",
+      "quellen": [
+        "§ 252 StGB",
+        "Themenpool: strafbt-752"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:49:15.624Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-889",
+      "ueberzeile": "4 Punkte IPR",
+      "titel": "Kollisionsnorm gefunden? Vier Fragen, bevor du das Sachrecht anwendest",
+      "text": "Vorab: Unionsrecht und Staatsverträge gehen dem EGBGB vor (Art. 3 EGBGB). Dann Schritt für Schritt:",
+      "punkte": [
+        "Qualifikation: Welche Kollisionsnorm passt?",
+        "Anknüpfung: Welches Recht beruft sie?",
+        "Gesamt- oder Sachnormverweisung? (Art. 4 I EGBGB, Art. 20 Rom I-VO)",
+        "Ordre public (Art. 6 EGBGB, Art. 21 Rom I-VO)"
+      ],
+      "quellen": [
+        "Art. 3 EGBGB",
+        "Art. 4 EGBGB",
+        "Art. 6 EGBGB",
+        "Art. 20 Rom I-VO",
+        "Art. 21 Rom I-VO",
+        "Themenpool: ipr-889"
+      ],
+      "fachLabel": "IPR",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:49:15.624Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "pairId": "gesetzs-205",
+      "ueberzeile": "Streitstand GoA",
+      "titel": "Feuerwehr löscht einen Brand, den ein Dritter verursacht hat: Kostenersatz über GoA?",
+      "norm": "§§ 677, 683 BGB",
+      "optionen": [
+        "Rspr.: Auch-fremdes Geschäft genügt, der Fremdgeschäftsführungswille wird vermutet – GoA trotz eigener Pflicht.",
+        "Teile der Lehre: Wer eine eigene öffentlich-rechtliche Pflicht erfüllt, führt kein fremdes Geschäft."
+      ],
+      "text": "Klausur: Zuerst prüfen, ob das Landesrecht den Kostenersatz abschließend regelt – dann ist nach verbreiteter Ansicht für die GoA kein Raum.",
+      "quellen": [
+        "§ 677 BGB",
+        "§ 683 BGB",
+        "§ 670 BGB",
+        "Themenpool: gesetzs-205"
+      ],
+      "fachLabel": "GoA/EBV",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:49:15.624Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

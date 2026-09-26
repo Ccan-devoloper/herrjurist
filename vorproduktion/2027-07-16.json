@@ -1,0 +1,859 @@
+{
+  "datum": "2027-07-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "bgbat-418",
+        "themaTitel": "Willenserklärung: objektiver und subjektiver Tatbestand",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "stpo-766",
+        "themaTitel": "Beschuldigtenbegriff und Belehrung",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-138",
+        "themaTitel": "Wie prüft man das Organstreitverfahren?",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:00",
+        "art": "frage",
+        "themaId": "arbeit-145"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:00",
+        "art": "antwort",
+        "themaId": "arbeit-145"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "zpo-561"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "merksatz",
+        "themaId": "methodik-901"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "begriff",
+        "themaId": "bgbat-431"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:17",
+        "art": "fehler",
+        "themaId": "methodik-936"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "bgbat-418",
+      "poolTitel": "Willenserklärung: objektiver und subjektiver Tatbestand",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 116 ff., 133, 157 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-23",
+        "2026-11-23",
+        "2027-04-15"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "stpo-766",
+      "poolTitel": "Beschuldigtenbegriff und Belehrung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 136, 163a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-08",
+        "2027-07-07",
+        "2027-07-07"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-138",
+      "poolTitel": "Wie prüft man das Organstreitverfahren?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 Abs. 1 Nr. 1 GG",
+        "§ 63 BVerfGG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-19"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "arbeit-145",
+      "poolTitel": "Wann ist ein Betriebsübergang nach § 613a BGB gegeben?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 613a BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-19",
+        "2027-05-12",
+        "2027-05-12"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "arbeit-145",
+      "poolTitel": "Wann ist ein Betriebsübergang nach § 613a BGB gegeben?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 613a BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-19",
+        "2027-05-12",
+        "2027-05-12"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-561",
+      "poolTitel": "Versäumnisurteil und Einspruch",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 330 ff., 338 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-06",
+        "2027-04-28",
+        "2027-05-05"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "methodik-901",
+      "poolTitel": "Gutachtenstil und Urteilsstil richtig einsetzen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-11",
+        "2027-04-17",
+        "2027-05-09"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "bgbat-431",
+      "poolTitel": "AGB-Inhaltskontrolle und geltungserhaltende Reduktion",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 306, 307-309 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-14",
+        "2027-04-14",
+        "2027-06-18"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "methodik-936",
+      "poolTitel": "Die vier Auslegungsmethoden sicher anwenden",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-05",
+        "2027-05-08",
+        "2027-05-15"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-418",
+      "slug": "2027-07-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Als Scherz gemeint: Vertrag nichtig, Haftung trotzdem",
+          "titelZeilen": [
+            "Als Scherz gemeint:",
+            "Vertrag nichtig,",
+            "Haftung trotzdem"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Nichtig, aber nicht folgenlos",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A schreibt B abends per Messenger: „Mein Motorrad gehört dir für 500 €.“ Er meint das als Scherz unter Freunden und erwartet, dass B es durchschaut. B nimmt das Angebot ernst, sagt zu und kauft für die Abholung ein nicht erstattbares Bahnticket für 60 €. A lehnt ab. Ansprüche des B?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung",
+          "schritte": [
+            {
+              "titel": "Objektiver Tatbestand",
+              "text": "Aus Sicht eines verständigen Empfängers (§§ 133, 157 BGB) liegt ein ernst gemeintes Angebot vor. B nimmt an."
+            },
+            {
+              "titel": "Fehlende Ernstlichkeit",
+              "text": "A will nicht gebunden sein und erwartet, dass B das erkennt: Scherzerklärung nach § 118 BGB."
+            },
+            {
+              "titel": "Rechtsfolge",
+              "text": "Die Erklärung ist nichtig – auch wenn B den Scherz nicht bemerkt. Kein Anspruch aus § 433 Abs. 1 BGB."
+            },
+            {
+              "titel": "Abgrenzung: § 116 BGB",
+              "text": "Hätte A gehofft, B falle darauf herein, läge ein geheimer Vorbehalt vor: Die Erklärung wäre wirksam."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Und das Bahnticket?",
+          "text": "§ 122 Abs. 1 BGB: A muss den Vertrauensschaden ersetzen – B ist so zu stellen, als hätte er nie auf die Erklärung vertraut. Begrenzt ist das durch das Erfüllungsinteresse. Ausgeschlossen wäre der Anspruch, wenn B den Scherz kannte oder kennen musste (§ 122 Abs. 2 BGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Ein Kaufvertrag besteht nicht: A's Erklärung ist nach § 118 BGB nichtig. B kann aber nach § 122 Abs. 1 BGB die 60 € für das Bahnticket verlangen – für ihn war der Scherz nicht erkennbar."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gescheiterter Scherz: nichtig nach § 118 BGB – den Vertrauensschaden ersetzt der Erklärende trotzdem nach § 122 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Scherz in drei Fragen",
+          "punkte": [
+            "Objektiv ein Angebot?",
+            "Sollte der andere es durchschauen?",
+            "Vertrauensschaden nach § 122 BGB?"
+          ],
+          "icons": [
+            "lupe",
+            "person",
+            "geldbeutel"
+          ]
+        }
+      ],
+      "caption": "Als Scherz gemeint – der Vertrag ist nichtig, die Haftung bleibt. Wer eine nicht ernst gemeinte Erklärung abgibt und erwartet, dass der andere das erkennt, erklärt nach § 118 BGB nichtig – auch wenn der Scherz misslingt. Den Vertrauensschaden muss er trotzdem nach § 122 BGB ersetzen. Ganz anders beim geheimen Vorbehalt: Wer hofft, dass der andere hereinfällt, ist gebunden (§ 116 BGB). Speichern für die nächste Klausur im BGB AT.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#willenserklärung",
+        "#118bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Scherzerklärung: nichtig, aber § 122 BGB",
+      "coverText": "Nichtig, aber nicht folgenlos",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Ein misslungener Scherz bindet nicht – aber wer darauf vertraut hat, bekommt seinen Vertrauensschaden ersetzt.",
+        "handlung": "{A} grins and hands {B} a toy-like voucher for a big machine, while {B} already holds a used travel ticket in his other hand.",
+        "hinweisRegie": "Place the note in the free space between the joke voucher and the used ticket, slightly tilted toward the ticket, so the real loss next to the void promise is visible without covering faces.",
+        "alternative": "{B} unpacks a gift box that turns out empty, while {A} reluctantly hands him a small coin pouch."
+      },
+      "bildSzene": "joke voucher, used travel ticket",
+      "bildSzeneAlt": "empty gift box, small coin pouch",
+      "quellen": [
+        "§ 118 BGB",
+        "§ 116 BGB",
+        "§ 122 BGB",
+        "§ 133 BGB",
+        "§ 157 BGB",
+        "Themenpool: bgbat-418"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-haftung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:27:55.596Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-766",
+      "slug": "2027-07-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Als Zeuge befragt, obwohl längst verdächtig",
+          "titelZeilen": [
+            "Als Zeuge befragt,",
+            "obwohl längst",
+            "verdächtig"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Status folgt dem Verdacht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Nach einem Einbruch findet die Polizei bei Z Werkzeug mit Spuren vom Tatort. Trotzdem befragt sie Z „als Zeugen“, ohne ihn über sein Schweigerecht zu belehren. Z räumt die Tat ein. Darf seine Aussage im Urteil verwertet werden?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Beschuldigter – ab wann?",
+              "text": "Beschuldigter wird man durch einen Willensakt der Strafverfolgungsbehörde, der das Verfahren gegen einen richtet."
+            },
+            {
+              "titel": "Keine freie Wahl",
+              "text": "Bei starkem Tatverdacht darf die Polizei nicht ausweichen: Sie muss als Beschuldigten vernehmen und belehren."
+            },
+            {
+              "titel": "Verstoß",
+              "text": "Die Belehrung nach § 136 Abs. 1 S. 2, § 163a Abs. 4 StPO fehlte – ein Verfahrensfehler."
+            },
+            {
+              "titel": "Folge",
+              "text": "Nach dem BGH grundsätzlich unverwertbar – wenn der Angeklagte rechtzeitig widerspricht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Spielraum der Polizei",
+          "text": "Die Rspr. räumt der Polizei einen Beurteilungsspielraum ein, wann der Verdacht stark genug ist. Überschritten ist er, wenn sie trotz starken Tatverdachts nur als Zeugen befragt – erst recht, um die Belehrung zu umgehen. Die Spuren am Werkzeug begründen hier einen solchen Verdacht."
+        },
+        {
+          "art": "text",
+          "titel": "Widerspruch und Folgevernehmung",
+          "text": "Der verteidigte Angeklagte muss der Verwertung in der Hauptverhandlung bis zu dem in § 257 StPO genannten Zeitpunkt widersprechen. Wird Z später korrekt vernommen, ist er zusätzlich darauf hinzuweisen, dass die frühere Aussage unverwertbar sein kann (qualifizierte Belehrung)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wer trotz starken Tatverdachts nur als Zeuge befragt wird, ist unbelehrter Beschuldigter: Aussage grundsätzlich unverwertbar – bei Widerspruch."
+        },
+        {
+          "art": "cta",
+          "titel": "Belehrung in drei Fragen",
+          "punkte": [
+            "Wie stark war der Verdacht?",
+            "Als Beschuldigter belehrt?",
+            "Rechtzeitig widersprochen?"
+          ],
+          "icons": [
+            "lupe",
+            "polizei",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Als Zeuge befragt, obwohl längst verdächtig – dann ist er in Wahrheit Beschuldigter. Bei starkem Tatverdacht darf die Polizei nicht auf die Zeugenvernehmung ausweichen; ihr Beurteilungsspielraum ist dann überschritten. Fehlt die Belehrung nach § 136 Abs. 1 S. 2, § 163a Abs. 4 StPO, ist die Aussage nach dem BGH grundsätzlich unverwertbar – sofern der Angeklagte rechtzeitig widerspricht. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#136stpo",
+        "#beweisverwertungsverbot",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zeugenvernehmung trotz starken Tatverdachts",
+      "coverText": "Status folgt dem Verdacht",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Wer stark verdächtig ist, muss als Beschuldigter behandelt und belehrt werden – ein falsches Etikett ändert daran nichts.",
+        "handlung": "{B} nervously sits on a chair labeled with a small visitor badge, while {A} calmly lifts the badge and reveals a second badge underneath.",
+        "hinweisRegie": "Place the note in the free space next to the lifted badge and the one revealed underneath, slightly tilted toward the hidden badge, so the true status is highlighted without covering {B}'s face.",
+        "alternative": "{A} stops a door marked 'guest' from closing behind {B}, whose muddy boots match tracks on the floor."
+      },
+      "bildSzene": "visitor badge lifted, second badge",
+      "bildSzeneAlt": "muddy boots match floor tracks",
+      "quellen": [
+        "§ 136 Abs. 1 StPO",
+        "§ 163a Abs. 4 StPO",
+        "§ 257 StPO",
+        "Themenpool: stpo-766"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verkannte-rolle",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:00.652Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-138",
+      "slug": "2027-07-16-b3",
+      "titelZeilen": [
+        "Organstreit in",
+        "vier Stationen:",
+        "Grundrechte",
+        "bleiben draußen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Organstreit in vier Stationen: Grundrechte bleiben draußen",
+          "unter": "Organstreit · Art. 93 Abs. 1 Nr. 1 GG",
+          "text": "Abgeordneter A rügt im Organstreit seine Meinungsfreiheit – und scheitert schon an der Zulässigkeit.",
+          "norm": "§ 63 BVerfGG",
+          "icon": "gebaeude",
+          "sprecher": "Im Organstreit haben Grundrechte nichts verloren. Es geht um Rechte im Verfassungsgefüge, nicht um Freiheit gegen den Staat. Vier Stationen der Zulässigkeit.",
+          "marken": [
+            "keine Grundrechte",
+            "Organrechte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Parteifähigkeit",
+          "text": "Oberste Bundesorgane und andere Beteiligte mit eigenen Rechten aus GG oder Geschäftsordnung.",
+          "norm": "Art. 93 Abs. 1 Nr. 1 GG",
+          "sprecher": "Station eins: Parteifähigkeit. Beteiligt sein können oberste Bundesorgane und andere Beteiligte, die durch das Grundgesetz oder eine Geschäftsordnung mit eigenen Rechten ausgestattet sind. Also etwa Fraktionen und einzelne Abgeordnete.",
+          "marken": [
+            "auch Abgeordnete"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Streitgegenstand",
+          "text": "Rechtserhebliche Maßnahme oder Unterlassung des Antragsgegners.",
+          "norm": "§ 64 Abs. 1 BVerfGG",
+          "sprecher": "Station zwei: der Streitgegenstand. Angegriffen wird eine rechtserhebliche Maßnahme oder Unterlassung des Antragsgegners. Sie muss geeignet sein, die Rechtsstellung des Antragstellers zu beeinträchtigen.",
+          "marken": [
+            "Maßnahme"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Antragsbefugnis",
+          "text": "Mögliche Verletzung eigener organschaftlicher Rechte – nicht von Grundrechten.",
+          "norm": "§ 64 Abs. 1 BVerfGG",
+          "sprecher": "Station drei: die Antragsbefugnis. Der Antragsteller muss geltend machen, in eigenen Rechten verletzt zu sein, die ihm als Organ oder Organteil zustehen. Beim Abgeordneten ist das sein Status aus Artikel 38 Absatz 1 Satz 2. Die Meinungsfreiheit reicht nicht. Eine Fraktion kann zudem Rechte des Bundestags in Prozessstandschaft geltend machen.",
+          "marken": [
+            "Art. 38 I 2 GG"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Form und Frist",
+          "text": "Begründeter Antrag binnen sechs Monaten, nachdem die Maßnahme bekannt wurde.",
+          "norm": "§ 64 Abs. 3 BVerfGG",
+          "sprecher": "Station vier: Form und Frist. Ein schriftlicher, begründeter Antrag, und zwar binnen sechs Monaten, nachdem die Maßnahme dem Antragsteller bekannt geworden ist.",
+          "marken": [
+            "sechs Monate"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Auch Parteien können Organstreit führen",
+          "text": "Wenn sie ihren Status aus Art. 21 GG geltend machen, etwa die Chancengleichheit.",
+          "norm": "Art. 21 GG",
+          "sprecher": "Übrigens: Auch politische Parteien können Organstreit führen, wenn sie ihren besonderen Status aus Artikel 21 geltend machen, etwa die Chancengleichheit.",
+          "marken": [
+            "Art. 21 GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Organstreit: eigene Rechte im Verfassungsgefüge – nie Grundrechte.",
+          "norm": null,
+          "sprecher": "Merke: Im Organstreit verteidigst du Kompetenzen und Statusrechte, keine Grundrechte.",
+          "marken": [
+            "Status, nicht Freiheit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Welches Organrecht steht im Raum?",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Staatsrechtsklausur. Und frag bei der Antragsbefugnis immer: Welches Organrecht steht im Raum?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Organstreit in vier Stationen – und Grundrechte bleiben draußen. Parteifähig sind oberste Bundesorgane und andere Beteiligte mit eigenen Rechten, etwa Fraktionen und Abgeordnete. Angegriffen wird eine rechtserhebliche Maßnahme; antragsbefugt ist nur, wer eigene Organrechte geltend macht, beim Abgeordneten etwa aus Art. 38 Abs. 1 S. 2 GG. Dazu die Sechsmonatsfrist des § 64 Abs. 3 BVerfGG. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#organstreit",
+        "#bverfgg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Organstreit: Zulässigkeit in vier Stationen",
+      "coverText": "Organrechte statt Grundrechte",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Im Organstreit zählen nur Rechte, die einem Organ zustehen – Grundrechte bleiben außen vor.",
+        "handlung": "{A} tries to carry a personal flag through a council chamber door, while {B} gently holds it back and hands her an official seat badge instead.",
+        "hinweisRegie": "Place the note in the free space between the held-back personal flag and the handed-over seat badge, slightly tilted toward the badge, so the swap of rights is visible without covering faces.",
+        "alternative": "{B} sorts two keys at a gate: one marked with a personal symbol is rejected, one with an office symbol fits."
+      },
+      "bildSzene": "flag held back, seat badge given",
+      "bildSzeneAlt": "office key fits, personal key rejected",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 1 GG",
+        "§ 63 BVerfGG",
+        "§ 64 BVerfGG",
+        "Art. 38 Abs. 1 S. 2 GG",
+        "Art. 21 GG",
+        "Themenpool: staat-138"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-stationen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:00.653Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-145",
+      "ueberzeile": "Prüfungsfrage Arbeitsrecht",
+      "titel": "Kündigung allein wegen des Betriebsübergangs: Ist sie wirksam?",
+      "optionen": [
+        "Ja, wenn der Betriebsrat angehört wurde",
+        "Nur mit Zustimmung des Erwerbers",
+        "Nein, § 613a Abs. 4 S. 1 BGB verbietet sie"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 613a Abs. 4 BGB",
+        "Themenpool: arbeit-145"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:00.653Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-145",
+      "ueberzeile": "Auflösung",
+      "titel": "Unwirksam – die Kündigung wegen des Übergangs ist verboten",
+      "text": "§ 613a Abs. 4 S. 1 BGB verbietet die Kündigung wegen des Betriebsübergangs – durch Veräußerer wie Erwerber. Kündigungen aus anderen Gründen bleiben möglich (S. 2). Entscheidend ist, ob der Übergang der tragende Grund ist oder nur der äußere Anlass.",
+      "norm": "§ 613a Abs. 4 BGB",
+      "quellen": [
+        "§ 613a Abs. 4 BGB",
+        "Themenpool: arbeit-145"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:00.653Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja, wenn der Betriebsrat angehört wurde",
+        "Nur mit Zustimmung des Erwerbers",
+        "Nein, § 613a Abs. 4 S. 1 BGB verbietet sie"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-561",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 331 Abs. 2 ZPO: Beklagter säumig – die Klage muss trotzdem schlüssig sein",
+      "text": "Fehlt der Beklagte, gilt das tatsächliche Vorbringen des Klägers als zugestanden (§ 331 Abs. 1 S. 1 ZPO). Ein Versäumnisurteil ergeht aber nur, soweit dieses Vorbringen den Antrag rechtfertigt. Ist die Klage unschlüssig, wird sie durch streitiges Urteil abgewiesen – sogenanntes unechtes Versäumnisurteil.",
+      "norm": "§ 331 ZPO",
+      "quellen": [
+        "§ 331 ZPO",
+        "Themenpool: zpo-561"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:00.653Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-901",
+      "ueberzeile": "Merksatz Klausurtechnik",
+      "titel": "Gutachten heißt nicht: alles im Gutachtenstil",
+      "text": "Den Gutachtenstil brauchst du, wo es ein Problem gibt. Was offensichtlich vorliegt, stellst du knapp im Urteilsstil fest: „K ist Verbraucher, da er privat kauft.“ So bleibt Zeit für die Schwerpunkte.",
+      "quellen": [
+        "Themenpool: methodik-901"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:00.653Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-431",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Verbot der geltungserhaltenden Reduktion",
+      "text": "Eine unwirksame AGB-Klausel wird nicht auf das gerade noch zulässige Maß zurückgeschnitten, sondern entfällt ganz; an ihre Stelle tritt das dispositive Recht (§ 306 Abs. 2 BGB). Der Verwender soll nicht gefahrlos überziehen können. Nur ein sprachlich abtrennbarer, für sich wirksamer Teil bleibt stehen.",
+      "norm": "§ 306 Abs. 2 BGB",
+      "quellen": [
+        "§ 306 BGB",
+        "§ 307 BGB",
+        "Themenpool: bgbat-431"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:00.653Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-936",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Die Analogie ist keine fünfte Auslegungsmethode",
+      "falsch": "„Nach Wortlaut, Systematik, Historie und Zweck bleibt als fünfte Methode die Analogie.“",
+      "richtigText": "Die Analogie beginnt, wo die Auslegung endet – jenseits des möglichen Wortsinns. Sie ist Rechtsfortbildung und braucht eigene Voraussetzungen: planwidrige Regelungslücke und vergleichbare Interessenlage. Im Strafrecht ist sie zulasten des Täters verboten (Art. 103 Abs. 2 GG).",
+      "quellen": [
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: methodik-936"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:00.653Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

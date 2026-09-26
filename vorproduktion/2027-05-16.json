@@ -1,0 +1,906 @@
+{
+  "datum": "2027-05-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "sachen-229",
+        "themaTitel": "Wer ist Störer im Sinne des § 1004 BGB?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "stpo-772",
+        "themaTitel": "Durchsuchung bei Dritten",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "verwalt-387"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "verwalt-387"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:11",
+        "art": "norm",
+        "themaId": "verwalt-391"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:38",
+        "art": "fehler",
+        "themaId": "strafat-924"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "tipp",
+        "themaId": "grundr-619"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "zahl",
+        "themaId": "assessorz-811"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "sachen-229",
+      "poolTitel": "Wer ist Störer im Sinne des § 1004 BGB?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1004 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-16",
+        "2026-12-26",
+        "2027-03-20"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-772",
+      "poolTitel": "Durchsuchung bei Dritten",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 103 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-01-23",
+        "2027-04-21",
+        "2027-04-21"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-387",
+      "poolTitel": "Wann ist Vertrauensschutz zu gewähren?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 Abs. 2 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-14",
+        "2026-11-24"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-387",
+      "poolTitel": "Wann ist Vertrauensschutz zu gewähren?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 Abs. 2 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-14",
+        "2026-11-24"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-391",
+      "poolTitel": "Was ist der Folgenbeseitigungsanspruch?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07",
+        "2027-01-20",
+        "2027-01-27"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "strafat-924",
+      "poolTitel": "Echte Wahlfeststellung, Postpendenz und in dubio pro reo: Was gilt wann?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "Art. 103 Abs. 2 GG",
+        "§ 261 StPO",
+        "§ 1 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2027-03-13"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "grundr-619",
+      "poolTitel": "Koalitionsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 9 III GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-11"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "assessorz-811",
+      "poolTitel": "Wie prüft man die einseitige Erledigungserklärung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 264 Nr. 2 ZPO",
+        "§§ 91 ff. ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-24"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-05-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vier Bereiche, 18 Beiträge: Was diese Woche hängen bleiben sollte",
+          "titelZeilen": [
+            "Vier Bereiche,",
+            "18 Beiträge: Was",
+            "hängen bleiben",
+            "sollte"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 438 BGB: Mängelansprüche verjähren ab Ablieferung – die Kenntnis zählt nur bei Arglist.",
+            "Anwartschaft: Nach dem BGH erst mit eigenem Eintragungsantrag oder Vormerkung.",
+            "§ 305c Abs. 2 BGB: Unklare AGB erst kundenfeindlich lesen – unwirksam, dann fällt die Klausel.",
+            "§ 935 Abs. 2 BGB: Bei Geld, Inhaberpapieren und Versteigerung sperrt das Abhandenkommen nicht.",
+            "Vormerkung: Spätere Grundschuld ist relativ unwirksam – Löschung über § 888 BGB."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 243 Abs. 2 StGB: Geringwertige Beute sperrt die Regelbeispiele Nr. 1 bis 6.",
+            "§ 136a StPO: Ausgenutzte Übermüdung macht das Geständnis unverwertbar.",
+            "Tankstelle: Unbemerkt getankt, nicht gezahlt – nach dem BGH meist nur versuchter Betrug.",
+            "§ 358 Abs. 2 StPO: Gedeckelt sind die Rechtsfolgen, nicht der Schuldspruch.",
+            "Fahrlässigkeit: Ohne Pflichtwidrigkeitszusammenhang keine Zurechnung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Normenkontrolle verfristet: Inzident bleibt der Plan prüfbar – § 215 BauGB beachten.",
+            "Grundrechte: Art. 2 Abs. 1 GG weit geschützt, weit beschränkt – § 130 Abs. 4 StGB ist zulässige Ausnahme.",
+            "Gesetzgebung: Zustimmung des Bundesrates nur, wo das GG es anordnet.",
+            "§ 43 Abs. 2 VwGO: nachrangig nur, wo Frist und Vorverfahren umgangen würden.",
+            "§ 167 Abs. 2 VwGO: Bei Anfechtung und Verpflichtung nur die Kosten vorläufig vollstreckbar."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Auslegung: Nur das problematische Merkmal – Wortlaut, Systematik, Historie, Zweck.",
+            "Kopfsache: Nicht auf Motivation warten – klein anfangen, fester Start, Handy raus."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann greift § 243 Abs. 2 StGB nicht?",
+            "Was verlangt § 888 Abs. 1 BGB vom Grundschuldgläubiger?",
+            "Was ist nach einem gewonnenen Anfechtungsurteil vorläufig vollstreckbar?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Fristen und Sperren sichern",
+            "Strafrecht: Zurechnung und Verfahren abrufen",
+            "Öffentliches Recht: Rechtsbehelfe ordnen",
+            "Methodik und Kopf trainieren"
+          ],
+          "icons": [
+            "dokument",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Beiträge aus vier Bereichen. Zivilrecht von der Mängelverjährung bis zur Vormerkung, Strafrecht von § 243 StGB bis zum Pflichtwidrigkeitszusammenhang, Öffentliches Recht von der Normenkontrolle bis zu den Nebenentscheidungen im VG-Urteil – dazu Auslegung und der Lernstart ohne Motivation. Geh die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Beiträge, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Am Wochenende wird geprüft, welche der Stationen sicher sitzen und welche noch einmal geübt werden müssen.",
+        "handlung": "{B} walks past four small workbenches and taps each finished piece, while {A} points his pointer at the one piece on the third bench that still needs another pass.",
+        "hinweisRegie": "Place the note in the free space above the four workbenches, slightly tilted toward the third one, so the self-check is linked to the note without covering {B}'s hands.",
+        "alternative": "{A} holds up four colored folders while {B} pulls single sheets from them and sorts them onto a 'repeat' tray."
+      },
+      "bildSzene": "checking pieces on four workbenches",
+      "bildSzeneAlt": "sheets sorted onto repeat tray",
+      "quellen": [
+        "§ 438 BGB",
+        "§ 925 BGB",
+        "§ 305c BGB",
+        "§ 935 BGB",
+        "§ 888 BGB",
+        "§ 243 StGB",
+        "§ 136a StPO",
+        "§ 263 StGB",
+        "§ 358 StPO",
+        "§ 222 StGB",
+        "§ 47 VwGO",
+        "§ 215 BauGB",
+        "Art. 2 Abs. 1 GG",
+        "Art. 5 Abs. 2 GG",
+        "Art. 77 GG",
+        "§ 43 Abs. 2 VwGO",
+        "§ 167 VwGO",
+        "§ 623 BGB",
+        "Themenpool: methodik-936",
+        "Themenpool: mindset-2"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-beitragszahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:47.916Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-229",
+      "slug": "2027-05-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 1004 BGB: fünf Schritte – und kein Schadensersatz",
+          "titelZeilen": [
+            "§ 1004 BGB:",
+            "fünf Schritte,",
+            "kein Schadensersatz"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Beseitigung statt Ersatz",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 1004 BGB schützt das Eigentum gegen Beeinträchtigungen, die nicht in der Entziehung des Besitzes liegen. Der Anspruch zielt auf Beseitigung und Unterlassung. Er setzt kein Verschulden voraus – und gibt deshalb auch keinen Ersatz für Schäden."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Eigentum",
+              "text": "Der Anspruchsteller ist Eigentümer der beeinträchtigten Sache."
+            },
+            {
+              "titel": "2. Beeinträchtigung",
+              "text": "Jede Einwirkung auf das Eigentum außer der Besitzentziehung – die regelt § 985 BGB."
+            },
+            {
+              "titel": "3. Störer",
+              "text": "Handlungsstörer: verursacht die Störung durch sein Verhalten. Zustandsstörer: Die Störung geht von seiner Sache aus und ist ihm zurechenbar."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Keine Duldungspflicht",
+              "text": "Ausgeschlossen, wenn der Eigentümer dulden muss (§ 1004 Abs. 2 BGB) – etwa nach § 906 BGB, aus Vertrag oder öffentlichem Recht."
+            },
+            {
+              "titel": "5. Rechtsfolge",
+              "text": "Beseitigung der fortwirkenden Beeinträchtigung; Unterlassung, wenn weitere Beeinträchtigungen drohen (§ 1004 Abs. 1 S. 2 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Beseitigung oder Schadensersatz?",
+          "text": "Beseitigung heißt: die Störungsquelle beenden. Folgeschäden am Eigentum ersetzt nur das Deliktsrecht, also mit Verschulden (§ 823 Abs. 1 BGB). Wo die Grenze genau verläuft, ist umstritten. Beseitigt der Eigentümer selbst, kann er die Kosten nach der Rspr. über GoA oder Bereicherungsrecht verlangen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eigentum, Beeinträchtigung, Störer, keine Duldungspflicht – dann Beseitigung oder Unterlassung, aber kein Schadensersatz."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 1004 BGB in drei Fragen",
+          "punkte": [
+            "Wer hat die Störung zu verantworten?",
+            "Muss der Eigentümer sie dulden?",
+            "Beseitigung oder Schaden?"
+          ],
+          "icons": [
+            "haus",
+            "waage",
+            "werkzeug"
+          ]
+        }
+      ],
+      "caption": "§ 1004 BGB in fünf Schritten: Eigentum, Beeinträchtigung, Störer, keine Duldungspflicht, Rechtsfolge. Der Anspruch setzt kein Verschulden voraus – und gibt deshalb nur Beseitigung und Unterlassung, keinen Schadensersatz. Folgeschäden laufen über § 823 Abs. 1 BGB. Die genaue Grenze zwischen Beseitigung und Schadensersatz ist umstritten. Speichern für den nächsten Nachbarstreit.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#1004bgb",
+        "#nachbarrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 1004 BGB: das Prüfschema",
+      "coverText": "Beseitigung statt Ersatz",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Der Abwehranspruch beendet die Störung – den entstandenen Schaden ersetzt er nicht.",
+        "handlung": "{A} pulls a large stray root out of a garden wall at its source, while {B} points to a cracked tile below that stays as it is.",
+        "hinweisRegie": "Place the note in the free space between the pulled root and the cracked tile, slightly tilted toward the tile, so the limit of removal stands out without covering {A}'s hands.",
+        "alternative": "{B} turns off a dripping pipe from the neighbor's side, while {A} looks at the old water stain that remains on the wall."
+      },
+      "bildSzene": "root pulled out, cracked tile remains",
+      "bildSzeneAlt": "pipe shut off, stain remains",
+      "quellen": [
+        "§ 1004 BGB",
+        "§ 985 BGB",
+        "§ 906 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: sachen-229"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-pruefschritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:47.916Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-772",
+      "slug": "2027-05-16-b3",
+      "titelZeilen": [
+        "Durchsuchung beim",
+        "Unverdächtigen:",
+        "Genügt eine",
+        "Vermutung?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Durchsuchung beim Unverdächtigen: Genügt eine Vermutung?",
+          "unter": "Durchsuchung · § 103 StPO",
+          "text": "Beim Dritten braucht es Tatsachen.",
+          "norm": "§ 103 Abs. 1 StPO",
+          "icon": "haus",
+          "sprecher": "Beim Beschuldigten genügt eine Vermutung, beim Dritten nicht. Die Polizei will die Wohnung von D durchsuchen, der mit der Tat nichts zu tun hat.",
+          "marken": [
+            "Tatsachen nötig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Nur für bestimmte Zwecke",
+          "text": "Ergreifung, Spurenverfolgung, Beschlagnahme bestimmter Gegenstände.",
+          "norm": "§ 103 Abs. 1 S. 1 StPO",
+          "sprecher": "Schritt eins: der Zweck. Beim Dritten ist die Durchsuchung nur erlaubt, um den Beschuldigten zu ergreifen, Spuren einer Straftat zu verfolgen oder bestimmte Gegenstände zu beschlagnahmen.",
+          "marken": [
+            "drei Zwecke"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Tatsachen statt Vermutung",
+          "text": "Konkrete Anhaltspunkte, dass sich das Gesuchte dort befindet.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Es müssen Tatsachen vorliegen, aus denen zu schließen ist, dass sich Person, Spur oder Sache gerade in diesen Räumen befindet. Beim Beschuldigten reicht nach Paragraf 102 schon die Vermutung, dass man Beweismittel findet.",
+          "marken": [
+            "§ 102 vs. § 103"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Gegenstände bestimmt bezeichnen",
+          "text": "Kein allgemeines Suchen nach Beweisen.",
+          "norm": null,
+          "sprecher": "Schritt drei: Die gesuchten Gegenstände müssen bestimmt sein. Eine allgemeine Suche nach irgendwelchen Beweismitteln erlaubt Paragraf 103 nicht. Der Beschluss muss so konkret sein, dass er die Durchsuchung auch wirklich begrenzt.",
+          "marken": [
+            "bestimmt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Richtervorbehalt",
+          "text": "Grundsätzlich ordnet der Richter an.",
+          "norm": "§ 105 Abs. 1 StPO",
+          "sprecher": "Schritt vier: Anordnen darf grundsätzlich nur der Richter. Staatsanwaltschaft und Ermittlungspersonen nur bei Gefahr im Verzug, und die ist eng auszulegen.",
+          "marken": [
+            "Richter"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Ausnahme: § 103 Abs. 2 StPO",
+          "text": "Räume, in denen der Beschuldigte ergriffen wurde oder die er auf der Flucht betrat.",
+          "norm": "§ 103 Abs. 2 StPO",
+          "sprecher": "Die Ausnahme: Hat der Beschuldigte die Räume während der Verfolgung betreten oder wurde er dort ergriffen, gelten die Beschränkungen aus Absatz eins nicht.",
+          "marken": [
+            "Flucht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Milderes Mittel prüfen",
+          "text": "Oft genügt das Herausgabeverlangen.",
+          "norm": "§ 95 StPO",
+          "sprecher": "Und denk an die Verhältnismäßigkeit. Beim Unverdächtigen ist sie besonders streng. Oft reicht es, ihn nach Paragraf 95 zur Herausgabe aufzufordern. Erst wenn er sich weigert, liegt die Durchsuchung nahe.",
+          "marken": [
+            "§ 95 StPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Zweck, Tatsachen, bestimmte Sache, Richter.",
+          "norm": "§ 103 StPO",
+          "sprecher": "Merke: Beim Dritten braucht es einen erlaubten Zweck, konkrete Tatsachen, bestimmt bezeichnete Gegenstände und grundsätzlich einen Richter.",
+          "marken": [
+            "vier Hürden"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst klären: Beschuldigter oder Dritter?",
+          "text": "Speichern für die nächste StPO-Zusatzfrage.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste StPO-Zusatzfrage. Und kläre immer zuerst, bei wem durchsucht wird.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Durchsuchung beim Unverdächtigen – genügt die Vermutung, dort etwas zu finden? Nein. Bei Dritten verlangt § 103 Abs. 1 StPO Tatsachen, aus denen zu schließen ist, dass sich Person, Spur oder bestimmte Sache gerade dort befindet. Beim Beschuldigten genügt nach § 102 StPO die Vermutung. Ausnahme: § 103 Abs. 2 StPO für Räume, die der Beschuldigte auf der Flucht betreten hat. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafprozessrecht",
+        "#durchsuchung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 103 StPO: Durchsuchung bei Dritten",
+      "coverText": "Tatsachen statt Vermutung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Beim Unbeteiligten darf nur gesucht werden, wo konkrete Hinweise auf das Gesuchte zeigen.",
+        "handlung": "{A} stands at an uninvolved neighbor's door with a lantern, while {B} hovers beside her and holds up a single clear footprint cast that points to that door.",
+        "hinweisRegie": "Place the note in the free space between the footprint cast and the door, slightly tilted toward the cast, so the concrete clue is the focus without covering {A}'s face.",
+        "alternative": "{B} checks a short list of concrete clues before {A} is allowed to open a small gate to a quiet courtyard."
+      },
+      "bildSzene": "footprint cast points to neighbor's door",
+      "bildSzeneAlt": "clue list checked before gate",
+      "quellen": [
+        "§ 102 StPO",
+        "§ 103 StPO",
+        "§ 105 StPO",
+        "§ 95 StPO",
+        "Themenpool: stpo-772"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:47.917Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-387",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "B hat einen zu Unrecht bewilligten Zuschuss für eine Reise ausgegeben. Ist sein Vertrauen schutzwürdig?",
+      "optionen": [
+        "Nein – auf rechtswidrige Leistungen darf man nie vertrauen",
+        "In der Regel ja – er hat die Leistung verbraucht",
+        "Nur, wenn B die Behörde vorher gefragt hat"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 48 Abs. 2 VwVfG",
+        "Themenpool: verwalt-387"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:47.918Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-387",
+      "ueberzeile": "Auflösung",
+      "titel": "In der Regel ja – wer die Leistung verbraucht hat, wird geschützt",
+      "text": "Bei Geld- und teilbaren Sachleistungen ist das Vertrauen in der Regel schutzwürdig, wenn der Begünstigte die Leistung verbraucht hat (§ 48 Abs. 2 S. 2 VwVfG). Ausgeschlossen ist es aber, wenn er den VA durch Täuschung, Drohung, Bestechung oder unrichtige Angaben erwirkt hat oder die Rechtswidrigkeit kannte oder grob fahrlässig nicht kannte (§ 48 Abs. 2 S. 3 VwVfG).",
+      "norm": "§ 48 Abs. 2 VwVfG",
+      "quellen": [
+        "§ 48 Abs. 2 VwVfG",
+        "Themenpool: verwalt-387"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:47.918Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – auf rechtswidrige Leistungen darf man nie vertrauen",
+        "In der Regel ja – er hat die Leistung verbraucht",
+        "Nur, wenn B die Behörde vorher gefragt hat"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-391",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 113 Abs. 1 S. 2 VwGO setzt den Folgenbeseitigungsanspruch voraus – begründet ihn aber nicht",
+      "text": "Die Norm regelt nur, dass das Gericht die Rückgängigmachung im Anfechtungsprozess aussprechen kann. Materiell leitet die h.M. den Anspruch aus den Freiheitsgrundrechten und Art. 20 Abs. 3 GG her; er ist gewohnheitsrechtlich anerkannt. Voraussetzungen: hoheitlicher Eingriff in ein subjektives Recht, andauernder rechtswidriger Zustand, Wiederherstellung möglich und zumutbar.",
+      "norm": "Art. 20 Abs. 3 GG · § 113 Abs. 1 S. 2 VwGO",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "§ 113 Abs. 1 S. 2 VwGO",
+        "Themenpool: verwalt-391"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:47.918Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-924",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Echte Wahlfeststellung: zwischen beliebigen Delikten möglich?",
+      "falsch": "Steht nur fest, dass A entweder das eine oder das andere Delikt begangen hat, wird er wahldeutig verurteilt – egal, welche Delikte es sind.",
+      "richtigText": "Nach der Rspr. nur, wenn beide Alternativen rechtsethisch und psychologisch vergleichbar sind – anerkannt etwa bei Diebstahl und Hehlerei. Vorrang haben eindeutige Lösungen: in dubio pro reo bei Stufenverhältnis, Postpendenz bei sicherer späterer Tat. Der BGH hält die echte Wahlfeststellung für verfassungsgemäß.",
+      "quellen": [
+        "Art. 103 Abs. 2 GG",
+        "§ 261 StPO",
+        "§ 242 StGB",
+        "§ 259 StGB",
+        "Themenpool: strafat-924"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:47.918Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-619",
+      "ueberzeile": "Klausurtipp Grundrechte",
+      "titel": "Art. 9 Abs. 3 GG: kein Gesetzesvorbehalt – aber Ausgestaltung ist kein Eingriff",
+      "text": "Die Koalitionsfreiheit ist vorbehaltlos gewährleistet. Eingriffe rechtfertigst du nur mit kollidierendem Verfassungsrecht, etwa Grundrechten Dritter. Vorher fragst du: Greift das Gesetz überhaupt ein, oder gestaltet es die Koalitionsfreiheit nur aus – etwa durch Regeln zum Tarifvertragssystem? Auch die negative Koalitionsfreiheit ist geschützt.",
+      "quellen": [
+        "Art. 9 Abs. 3 GG",
+        "Themenpool: grundr-619"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:47.918Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-811",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Einseitige Erledigung: vier Punkte für Tenor, Kosten und Streitwert",
+      "text": "Im Urteil geht es nicht mehr um die Leistung, sondern um die Feststellung der Erledigung.",
+      "punkte": [
+        "Begründet: „Es wird festgestellt, dass der Rechtsstreit in der Hauptsache erledigt ist.“",
+        "Kosten dann nach § 91 ZPO – nicht nach § 91a ZPO",
+        "Unbegründet: Klageabweisung, der Kläger trägt die Kosten",
+        "Streitwert: nach dem BGH regelmäßig das Kosteninteresse"
+      ],
+      "quellen": [
+        "§ 91 ZPO",
+        "§ 91a ZPO",
+        "§ 264 Nr. 2 ZPO",
+        "Themenpool: assessorz-811"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:47.918Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,878 @@
+{
+  "datum": "2027-09-06",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-306",
+        "themaTitel": "Wann liegt Mittäterschaft vor?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "grundr-370",
+        "themaTitel": "Wie löst man den Konflikt zwischen Meinungsfreiheit und Persönlichkeitsrecht?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-452",
+        "themaTitel": "Abtretung und Schuldnerschutz",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "anklage-795"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "anklage-795"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:04",
+        "art": "norm",
+        "themaId": "staat-359"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "tipp",
+        "themaId": "handelsg-264"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "zahl",
+        "themaId": "methodik-908"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "streitstand",
+        "themaId": "assessoroer-845"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-306",
+      "poolTitel": "Wann liegt Mittäterschaft vor?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-25"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "grundr-370",
+      "poolTitel": "Wie löst man den Konflikt zwischen Meinungsfreiheit und Persönlichkeitsrecht?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 Abs. 1 GG",
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-09"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-452",
+      "poolTitel": "Abtretung und Schuldnerschutz",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 398 ff., 404 ff. BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-12"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-795",
+      "poolTitel": "Beweiswürdigung im Strafurteil",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-18",
+        "2027-03-18",
+        "2027-06-22"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-795",
+      "poolTitel": "Beweiswürdigung im Strafurteil",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-18",
+        "2027-03-18",
+        "2027-06-22"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-359",
+      "poolTitel": "Was ist die Wesentlichkeitstheorie?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18",
+        "2027-02-14",
+        "2027-06-01"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "handelsg-264",
+      "poolTitel": "Wer ist Kaufmann und welche Arten gibt es?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1 HGB",
+        "§ 2 HGB",
+        "§ 5 HGB",
+        "§ 6 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-09",
+        "2027-04-12",
+        "2027-06-10"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-908",
+      "poolTitel": "Aktuelle Rechtsprechung examensgerecht reduzieren",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-11",
+        "2027-06-29",
+        "2027-08-28"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessoroer-845",
+      "poolTitel": "Wann ist eine Beiladung notwendig?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 65 VwGO",
+        "§ 142 Abs. 1 Satz 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-25",
+        "2027-05-02",
+        "2027-07-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-306",
+      "slug": "2027-09-06-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verabredet war ein Einbruch – den Faustschlag trägt B allein",
+          "titelZeilen": [
+            "Verabredet war",
+            "ein Einbruch – den",
+            "Faustschlag trägt",
+            "B allein"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Zurechnung endet am Tatplan",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A und B verabreden, nachts in eine Lagerhalle einzubrechen und Werkzeug mitzunehmen. Gewalt schließen sie ausdrücklich aus. Wachmann W überrascht B, B schlägt ihn nieder und flieht. A ist in einem anderen Teil der Halle. Haftet A auch für die Körperverletzung?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du die Zurechnung",
+          "schritte": [
+            {
+              "titel": "Gemeinsamer Tatplan",
+              "text": "Mittäterschaft (§ 25 Abs. 2 StGB) verbindet nur, was die Beteiligten gemeinsam wollen. Der Tatplan zieht die Grenze der Zurechnung."
+            },
+            {
+              "titel": "Tatbeitrag im Rahmen des Plans",
+              "text": "Jeder Mittäter muss sich die Beiträge der anderen nur zurechnen lassen, soweit sie vom gemeinsamen Tatentschluss getragen sind."
+            },
+            {
+              "titel": "Abweichung einordnen",
+              "text": "Handlungen, mit denen nach den Umständen gewöhnlich zu rechnen ist, rechnet die Rspr. zu. Was darüber hinausgeht, ist Exzess."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„A und B sind Mittäter, also haftet A für alles, was B tut.“ Mittäterschaft ist keine Generalhaftung. Zugerechnet wird nur der gemeinsame Plan – hier der Einbruchdiebstahl, nicht der Faustschlag."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "A und B: Diebstahl in Mittäterschaft, mit dem Regelbeispiel des Einbrechens (§§ 242, 243 Abs. 1 S. 2 Nr. 1, 25 Abs. 2 StGB). Die Körperverletzung an W war ausdrücklich ausgeschlossen – ein Exzess des B. Für § 223 StGB haftet B allein; A fehlt insoweit der Vorsatz."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Mittäter haften für den gemeinsamen Plan – nicht für den Exzess des anderen."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen bei jeder Mittäterschaft",
+          "punkte": [
+            "Was genau war verabredet?",
+            "Liegt der Beitrag noch im Plan?",
+            "Rechnet man mit der Abweichung gewöhnlich?"
+          ],
+          "icons": [
+            "handschlag",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Verabredet war ein Einbruch – geschlagen hat nur B. Muss A dafür einstehen? Nein. Mittäterschaft nach § 25 Abs. 2 StGB verbindet nur, was vom gemeinsamen Tatplan getragen ist. Abweichungen, mit denen nach den Umständen gewöhnlich zu rechnen ist, rechnet die Rechtsprechung zu; ein ausdrücklich ausgeschlossener Gewaltakt ist dagegen Exzess. Speichern für die nächste Beteiligungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#mittäterschaft",
+        "#25stgb",
+        "#exzess",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mittäterexzess: Der Plan zieht die Grenze",
+      "coverText": "Zurechnung endet am Tatplan",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Zwei Beteiligte teilen einen Plan – was einer darüber hinaus tut, bleibt bei ihm.",
+        "handlung": "{A} carries a heavy toolbox out of a dim warehouse along a marked path, while {B}, far off the path, has knocked over a guard's lantern and freezes, caught alone in its light.",
+        "hinweisRegie": "Place the note in the open floor space between the marked path and {B}'s isolated spot, slightly tilted, so it reads as the boundary of the shared plan without covering faces or the lantern.",
+        "alternative": "{A} and {B} hold opposite ends of one rope that ends abruptly, while {B} steps beyond the rope's end into a separate circle of light."
+      },
+      "bildSzene": "partner steps off shared path alone",
+      "bildSzeneAlt": "rope ends where the plan ends",
+      "quellen": [
+        "§ 25 Abs. 2 StGB",
+        "§ 242 StGB",
+        "§ 243 StGB",
+        "§ 223 StGB",
+        "Themenpool: strafat-306"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-exzess",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:52:43.587Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-370",
+      "slug": "2027-09-06-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Meinung gegen Ehre: vier Prüfschritte bis zur Abwägung",
+          "titelZeilen": [
+            "Meinung gegen",
+            "Ehre: vier",
+            "Prüfschritte bis",
+            "zur Abwägung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Schmähkritik ist die Ausnahme",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Klausurlage",
+          "text": "Ein Zivilgericht verurteilt Z, eine scharfe Äußerung über Politikerin P zu unterlassen (§§ 823, 1004 BGB analog). Z erhebt Verfassungsbeschwerde. Geprüft wird: Hat das Gericht bei Auslegung und Anwendung des Zivilrechts Art. 5 Abs. 1 GG verkannt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema",
+          "schritte": [
+            {
+              "titel": "1. Schutzbereich",
+              "text": "Meinungen sind geschützt, Tatsachen, soweit sie Meinungsbildung ermöglichen. Bewusst unwahre oder erwiesen unwahre Tatsachen fallen heraus."
+            },
+            {
+              "titel": "2. Deutung der Äußerung",
+              "text": "Sinn aus Wortlaut und Kontext ermitteln. Bei mehrdeutigen Äußerungen nicht ohne tragfähige Gründe die belastende Deutung wählen."
+            },
+            {
+              "titel": "3. Eingriff und Schranke",
+              "text": "Das Urteil greift ein. Schranken: allgemeine Gesetze und das Recht der persönlichen Ehre (Art. 5 Abs. 2 GG), hier §§ 823, 1004 BGB."
+            },
+            {
+              "titel": "4. Abwägung",
+              "text": "Meinungsfreiheit gegen allgemeines Persönlichkeitsrecht (Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG), bezogen auf den konkreten Fall."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo Klausuren abrutschen",
+          "punkte": [
+            "Schmähkritik, Formalbeleidigung und Angriff auf die Menschenwürde sind eng begrenzte Ausnahmen.",
+            "Nur dort entfällt die Abwägung. Eine bloß scharfe oder überzogene Kritik ist noch keine Schmähung.",
+            "Wer vorschnell „Schmähkritik“ schreibt, überspringt den Kern der Prüfung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Abwägungskriterien",
+          "punkte": [
+            "Gewicht der Persönlichkeitsbeeinträchtigung",
+            "Anlass und Kontext der Äußerung",
+            "Beitrag zur öffentlichen Meinungsbildung, Machtkritik",
+            "Stellung der Betroffenen, etwa als Politikerin"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst deuten, dann abwägen. Ohne Abwägung geht es nur bei Schmähung, Formalbeleidigung oder Menschenwürdeangriff."
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Schritte zum Mitnehmen",
+          "punkte": [
+            "Meinung oder Tatsache?",
+            "Sinn im Kontext deuten",
+            "Schranke: §§ 823, 1004 BGB",
+            "Konkret abwägen"
+          ],
+          "icons": [
+            "zeitung",
+            "lupe",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Meinungsfreiheit gegen Persönlichkeitsrecht: In der Klausur läuft das über vier Schritte – Schutzbereich, Deutung der Äußerung, Schranke und Abwägung. Schmähkritik, Formalbeleidigung und Angriffe auf die Menschenwürde sind enge Ausnahmen, bei denen die Abwägung entfällt. Scharfe Kritik allein reicht dafür nicht. Speichern für die nächste Verfassungsbeschwerde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#meinungsfreiheit",
+        "#persönlichkeitsrecht",
+        "#verfassungsbeschwerde",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Meinung gegen Ehre: vier Prüfschritte",
+      "coverText": "Schmähkritik ist die Ausnahme",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Eine scharfe Äußerung wird erst gedeutet und dann gegen die Ehre der Betroffenen abgewogen.",
+        "handlung": "{B} holds up a speech bubble shaped like a sharp shard, while {A} uses his pointer to set it carefully onto one pan of a large balance, the other pan holding a small glowing portrait frame.",
+        "hinweisRegie": "Place the note in the free space just above the balance beam, slightly tilted toward the speech-bubble pan, so it reads as the weighing step without covering the portrait or the characters' faces.",
+        "alternative": "{A} turns a speech bubble under a magnifying lens to read it from several sides before handing it to {B} at a weighing station."
+      },
+      "bildSzene": "speech bubble weighed against portrait",
+      "bildSzeneAlt": "speech bubble examined under lens",
+      "quellen": [
+        "Art. 5 Abs. 1, 2 GG",
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+        "§ 823 BGB",
+        "§ 1004 BGB",
+        "Themenpool: grundr-370"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefschritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:52:43.587Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-452",
+      "slug": "2027-09-06-b3",
+      "titelZeilen": [
+        "Neuer Gläubiger,",
+        "alte Einwendungen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Neuer Gläubiger, alte Einwendungen",
+          "unter": "Abtretung · §§ 404 ff. BGB",
+          "text": "Die Abtretung verschlechtert die Lage des Schuldners nicht.",
+          "norm": "§ 404 BGB",
+          "icon": "vertrag",
+          "sprecher": "Die Abtretung nimmt dem Schuldner keine Einwendung. Er wurde ja nicht gefragt. Deshalb schützt ihn das Gesetz gleich an mehreren Stellen.",
+          "marken": [
+            "Schuldner nicht gefragt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Einwendungen bleiben",
+          "text": "Was bei der Abtretung gegen den Altgläubiger begründet war, wirkt auch gegen den Neuen.",
+          "norm": "§ 404 BGB",
+          "sprecher": "Erstens: Paragraf 404. Der Schuldner kann dem neuen Gläubiger alle Einwendungen entgegensetzen, die zur Zeit der Abtretung gegen den bisherigen Gläubiger begründet waren.",
+          "marken": [
+            "§ 404 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Begründet heißt: im Keim angelegt",
+          "text": "Der Mangel war schon da, der Rücktritt kommt später? Er wirkt trotzdem gegen den Zessionar.",
+          "norm": "§ 404 BGB",
+          "sprecher": "Zweitens: Begründet heißt nicht, dass die Einwendung schon erhoben war. Es genügt, dass sie im Schuldverhältnis angelegt war. War die Kaufsache schon mangelhaft, kann der Käufer auch später gegenüber dem neuen Gläubiger zurücktreten.",
+          "marken": [
+            "im Keim angelegt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Aufrechnung bleibt möglich",
+          "text": "Mit einer Forderung gegen den Altgläubiger – außer bei Kenntnis oder späterer Fälligkeit.",
+          "norm": "§ 406 BGB",
+          "sprecher": "Drittens: Paragraf 406. Der Schuldner darf auch gegenüber dem Neuen mit einer Forderung gegen den Altgläubiger aufrechnen. Das scheitert nur, wenn er sie in Kenntnis der Abtretung erworben hat oder sie erst danach und später fällig wurde.",
+          "marken": [
+            "§ 406 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Zahlung an den Alten befreit",
+          "text": "Wer ohne Kenntnis der Abtretung an den Altgläubiger zahlt, wird frei.",
+          "norm": "§ 407 BGB",
+          "sprecher": "Viertens: Zahlt der Schuldner an den Altgläubiger, ohne von der Abtretung zu wissen, muss der Neue das gegen sich gelten lassen.",
+          "marken": [
+            "§ 407 BGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Ausnahme: Urkunde und Schein",
+          "text": "Wer eine Schuldurkunde ausstellt, kann sich gegenüber dem Neuen nicht auf ein Scheingeschäft berufen.",
+          "norm": "§ 405 BGB",
+          "sprecher": "Die Ausnahme steht in Paragraf 405: Hat der Schuldner eine Urkunde ausgestellt, kann er dem gutgläubigen Neuen kein Scheingeschäft entgegenhalten.",
+          "marken": [
+            "§ 405 BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Einwendungen, Aufrechnung, befreiende Zahlung – der Schuldner verliert nichts.",
+          "norm": "§§ 404–407 BGB",
+          "sprecher": "Merke: Einwendungen bleiben, Aufrechnung bleibt, und die gutgläubige Zahlung an den Alten befreit.",
+          "marken": [
+            "404 · 406 · 407"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Immer aus Sicht des Schuldners denken",
+          "text": "Speichern für die nächste Abtretungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Abtretungsklausur. Und frag immer: Was hätte der Schuldner ohne die Abtretung einwenden können?",
+          "marken": [
+            "Sicht des Schuldners"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Neuer Gläubiger, alte Einwendungen: Die Abtretung geschieht ohne den Schuldner – deshalb darf sie ihn nicht schlechter stellen. Nach § 404 BGB bleiben alle Einwendungen, die bei der Abtretung begründet waren. § 406 BGB erhält die Aufrechnung, § 407 BGB schützt die gutgläubige Zahlung an den Altgläubiger. Ausnahme: § 405 BGB beim Scheingeschäft mit Urkunde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#abtretung",
+        "#404bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Abtretung: Der Schuldner verliert nichts",
+      "coverText": "404 · 406 · 407 BGB",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Der Schuldner behält alle Verteidigungsmittel, auch wenn ein neuer Gläubiger vor ihm steht.",
+        "handlung": "{A} hands a sealed contract scroll to a new creditor figure, while {B}, the debtor, calmly keeps a small shield strapped to her arm that clearly came with her from before.",
+        "hinweisRegie": "Place the note in the free space next to {B}'s shield, slightly tilted, so it reads as the defence she keeps despite the handover, without covering the scroll or faces.",
+        "alternative": "{B} carries the same backpack of tools from one counter to a new counter where a different clerk waits."
+      },
+      "bildSzene": "debtor keeps shield after handover",
+      "bildSzeneAlt": "same backpack at a new counter",
+      "quellen": [
+        "§ 398 BGB",
+        "§ 404 BGB",
+        "§ 405 BGB",
+        "§ 406 BGB",
+        "§ 407 BGB",
+        "Themenpool: schuld-452"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-einwendungen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:52:43.588Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-795",
+      "ueberzeile": "Prüfungsfrage Strafprozess",
+      "titel": "A schwieg bei der Polizei und erklärt sich erst vor Gericht. Spricht der späte Zeitpunkt gegen ihn?",
+      "optionen": [
+        "Ja, wer unschuldig ist, hätte sich früher entlastet",
+        "Nein, das frühere Schweigen darf nicht belastend wirken",
+        "Ja, aber nur wenn er bei der Polizei belehrt wurde"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 136 StPO",
+        "§ 261 StPO",
+        "Themenpool: anklage-795"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:52:43.588Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-795",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – das frühere Schweigen bleibt geschützt",
+      "text": "Wer im Ermittlungsverfahren schweigt, nutzt sein Recht aus § 136 Abs. 1 S. 2 StPO. Nach der Rspr. darf das Gericht daraus keine nachteiligen Schlüsse ziehen – auch nicht, indem es eine erst in der Hauptverhandlung abgegebene Einlassung allein wegen ihres späten Zeitpunkts für unglaubhaft hält. Die Einlassung selbst würdigt es frei nach ihrem Inhalt (§ 261 StPO).",
+      "norm": "§ 136 Abs. 1 S. 2 StPO · § 261 StPO",
+      "quellen": [
+        "§ 136 StPO",
+        "§ 261 StPO",
+        "Themenpool: anklage-795"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:52:43.588Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja, wer unschuldig ist, hätte sich früher entlastet",
+        "Nein, das frühere Schweigen darf nicht belastend wirken",
+        "Ja, aber nur wenn er bei der Polizei belehrt wurde"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-359",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Vorbehalt des Gesetzes: Politischer Streit allein macht eine Frage nicht wesentlich",
+      "text": "Das Parlament muss selbst entscheiden, was für die Verwirklichung der Grundrechte wesentlich ist. Maßstab ist vor allem die Grundrechtsrelevanz – nicht, wie heftig eine Frage öffentlich umstritten ist. So hat es das BVerfG formuliert. In der Klausur deshalb fragen: Wie intensiv wird in welches Grundrecht eingegriffen?",
+      "norm": "Art. 20 Abs. 3 GG",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-359"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:52:43.588Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-264",
+      "ueberzeile": "Klausurtipp Handelsrecht",
+      "titel": "Nicht eingetragen, aber als Kaufmann aufgetreten? § 5 HGB hilft nicht",
+      "text": "§ 5 HGB setzt eine Eintragung im Handelsregister voraus – und ein Gewerbe. Fehlt die Eintragung, prüfe den Scheinkaufmann nach allgemeinen Rechtsscheingrundsätzen: Wer sich wie ein Kaufmann geriert, muss sich gegenüber gutgläubigen Dritten daran festhalten lassen – aber nur zu seinen Lasten.",
+      "quellen": [
+        "§ 5 HGB",
+        "§ 1 HGB",
+        "Themenpool: handelsg-264"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:52:43.588Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-908",
+      "ueberzeile": "3 Punkte Lernmethodik",
+      "titel": "Neue Entscheidung: auf drei Zeilen eindampfen",
+      "text": "Wenn eine Entscheidung nicht auf drei Zeilen passt, hast du den Kern noch nicht gefunden.",
+      "punkte": [
+        "Rechtsfrage in einem Satz",
+        "Ergebnis mit dem tragenden Argument",
+        "Wo im Prüfungsaufbau sie auftaucht"
+      ],
+      "quellen": [
+        "Themenpool: methodik-908"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:52:43.588Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-845",
+      "ueberzeile": "Streitstand 2. Examen ÖR",
+      "titel": "Ermessenserwägungen im Prozess ergänzt: Erlaubt das § 114 S. 2 VwGO selbst?",
+      "norm": "§ 114 S. 2 VwGO",
+      "optionen": [
+        "BVerwG/h.M.: rein prozessual – ob ergänzt werden darf, sagt das materielle Recht.",
+        "Andere Ansicht: Die Norm enthält zugleich eine materielle Befugnis zum Nachschieben."
+      ],
+      "text": "Klausur: Unstreitig ist nur Ergänzen erlaubt – nicht das erstmalige Ausüben des Ermessens und keine Wesensänderung des VA. Die Ergänzung muss als solche klar erkennbar sein. Liegt das vor, genügt eine knappe Einordnung des Streits.",
+      "quellen": [
+        "§ 114 VwGO",
+        "Themenpool: assessoroer-845"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:52:43.588Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

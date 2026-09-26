@@ -1,0 +1,894 @@
+{
+  "datum": "2027-05-27",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "strafbt-344",
+        "themaTitel": "Was ist eine Amtsträgereigenschaft und wann liegt Bestechlichkeit vor?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "vwgo-404",
+        "themaTitel": "Was ist die Schutznormtheorie?",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bgbat-160",
+        "themaTitel": "Wie prüft man die Duldungs- und die Anscheinsvollmacht?",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:24",
+        "art": "frage",
+        "themaId": "zpo-555"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:24",
+        "art": "antwort",
+        "themaId": "zpo-555"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "bgbat-166"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "streitstand",
+        "themaId": "streit-26"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:02",
+        "art": "merksatz",
+        "themaId": "staat-633"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:06",
+        "art": "begriff",
+        "themaId": "europa-698"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "strafbt-344",
+      "poolTitel": "Was ist eine Amtsträgereigenschaft und wann liegt Bestechlichkeit vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 11 StGB",
+        "§ 331 StGB",
+        "§ 332 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-14"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "vwgo-404",
+      "poolTitel": "Was ist die Schutznormtheorie?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 Abs. 2 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06",
+        "2026-10-28",
+        "2026-12-27"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-160",
+      "poolTitel": "Wie prüft man die Duldungs- und die Anscheinsvollmacht?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 167 BGB",
+        "§ 172 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-05",
+        "2026-12-28",
+        "2027-02-28"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-555",
+      "poolTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 91a, 264 Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-10",
+        "2027-03-10",
+        "2027-03-10"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-555",
+      "poolTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 91a, 264 Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-10",
+        "2027-03-10",
+        "2027-03-10"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-166",
+      "poolTitel": "Ist der Eigenschaftsirrtum ein Motivirrtum?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2027-05-01"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-26",
+      "poolTitel": "Erfüllung: Theorie der realen Leistungsbewirkung oder Vertragstheorie?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 362 BGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "staat-633",
+      "poolTitel": "Rechtswegerschöpfung und Subsidiarität",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 90 II BVerfGG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-02",
+        "2027-03-27",
+        "2027-04-19"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "europa-698",
+      "poolTitel": "Staatshaftung nach Unionsrecht",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Unionsrecht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-344",
+      "slug": "2027-05-27-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Amtsträger heißt nicht: verbeamtet",
+          "titelZeilen": [
+            "Amtsträger",
+            "heißt nicht:",
+            "verbeamtet"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Auch die Stadtwerke-GmbH zählt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§§ 331, 332 StGB setzen einen Amtsträger voraus. Wer dabei nur an Beamte denkt, übersieht die dritte Gruppe des § 11 Abs. 1 Nr. 2 StGB – und damit Angestellte kommunaler Gesellschaften, Kliniken oder Stadtwerke."
+        },
+        {
+          "art": "text",
+          "titel": "Amtsträger nach § 11 Abs. 1 Nr. 2 StGB",
+          "punkte": [
+            "a) Beamte und Richter",
+            "b) wer in einem sonstigen öffentlich-rechtlichen Amtsverhältnis steht, etwa Minister",
+            "c) wer sonst bestellt ist, Aufgaben der öffentlichen Verwaltung wahrzunehmen – in jeder Organisationsform"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die GmbH der Stadt",
+          "text": "Auch eine privatrechtliche Stelle kann „sonstige Stelle“ sein. Die Rspr. verlangt, dass sie bei einer Gesamtbetrachtung als verlängerter Arm des Staates erscheint – etwa weil sie staatlich gesteuert Aufgaben der Daseinsvorsorge erfüllt. Die bloße Beteiligung der öffentlichen Hand genügt nicht."
+        },
+        {
+          "art": "vergleich",
+          "titel": "§ 331 vs. § 332 StGB",
+          "links": {
+            "titel": "Vorteilsannahme § 331",
+            "punkte": [
+              "Vorteil „für die Dienstausübung“",
+              "Keine konkrete Diensthandlung nötig",
+              "Genehmigung möglich (Abs. 3)"
+            ]
+          },
+          "rechts": {
+            "titel": "Bestechlichkeit § 332",
+            "punkte": [
+              "Gegenleistung für eine Diensthandlung",
+              "Diese verletzt Dienstpflichten",
+              "Auch künftige Handlung genügt"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Gemeinsam für beide",
+          "punkte": [
+            "Vorteil für sich oder einen Dritten – auch die Spende an den Sportverein zählt.",
+            "Fordern, sich versprechen lassen oder annehmen – vollendet schon mit dem Fordern.",
+            "Unrechtsvereinbarung: Vorteil und Dienst müssen verknüpft sein."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst den Amtsträger nach § 11 StGB begründen. Dann: Dienstausübung genügt für § 331, Pflichtverletzung braucht § 332."
+        },
+        {
+          "art": "cta",
+          "titel": "Korruption in drei Fragen",
+          "punkte": [
+            "Amtsträger nach welcher Gruppe?",
+            "Vorteil mit Dienst verknüpft?",
+            "Diensthandlung pflichtwidrig?"
+          ],
+          "icons": [
+            "gebaeude",
+            "geldbeutel",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Amtsträger heißt nicht verbeamtet. § 11 Abs. 1 Nr. 2 StGB erfasst auch, wer sonst bestellt ist, Aufgaben der öffentlichen Verwaltung wahrzunehmen – gleich in welcher Organisationsform. Die GmbH der Stadt kann deshalb „sonstige Stelle“ sein, wenn sie als verlängerter Arm des Staates erscheint. Danach trennst du § 331 (Dienstausübung) von § 332 StGB (pflichtwidrige Diensthandlung). Speichern für die Korruptionsdelikte.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#amtsträger",
+        "#332stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Amtsträger und Bestechlichkeit auf einen Blick",
+      "coverText": "Auch die Stadtwerke-GmbH zählt",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Auch ohne Beamtenstatus kann jemand öffentliche Aufgaben wahrnehmen und damit Amtsträger sein.",
+        "handlung": "{A} hovers beside {B}, who wears a plain work vest instead of a uniform, and pins a small official badge onto the vest while {B} holds a water valve he is operating for the town.",
+        "hinweisRegie": "Place the note in the free space next to the badge being pinned on the plain vest, slightly tilted toward it, so the official role stands out without covering the valve or {B}'s face.",
+        "alternative": "{B} operates a town fountain in overalls while {A} holds up a mirror that shows him in an official cap."
+      },
+      "bildSzene": "official badge pinned on work vest",
+      "bildSzeneAlt": "mirror shows overalls as uniform",
+      "quellen": [
+        "§ 11 Abs. 1 Nr. 2 StGB",
+        "§ 331 StGB",
+        "§ 332 StGB",
+        "Themenpool: strafbt-344"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:37.267Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-404",
+      "slug": "2027-05-27-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Adressat oder Nachbar: zwei Wege zur Klagebefugnis",
+          "titelZeilen": [
+            "Adressat oder",
+            "Nachbar: zwei Wege",
+            "zur Klagebefugnis"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Dritte brauchen eine Schutznorm",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Ausgangspunkt: § 42 Abs. 2 VwGO",
+          "text": "Klagebefugt ist, wer geltend macht, in eigenen Rechten verletzt zu sein. Wie du das begründest, hängt davon ab, wen der Verwaltungsakt trifft: den Adressaten selbst oder einen Dritten."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Wege",
+          "links": {
+            "titel": "Adressatentheorie",
+            "punkte": [
+              "Kläger ist Adressat eines belastenden VA",
+              "Mindestens Art. 2 Abs. 1 GG möglich verletzt",
+              "In der Klausur: ein Satz genügt"
+            ]
+          },
+          "rechts": {
+            "titel": "Schutznormtheorie",
+            "punkte": [
+              "Kläger ist Dritter, etwa der Nachbar",
+              "Norm muss zumindest auch ihn schützen",
+              "Hier liegt der Schwerpunkt der Prüfung"
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Schutznorm in drei Fragen",
+          "schritte": [
+            {
+              "titel": "Individualschutz",
+              "text": "Dient die Norm zumindest auch den Interessen Einzelner – nicht nur der Allgemeinheit?"
+            },
+            {
+              "titel": "Geschützter Kreis",
+              "text": "Gehört der Kläger zu einem abgrenzbaren Personenkreis, den die Norm schützen will?"
+            },
+            {
+              "titel": "Geschütztes Interesse",
+              "text": "Ist gerade das Interesse betroffen, das die Norm schützt?"
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Beispiele aus dem Baurecht",
+          "punkte": [
+            "Nachbarschützend: Abstandsflächen nach Landesbauordnung, Festsetzungen zur Art der baulichen Nutzung.",
+            "Über das Gebot der Rücksichtnahme: bei qualifizierter Betroffenheit.",
+            "Regelmäßig nicht: Festsetzungen zum Maß der baulichen Nutzung – außer der Plan will es so."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Adressat: Klagebefugnis fast immer unproblematisch. Dritter: Erst die Schutznorm finden, dann ihre Verletzung möglich machen."
+        },
+        {
+          "art": "cta",
+          "titel": "Klagebefugnis in drei Fragen",
+          "punkte": [
+            "Adressat oder Dritter?",
+            "Welche Norm schützt auch ihn?",
+            "Verletzung zumindest möglich?"
+          ],
+          "icons": [
+            "person",
+            "haeuser",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Adressat oder Nachbar – für die Klagebefugnis gibt es zwei Wege. Wer selbst durch einen belastenden VA betroffen ist, kann sich nach der Adressatentheorie zumindest auf Art. 2 Abs. 1 GG berufen. Der Dritte braucht eine Norm, die zumindest auch ihn schützt: Das ist die Schutznormtheorie. Im Baurecht heißt das: Abstandsflächen ja, Maß der baulichen Nutzung regelmäßig nicht. Speichern für die nächste Nachbarklage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#klagebefugnis",
+        "#baurecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Adressatentheorie vs. Schutznormtheorie",
+      "coverText": "Dritte brauchen eine Schutznorm",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer selbst belastet ist, kommt leicht ins Verfahren; ein Dritter braucht eine Norm, die gerade ihn schützt.",
+        "handlung": "{A} walks straight through an open gate holding a letter addressed to her, while {B} stands at a fence next to it, searching for the one key on a large ring that fits the lock.",
+        "hinweisRegie": "Place the note in the free space beside the fitting key in {B}'s hand, slightly tilted toward it, so the needed protective norm stands out without covering the open gate or {A}'s letter.",
+        "alternative": "{A} is waved through a checkpoint with her ticket, while {B} next to her has to show a special pass matching a stamp on the barrier."
+      },
+      "bildSzene": "open gate versus searching key",
+      "bildSzeneAlt": "ticket waved through, special pass",
+      "quellen": [
+        "§ 42 Abs. 2 VwGO",
+        "Art. 2 Abs. 1 GG",
+        "§ 15 Abs. 1 BauNVO",
+        "Landesbauordnungen",
+        "Themenpool: vwgo-404"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-wege-abgrenzung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:37.267Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-160",
+      "slug": "2027-05-27-b3",
+      "titelZeilen": [
+        "Einmal ohne",
+        "Vollmacht – das",
+        "trägt keinen Anschein"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Einmal ohne Vollmacht – das trägt keinen Anschein",
+          "unter": "Rechtsscheinvollmacht · § 167 BGB",
+          "text": "Die Anscheinsvollmacht braucht ein Auftreten von gewisser Dauer.",
+          "norm": "§ 167 BGB",
+          "icon": "handschlag",
+          "sprecher": "Ein einziger Auftritt macht noch keine Anscheinsvollmacht. Die Rechtsprechung verlangt mehr – und prüft in vier Schritten.",
+          "marken": [
+            "einmal genügt nicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erst die gesetzlichen Fälle",
+          "text": "Vollmachtsurkunde oder Kundgabe? Dann §§ 170 bis 172 BGB.",
+          "norm": "§ 172 BGB",
+          "sprecher": "Schritt eins: Prüf zuerst die gesetzlichen Rechtsscheintatbestände. Hat der Vertretene eine Vollmachtsurkunde ausgehändigt oder die Vollmacht kundgegeben, helfen die Paragrafen 170 bis 172.",
+          "marken": [
+            "§§ 170–172 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der Rechtsschein",
+          "text": "Der Vertreter tritt wiederholt und über eine gewisse Dauer auf.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Rechtsschein. Der angebliche Vertreter muss wiederholt und über eine gewisse Dauer für den anderen aufgetreten sein. Ein einmaliges Handeln reicht in aller Regel nicht.",
+          "marken": [
+            "Dauer",
+            "Häufigkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zurechenbarkeit",
+          "text": "Duldung: Er weiß es. Anschein: Er hätte es erkennen und verhindern können.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Zurechenbarkeit. Bei der Duldungsvollmacht kennt der Vertretene das Auftreten und lässt es geschehen. Bei der Anscheinsvollmacht kennt er es nicht, hätte es aber bei pflichtgemäßer Sorgfalt erkennen und verhindern können.",
+          "marken": [
+            "kennen",
+            "kennen müssen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Guter Glaube und Vertrauen",
+          "text": "Der Dritte kennt den Mangel nicht und handelt im Vertrauen darauf.",
+          "norm": null,
+          "sprecher": "Schritt vier: Der Geschäftspartner darf den Mangel weder kennen noch kennen müssen. Und er muss gerade im Vertrauen auf den Schein abgeschlossen haben.",
+          "marken": [
+            "gutgläubig",
+            "kausal"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Streit",
+          "text": "Teile der Lehre: bei Anschein nur Vertrauensschaden, keine Erfüllung.",
+          "norm": null,
+          "sprecher": "Ein Streitpunkt bleibt. Die Rechtsprechung bindet den Vertretenen voll an den Vertrag. Teile der Lehre geben außerhalb des Handelsverkehrs nur den Vertrauensschaden, weil bloße Fahrlässigkeit keine Erfüllungspflicht tragen soll.",
+          "marken": [
+            "Rspr. vs. Lehre"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Gesetzliche Fälle zuerst, dann Dauer, Zurechenbarkeit, guter Glaube.",
+          "norm": null,
+          "sprecher": "Merke: erst die gesetzlichen Fälle. Dann Rechtsschein von gewisser Dauer, Zurechenbarkeit und guter Glaube.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speichern für den nächsten Vertreterfall",
+          "text": "Speichern für die nächste Stellvertretung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur, in der jemand ohne Vollmacht unterschreibt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Einmal ohne Vollmacht gehandelt – das trägt noch keine Anscheinsvollmacht. Prüf zuerst die gesetzlichen Rechtsscheinfälle der §§ 170 bis 172 BGB. Dann verlangt die Rspr. ein Auftreten von gewisser Dauer und Häufigkeit, Zurechenbarkeit beim Vertretenen und guten Glauben des Geschäftspartners. Teile der Lehre geben bei der Anscheinsvollmacht nur den Vertrauensschaden. Speichern für den nächsten Vertreterfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#stellvertretung",
+        "#anscheinsvollmacht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anscheinsvollmacht: Einmal reicht nicht",
+      "coverText": "Der Schein braucht Dauer",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Erst ein wiederholtes Auftreten erzeugt den Schein, jemand dürfe für einen anderen handeln.",
+        "handlung": "{A} proudly holds up a single stamped trade token, while {B} points his pointer at a long row of identical tokens on a counter that would be needed to prove a pattern.",
+        "hinweisRegie": "Place the note in the free space between the single token and the long row on the counter, slightly tilted toward the row, so the needed repetition stands out without covering either.",
+        "alternative": "{B} shows {A} that one footprint in the sand fades, while a well-trodden path next to it stays clearly visible."
+      },
+      "bildSzene": "single token versus long row",
+      "bildSzeneAlt": "one footprint versus trodden path",
+      "quellen": [
+        "§ 164 BGB",
+        "§ 167 BGB",
+        "§§ 170–172 BGB",
+        "§ 242 BGB",
+        "Themenpool: bgbat-160"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verbreiteter-irrtum",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:37.270Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-555",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "B zahlt nach Rechtshängigkeit. K erklärt für erledigt, B widerspricht. Was prüft das Gericht jetzt?",
+      "optionen": [
+        "Nur, ob B inzwischen tatsächlich gezahlt hat",
+        "Ob die Klage bis zur Zahlung zulässig und begründet war",
+        "Nichts mehr – es entscheidet nach § 91a ZPO über die Kosten"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 264 Nr. 2 ZPO",
+        "§ 91a ZPO",
+        "§ 91 ZPO",
+        "Themenpool: zpo-555"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:37.270Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-555",
+      "ueberzeile": "Auflösung",
+      "titel": "Ob die Klage ursprünglich zulässig und begründet war – und erst durch die Zahlung erledigt wurde",
+      "text": "Die einseitige Erledigungserklärung ist eine privilegierte Klageänderung (§ 264 Nr. 2 ZPO): K beantragt nun festzustellen, dass der Rechtsstreit erledigt ist. Begründet ist das, wenn die Klage bis zum erledigenden Ereignis zulässig und begründet war und dadurch unbegründet wurde. Tenor: „Es wird festgestellt, dass der Rechtsstreit in der Hauptsache erledigt ist.“",
+      "norm": "§ 264 Nr. 2 ZPO",
+      "quellen": [
+        "§ 264 Nr. 2 ZPO",
+        "§ 91a ZPO",
+        "§ 91 ZPO",
+        "Themenpool: zpo-555"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:37.270Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur, ob B inzwischen tatsächlich gezahlt hat",
+        "Ob die Klage bis zur Zahlung zulässig und begründet war",
+        "Nichts mehr – es entscheidet nach § 91a ZPO über die Kosten"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-166",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 119 Abs. 2 BGB: Der Marktwert selbst ist keine Eigenschaft",
+      "text": "Eigentlich ist der Irrtum über Eigenschaften ein bloßer Motivirrtum. § 119 Abs. 2 BGB behandelt ihn trotzdem wie einen Inhaltsirrtum – wenn die Eigenschaft verkehrswesentlich ist. Eigenschaften sind wertbildende Merkmale wie Echtheit, Alter oder Herkunft, nicht der Preis selbst. Beim Kauf gehen ab Gefahrübergang die Mängelrechte nach h.M. der Anfechtung des Käufers vor.",
+      "norm": "§ 119 Abs. 2 BGB",
+      "quellen": [
+        "§ 119 Abs. 2 BGB",
+        "§ 437 BGB",
+        "Themenpool: bgbat-166"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:37.270Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "streit-26",
+      "ueberzeile": "Streitstand Schuldrecht",
+      "titel": "Erfüllung nach § 362 BGB: Genügt der Leistungserfolg oder braucht es einen Vertrag?",
+      "norm": "§ 362 Abs. 1 BGB",
+      "optionen": [
+        "H.M. (reale Leistungsbewirkung): Erfüllung tritt ein, sobald der geschuldete Erfolg eintritt – ohne Einigung über den Erfüllungszweck.",
+        "Vertragstheorie: Erfüllung verlangt zusätzlich einen Erfüllungsvertrag zwischen Schuldner und Gläubiger."
+      ],
+      "text": "Klausur: Leistung an einen Minderjährigen. Nach der h.M. fehlt ihm die Empfangszuständigkeit, nach der Vertragstheorie ein wirksamer Erfüllungsvertrag. Ergebnis beider: keine Erfüllung ohne den gesetzlichen Vertreter.",
+      "quellen": [
+        "§ 362 Abs. 1 BGB",
+        "§ 107 BGB"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:37.270Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-633",
+      "ueberzeile": "Merksatz Staatsrecht",
+      "titel": "Gegen ein Gesetz gibt es keinen Rechtsweg – Subsidiarität gilt trotzdem",
+      "text": "Auch bei der Verfassungsbeschwerde gegen ein Gesetz verlangt das BVerfG, zumutbare fachgerichtliche Möglichkeiten zu nutzen – etwa eine Feststellungsklage oder den Vollzugsakt abzuwarten.",
+      "norm": "§ 90 Abs. 2 BVerfGG",
+      "quellen": [
+        "§ 90 Abs. 2 BVerfGG",
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "Themenpool: staat-633"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:37.270Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-698",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Unionsrechtlicher Staatshaftungsanspruch",
+      "text": "Vom EuGH entwickelte Haftung der Mitgliedstaaten für Verstöße gegen Unionsrecht. Drei Voraussetzungen: Die verletzte Norm soll dem Einzelnen Rechte verleihen, der Verstoß ist hinreichend qualifiziert, und zwischen Verstoß und Schaden besteht ein unmittelbarer Kausalzusammenhang. Erfasst ist auch der Gesetzgeber – etwa bei nicht umgesetzten Richtlinien.",
+      "norm": "Art. 4 Abs. 3 EUV",
+      "quellen": [
+        "Art. 4 Abs. 3 EUV",
+        "Art. 288 AEUV",
+        "Themenpool: europa-698"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:37.270Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

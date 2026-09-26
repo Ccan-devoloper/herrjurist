@@ -1,0 +1,876 @@
+{
+  "datum": "2027-09-02",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "sachen-496",
+        "themaTitel": "Übereignung beweglicher Sachen",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "strafat-307",
+        "themaTitel": "Was ist mittelbare Täterschaft und wann liegt ein Täter hinter dem Täter vor?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "europa-108",
+        "themaTitel": "Wann wirkt eine Richtlinie unmittelbar?",
+        "fach": "europa",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "zpo-563"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "zpo-563"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "strafbt-333"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:26",
+        "art": "streitstand",
+        "themaId": "revision-883"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "merksatz",
+        "themaId": "stpo-769"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "begriff",
+        "themaId": "zpo-056"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "sachen-496",
+      "poolTitel": "Übereignung beweglicher Sachen",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 929 S. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-14"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "strafat-307",
+      "poolTitel": "Was ist mittelbare Täterschaft und wann liegt ein Täter hinter dem Täter vor?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 Abs. 1 Alt. 2 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2027-02-02",
+        "2027-07-13"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "europa-108",
+      "poolTitel": "Wann wirkt eine Richtlinie unmittelbar?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 288 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-30",
+        "2027-05-10",
+        "2027-08-18"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-563",
+      "poolTitel": "Vorläufige Vollstreckbarkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 708 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-26",
+        "2027-06-26",
+        "2027-07-06"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-563",
+      "poolTitel": "Vorläufige Vollstreckbarkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 708 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-26",
+        "2027-06-26",
+        "2027-07-06"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-333",
+      "poolTitel": "Was ist der Computerbetrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263a StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15",
+        "2027-04-09"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "revision-883",
+      "poolTitel": "Wie weit prüft die Revision die Beweiswürdigung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-27",
+        "2027-06-28",
+        "2027-08-19"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "stpo-769",
+      "poolTitel": "Zeugnisverweigerungsrechte",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 52 ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-05",
+        "2027-05-05",
+        "2027-05-23"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "zpo-056",
+      "poolTitel": "Wie unterscheiden sich Leistungs-, Feststellungs- und Gestaltungsklage?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 256 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-25",
+        "2027-06-03",
+        "2027-06-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-496",
+      "slug": "2027-09-02-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Übergabe: drei Teile – der dritte wird oft übersehen",
+          "titelZeilen": [
+            "Übergabe:",
+            "drei Teile – der",
+            "dritte wird oft",
+            "übersehen"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Nehmen ist nicht übergeben",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Grundnorm",
+          "text": "Nach § 929 S. 1 BGB braucht die Übereignung einer beweglichen Sache Einigung und Übergabe. Dazu kommen Einigsein im Zeitpunkt der Übergabe und die Berechtigung des Veräußerers. Der Kaufvertrag gehört nicht dazu – Trennungs- und Abstraktionsprinzip."
+        },
+        {
+          "art": "text",
+          "titel": "Übergabe in drei Teilen",
+          "punkte": [
+            "Der Erwerber erlangt Besitz – selbst, über einen Besitzmittler oder auf sein Geheiß",
+            "Der Veräußerer behält keinerlei Besitz an der Sache",
+            "Der Besitzwechsel erfolgt auf Veranlassung des Veräußerers"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Warum Teil drei zählt",
+          "text": "Nimmt der Erwerber die Sache eigenmächtig an sich, fehlt die Veranlassung – keine Übergabe, auch wenn die Einigung vorliegt. Beim Geheißerwerb genügt dagegen, dass eine Person auf Geheiß des Veräußerers an den Erwerber leistet."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die Ersatzformen",
+          "links": {
+            "titel": "Ohne Übergabe",
+            "punkte": [
+              "§ 929 S. 2 BGB: Erwerber besitzt schon",
+              "§ 930 BGB: Besitzkonstitut, Veräußerer bleibt Besitzmittler"
+            ]
+          },
+          "rechts": {
+            "titel": "Mit Abtretung",
+            "punkte": [
+              "§ 931 BGB: Dritter besitzt",
+              "Einigung plus Abtretung des Herausgabeanspruchs"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Einigsein bis zuletzt",
+          "text": "Die Einigung muss im Zeitpunkt der Übergabe noch bestehen. Bis dahin ist sie grundsätzlich widerruflich; der Widerruf muss aber nach außen erkennbar werden."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Einigung, Übergabe, Einigsein, Berechtigung. Bei der Übergabe immer an die Veranlassung durch den Veräußerer denken."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 929 S. 1 BGB auf einen Blick",
+          "punkte": [
+            "Einigung über den Eigentumsübergang",
+            "Übergabe in drei Teilen",
+            "Einigsein und Berechtigung"
+          ],
+          "icons": [
+            "handschlag",
+            "paket",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Übergabe hat drei Teile – und der dritte wird oft übersehen. Der Erwerber muss Besitz erlangen, der Veräußerer jeden Besitz aufgeben, und der Besitzwechsel muss auf Veranlassung des Veräußerers geschehen. Wer sich die Sache eigenmächtig nimmt, bekommt sie nicht übergeben. Dazu Einigsein im Zeitpunkt der Übergabe, Berechtigung und die Ersatzformen der §§ 929 S. 2, 930, 931 BGB. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#929bgb",
+        "#übereignung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Übereignung: Übergabe braucht die Veranlassung",
+      "coverText": "Nehmen ist nicht übergeben",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Übergeben ist die Sache erst, wenn der Veräußerer den Besitzwechsel selbst veranlasst.",
+        "handlung": "{A} hands a glowing crystal to {B} with both hands, while a second identical crystal lies on a shelf behind them, untouched.",
+        "hinweisRegie": "Place the note in the free space between the handing hands and the untouched crystal on the shelf, slightly tilted toward the hands, so the act of handing over is highlighted without covering either face.",
+        "alternative": "{B} reaches for a crystal in a cart, but {A} gently places it into {B}'s hands himself."
+      },
+      "bildSzene": "crystal handed over with both hands",
+      "bildSzeneAlt": "owner places crystal into hands",
+      "quellen": [
+        "§ 929 S. 1 BGB",
+        "§ 929 S. 2 BGB",
+        "§ 930 BGB",
+        "§ 931 BGB",
+        "Themenpool: sachen-496"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-teile-dritter-uebersehen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.841Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-307",
+      "slug": "2027-09-02-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "B nimmt das Rad, weil A lügt, es gehöre ihm: Wer ist Täter?",
+          "titelZeilen": [
+            "B nimmt das Rad,",
+            "weil A lügt, es",
+            "gehöre ihm:",
+            "Wer ist Täter?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Wissensvorsprung macht den Täter",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Ausgangsfall",
+          "text": "A zeigt auf das Fahrrad des O und sagt zu B: „Das ist meins, hol es mir bitte.“ B glaubt ihm und bringt das Rad zu A. B handelt ohne Vorsatz bezüglich der Fremdheit (§ 16 Abs. 1 StGB). A nutzt diesen Wissensvorsprung – er beherrscht das Geschehen."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Mittelbare Täterschaft oder Anstiftung",
+          "links": {
+            "titel": "Mittelbarer Täter",
+            "punkte": [
+              "Tat „durch einen anderen“, § 25 Abs. 1 Alt. 2 StGB",
+              "Vordermann hat ein Strafbarkeitsdefizit",
+              "Hintermann beherrscht das Geschehen",
+              "Hier: A, weil B gutgläubig ist"
+            ]
+          },
+          "rechts": {
+            "titel": "Anstifter",
+            "punkte": [
+              "Bestimmt einen anderen zur Tat, § 26 StGB",
+              "Vordermann handelt vorsätzlich und rechtswidrig",
+              "Haupttäter entscheidet selbst",
+              "Hier: wenn B die Wahrheit kennt"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der Täter hinter dem Täter",
+          "text": "Ausnahmsweise kann auch hinter einem voll verantwortlichen Vordermann ein mittelbarer Täter stehen: nach der Rechtsprechung bei organisatorischen Machtapparaten oder bei einem vom Hintermann gezielt ausgenutzten vermeidbaren Verbotsirrtum. In der Literatur ist das teils umstritten."
+        },
+        {
+          "art": "text",
+          "titel": "Wenn der Hintermann irrt",
+          "text": "A hält B für gutgläubig, B durchschaut die Lüge aber und nimmt das Rad trotzdem. Dann fehlt die Tatherrschaft. Nach h.M. ist A wegen Anstiftung strafbar: Der Vorsatz zur mittelbaren Täterschaft enthält den Anstiftervorsatz als Minus."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst den Vordermann prüfen. Hat er ein Strafbarkeitsdefizit, das der Hintermann beherrscht: mittelbare Täterschaft. Handelt er voll verantwortlich: Anstiftung."
+        },
+        {
+          "art": "cta",
+          "titel": "Täterschaft in drei Fragen",
+          "punkte": [
+            "Wie steht es um den Vordermann?",
+            "Wer beherrscht das Geschehen?",
+            "Was wusste der Hintermann?"
+          ],
+          "icons": [
+            "person",
+            "detektiv",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "B nimmt das Rad, weil A lügt, es gehöre ihm – wer ist Täter? B handelt ohne Vorsatz. A nutzt diesen Wissensvorsprung und begeht die Tat durch einen anderen: mittelbare Täterschaft nach § 25 Abs. 1 Alt. 2 StGB. Durchschaut B die Lüge, handelt er voll verantwortlich – dann bleibt für A nach h.M. die Anstiftung. Speichern für die nächste Beteiligungsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#täterschaft",
+        "#25stgb",
+        "#anstiftung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mittelbare Täterschaft oder Anstiftung?",
+      "coverText": "Wissensvorsprung macht den Täter",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Wer einen Gutgläubigen vorschickt, lenkt die Tat selbst – wer einen Eingeweihten überredet, stiftet nur an.",
+        "handlung": "{A} points confidently at a bicycle leaning against a fence, while {B} happily rolls it toward her without noticing a small owner's tag hanging from the saddle.",
+        "hinweisRegie": "Place the note in the free space above the owner's tag on the saddle, slightly tilted toward {A}'s pointing hand, so the hidden knowledge gap is highlighted without covering the characters.",
+        "alternative": "{A} whispers into {B}'s ear while holding a map, and {B} walks off with a blindfold pushed up on his forehead."
+      },
+      "bildSzene": "rolling bicycle with hidden owner tag",
+      "bildSzeneAlt": "whisper, blindfold pushed up",
+      "quellen": [
+        "§ 25 Abs. 1 Alt. 2 StGB",
+        "§ 26 StGB",
+        "§ 16 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafat-307"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.841Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "europa",
+      "klausur": 3,
+      "fachLabel": "Europarecht",
+      "themaId": "europa-108",
+      "slug": "2027-09-02-b3",
+      "titelZeilen": [
+        "Richtlinie nicht",
+        "umgesetzt: Staat",
+        "kann sich nicht",
+        "darauf berufen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nicht umgesetzt: Der Staat kann sich nicht darauf berufen",
+          "unter": "Europarecht · Richtlinie",
+          "text": "Unmittelbare Wirkung gibt es nur zugunsten des Einzelnen.",
+          "norm": null,
+          "icon": "globus",
+          "sprecher": "Die Behörde beruft sich auf die Richtlinie – vergeblich. Eine nicht umgesetzte Richtlinie begründet keine Pflichten des Bürgers. Zu seinen Gunsten wirkt sie nur unter strengen Voraussetzungen.",
+          "marken": [
+            "nicht zulasten",
+            "Richtlinie"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Umsetzungsfrist abgelaufen",
+          "text": "Vor Fristablauf gibt es keine unmittelbare Wirkung.",
+          "norm": null,
+          "sprecher": "Schritt eins: Die Umsetzungsfrist muss abgelaufen sein. Vorher hat der Staat seine Pflicht noch gar nicht verletzt.",
+          "marken": [
+            "Frist"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Nicht oder fehlerhaft umgesetzt",
+          "text": "Der Mitgliedstaat hat die Richtlinie nicht vollständig in nationales Recht überführt.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Die Richtlinie wurde nicht, nicht vollständig oder fehlerhaft umgesetzt. Genau dieses Versäumnis soll dem Staat nicht zugutekommen.",
+          "marken": [
+            "Versäumnis"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Unbedingt und hinreichend genau",
+          "text": "Die Bestimmung muss ohne weiteren Umsetzungsakt anwendbar sein.",
+          "norm": null,
+          "sprecher": "Schritt drei: Die Bestimmung muss inhaltlich unbedingt und hinreichend genau sein. Das Gericht muss sie ohne weitere Ausgestaltung anwenden können.",
+          "marken": [
+            "unbedingt, genau"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Nur Bürger gegen Staat",
+          "text": "Vertikal zugunsten des Einzelnen – nicht umgekehrt, nicht zwischen Privaten.",
+          "norm": null,
+          "sprecher": "Schritt vier: die Richtung. Der Einzelne kann sich gegenüber dem Staat berufen. Der Staat kann aus der Richtlinie keine Pflichten des Bürgers ableiten. Und zwischen Privaten wirkt sie nicht unmittelbar.",
+          "marken": [
+            "nur vertikal"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Grund",
+          "text": "Kein Vorteil aus eigenem Versäumnis.",
+          "norm": null,
+          "sprecher": "Der Grund: Der Staat soll aus seinem eigenen Versäumnis keinen Vorteil ziehen. Der Bürger hat nichts versäumt – ihn trifft keine Pflicht aus einer Richtlinie, die ihn nie erreicht hat.",
+          "marken": [
+            "eigenes Versäumnis"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Frist abgelaufen, nicht umgesetzt, unbedingt und genau, nur gegen den Staat.",
+          "norm": null,
+          "sprecher": "Merke: Frist abgelaufen, nicht umgesetzt, unbedingt und genau – und nur zugunsten des Bürgers gegen den Staat.",
+          "marken": [
+            "vier Prüfpunkte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Richtung prüfen",
+          "text": "Speichern für die nächste Europarechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für deine nächste Europarechtsklausur.",
+          "marken": [
+            "Richtung prüfen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Richtlinie nicht umgesetzt – der Staat kann sich nicht auf sie berufen. Eine Richtlinie verpflichtet die Mitgliedstaaten, nicht die Bürger (Art. 288 Abs. 3 AEUV). Unmittelbar wirkt sie nur, wenn die Frist abgelaufen ist, sie nicht ordnungsgemäß umgesetzt wurde und inhaltlich unbedingt und hinreichend genau ist – und nur zugunsten des Einzelnen gegenüber dem Staat. Speichern für die nächste Europarechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#europarecht",
+        "#richtlinie",
+        "#aeuv",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Richtlinie: keine Pflichten für den Bürger",
+      "coverText": "Nur zugunsten des Einzelnen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Wer seine Hausaufgaben nicht gemacht hat, kann sich gegenüber anderen nicht darauf berufen.",
+        "handlung": "{A} hovers and tries to hand an unopened, sealed envelope to {B} as if it were an order, while {B} calmly raises one hand to refuse it.",
+        "hinweisRegie": "Place the note in the free space between the sealed envelope and {B}'s raised hand, slightly tilted toward the hand, so the refusal is linked to the unopened letter without covering either character.",
+        "alternative": "{B} holds a one-way gate that opens only toward the official side, while {A} bumps against it from the other direction."
+      },
+      "bildSzene": "sealed envelope refused with raised hand",
+      "bildSzeneAlt": "one-way gate toward official",
+      "quellen": [
+        "Art. 288 Abs. 3 AEUV",
+        "Themenpool: europa-108"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.843Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-563",
+      "ueberzeile": "Prüfungsfrage Zivilprozessrecht",
+      "titel": "B wird zur Zahlung von 5.000 € nebst Kosten verurteilt. Was gilt zur vorläufigen Vollstreckbarkeit?",
+      "optionen": [
+        "Ohne Sicherheit, aber mit Abwendungsbefugnis des Schuldners",
+        "Gar nicht – vollstreckbar erst mit Rechtskraft",
+        "Gegen Sicherheitsleistung von 110 % des jeweils zu vollstreckenden Betrags"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "§ 711 ZPO",
+        "Themenpool: zpo-563"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.843Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-563",
+      "ueberzeile": "Auflösung",
+      "titel": "Gegen Sicherheitsleistung – § 709 ZPO",
+      "text": "Von Sonderfällen wie Anerkenntnis- oder Versäumnisurteilen abgesehen, gilt ohne Sicherheit nur § 708 Nr. 11 ZPO: Hauptsache bis 1.250 € oder nur Kosten bis 1.500 €. Darüber gilt § 709 S. 1 ZPO. Bei Geldforderungen genügt die Angabe in einem Verhältnis zum jeweils zu vollstreckenden Betrag (§ 709 S. 2 ZPO), üblich sind 110 %.",
+      "norm": "§ 709 ZPO",
+      "quellen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "Themenpool: zpo-563"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.843Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ohne Sicherheit, aber mit Abwendungsbefugnis des Schuldners",
+        "Gar nicht – vollstreckbar erst mit Rechtskraft",
+        "Gegen Sicherheitsleistung von 110 % des jeweils zu vollstreckenden Betrags"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-333",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 263a StGB: „Unbefugt“ heißt betrugsähnlich – nicht bloß vertragswidrig",
+      "text": "Die unbefugte Verwendung von Daten legt die Rechtsprechung betrugsspezifisch aus: Unbefugt ist sie, wenn sie gegenüber einem Menschen an Stelle des Computers eine Täuschung wäre. Wer als berechtigter Karteninhaber am Automaten mehr abhebt, als sein Konto deckt, täuscht niemanden über seine Befugnis – für ihn kommt allenfalls § 266b StGB in Betracht.",
+      "norm": "§ 263a Abs. 1 StGB",
+      "quellen": [
+        "§ 263a StGB",
+        "§ 266b StGB",
+        "Themenpool: strafbt-333"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.843Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-883",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Zeuge sagte anderes, als das Urteil wiedergibt: Darf das Revisionsgericht das nachprüfen?",
+      "norm": "§ 337 StPO",
+      "optionen": [
+        "Rspr. (Rekonstruktionsverbot): Nein – der Inhalt der Beweisaufnahme wird nicht rekonstruiert; ausnahmsweise nur, wenn der Widerspruch ohne Rekonstruktion feststeht.",
+        "Teile der Literatur: Die Grenze ist zu streng – belegbare Abweichungen sollen gerügt werden können, gerade wenn die Aussage dokumentiert ist."
+      ],
+      "text": "Klausur: mit der Rspr. Eine Rüge nach § 337 StPO, der Zeuge habe anders ausgesagt, ist regelmäßig unzulässig. Prüfe, ob sich der Fehler aus dem Urteil selbst oder aus verlesenen Urkunden ergibt.",
+      "quellen": [
+        "§ 337 StPO",
+        "§ 261 StPO",
+        "Themenpool: revision-883"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.843Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-769",
+      "ueberzeile": "Merksatz Strafprozessrecht",
+      "titel": "Geschieden – das Zeugnisverweigerungsrecht bleibt",
+      "text": "Der Ehegatte des Beschuldigten darf das Zeugnis verweigern, auch wenn die Ehe nicht mehr besteht (§ 52 Abs. 1 Nr. 2 StPO). Das Gleiche gilt für den früheren Lebenspartner (Nr. 2a). Verlobte sind nach Nr. 1 nur geschützt, solange das Verlöbnis besteht.",
+      "norm": "§ 52 Abs. 1 StPO",
+      "quellen": [
+        "§ 52 StPO",
+        "Themenpool: stpo-769"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.843Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-056",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Feststellungsklage: Wann das rechtliche Interesse fehlt",
+      "text": "Die Feststellungsklage verlangt ein rechtliches Interesse an alsbaldiger Feststellung. Es liegt vor, wenn dem Recht des Klägers eine gegenwärtige Gefahr der Unsicherheit droht, meist weil der Beklagte es bestreitet oder sich eines Rechts berühmt. Kann der Kläger schon auf Leistung klagen, fehlt es grundsätzlich – mit anerkannten Ausnahmen.",
+      "norm": "§ 256 Abs. 1 ZPO",
+      "quellen": [
+        "§ 256 ZPO",
+        "Themenpool: zpo-056"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.843Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

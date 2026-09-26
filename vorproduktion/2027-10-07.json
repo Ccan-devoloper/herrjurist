@@ -1,0 +1,892 @@
+{
+  "datum": "2027-10-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "verwalt-394",
+        "themaTitel": "Was ist ein enteignender Eingriff und wie grenzt er sich vom enteignungsgleichen ab?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "schuld-437",
+        "themaTitel": "Anspruchsaufbau: entstanden - erloschen - durchsetzbar",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-760",
+        "themaTitel": "Falsche Verdächtigung",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "verwalt-647"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "verwalt-647"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "assessorz-805"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "streitstand",
+        "themaId": "streit-44"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:49",
+        "art": "merksatz",
+        "themaId": "grundr-629"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "begriff",
+        "themaId": "stpo-352"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "verwalt-394",
+      "poolTitel": "Was ist ein enteignender Eingriff und wie grenzt er sich vom enteignungsgleichen ab?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-11",
+        "2027-07-29"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "schuld-437",
+      "poolTitel": "Anspruchsaufbau: entstanden - erloschen - durchsetzbar",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "BGB, allgemeine Anspruchsmethodik"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-760",
+      "poolTitel": "Falsche Verdächtigung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 164 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-647",
+      "poolTitel": "Ermessen: Entschließungs- und Auswahlermessen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-14",
+        "2027-02-14",
+        "2027-08-30"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-647",
+      "poolTitel": "Ermessen: Entschließungs- und Auswahlermessen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-14",
+        "2027-02-14",
+        "2027-08-30"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "assessorz-805",
+      "poolTitel": "Wie schreibt man Entscheidungsgründe im Urteilsstil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 313 Abs. 3 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-16",
+        "2027-06-08",
+        "2027-08-07"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-44",
+      "poolTitel": "Mittelbare Täterschaft kraft Organisationsherrschaft (Täter hinter dem Täter)",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 Abs. 1 Alt. 2 StGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "grundr-629",
+      "poolTitel": "Schutzpflichten des Staates",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Grundrechte"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-21",
+        "2027-03-07",
+        "2027-09-23"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "stpo-352",
+      "poolTitel": "Was ist der Unterschied zwischen Berufung und Revision?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 312 StPO",
+        "§ 333 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-25",
+        "2027-06-26",
+        "2027-09-21"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-394",
+      "slug": "2027-10-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Straßenbau ruiniert das Café: Entschädigung ohne Rechtsverstoß",
+          "titelZeilen": [
+            "Straßenbau ruiniert",
+            "das Café:",
+            "Entschädigung ohne",
+            "Rechtsverstoß"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Rechtmäßig, aber Sonderopfer",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Landkarte",
+          "text": "Art. 14 GG kennt die Enteignung (Abs. 3, mit Junktimklausel) und die Inhalts- und Schrankenbestimmung (Abs. 1 S. 2), die ausnahmsweise ausgleichspflichtig sein kann. Daneben stehen zwei richterrechtliche Institute aus dem Aufopferungsgedanken: der enteignungsgleiche und der enteignende Eingriff."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die zwei Eingriffe",
+          "links": {
+            "titel": "Enteignungsgleich",
+            "punkte": [
+              "Rechtswidriges hoheitliches Handeln",
+              "Unmittelbarer Eingriff ins Eigentum",
+              "Sonderopfer folgt aus der Rechtswidrigkeit",
+              "Primärrechtsschutz vorrangig (§ 254 BGB analog)"
+            ]
+          },
+          "rechts": {
+            "titel": "Enteignend",
+            "punkte": [
+              "Rechtmäßiges hoheitliches Handeln",
+              "Atypische, unvorhergesehene Nebenfolge",
+              "Sonderopfer: Last jenseits des Zumutbaren",
+              "Beispiel: überlange Bauarbeiten vor dem Geschäft"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Was beide verbindet",
+          "punkte": [
+            "Grundlage: gewohnheitsrechtlicher Aufopferungsgedanke (§§ 74, 75 EinlALR)",
+            "Rechtsfolge: angemessene Entschädigung, kein voller Schadensersatz",
+            "Rechtsweg: ordentliche Gerichte (§ 40 Abs. 2 S. 1 VwGO)"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Prüfungsreihenfolge",
+          "punkte": [
+            "Spezialgesetzliche Entschädigung vorhanden? Dann vorrangig.",
+            "Hoheitliches Handeln rechtmäßig oder rechtswidrig?",
+            "Unmittelbare Beeinträchtigung einer Eigentumsposition",
+            "Sonderopfer, dann Umfang der Entschädigung"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Rechtswidrig: enteignungsgleich. Rechtmäßig mit atypischer, unzumutbarer Nebenfolge: enteignend."
+        },
+        {
+          "art": "cta",
+          "titel": "Eigentum und Entschädigung",
+          "punkte": [
+            "Enteignung oder Inhaltsbestimmung?",
+            "Rechtmäßigkeit klären",
+            "Sonderopfer begründen"
+          ],
+          "icons": [
+            "haus",
+            "waage",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Die Straße vor dem Café wird rechtmäßig erneuert – aber monatelang und so, dass das Geschäft ums Überleben kämpft. Auch ohne Rechtsverstoß kann dann eine Entschädigung aus enteignendem Eingriff in Betracht kommen: rechtmäßiges Handeln, atypische Nebenfolge, Sonderopfer jenseits des Zumutbaren. Beim enteignungsgleichen Eingriff ist das Handeln dagegen rechtswidrig. Beide beruhen auf dem Aufopferungsgedanken. Speichern für die nächste Staatshaftungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatshaftung",
+        "#art14gg",
+        "#verwaltungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Enteignender vs. enteignungsgleicher Eingriff",
+      "coverText": "Rechtmäßig, aber Sonderopfer",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Auch rechtmäßiges Staatshandeln kann eine Entschädigung auslösen, wenn es ein unzumutbares Sonderopfer verursacht.",
+        "handlung": "{A} sits alone at an empty café table behind a tall construction fence, while {B} on the other side of the fence lifts a heavy road plate and glances back at the empty chairs.",
+        "hinweisRegie": "Place the note in the free space above the construction fence, slightly tilted toward the empty café table, so the fence, the plate and both faces remain fully visible.",
+        "alternative": "{B} digs a long trench in front of a shop door, and {A} inside holds a nearly empty coin jar."
+      },
+      "bildSzene": "empty café behind construction fence",
+      "bildSzeneAlt": "trench before shop, empty jar",
+      "quellen": [
+        "Art. 14 GG",
+        "§§ 74, 75 EinlALR",
+        "§ 40 Abs. 2 S. 1 VwGO",
+        "§ 254 BGB",
+        "Themenpool: verwalt-394"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.653Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-437",
+      "slug": "2027-10-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verjährte Forderung: Sie lebt weiter",
+          "titelZeilen": [
+            "Verjährte",
+            "Forderung:",
+            "Sie lebt weiter"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Einrede ist keine Einwendung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Aufbau",
+          "text": "Jeder Anspruch hat drei Stufen: Ist er entstanden? Ist er erloschen? Ist er durchsetzbar? Die Gegenrechte gehören auf je eine Stufe – und wer sie vermischt, zieht falsche Folgen."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Einwendung und Einrede",
+          "links": {
+            "titel": "Einwendungen",
+            "punkte": [
+              "Wirken kraft Gesetzes",
+              "Im Prozess von Amts wegen beachtet",
+              "Hindernd: §§ 105, 125, 134, 138 BGB",
+              "Vernichtend: etwa Erfüllung, Aufrechnung"
+            ]
+          },
+          "rechts": {
+            "titel": "Einreden",
+            "punkte": [
+              "Wirken nur, wenn sich der Schuldner beruft",
+              "Der Anspruch bleibt bestehen",
+              "Dauernd: Verjährung (§ 214 BGB)",
+              "Aufschiebend: etwa § 320 BGB"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Warum die Stufe zählt",
+          "links": {
+            "titel": "Erloschen",
+            "punkte": [
+              "Der Anspruch ist weg",
+              "Zahlt der Schuldner trotzdem: ohne Rechtsgrund",
+              "Rückforderung über § 812 BGB möglich"
+            ]
+          },
+          "rechts": {
+            "titel": "Verjährt",
+            "punkte": [
+              "Der Anspruch besteht fort",
+              "Zahlung trotz Verjährung: kein Zurückfordern (§ 214 Abs. 2 BGB)",
+              "Aufrechnung noch möglich, wenn früher aufrechenbar (§ 215 BGB)"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Aufbautipps",
+          "punkte": [
+            "Nur die Stufen ausführen, die der Sachverhalt problematisch macht",
+            "Einreden erst prüfen, wenn der Schuldner sich darauf beruft",
+            "§ 275 BGB: Abs. 1 ist Einwendung, Abs. 2 und 3 sind Einreden"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Entstanden – erloschen – durchsetzbar: Die Verjährung gehört auf Stufe drei. Der Anspruch lebt, er ist nur nicht mehr durchsetzbar."
+        },
+        {
+          "art": "cta",
+          "titel": "Jeder Anspruch in drei Stufen",
+          "punkte": [
+            "Entstanden?",
+            "Erloschen?",
+            "Durchsetzbar?"
+          ],
+          "icons": [
+            "vertrag",
+            "kreuz",
+            "schloss"
+          ]
+        }
+      ],
+      "caption": "Die verjährte Forderung lebt weiter. Die Verjährung ist eine Einrede: Der Anspruch besteht fort, er ist nur nicht mehr durchsetzbar, wenn der Schuldner sich darauf beruft (§ 214 BGB). Deshalb kann nicht zurückfordern, wer auf eine verjährte Forderung zahlt – anders als bei einem erloschenen Anspruch. Und mit einer verjährten Forderung kann unter § 215 BGB noch aufgerechnet werden. Speichern für die nächste Zivilrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#bgbat",
+        "#verjährung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anspruchsaufbau: Einwendung oder Einrede",
+      "coverText": "Einrede ist keine Einwendung",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Ein verjährter Anspruch existiert weiter, er ist nur nicht mehr durchsetzbar.",
+        "handlung": "{A} points at a sleeping creature curled up inside a glass case, while {B} hovers beside it holding a small key that would open the case only if someone asks.",
+        "hinweisRegie": "Place the note in the free space next to the glass case, slightly tilted toward the sleeping creature, so the key and the pointing gesture remain fully visible.",
+        "alternative": "{B} stamps three boxes in a row on a long conveyor while {A} lifts the third box and finds it locked but still full."
+      },
+      "bildSzene": "sleeping creature in glass case",
+      "bildSzeneAlt": "three boxes, third locked but full",
+      "quellen": [
+        "§ 214 BGB",
+        "§ 215 BGB",
+        "§ 275 BGB",
+        "§ 320 BGB",
+        "§ 362 BGB",
+        "§ 812 BGB",
+        "Themenpool: schuld-437"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.653Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-760",
+      "slug": "2027-10-07-b3",
+      "titelZeilen": [
+        "Lüge geplant,",
+        "Wahrheit gesagt:",
+        "kein § 164 StGB"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Lüge geplant, Wahrheit gesagt: kein § 164 StGB",
+          "unter": "Falsche Verdächtigung · § 164 StGB",
+          "text": "A zeigt B an, den er für unschuldig hält. Doch B war es wirklich.",
+          "norm": "§ 164 Abs. 1 StGB",
+          "icon": "polizei",
+          "sprecher": "Er wollte lügen und hat die Wahrheit gesagt. A zeigt B bei der Polizei wegen eines Diebstahls an, obwohl er ihn für unschuldig hält. Später stellt sich heraus: B war es wirklich.",
+          "marken": [
+            "zufällig wahr"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Verdächtigen",
+          "text": "Tatsachen, die gegen einen bestimmten anderen einen Tatverdacht begründen.",
+          "norm": "§ 164 Abs. 1 StGB",
+          "sprecher": "Schritt eins: das Verdächtigen. A behauptet Tatsachen, die gegen einen bestimmten anderen den Verdacht einer rechtswidrigen Tat begründen. Das geschieht gegenüber der Polizei, also einer Behörde.",
+          "marken": [
+            "bei einer Behörde"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Objektiv unwahr",
+          "text": "Nach h.M. muss die Verdächtigung tatsächlich unwahr sein.",
+          "norm": null,
+          "sprecher": "Schritt zwei, und hier kippt der Fall: Nach herrschender Meinung muss die Verdächtigung objektiv unwahr sein. B hat den Diebstahl aber begangen. Die Anzeige ist inhaltlich wahr.",
+          "marken": [
+            "objektiv unwahr?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Wider besseres Wissen",
+          "text": "Sicheres Wissen um die Unwahrheit – bedingter Vorsatz reicht nicht.",
+          "norm": null,
+          "sprecher": "Schritt drei: wider besseres Wissen. Der Täter muss sicher wissen, dass seine Verdächtigung falsch ist. Hält er sie nur für möglicherweise falsch, reicht das nicht.",
+          "marken": [
+            "sicheres Wissen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Absicht",
+          "text": "Ein behördliches Verfahren herbeiführen oder fortdauern lassen.",
+          "norm": null,
+          "sprecher": "Schritt vier: die Absicht. Der Täter will erreichen, dass gegen den anderen ein Verfahren oder eine andere behördliche Maßnahme eingeleitet wird oder weiterläuft.",
+          "marken": [
+            "Verfahren gewollt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und der Versuch?",
+          "text": "§ 164 StGB ist ein Vergehen ohne Versuchsstrafbarkeit.",
+          "norm": "§ 23 Abs. 1 StGB",
+          "sprecher": "Bleibt der Versuch. Aus Sicht des A war die Verdächtigung falsch. Aber § 164 ist ein Vergehen, und der Versuch ist nicht ausdrücklich unter Strafe gestellt. A bleibt straflos.",
+          "marken": [
+            "Versuch straflos"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Der Inhalt muss falsch sein",
+          "text": "Böse Absicht allein reicht nicht – die Verdächtigung muss objektiv unwahr sein.",
+          "norm": "§ 164 Abs. 1 StGB",
+          "sprecher": "Merke: Bei der falschen Verdächtigung prüfst du die objektive Unwahrheit getrennt vom Vorsatz. Eine böse Absicht macht eine wahre Anzeige nicht strafbar.",
+          "marken": [
+            "erst objektiv"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die BT-Klausur speichern",
+          "text": "Speichern für die nächste Rechtspflege-Klausur.",
+          "sprecher": "Speicher dir diesen Fall für deine nächste Klausur im Strafrecht BT.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "A zeigt B an, den er für unschuldig hält – doch B war es wirklich. Eine falsche Verdächtigung liegt dann nach h.M. nicht vor: § 164 StGB verlangt eine objektiv unwahre Verdächtigung, dazu sicheres Wissen um die Unwahrheit und die Absicht, ein Verfahren herbeizuführen. Der Versuch ist nicht strafbar. Speichern für die nächste Klausur im Strafrecht BT.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#164stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 164 StGB: Die Verdächtigung muss falsch sein",
+      "coverText": "Erst die objektive Unwahrheit",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer bewusst lügen will, aber zufällig die Wahrheit sagt, macht sich nicht wegen falscher Verdächtigung strafbar.",
+        "handlung": "{A} slyly points at {B} in front of a watchtower window, and {B} is caught in that very moment with a stolen gear sticking out of its pocket.",
+        "hinweisRegie": "Place the note in the free space between the pointing finger and the gear in the pocket, slightly tilted toward the gear, so both gestures stay readable and no face is covered.",
+        "alternative": "{B} throws a dart blindfolded to miss on purpose, but {A} shows that it landed right in the bullseye."
+      },
+      "bildSzene": "pointing finger, stolen gear revealed",
+      "bildSzeneAlt": "blindfolded dart hits bullseye",
+      "quellen": [
+        "§ 164 StGB",
+        "§ 23 Abs. 1 StGB",
+        "§ 12 StGB",
+        "Themenpool: strafbt-760"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.654Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-647",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht AT",
+      "titel": "Nachbar N verlangt, dass die Behörde gegen einen Schwarzbau einschreitet. Wann hat er Anspruch darauf?",
+      "optionen": [
+        "Bei Verletzung drittschützender Normen und Ermessensreduzierung auf null",
+        "Schon wenn der Bau objektiv baurechtswidrig ist",
+        "Nie – das Ob steht immer im freien Belieben der Behörde"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 40 VwVfG",
+        "Landesbauordnungen",
+        "Themenpool: verwalt-647"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.654Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-647",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur mit Drittschutz und Ermessensreduzierung auf null",
+      "text": "Die Eingriffsbefugnis („kann“) eröffnet Entschließungsermessen (§ 40 VwVfG). Der Nachbar hat grundsätzlich nur Anspruch auf fehlerfreie Ermessensausübung – und nur, wenn eine ihn schützende Norm verletzt ist. Einschreiten verlangen kann er erst, wenn jede andere Entscheidung fehlerhaft wäre – etwa bei erheblicher Gefahr. Details je nach Landesrecht.",
+      "norm": "§ 40 VwVfG",
+      "quellen": [
+        "§ 40 VwVfG",
+        "Landesbauordnungen",
+        "Themenpool: verwalt-647"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.654Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Bei Verletzung drittschützender Normen und Ermessensreduzierung auf null",
+        "Schon wenn der Bau objektiv baurechtswidrig ist",
+        "Nie – das Ob steht immer im freien Belieben der Behörde"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-805",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 313 Abs. 3 ZPO: In den Entscheidungsgründen steht das Ergebnis vorn",
+      "text": "Die Entscheidungsgründe fassen kurz zusammen, auf welchen tatsächlichen und rechtlichen Erwägungen das Urteil beruht. Deshalb schreibst du im Urteilsstil: erst das Ergebnis („Die Klage ist begründet.“), dann die Begründung („Denn …“). Kein „fraglich ist“, kein „könnte“ – und Fragen, auf die es nicht ankommt, bleiben draußen.",
+      "norm": "§ 313 Abs. 3 ZPO",
+      "quellen": [
+        "§ 313 Abs. 3 ZPO",
+        "Themenpool: assessorz-805"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.654Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "streit-44",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Befehl an einen voll verantwortlichen Untergebenen: Ist der Hintermann mittelbarer Täter?",
+      "norm": "§ 25 Abs. 1 Alt. 2 StGB",
+      "optionen": [
+        "BGH: Ja – Täter hinter dem Täter kraft Organisationsherrschaft über regelhafte Abläufe.",
+        "Teile der Lit.: Nein – der Vordermann ist voll verantwortlich; Hintermann ist Anstifter oder Mittäter."
+      ],
+      "text": "Klausur: Die Figur stammt aus Fällen staatlicher Machtapparate; ihre Übertragung auf Unternehmen ist besonders umstritten. Verantwortungsprinzip gegen Ablaufherrschaft abwägen.",
+      "quellen": [
+        "§ 25 Abs. 1 Alt. 2 StGB",
+        "§ 25 Abs. 2 StGB",
+        "§ 26 StGB"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.654Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-629",
+      "ueberzeile": "Merksatz Grundrechte",
+      "titel": "Gefahr vom Staat: Abwehrrecht. Gefahr von Dritten: Schutzpflicht",
+      "text": "Die Schutzpflicht folgt aus der objektiven Dimension der Grundrechte, gestützt auf Art. 1 Abs. 1 S. 2 GG. Sie greift bei Gefahren durch Private oder Natur – etwa für Leben und Gesundheit.",
+      "norm": "Art. 1 Abs. 1 S. 2 GG",
+      "quellen": [
+        "Art. 1 Abs. 1 S. 2 GG",
+        "Art. 2 Abs. 2 S. 1 GG",
+        "Themenpool: grundr-629"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.654Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-352",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Rechtsmittel: Was Berufung und Revision gemeinsam haben",
+      "text": "Rechtsmittel sind Rechtsbehelfe mit zwei Wirkungen: Sie hemmen die Rechtskraft, soweit das Urteil angefochten ist (Suspensiveffekt, §§ 316 Abs. 1, 343 Abs. 1 StPO), und bringen die Sache vor ein höheres Gericht (Devolutiveffekt). Der Einspruch gegen den Strafbefehl ist deshalb kein Rechtsmittel – über ihn entscheidet dasselbe Gericht.",
+      "norm": "§§ 316, 343 StPO",
+      "quellen": [
+        "§ 316 StPO",
+        "§ 343 StPO",
+        "§ 410 StPO",
+        "Themenpool: stpo-352"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.654Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

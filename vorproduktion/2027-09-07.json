@@ -1,0 +1,863 @@
+{
+  "datum": "2027-09-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "verwalt-098",
+        "themaTitel": "Wann darf ein rechtswidriger begünstigender Verwaltungsakt zurückgenommen werden?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "arbeit-145",
+        "themaTitel": "Wann ist ein Betriebsübergang nach § 613a BGB gegeben?",
+        "fach": "arbeit",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "stpo-773",
+        "themaTitel": "Beschlagnahme und Sicherstellung",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "zpo-284"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "zpo-284"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:12",
+        "art": "norm",
+        "themaId": "bgbat-008"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "zahl",
+        "themaId": "anklage-868"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:04",
+        "art": "streitstand",
+        "themaId": "methodik-938"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "merksatz",
+        "themaId": "bereich-212"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "verwalt-098",
+      "poolTitel": "Wann darf ein rechtswidriger begünstigender Verwaltungsakt zurückgenommen werden?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-28",
+        "2026-12-29",
+        "2027-02-01"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "arbeit-145",
+      "poolTitel": "Wann ist ein Betriebsübergang nach § 613a BGB gegeben?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 613a BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-12",
+        "2027-07-16",
+        "2027-07-16"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-773",
+      "poolTitel": "Beschlagnahme und Sicherstellung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 94 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-24",
+        "2027-06-10",
+        "2027-06-10"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-284",
+      "poolTitel": "Wann ist neuer Vortrag in zweiter Instanz zuzulassen?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 531 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-284",
+      "poolTitel": "Wann ist neuer Vortrag in zweiter Instanz zuzulassen?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 531 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-008",
+      "poolTitel": "Worin unterscheiden sich Anfechtung und Wegfall der Geschäftsgrundlage?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 2 BGB",
+        "§ 313 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19",
+        "2027-07-09"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "anklage-868",
+      "poolTitel": "Wie bildet man eine Gesamtstrafe?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 53 StGB",
+        "§ 54 StGB",
+        "§ 55 StGB"
+      ],
+      "typ": "formel",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-02",
+        "2027-04-13"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "methodik-938",
+      "poolTitel": "Meinungsstreit darstellen: Ansichten, Argumente, Streitentscheid",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-13",
+        "2027-05-09",
+        "2027-07-08"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "bereich-212",
+      "poolTitel": "Was ist der Vorrang der Leistungsbeziehung?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-18",
+        "2027-04-11",
+        "2027-06-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-098",
+      "slug": "2027-09-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Erst rechtmäßig, dann rechtswidrig: Rücknahme oder Widerruf?",
+          "titelZeilen": [
+            "Erst rechtmäßig,",
+            "dann rechtswidrig:",
+            "Rücknahme oder",
+            "Widerruf?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Der Erlasszeitpunkt entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Ein begünstigender Dauerverwaltungsakt war bei Erlass rechtmäßig. Später ändert sich die Sach- oder Rechtslage, der VA passt nicht mehr zum Gesetz. Die Behörde will ihn aufheben. Richtet sich das nach § 48 VwVfG oder nach § 49 VwVfG?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Ansichten",
+          "links": {
+            "titel": "h.M.",
+            "punkte": [
+              "Rechtswidrig i.S.d. § 48 ist nur, was schon bei Erlass rechtswidrig war.",
+              "Spätere Änderungen: Widerruf nach § 49 II Nr. 3, 4 VwVfG."
+            ]
+          },
+          "rechts": {
+            "titel": "Andere Ansicht",
+            "punkte": [
+              "Ein Dauer-VA kann nachträglich rechtswidrig werden.",
+              "Dann soll auch die Rücknahme nach § 48 VwVfG offenstehen."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Warum das Ergebnis kippen kann",
+          "punkte": [
+            "§ 49 II VwVfG zählt die Widerrufsgründe abschließend auf.",
+            "Beim Widerruf wegen geänderter Lage droht Entschädigung (§ 49 VI VwVfG).",
+            "§ 48 VwVfG arbeitet dagegen mit Vertrauensschutz nach Abs. 2 und Ausgleich nach Abs. 3."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme für die Klausur",
+          "text": "Für die h.M. spricht die Systematik: § 49 VwVfG enthält eigens Gründe für geänderte Tatsachen und geänderte Rechtslage. Diese Wertungen würden unterlaufen, wenn die Behörde auf § 48 ausweichen könnte. Den Streit nur entscheiden, wenn beide Wege zu verschiedenen Ergebnissen führen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Maßgeblich ist grundsätzlich der Erlasszeitpunkt: anfangs rechtswidrig → § 48, später unpassend → § 49 VwVfG."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Schritte vor jeder Aufhebung",
+          "punkte": [
+            "Zeitpunkt der Rechtswidrigkeit bestimmen",
+            "Norm wählen: § 48 oder § 49 VwVfG",
+            "Nur bei Ergebnisrelevanz den Streit entscheiden"
+          ],
+          "icons": [
+            "kalender",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Erst rechtmäßig, dann rechtswidrig – Rücknahme oder Widerruf? Nach herrschender Meinung kommt es auf den Zeitpunkt des Erlasses an: Was damals rechtmäßig war, wird bei späterer Änderung der Lage nach § 49 VwVfG widerrufen. Eine andere Ansicht lässt bei Dauerverwaltungsakten auch § 48 VwVfG zu. Relevant wird das, weil § 49 II abschließende Gründe und § 49 VI eine Entschädigung kennt. Speichern für die nächste Aufhebungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#rücknahme",
+        "#widerruf",
+        "#48vwvfg",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nachträglich rechtswidrig: § 48 oder § 49?",
+      "coverText": "Der Erlasszeitpunkt entscheidet",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Ob zurückgenommen oder widerrufen wird, hängt daran, wann der Bescheid mit dem Recht auseinanderfiel.",
+        "handlung": "{A} hovers over two separate filing slots and holds a certificate that has slowly faded on one half, while {B} studies a calendar page to decide which slot it belongs in.",
+        "hinweisRegie": "Place the note in the free space between the two filing slots, slightly tilted toward the calendar page, so it reads as the timing question without covering the certificate or faces.",
+        "alternative": "{B} watches a once-straight signpost that has gradually tilted as the road beside it was rebuilt, while {A} measures the date the road changed."
+      },
+      "bildSzene": "droid sorts faded certificate by date",
+      "bildSzeneAlt": "signpost tilted after road rebuilt",
+      "quellen": [
+        "§ 48 VwVfG",
+        "§ 49 VwVfG",
+        "Themenpool: verwalt-098"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:55:11.822Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "arbeit",
+      "klausur": 1,
+      "fachLabel": "Arbeitsrecht",
+      "themaId": "arbeit-145",
+      "slug": "2027-09-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Reinigungsauftrag gewechselt: Die Belegschaft geht nicht automatisch mit",
+          "titelZeilen": [
+            "Reinigungsauftrag",
+            "gewechselt: Die",
+            "Belegschaft geht",
+            "nicht automatisch mit"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Funktionsnachfolge reicht nicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Firma R reinigt seit Jahren das Bürohaus des E. E kündigt und vergibt den Auftrag an N. N übernimmt weder Personal noch Geräte oder Material. A war bei R nur in diesem Objekt eingesetzt. Sie meint, ihr Arbeitsverhältnis sei auf N übergegangen."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du § 613a BGB",
+          "schritte": [
+            {
+              "titel": "Wirtschaftliche Einheit",
+              "text": "Eine organisierte Gesamtheit von Personen und Sachen, die eine wirtschaftliche Tätigkeit mit eigener Zielsetzung ausübt."
+            },
+            {
+              "titel": "Wahrung der Identität",
+              "text": "Gesamtbetrachtung: Betriebsmittel, Belegschaft, Kunden, Ähnlichkeit der Tätigkeit, Dauer einer Unterbrechung."
+            },
+            {
+              "titel": "Betriebsmittelarme Branche",
+              "text": "Bei der Reinigung prägt vor allem das Personal. Entscheidend ist, ob ein nach Zahl und Sachkunde wesentlicher Teil übernommen wird."
+            },
+            {
+              "titel": "Durch Rechtsgeschäft",
+              "text": "Ein Vertrag direkt zwischen R und N ist nicht nötig. Es genügt, dass der Übergang auf rechtsgeschäftlichen Beziehungen beruht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Denkfehler",
+          "text": "„Gleiche Arbeit am gleichen Ort – also Betriebsübergang.“ Die bloße Fortführung derselben Tätigkeit durch einen neuen Auftragnehmer ist Funktionsnachfolge. Sie allein erfüllt § 613a BGB nicht."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "N hat weder Betriebsmittel noch Personal übernommen. Damit ist die Identität der Einheit nicht gewahrt; es liegt nur eine Auftragsnachfolge vor. Das Arbeitsverhältnis der A besteht weiter mit R."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht die Aufgabe geht über, sondern die Einheit. Ohne Personal oder Betriebsmittel keine Identität – kein § 613a BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Betriebsübergang in drei Fragen",
+          "punkte": [
+            "Welche wirtschaftliche Einheit?",
+            "Was prägt sie: Personal oder Mittel?",
+            "Wurde genau das übernommen?"
+          ],
+          "icons": [
+            "fabrik",
+            "personen",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Neuer Auftragnehmer, gleiche Arbeit – und trotzdem kein Betriebsübergang. § 613a BGB verlangt, dass eine wirtschaftliche Einheit unter Wahrung ihrer Identität übergeht. In betriebsmittelarmen Branchen wie der Reinigung kommt es vor allem darauf an, ob ein nach Zahl und Sachkunde wesentlicher Teil des Personals übernommen wird. Die bloße Funktionsnachfolge genügt nicht. Speichern für die nächste Arbeitsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#arbeitsrecht",
+        "#betriebsübergang",
+        "#613abgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Neuer Reinigungsauftrag – das Personal bleibt",
+      "coverText": "Funktionsnachfolge reicht nicht",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Wer nur dieselbe Aufgabe übernimmt, übernimmt noch keinen Betrieb samt Belegschaft.",
+        "handlung": "{B} arrives at a shiny office floor with his own new mop and bucket, while {A} and his old cleaning cart with its crew stay behind at the door, not crossing over.",
+        "hinweisRegie": "Place the note in the free space at the threshold between {B}'s new equipment and the old cart, slightly tilted, so it reads as the missing transfer without covering the crew or faces.",
+        "alternative": "{A} hands over only a floor plan to {B}, while the tools and workers remain on the other side of a glass wall."
+      },
+      "bildSzene": "new cleaner arrives, old crew stays",
+      "bildSzeneAlt": "only a floor plan changes hands",
+      "quellen": [
+        "§ 613a BGB",
+        "Themenpool: arbeit-145"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-funktionsnachfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:55:11.823Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-773",
+      "slug": "2027-09-07-b3",
+      "titelZeilen": [
+        "Nicht jede",
+        "Beschlagnahme",
+        "sichert Beweise"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nicht jede Beschlagnahme sichert Beweise",
+          "unter": "Strafprozess · §§ 94, 111b StPO",
+          "text": "Die StPO kennt zwei Zwecke – und dafür zwei Wege.",
+          "norm": "§ 94 StPO · § 111b StPO",
+          "icon": "paket",
+          "sprecher": "Nicht jede Beschlagnahme sichert Beweise. Die Strafprozessordnung kennt zwei ganz verschiedene Zwecke. Wer sie verwechselt, prüft die falsche Norm.",
+          "marken": [
+            "zwei Zwecke"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Beweismittel: § 94 StPO",
+          "text": "Der Gegenstand kann für die Untersuchung als Beweis Bedeutung haben.",
+          "norm": "§ 94 StPO",
+          "sprecher": "Erstens: die Beweismittelbeschlagnahme nach Paragraf 94. Es genügt, dass der Gegenstand für die Untersuchung als Beweismittel von Bedeutung sein kann. Typisch: das Handy mit den Chats.",
+          "marken": [
+            "Beweis"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Einziehung: § 111b StPO",
+          "text": "Der Gegenstand wird gesichert, weil er später eingezogen werden soll.",
+          "norm": "§ 111b StPO",
+          "sprecher": "Zweitens: die Beschlagnahme zur Sicherung der Einziehung nach Paragraf 111b. Hier geht es nicht um Beweis, sondern darum, dass die Tatbeute oder das Tatwerkzeug am Ende noch da ist.",
+          "marken": [
+            "Einziehung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Wertersatz: Vermögensarrest",
+          "text": "Ist die Beute weg, sichert der Arrest den Wertersatz.",
+          "norm": "§ 111e StPO",
+          "sprecher": "Drittens: Ist die Beute schon ausgegeben, bleibt der Vermögensarrest nach Paragraf 111e. Er sichert den Anspruch auf Einziehung des Wertes.",
+          "marken": [
+            "§ 111e StPO"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Wer ordnet an?",
+          "text": "Grundsätzlich das Gericht; bei Gefahr im Verzug auch die Staatsanwaltschaft.",
+          "norm": "§ 98 StPO · § 111j StPO",
+          "sprecher": "Viertens: die Anordnung. Beim Beweismittel gilt Paragraf 98, bei der Einziehung Paragraf 111j. Grundsätzlich entscheidet das Gericht, bei Gefahr im Verzug auch die Staatsanwaltschaft.",
+          "marken": [
+            "§ 98 · § 111j"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Beides zugleich geht",
+          "text": "Das Bargeld kann Beweis und Tatertrag sein – dann beide Zwecke benennen.",
+          "norm": null,
+          "sprecher": "Klausurtipp: Ein Gegenstand kann beides sein. Das erbeutete Bargeld ist oft Beweis und Tatertrag zugleich. Dann nennst du beide Zwecke.",
+          "marken": [
+            "Beweis + Einziehung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Beweis: § 94. Einziehung: § 111b. Wertersatz: § 111e StPO.",
+          "norm": "§§ 94, 111b, 111e StPO",
+          "sprecher": "Merke: Beweis, Paragraf 94. Einziehung, Paragraf 111b. Wertersatz, Paragraf 111e.",
+          "marken": [
+            "94 · 111b · 111e"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst den Zweck benennen",
+          "text": "Speichern für die nächste StPO-Zusatzfrage.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Zusatzfrage zur Strafprozessordnung. Und frag zuerst: Wozu wird der Gegenstand eigentlich gebraucht?",
+          "marken": [
+            "Zweck zuerst"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Nicht jede Beschlagnahme sichert Beweise. § 94 StPO erfasst Gegenstände, die als Beweismittel Bedeutung haben können. § 111b StPO sichert Gegenstände, die später eingezogen werden sollen – etwa die Tatbeute. Ist sie weg, hilft der Vermögensarrest nach § 111e StPO. Ein Gegenstand kann beiden Zwecken dienen; dann benennst du beide. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#beschlagnahme",
+        "#einziehung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beschlagnahme: Beweis oder Einziehung?",
+      "coverText": "§ 94 oder § 111b StPO",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Ein beschlagnahmter Gegenstand dient entweder dem Beweis, der späteren Einziehung – oder beidem.",
+        "handlung": "{A} points with his pointer at two different storage boxes, one with a magnifier symbol and one with a vault door, while {B} holds a bundle of cash and hesitates between them.",
+        "hinweisRegie": "Place the note in the open space between the two boxes, slightly tilted toward the cash bundle, so the choice of purpose is visible without covering the boxes or faces.",
+        "alternative": "{B} sorts items on a conveyor into two chutes, one labelled by a magnifying glass icon and one by a lock icon."
+      },
+      "bildSzene": "cash bundle between evidence and vault",
+      "bildSzeneAlt": "items sorted into two chutes",
+      "quellen": [
+        "§ 94 StPO",
+        "§ 98 StPO",
+        "§ 111b StPO",
+        "§ 111e StPO",
+        "§ 111j StPO",
+        "Themenpool: stpo-773"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:55:11.824Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-284",
+      "ueberzeile": "Prüfungsfrage Zivilprozess",
+      "titel": "Erstinstanzlich nachlässig nicht vorgetragen, vom Gegner bestritten: Darf B das in der Berufung nachholen?",
+      "optionen": [
+        "Nein – nachlässig Zurückgehaltenes bleibt ausgeschlossen",
+        "Ja – die Berufung ist eine volle zweite Tatsacheninstanz",
+        "Ja, wenn das Berufungsgericht es für sachdienlich hält"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 531 Abs. 2 ZPO",
+        "Themenpool: zpo-284"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:55:11.824Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-284",
+      "ueberzeile": "Auflösung",
+      "titel": "Nachlässig zurückgehalten – in der Berufung ausgeschlossen",
+      "text": "Neue Angriffs- und Verteidigungsmittel sind nur zuzulassen, wenn sie einen erstinstanzlich erkennbar übersehenen oder für unerheblich gehaltenen Gesichtspunkt betreffen, wegen eines Verfahrensmangels unterblieben oder ohne Nachlässigkeit nicht vorgebracht wurden. „Sachdienlich“ gehört zu § 533 ZPO. Unstreitiger neuer Vortrag ist nach dem BGH stets zu berücksichtigen.",
+      "norm": "§ 531 Abs. 2 S. 1 ZPO",
+      "quellen": [
+        "§ 531 Abs. 2 ZPO",
+        "§ 533 ZPO",
+        "Themenpool: zpo-284"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:55:11.824Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – nachlässig Zurückgehaltenes bleibt ausgeschlossen",
+        "Ja – die Berufung ist eine volle zweite Tatsacheninstanz",
+        "Ja, wenn das Berufungsgericht es für sachdienlich hält"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-008",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 119 Abs. 2 BGB: Über den Wert geirrt – kein Anfechtungsgrund",
+      "text": "Verkehrswesentliche Eigenschaften sind die wertbildenden Merkmale einer Sache, etwa Echtheit, Alter oder Herkunft – nicht ihr Marktwert selbst. Wer nur den Wert falsch einschätzt, kann nicht anfechten. Irren beide Parteien über einen Umstand, der Grundlage des Vertrags war, wird verbreitet § 313 Abs. 2 BGB vorgezogen.",
+      "norm": "§ 119 Abs. 2 BGB",
+      "quellen": [
+        "§ 119 Abs. 2 BGB",
+        "§ 313 Abs. 2 BGB",
+        "Themenpool: bgbat-008"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:55:11.824Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-868",
+      "ueberzeile": "4 Punkte Strafzumessung",
+      "titel": "Gesamtstrafe: vier Leitplanken für die Höhe",
+      "text": "Die Gesamtstrafe entsteht durch Erhöhung der Einsatzstrafe – nicht durch Addition.",
+      "punkte": [
+        "Einsatzstrafe ist die höchste Einzelstrafe (§ 54 Abs. 1 S. 2 StGB)",
+        "Sie muss erhöht werden – bloßes Übernehmen reicht nicht",
+        "Die Summe der Einzelstrafen darf nicht erreicht werden (§ 54 Abs. 2 S. 1)",
+        "Obergrenze: 15 Jahre bzw. 720 Tagessätze (§ 54 Abs. 2 S. 2)"
+      ],
+      "quellen": [
+        "§ 53 StGB",
+        "§ 54 StGB",
+        "Themenpool: anklage-868"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:55:11.824Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-938",
+      "ueberzeile": "Streitstand Methodik",
+      "titel": "Materialien sagen A, Wortlaut und Zweck sagen B: Wessen Wille entscheidet?",
+      "norm": "Auslegungslehre",
+      "optionen": [
+        "Subjektive Theorie: Maßgeblich ist der Regelungswille des historischen Gesetzgebers.",
+        "Objektive Theorie (Ausgangspunkt des BVerfG): Maßgeblich ist der im Gesetz objektivierte Wille."
+      ],
+      "text": "Klausur: Den Theorienstreit nicht ausbreiten. Wortlaut, Systematik, Zweck und Entstehungsgeschichte nacheinander prüfen und Materialien nennen, wenn der Sachverhalt sie liefert. Nur wo Historie und objektiver Zweck auseinanderlaufen, wird der Streit tragend.",
+      "quellen": [
+        "Themenpool: methodik-938"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:55:11.824Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-212",
+      "ueberzeile": "Merksatz Bereicherungsrecht",
+      "titel": "Wer leistet? Das sagt der Empfängerhorizont",
+      "text": "Sehen Zuwendender und Empfänger verschiedene Leistende, entscheidet nach der Rspr. die objektive Sicht des Empfängers. Durfte E die Arbeit des H als Leistung seines Vertragspartners V verstehen, kondiziert H nur bei V.",
+      "norm": "§ 812 Abs. 1 S. 1 Alt. 1 BGB",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 BGB",
+        "Themenpool: bereich-212"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:55:11.824Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

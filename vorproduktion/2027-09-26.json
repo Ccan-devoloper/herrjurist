@@ -1,0 +1,917 @@
+{
+  "datum": "2027-09-26",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "strafat-059",
+        "themaTitel": "Was ist ein untauglicher Versuch, was ein Wahndelikt?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "staat-604",
+        "themaTitel": "Verfassungsänderung und Ewigkeitsklausel",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "zpo-279"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "zpo-279"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "bereich-219"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:15",
+        "art": "fehler",
+        "themaId": "strafat-924"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "tipp",
+        "themaId": "zpo-285"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "zahl",
+        "themaId": "revision-874"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafat-059",
+      "poolTitel": "Was ist ein untauglicher Versuch, was ein Wahndelikt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 3 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-09",
+        "2027-03-25",
+        "2027-08-25"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-604",
+      "poolTitel": "Verfassungsänderung und Ewigkeitsklausel",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 79 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-03-08"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-279",
+      "poolTitel": "Wann ist ein Feststellungsinteresse gegeben?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 256 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-20",
+        "2027-05-01",
+        "2027-07-03"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-279",
+      "poolTitel": "Wann ist ein Feststellungsinteresse gegeben?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 256 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-20",
+        "2027-05-01",
+        "2027-07-03"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bereich-219",
+      "poolTitel": "Was ist eine Rückgriffskondiktion?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 BGB",
+        "§ 267 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-23"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "strafat-924",
+      "poolTitel": "Echte Wahlfeststellung, Postpendenz und in dubio pro reo: Was gilt wann?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "Art. 103 Abs. 2 GG",
+        "§ 261 StPO",
+        "§ 1 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-13",
+        "2027-05-16",
+        "2027-07-25"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "zpo-285",
+      "poolTitel": "Wie wirkt eine Erledigung der Hauptsache?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-15",
+        "2027-07-18",
+        "2027-09-17"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "revision-874",
+      "poolTitel": "Wer ist revisionsberechtigt und wann ist er beschwert?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 296 StPO",
+        "§ 297 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-02",
+        "2027-03-05",
+        "2027-03-15"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-09-26-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen in vier Bereichen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen in",
+            "vier Bereichen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Klausurtechnik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 320 BGB: Schon das Bestehen der Einrede schließt den Verzug aus – im Prozess erheben.",
+            "Serienmangel: Ist jede Nacherfüllung unmöglich, Rücktritt ohne Frist (§ 326 Abs. 5 BGB).",
+            "Zugang (§ 130 BGB): Möglichkeit der Kenntnisnahme genügt – gelesen werden muss nicht.",
+            "Sicherungsgrundschuld: Forderung, Grundschuld und Sicherungsvertrag trennen.",
+            "ZV: Zustellung darf zeitgleich erfolgen; Rechtsbehelf nach Angriffsziel (§§ 766, 767, 771, 793)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Objektive Zurechnung: missbilligte Gefahr geschaffen und im Erfolg realisiert.",
+            "Sprungrevision: nach dem BGH ohne Annahme statthaft – dafür nur Rechtsfehler.",
+            "§ 28 Abs. 1 StGB: Anstifter ohne Vermögensbetreuungspflicht wird milder bestraft.",
+            "Raub oder § 252 StGB: Ist die Wegnahme schon vollendet?",
+            "Abstrakter Anklagesatz: Der Versuch gehört schon hinein – „versucht zu haben“."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Nachbarklage: Nur die Verletzung drittschützender Normen trägt.",
+            "Nebenbestimmung: Anfechtungsklage, Teilbarkeit in der Begründetheit.",
+            "Sozialstaatsprinzip: Gestaltungsauftrag, kein Verbot, Leistungen zu kürzen.",
+            "Schutzpflichten: Untermaßverbot statt Eingriffsschema.",
+            "Nachbar-Eilantrag: §§ 80a Abs. 3, 80 Abs. 5 VwGO – § 123 VwGO ist gesperrt."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Prozessurteil trägt nur die Unzulässigkeit, der Rest kommt ins Hilfsgutachten.",
+            "Kopfsache: In der Lerngruppe selbst in ganzen Sätzen erklären statt mitzunicken."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Kannst du erklären, warum § 320 BGB ohne Erhebung den Verzug hindert?",
+            "Kannst du Raub und räuberischen Diebstahl an einem Satz abgrenzen?",
+            "Kannst du sagen, wann der Nachbar § 80a VwGO statt § 123 VwGO braucht?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht an Einreden und Rechtsfolgen festigen",
+            "Strafrecht an Abgrenzungen wiederholen",
+            "Öffentliches Recht als Klage- und Antragsketten",
+            "Klausurtechnik & Kopfsache als Routine"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen in vier Bereichen – Zivilrecht, Strafrecht, Öffentliches Recht sowie Klausurtechnik & Kopfsache. Geh pro Bereich nur die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst, und mach am Ende den 30-Sekunden-Selbsttest. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Klausurtechnik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Die Themen der Woche, sortiert in vier Lernbereiche zum schnellen Wiederholen.",
+        "handlung": "{A} points with a stick at four separate crates on a cart while {B} loads the last small bundle into the fourth crate.",
+        "hinweisRegie": "Place the note in the free space above the four crates, slightly tilted toward the crate being filled, so all crates and both faces stay visible.",
+        "alternative": "{B} sorts glowing crystals into four distinct baskets while {A} checks each basket with a raised pointer."
+      },
+      "bildSzene": "four crates loaded on cart",
+      "bildSzeneAlt": "crystals sorted into four baskets",
+      "quellen": [
+        "§ 320 BGB",
+        "§ 326 Abs. 5 BGB",
+        "§ 130 BGB",
+        "§ 1191 BGB",
+        "§§ 750, 766, 767, 771, 793 ZPO",
+        "§ 28 StGB",
+        "§ 252 StGB",
+        "§ 335 StPO",
+        "§ 200 StPO",
+        "§ 36 VwVfG",
+        "§ 80a VwGO",
+        "Art. 20 Abs. 1 GG",
+        "Art. 2 Abs. 2 GG",
+        "Themenpool: methodik-903",
+        "Themenpool: mindset-5"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:46.360Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-059",
+      "slug": "2027-09-26-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Versuch in fünf Schritten: Wo das Wahndelikt scheitert",
+          "titelZeilen": [
+            "Versuch in fünf",
+            "Schritten: Wo das",
+            "Wahndelikt scheitert"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Tatsache oder Recht?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Warum das Schema hilft",
+          "text": "Untauglicher Versuch und Wahndelikt sehen gleich aus: Der Täter glaubt, sich strafbar zu machen, und liegt falsch. Entscheidend ist, worüber er irrt – und das zeigt dir das Versuchsschema an einer festen Stelle."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema (1/2)",
+          "schritte": [
+            {
+              "titel": "0. Vorprüfung",
+              "text": "Tat nicht vollendet; Versuch strafbar – Verbrechen oder ausdrücklich angeordnet (§ 23 Abs. 1 StGB, § 12 StGB)."
+            },
+            {
+              "titel": "1. Tatentschluss",
+              "text": "Vorsatz auf alle Merkmale eines existierenden Tatbestands. Hier scheitert das Wahndelikt."
+            },
+            {
+              "titel": "2. Unmittelbares Ansetzen",
+              "text": "Nach der Vorstellung des Täters setzt er unmittelbar zur Verwirklichung an (§ 22 StGB)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema (2/2)",
+          "schritte": [
+            {
+              "titel": "3. Rechtswidrigkeit und Schuld",
+              "text": "Wie beim vollendeten Delikt."
+            },
+            {
+              "titel": "4. Rücktritt",
+              "text": "Persönlicher Strafaufhebungsgrund nach § 24 StGB – auch beim untauglichen Versuch möglich."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Untauglicher Versuch oder Wahndelikt?",
+          "links": {
+            "titel": "Untauglicher Versuch",
+            "punkte": [
+              "Irrtum über Tatsachen",
+              "Täter hält Zucker für Gift",
+              "Strafbar; grober Unverstand: § 23 III"
+            ]
+          },
+          "rechts": {
+            "titel": "Wahndelikt",
+            "punkte": [
+              "Irrtum über das Recht",
+              "Täter hält Erlaubtes für verboten",
+              "Straflos – es fehlt ein Tatbestand"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Schwierig ist der umgekehrte Subsumtionsirrtum: Der Täter kennt die Tatsachen, ordnet sie aber rechtlich zu seinem Nachteil falsch ein. Das behandelt die h.M. grundsätzlich als Wahndelikt; bei normativen Merkmalen ist die Abgrenzung umstritten."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Irrtum über Tatsachen: untauglicher Versuch, strafbar. Irrtum über das Recht: Wahndelikt, straflos. Verortet im Tatentschluss."
+        },
+        {
+          "art": "cta",
+          "titel": "Versuch oder Wahndelikt?",
+          "punkte": [
+            "Worüber irrt der Täter?",
+            "Tatsachen: Versuch weiterprüfen",
+            "Recht: Wahndelikt, straflos"
+          ],
+          "icons": [
+            "lupe",
+            "zielscheibe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Versuch in fünf Schritten – und das Wahndelikt scheitert schon am Tatentschluss. Irrt der Täter über Tatsachen, liegt ein strafbarer untauglicher Versuch vor (§ 23 Abs. 3 StGB nur bei grobem Unverstand). Irrt er über das Recht und hält Erlaubtes für verboten, ist das ein strafloses Wahndelikt. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#versuch",
+        "#22stgb",
+        "#wahndelikt",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Versuchsschema: Wahndelikt am Tatentschluss",
+      "coverText": "Tatsache oder Recht?",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Ob strafbarer untauglicher Versuch oder strafloses Wahndelikt, entscheidet der Gegenstand des Irrtums.",
+        "handlung": "{B} proudly pours white powder from a sugar jar into a cup, while {A} points with a stick at a second, empty rule board frame that holds no rule at all.",
+        "hinweisRegie": "Place the note in the free space between the sugar jar and the empty frame, slightly tilted toward the frame, keeping the cup and both faces fully visible.",
+        "alternative": "{A} tries to unlock a door with the wrong key, while {B} stands in front of a door that has no lock at all."
+      },
+      "bildSzene": "sugar jar beside empty frame",
+      "bildSzeneAlt": "wrong key versus lockless door",
+      "quellen": [
+        "§ 12 StGB",
+        "§ 22 StGB",
+        "§ 23 StGB",
+        "§ 24 StGB",
+        "Themenpool: strafat-059"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-pruefschritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:46.361Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-604",
+      "slug": "2027-09-26-b3",
+      "titelZeilen": [
+        "Zwei Drittel im",
+        "Bundestag – reicht",
+        "das immer?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zwei Drittel im Bundestag – reicht das immer?",
+          "unter": "Verfassungsänderung · Art. 79 GG",
+          "text": "Art. 79 GG stellt drei Hürden auf – die letzte überwindet keine Mehrheit.",
+          "norm": "Art. 79 GG",
+          "icon": "gebaeude",
+          "sprecher": "Zwei Drittel stimmen zu, trotzdem ist die Änderung verfassungswidrig. Wie geht das? Artikel 79 des Grundgesetzes stellt drei Hürden auf, und die letzte kann keine Mehrheit überwinden.",
+          "marken": [
+            "drei Hürden",
+            "Art. 79 GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Textänderung",
+          "text": "Nur ein Gesetz, das den Wortlaut des GG ausdrücklich ändert oder ergänzt.",
+          "norm": "Art. 79 Abs. 1 S. 1 GG",
+          "sprecher": "Hürde eins: das Textänderungsgebot. Das Grundgesetz kann nur durch ein Gesetz geändert werden, das seinen Wortlaut ausdrücklich ändert oder ergänzt. Eine stille Verfassungsänderung durch einfaches Gesetz gibt es nicht.",
+          "marken": [
+            "Wortlaut ändern"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Doppelte Zweidrittelmehrheit",
+          "text": "Zwei Drittel der Mitglieder des Bundestags und der Stimmen des Bundesrats.",
+          "norm": "Art. 79 Abs. 2 GG",
+          "sprecher": "Hürde zwei: die Mehrheit. Nötig sind zwei Drittel der Mitglieder des Bundestages, nicht nur der Anwesenden, und zwei Drittel der Stimmen des Bundesrates.",
+          "marken": [
+            "2/3 der Mitglieder"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ewigkeitsklausel",
+          "text": "Unantastbar: Gliederung in Länder, ihre Mitwirkung, Grundsätze der Art. 1 und 20 GG.",
+          "norm": "Art. 79 Abs. 3 GG",
+          "sprecher": "Hürde drei: die Ewigkeitsklausel. Unzulässig ist eine Änderung, die die Gliederung des Bundes in Länder, die grundsätzliche Mitwirkung der Länder bei der Gesetzgebung oder die Grundsätze der Artikel 1 und 20 berührt.",
+          "marken": [
+            "Ewigkeitsklausel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Der Maßstab",
+          "text": "Geschützt sind die Grundsätze – nicht jede einzelne Ausprägung.",
+          "norm": "Art. 79 Abs. 3 GG",
+          "sprecher": "Schritt vier: der Maßstab. Geschützt sind die Grundsätze, nicht jede einzelne Ausprägung. Das Bundesverfassungsgericht legt die Klausel deshalb eng aus. Änderungen sind möglich, solange der Kern gewahrt bleibt.",
+          "marken": [
+            "nur der Kern"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Folge",
+          "text": "Verstößt eine Änderung gegen Abs. 3, ist sie verfassungswidriges Verfassungsrecht.",
+          "norm": "Art. 79 Abs. 3 GG",
+          "sprecher": "Und die Folge? Eine Verfassungsänderung, die gegen die Ewigkeitsklausel verstößt, ist selbst verfassungswidrig. Das Bundesverfassungsgericht kann sie am Maßstab des Artikels 79 Absatz 3 überprüfen.",
+          "marken": [
+            "verfassungswidrig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Wortlaut, doppelte Zweidrittelmehrheit, Ewigkeitsklausel – in dieser Reihenfolge.",
+          "norm": "Art. 79 GG",
+          "sprecher": "Merke: Prüfe eine Verfassungsänderung in drei Schritten. Wortlaut geändert? Zwei Drittel in Bundestag und Bundesrat? Und bleiben die Grundsätze des Artikels 79 Absatz 3 unberührt?",
+          "marken": [
+            "drei Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Staatsrechtsklausur speichern",
+          "text": "Speichern für die nächste Staatsorganisationsklausur.",
+          "sprecher": "Speicher dir das für deine nächste Klausur im Staatsorganisationsrecht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Zwei Drittel im Bundestag – reicht das immer? Nein. Art. 79 GG verlangt eine ausdrückliche Textänderung, zwei Drittel der Mitglieder des Bundestages und der Stimmen des Bundesrates – und die Ewigkeitsklausel des Abs. 3 kann keine Mehrheit überwinden. Geschützt sind die Grundsätze, nicht jede Ausprägung. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#grundgesetz",
+        "#art79gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 79 GG: drei Hürden der Verfassungsänderung",
+      "coverText": "Die dritte Hürde ist unüberwindbar",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Auch mit breiter Mehrheit lässt sich der Kern der Verfassung nicht ändern.",
+        "handlung": "{B} lifts a heavy stone slab over two low hurdles, then stops in front of a third wall that has no gap, while {A} watches with folded arms.",
+        "hinweisRegie": "Place the note in the free space above the third wall, slightly tilted toward the stopped slab, keeping all three barriers and both faces fully visible.",
+        "alternative": "{A} tries to rewrite a carved stone tablet while its central inscription glows and resists the chisel held by {B}."
+      },
+      "bildSzene": "slab stopped at third wall",
+      "bildSzeneAlt": "chisel resisted by glowing inscription",
+      "quellen": [
+        "Art. 79 Abs. 1, 2, 3 GG",
+        "Art. 1 GG",
+        "Art. 20 GG",
+        "Themenpool: staat-604"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "verfassungsfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:46.362Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-279",
+      "ueberzeile": "Prüfungsfrage Zivilprozessrecht",
+      "titel": "B behauptet, K schulde ihm 5.000 €, klagt aber nicht. Kann K feststellen lassen, dass nichts geschuldet ist?",
+      "optionen": [
+        "Nein – K muss abwarten, bis B klagt",
+        "Nein – negative Feststellungsklagen sind unzulässig",
+        "Ja – B berühmt sich eines Anspruchs"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 256 Abs. 1 ZPO",
+        "Themenpool: zpo-279"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:46.362Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-279",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – wer sich eines Anspruchs berühmt, begründet das Feststellungsinteresse",
+      "text": "Die negative Feststellungsklage ist zulässig, wenn der Beklagte sich eines Anspruchs gegen den Kläger berühmt (§ 256 Abs. 1 ZPO). Erhebt B später Leistungsklage, entfällt das Feststellungsinteresse grundsätzlich, sobald B diese nicht mehr einseitig zurücknehmen kann. K sollte dann für erledigt erklären.",
+      "norm": "§ 256 Abs. 1 ZPO",
+      "quellen": [
+        "§ 256 Abs. 1 ZPO",
+        "§ 269 Abs. 1 ZPO",
+        "Themenpool: zpo-279"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:46.362Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – K muss abwarten, bis B klagt",
+        "Nein – negative Feststellungsklagen sind unzulässig",
+        "Ja – B berühmt sich eines Anspruchs"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-219",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 812 Abs. 1 S. 1 Alt. 2 BGB: Wer fremde Schulden tilgt, hält sich beim befreiten Schuldner schadlos",
+      "text": "Zahlt D bewusst die Schuld des S an G (§ 267 BGB), erlischt die Forderung. S ist von seiner Verbindlichkeit befreit – ohne Leistung des D an ihn. Hat D keinen vorrangigen Anspruch, etwa aus Auftrag oder berechtigter GoA (§§ 670, 683 BGB), kondiziert er die Befreiung bei S: Rückgriffskondiktion.",
+      "norm": "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+      "quellen": [
+        "§ 812 BGB",
+        "§ 267 BGB",
+        "§ 670 BGB",
+        "§ 683 BGB",
+        "Themenpool: bereich-219"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:46.362Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-924",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Tötungsvorsatz nicht beweisbar: keine Wahlfeststellung, sondern in dubio pro reo",
+      "falsch": "Steht nicht fest, ob A mit Tötungsvorsatz oder nur mit Körperverletzungsvorsatz zugeschlagen hat, wird wahldeutig verurteilt.",
+      "richtigText": "Totschlag und Körperverletzung stehen im Stufenverhältnis: Der Tötungsvorsatz schließt den Verletzungsvorsatz ein. Dann gilt in dubio pro reo – verurteilt wird eindeutig aus dem milderen Delikt, bei Todesfolge etwa nach § 227 StGB. Wahlfeststellung ist nur zwischen Taten ohne ein solches Stufenverhältnis zu erwägen.",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 223 StGB",
+        "§ 227 StGB",
+        "§ 261 StPO",
+        "Themenpool: strafat-924"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:46.362Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-285",
+      "ueberzeile": "Klausurtipp Zivilprozessrecht",
+      "titel": "Verjährungseinrede erst im Prozess? Denk an die Erledigungserklärung",
+      "text": "Erhebt B die Einrede der Verjährung erst im Rechtsstreit, ist nach dem BGH gerade die Erhebung das erledigende Ereignis – auch wenn die Frist schon vor Klageerhebung abgelaufen war. K kann für erledigt erklären statt die Abweisung hinzunehmen. Stimmt B zu, entscheidet das Gericht über die Kosten nach § 91a ZPO.",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 214 Abs. 1 BGB",
+        "Themenpool: zpo-285"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:46.362Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-874",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "Wer darf Revision einlegen? Vier Berechtigte – und ihre Grenzen",
+      "text": "Der Angeklagte braucht zudem eine Beschwer durch den Tenor – eine belastende Begründung allein genügt nicht.",
+      "punkte": [
+        "Angeklagter: nur bei eigener Beschwer",
+        "Staatsanwaltschaft: auch zugunsten (§ 296 Abs. 2 StPO)",
+        "Verteidiger: nicht gegen den ausdrücklichen Willen des Angeklagten (§ 297 StPO)",
+        "Nebenkläger: nur eingeschränkt (§ 400 StPO)"
+      ],
+      "quellen": [
+        "§ 296 StPO",
+        "§ 297 StPO",
+        "§ 400 StPO",
+        "Themenpool: revision-874"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:46.362Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

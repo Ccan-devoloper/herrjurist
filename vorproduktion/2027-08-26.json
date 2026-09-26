@@ -1,0 +1,881 @@
+{
+  "datum": "2027-08-26",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "vwgo-403",
+        "themaTitel": "Wie prüft man die Klagebefugnis?",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "schuldbt-462",
+        "themaTitel": "Gefahrübergang als Schaltstelle der Mängelrechte",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-073",
+        "themaTitel": "Wann ist Raub vollendet und wie verhält er sich zur räuberischen Erpressung?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "grundr-609"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "grundr-609"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "schuldbt-124"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "streitstand",
+        "themaId": "europa-934"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "merksatz",
+        "themaId": "vwgo-666"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "begriff",
+        "themaId": "verwalt-646"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "vwgo-403",
+      "poolTitel": "Wie prüft man die Klagebefugnis?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 Abs. 2 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-05"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "schuldbt-462",
+      "poolTitel": "Gefahrübergang als Schaltstelle der Mängelrechte",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 446, 447 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-27",
+        "2027-02-06",
+        "2027-02-06"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-073",
+      "poolTitel": "Wann ist Raub vollendet und wie verhält er sich zur räuberischen Erpressung?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 249 StGB",
+        "§ 253 StGB",
+        "§ 255 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-25",
+        "2027-06-09",
+        "2027-06-09"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-609",
+      "poolTitel": "Allgemeine Handlungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-11",
+        "2027-06-02",
+        "2027-06-02"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-609",
+      "poolTitel": "Allgemeine Handlungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-11",
+        "2027-06-02",
+        "2027-06-02"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-124",
+      "poolTitel": "Wie grenzt man Miete und Leihe ab?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 535 BGB",
+        "§ 598 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-06"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "europa-934",
+      "poolTitel": "Rückforderung unionsrechtswidriger Beihilfen: § 48 VwVfG unter dem Effektivitätsgebot",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 48 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-21",
+        "2027-04-25",
+        "2027-06-24"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "vwgo-666",
+      "poolTitel": "Anordnung der sofortigen Vollziehung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 II Nr. 4, III VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2027-03-12",
+        "2027-03-29"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "verwalt-646",
+      "poolTitel": "Zusage und Zusicherung",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 38 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-08",
+        "2027-01-08",
+        "2027-02-25"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-403",
+      "slug": "2027-08-26-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Klagebefugnis: vier Kläger, vier Begründungen",
+          "titelZeilen": [
+            "Klagebefugnis:",
+            "vier Kläger, vier",
+            "Begründungen"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Möglichkeit genügt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Maßstab",
+          "text": "§ 42 Abs. 2 VwGO: Der Kläger muss geltend machen, in eigenen Rechten verletzt zu sein. Nach der Möglichkeitstheorie genügt, dass eine Verletzung nicht offensichtlich und eindeutig nach jeder Betrachtungsweise ausgeschlossen ist. Wie du das begründest, hängt davon ab, wer klagt."
+        },
+        {
+          "art": "text",
+          "titel": "1. Der Adressat",
+          "punkte": [
+            "Belastender Verwaltungsakt gegen ihn: Adressatentheorie.",
+            "Jedenfalls Art. 2 Abs. 1 GG ist möglicherweise verletzt – kurz festhalten, fertig."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "2. Der Dritte",
+          "punkte": [
+            "Nachbar oder Konkurrent: Die Adressatentheorie hilft nicht.",
+            "Schutznormtheorie: Schützt die möglicherweise verletzte Norm gerade auch ihn?",
+            "Im Baurecht etwa das Gebot der Rücksichtnahme oder Abstandsflächenrecht (je nach Landesrecht)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "3. Der Verpflichtungskläger",
+          "punkte": [
+            "Möglicher Anspruch auf den begehrten VA – oder auf ermessensfehlerfreie Entscheidung.",
+            "Er ergibt sich aus der Anspruchsnorm, notfalls aus Grundrechten."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "4. Gemeinde und Verband",
+          "punkte": [
+            "Gemeinde: Selbstverwaltungsrecht aus Art. 28 Abs. 2 GG, etwa die Planungshoheit.",
+            "Umweltverbände: Klagerecht ohne eigene Rechtsverletzung nach dem UmwRG – „gesetzlich anders bestimmt“."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst fragen, wer klagt: Adressat, Dritter, Anspruchsteller oder Gemeinde. Daraus folgt, wie du die mögliche Rechtsverletzung begründest."
+        },
+        {
+          "art": "cta",
+          "titel": "Klagebefugnis kompakt",
+          "punkte": [
+            "Adressat: Adressatentheorie",
+            "Dritter: Schutznormtheorie",
+            "Verpflichtung: möglicher Anspruch",
+            "Gemeinde, Verband: Sonderregeln"
+          ],
+          "icons": [
+            "person",
+            "haeuser",
+            "dokument",
+            "gebaeude"
+          ]
+        }
+      ],
+      "caption": "Klagebefugnis nach § 42 Abs. 2 VwGO: vier typische Kläger, vier Begründungen. Beim Adressaten eines belastenden Verwaltungsakts genügt die Adressatentheorie, beim Dritten entscheidet die Schutznormtheorie, beim Verpflichtungskläger der mögliche Anspruch. Gemeinden stützen sich auf Art. 28 Abs. 2 GG, Umweltverbände auf gesetzliche Sonderregeln. Speichern für die Zulässigkeitsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#klagebefugnis",
+        "#verwaltungsprozessrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klagebefugnis: vier Kläger im Überblick",
+      "coverText": "Möglichkeit genügt",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Die Klagebefugnis wird je nach Klägertyp anders begründet.",
+        "handlung": "{A} hovers in front of four differently shaped doors and hands {B} one key that fits only the door she is standing at.",
+        "hinweisRegie": "Place the note in the free space between the four doors and the chosen key, slightly tilted toward the matching door, so the idea of one key per door is clear without covering faces.",
+        "alternative": "{B} sorts four visitors into four short queues, each ending at a small, differently shaped counter that {A} attends."
+      },
+      "bildSzene": "four doors, one matching key",
+      "bildSzeneAlt": "four queues at four counters",
+      "quellen": [
+        "§ 42 Abs. 2 VwGO",
+        "Art. 2 Abs. 1 GG",
+        "Art. 28 Abs. 2 GG",
+        "UmwRG",
+        "Themenpool: vwgo-403"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-klaegertypen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.308Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-462",
+      "slug": "2027-08-26-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nicht neu liefern heißt nicht: Kaufpreis behalten",
+          "titelZeilen": [
+            "Nicht neu liefern",
+            "heißt nicht:",
+            "Kaufpreis behalten"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Leistungs- vs. Preisgefahr",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "V verkauft K eine bestimmte gebrauchte Maschine. Vor der Übergabe zerstört ein Blitzschlag sie in der Halle des V – niemand trifft ein Verschulden. Muss V eine andere Maschine liefern? Und muss K trotzdem zahlen?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Gefahren, zwei Fragen",
+          "links": {
+            "titel": "Leistungsgefahr",
+            "punkte": [
+              "Frage: Muss der Schuldner noch (einmal) leisten?",
+              "Stückschuld zerstört: frei nach § 275 Abs. 1 BGB.",
+              "Gattungsschuld: erst ab Konkretisierung (§ 243 II BGB)."
+            ]
+          },
+          "rechts": {
+            "titel": "Preisgefahr",
+            "punkte": [
+              "Frage: Muss der Gläubiger trotzdem zahlen?",
+              "Grundsatz: Gegenleistung entfällt (§ 326 I BGB).",
+              "Ausnahmen etwa §§ 446, 447, 326 II BGB."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "V wird frei: Die Maschine ist Stückschuld, die Leistung unmöglich (§ 275 Abs. 1 BGB). Die Preisgefahr trägt aber noch V: Vor der Übergabe ist sie nicht nach § 446 BGB übergegangen. Also entfällt der Anspruch auf den Kaufpreis (§ 326 Abs. 1 S. 1 BGB) – K muss nicht zahlen."
+        },
+        {
+          "art": "text",
+          "titel": "Wann der Käufer trotzdem zahlt",
+          "punkte": [
+            "Nach Übergabe (§ 446 S. 1 BGB) – danach trifft ihn der zufällige Untergang.",
+            "Bei Annahmeverzug des Käufers (§ 446 S. 3, § 326 Abs. 2 BGB).",
+            "Beim Versendungskauf ab Übergabe an die Transportperson (§ 447 BGB) – beim Verbraucher nur eingeschränkt."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Leistungsgefahr: Muss noch geliefert werden? Dann die Preisgefahr: Muss trotzdem gezahlt werden? Zwei Fragen, zwei Normgruppen."
+        },
+        {
+          "art": "cta",
+          "titel": "Gefahr sauber trennen",
+          "punkte": [
+            "§ 275: Muss V noch leisten?",
+            "§ 326 I: Entfällt der Preis?",
+            "§§ 446, 447: Ausnahme greift?"
+          ],
+          "icons": [
+            "paket",
+            "muenzen",
+            "lkw"
+          ]
+        }
+      ],
+      "caption": "Nicht neu liefern müssen heißt nicht, den Kaufpreis behalten zu dürfen. Die Leistungsgefahr fragt, ob der Verkäufer noch leisten muss (§ 275 BGB, bei Gattungsschulden § 243 Abs. 2 BGB). Die Preisgefahr fragt, ob der Käufer trotzdem zahlen muss – grundsätzlich nicht (§ 326 Abs. 1 BGB), ausnahmsweise nach §§ 446, 447 oder § 326 Abs. 2 BGB. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#gefahrübergang",
+        "#446bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Leistungsgefahr und Preisgefahr trennen",
+      "coverText": "Leistungs- vs. Preisgefahr",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Ob neu geliefert werden muss und ob trotzdem gezahlt werden muss, sind zwei getrennte Fragen.",
+        "handlung": "{A} stands beside a machine struck and blackened by lightning, while {B} holds out his hand for a coin purse that {A} keeps firmly closed.",
+        "hinweisRegie": "Place the note in the free space between the blackened machine and the closed coin purse, slightly tilted toward the purse, so the separate payment question stands out without covering hands or faces.",
+        "alternative": "{B} balances two separate small scales on a workbench, one holding a broken gear and the other holding coins."
+      },
+      "bildSzene": "lightning-struck machine, closed purse",
+      "bildSzeneAlt": "two small scales, gear and coins",
+      "quellen": [
+        "§ 275 Abs. 1 BGB",
+        "§ 326 Abs. 1, 2 BGB",
+        "§ 243 Abs. 2 BGB",
+        "§§ 446, 447, 475 Abs. 2 BGB",
+        "Themenpool: schuldbt-462"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.309Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-073",
+      "slug": "2027-08-26-b3",
+      "titelZeilen": [
+        "Raub vollendet –",
+        "aber noch nicht",
+        "beendet"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Raub vollendet – aber noch nicht beendet",
+          "unter": "Raub · § 249 StGB",
+          "text": "Vollendung mit der Wegnahme, Beendigung erst mit gesicherter Beute.",
+          "norm": "§ 249 StGB",
+          "icon": "geldbeutel",
+          "sprecher": "Vollendet heißt beim Raub noch lange nicht beendet. Genau in dieser Lücke stecken mehrere Klausurprobleme.",
+          "marken": [
+            "vollendet",
+            "nicht beendet"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vollendung",
+          "text": "Mit vollendeter Wegnahme: neuer Gewahrsam begründet.",
+          "norm": "§ 249 Abs. 1 StGB",
+          "sprecher": "Schritt eins: Vollendet ist der Raub, sobald die Wegnahme vollendet ist, also neuer Gewahrsam begründet ist. Bei kleinen Sachen reicht oft schon das Einstecken.",
+          "marken": [
+            "Wegnahme"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Beendigung",
+          "text": "Erst wenn die Beute gesichert ist.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Beendet ist die Tat erst, wenn der Täter die Beute gesichert hat, etwa in seinem Versteck. Dazwischen liegt die Beendigungsphase.",
+          "marken": [
+            "Beute gesichert"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Hilfe in der Beendigungsphase",
+          "text": "Rspr.: sukzessive Beihilfe möglich. H.L.: nur Begünstigung.",
+          "norm": "§ 27 StGB · § 257 StGB",
+          "sprecher": "Schritt drei: Hilft jemand erst nach der Vollendung beim Abtransport der Beute? Die Rechtsprechung lässt Beihilfe bis zur Beendigung zu. Die herrschende Lehre sieht darin nur noch eine Begünstigung.",
+          "marken": [
+            "Streit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verjährung",
+          "text": "Die Frist beginnt erst mit der Beendigung.",
+          "norm": "§ 78a StGB",
+          "sprecher": "Schritt vier: Auch die Verjährung beginnt nach Paragraf 78a StGB erst, sobald die Tat beendet ist.",
+          "marken": [
+            "§ 78a StGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und die räuberische Erpressung?",
+          "text": "Rspr.: Raub als Spezialfall. Lehre: Wegnahme und Verfügung schließen sich aus.",
+          "norm": "§§ 253, 255 StGB",
+          "sprecher": "Und das Verhältnis zur räuberischen Erpressung? Für die Rechtsprechung ist der Raub ein spezieller Fall, der sie verdrängt. Die Lehre verlangt für die Erpressung eine Vermögensverfügung und trennt beide Delikte strikt.",
+          "marken": [
+            "Spezialität?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Vollendung: Wegnahme. Beendigung: Beute gesichert. Dazwischen: Beihilfe-Streit.",
+          "norm": null,
+          "sprecher": "Merke: Vollendet mit der Wegnahme, beendet mit der gesicherten Beute. Wer dazwischen hilft, landet mitten im Streit um die sukzessive Beihilfe.",
+          "marken": [
+            "zwei Zeitpunkte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Raubdelikte speichern",
+          "text": "Speichern für die nächste Klausur zu den Raubdelikten.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur zu den Raubdelikten.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Raub vollendet – aber noch nicht beendet. Vollendet ist § 249 StGB mit der Wegnahme, beendet erst, wenn die Beute gesichert ist. In dieser Phase entscheidet sich der Streit um die sukzessive Beihilfe (Rspr. ja, h.L. nur § 257 StGB), und erst mit der Beendigung beginnt die Verjährung (§ 78a StGB). Zur räuberischen Erpressung: Rspr. Spezialität, Lehre Exklusivität.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#raub",
+        "#249stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Raub: Vollendung und Beendigung",
+      "coverText": "Beute gesichert? Erst dann beendet",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Zwischen der Wegnahme und der gesicherten Beute liegt eine eigene Phase mit eigenen Problemen.",
+        "handlung": "{B} runs off with a small sack already in his hands, while {A} stands halfway along the path pointing at a distant hideout door that he has not reached yet.",
+        "hinweisRegie": "Place the note in the open space on the path between the running figure and the distant hideout door, slightly tilted toward the door, so the unfinished stretch is marked without covering faces.",
+        "alternative": "{A} marks two flags on a track, one at the grab point and one at a safe house, while {B} is caught between them."
+      },
+      "bildSzene": "runner with sack, distant hideout",
+      "bildSzeneAlt": "two flags on a track",
+      "quellen": [
+        "§ 249 StGB",
+        "§§ 27, 257 StGB",
+        "§ 78a StGB",
+        "§§ 253, 255 StGB",
+        "Themenpool: strafbt-073"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "vollendet-nicht-beendet",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.310Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-609",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Der Deutsche D will ins Ausland reisen, der Pass wird ihm verweigert. Welches Grundrecht schützt die Ausreise?",
+      "optionen": [
+        "Art. 11 GG – die Freizügigkeit im Bundesgebiet",
+        "Kein Grundrecht – die Ausreise ist nicht geschützt",
+        "Art. 2 Abs. 1 GG – die allgemeine Handlungsfreiheit"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 11 GG",
+        "BVerfGE 6, 32 (Elfes)",
+        "Themenpool: grundr-609"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.311Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-609",
+      "ueberzeile": "Auflösung",
+      "titel": "Art. 2 Abs. 1 GG – Art. 11 GG endet an der Grenze",
+      "text": "Art. 11 GG schützt die Freizügigkeit „im ganzen Bundesgebiet“, also die Bewegung innerhalb Deutschlands. Die Ausreise fällt nach dem BVerfG (Elfes) unter die allgemeine Handlungsfreiheit. Beschränken kann sie jede verfassungsmäßige Norm – etwa passrechtliche Versagungsgründe, die verhältnismäßig angewandt werden müssen.",
+      "norm": "Art. 2 Abs. 1 GG · Art. 11 GG",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 11 GG",
+        "BVerfGE 6, 32 (Elfes)",
+        "Themenpool: grundr-609"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.311Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Art. 11 GG – die Freizügigkeit im Bundesgebiet",
+        "Kein Grundrecht – die Ausreise ist nicht geschützt",
+        "Art. 2 Abs. 1 GG – die allgemeine Handlungsfreiheit"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-124",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§§ 599, 600 BGB: Der Verleiher haftet milder – für Mängel nur bei Arglist",
+      "text": "Wer unentgeltlich verleiht, haftet nur für Vorsatz und grobe Fahrlässigkeit (§ 599 BGB), für Mängel der Sache nur, wenn er sie arglistig verschweigt (§ 600 BGB). Der Vermieter haftet für Mängel bei Vertragsschluss sogar ohne Verschulden (§ 536a Abs. 1 BGB). Miete oder Leihe entscheidet also über den Haftungsmaßstab.",
+      "norm": "§§ 599, 600 BGB",
+      "quellen": [
+        "§ 599 BGB",
+        "§ 600 BGB",
+        "§ 536a Abs. 1 BGB",
+        "Themenpool: schuldbt-124"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.311Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-934",
+      "ueberzeile": "Streitstand Europarecht",
+      "titel": "Unionsrechtswidrige Beihilfe: Ist § 48 Abs. 4 VwVfG nichtig – oder nur unanwendbar?",
+      "norm": "§ 48 Abs. 4 VwVfG · Art. 108 Abs. 3 AEUV",
+      "optionen": [
+        "EuGH/h.M. (Anwendungsvorrang): Die Frist bleibt gültig und tritt nur im Konfliktfall zurück.",
+        "Mindermeinung (Geltungsvorrang): Die kollidierende nationale Norm ist nichtig."
+      ],
+      "text": "Klausur: Die Behörde wendet die Jahresfrist bei der Rückforderung unionsrechtswidriger Beihilfen nicht an – in allen anderen Rücknahmefällen gilt sie weiter.",
+      "quellen": [
+        "§ 48 Abs. 4 VwVfG",
+        "Art. 107, 108 Abs. 3 AEUV",
+        "Themenpool: europa-934"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.311Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-666",
+      "ueberzeile": "Merksatz VwGO",
+      "titel": "§ 80 Abs. 3 VwGO prüft die Form – nicht, ob die Begründung überzeugt",
+      "text": "Nötig ist eine schriftliche, einzelfallbezogene Begründung des Vollzugsinteresses; Floskeln genügen nicht. Ob sie inhaltlich trägt, klärt die Abwägung nach § 80 Abs. 5 VwGO.",
+      "norm": "§ 80 Abs. 3 S. 1 VwGO",
+      "quellen": [
+        "§ 80 Abs. 3 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "Themenpool: vwgo-666"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.311Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-646",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Zusicherung: Bindung nur, solange Sach- und Rechtslage bleiben",
+      "text": "Zusicherung (§ 38 Abs. 1 S. 1 VwVfG): die schriftliche Zusage der zuständigen Behörde, einen bestimmten Verwaltungsakt später zu erlassen oder zu unterlassen. Ändert sich danach die Sach- oder Rechtslage so, dass die Behörde sie bei Kenntnis nicht gegeben hätte oder nicht hätte geben dürfen, ist sie nicht mehr gebunden (§ 38 Abs. 3 VwVfG).",
+      "norm": "§ 38 VwVfG",
+      "quellen": [
+        "§ 38 Abs. 1, 3 VwVfG",
+        "Themenpool: verwalt-646"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.311Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

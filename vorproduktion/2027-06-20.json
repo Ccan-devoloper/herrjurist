@@ -1,0 +1,919 @@
+{
+  "datum": "2027-06-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "verwalt-386",
+        "themaTitel": "Wie funktioniert der Widerruf eines rechtmäßigen Verwaltungsakts?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "bgbat-001",
+        "themaTitel": "Was sind die Voraussetzungen und Rechtsfolgen einer wirksamen Anfechtung?",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:06",
+        "art": "frage",
+        "themaId": "anklage-800"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:06",
+        "art": "antwort",
+        "themaId": "anklage-800"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "sachen-227"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:21",
+        "art": "fehler",
+        "themaId": "zwangsv-831"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "tipp",
+        "themaId": "schuld-171"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "zahl",
+        "themaId": "anklage-856"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "verwalt-386",
+      "poolTitel": "Wie funktioniert der Widerruf eines rechtmäßigen Verwaltungsakts?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 49 VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-001",
+      "poolTitel": "Was sind die Voraussetzungen und Rechtsfolgen einer wirksamen Anfechtung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 BGB",
+        "§ 123 BGB",
+        "§ 121 BGB",
+        "§ 124 BGB",
+        "§ 142 Abs. 1 BGB",
+        "§ 143 BGB",
+        "§ 144 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-12-01",
+        "2027-03-30",
+        "2027-06-01"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-800",
+      "poolTitel": "Aktenvortrag Strafrecht",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StGB; StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2027-01-01",
+        "2027-03-17"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-800",
+      "poolTitel": "Aktenvortrag Strafrecht",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StGB; StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2027-01-01",
+        "2027-03-17"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-227",
+      "poolTitel": "Wer ist Hersteller im Sinne des § 950 BGB?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 950 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-07"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "zwangsv-831",
+      "poolTitel": "Wie erzwingt man Handlungen und Unterlassungen?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 887 ZPO",
+        "§ 888 ZPO",
+        "§ 890 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-14",
+        "2027-02-12",
+        "2027-04-17"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "schuld-171",
+      "poolTitel": "Wer trägt die Gegenleistungsgefahr bei Unmöglichkeit?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 326 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2027-02-12",
+        "2027-03-10"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "anklage-856",
+      "poolTitel": "Wie ist die Anklageschrift aufgebaut?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-16",
+        "2027-02-16",
+        "2027-04-21"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-06-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: vier Bereiche, 18 Beiträge",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "vier Bereiche,",
+            "18 Beiträge"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 325 BGB: Rücktritt und Schadensersatz nebeneinander – Letzterer nur mit Vertretenmüssen.",
+            "§ 134 BGB: Verkauf nach Ladenschluss bleibt wirksam – der Zweck des Verbots entscheidet.",
+            "§ 750 ZPO: Beim Urteil genügt die Zustellung gleichzeitig mit der Vollstreckung.",
+            "Kündigung per Messenger: formnichtig – die Frist des § 4 KSchG läuft nicht.",
+            "§ 307 BGB: Den Preis prüft er nicht, Preisnebenabreden schon."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Eingreifen Dritter: Die Kausalität bleibt, entfallen kann nur die Zurechnung.",
+            "§ 265a StGB: Für den BGH genügt unauffälliges Mitfahren.",
+            "Späte Einlassung: Aus dem Zeitpunkt dürfen keine Nachteile folgen.",
+            "§ 349 StPO: Drei Wege per Beschluss, sonst Urteil nach Hauptverhandlung.",
+            "Raub: Gewalt gegen den schutzbereiten Wachmann genügt.",
+            "§ 257c StPO: Verhandelt wird die Strafe, nie der Schuldspruch."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Störer: Verhalten, Zusatz, Zustand – Verschulden spielt keine Rolle.",
+            "Gefahrenverdacht: nach überwiegender Ansicht Gefahr – zuerst aufklären.",
+            "Dauerverwaltungsakt: maßgeblich regelmäßig die letzte mündliche Verhandlung.",
+            "Drittanfechtung: Nur Verstöße gegen Schutznormen tragen die Aufhebung.",
+            "Zulassung zum Volksfest: Eilrechtsschutz über § 123 VwGO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Hilfsgutachten: nur wenn Vermerk oder Sachverhalt es verlangen – Ergebnis halten.",
+            "Kopfsache: Nach einer schlechten Woche eine Stellschraube ändern, nicht alles."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Warum „unterbricht“ ein Dritter die Kausalität nicht?",
+            "Wann läuft die Klagefrist des § 4 KSchG gar nicht an?",
+            "Warum hilft dem Schausteller der Widerspruch nicht?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Form, Fristen, Kontrolle",
+            "Strafrecht: Zurechnung und Verfahren",
+            "Öffentliches Recht: Störer und Eilrechtsschutz",
+            "Methodik und Kopf sortieren"
+          ],
+          "icons": [
+            "vertrag",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Beiträge aus vier Bereichen. Zivilrecht von § 325 BGB bis zur Preiskontrolle, Strafrecht von der Zurechnung bis zur Verständigung, Öffentliches Recht vom Störer bis zum Eilantrag für den Volksfeststand – dazu das Hilfsgutachten und der Umgang mit einer schlechten Lernwoche. Geh die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: vier Bereiche, 18 Beiträge",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Am Wochenende werden die Themen der Woche nach Bereichen sortiert und die Lücken für die Wiederholung markiert.",
+        "handlung": "{B} unloads crystals from a cart into four labelled bins, while {A} curiously holds one crystal up to the light and sets it aside on a small 'repeat' shelf.",
+        "hinweisRegie": "Place the note in the free space above the four bins, slightly tilted toward the 'repeat' shelf, so the sorting and the self-check are connected without covering either character.",
+        "alternative": "{A} pins four colored ribbons on a board while {B} hangs a few cards under each ribbon and turns one card around."
+      },
+      "bildSzene": "crystals sorted into four bins",
+      "bildSzeneAlt": "cards pinned under four ribbons",
+      "quellen": [
+        "§ 325 BGB",
+        "§ 134 BGB",
+        "§ 750 ZPO",
+        "§ 623 BGB",
+        "§ 4 KSchG",
+        "§ 307 BGB",
+        "§ 212 StGB",
+        "§ 265a StGB",
+        "§ 136 StPO",
+        "§ 349 StPO",
+        "§ 249 StGB",
+        "§ 257c StPO",
+        "§ 113 VwGO",
+        "§ 123 VwGO",
+        "Themenpool: methodik-903",
+        "Themenpool: mindset-7"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-beitragszahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:06:25.223Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-386",
+      "slug": "2027-06-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 49 Abs. 2 VwVfG: fünf Widerrufsgründe, drei mit Entschädigung",
+          "titelZeilen": [
+            "§ 49 Abs. 2 VwVfG:",
+            "fünf Widerrufs-",
+            "gründe, drei mit",
+            "Entschädigung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Nr. 3–5 kosten Entschädigung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 49 VwVfG regelt den Widerruf rechtmäßiger Verwaltungsakte, § 48 die Rücknahme rechtswidriger. Nach h.M. lässt sich § 49 erst recht auf rechtswidrige Verwaltungsakte anwenden. Entscheidend ist die Weiche: belastend oder begünstigend? Die Länder haben inhaltsgleiche Regeln."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Ermächtigungsgrundlage",
+              "text": "§ 49 VwVfG für einen rechtmäßigen Verwaltungsakt; Gegenstück für rechtswidrige: § 48."
+            },
+            {
+              "titel": "2. Formell",
+              "text": "Zuständig ist die nach § 3 zuständige Behörde (§ 49 Abs. 5); Anhörung nach § 28 VwVfG."
+            },
+            {
+              "titel": "3. Belastender VA (Abs. 1)",
+              "text": "Widerruf ex nunc im Ermessen – außer ein VA gleichen Inhalts müsste erneut ergehen."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Begünstigender VA: Nr. 1, 2",
+              "text": "Widerruf gesetzlich zugelassen oder vorbehalten; Auflage nicht oder nicht fristgerecht erfüllt."
+            },
+            {
+              "titel": "5. Begünstigender VA: Nr. 3–5",
+              "text": "Neue Tatsachen, geänderte Rechtslage (ohne Gebrauch), jeweils mit Gefährdung des öffentlichen Interesses; schwere Nachteile fürs Gemeinwohl."
+            },
+            {
+              "titel": "6. Frist und Ermessen",
+              "text": "Ein Jahr ab Kenntnis (§ 49 Abs. 2 S. 2 i.V.m. § 48 Abs. 4); dann fehlerfreies Ermessen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Rechtsfolgen",
+          "text": "Der Widerruf wirkt grundsätzlich für die Zukunft (§ 49 Abs. 4). Bei Geld- und Sachleistungen erlaubt Abs. 3 auch den rückwirkenden Widerruf, Erstattung nach § 49a. In den Fällen des Abs. 2 Nr. 3 bis 5 schuldet die Behörde auf Antrag Entschädigung für schutzwürdiges Vertrauen (§ 49 Abs. 6)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Belastend: fast immer widerrufbar. Begünstigend: nur aus den Gründen des Abs. 2 – und bei Nr. 3 bis 5 mit Entschädigung."
+        },
+        {
+          "art": "cta",
+          "titel": "Widerruf in drei Zügen",
+          "punkte": [
+            "Belastend oder begünstigend?",
+            "Widerrufsgrund und Jahresfrist",
+            "Entschädigung nach Abs. 6?"
+          ],
+          "icons": [
+            "waage",
+            "kalender",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "§ 49 Abs. 2 VwVfG kennt fünf Gründe für den Widerruf eines rechtmäßigen begünstigenden Verwaltungsakts – und in drei davon schuldet die Behörde Entschädigung. Prüf erst, ob der Verwaltungsakt belastet oder begünstigt, dann Widerrufsgrund, Jahresfrist und Ermessen. Nach Abs. 6 entschädigt die Behörde in den Fällen der Nr. 3 bis 5 schutzwürdiges Vertrauen. Speichern für die nächste Klausur im Verwaltungsrecht AT.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#widerruf",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 49 VwVfG: Widerruf rechtmäßiger VA",
+      "coverText": "Nr. 3–5 kosten Entschädigung",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Die Behörde darf eine rechtmäßige Begünstigung nur aus festen Gründen zurücknehmen – und muss manchmal dafür zahlen.",
+        "handlung": "{A} hovers and lifts a glowing permit plaque off a workshop wall, while {B} holds out her hand and receives a small pouch of coins from its other arm.",
+        "hinweisRegie": "Place the note in the free space between the lifted plaque and the coin pouch, slightly tilted toward the pouch, so the link between revocation and compensation is clear without covering {B}'s face.",
+        "alternative": "{B} watches a gate token being withdrawn from her hand while a counter beside her dispenses a few coins."
+      },
+      "bildSzene": "permit plaque lifted, coin pouch given",
+      "bildSzeneAlt": "token withdrawn, counter dispenses coins",
+      "quellen": [
+        "§ 49 VwVfG",
+        "§ 48 VwVfG",
+        "§ 49a VwVfG",
+        "§ 28 VwVfG",
+        "Themenpool: verwalt-386"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-echte-gruende",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:44.775Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-001",
+      "slug": "2027-06-20-b3",
+      "titelZeilen": [
+        "Vertippt beim Preis –",
+        "anfechten geht, aber",
+        "nicht gratis"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vertippt beim Preis – anfechten geht, aber nicht gratis",
+          "unter": "Anfechtung · § 143 BGB",
+          "text": "Ein Erklärungsirrtum berechtigt zur Anfechtung – mit Folgen.",
+          "norm": "§ 143 BGB",
+          "icon": "rechner",
+          "sprecher": "Vertippt beim Preis? Anfechten geht, aber nicht gratis. Wer 150 statt 1.500 Euro schreibt, irrt in der Erklärung. Prüf die Anfechtung in fünf Schritten.",
+          "marken": [
+            "Tippfehler",
+            "Anfechtung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Anfechtungserklärung",
+          "text": "Gegenüber dem Anfechtungsgegner; das Wort „anfechten“ ist nicht nötig.",
+          "norm": "§ 143 BGB",
+          "sprecher": "Schritt eins: die Anfechtungserklärung gegenüber dem Anfechtungsgegner. Das Wort anfechten muss nicht fallen. Es reicht, dass erkennbar wird: Ich will die Erklärung wegen eines Willensmangels nicht gelten lassen.",
+          "marken": [
+            "§ 143 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Anfechtungsgrund",
+          "text": "Inhalts-, Erklärungs-, Eigenschaftsirrtum, Übermittlung, Täuschung, Drohung.",
+          "norm": "§§ 119, 120, 123 BGB",
+          "sprecher": "Schritt zwei: der Anfechtungsgrund. Inhalts- und Erklärungsirrtum, Irrtum über eine verkehrswesentliche Eigenschaft, falsche Übermittlung, arglistige Täuschung oder widerrechtliche Drohung. Ein bloßer Irrtum im Motiv gehört nicht dazu.",
+          "marken": [
+            "abschließend"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Anfechtungsfrist",
+          "text": "Beim Irrtum unverzüglich, bei Täuschung und Drohung ein Jahr.",
+          "norm": "§§ 121, 124 BGB",
+          "sprecher": "Schritt drei: die Frist. Beim Irrtum muss die Anfechtung unverzüglich erfolgen, also ohne schuldhaftes Zögern. Bei Täuschung und Drohung bleibt ein Jahr ab Entdeckung oder dem Ende der Zwangslage.",
+          "marken": [
+            "unverzüglich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Kein Ausschluss",
+          "text": "Wer das Geschäft bestätigt, kann nicht mehr anfechten.",
+          "norm": "§ 144 BGB",
+          "sprecher": "Schritt vier: kein Ausschluss. Hat der Anfechtungsberechtigte das Geschäft in Kenntnis des Grundes bestätigt, ist die Anfechtung ausgeschlossen.",
+          "marken": [
+            "Bestätigung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 5,
+          "titel": "Rechtsfolgen",
+          "text": "Nichtig von Anfang an; beim Irrtum Ersatz des Vertrauensschadens.",
+          "norm": "§§ 142 Abs. 1, 122 BGB",
+          "sprecher": "Schritt fünf: die Rechtsfolge. Das Geschäft ist von Anfang an nichtig. Wer wegen Irrtums anficht, schuldet dem anderen den Vertrauensschaden, begrenzt durch das Erfüllungsinteresse.",
+          "marken": [
+            "ex tunc",
+            "§ 122 BGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Tippfehler",
+          "text": "Er wollte 1.500 schreiben: Erklärungsirrtum – Anfechtung ja, Vertrauensschaden auch.",
+          "norm": "§ 119 Abs. 1 BGB",
+          "sprecher": "Zurück zum Tippfehler. Wer 150 schreibt, aber 1.500 schreiben wollte, vertut sich in der Erklärungshandlung. Das ist ein Erklärungsirrtum, er darf anfechten. Hat der Käufer schon auf den Vertrag vertraut, ersetzt der Verkäufer ihm aber den Vertrauensschaden.",
+          "marken": [
+            "Erklärungsirrtum"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Erklärung, Grund, Frist, kein Ausschluss – dann nichtig von Anfang an.",
+          "norm": "§§ 143, 142 BGB",
+          "sprecher": "Merke: Erklärung, Grund, Frist, kein Ausschluss, Rechtsfolge. Und wer wegen Irrtums anficht, zahlt den Vertrauensschaden.",
+          "marken": [
+            "fünf Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Anfechtung vollständig prüfen",
+          "text": "Speichern für die nächste BGB-AT-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im BGB AT. Und frag zuerst: Welcher Irrtum genau?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Vertippt beim Preis – anfechten geht, aber nicht gratis. Wer 150 statt 1.500 Euro schreibt, irrt in der Erklärung und kann nach § 119 Abs. 1 BGB anfechten. Geprüft wird in fünf Schritten: Erklärung, Grund, Frist, kein Ausschluss, Rechtsfolge. Das Geschäft ist dann von Anfang an nichtig (§ 142 Abs. 1 BGB) – der Anfechtende ersetzt aber den Vertrauensschaden (§ 122 BGB). Speichern für die nächste Klausur im BGB AT.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#anfechtung",
+        "#142bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Tippfehler anfechten – mit Vertrauensschaden",
+      "coverText": "Nichtig – aber nicht gratis",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer sich verschreibt, kann anfechten – ersetzt aber den Vertrauensschaden.",
+        "handlung": "{A} rubs out one digit on a large price tag, while {B} holds out an open hand for a small coin in return.",
+        "hinweisRegie": "Place the note in the free space beside the corrected price tag, slightly tilted toward {B}'s open hand, so the correction and its cost stand out without covering {A}'s eraser.",
+        "alternative": "{A} pulls back a sent paper airplane on a string, while {B} points to the small dent it already left."
+      },
+      "bildSzene": "price tag digit rubbed out",
+      "bildSzeneAlt": "paper plane pulled back on string",
+      "quellen": [
+        "§ 119 BGB",
+        "§ 120 BGB",
+        "§ 121 BGB",
+        "§ 122 BGB",
+        "§ 123 BGB",
+        "§ 124 BGB",
+        "§ 142 BGB",
+        "§ 143 BGB",
+        "§ 144 BGB",
+        "§ 242 BGB",
+        "Themenpool: bgbat-001"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:15:46.826Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-800",
+      "ueberzeile": "Prüfungsfrage Strafakte",
+      "titel": "Strafrechtlicher Aktenvortrag: Gehört die Einlassung des Beschuldigten in den Sachbericht?",
+      "optionen": [
+        "Nein – sie gehört erst in die rechtliche Würdigung",
+        "Nur wenn er ein Geständnis abgelegt hat",
+        "Ja – neutral wiedergegeben, ohne Würdigung"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Themenpool: anklage-800"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:44.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-800",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – neutral wiedergegeben, die Würdigung kommt später",
+      "text": "Der Sachbericht soll den Zuhörern alles an die Hand geben, was sie für die Entscheidung brauchen. Dazu gehört, was der Beschuldigte sagt – oder dass er schweigt. Gib die Einlassung neutral wieder, meist in indirekter Rede, und trenne sie von den übrigen Beweismitteln. Ob sie widerlegt ist, erörterst du erst in der Würdigung.",
+      "norm": "§ 136 StPO · § 163a StPO",
+      "quellen": [
+        "Themenpool: anklage-800"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:44.777Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – sie gehört erst in die rechtliche Würdigung",
+        "Nur wenn er ein Geständnis abgelegt hat",
+        "Ja – neutral wiedergegeben, ohne Würdigung"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-227",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 950 BGB: Kein Eigentum, wenn die Arbeit viel weniger wert ist als der Stoff",
+      "text": "Wer durch Verarbeitung eine neue bewegliche Sache herstellt, erwirbt das Eigentum daran – außer der Wert der Verarbeitung ist erheblich geringer als der Wert des Stoffes. Prüfe also: neue Sache nach der Verkehrsauffassung? Dann der Wertvergleich. Wer sein Eigentum verliert, kann nach § 951 BGB Vergütung nach Bereicherungsrecht verlangen.",
+      "norm": "§ 950 Abs. 1 BGB · § 951 BGB",
+      "quellen": [
+        "§ 950 BGB",
+        "§ 951 BGB",
+        "Themenpool: sachen-227"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:44.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-831",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Titel auf Beseitigung von Bauschutt: Zwangsgeld nach § 888 ZPO?",
+      "falsch": "S ist verurteilt, den Bauschutt von Gs Grundstück zu entfernen. G beantragt beim Prozessgericht Zwangsgeld nach § 888 ZPO.",
+      "richtigText": "Das Entfernen kann auch ein Dritter erledigen – eine vertretbare Handlung. Vollstreckt wird nach § 887 ZPO: Das Prozessgericht ermächtigt G, die Handlung auf Kosten des S vornehmen zu lassen, und kann S zur Vorauszahlung der Kosten verurteilen. § 888 ZPO gilt nur für unvertretbare Handlungen.",
+      "quellen": [
+        "§ 887 ZPO",
+        "§ 888 ZPO",
+        "Themenpool: zwangsv-831"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:44.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-171",
+      "ueberzeile": "Klausurtipp Schuldrecht",
+      "titel": "§ 326 Abs. 2 BGB: Gegenleistung ja – aber minus das Ersparte",
+      "text": "Ist der Gläubiger für die Unmöglichkeit allein oder weit überwiegend verantwortlich oder im Annahmeverzug, behält der Schuldner den Anspruch auf die Gegenleistung. Vergiss dann Satz 2 nicht: Er muss sich anrechnen lassen, was er durch die Befreiung erspart oder anderweitig erwirbt oder böswillig zu erwerben unterlässt.",
+      "quellen": [
+        "§ 326 Abs. 2 BGB",
+        "§ 275 BGB",
+        "Themenpool: schuld-171"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:44.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-856",
+      "ueberzeile": "5 Punkte Anklageschrift",
+      "titel": "Anklageschrift: fünf Bausteine, die §§ 199, 200 StPO verlangen",
+      "text": "Reihenfolge und Formulierung variieren je nach Land – diese Teile gehören immer hinein.",
+      "punkte": [
+        "Angaben zum Angeschuldigten",
+        "Anklagesatz: Tat mit Zeit und Ort, gesetzliche Merkmale, Vorschriften",
+        "Beweismittel",
+        "Wesentliches Ergebnis der Ermittlungen – beim Strafrichter entbehrlich",
+        "Antrag auf Eröffnung des Hauptverfahrens"
+      ],
+      "quellen": [
+        "§ 199 StPO",
+        "§ 200 StPO",
+        "Themenpool: anklage-856"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "5",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:44.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,853 @@
+{
+  "datum": "2027-07-02",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "strafat-290",
+        "themaTitel": "Wie ist ein vorsätzliches Begehungsdelikt aufgebaut?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-139",
+        "themaTitel": "Wann ist die Meinungsfreiheit eingeschränkt?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessorz-580",
+        "themaTitel": "Anwaltsklausur: Mandantenbegehren und Zweckmäßigkeit",
+        "fach": "assessorz",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "verwbt-679"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "verwbt-679"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:57",
+        "art": "norm",
+        "themaId": "bgbat-436"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "merksatz",
+        "themaId": "staat-356"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "begriff",
+        "themaId": "verwalt-638"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "fehler",
+        "themaId": "schuldbt-914"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "strafat-290",
+      "poolTitel": "Wie ist ein vorsätzliches Begehungsdelikt aufgebaut?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-08",
+        "2027-03-15",
+        "2027-06-24"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-139",
+      "poolTitel": "Wann ist die Meinungsfreiheit eingeschränkt?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 Abs. 1 GG",
+        "Art. 5 Abs. 2 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-04",
+        "2027-03-29",
+        "2027-03-29"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessorz-580",
+      "poolTitel": "Anwaltsklausur: Mandantenbegehren und Zweckmäßigkeit",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-16",
+        "2027-03-23",
+        "2027-03-23"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwbt-679",
+      "poolTitel": "Polizeifestigkeit des Versammlungsrechts",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 8 GG; Versammlungsrecht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwbt-679",
+      "poolTitel": "Polizeifestigkeit des Versammlungsrechts",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 8 GG; Versammlungsrecht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-436",
+      "poolTitel": "Verjährungsbeginn und kenntnisabhängige Regelverjährung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 195, 199 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-31",
+        "2027-04-30",
+        "2027-05-10"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "staat-356",
+      "poolTitel": "Wie kommt ein Bundesgesetz zustande?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 76 GG",
+        "Art. 77 GG",
+        "Art. 78 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-25",
+        "2027-04-01",
+        "2027-05-13"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "verwalt-638",
+      "poolTitel": "Nebenbestimmungen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 36 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06",
+        "2027-04-29"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "schuldbt-914",
+      "poolTitel": "Wann gibt es Entschädigung für nutzlos aufgewendete Urlaubszeit?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 651n Abs. 2 BGB",
+        "§ 651i Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-25",
+        "2027-02-28",
+        "2027-05-02"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-290",
+      "slug": "2027-07-02-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Tod verursacht – vollendet ist die Tat trotzdem nicht",
+          "titelZeilen": [
+            "Tod verursacht –",
+            "vollendet ist die",
+            "Tat trotzdem nicht"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Allgemeines Lebensrisiko",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A sticht B mit Tötungsvorsatz in den Bauch. B wird notoperiert, ist nach zwei Tagen außer Lebensgefahr. In der Nacht bricht im Krankenhaus durch einen Kurzschluss ein Brand aus, B erstickt im Rauch. Strafbarkeit des A nach § 212 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung: objektiver Tatbestand",
+          "schritte": [
+            {
+              "titel": "1. Erfolg und Handlung",
+              "text": "B ist tot. Tathandlung ist der Messerstich."
+            },
+            {
+              "titel": "2. Kausalität",
+              "text": "Ohne den Stich wäre B nicht im Krankenhaus gewesen und nicht dort gestorben. Nach der Äquivalenztheorie: kausal."
+            },
+            {
+              "titel": "3. Objektive Zurechnung",
+              "text": "Hat sich die Gefahr des Stichs im Tod verwirklicht? Nein: Der Brand ist ein allgemeines Lebensrisiko, das jeden Patienten treffen kann."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Aufbau im Überblick",
+          "text": "Vorsätzliches Begehungsdelikt: Tatbestand – objektiv (Erfolg, Handlung, Kausalität, Zurechnung), dann subjektiv (Vorsatz, § 15 StGB) –, Rechtswidrigkeit, Schuld. Fehlt die Zurechnung, endet die Prüfung des vollendeten Delikts im objektiven Tatbestand. Weiter geht es mit dem Versuch."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "§ 212 StGB scheitert an der objektiven Zurechnung. A ist strafbar wegen versuchten Totschlags (§§ 212, 22, 23 Abs. 1 StGB) in Tateinheit mit vollendeter gefährlicher Körperverletzung (§ 224 Abs. 1 Nr. 2, Nr. 5 StGB). Mordmerkmale sind nicht ersichtlich."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kausal ist noch nicht zurechenbar: Verwirklicht sich ein allgemeines Lebensrisiko, bleibt es beim Versuch."
+        },
+        {
+          "art": "cta",
+          "titel": "Objektiver Tatbestand in drei Fragen",
+          "punkte": [
+            "Erfolg und Handlung?",
+            "Kausal nach der Äquivalenztheorie?",
+            "Hat sich gerade diese Gefahr verwirklicht?"
+          ],
+          "icons": [
+            "messer",
+            "kreislauf",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Ohne den Stich wäre B nie gestorben – und trotzdem ist der Totschlag nicht vollendet. Im objektiven Tatbestand prüfst du nach der Kausalität die objektive Zurechnung: Stirbt das Opfer durch einen Krankenhausbrand, verwirklicht sich ein allgemeines Lebensrisiko, nicht die Gefahr des Stichs. Es bleibt beim Versuch. Speichern für den nächsten Aufbau.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#objektivezurechnung",
+        "#212stgb",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kausal, aber nicht zurechenbar: nur Versuch",
+      "coverText": "Allgemeines Lebensrisiko",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Nicht jede Folge, die ohne die Tat ausgeblieben wäre, ist dem Täter als sein Werk zuzurechnen.",
+        "handlung": "{A} follows a chain of dominoes with his eyes, while {B} points his stick at a gap in the chain where a stray ball from outside knocks over the last domino.",
+        "hinweisRegie": "Place the note in the free space next to the stray ball and the gap in the domino chain, slightly tilted toward it, without covering the first dominoes or {A}'s face.",
+        "alternative": "{A} lights a small candle, and {B} points at a separate lightning bolt striking a distant tree instead."
+      },
+      "bildSzene": "stray ball breaks domino chain",
+      "bildSzeneAlt": "candle versus distant lightning strike",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 212 StGB",
+        "§§ 22, 23 StGB",
+        "§ 224 StGB",
+        "Themenpool: strafat-290"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:27:55.598Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-139",
+      "slug": "2027-07-02-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sonderrecht gegen eine Meinung – und doch zulässig?",
+          "titelZeilen": [
+            "Sonderrecht gegen",
+            "eine Meinung – und",
+            "doch zulässig?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 130 Abs. 4 StGB als Ausnahme",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "§ 130 Abs. 4 StGB bestraft, wer den öffentlichen Frieden würdeverletzend stört, indem er die NS-Gewalt- und Willkürherrschaft billigt, verherrlicht oder rechtfertigt. Ist das ein „allgemeines Gesetz“ im Sinne des Art. 5 Abs. 2 GG – und wenn nicht, ist die Norm verfassungswidrig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Schutzbereich und Eingriff",
+              "text": "Auch das Gutheißen des NS-Regimes ist eine Meinung. Die Strafdrohung greift in Art. 5 Abs. 1 S. 1 GG ein."
+            },
+            {
+              "titel": "2. Allgemeines Gesetz?",
+              "text": "Nein. Die Norm knüpft an eine bestimmte inhaltliche Haltung an. Sie ist nicht meinungsneutral, sondern Sonderrecht."
+            },
+            {
+              "titel": "3. Immanente Ausnahme",
+              "text": "BVerfG: Wegen des einzigartigen NS-Unrechts ist Art. 5 GG für solche Vorschriften eine Ausnahme vom Sonderrechtsverbot immanent."
+            },
+            {
+              "titel": "4. Verhältnismäßigkeit",
+              "text": "Die Norm bleibt an ihr gemessen. Sie verlangt eine Störung des öffentlichen Friedens – bloßes Denken oder Sympathie reichen nicht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Klausurfalle",
+          "text": "„Kein allgemeines Gesetz, also verfassungswidrig.“ Für § 130 Abs. 4 StGB trägt dieser Schluss nicht. Die Ausnahme ist aber eng: Sie gilt nur für die Gutheißung der NS-Gewalt- und Willkürherrschaft und lässt sich nicht auf andere Meinungen übertragen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 130 Abs. 4 StGB ist kein allgemeines Gesetz, aber durch eine eng begrenzte, Art. 5 GG immanente Ausnahme gedeckt."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 5 Abs. 2 GG in drei Fragen",
+          "punkte": [
+            "Richtet sich das Gesetz gegen eine Meinung?",
+            "Greift eine der anderen Schranken?",
+            "Sonderfall NS-Gutheißung?"
+          ],
+          "icons": [
+            "zeitung",
+            "paragraf",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "§ 130 Abs. 4 StGB richtet sich gegen eine bestimmte Meinung – und ist trotzdem verfassungsgemäß. Als Sonderrecht ist die Norm kein allgemeines Gesetz im Sinne des Art. 5 Abs. 2 GG. Das BVerfG sieht aber eine Art. 5 GG immanente Ausnahme für Vorschriften gegen die Gutheißung der NS-Gewalt- und Willkürherrschaft. Speichern für die nächste Meinungsfreiheitsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#meinungsfreiheit",
+        "#130stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 130 IV StGB: Sonderrecht, aber gedeckt",
+      "coverText": "§ 130 Abs. 4 StGB als Ausnahme",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Eine einzige, eng umrissene Ausnahme vom Sonderrechtsverbot, die sich nicht verallgemeinern lässt.",
+        "handlung": "{B} holds a large gate firmly shut with a heavy bar, while {A} opens only one narrow, clearly marked side door in the same wall.",
+        "hinweisRegie": "Place the note in the free space beside the narrow side door, slightly tilted toward it, so the single exception stands out without covering the heavy bar or {B}'s hands.",
+        "alternative": "{A} lays one single red tile into an otherwise uniform grey floor that {B} is inspecting with a lamp."
+      },
+      "bildSzene": "narrow side door in closed wall",
+      "bildSzeneAlt": "single red tile in grey floor",
+      "quellen": [
+        "Art. 5 Abs. 1 GG",
+        "Art. 5 Abs. 2 GG",
+        "§ 130 Abs. 4 StGB",
+        "Themenpool: grundr-139"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "ueberraschende-antwort",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:27:55.598Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-580",
+      "slug": "2027-07-02-b3",
+      "titelZeilen": [
+        "Anspruch begründet",
+        "– und trotzdem",
+        "rätst du ab"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Anspruch begründet – und trotzdem rätst du ab",
+          "unter": "Anwaltsklausur · ZPO und BGB",
+          "text": "Im Anwaltsgutachten zählt nicht nur, ob der Anspruch besteht, sondern ob er sich lohnt.",
+          "norm": null,
+          "icon": "aktentasche",
+          "sprecher": "Anspruch besteht – und du rätst trotzdem ab. In der Anwaltsklausur kann genau das richtig sein.",
+          "marken": [
+            "Zweckmäßigkeit",
+            "Mandant"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Was will der Mandant?",
+          "text": "Rechtliches und wirtschaftliches Ziel klären.",
+          "norm": null,
+          "sprecher": "Schritt eins: das Mandantenbegehren. Was will er wirklich erreichen? Geld, eine Sache, Ruhe vor dem Nachbarn? Das ist dein Maßstab für alles Weitere.",
+          "marken": [
+            "Ziel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Wie ist die Rechtslage?",
+          "text": "Materielle Prüfung im Gutachtenstil.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die materielle Rechtslage. Hier prüfst du im Gutachtenstil, ob und in welcher Höhe der Anspruch besteht, und auch, welche Einwendungen der Gegner hat.",
+          "marken": [
+            "Gutachten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Kann er es beweisen?",
+          "text": "Beweislast und Beweismittel bestimmen das Prozessrisiko.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Beweislage. Ein Anspruch, den der Mandant nicht beweisen kann, hilft ihm im Prozess wenig. Frag, wer was beweisen muss und womit.",
+          "marken": [
+            "Beweislast"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Was ist zweckmäßig?",
+          "text": "Weg, Kosten, Dauer – und ob sich überhaupt vollstrecken lässt.",
+          "norm": null,
+          "sprecher": "Schritt vier: die Zweckmäßigkeit. Welcher Weg ist der beste? Klage, Mahnverfahren, Urkundenprozess oder erst ein Aufforderungsschreiben? Und: Was kostet das, wie lange dauert es?",
+          "marken": [
+            "Weg",
+            "Kosten"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: der vermögenslose Gegner",
+          "text": "Ein Titel gegen einen Schuldner ohne Vermögen bringt vor allem Kosten.",
+          "norm": null,
+          "sprecher": "Ein Klassiker: Der Gegner hat erkennbar kein Vermögen. Dann bringt auch ein sicherer Titel vor allem eigene Kosten. Das gehört ins Gutachten und ins Mandantenschreiben.",
+          "marken": [
+            "Vollstreckbarkeit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Begehren, Rechtslage, Beweislage, Zweckmäßigkeit – erst dann die Empfehlung.",
+          "norm": null,
+          "sprecher": "Merke: Begehren, Rechtslage, Beweislage, Zweckmäßigkeit. Erst dann gibst du deine Empfehlung.",
+          "marken": [
+            "vier Stationen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speichern für die Anwaltsklausur",
+          "text": "Speichern für das nächste Mandantengespräch.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Anwaltsklausur, in der dein Mandant unbedingt klagen will.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Anspruch begründet – und trotzdem rätst du von der Klage ab. In der Anwaltsklausur prüfst du nach dem Mandantenbegehren und der Rechtslage auch die Beweislage und die Zweckmäßigkeit: Weg, Kosten, Dauer und ob der Gegner überhaupt zahlen kann. Erst dann folgt die Empfehlung. Speichern für die nächste Anwaltsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#anwaltsklausur",
+        "#assessorexamen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anwaltsklausur: Recht haben reicht nicht",
+      "coverText": "Beweislage und Vollstreckbarkeit",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Ein bestehender Anspruch ist nur die halbe Antwort – der Weg muss sich für den Mandanten lohnen.",
+        "handlung": "{A} proudly holds up a shiny certificate, while {B} opens an empty treasure chest beside her and shows that there is nothing inside.",
+        "hinweisRegie": "Place the note in the free space above the open empty chest, slightly tilted toward it, so the missing assets stand out without covering the certificate or {A}'s face.",
+        "alternative": "{B} checks the length of a long, winding path on a map with a string before {A} is allowed to set off."
+      },
+      "bildSzene": "certificate beside empty chest",
+      "bildSzeneAlt": "measuring winding path with string",
+      "quellen": [
+        "§ 286 ZPO",
+        "§§ 688 ff. ZPO",
+        "§§ 592 ff. ZPO",
+        "Themenpool: assessorz-580"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:18:48.703Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-679",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht BT",
+      "titel": "Laufende Versammlung: Darf die Polizei einem Teilnehmer nach der Generalklausel einen Platzverweis erteilen?",
+      "optionen": [
+        "Ja – die polizeiliche Generalklausel gilt immer ergänzend",
+        "Ja, wenn der Teilnehmer vorher angehört wurde",
+        "Nein – erst Ausschluss oder Auflösung nach Versammlungsrecht"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 8 GG",
+        "Versammlungsgesetz des Bundes bzw. des Landes",
+        "Themenpool: verwbt-679"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:18:48.704Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-679",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – das Versammlungsrecht ist polizeifest",
+      "text": "Maßnahmen gegen eine Versammlung und ihre Teilnehmer richten sich abschließend nach dem Versammlungsrecht. Das allgemeine Polizeirecht greift erst, wenn der Teilnehmer ausgeschlossen oder die Versammlung aufgelöst ist. Grund ist der Schutz aus Art. 8 GG. Ob im Vorfeld oder für Minimaleingriffe Polizeirecht gilt, ist umstritten und hängt auch vom jeweiligen Landesrecht ab.",
+      "norm": "Art. 8 GG · Versammlungsrecht",
+      "quellen": [
+        "Art. 8 GG",
+        "Versammlungsgesetz des Bundes bzw. des Landes",
+        "Themenpool: verwbt-679"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:18:48.704Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – die polizeiliche Generalklausel gilt immer ergänzend",
+        "Ja, wenn der Teilnehmer vorher angehört wurde",
+        "Nein – erst Ausschluss oder Auflösung nach Versammlungsrecht"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-436",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 199 Abs. 1 BGB: Die Regelverjährung startet erst mit dem Jahresende",
+      "text": "Die dreijährige Frist (§ 195 BGB) beginnt mit dem Schluss des Jahres, in dem der Anspruch entstanden ist und der Gläubiger von den Umständen und dem Schuldner Kenntnis erlangt oder ohne grobe Fahrlässigkeit hätte erlangen müssen. Anspruch und Kenntnis im März 2024: Die Frist läuft ab dem 31.12.2024 und endet mit Ablauf des 31.12.2027.",
+      "norm": "§ 199 Abs. 1 BGB",
+      "quellen": [
+        "§ 195 BGB",
+        "§ 199 BGB",
+        "Themenpool: bgbat-436"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:18:48.704Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-356",
+      "ueberzeile": "Merksatz Staatsrecht",
+      "titel": "Regierungsentwurf: erst zum Bundesrat",
+      "text": "Vorlagen der Bundesregierung gehen zuerst an den Bundesrat; er kann binnen sechs Wochen Stellung nehmen (Art. 76 Abs. 2 GG). Entwürfe aus der Mitte des Bundestages brauchen diesen Durchgang nicht.",
+      "norm": "Art. 76 Abs. 2 GG",
+      "quellen": [
+        "Art. 76 GG",
+        "Themenpool: staat-356"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:10:59.206Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-638",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Auflage: eine zusätzliche Pflicht – keine Bedingung für die Wirksamkeit",
+      "text": "Die Auflage schreibt dem Begünstigten ein Tun, Dulden oder Unterlassen vor (§ 36 Abs. 2 Nr. 4 VwVfG). Anders als bei der Bedingung hängt die Wirksamkeit des VA nicht von ihr ab. Sie kann selbständig vollstreckt werden. Erfüllt der Begünstigte sie nicht, kann die Behörde den VA außerdem widerrufen (§ 49 Abs. 2 S. 1 Nr. 2 VwVfG).",
+      "norm": "§ 36 Abs. 2 Nr. 4 VwVfG",
+      "quellen": [
+        "§ 36 VwVfG",
+        "§ 49 Abs. 2 VwVfG",
+        "Themenpool: verwalt-638"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:18:48.704Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-914",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Pool kaputt: Entschädigung für vertane Urlaubszeit schon bei jedem Mangel?",
+      "falsch": "Jeder Reisemangel gibt neben der Minderung auch eine Entschädigung für nutzlos aufgewendete Urlaubszeit.",
+      "richtigText": "Die Minderung tritt bei jedem Reisemangel kraft Gesetzes ein (§ 651m BGB). Die Entschädigung nach § 651n Abs. 2 BGB verlangt mehr: Die Reise muss vereitelt oder erheblich beeinträchtigt sein. Kann sich der Veranstalter nach § 651n Abs. 1 BGB entlasten, entfällt sie ganz. Und: Den Mangel musst du anzeigen (§ 651o BGB).",
+      "quellen": [
+        "§ 651m BGB",
+        "§ 651n BGB",
+        "§ 651o BGB",
+        "Themenpool: schuldbt-914"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:10:59.206Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

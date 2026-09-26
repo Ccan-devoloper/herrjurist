@@ -1,0 +1,864 @@
+{
+  "datum": "2027-08-25",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-328",
+        "themaTitel": "Wie prüft man die Unterschlagung und was ist die Zueignung?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-625",
+        "themaTitel": "Ausbürgerung/Auslieferung und Staatsangehörigkeit",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bgbat-153",
+        "themaTitel": "Wie wirkt sich beschränkte Geschäftsfähigkeit auf einen Vertrag aus?",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "schuldbt-480"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "schuldbt-480"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "zpo-551"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:39",
+        "art": "streitstand",
+        "themaId": "revision-878"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "merksatz",
+        "themaId": "strafat-059"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:07",
+        "art": "begriff",
+        "themaId": "anklage-869"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-328",
+      "poolTitel": "Wie prüft man die Unterschlagung und was ist die Zueignung?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 246 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-16"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-625",
+      "poolTitel": "Ausbürgerung/Auslieferung und Staatsangehörigkeit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 16 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-153",
+      "poolTitel": "Wie wirkt sich beschränkte Geschäftsfähigkeit auf einen Vertrag aus?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 107 BGB",
+        "§ 108 BGB",
+        "§ 110 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-04-13",
+        "2027-08-12"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-480",
+      "poolTitel": "Versendungskauf und Verbraucherprivileg",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 447, 475 II BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-09",
+        "2027-04-02"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-480",
+      "poolTitel": "Versendungskauf und Verbraucherprivileg",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 447, 475 II BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-09",
+        "2027-04-02"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-551",
+      "poolTitel": "Streitgegenstand im Zivilprozess",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 253, 308 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-18",
+        "2027-06-23",
+        "2027-07-18"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "revision-878",
+      "poolTitel": "Was beweist das Hauptverhandlungsprotokoll?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 274 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-22",
+        "2027-06-06",
+        "2027-06-23"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafat-059",
+      "poolTitel": "Was ist ein untauglicher Versuch, was ein Wahndelikt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 3 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-05",
+        "2027-03-09",
+        "2027-03-25"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "anklage-869",
+      "poolTitel": "Wann ist ein Verteidiger notwendig zu bestellen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 140 StPO",
+        "§ 141 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-29",
+        "2027-03-02",
+        "2027-04-28"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-328",
+      "slug": "2027-08-25-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Handy gefunden, eingesteckt: schon Unterschlagung?",
+          "titelZeilen": [
+            "Handy gefunden,",
+            "eingesteckt: schon",
+            "Unterschlagung?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Der Wille muss sich zeigen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A findet im Park ein Handy und steckt es ein – er will es behalten. Am Abend ruft die Eigentümerin E an; A behauptet, er habe kein Handy gefunden. Ab wann hat A sich das Handy zugeeignet?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Fremde bewegliche Sache",
+              "text": "Das Handy gehört E. Eine Wegnahme verlangt § 246 StGB nicht – A hat es gefunden."
+            },
+            {
+              "titel": "Zueignung als Tathandlung",
+              "text": "A muss sich die Sache zueignen: ein nach außen erkennbarer Akt, der den Zueignungswillen zeigt (Manifestation)."
+            },
+            {
+              "titel": "Wie deutlich?",
+              "text": "Streitig: Muss der Wille für jeden Beobachter eindeutig sein (eng) oder genügt ein Verhalten, das ihn bei Kenntnis des Plans belegt (weit)?"
+            },
+            {
+              "titel": "Rechtswidrigkeit und Vorsatz",
+              "text": "Die Zueignung ist rechtswidrig, A handelt vorsätzlich."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Schon das Einstecken ohne Begründung als Zueignung werten. Einstecken ist mehrdeutig: Genauso verhält sich, wer das Handy beim Fundbüro abgeben will. Deshalb brauchst du eine Handlung, die den Behaltenswillen nach außen zeigt – oder eine Begründung, warum die weite Sicht genügt."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "punkte": [
+            "Einstecken: nach enger Sicht noch keine Zueignung – es passt auch zum ehrlichen Finder.",
+            "Leugnen gegenüber E: Jetzt zeigt A eindeutig den Behaltenswillen – spätestens hier § 246 Abs. 1 StGB."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Bei § 246 StGB ist die Zueignung Tathandlung. Sie braucht einen Akt, der den Behaltenswillen nach außen zeigt – Einstecken allein ist mehrdeutig."
+        },
+        {
+          "art": "cta",
+          "titel": "Unterschlagung in drei Zügen",
+          "punkte": [
+            "Fremde bewegliche Sache",
+            "Manifestation des Zueignungswillens",
+            "Rechtswidrig und vorsätzlich"
+          ],
+          "icons": [
+            "paket",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Handy gefunden und eingesteckt – schon Unterschlagung? Bei § 246 StGB ist die Zueignung die Tathandlung. Sie verlangt einen nach außen erkennbaren Akt, der den Zueignungswillen zeigt. Einstecken ist mehrdeutig, denn so handelt auch der ehrliche Finder. Spätestens wenn A gegenüber der Eigentümerin leugnet, das Handy zu haben, ist der Behaltenswille manifestiert. Speichern für die nächste Klausur zu den Eigentumsdelikten.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#unterschlagung",
+        "#246stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unterschlagung: Wann ist die Zueignung da?",
+      "coverText": "Der Wille muss sich zeigen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Die Unterschlagung beginnt erst, wenn der Wille, die Sache zu behalten, nach außen sichtbar wird.",
+        "handlung": "{A} pockets a small glowing device found on a park bench, while {B} stands nearby holding an empty lost-and-found box and looks at {A} questioningly.",
+        "hinweisRegie": "Place the note in the free space between {A}'s pocket and {B}'s empty box, slightly tilted toward the pocket, so the open question of intent is visible without covering faces.",
+        "alternative": "{B} calls out across a meadow asking about a lost device, while {A} shakes her head and hides her hand behind her back."
+      },
+      "bildSzene": "pocketing found device, empty box",
+      "bildSzeneAlt": "shaking head, hand behind back",
+      "quellen": [
+        "§ 246 Abs. 1 StGB",
+        "Themenpool: strafbt-328"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:56:51.326Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-625",
+      "slug": "2027-08-25-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Deutscher – und trotzdem nach Frankreich überstellt",
+          "titelZeilen": [
+            "Deutscher – und",
+            "trotzdem nach",
+            "Frankreich überstellt"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Satz 2 öffnet die Tür – begrenzt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Frankreich verlangt per Europäischem Haftbefehl die Überstellung des Deutschen D, dem ein in Paris begangener Betrug vorgeworfen wird. D beruft sich auf Art. 16 Abs. 2 GG: Kein Deutscher dürfe an das Ausland ausgeliefert werden. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Schutzbereich",
+              "text": "Art. 16 Abs. 2 S. 1 GG schützt Deutsche vor Auslieferung. Auch die Überstellung nach einem Europäischen Haftbefehl ist eine Auslieferung."
+            },
+            {
+              "titel": "Eingriff",
+              "text": "Die Überstellung an Frankreich greift in dieses Recht ein."
+            },
+            {
+              "titel": "Schranke",
+              "text": "Art. 16 Abs. 2 S. 2 GG: Durch Gesetz ist die Auslieferung an EU-Staaten oder einen internationalen Gerichtshof möglich."
+            },
+            {
+              "titel": "Schranken-Schranken",
+              "text": "Rechtsstaatliche Grundsätze müssen gewahrt sein; das Gesetz muss den Schutz Deutscher schonend ausgestalten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Art. 16 Abs. 2 GG als absolutes Auslieferungsverbot lesen. Seit Einfügung von Satz 2 steht das Grundrecht unter einem qualifizierten Gesetzesvorbehalt. Umgekehrt ist nicht jede Überstellung zulässig: Das BVerfG hat das erste deutsche Gesetz zum Europäischen Haftbefehl für nichtig erklärt."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nein, nicht absolut. Auf gesetzlicher Grundlage ist die Überstellung zulässig, wenn rechtsstaatliche Grundsätze gewahrt sind. Hier hat die Tat einen maßgeblichen Auslandsbezug – sie geschah in Paris. Bei maßgeblichem Inlandsbezug wäre eine Auslieferung dagegen regelmäßig kaum zu rechtfertigen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Art. 16 Abs. 2 GG: grundsätzlich keine Auslieferung Deutscher – Ausnahme per Gesetz an EU-Staaten, nur rechtsstaatlich und verhältnismäßig."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 16 Abs. 2 GG prüfen",
+          "punkte": [
+            "Deutscher und Auslieferung?",
+            "Ziel: EU-Staat oder int. Gerichtshof?",
+            "Rechtsstaatlich und verhältnismäßig?"
+          ],
+          "icons": [
+            "person",
+            "globus",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Deutscher – und trotzdem an Frankreich überstellt? Das geht. Art. 16 Abs. 2 S. 1 GG verbietet die Auslieferung Deutscher, Satz 2 lässt sie durch Gesetz aber an EU-Mitgliedstaaten oder einen internationalen Gerichtshof zu, soweit rechtsstaatliche Grundsätze gewahrt sind. Das Gesetz muss den Schutz Deutscher schonend ausgestalten – etwa danach unterscheiden, ob die Tat einen maßgeblichen Inlands- oder Auslandsbezug hat.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#art16gg",
+        "#europäischerhaftbefehl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 16 Abs. 2 GG: Auslieferung Deutscher",
+      "coverText": "Satz 2 öffnet die Tür – begrenzt",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Das Auslieferungsverbot für Deutsche hat eine gesetzliche Ausnahme für die EU – aber nur unter strengen Bedingungen.",
+        "handlung": "{A} stands at a border barrier and lifts it only a narrow gap for {B}, who carries a small travel case, while {A} checks a short checklist in her other hand.",
+        "hinweisRegie": "Place the note in the free space above the narrow gap of the lifted barrier, slightly tilted toward the checklist, so the limited opening is clear without covering either character's face.",
+        "alternative": "{B} holds a heavy door with a small, carefully fitted side hatch that {A} unlocks with a special key."
+      },
+      "bildSzene": "barrier lifted a narrow gap",
+      "bildSzeneAlt": "side hatch in heavy door",
+      "quellen": [
+        "Art. 16 Abs. 2 GG",
+        "BVerfGE 113, 273 (Europäischer Haftbefehl)",
+        "Themenpool: grundr-625"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:56:51.326Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-153",
+      "slug": "2027-08-25-b3",
+      "titelZeilen": [
+        "Er wusste vom",
+        "Alter – Widerruf",
+        "ausgeschlossen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Er wusste vom Alter – Widerruf ausgeschlossen",
+          "unter": "Minderjährige · § 109 BGB",
+          "text": "Der Vertragspartner kann sich vom schwebenden Vertrag lösen – aber nicht immer.",
+          "norm": "§ 109 BGB",
+          "icon": "vertrag",
+          "sprecher": "Wer das Alter kannte, darf nicht einfach widerrufen. Das regelt Paragraf 109 BGB, und viele vergessen ihn beim Minderjährigenvertrag. So prüfst du ihn.",
+          "marken": [
+            "Widerruf",
+            "§ 109 BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schwebend unwirksamer Vertrag",
+          "text": "Ohne Einwilligung und nicht lediglich rechtlich vorteilhaft.",
+          "norm": "§§ 107, 108 Abs. 1 BGB",
+          "sprecher": "Schritt eins: Der sechzehnjährige M schließt ohne Einwilligung seiner Eltern einen Vertrag, der ihm auch Pflichten auferlegt. Der Vertrag ist schwebend unwirksam.",
+          "marken": [
+            "schwebend"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Widerrufsrecht des Partners",
+          "text": "Bis zur Genehmigung – auch gegenüber dem Minderjährigen.",
+          "norm": "§ 109 Abs. 1 BGB",
+          "sprecher": "Schritt zwei: Bis die Eltern genehmigen, darf der Vertragspartner widerrufen. Die Erklärung kann er auch gegenüber dem Minderjährigen abgeben.",
+          "marken": [
+            "bis Genehmigung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ausschluss bei Kenntnis",
+          "text": "Kannte er die Minderjährigkeit, ist der Widerruf ausgeschlossen.",
+          "norm": "§ 109 Abs. 2 BGB",
+          "sprecher": "Schritt drei: Kannte der Vertragspartner die Minderjährigkeit, ist der Widerruf ausgeschlossen. Er hat sich bewusst auf den Schwebezustand eingelassen.",
+          "marken": [
+            "Kenntnis"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rückausnahme: vorgetäuschte Einwilligung",
+          "text": "Dann schadet nur die Kenntnis vom Fehlen der Einwilligung.",
+          "norm": "§ 109 Abs. 2 BGB",
+          "sprecher": "Schritt vier, die Rückausnahme: Hat M wahrheitswidrig behauptet, die Eltern seien einverstanden, darf der Partner trotzdem widerrufen. Ausgeschlossen ist das nur, wenn er wusste, dass die Einwilligung fehlt.",
+          "marken": [
+            "gelogen?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Kein Widerruf? Dann auffordern",
+          "text": "Er kann die Eltern zur Erklärung auffordern.",
+          "norm": "§ 108 Abs. 2 BGB",
+          "sprecher": "Und wenn der Widerruf ausgeschlossen ist? Dann bleibt dem Partner die Aufforderung an die Eltern, sich zu erklären. So beendet er den Schwebezustand.",
+          "marken": [
+            "auffordern"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Widerruf bis zur Genehmigung – außer bei Kenntnis der Minderjährigkeit.",
+          "norm": null,
+          "sprecher": "Merke: Der Partner darf bis zur Genehmigung widerrufen. Kannte er das Alter, nicht mehr, es sei denn, M hat die Einwilligung der Eltern vorgetäuscht.",
+          "marken": [
+            "Kenntnis sperrt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für BGB AT speichern",
+          "text": "Speichern für die nächste BGB-AT-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im Allgemeinen Teil des BGB.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Wer vom Alter wusste, kann nicht einfach widerrufen. Solange die Eltern einen schwebend unwirksamen Vertrag nicht genehmigt haben, darf der Vertragspartner nach § 109 Abs. 1 BGB widerrufen. Kannte er die Minderjährigkeit, ist das ausgeschlossen – es sei denn, der Minderjährige hat die Einwilligung vorgetäuscht und der Partner wusste nicht, dass sie fehlt. Bleibt die Aufforderung nach § 108 Abs. 2 BGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#minderjährige",
+        "#109bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Minderjährigenvertrag: Widerruf nach § 109 BGB",
+      "coverText": "Kenntnis sperrt den Widerruf",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Wer wusste, dass er mit einem Minderjährigen kontrahiert, kann sich nicht einfach wieder lösen.",
+        "handlung": "{A} tries to pull back a signed sheet from a teenage-looking customer, while {B} taps with his pointer on a visible age badge the customer wore the whole time.",
+        "hinweisRegie": "Place the note in the free space beside the visible age badge, slightly tilted toward it, so the known age is the decisive detail without covering the sheet or faces.",
+        "alternative": "{B} holds a door half open between two rooms while {A} tries to walk back through it, and a small sign with a youthful face hangs clearly on the door."
+      },
+      "bildSzene": "pulling back sheet, visible age badge",
+      "bildSzeneAlt": "half-open door with youth sign",
+      "quellen": [
+        "§§ 107, 108, 109 BGB",
+        "Themenpool: bgbat-153"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:56:51.327Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-480",
+      "ueberzeile": "Prüfungsfrage Schuldrecht BT",
+      "titel": "Verbraucher K lässt die Ware von einem selbst gewählten Kurier holen. Sie geht unterwegs verloren. Zahlen?",
+      "optionen": [
+        "Nein – beim Verbrauchsgüterkauf gilt § 447 BGB nie",
+        "Nein – die Gefahr geht erst mit Übergabe an K über",
+        "Ja – mit Übergabe an den Kurier ging die Gefahr über"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 447 Abs. 1 BGB",
+        "§ 475 Abs. 2 BGB",
+        "Themenpool: schuldbt-480"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:56:51.327Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-480",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – hier greift § 447 BGB ausnahmsweise auch beim Verbraucher",
+      "text": "Beim Verbrauchsgüterkauf geht die Gefahr nach § 447 BGB nur über, wenn der Käufer die Transportperson selbst beauftragt hat und der Unternehmer sie ihm nicht zuvor benannt hat (§ 475 Abs. 2 BGB). So liegt es hier: Mit der Übergabe an den Kurier trägt K die Preisgefahr und muss trotz des Verlusts zahlen.",
+      "norm": "§ 475 Abs. 2 BGB · § 447 Abs. 1 BGB",
+      "quellen": [
+        "§ 447 Abs. 1 BGB",
+        "§ 475 Abs. 2 BGB",
+        "Themenpool: schuldbt-480"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:56:51.327Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – beim Verbrauchsgüterkauf gilt § 447 BGB nie",
+        "Nein – die Gefahr geht erst mit Übergabe an K über",
+        "Ja – mit Übergabe an den Kurier ging die Gefahr über"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-551",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 308 Abs. 1 ZPO: nicht mehr und nichts anderes als beantragt",
+      "text": "Das Gericht ist an die Anträge gebunden: Es darf weder mehr noch etwas anderes zusprechen, als beantragt ist. Verlangt K 5.000 Euro, gibt es keine 6.000 – selbst wenn der Anspruch höher wäre. Weniger darf es zusprechen. Über die Kosten entscheidet es auch ohne Antrag (§ 308 Abs. 2 ZPO).",
+      "norm": "§ 308 ZPO",
+      "quellen": [
+        "§ 308 ZPO",
+        "Themenpool: zpo-551"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:56:51.327Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-878",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Zeugin verweigert jetzt das Zeugnis: Darf der Ermittlungsrichter über ihre frühere Aussage berichten?",
+      "norm": "§ 252 StPO",
+      "optionen": [
+        "Rspr.: Ja – der Richter darf vernommen werden, wenn er ordnungsgemäß über § 52 StPO belehrt hatte.",
+        "Teile der Lit.: Nein – § 252 StPO sperrt jede Verwertung der früheren Aussage."
+      ],
+      "text": "Revisionsklausur: Prüf, wer über die frühere Aussage vernommen wurde. Polizeiliche Vernehmungspersonen darf das Gericht grundsätzlich nicht hören.",
+      "quellen": [
+        "§ 252 StPO",
+        "§ 52 StPO",
+        "Themenpool: revision-878"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:56:51.327Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-059",
+      "ueberzeile": "Merksatz Strafrecht AT",
+      "titel": "Totbeten ist kein Versuch – auch kein grob unverständiger",
+      "text": "Wer durch Gebete oder Flüche töten will, begeht nach h.M. einen straflosen abergläubischen Versuch. § 23 Abs. 3 StGB erfasst nur, wer reale Wirkzusammenhänge grob verkennt.",
+      "norm": "§ 22 StGB · § 23 Abs. 3 StGB",
+      "quellen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 3 StGB",
+        "Themenpool: strafat-059"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:56:51.327Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-869",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Notwendige Verteidigung beginnt nicht erst mit der Anklage",
+      "text": "Notwendige Verteidigung (§ 140 StPO): In bestimmten Fällen muss der Beschuldigte einen Verteidiger haben – etwa beim Vorwurf eines Verbrechens oder wenn er zur Entscheidung über Untersuchungshaft vorgeführt wird. Hat er keinen, wird ihm ein Pflichtverteidiger bestellt, nach § 141 StPO schon im Ermittlungsverfahren: auf Antrag oder von Amts wegen.",
+      "norm": "§§ 140, 141 StPO",
+      "quellen": [
+        "§ 140 StPO",
+        "§ 141 StPO",
+        "Themenpool: anklage-869"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:56:51.327Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

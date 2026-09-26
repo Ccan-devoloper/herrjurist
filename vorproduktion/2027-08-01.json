@@ -1,0 +1,898 @@
+{
+  "datum": "2027-08-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "verwalt-392",
+        "themaTitel": "Wie prüft man den Amtshaftungsanspruch?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "zpo-554",
+        "themaTitel": "Klagerücknahme",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "handelsg-537"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "handelsg-537"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:00",
+        "art": "norm",
+        "themaId": "strafat-132"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "fehler",
+        "themaId": "stpo-927"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "tipp",
+        "themaId": "stpo-347"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "zahl",
+        "themaId": "assessorz-818"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "verwalt-392",
+      "poolTitel": "Wie prüft man den Amtshaftungsanspruch?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 839 BGB",
+        "Art. 34 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-13"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-554",
+      "poolTitel": "Klagerücknahme",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 269 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-02-05",
+        "2027-04-18",
+        "2027-04-18"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "handelsg-537",
+      "poolTitel": "Geschäftsführerhaftung und Vertretungsmacht",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 35, 43 GmbHG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "handelsg-537",
+      "poolTitel": "Geschäftsführerhaftung und Vertretungsmacht",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 35, 43 GmbHG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-132",
+      "poolTitel": "Was ist ein error in persona und wie wirkt die aberratio ictus?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-31",
+        "2027-02-04",
+        "2027-05-19"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "stpo-927",
+      "poolTitel": "Wie erzwingt der Verletzte die Anklage? Beschwerde und Klageerzwingungsverfahren",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 171 StPO",
+        "§ 172 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-21",
+        "2027-01-24",
+        "2027-03-28"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "stpo-347",
+      "poolTitel": "Was folgt aus einem Verstoß gegen die Belehrungspflicht?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136 StPO",
+        "§ 163a StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-13",
+        "2027-04-20",
+        "2027-06-27"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "assessorz-818",
+      "poolTitel": "Was bewirkt die Streitverkündung im Folgeprozess?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 72 ff. ZPO",
+        "§ 74 ZPO",
+        "§ 68 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-17",
+        "2027-03-29",
+        "2027-05-31"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-08-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: Diese 18 Sätze solltest du jetzt können",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "Diese 18 Sätze",
+            "solltest du jetzt",
+            "können"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 282 BGB: Schadensersatz statt der Leistung trotz guter Arbeit – wenn das Verhalten unzumutbar ist.",
+            "Aktenvortrag: Sachbericht kurz, Entscheidungsvorschlag vor der Begründung.",
+            "§ 767 ZPO stoppt nichts – eingestellt wird nur auf Antrag nach § 769 ZPO.",
+            "Rechtskraft: Identität, Präjudizialität, kontradiktorisches Gegenteil.",
+            "Zahlung zur Abwendung der Vollstreckung erledigt den Rechtsstreit nicht."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Erfüllungsbetrug: Verglichen wird Geschuldetes mit Erhaltenem.",
+            "Revision: statthaft, berechtigt, eingelegt, begründet – auch als Sprungrevision.",
+            "Verteidiger legt per Fax ein: formunwirksam nach § 32d S. 2 StPO.",
+            "Motivbündel: Das Hauptmotiv muss niedrig sein.",
+            "Verwertungsverbote: nach der Rspr. grundsätzlich keine Fernwirkung.",
+            "Putativnotwehr des Täters: Anstiftung bleibt nach h.L. möglich."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 49a VwVfG: erst den VA rückwirkend aufheben, dann zurückfordern.",
+            "Art. 19 Abs. 4 GG: Rechtsweg gegen die Verwaltung, keine zweite Instanz.",
+            "Rücksichtnahme: Abstandsflächen gewahrt – meist kein Verstoß.",
+            "Normenkontrolle: abstrakt genügt Zweifel, konkret braucht es Überzeugung.",
+            "Lebenslange Strafe nur mit gesetzlich geregelter Chance auf Freiheit."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Obersatz: „soweit“ für teilbare Ergebnisse, „wenn“ für Voraussetzungen.",
+            "Lerngruppe: erst selbst lösen, dann Abweichungen vergleichen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Warum erledigt die Zahlung unter Vollstreckungsdruck den Rechtsstreit nicht?",
+            "Welches Motiv muss beim Motivbündel niedrig sein?",
+            "Wer darf die abstrakte Normenkontrolle beantragen?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Vollstreckung und Rechtskraft",
+            "Strafrecht: Revision und Irrtum",
+            "Öffentliches Recht: Rechtsschutz und Würde",
+            "Methodik und Lerngruppe"
+          ],
+          "icons": [
+            "vertrag",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Sätze aus vier Bereichen. Zivilrecht von § 282 BGB bis zur Zahlung unter Vollstreckungsdruck, Strafrecht vom Erfüllungsbetrug bis zur Putativnotwehr, Öffentliches Recht von § 49a VwVfG bis zur lebenslangen Strafe – dazu der Obersatz mit „soweit“ und eine bessere Lerngruppe. Geh die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Sätze zum Wiederholen",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Am Wochenende wird sortiert: Was sitzt, kommt ins Regal, was wackelt, kommt auf den Stapel zum Wiederholen.",
+        "handlung": "{A} carries a basket of crystals to four shelves, while {B} curiously picks out one cloudy crystal and places it on a small separate stack.",
+        "hinweisRegie": "Place the note in the free space above the four shelves, slightly tilted toward the small separate stack, so sorting and repeating are linked without covering either character.",
+        "alternative": "{B} hangs cards on four hooks while {A} turns one card over to check the back."
+      },
+      "bildSzene": "crystals sorted onto four shelves",
+      "bildSzeneAlt": "cards on four hooks, one turned",
+      "quellen": [
+        "§ 282 BGB",
+        "§§ 767, 769 ZPO",
+        "§ 322 ZPO",
+        "§ 263 StGB",
+        "§§ 333, 335 StPO",
+        "§ 32d StPO",
+        "§ 211 StGB",
+        "§ 26 StGB",
+        "§ 49a VwVfG",
+        "Art. 19 Abs. 4 GG",
+        "Art. 100 Abs. 1 GG",
+        "§ 57a StGB",
+        "§ 113 Abs. 1 VwGO"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "wochenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:27.853Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-392",
+      "slug": "2027-08-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Amtspflicht verletzt – aber nicht gegenüber dem Kläger",
+          "titelZeilen": [
+            "Amtspflicht",
+            "verletzt – aber",
+            "nicht gegenüber",
+            "dem Kläger"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Pflicht gerade dem Kläger gegenüber",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Der Amtshaftungsanspruch folgt aus § 839 BGB in Verbindung mit Art. 34 GG: Der Beamte haftet nach § 839 BGB, Art. 34 S. 1 GG leitet die Haftung auf den Staat über. Oft scheitert der Anspruch nicht an der Pflichtverletzung, sondern daran, wem gegenüber die Pflicht bestand."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Ausübung eines öffentlichen Amtes",
+              "text": "Haftungsrechtlicher Beamtenbegriff: Wer hoheitlich handelt, auch ohne Beamtenstatus – etwa ein beliehener Unternehmer."
+            },
+            {
+              "titel": "2. Verletzung einer Amtspflicht",
+              "text": "Etwa: rechtmäßig handeln, Zuständigkeiten wahren, richtig Auskunft geben."
+            },
+            {
+              "titel": "3. Drittbezogenheit",
+              "text": "Die Pflicht muss gerade dem Geschädigten gegenüber bestehen – nicht nur der Allgemeinheit. Maßgeblich ist der Schutzzweck."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Verschulden",
+              "text": "Vorsatz oder Fahrlässigkeit; objektiver Sorgfaltsmaßstab für einen pflichtgetreuen Durchschnittsbeamten."
+            },
+            {
+              "titel": "5. Kausaler Schaden",
+              "text": "Ersatz in Geld, keine Naturalrestitution durch Amtshandlung."
+            },
+            {
+              "titel": "6. Kein Ausschluss",
+              "text": "Subsidiarität bei Fahrlässigkeit (§ 839 Abs. 1 S. 2), Spruchrichterprivileg (Abs. 2), Rechtsmittelversäumnis (Abs. 3)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Passivlegitimation und Rechtsweg",
+          "text": "Haftende Körperschaft ist grundsätzlich die, die den Amtsträger angestellt hat. Der Rechtsweg zu den ordentlichen Gerichten ist durch Art. 34 S. 3 GG garantiert; zuständig ist das Landgericht ohne Rücksicht auf den Streitwert (§ 71 Abs. 2 Nr. 2 GVG)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht jede verletzte Amtspflicht hilft jedem: Sie muss gerade dem Kläger gegenüber bestanden haben – das ist die Drittbezogenheit."
+        },
+        {
+          "art": "cta",
+          "titel": "Amtshaftung auf einen Blick",
+          "punkte": [
+            "Hoheitlich gehandelt?",
+            "Pflicht gerade dem Kläger gegenüber?",
+            "Verschulden, Schaden, kein Ausschluss?",
+            "Richtige Körperschaft, Landgericht"
+          ],
+          "icons": [
+            "gebaeude",
+            "zielscheibe",
+            "waage",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Amtspflicht verletzt – aber nicht gegenüber dem Kläger: Daran kann der Amtshaftungsanspruch scheitern. § 839 BGB mit Art. 34 GG verlangt, dass die verletzte Pflicht gerade dem Geschädigten gegenüber bestand. Dazu das ganze Schema: öffentliches Amt, Amtspflicht, Drittbezogenheit, Verschulden, Schaden, kein Ausschluss – und die Klage gegen die Körperschaft vor dem Landgericht. Speichern für die nächste Staatshaftungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatshaftung",
+        "#amtshaftung",
+        "#839bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 839 BGB mit Art. 34 GG: das Prüfschema",
+      "coverText": "Pflicht gerade dem Kläger gegenüber",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Eine verletzte Amtspflicht trägt den Anspruch nur, wenn sie gerade den Geschädigten schützen sollte.",
+        "handlung": "{A} hovers beside a protective fence that runs along a road, while {B} checks whether the fence actually stands in front of the house of the person claiming damage.",
+        "hinweisRegie": "Place the note in the free space between the fence and the house, slightly tilted toward the gap, so the question of whom the fence protects stays visible without covering {B}'s measuring hand.",
+        "alternative": "{B} holds an umbrella over one traveller while {A} points to another traveller standing in the rain."
+      },
+      "bildSzene": "fence along road, gap at house",
+      "bildSzeneAlt": "umbrella over one traveller only",
+      "quellen": [
+        "§ 839 BGB",
+        "Art. 34 GG",
+        "§ 71 Abs. 2 Nr. 2 GVG",
+        "Themenpool: verwalt-392"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "drittbezug-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:27.853Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-554",
+      "slug": "2027-08-01-b3",
+      "titelZeilen": [
+        "Berufung zurück-",
+        "genommen – Urteil",
+        "wird rechtskräftig"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Berufung zurückgenommen – Urteil wird rechtskräftig",
+          "unter": "Zivilprozessrecht · § 516 ZPO",
+          "text": "Berufungsrücknahme und Klagerücknahme wirken entgegengesetzt.",
+          "norm": "§ 516 ZPO · § 269 ZPO",
+          "icon": "dokument",
+          "sprecher": "Berufung oder Klage zurücknehmen – das ist nicht dasselbe. Nimmt man die Berufung zurück, bleibt das Urteil stehen. Nimmt der Kläger die Klage zurück, fällt es weg.",
+          "marken": [
+            "Urteil bleibt",
+            "Urteil fällt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Berufungsrücknahme",
+          "text": "Bis zur Verkündung des Berufungsurteils, ohne Einwilligung des Gegners.",
+          "norm": "§ 516 Abs. 1 ZPO",
+          "sprecher": "Schritt eins: Die Berufung kann der Berufungsführer bis zur Verkündung des Berufungsurteils zurücknehmen. Eine Einwilligung des Gegners braucht er dafür nicht.",
+          "marken": [
+            "ohne Einwilligung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Folge: Rechtsmittel verloren",
+          "text": "Verlust des Rechtsmittels, Kosten der Berufung – durch Beschluss ausgesprochen.",
+          "norm": "§ 516 Abs. 3 ZPO",
+          "sprecher": "Schritt zwei: Er verliert das eingelegte Rechtsmittel und trägt die Kosten der Berufung. Das Gericht spricht diese Folgen durch Beschluss aus. Ist die Berufungsfrist abgelaufen, wird das erstinstanzliche Urteil rechtskräftig.",
+          "marken": [
+            "rechtskräftig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Klagerücknahme in der Berufung",
+          "text": "Bis zur Rechtskraft möglich – nach Verhandlung zur Hauptsache nur mit Einwilligung.",
+          "norm": "§ 269 Abs. 1 ZPO",
+          "sprecher": "Schritt drei: Die Klage selbst kann der Kläger auch noch in der Berufungsinstanz zurücknehmen. Hat der Beklagte schon zur Hauptsache verhandelt, braucht er aber dessen Einwilligung.",
+          "marken": [
+            "mit Einwilligung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Folge: Urteil wirkungslos",
+          "text": "Rechtsstreit gilt als nicht anhängig geworden; Kosten grundsätzlich beim Kläger.",
+          "norm": "§ 269 Abs. 3 ZPO",
+          "sprecher": "Schritt vier: Dann gilt der Rechtsstreit als nicht anhängig geworden. Das Urteil erster Instanz wird wirkungslos, und der Kläger trägt grundsätzlich die Kosten beider Instanzen.",
+          "marken": [
+            "wirkungslos"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Beispiel",
+          "text": "K hat verloren und ist in Berufung: Welche Rücknahme hilft ihm?",
+          "norm": null,
+          "sprecher": "Beispiel: K hat in erster Instanz verloren und Berufung eingelegt. Nimmt er die Berufung zurück, wird die Abweisung rechtskräftig, eine neue Klage scheitert an der Rechtskraft. Nimmt er mit Einwilligung des Beklagten die Klage zurück, ist das Urteil wirkungslos, und er kann grundsätzlich neu klagen.",
+          "marken": [
+            "neue Klage?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Berufung zurück: Urteil bleibt. Klage zurück: Urteil fällt.",
+          "norm": null,
+          "sprecher": "Merke: Berufung zurück, Urteil bleibt. Klage zurück, Urteil fällt – samt Kosten beim Kläger.",
+          "marken": [
+            "bleibt vs. fällt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Berufungsklausur",
+          "text": "Speichern und vor jeder Rücknahme fragen: welche?",
+          "norm": null,
+          "sprecher": "Speicher dir das und frag in der Klausur immer zuerst: Was genau wird zurückgenommen?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Berufung zurückgenommen – das Urteil wird rechtskräftig, sobald die Berufungsfrist abgelaufen ist (§ 516 ZPO). Klage zurückgenommen – das Urteil wird wirkungslos, der Rechtsstreit gilt als nicht anhängig geworden (§ 269 Abs. 3 ZPO). Wer in erster Instanz verloren hat, sollte den Unterschied kennen. Speichern für die nächste Berufungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#berufung",
+        "#klagerücknahme",
+        "#zivilprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Berufungsrücknahme oder Klagerücknahme?",
+      "coverText": "Urteil bleibt oder fällt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer seine Berufung zurücknimmt, lässt das Urteil stehen – wer die Klage zurücknimmt, räumt es ab.",
+        "handlung": "{A} nervously steps back down a staircase, leaving a heavy stone tablet standing at its foot, while {B} curiously lifts a different tablet off its pedestal entirely.",
+        "hinweisRegie": "Place the note in the free space between the standing tablet and the lifted one, slightly tilted toward the standing tablet, so the contrast between staying and falling is clear without covering either character.",
+        "alternative": "{B} closes a second door behind her while {A} tears down the whole doorway instead."
+      },
+      "bildSzene": "one tablet stays, other lifted away",
+      "bildSzeneAlt": "door closed versus doorway removed",
+      "quellen": [
+        "§ 516 ZPO",
+        "§ 269 ZPO",
+        "Themenpool: zpo-554"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslung-folgen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:27.855Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-537",
+      "ueberzeile": "Prüfungsfrage Gesellschaftsrecht",
+      "titel": "Die Gesellschafter erlauben Geschäftsführer G nur Käufe bis 50.000 €. Er kauft für 80.000 €. GmbH gebunden?",
+      "optionen": [
+        "Nein – G handelt ohne Vertretungsmacht, §§ 177 ff. BGB",
+        "Ja – die Vertretungsmacht ist Dritten gegenüber unbeschränkbar",
+        "Nur, wenn die Grenze nicht im Handelsregister steht"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 35 GmbHG",
+        "§ 37 GmbHG",
+        "§ 43 GmbHG",
+        "Themenpool: handelsg-537"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:27.855Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-537",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – intern beschränkt, nach außen unbeschränkt",
+      "text": "Der Geschäftsführer vertritt die GmbH (§ 35 Abs. 1 GmbHG). Beschränkungen seiner Vertretungsbefugnis wirken gegenüber Dritten nicht (§ 37 Abs. 2 GmbHG). Die GmbH ist gebunden. Intern hat G seine Pflichten verletzt und haftet nach § 43 Abs. 2 GmbHG. Grenze: Missbrauch der Vertretungsmacht – etwa bei Kollusion oder wenn der Missbrauch dem Vertragspartner evident ist.",
+      "norm": "§ 37 Abs. 2 GmbHG · § 43 Abs. 2 GmbHG",
+      "quellen": [
+        "§ 35 GmbHG",
+        "§ 37 GmbHG",
+        "§ 43 GmbHG",
+        "Themenpool: handelsg-537"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:27.855Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – G handelt ohne Vertretungsmacht, §§ 177 ff. BGB",
+        "Ja – die Vertretungsmacht ist Dritten gegenüber unbeschränkbar",
+        "Nur, wenn die Grenze nicht im Handelsregister steht"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-132",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 22 StGB bei der aberratio ictus: Versuch am Anvisierten, Fahrlässigkeit am Getroffenen",
+      "text": "A zielt auf B, der Schuss geht fehl und trifft den danebenstehenden C. Nach h.M. (Konkretisierungstheorie) hat A seinen Vorsatz auf B konkretisiert: versuchter Totschlag an B (§§ 212, 22 StGB), dazu fahrlässige Tötung an C (§ 222 StGB). Die Gleichwertigkeitstheorie nimmt dagegen vollendete Vorsatztat an C an, wenn beide Objekte tatbestandlich gleichwertig sind.",
+      "norm": "§§ 212, 22 StGB · § 222 StGB",
+      "quellen": [
+        "§ 16 StGB",
+        "§ 22 StGB",
+        "§ 212 StGB",
+        "§ 222 StGB",
+        "Themenpool: strafat-132"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:27.855Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-927",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Verfahren eingestellt: Muss die StA den Anzeigeerstatter überhaupt informieren?",
+      "falsch": "Die Staatsanwaltschaft stellt nach § 170 Abs. 2 StPO ein und benachrichtigt nur den Beschuldigten. Der Anzeigeerstatter erfährt davon zufällig – und seine Beschwerdefrist läuft längst.",
+      "richtigText": "Hat der Anzeigeerstatter die Erhebung der öffentlichen Klage beantragt, erhält er einen Bescheid mit Gründen (§ 171 S. 1 StPO). Ist er zugleich Verletzter, wird er über die Beschwerde und ihre Frist belehrt (§ 171 S. 2 StPO). Fehlt diese Belehrung, läuft die Beschwerdefrist nicht.",
+      "quellen": [
+        "§ 170 StPO",
+        "§ 171 StPO",
+        "§ 172 StPO",
+        "Themenpool: stpo-927"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:27.855Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-347",
+      "ueberzeile": "Klausurtipp StPO",
+      "titel": "Wunsch nach einem Anwalt: erst Kontakt ermöglichen, dann weiterfragen",
+      "text": "Der Beschuldigte ist darauf hinzuweisen, dass er jederzeit, auch vor der Vernehmung, einen Verteidiger befragen kann (§ 136 Abs. 1 S. 2 StPO). Äußert er diesen Wunsch, muss die Vernehmung warten, bis er Gelegenheit zum Kontakt hatte oder sich nach erneutem Hinweis ausdrücklich mit der Fortsetzung einverstanden erklärt. Wird der Wunsch übergangen, droht ein Verwertungsverbot.",
+      "quellen": [
+        "§ 136 StPO",
+        "Themenpool: stpo-347"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:27.855Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-818",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Streitverkündungsschrift: Was nach § 73 ZPO hinein muss",
+      "text": "Der Dritte kann beitreten (§ 74 Abs. 1 ZPO). Tut er es nicht, wird der Prozess ohne ihn fortgesetzt – die Wirkung des § 68 ZPO trifft ihn trotzdem (§ 74 Abs. 3 ZPO).",
+      "punkte": [
+        "Schriftsatz beim Gericht einreichen",
+        "Grund der Streitverkündung angeben",
+        "Lage des Rechtsstreits schildern",
+        "Wirksam erst mit Zustellung an den Dritten"
+      ],
+      "quellen": [
+        "§ 72 ZPO",
+        "§ 73 ZPO",
+        "§ 74 ZPO",
+        "§ 68 ZPO",
+        "Themenpool: assessorz-818"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:27.855Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

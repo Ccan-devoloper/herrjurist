@@ -1,0 +1,874 @@
+{
+  "datum": "2027-05-21",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "strafat-730",
+        "themaTitel": "Täterschaft und Teilnahme: Abgrenzung",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "staat-357",
+        "themaTitel": "Wann ist ein Gesetz zustimmungsbedürftig?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuldbt-479",
+        "themaTitel": "Eigentumsvorbehalt beim Kauf",
+        "fach": "schuldbt",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "stpo-076"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "stpo-076"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "schuldbt-465"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "merksatz",
+        "themaId": "schuld-186"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:59",
+        "art": "begriff",
+        "themaId": "strafat-720"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "fehler",
+        "themaId": "verwbt-932"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "strafat-730",
+      "poolTitel": "Täterschaft und Teilnahme: Abgrenzung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 25 ff. StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-20"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-357",
+      "poolTitel": "Wann ist ein Gesetz zustimmungsbedürftig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 84 GG",
+        "Art. 104a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-29",
+        "2027-02-20",
+        "2027-02-20"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuldbt-479",
+      "poolTitel": "Eigentumsvorbehalt beim Kauf",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 433, 449, 929, 158 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-076",
+      "poolTitel": "Welche Beweisverwertungsverbote gibt es und wie prüft man sie?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO",
+        "§ 100a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-27",
+        "2027-02-28",
+        "2027-02-28"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-076",
+      "poolTitel": "Welche Beweisverwertungsverbote gibt es und wie prüft man sie?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO",
+        "§ 100a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-27",
+        "2027-02-28",
+        "2027-02-28"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-465",
+      "poolTitel": "Unverhältnismäßigkeit der Nacherfüllung",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 IV BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-13",
+        "2027-05-03"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "schuld-186",
+      "poolTitel": "Wie wirkt sich ein Rücktritt auf bereits erbrachte Leistungen aus?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 346 BGB",
+        "§ 347 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-11",
+        "2027-03-20"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafat-720",
+      "poolTitel": "Zeitpunkt des Vorsatzes",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 15, 16 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-21"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "verwbt-932",
+      "poolTitel": "Mittel der Kommunalaufsicht und der Rechtsschutz der Gemeinde",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-07",
+        "2027-01-15",
+        "2027-03-19"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-730",
+      "slug": "2027-05-21-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nur Schmiere gestanden – Mittäter oder Gehilfe?",
+          "titelZeilen": [
+            "Nur Schmiere",
+            "gestanden – Mittäter",
+            "oder Gehilfe?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Tatplan und Beuteanteil zählen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A, B und C planen, nachts in das Lager eines Elektronikhändlers einzubrechen. B und C hebeln die Tür auf und tragen Laptops heraus. A steht wie verabredet an der Straßenecke und soll bei Gefahr warnen. Die Beute teilen sie zu gleichen Teilen. Wie ist A beteiligt?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wie grenzen die Ansichten ab?",
+          "links": {
+            "titel": "Rspr.",
+            "punkte": [
+              "Wertende Gesamtbetrachtung aller Umstände.",
+              "Indizien: Tatinteresse, Umfang der Beteiligung, Tatherrschaft oder Wille dazu."
+            ]
+          },
+          "rechts": {
+            "titel": "Tatherrschaftslehre",
+            "punkte": [
+              "Mittäter ist, wer die Tat mitbeherrscht.",
+              "Wesentlicher Beitrag nach dem Tatplan, grds. im Ausführungsstadium."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung für A",
+          "schritte": [
+            {
+              "titel": "Gemeinsamer Tatplan",
+              "text": "A, B und C haben den Einbruch gemeinsam verabredet – auch die Rolle des A."
+            },
+            {
+              "titel": "Beitrag des A",
+              "text": "Er sichert die Tat während der Ausführung ab. Ohne Warnposten wäre der Plan riskanter."
+            },
+            {
+              "titel": "Wertung",
+              "text": "Rspr.: gleiche Beuteteilung zeigt ein eigenes Tatinteresse. Lit.: Die Absicherung ist nach dem Plan ein wesentlicher Beitrag."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Gut vertretbar nach beiden Ansichten: A ist Mittäter eines Diebstahls in einem besonders schweren Fall (§§ 242, 243 Abs. 1 S. 2 Nr. 1, 25 Abs. 2 StGB). Wer seinen Beitrag als untergeordnet wertet, kommt zur Beihilfe (§ 27 StGB). Punkte gibt es für die Argumentation mit dem Sachverhalt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schmiere stehen ist nicht automatisch Beihilfe. Tatplan, Gewicht des Beitrags und Interesse an der Beute entscheiden."
+        },
+        {
+          "art": "cta",
+          "titel": "Täter oder Teilnehmer in drei Zügen",
+          "punkte": [
+            "Gemeinsamer Tatplan?",
+            "Gewicht des Beitrags?",
+            "Interesse am Taterfolg?"
+          ],
+          "icons": [
+            "personen",
+            "waage",
+            "geldbeutel"
+          ]
+        }
+      ],
+      "caption": "Nur Schmiere gestanden – Mittäter oder Gehilfe? Die Rspr. entscheidet in einer wertenden Gesamtbetrachtung, vor allem nach Tatinteresse, Umfang der Beteiligung und Tatherrschaft. Die Tatherrschaftslehre fragt, ob der Beitrag nach dem Tatplan wesentlich war. Wer als verabredeter Warnposten die Tat absichert und die Beute gleich teilt, ist nach beiden Ansichten gut vertretbar Mittäter. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#mittäterschaft",
+        "#25stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schmiere stehen: Mittäter oder Gehilfe?",
+      "coverText": "Tatplan und Beuteanteil zählen",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer nach dem gemeinsamen Plan die Tat absichert und gleich an der Beute beteiligt ist, kann Mittäter sein, obwohl er nicht selbst zugreift.",
+        "handlung": "{A} nervously keeps watch at a corner with a small signal lamp, while {B} curiously peeks back from a half-open warehouse door toward him.",
+        "hinweisRegie": "Place the note in the free space between the signal lamp and the warehouse door, slightly tilted toward the lamp, so the lookout role is linked to the deed without covering either face.",
+        "alternative": "{B} splits a pile of glowing crystals into three equal heaps, while {A} still holds the signal lamp from his post."
+      },
+      "bildSzene": "lookout with signal lamp at corner",
+      "bildSzeneAlt": "three equal heaps of crystals",
+      "quellen": [
+        "§ 25 Abs. 2 StGB",
+        "§ 27 StGB",
+        "§§ 242, 243 StGB",
+        "Themenpool: strafat-730"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:26.320Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-357",
+      "slug": "2027-05-21-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Altes Gesetz zustimmungsbedürftig – die Änderung nicht unbedingt",
+          "titelZeilen": [
+            "Altes Gesetz",
+            "zustimmungsbedürftig",
+            "– die Änderung",
+            "nicht unbedingt"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Änderung eigenständig prüfen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Gesetz X kam mit Zustimmung des Bundesrates zustande, weil es das Verfahren der Landesbehörden ohne Abweichungsmöglichkeit regelt (Art. 84 Abs. 1 S. 6 GG). Nun erhöht der Bundestag nur die Höhe eines Bußgelds in X. Der Bundesrat meint, auch das brauche seine Zustimmung. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Grundsatz",
+              "text": "Bundesgesetze sind Einspruchsgesetze. Zustimmung ist nur nötig, wo das GG sie ausdrücklich verlangt."
+            },
+            {
+              "titel": "Änderungsgesetz selbst",
+              "text": "Enthält es eigene zustimmungsbedürftige Vorschriften? Hier nicht – es regelt nur die Bußgeldhöhe."
+            },
+            {
+              "titel": "Tragweite der Altregelung",
+              "text": "Nach dem BVerfG auch dann, wenn es die zustimmungsbedürftigen Regeln ändert oder ihnen eine wesentlich andere Tragweite gibt."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Die Verfahrensregeln bleiben unberührt: Das Änderungsgesetz ist ein Einspruchsgesetz."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Warum nicht einfach „einmal Zustimmung, immer Zustimmung“?",
+          "text": "Das BVerfG sieht in der Zustimmung zum Ursprungsgesetz keine Mitverantwortung für jede spätere Änderung. Sonst würde der Kreis der Zustimmungsgesetze immer weiter wachsen – gegen das Enumerationsprinzip des GG."
+        },
+        {
+          "art": "text",
+          "titel": "Was dem Bundesrat bleibt",
+          "text": "Er kann den Vermittlungsausschuss anrufen (Art. 77 Abs. 2 GG) und danach Einspruch einlegen (Art. 77 Abs. 3 GG). Der Bundestag kann den Einspruch zurückweisen (Art. 77 Abs. 4 GG)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Das Änderungsgesetz ist eigenständig zu prüfen: zustimmungsbedürftig nur mit eigenen Zustimmungstatbeständen oder bei wesentlicher Umgestaltung."
+        },
+        {
+          "art": "cta",
+          "titel": "Zustimmung in drei Zügen",
+          "punkte": [
+            "Verlangt das GG sie ausdrücklich?",
+            "Enthält die Änderung selbst so etwas?",
+            "Neue Tragweite für Altregelungen?"
+          ],
+          "icons": [
+            "paragraf",
+            "lupe",
+            "gebaeude"
+          ]
+        }
+      ],
+      "caption": "Das alte Gesetz war zustimmungsbedürftig – die Änderung ist es nicht unbedingt. Nach dem BVerfG braucht ein Änderungsgesetz die Zustimmung des Bundesrates nur, wenn es selbst zustimmungsbedürftige Vorschriften enthält oder die zustimmungsbedürftigen Regelungen des Altgesetzes wesentlich umgestaltet. Sonst bleibt es beim Einspruchsgesetz mit Vermittlungsausschuss und Einspruch nach Art. 77 GG. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#bundesrat",
+        "#gesetzgebung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Änderungsgesetz: Zustimmung des Bundesrates?",
+      "coverText": "Änderung eigenständig prüfen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Nur weil das ursprüngliche Gesetz zustimmungsbedürftig war, braucht nicht jede spätere Änderung die Zustimmung.",
+        "handlung": "{A} replaces one small tile in a large sealed mosaic, while {B} checks whether the seal on the rest of the mosaic is touched at all.",
+        "hinweisRegie": "Place the note in the free space next to the replaced tile, slightly tilted toward the intact seal, so the limited change is visible without covering {B}'s inspecting hand.",
+        "alternative": "{B} repaints a single door of a sealed building, while {A} confirms the building's foundation remains untouched."
+      },
+      "bildSzene": "one tile replaced, seal intact",
+      "bildSzeneAlt": "single door repainted, foundation untouched",
+      "quellen": [
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Art. 84 Abs. 1 GG",
+        "BVerfG-Rspr. (Änderungsgesetze)",
+        "Themenpool: staat-357"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:26.320Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-479",
+      "slug": "2027-05-21-b3",
+      "titelZeilen": [
+        "Eigentumsvorbehalt:",
+        "Bedingt ist nur",
+        "die Übereignung"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Eigentumsvorbehalt: Bedingt ist nur die Übereignung",
+          "unter": "Eigentumsvorbehalt · § 449 BGB",
+          "text": "Der Kaufvertrag gilt sofort – das Eigentum folgt erst mit voller Zahlung.",
+          "norm": "§ 449 Abs. 1 BGB",
+          "icon": "schluessel",
+          "sprecher": "Beim Eigentumsvorbehalt ist nicht der Kaufvertrag bedingt. Bedingt ist nur die Übereignung. Und daraus folgt fast alles, was du in der Klausur brauchst.",
+          "marken": [
+            "nur Übereignung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Kaufvertrag unbedingt",
+          "text": "Der Verkäufer schuldet Übereignung, der Käufer den Kaufpreis – sofort wirksam.",
+          "norm": "§ 433 BGB",
+          "sprecher": "Schritt eins: Der Kaufvertrag ist unbedingt wirksam. Der Verkäufer schuldet die Übereignung, der Käufer den Kaufpreis, oft in Raten.",
+          "marken": [
+            "§ 433 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Übereignung aufschiebend bedingt",
+          "text": "Einigung unter der Bedingung vollständiger Zahlung.",
+          "norm": "§§ 929, 158 Abs. 1 BGB",
+          "sprecher": "Schritt zwei: Die Einigung nach Paragraf 929 steht unter der aufschiebenden Bedingung vollständiger Kaufpreiszahlung, Paragraf 158 Absatz 1. Das ist die Auslegungsregel des Paragraf 449 Absatz 1.",
+          "marken": [
+            "aufschiebend"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Anwartschaftsrecht und Besitzrecht",
+          "text": "Der Käufer hat schon eine gesicherte Position – und darf die Sache behalten.",
+          "norm": "§ 986 BGB",
+          "sprecher": "Schritt drei: Bis zur letzten Rate hat der Käufer ein Anwartschaftsrecht. Gegenüber dem Herausgabeverlangen des Verkäufers schützt ihn das Besitzrecht aus dem Kaufvertrag, Paragraf 986.",
+          "marken": [
+            "Anwartschaft"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Zurück nur nach Rücktritt",
+          "text": "Zahlt der Käufer nicht, muss der Verkäufer erst zurücktreten.",
+          "norm": "§ 449 Abs. 2 BGB",
+          "sprecher": "Schritt vier: Zahlt der Käufer nicht, kann der Verkäufer die Sache nur herausverlangen, wenn er vom Vertrag zurückgetreten ist. So steht es in Paragraf 449 Absatz 2, der Rücktritt läuft über Paragraf 323.",
+          "marken": [
+            "erst Rücktritt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die letzte Rate",
+          "text": "Mit Eintritt der Bedingung wird der Käufer Eigentümer – automatisch.",
+          "norm": "§ 158 Abs. 1 BGB",
+          "sprecher": "Und mit der letzten Rate? Dann tritt die Bedingung ein, der Käufer wird automatisch Eigentümer. Eine neue Einigung braucht es nicht.",
+          "marken": [
+            "automatisch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Vertrag unbedingt, Einigung bedingt, Rücktritt vor Herausgabe.",
+          "norm": "§ 449 BGB",
+          "sprecher": "Merke: Kaufvertrag unbedingt, Übereignung aufschiebend bedingt, Herausgabe erst nach Rücktritt.",
+          "marken": [
+            "drei Sätze"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Ratenkauf abrufen",
+          "text": "Speichern für die nächste Sachenrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Sachenrechtsklausur. Und trenn beim Eigentumsvorbehalt immer sauber zwischen Verpflichtung und Verfügung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Beim Eigentumsvorbehalt ist nicht der Kaufvertrag bedingt, sondern nur die Übereignung. Der Kaufvertrag gilt sofort, die Einigung steht unter der aufschiebenden Bedingung vollständiger Zahlung (§§ 929, 158 Abs. 1, 449 Abs. 1 BGB). Bis dahin hat der Käufer ein Anwartschaftsrecht und ein Besitzrecht; herausverlangen kann der Verkäufer die Sache nur nach Rücktritt (§ 449 Abs. 2 BGB). Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#kaufrecht",
+        "#sachenrecht",
+        "#eigentumsvorbehalt",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Eigentumsvorbehalt: Was genau ist bedingt?",
+      "coverText": "Verpflichtung sofort, Eigentum später",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Beim Eigentumsvorbehalt gilt der Kaufvertrag sofort, das Eigentum geht erst mit der letzten Zahlung über.",
+        "handlung": "{A} already carries a crystal lamp home in his arms, while {B} holds a small key tied to the last of several coins on a string.",
+        "hinweisRegie": "Place the note in the free space between the crystal lamp and the coin string, slightly tilted toward the last coin, so possession now and ownership later are both visible without covering {A}'s arms.",
+        "alternative": "{B} hands over a cart with a small padlock still attached, while {A} counts the remaining payment stones needed to open it."
+      },
+      "bildSzene": "lamp carried home, key on last coin",
+      "bildSzeneAlt": "cart with small padlock, payment stones",
+      "quellen": [
+        "§ 433 BGB",
+        "§ 449 BGB",
+        "§§ 929, 158 BGB",
+        "§ 986 BGB",
+        "Themenpool: schuldbt-479"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:26.321Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-076",
+      "ueberzeile": "Prüfungsfrage Strafprozessrecht",
+      "titel": "Beim Eintreffen der Polizei ruft A ungefragt: „Ich hab ihn erstochen!“ Belehrt war er nicht. Verwertbar?",
+      "optionen": [
+        "Ja – eine Spontanäußerung ist keine Vernehmung",
+        "Nein – ohne Belehrung ist jede Äußerung unverwertbar",
+        "Nur, wenn A in der Hauptverhandlung zustimmt"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 136 StPO",
+        "§ 163a Abs. 4 StPO",
+        "Themenpool: stpo-076"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:26.321Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-076",
+      "ueberzeile": "Auflösung",
+      "titel": "Verwertbar – ungefragt gesagt ist nicht vernommen",
+      "text": "Die Belehrungspflicht (§ 136 Abs. 1 S. 2, § 163a Abs. 4 StPO) knüpft an eine Vernehmung an. Äußert sich A spontan, ohne Frage der Polizei, fehlt es daran; der Beamte kann als Zeuge berichten. Anders, wenn die Polizei gezielt nachfragt, obwohl A schon Beschuldigter ist: Ohne Belehrung droht dann ein Verwertungsverbot.",
+      "norm": "§ 136 Abs. 1 S. 2 StPO · § 163a Abs. 4 StPO",
+      "quellen": [
+        "§ 136 StPO",
+        "§ 163a Abs. 4 StPO",
+        "Themenpool: stpo-076"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:26.321Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – eine Spontanäußerung ist keine Vernehmung",
+        "Nein – ohne Belehrung ist jede Äußerung unverwertbar",
+        "Nur, wenn A in der Hauptverhandlung zustimmt"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-465",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 443 BGB: Die Herstellergarantie verdrängt die Mängelrechte gegen den Verkäufer nicht",
+      "text": "Eine Garantie gibt dem Käufer zusätzliche Rechte – unbeschadet der gesetzlichen Ansprüche (§ 443 Abs. 1 BGB). Er kann sich also an den Garantiegeber halten oder beim Verkäufer Nacherfüllung verlangen. Bei einer Haltbarkeitsgarantie wird vermutet, dass ein während ihrer Geltungsdauer auftretender Sachmangel die Garantierechte begründet (§ 443 Abs. 2 BGB).",
+      "norm": "§ 443 BGB",
+      "quellen": [
+        "§ 443 BGB",
+        "§ 437 BGB",
+        "Themenpool: schuldbt-465"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:14:48.619Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-186",
+      "ueberzeile": "Merksatz Schuldrecht AT",
+      "titel": "§ 366 Abs. 2 BGB: Ohne Bestimmung gilt eine feste Reihenfolge",
+      "text": "Zahlt der Schuldner ohne Bestimmung, wird zuerst die fällige Schuld getilgt, dann die weniger gesicherte, dann die lästigere, dann die ältere.",
+      "norm": "§ 366 BGB",
+      "quellen": [
+        "§ 366 BGB",
+        "§ 362 BGB",
+        "Themenpool: schuld-186"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:14:48.619Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-720",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Koinzidenzprinzip: Vorsatz bei Begehung der Tat",
+      "text": "Der Vorsatz muss bei Begehung der Tat vorliegen (§ 16 Abs. 1 S. 1 StGB), also zur Zeit der Tathandlung (§ 8 StGB). Ein vorher gefasster, aber bei der Handlung aufgegebener Vorsatz (dolus antecedens) genügt nicht, ebenso wenig ein erst nachträglich gebildeter (dolus subsequens). Bedeutung hat das etwa beim mehraktigen Geschehen und bei der actio libera in causa.",
+      "norm": "§ 16 Abs. 1 S. 1 StGB · § 8 StGB",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 16 StGB",
+        "§ 8 StGB",
+        "Themenpool: strafat-720"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:26.321Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-932",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Rechtsaufsicht beanstandet einen Ratsbeschluss: Kann die Gemeinde dagegen klagen?",
+      "falsch": "Nein – die Gemeinde gehört zur Staatsverwaltung. Gegen ihre eigene Aufsichtsbehörde kann sie nicht klagen.",
+      "richtigText": "In Selbstverwaltungsangelegenheiten ist die Gemeinde eigenständiger Rechtsträger. Maßnahmen der Rechtsaufsicht wie Beanstandung, Anordnung oder Ersatzvornahme sind ihr gegenüber Verwaltungsakte. Sie kann Anfechtungsklage erheben; die Klagebefugnis folgt aus der Selbstverwaltungsgarantie (Art. 28 Abs. 2 GG). Einzelheiten regeln die Gemeindeordnungen der Länder.",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "§ 42 VwGO",
+        "Gemeindeordnungen der Länder",
+        "Themenpool: verwbt-932"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:26.321Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

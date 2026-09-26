@@ -400,14 +400,15 @@
       "folien": [
         {
           "art": "titel",
-          "titel": "Beklagter zahlt – der Kläger trägt die Kosten",
+          "titel": "Zahlung nach Zustellung? Erledigen statt zurücknehmen",
           "titelZeilen": [
-            "Beklagter zahlt –",
-            "der Kläger trägt",
-            "die Kosten"
+            "Zahlung nach",
+            "Zustellung?",
+            "Erledigen statt",
+            "zurücknehmen"
           ],
           "coverBadge": "Mini-Fall",
-          "coverText": "Erledigung statt Rücknahme",
+          "coverText": "Rücknahme kostet den Kläger",
           "coverBildAuslassen": true
         },
         {
@@ -475,8 +476,8 @@
         "#klausurtraining",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Klagerücknahme: Wer trägt die Kosten?",
-      "coverText": "Erledigung statt Rücknahme",
+      "kurztitel": "Klagerücknahme nach Zahlung: Kostenfalle",
+      "coverText": "Rücknahme kostet den Kläger",
       "coverBadge": "Mini-Fall",
       "coverRegie": {
         "charaktere": [
@@ -497,7 +498,7 @@
         "Themenpool: zpo-554"
       ],
       "hookTyp": "fehler",
-      "hookMuster": "konsequenz",
+      "hookMuster": "konkrete-wendung",
       "freigabeBetreiber": false,
       "vorproduktionStatus": "review",
       "textProviderKostenUsd": 0,
@@ -520,137 +521,135 @@
       "szenen": [
         {
           "art": "hook",
-          "titel": "Putativnotwehr: Vorsatz weg, Fahrlässigkeit bleibt",
-          "unter": "Erlaubnistatbestandsirrtum · § 16 StGB",
-          "text": "Irrtum über die Lage, nicht über das Recht: keine Vorsatzstrafe, aber Fahrlässigkeit prüfen.",
-          "norm": "§ 16 Abs. 1 StGB analog",
-          "icon": "schild",
-          "sprecher": "Putativnotwehr: Der Vorsatz fällt weg, die Fahrlässigkeit nicht. A hält einen harmlosen Passanten für einen Angreifer und schlägt zu. Das ist der Erlaubnistatbestandsirrtum.",
+          "nummer": null,
+          "titel": "Irrtum über den Notstand: § 16 StGB hilft hier nicht",
+          "unter": "Putativnotstand · § 35 Abs. 2 StGB",
+          "text": "Wer irrig entschuldigende Umstände annimmt, bleibt strafbar, wenn er den Irrtum vermeiden konnte.",
+          "norm": "§ 35 Abs. 2 StGB",
+          "icon": "warnung",
+          "sprecher": "Hier hilft Paragraf 16 nicht. Wer sich irrig in einer Notlage glaubt, die ihn nur entschuldigen würde, wird anders behandelt als bei der Putativnotwehr.",
           "marken": [
-            "Vorsatz weg",
-            "Fahrlässigkeit?"
-          ],
-          "nummer": null
+            "kein § 16 analog"
+          ]
         },
         {
           "art": "schritt",
           "nummer": 1,
-          "titel": "Einordnen",
-          "text": "Der Täter stellt sich Tatsachen vor, die einen anerkannten Rechtfertigungsgrund erfüllen würden.",
+          "titel": "Rechtfertigung oder Entschuldigung?",
+          "text": "Irrtum über einen Rechtfertigungsgrund und Irrtum über einen Entschuldigungsgrund folgen verschiedenen Regeln.",
           "norm": null,
-          "sprecher": "Schritt eins: einordnen. Der Täter irrt über Tatsachen. Wären sie so, wie er glaubt, wäre er durch einen anerkannten Rechtfertigungsgrund gedeckt, etwa durch Notwehr.",
+          "sprecher": "Schritt eins: einordnen. Irrt der Täter über Umstände eines Rechtfertigungsgrundes, etwa der Notwehr, bist du beim Erlaubnistatbestandsirrtum. Irrt er über Umstände, die ihn nur entschuldigen würden, gilt eine eigene Regel.",
           "marken": [
-            "Irrtum über Tatsachen"
+            "erst einordnen"
           ]
         },
         {
           "art": "schritt",
           "nummer": 2,
-          "titel": "Abgrenzen zum Erlaubnisirrtum",
-          "text": "Irrt er über Existenz oder Grenzen eines Rechtfertigungsgrundes: § 17 StGB.",
-          "norm": "§ 17 StGB",
-          "sprecher": "Schritt zwei: abgrenzen. Glaubt der Täter an einen Rechtfertigungsgrund, den es nicht gibt, oder überdehnt er dessen Grenzen, ist das ein Erlaubnisirrtum. Dafür gilt Paragraf 17.",
+          "titel": "Die Regel des Abs. 2",
+          "text": "Strafbar nur, wenn der Irrtum vermeidbar war.",
+          "norm": "§ 35 Abs. 2 S. 1 StGB",
+          "sprecher": "Schritt zwei: Nimmt der Täter irrig Umstände an, die ihn nach Absatz 1 entschuldigen würden, wird er nur bestraft, wenn er den Irrtum vermeiden konnte.",
           "marken": [
-            "§ 17: Rechtsirrtum"
+            "vermeidbar?"
           ]
         },
         {
           "art": "schritt",
           "nummer": 3,
-          "titel": "Keine Vorsatzstrafe",
-          "text": "Nach h.M. und Rspr. Rechtsfolge des § 16 Abs. 1 StGB entsprechend.",
-          "norm": "§ 16 Abs. 1 StGB analog",
-          "sprecher": "Schritt drei: die Rechtsfolge. Nach herrschender Meinung, im Ergebnis auch nach der Rechtsprechung, entfällt die Strafe aus dem Vorsatzdelikt. Paragraf 16 Absatz 1 wird entsprechend angewendet.",
+          "titel": "Vermeidbar: Milderung",
+          "text": "Die Strafe ist nach § 49 Abs. 1 StGB zu mildern – zwingend.",
+          "norm": "§ 35 Abs. 2 S. 2 StGB",
+          "sprecher": "Schritt drei: War der Irrtum vermeidbar, bleibt es bei der Vorsatztat. Die Strafe ist dann aber zwingend nach Paragraf 49 Absatz 1 zu mildern.",
           "marken": [
-            "§ 16 analog"
+            "zwingend mildern"
           ]
         },
         {
           "art": "schritt",
           "nummer": 4,
-          "titel": "Dann Fahrlässigkeit prüfen",
-          "text": "Beruht der Irrtum auf Sorgfaltswidrigkeit: fahrlässige Tat, etwa § 229 StGB.",
-          "norm": "§ 229 StGB",
-          "sprecher": "Schritt vier: Fahrlässigkeit. Hätte A bei gehöriger Sorgfalt erkennen können, dass kein Angriff vorlag, bleibt die fahrlässige Körperverletzung nach Paragraf 229.",
+          "titel": "Ort in der Prüfung",
+          "text": "In der Schuld – direkt nachdem § 35 Abs. 1 StGB verneint ist.",
+          "norm": "§ 35 Abs. 1 StGB",
+          "sprecher": "Schritt vier: der Ort. Du prüfst das in der Schuld, direkt nachdem der entschuldigende Notstand selbst an der fehlenden Gefahr gescheitert ist.",
           "marken": [
-            "§ 229 StGB"
+            "in der Schuld"
           ]
         },
         {
           "art": "punkt",
-          "titel": "Der Theorienstreit",
-          "text": "Strenge Schuldtheorie: § 17. Eingeschränkte Schuldtheorien: § 16 analog.",
-          "norm": null,
-          "sprecher": "Der Streit dahinter: Die strenge Schuldtheorie behandelt den Fall wie einen Verbotsirrtum nach Paragraf 17. Die eingeschränkten Schuldtheorien kommen über Paragraf 16 zum Wegfall der Vorsatzstrafe.",
+          "nummer": null,
+          "titel": "Der Unterschied zur Putativnotwehr",
+          "text": "Dort entfällt die Vorsatzstrafe nach h.M. ganz – hier nur bei Unvermeidbarkeit.",
+          "norm": "§ 16 Abs. 1 StGB analog",
+          "sprecher": "Der Unterschied: Bei der Putativnotwehr entfällt die Vorsatzstrafe nach herrschender Meinung ganz, es bleibt nur die Fahrlässigkeit. Beim Putativnotstand bleibt der Täter wegen der Vorsatztat strafbar, wenn er den Irrtum vermeiden konnte.",
           "marken": [
-            "Theorienstreit"
-          ],
-          "nummer": null
+            "anders als § 16"
+          ]
         },
         {
           "art": "merke",
+          "nummer": null,
           "titel": "Die Kurzform",
-          "text": "Tatsachenirrtum über die Rechtfertigungslage: Vorsatzstrafe entfällt, Fahrlässigkeit bleibt zu prüfen.",
-          "norm": "§ 16 StGB",
-          "sprecher": "Merke: Irrt der Täter über die Lage, entfällt die Vorsatzstrafe. Die Fahrlässigkeit prüfst du danach trotzdem.",
+          "text": "Irrtum über entschuldigende Umstände: unvermeidbar straflos, vermeidbar gemildert.",
+          "norm": "§ 35 Abs. 2 StGB",
+          "sprecher": "Merke: Beim Irrtum über entschuldigende Umstände ist der Täter nur straflos, wenn der Irrtum unvermeidbar war. Sonst wird die Strafe gemildert.",
           "marken": [
-            "erst Lage, dann Sorgfalt"
-          ],
-          "nummer": null
+            "straflos / gemildert"
+          ]
         },
         {
           "art": "cta",
-          "titel": "Nach dem Vorsatzdelikt: Fahrlässigkeit prüfen",
-          "text": "Speichern für die nächste Klausur im Strafrecht AT.",
-          "sprecher": "Speicher dir das für die nächste Strafrechtsklausur. Und schließ nach einem Erlaubnistatbestandsirrtum nie ohne das Fahrlässigkeitsdelikt ab.",
-          "marken": [
-            "§ 229 nicht vergessen"
-          ],
           "nummer": null,
-          "norm": null
+          "titel": "Erst einordnen: Rechtfertigung oder Schuld?",
+          "text": "Speichern für die nächste Klausur im Strafrecht AT.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im Strafrecht AT. Und frag bei jedem Irrtum zuerst, worauf er sich bezieht.",
+          "marken": [
+            "speichern"
+          ]
         }
       ],
-      "caption": "Putativnotwehr: Der Vorsatz fällt weg, die Fahrlässigkeit bleibt. Wer irrig Tatsachen annimmt, die einen anerkannten Rechtfertigungsgrund erfüllen würden, befindet sich im Erlaubnistatbestandsirrtum. Nach h.M. entfällt die Strafe aus dem Vorsatzdelikt entsprechend § 16 Abs. 1 StGB. Danach prüfst du die fahrlässige Tat, etwa § 229 StGB. Irrt der Täter über Existenz oder Grenzen eines Rechtfertigungsgrundes, gilt § 17 StGB.",
+      "caption": "Irrtum über den Notstand – hier hilft § 16 StGB nicht. Nimmt der Täter irrig Umstände an, die ihn nach § 35 Abs. 1 StGB entschuldigen würden, wird er nur bestraft, wenn er den Irrtum vermeiden konnte; dann ist die Strafe zwingend nach § 49 Abs. 1 StGB zu mildern (§ 35 Abs. 2 StGB). Anders als bei der Putativnotwehr entfällt die Vorsatzstrafe also nicht automatisch. Speichern für die nächste Klausur im Strafrecht AT.",
       "hashtags": [
         "#jura",
         "#jurastudium",
         "#staatsexamen",
         "#strafrecht",
-        "#erlaubnistatbestandsirrtum",
-        "#putativnotwehr",
-        "#16stgb",
+        "#35stgb",
+        "#irrtumslehre",
         "#jurastudent",
+        "#klausurtraining",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Erlaubnistatbestandsirrtum: die Rechtsfolge",
+      "kurztitel": "Putativnotstand: § 35 Abs. 2 StGB",
       "titelZeilen": [
-        "Putativnotwehr:",
-        "Vorsatz weg,",
-        "Fahrlässigkeit bleibt"
+        "Irrtum über den",
+        "Notstand: § 16 StGB",
+        "hilft hier nicht"
       ],
-      "coverText": "Erst § 16 analog, dann § 229",
+      "coverText": "Nur unvermeidbar straflos",
       "coverBadge": "Reel",
       "coverRegie": {
         "charaktere": [
-          "zylla",
-          "flux"
+          "flux",
+          "mara"
         ],
-        "kernidee": "Wer eine harmlose Lage für einen Angriff hält, handelt nicht vorsätzlich – aber vielleicht unsorgfältig.",
-        "handlung": "{A} raises her arms to block a figure she mistakes for an attacker, while {B} lifts a lantern that reveals the figure is only holding out a bouquet of glowing flowers.",
-        "hinweisRegie": "Place the note in the lantern-lit space between {A}'s raised arms and the flower bouquet, slightly tilted toward the flowers, so the mistaken situation is clear without covering any faces.",
-        "alternative": "{A} peers through a foggy lens at a shadow shaped like a monster, while {B} wipes the lens clear to reveal a harmless tree."
+        "kernidee": "Wer sich irrig in einer entschuldigenden Notlage glaubt, bleibt strafbar, wenn er den Irrtum vermeiden konnte.",
+        "handlung": "{B} flees from a harmless cloud of steam she mistakes for fire, while {A} points his pointer at a nearby window through which the steaming kettle is plainly visible.",
+        "hinweisRegie": "Place the note in the free space beside the window with the visible kettle, slightly tilted toward it, without covering {B}'s fleeing figure or {A}'s pointer.",
+        "alternative": "{A} holds up two different lenses, one marked with a shield symbol and one with a heart symbol, while {B} decides which lens to look through."
       },
-      "bildSzene": "arms raised against figure with flowers",
-      "bildSzeneAlt": "foggy lens reveals harmless tree",
+      "bildSzene": "fleeing steam mistaken for fire",
+      "bildSzeneAlt": "two lenses with shield and heart symbols",
       "quellen": [
+        "§ 35 StGB",
+        "§ 49 Abs. 1 StGB",
         "§ 16 StGB",
-        "§ 17 StGB",
-        "§ 32 StGB",
-        "§ 229 StGB",
         "Themenpool: strafat-065"
       ],
       "hookTyp": "fehler",
-      "hookMuster": "rechtsfolgen-zweiteilung",
+      "hookMuster": "abgrenzung-irrtum",
       "coverBildAuslassen": true,
       "freigabeBetreiber": false,
       "vorproduktionStatus": "review",

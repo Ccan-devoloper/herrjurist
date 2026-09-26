@@ -1,0 +1,867 @@
+{
+  "datum": "2027-10-05",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "schuld-444",
+        "themaTitel": "Schadensersatz neben der Leistung",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "strafat-725",
+        "themaTitel": "Einwilligung und mutmaßliche Einwilligung",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-667",
+        "themaTitel": "Eilrechtsschutz nach § 80 V VwGO",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "revision-797"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "revision-797"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "bereich-217"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:34",
+        "art": "zahl",
+        "themaId": "revision-877"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "streitstand",
+        "themaId": "streit-43"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "merksatz",
+        "themaId": "strafbt-329"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "schuld-444",
+      "poolTitel": "Schadensersatz neben der Leistung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 280 I BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-27",
+        "2027-03-03",
+        "2027-09-11"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "strafat-725",
+      "poolTitel": "Einwilligung und mutmaßliche Einwilligung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-28",
+        "2027-05-13",
+        "2027-08-28"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-667",
+      "poolTitel": "Eilrechtsschutz nach § 80 V VwGO",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 V VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-19"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "revision-797",
+      "poolTitel": "Revisionsgutachten: Zulässigkeit",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 333 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-30",
+        "2027-06-30",
+        "2027-07-27"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "revision-797",
+      "poolTitel": "Revisionsgutachten: Zulässigkeit",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 333 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-30",
+        "2027-06-30",
+        "2027-07-27"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bereich-217",
+      "poolTitel": "Was ist die verschärfte Haftung nach § 819 BGB?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 818 Abs. 4 BGB",
+        "§ 819 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-29",
+        "2027-05-12",
+        "2027-07-30"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "revision-877",
+      "poolTitel": "Wie baut man eine Verfahrensrüge auf?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 344 StPO",
+        "§ 274 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-14",
+        "2027-05-25",
+        "2027-07-08"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "streit-43",
+      "poolTitel": "Unmittelbare Wirkung nicht umgesetzter Richtlinien zwischen Privaten",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 288 Abs. 3 AEUV"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "strafbt-329",
+      "poolTitel": "Was ist eine Täuschung durch konkludentes Verhalten beim Betrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-11",
+        "2027-07-18",
+        "2027-07-21"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-444",
+      "slug": "2027-10-05-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ofen defekt, keine Brötchen: Reicht § 280 I BGB allein?",
+          "titelZeilen": [
+            "Ofen defekt,",
+            "keine Brötchen:",
+            "Reicht § 280 I BGB",
+            "allein?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "BGH: Schaden neben der Leistung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Bäcker K kauft bei V einen Backofen. Schon bei Lieferung ist die Steuerung defekt. Bis zur Reparatur kann K eine Woche lang nicht backen und verliert Umsatz. K hatte V nicht gemahnt. Ist der Ausfallschaden ohne Verzug ersatzfähig?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Wege zum Ausfallschaden",
+          "links": {
+            "titel": "BGH",
+            "punkte": [
+              "§§ 437 Nr. 3, 280 Abs. 1 BGB genügen.",
+              "Pflichtverletzung ist die mangelhafte Lieferung, nicht die spätere Verzögerung.",
+              "Keine Mahnung, kein Verzug nötig."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Ausfall durch verzögerte mangelfreie Leistung ist Verzögerungsschaden.",
+              "Also §§ 280 Abs. 1, 2, 286 BGB.",
+              "Ersatz erst ab Verzug."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme",
+          "text": "Für den BGH spricht: Der Ausfall beruht schon auf der mangelhaften Lieferung und wäre auch bei sofortiger Nachbesserung eingetreten. Die Gegenansicht verweist auf die Wertung des § 280 Abs. 2 BGB: Wer gar nicht liefert, haftet erst ab Verzug – warum dann strenger, wenn mangelhaft geliefert wird?"
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "punkte": [
+            "Den Streit nur entscheiden, wenn kein Verzug vorliegt.",
+            "Vertretenmüssen der mangelhaften Lieferung prüfen – vermutet nach § 280 Abs. 1 S. 2 BGB.",
+            "Der Händler haftet nicht für Fehler des Herstellers: Der ist nicht sein Erfüllungsgehilfe."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nach dem BGH ist der Nutzungsausfall wegen eines Mangels Schaden neben der Leistung – § 280 Abs. 1 BGB ohne Verzug."
+        },
+        {
+          "art": "cta",
+          "titel": "Schadensart zuerst bestimmen",
+          "punkte": [
+            "Statt der Leistung?",
+            "Verzögerung?",
+            "Neben der Leistung?"
+          ],
+          "icons": [
+            "waage",
+            "uhr",
+            "werkzeug"
+          ]
+        }
+      ],
+      "caption": "Der Ofen ist bei Lieferung defekt, der Bäcker kann eine Woche nicht backen. Braucht er für den Ausfallschaden Verzug? Der BGH sagt nein: Pflichtverletzung ist die mangelhafte Lieferung, der Ausfall ist Schaden neben der Leistung nach §§ 437 Nr. 3, 280 Abs. 1 BGB. Teile der Literatur sehen einen Verzögerungsschaden und verlangen §§ 280 Abs. 2, 286 BGB. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#280bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ausfallschaden: § 280 I BGB ohne Verzug?",
+      "coverText": "BGH: Schaden neben der Leistung",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Ob der Ausfall wegen einer mangelhaften Sache ohne Verzug ersetzt wird, ist umstritten.",
+        "handlung": "{A} stands before a cold, smoking oven holding an empty baking tray, while {B} kneels with a wrench at the oven's broken control panel.",
+        "hinweisRegie": "Place the note in the free space above the broken control panel, slightly tilted toward it, so the empty tray and the smoke remain visible and nothing covers the characters' faces.",
+        "alternative": "{B} pushes a stalled mine cart that lost a wheel on delivery, while {A} counts idle days on a wall of tally marks."
+      },
+      "bildSzene": "cold oven, empty tray, repair",
+      "bildSzeneAlt": "stalled mine cart missing wheel",
+      "quellen": [
+        "§ 437 Nr. 3 BGB",
+        "§ 280 Abs. 1 BGB",
+        "§ 280 Abs. 2 BGB",
+        "§ 286 BGB",
+        "Themenpool: schuld-444"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.262Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-725",
+      "slug": "2027-10-05-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verabredeter Faustkampf: Nase gebrochen, Tat gerechtfertigt",
+          "titelZeilen": [
+            "Verabredeter",
+            "Faustkampf: Nase",
+            "gebrochen, Tat",
+            "gerechtfertigt"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Grenze: § 228 StGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Nach einem Streit verabreden A und B einen Faustkampf eins gegen eins: keine Waffen, keine Tritte, Schluss, sobald einer aufgibt. Beide halten sich daran. Ein Schlag des A bricht B das Nasenbein. Strafbarkeit des A nach § 223 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "1. Tatbestand",
+              "text": "Der Schlag ist eine körperliche Misshandlung und verursacht eine Gesundheitsschädigung – § 223 Abs. 1 StGB ist erfüllt."
+            },
+            {
+              "titel": "2. Einwilligung",
+              "text": "B darf über seinen Körper verfügen, ist einwilligungsfähig und hat vorher frei zugestimmt. Der Schlag lag im verabredeten Rahmen."
+            },
+            {
+              "titel": "3. Sittenwidrigkeit (§ 228 StGB)",
+              "text": "Die Rspr. stellt vor allem auf Gewicht und Gefährlichkeit der Tat ab. Sittenwidrig ist sie jedenfalls bei konkreter Todesgefahr."
+            },
+            {
+              "titel": "4. Absprachen",
+              "text": "Regeln und Abbruch begrenzen die Gefahr. Bei Gruppenschlägereien ohne solche Sicherungen hat der BGH Sittenwidrigkeit angenommen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Der Kampf war begrenzt, ohne Waffen und mit Abbruchregel. Eine konkrete Lebensgefahr bestand nicht. Die Tat verstößt nicht gegen die guten Sitten. A ist durch die Einwilligung gerechtfertigt und nicht nach § 223 StGB strafbar."
+        },
+        {
+          "art": "text",
+          "titel": "Die Grenze im Fall",
+          "text": "Die Einwilligung reicht nur so weit wie die Absprache. Tritt A dem am Boden liegenden B gegen den Kopf, ist das nicht mehr gedeckt – und kann zudem eine gefährliche Körperverletzung (§ 224 StGB) sein."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Einwilligung trägt, bis die Tat sittenwidrig ist – und das bemisst die Rspr. vor allem an der Gefahr für Leib und Leben."
+        },
+        {
+          "art": "cta",
+          "titel": "Einwilligung in drei Schritten",
+          "punkte": [
+            "Wirksam erklärt?",
+            "Tat im Rahmen der Absprache?",
+            "Sittenwidrig nach § 228 StGB?"
+          ],
+          "icons": [
+            "handschlag",
+            "klemmbrett",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Die Nase ist gebrochen – und trotzdem ist die Tat gerechtfertigt. Bei einem verabredeten Faustkampf mit klaren Regeln wirkt die Einwilligung. Die Grenze zieht § 228 StGB: Nach der Rspr. entscheidet vor allem, wie gefährlich die Tat ist; bei konkreter Todesgefahr ist sie sittenwidrig. Was über die Absprache hinausgeht, deckt die Einwilligung ohnehin nicht. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#einwilligung",
+        "#228stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Einwilligung: verabredeter Faustkampf",
+      "coverText": "Grenze: § 228 StGB",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Die Einwilligung rechtfertigt den abgesprochenen Kampf, solange er nicht lebensgefährlich wird.",
+        "handlung": "{A} and {B} shake hands inside a chalk circle before a fair boxing match, a small white towel lying ready at the edge of the circle.",
+        "hinweisRegie": "Place the note in the free space next to the white towel at the circle's edge, slightly tilted toward it, so the handshake and the chalk line remain fully visible.",
+        "alternative": "{B} ties a safety rope around {A} before a controlled climbing duel on a low rock wall."
+      },
+      "bildSzene": "handshake inside chalk circle, towel",
+      "bildSzeneAlt": "safety rope before climbing duel",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 228 StGB",
+        "§ 224 StGB",
+        "Themenpool: strafat-725"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.263Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-667",
+      "slug": "2027-10-05-b3",
+      "titelZeilen": [
+        "§ 80 V VwGO:",
+        "Nicht mit dem",
+        "Bescheid anfangen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "§ 80 V VwGO: Nicht mit dem Bescheid anfangen",
+          "unter": "Eilrechtsschutz · § 80 Abs. 5 VwGO",
+          "text": "Erst Statthaftigkeit und Vollziehungsanordnung, dann die Erfolgsaussichten.",
+          "norm": "§ 80 Abs. 5 VwGO",
+          "icon": "stoppuhr",
+          "sprecher": "Beim Eilantrag fängst du nicht mit dem Bescheid an. Vorher klärst du, warum überhaupt vollzogen werden darf. So sieht die Reihenfolge aus.",
+          "marken": [
+            "erst die Anordnung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Statthaftigkeit",
+          "text": "In der Hauptsache Anfechtungsklage – und die aufschiebende Wirkung entfällt.",
+          "norm": "§ 80 Abs. 2 VwGO",
+          "sprecher": "Schritt eins: Statthaft ist der Antrag, wenn in der Hauptsache die Anfechtungsklage passt und die aufschiebende Wirkung ausnahmsweise entfällt. Etwa bei Abgaben, bei Polizeivollzugsbeamten, kraft Gesetzes oder weil die Behörde die sofortige Vollziehung angeordnet hat.",
+          "marken": [
+            "Anfechtung?",
+            "Ausnahme greift?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Antragsbefugnis",
+          "text": "Möglichkeit einer Rechtsverletzung, analog zur Klagebefugnis.",
+          "norm": "§ 42 Abs. 2 VwGO analog",
+          "sprecher": "Schritt zwei: die Antragsbefugnis. Wie bei der Klagebefugnis muss der Antragsteller möglicherweise in eigenen Rechten verletzt sein.",
+          "marken": [
+            "eigene Rechte"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Vollziehungsanordnung",
+          "text": "Bei Nr. 4: zuständige Behörde und schriftliche Begründung des besonderen Interesses.",
+          "norm": "§ 80 Abs. 3 S. 1 VwGO",
+          "sprecher": "Schritt drei, nur bei angeordneter Vollziehung: Ist die Anordnung formell rechtmäßig? Die Behörde muss das besondere Interesse schriftlich und auf den Fall bezogen begründen. Eine Anhörung verlangt die herrschende Meinung dafür nicht.",
+          "marken": [
+            "Begründung konkret?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Interessenabwägung",
+          "text": "Summarische Prüfung: Wie wird die Hauptsache wahrscheinlich ausgehen?",
+          "norm": "§ 80 Abs. 5 VwGO",
+          "sprecher": "Schritt vier: die Abwägung. Jetzt kommt der Bescheid. Ist er offensichtlich rechtswidrig, überwiegt das Aussetzungsinteresse. Ist er offensichtlich rechtmäßig, braucht es bei angeordneter Vollziehung zusätzlich ein besonderes Vollzugsinteresse. Ist alles offen, wägst du die Folgen ab.",
+          "marken": [
+            "Erfolgsaussichten"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Wiederherstellen oder anordnen",
+          "text": "Nr. 4: aufschiebende Wirkung wiederherstellen. Nr. 1 bis 3: anordnen.",
+          "norm": "§ 80 Abs. 5 S. 1 VwGO",
+          "sprecher": "Merke für den Antrag: Hat die Behörde die Vollziehung angeordnet, beantragst du die Wiederherstellung der aufschiebenden Wirkung. Entfällt sie kraft Gesetzes, beantragst du ihre Anordnung.",
+          "marken": [
+            "wiederherstellen",
+            "anordnen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die ÖR-Klausur speichern",
+          "text": "Speichern für den nächsten Eilantrag.",
+          "sprecher": "Speicher dir die Reihenfolge für deinen nächsten Eilantrag.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Beim Antrag nach § 80 Abs. 5 VwGO fängst du nicht mit dem Bescheid an. Erst Statthaftigkeit und Antragsbefugnis, dann – bei angeordneter Vollziehung – die formelle Rechtmäßigkeit der Anordnung mit ihrer schriftlichen Begründung nach § 80 Abs. 3 VwGO. Erst in der Interessenabwägung prüfst du summarisch die Erfolgsaussichten. Und im Antrag: wiederherstellen bei Nr. 4, anordnen bei Nr. 1 bis 3. Speichern für den nächsten Eilantrag.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#eilrechtsschutz",
+        "#verwaltungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 80 V VwGO: die richtige Reihenfolge",
+      "coverText": "Erst die Vollziehungsanordnung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Im Eilverfahren wird erst die Anordnung der Vollziehung geprüft, dann der Bescheid.",
+        "handlung": "{A} holds a stopwatch high while {B} gently pushes a thick sealed file back down the table and points at a small separate card lying in front of it.",
+        "hinweisRegie": "Place the note in the free space beside the small separate card, slightly tilted toward it, so the stopwatch and the pushed-back file stay readable and no face is covered.",
+        "alternative": "{B} opens the smaller of two nested boxes first while {A} impatiently taps the bigger one."
+      },
+      "bildSzene": "stopwatch, file pushed back, small card",
+      "bildSzeneAlt": "smaller nested box opened first",
+      "quellen": [
+        "§ 80 Abs. 2, 3, 5 VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "Themenpool: vwgo-667"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.264Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-797",
+      "ueberzeile": "Prüfungsfrage Revision",
+      "titel": "A begründet seine Revision selbst in einem handschriftlichen Brief an das Gericht. Ist das formwirksam?",
+      "optionen": [
+        "Ja – schriftlich ist schriftlich",
+        "Nein – nur Anwaltsschrift oder zu Protokoll der Geschäftsstelle",
+        "Ja, jedenfalls für die allgemeine Sachrüge"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 345 Abs. 2 StPO",
+        "§ 341 Abs. 1 StPO",
+        "Themenpool: revision-797"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.264Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-797",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – für die Begründung braucht A einen Anwalt oder die Geschäftsstelle",
+      "text": "Einlegen darf A die Revision selbst schriftlich (§ 341 Abs. 1 StPO). Für die Begründung verlangt § 345 Abs. 2 StPO aber eine vom Verteidiger oder einem Rechtsanwalt unterzeichnete Schrift oder die Erklärung zu Protokoll der Geschäftsstelle. Das gilt auch für die bloße Sachrüge. Sonst verwirft das Tatgericht die Revision als unzulässig (§ 346 Abs. 1 StPO).",
+      "norm": "§ 345 Abs. 2 StPO",
+      "quellen": [
+        "§ 341 Abs. 1 StPO",
+        "§ 345 Abs. 2 StPO",
+        "§ 346 Abs. 1 StPO",
+        "Themenpool: revision-797"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.264Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – schriftlich ist schriftlich",
+        "Nein – nur Anwaltsschrift oder zu Protokoll der Geschäftsstelle",
+        "Ja, jedenfalls für die allgemeine Sachrüge"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-217",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 819 Abs. 2 BGB: Wer verbotswidrig annimmt, haftet ab Empfang verschärft",
+      "text": "Nicht nur die Kenntnis vom fehlenden Rechtsgrund führt zur verschärften Haftung. Verstößt der Empfänger schon durch die Annahme der Leistung gegen ein gesetzliches Verbot oder die guten Sitten, haftet er von Anfang an nach den allgemeinen Vorschriften – eine Entreicherung nach § 818 Abs. 3 BGB hilft ihm dann nicht. Denk daneben an die Kondiktionssperre des § 817 S. 2 BGB.",
+      "norm": "§ 819 Abs. 2 BGB",
+      "quellen": [
+        "§ 819 Abs. 2 BGB",
+        "§ 818 Abs. 3 BGB",
+        "§ 817 S. 2 BGB",
+        "Themenpool: bereich-217"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.264Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-877",
+      "ueberzeile": "3 Punkte Revision",
+      "titel": "§ 338 StPO: drei Punkte, die du über absolute Revisionsgründe wissen musst",
+      "text": "In den Katalogfällen des § 338 StPO gilt das Urteil stets als auf der Verletzung beruhend. Leichter wird die Rüge dadurch nur zum Teil.",
+      "punkte": [
+        "Das Beruhen wird unwiderleglich vermutet",
+        "Tatsachen trotzdem vollständig vortragen (§ 344 Abs. 2 S. 2 StPO)",
+        "Nr. 8: Die Beschränkung muss einen entscheidenden Punkt betreffen"
+      ],
+      "quellen": [
+        "§ 338 StPO",
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: revision-877"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.264Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "streit-43",
+      "ueberzeile": "Streitstand Europarecht",
+      "titel": "Richtlinie nicht umgesetzt: Kann sich A gegenüber ihrem privaten Arbeitgeber direkt darauf berufen?",
+      "norm": "Art. 288 Abs. 3 AEUV",
+      "optionen": [
+        "EuGH: Nein – die Richtlinie verpflichtet nur Mitgliedstaaten; keine unmittelbare Wirkung zwischen Privaten.",
+        "Teile der Lit.: Ja bei klaren, unbedingten Normen – sonst hängt der Schutz vom Zufall des Gegners ab."
+      ],
+      "text": "Klausur: Folge dem EuGH, prüfe dann die Auswege: richtlinienkonforme Auslegung des nationalen Rechts, weiter Staatsbegriff (auch öffentliche Arbeitgeber), unionsrechtliche Grundsätze und Chartarechte wie das Diskriminierungsverbot, zuletzt Staatshaftung.",
+      "quellen": [
+        "Art. 288 Abs. 3 AEUV",
+        "Art. 4 Abs. 3 EUV"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.264Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-329",
+      "ueberzeile": "Merksatz Betrug",
+      "titel": "Bestellen heißt: Ich will und kann zahlen",
+      "text": "Wer im Restaurant bestellt, erklärt nach der Rspr. konkludent, zahlen zu wollen und zu können. Fällt der Entschluss zur Zechprellerei erst nach dem Essen, fehlt diese Täuschung.",
+      "norm": "§ 263 Abs. 1 StGB",
+      "quellen": [
+        "§ 263 StGB",
+        "Themenpool: strafbt-329"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.264Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

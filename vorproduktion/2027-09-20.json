@@ -1,0 +1,867 @@
+{
+  "datum": "2027-09-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-565",
+        "themaTitel": "Allgemeine Vollstreckungsvoraussetzungen",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "strafat-291",
+        "themaTitel": "Wie prüft man die objektive Zurechnung?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwbt-395",
+        "themaTitel": "Wie prüft man den Nachbarschutz im Baurecht?",
+        "fach": "verwbt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "vwgo-101"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "vwgo-101"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "zpo-283"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:18",
+        "art": "tipp",
+        "themaId": "europa-109"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "zahl",
+        "themaId": "methodik-909"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:06",
+        "art": "streitstand",
+        "themaId": "assessorz-817"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-565",
+      "poolTitel": "Allgemeine Vollstreckungsvoraussetzungen",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 704 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-11",
+        "2027-03-03",
+        "2027-03-03"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafat-291",
+      "poolTitel": "Wie prüft man die objektive Zurechnung?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT; richterrechtliche Zurechnungslehre"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-07"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwbt-395",
+      "poolTitel": "Wie prüft man den Nachbarschutz im Baurecht?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 31 Abs. 2 BauGB",
+        "§ 34 BauGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-17"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-101",
+      "poolTitel": "Welche Formen einer einstweiligen Anordnung gibt es nach § 123 Abs. 1 VwGO?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 Abs. 1 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-12",
+        "2027-06-12",
+        "2027-08-31"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-101",
+      "poolTitel": "Welche Formen einer einstweiligen Anordnung gibt es nach § 123 Abs. 1 VwGO?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 Abs. 1 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-12",
+        "2027-06-12",
+        "2027-08-31"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-283",
+      "poolTitel": "Was ist ein Anscheinsbeweis?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-31",
+        "2027-04-01",
+        "2027-06-19"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "europa-109",
+      "poolTitel": "Was ist das Vorabentscheidungsverfahren?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 267 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-03",
+        "2027-01-22",
+        "2027-07-11"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-909",
+      "poolTitel": "Wiederholen nach dem 7-30-90-Tage-Prinzip",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-29",
+        "2027-07-19",
+        "2027-09-04"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-817",
+      "poolTitel": "Wann ist eine Drittwiderklage zulässig?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-15",
+        "2027-05-17",
+        "2027-07-20"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-565",
+      "slug": "2027-09-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Erst an der Tür zugestellt – und sofort gepfändet",
+          "titelZeilen": [
+            "Erst an der Tür",
+            "zugestellt – und",
+            "sofort gepfändet"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 750 ZPO: gleichzeitig genügt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "G hat gegen S ein rechtskräftiges Zahlungsurteil über 4.000 Euro und die vollstreckbare Ausfertigung. Zugestellt ist das Urteil noch nicht. Der Gerichtsvollzieher übergibt S an der Haustür das Urteil und pfändet im selben Termin dessen Fernseher. Durfte er das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Titel",
+              "text": "Ein vollstreckbarer Titel liegt vor: das rechtskräftige Endurteil (§ 704 ZPO)."
+            },
+            {
+              "titel": "2. Klausel",
+              "text": "Die vollstreckbare Ausfertigung trägt die Vollstreckungsklausel (§§ 724, 725 ZPO)."
+            },
+            {
+              "titel": "3. Zustellung",
+              "text": "Nach § 750 Abs. 1 S. 1 ZPO muss das Urteil bereits zugestellt sein oder gleichzeitig zugestellt werden."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Die Zustellung beim Pfändungstermin genügt. Die Pfändung ist zulässig."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Denkweg hakt",
+          "text": "Viele verlangen eine Zustellung vor dem Termin oder eine Wartefrist. Beides steht nicht in § 750 Abs. 1 ZPO. Wartefristen gibt es nur in Sonderfällen, etwa für die in § 798 ZPO genannten Titel oder die Sicherungsvollstreckung (§ 750 Abs. 3 ZPO)."
+        },
+        {
+          "art": "text",
+          "titel": "Danach: besondere Voraussetzungen",
+          "punkte": [
+            "Kalendertag abwarten, wenn der Titel daran anknüpft (§ 751 Abs. 1 ZPO)",
+            "Sicherheitsleistung nachweisen, wenn das Urteil nur gegen Sicherheit vollstreckbar ist (§ 751 Abs. 2 ZPO)",
+            "Zug um Zug: Gegenleistung anbieten (§ 756 ZPO)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Titel, Klausel, Zustellung – und die Zustellung darf auch im selben Moment erfolgen wie die Vollstreckung."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Vollstreckung prüfen",
+          "punkte": [
+            "Titel",
+            "Klausel",
+            "Zustellung – spätestens gleichzeitig",
+            "Besondere Voraussetzungen"
+          ],
+          "icons": [
+            "dokument",
+            "schild",
+            "umschlag",
+            "klemmbrett"
+          ]
+        }
+      ],
+      "caption": "Das Urteil wird erst an der Haustür zugestellt – und der Gerichtsvollzieher pfändet sofort. Das ist zulässig: Nach § 750 Abs. 1 ZPO muss der Titel bereits zugestellt sein oder gleichzeitig zugestellt werden. Zusammen mit Titel und Klausel sind das die allgemeinen Vollstreckungsvoraussetzungen; danach prüfst du die besonderen, etwa Sicherheitsleistung oder Zug-um-Zug-Leistung. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#750zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vollstreckung: Zustellung auch gleichzeitig",
+      "coverText": "§ 750 ZPO: gleichzeitig genügt",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Die Zustellung des Titels darf im selben Moment erfolgen wie die Pfändung – vorher muss sie nicht sein.",
+        "handlung": "{A} hovers at an open front door and hands over a sealed envelope with one arm while its other arm already attaches a small seal tag to a television, as {B} watches in surprise.",
+        "hinweisRegie": "Place the note in the free space between the handed-over envelope and the seal tag, slightly tilted, so both simultaneous actions stay visible and nothing covers the faces.",
+        "alternative": "{B} carries a crystal through a gate while {A} stamps the entry ticket at the exact same moment, both actions happening in one step."
+      },
+      "bildSzene": "envelope handed over, seal tag attached",
+      "bildSzeneAlt": "ticket stamped while passing gate",
+      "quellen": [
+        "§ 704 ZPO",
+        "§§ 724, 725 ZPO",
+        "§ 750 ZPO",
+        "§ 751 ZPO",
+        "§ 756 ZPO",
+        "§ 798 ZPO",
+        "Themenpool: zpo-565"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:23:18.463Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-291",
+      "slug": "2027-09-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Bedingung gesetzt – Erfolg trotzdem nicht zurechenbar",
+          "titelZeilen": [
+            "Bedingung gesetzt –",
+            "Erfolg trotzdem",
+            "nicht zurechenbar"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Gefahr schaffen, Gefahr realisieren",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Warum überhaupt?",
+          "text": "Die Äquivalenztheorie ist weit: Auch wer eine Autofahrt anregt, setzt eine Bedingung für den späteren Unfall. Die objektive Zurechnung begrenzt das. Die Rspr. nutzt ihre Figuren vor allem bei der Fahrlässigkeit und löst viele Vorsatzfälle über den Kausalverlauf beim Vorsatz."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema",
+          "schritte": [
+            {
+              "titel": "0. Kausalität",
+              "text": "Conditio sine qua non: Die Handlung kann nicht hinweggedacht werden, ohne dass der Erfolg in seiner konkreten Gestalt entfiele."
+            },
+            {
+              "titel": "1. Rechtlich missbilligte Gefahr",
+              "text": "Nicht bei Risikoverringerung, erlaubtem Risiko (Straßenverkehr) oder sozialadäquatem Verhalten."
+            },
+            {
+              "titel": "2. Realisierung im Erfolg",
+              "text": "Gerade diese Gefahr hat sich verwirklicht – nicht bei atypischem Verlauf oder außerhalb des Schutzzwecks der Norm."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Typische Ausschlussgruppen",
+          "punkte": [
+            "Eigenverantwortliche Selbstgefährdung des Opfers",
+            "Vollverantwortliches Dazwischentreten eines Dritten – umstritten und fallabhängig",
+            "Fahrlässigkeit: Erfolg wäre auch bei pflichtgemäßem Verhalten eingetreten (Pflichtwidrigkeitszusammenhang)"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Prüfe die Zurechnung nur ausführlich, wenn der Sachverhalt Anlass gibt. Beim Vorsatzdelikt kannst du Abweichungen im Kausalverlauf auch im Vorsatz behandeln – entscheide dich für einen Ort und bleib dabei."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kausal ist erst der Anfang: Der Täter muss eine missbilligte Gefahr geschaffen haben, die sich im Erfolg realisiert."
+        },
+        {
+          "art": "cta",
+          "titel": "Objektiver Tatbestand beim Erfolgsdelikt",
+          "punkte": [
+            "Erfolg und Handlung",
+            "Kausalität",
+            "Missbilligte Gefahr",
+            "Realisierung im Erfolg"
+          ],
+          "icons": [
+            "zielscheibe",
+            "kreislauf",
+            "warnung",
+            "blitz"
+          ]
+        }
+      ],
+      "caption": "Kausal heißt noch nicht zurechenbar. Nach der Äquivalenztheorie prüfst du zwei Filter: Hat der Täter eine rechtlich missbilligte Gefahr geschaffen, und hat sich gerade diese Gefahr im Erfolg realisiert? Typische Ausschlussgruppen sind die eigenverantwortliche Selbstgefährdung, atypische Verläufe und der fehlende Pflichtwidrigkeitszusammenhang. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#objektivezurechnung",
+        "#kausalität",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Objektive Zurechnung: das Schema",
+      "coverText": "Gefahr schaffen, Gefahr realisieren",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Nach der Kausalität filtern zwei Fragen, ob der Erfolg dem Täter wirklich zugerechnet wird.",
+        "handlung": "{A} pours a stream of small marbles through a wide funnel and then through two narrower sieves, while {B} curiously catches the few marbles that make it through at the bottom.",
+        "hinweisRegie": "Place the note in the free space beside the second, narrowest sieve, slightly tilted toward it, so the final filter stands out without covering the funnel or the characters.",
+        "alternative": "{B} follows a winding path of footprints that suddenly breaks off at a fence, while {A} points at the point where the path stops."
+      },
+      "bildSzene": "marbles through funnel and two sieves",
+      "bildSzeneAlt": "footprint path ending at fence",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 222 StGB",
+        "§ 229 StGB",
+        "Themenpool: strafat-291"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:23:18.464Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-395",
+      "slug": "2027-09-20-b3",
+      "titelZeilen": [
+        "Befreiung rechts-",
+        "widrig – und der",
+        "Nachbar verliert"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Befreiung rechtswidrig – Nachbar verliert trotzdem",
+          "unter": "Nachbarschutz · §§ 31, 34 BauGB",
+          "text": "Der Nachbar gewinnt nur mit einer Norm, die gerade ihn schützt.",
+          "norm": "§ 31 Abs. 2 BauGB",
+          "icon": "haeuser",
+          "sprecher": "Die Befreiung ist rechtswidrig – und der Nachbar verliert trotzdem. Das liegt an der Frage, wen die verletzte Norm schützt. So prüfst du Nachbarschutz im Baurecht.",
+          "marken": [
+            "Wen schützt die Norm?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Drittschützende Norm",
+          "text": "Klagebefugnis nur mit einer Norm, die auch dem Nachbarn dient.",
+          "norm": "§ 42 Abs. 2 VwGO",
+          "sprecher": "Schritt eins: Such eine drittschützende Norm. Nach der Schutznormtheorie reicht es nicht, dass die Genehmigung irgendein Recht verletzt. Die Norm muss auch den Interessen des Nachbarn dienen.",
+          "marken": [
+            "Schutznormtheorie"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Gebietserhaltungsanspruch",
+          "text": "Art der Nutzung im Baugebiet: Schutz ohne spürbare Beeinträchtigung.",
+          "norm": "§ 34 Abs. 2 BauGB",
+          "sprecher": "Schritt zwei: der Gebietserhaltungsanspruch. Festsetzungen zur Art der baulichen Nutzung schützen die Nachbarn im selben Baugebiet. Das gilt auch im faktischen Baugebiet nach § 34 Absatz 2. Eine spürbare Beeinträchtigung muss der Nachbar hier nicht darlegen.",
+          "marken": [
+            "gebietsfremd?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rücksichtnahme im Innenbereich",
+          "text": "§ 34 Abs. 1 BauGB schützt über das Merkmal „einfügen“.",
+          "norm": "§ 34 Abs. 1 BauGB",
+          "sprecher": "Schritt drei: im unbeplanten Innenbereich das Gebot der Rücksichtnahme. Es steckt im Merkmal „einfügen“. Drittschutz gibt es nur, wenn das Vorhaben gerade auf den Nachbarn unzumutbar wirkt, etwa erdrückend.",
+          "marken": [
+            "einfügen",
+            "unzumutbar?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Befreiung",
+          "text": "Drittschützende Festsetzung: Fehler reicht. Sonst: nur Rücksichtnahme.",
+          "norm": "§ 31 Abs. 2 BauGB",
+          "sprecher": "Schritt vier: die Befreiung. Befreit die Behörde von einer drittschützenden Festsetzung, reicht jeder Fehler. Befreit sie von einer anderen Festsetzung, prüfst du nur, ob sie nachbarliche Interessen ausreichend gewürdigt hat.",
+          "marken": [
+            "welche Festsetzung?"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Rechtswidrig ist nicht genug",
+          "text": "Der Nachbar braucht die Verletzung einer Norm, die ihn schützt.",
+          "norm": "§ 113 Abs. 1 S. 1 VwGO",
+          "sprecher": "Merke: Die Nachbarklage hat nur Erfolg, wenn die Genehmigung rechtswidrig ist und dadurch Rechte des Nachbarn verletzt. Beides gehört getrennt geprüft.",
+          "marken": [
+            "Recht des Nachbarn"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Baurechtsklausur speichern",
+          "text": "Speichern für die nächste Nachbarklage.",
+          "sprecher": "Speicher dir das für deine nächste Nachbarklage im Baurecht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Befreiung ist rechtswidrig – und der Nachbar verliert trotzdem. Das passiert, wenn von einer Festsetzung befreit wurde, die ihn nicht schützt: Dann prüfst du nur, ob nachbarliche Interessen ausreichend gewürdigt wurden (§ 31 Abs. 2 BauGB). Daneben stehen der Gebietserhaltungsanspruch und das Gebot der Rücksichtnahme im Merkmal „einfügen“ (§ 34 BauGB). Speichern für die nächste Nachbarklage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#baurecht",
+        "#nachbarschutz",
+        "#baugb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nachbarschutz: Befreiung und Rücksichtnahme",
+      "coverText": "Wen schützt die Festsetzung?",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Eine rechtswidrige Befreiung hilft dem Nachbarn nur, wenn die verletzte Regel gerade ihn schützt.",
+        "handlung": "{B} angrily points at a broken fence post far away from his own garden, while {A} calmly walks him back to the intact fence that directly borders his plot.",
+        "hinweisRegie": "Place the note in the free space above the intact fence bordering the neighbour's plot, slightly tilted toward it, without covering the distant broken post or the faces.",
+        "alternative": "{A} holds two shields in front of two houses; only one shield faces the neighbour's window, and {B} tries to grab the wrong one."
+      },
+      "bildSzene": "neighbour points at distant broken fence",
+      "bildSzeneAlt": "two shields before two houses",
+      "quellen": [
+        "§ 31 Abs. 2 BauGB",
+        "§ 34 BauGB",
+        "§ 42 Abs. 2 VwGO",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "Themenpool: verwbt-395"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:23:18.465Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-101",
+      "ueberzeile": "Prüfungsfrage Verwaltungsprozessrecht",
+      "titel": "Eilantrag: Was ändert die Wahl zwischen Sicherungs- und Regelungsanordnung?",
+      "optionen": [
+        "Kaum etwas – beide verlangen Anordnungsanspruch und Anordnungsgrund",
+        "Die Regelungsanordnung braucht keinen Anordnungsgrund",
+        "Die Sicherungsanordnung setzt eine erhobene Hauptsacheklage voraus"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 123 Abs. 1, 3 VwGO",
+        "Themenpool: vwgo-101"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:23:18.465Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-101",
+      "ueberzeile": "Auflösung",
+      "titel": "Kaum etwas – Anspruch und Grund brauchst du bei beiden",
+      "text": "Die Sicherungsanordnung (§ 123 Abs. 1 S. 1 VwGO) bewahrt einen bestehenden Zustand, die Regelungsanordnung (S. 2) schafft einen vorläufigen. Die Grenze ist oft fließend. Die Voraussetzungen sind gleich: Anordnungsanspruch und Anordnungsgrund, glaubhaft gemacht (§ 123 Abs. 3 VwGO i.V.m. § 920 Abs. 2 ZPO). Eine Hauptsacheklage muss noch nicht erhoben sein.",
+      "norm": "§ 123 Abs. 1, 3 VwGO",
+      "quellen": [
+        "§ 123 Abs. 1, 3 VwGO",
+        "§ 920 Abs. 2 ZPO",
+        "Themenpool: vwgo-101"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:23:18.465Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Kaum etwas – beide verlangen Anordnungsanspruch und Anordnungsgrund",
+        "Die Regelungsanordnung braucht keinen Anordnungsgrund",
+        "Die Sicherungsanordnung setzt eine erhobene Hauptsacheklage voraus"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-283",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 286 ZPO: Beim Spurwechsel kurz vor dem Aufprall fehlt der typische Auffahrunfall",
+      "text": "Fährt jemand von hinten auf, spricht der Anschein grundsätzlich für sein Verschulden – zu geringer Abstand, Unaufmerksamkeit oder überhöhte Geschwindigkeit. Steht aber fest, dass der Vordermann kurz vorher die Spur gewechselt hat, fehlt nach dem BGH der typische Geschehensablauf. Dann gilt kein Anscheinsbeweis gegen den Auffahrenden; es bleibt bei der normalen Beweiswürdigung.",
+      "norm": "§ 286 ZPO",
+      "quellen": [
+        "§ 286 ZPO",
+        "Themenpool: zpo-283"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:23:18.465Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-109",
+      "ueberzeile": "Klausurtipp Europarecht",
+      "titel": "Letzte Instanz legt nicht vor: Prüfe Art. 101 Abs. 1 S. 2 GG",
+      "text": "Der EuGH ist gesetzlicher Richter. Unterlässt ein letztinstanzliches Gericht die Vorlage nach Art. 267 Abs. 3 AEUV, kannst du das mit der Verfassungsbeschwerde als Verstoß gegen Art. 101 Abs. 1 S. 2 GG rügen. Das BVerfG beanstandet aber nicht jede falsche Handhabung, sondern nur eine nicht mehr vertretbare. Also: Vorlagepflicht prüfen, dann die Vertretbarkeit der Nichtvorlage.",
+      "quellen": [
+        "Art. 267 AEUV",
+        "Art. 101 Abs. 1 S. 2 GG",
+        "Themenpool: europa-109"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:23:18.465Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-909",
+      "ueberzeile": "3 Punkte",
+      "titel": "7-30-90: drei Regeln, damit der Wiederholungsplan hält",
+      "text": "Wiederholen nach 7, 30 und 90 Tagen funktioniert nur, wenn die Termine feststehen und du beim Wiederholen wirklich abrufst.",
+      "punkte": [
+        "Termine sofort am Lerntag eintragen",
+        "Wiederholen heißt: Fall oder Frage lösen, nicht lesen",
+        "Pro Termin ein festes Zeitfenster, danach Schluss"
+      ],
+      "quellen": [
+        "Themenpool: methodik-909"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:23:18.465Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-817",
+      "ueberzeile": "Streitstand 2. Examen Zivilrecht",
+      "titel": "Der Zessionar klagt, der Beklagte verklagt nur den Zedenten: Ist diese isolierte Drittwiderklage zulässig?",
+      "norm": "§ 33 ZPO · § 263 ZPO",
+      "optionen": [
+        "BGH: Ausnahmsweise ja – wenn die Gegenstände eng verknüpft sind und keine schutzwürdigen Interessen des Dritten entgegenstehen.",
+        "Teile der Lit.: Nein – eine Widerklage setzt voraus, dass der Widerbeklagte selbst geklagt hat."
+      ],
+      "text": "Klausur: Der Standardfall ist die Abtretung, mit der ein Zeuge oder Gegner aus dem Prozess geholt werden soll. Folgst du dem BGH, begründe die enge Verknüpfung und prüfe daneben die Zuständigkeit für die Klage gegen den Dritten.",
+      "quellen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO",
+        "Themenpool: assessorz-817"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:23:18.465Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

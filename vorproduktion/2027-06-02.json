@@ -1,0 +1,866 @@
+{
+  "datum": "2027-06-02",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-337",
+        "themaTitel": "Was ist Hehlerei und wann liegt sie vor?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "staat-590",
+        "themaTitel": "Demokratieprinzip und Legitimationskette",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-556",
+        "themaTitel": "Widerklage",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:11",
+        "art": "frage",
+        "themaId": "grundr-609"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:11",
+        "art": "antwort",
+        "themaId": "grundr-609"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "delikt-241"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "streitstand",
+        "themaId": "streit-29"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:46",
+        "art": "merksatz",
+        "themaId": "zwangsv-835"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "begriff",
+        "themaId": "assessorz-585"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-337",
+      "poolTitel": "Was ist Hehlerei und wann liegt sie vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 259 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-13",
+        "2027-02-12",
+        "2027-05-18"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-590",
+      "poolTitel": "Demokratieprinzip und Legitimationskette",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 II GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2027-05-11",
+        "2027-05-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-556",
+      "poolTitel": "Widerklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 33, 263 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2026-12-03",
+        "2027-05-23"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-609",
+      "poolTitel": "Allgemeine Handlungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2027-05-11"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-609",
+      "poolTitel": "Allgemeine Handlungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2027-05-11"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "delikt-241",
+      "poolTitel": "Was ist ein Schutzgesetz im Sinne des § 823 Abs. 2 BGB?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-02",
+        "2026-12-15"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-29",
+      "poolTitel": "Irrtum über den Kausalverlauf beim vorzeitigen oder späteren Erfolgseintritt",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 StGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "zwangsv-835",
+      "poolTitel": "Wie läuft das Verteilungsverfahren bei mehreren Gläubigern?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 872 ZPO",
+        "§ 878 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2027-03-05"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "assessorz-585",
+      "poolTitel": "Mahnverfahren und Vollstreckungsbescheid",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 688 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18",
+        "2027-03-11",
+        "2027-03-11"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-337",
+      "slug": "2027-06-02-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Beute beim Dieb geklaut? Das ist keine Hehlerei",
+          "titelZeilen": [
+            "Beute beim Dieb",
+            "geklaut? Das ist",
+            "keine Hehlerei"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Hehlerei braucht Einvernehmen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "D hat dem E eine wertvolle Uhr gestohlen und sie in seinem Spind versteckt. A weiß davon, öffnet heimlich den Spind und nimmt die Uhr an sich, um sie zu behalten. Hat sich A wegen Hehlerei nach § 259 StGB strafbar gemacht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Vortat",
+              "text": "Diebstahl des D – eine gegen fremdes Vermögen gerichtete rechtswidrige Tat. Die Uhr ist durch sie erlangt."
+            },
+            {
+              "titel": "Tathandlung: sich verschaffen",
+              "text": "Eigene Verfügungsgewalt über die Sache – und zwar im einverständlichen Zusammenwirken mit dem Vortäter."
+            },
+            {
+              "titel": "Hier: kein Einvernehmen",
+              "text": "A handelt heimlich gegen den Willen des D. Er setzt die rechtswidrige Vermögenslage nicht im Einvernehmen fort."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkfehler",
+          "text": "„A bringt Diebesgut an sich – also Hehlerei.“ Hehlerei ist ein Anschlussdelikt: Sie verlangt nach h.M. einen abgeleiteten Erwerb vom Vortäter. Wer dem Dieb die Beute eigenmächtig wegnimmt, begeht selbst einen Diebstahl (§ 242 StGB) – auch der Gewahrsam des Diebes ist geschützt."
+        },
+        {
+          "art": "text",
+          "titel": "Die Lösung",
+          "punkte": [
+            "§ 259 StGB (-): kein einverständliches Zusammenwirken mit D.",
+            "§ 242 StGB (+): Die Uhr ist für A fremd (Eigentum des E), Ds Gewahrsam wird gebrochen.",
+            "Zueignungsabsicht: A will die Uhr behalten."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Sich verschaffen heißt: mit dem Vortäter, nicht gegen ihn. Wer dem Dieb die Beute wegnimmt, ist Dieb – kein Hehler."
+        },
+        {
+          "art": "cta",
+          "titel": "Hehlerei in drei Fragen",
+          "punkte": [
+            "Vermögensdelikt als Vortat?",
+            "Sache durch die Vortat erlangt?",
+            "Im Einvernehmen mit dem Vortäter?"
+          ],
+          "icons": [
+            "paragraf",
+            "paket",
+            "handschlag"
+          ]
+        }
+      ],
+      "caption": "Beute beim Dieb geklaut? Das ist keine Hehlerei. Sich verschaffen im Sinne des § 259 StGB verlangt nach h.M. ein einverständliches Zusammenwirken mit dem Vortäter – einen abgeleiteten Erwerb. Wer dem Dieb die Sache heimlich wegnimmt, bricht dessen Gewahrsam und begeht selbst einen Diebstahl nach § 242 StGB. Speichern für die nächste Klausur zu den Anschlussdelikten.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#hehlerei",
+        "#259stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Dem Dieb die Beute weggenommen: Hehlerei?",
+      "coverText": "Hehlerei braucht Einvernehmen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Hehler ist nur, wer die Beute im Einvernehmen mit dem Vortäter erhält – nicht, wer sie ihm heimlich wegnimmt.",
+        "handlung": "{A} sneaks a shiny watch out of an open locker behind the back of {B}, who is busy hiding another bag and does not notice.",
+        "hinweisRegie": "Place the note in the free space above the open locker door, slightly tilted toward {A}'s hand, so the secret taking is highlighted without covering {B}'s face.",
+        "alternative": "{B} happily hands a watch to {A} in a handshake on one side, while on the other side {A} secretly lifts one from {B}'s pocket."
+      },
+      "bildSzene": "watch taken secretly from locker",
+      "bildSzeneAlt": "handshake handover versus secret taking",
+      "quellen": [
+        "§ 259 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-337"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:22.932Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-590",
+      "slug": "2027-06-02-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wer hat dieses Gremium eigentlich legitimiert?",
+          "titelZeilen": [
+            "Wer hat dieses",
+            "Gremium eigentlich",
+            "legitimiert?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Doppelte Mehrheit prüfen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Ein Bundesgesetz richtet bei einer Bundesbehörde einen Ausschuss ein, der weisungsfrei und verbindlich über Förderbescheide entscheidet. Von sieben Mitgliedern entsenden Wirtschaftsverbände vier, drei ernennt das Ministerium. Verstößt das gegen das Demokratieprinzip (Art. 20 Abs. 2 GG)?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Staatsgewalt",
+              "text": "Jedes amtliche Handeln mit Entscheidungscharakter. Verbindliche Förderbescheide gehören dazu."
+            },
+            {
+              "titel": "Personelle Legitimation",
+              "text": "Eine ununterbrochene Kette vom Volk zum Amtswalter: Wahl, Ernennung durch legitimierte Organe."
+            },
+            {
+              "titel": "Sachlich-inhaltliche Legitimation",
+              "text": "Bindung an das Gesetz, Weisungen und Verantwortung gegenüber dem Parlament."
+            },
+            {
+              "titel": "Legitimationsniveau",
+              "text": "Beide Stränge zusammen müssen ein hinreichendes Niveau erreichen – sie können sich teilweise ausgleichen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Knackpunkt",
+          "text": "Die Verbandsvertreter sind nicht personell legitimiert, Weisungen fehlen. Nach dem BVerfG genügt das nur, wenn die Mehrheit seiner Mitglieder legitimiert ist und die Entscheidung von einer Mehrheit dieser Legitimierten getragen wird (doppelte Mehrheit). Hier haben die Verbände die Mehrheit."
+        },
+        {
+          "art": "text",
+          "titel": "Ergebnis",
+          "text": "Das Legitimationsniveau reicht nicht: Der Ausschuss verstößt gegen Art. 20 Abs. 2 GG. Abgrenzen musst du die funktionale Selbstverwaltung – etwa Kammern –, für die das BVerfG das Demokratieprinzip offener versteht. Eine gewöhnliche Bundesbehörde gehört nicht dazu."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Staatsgewalt braucht ein hinreichendes Legitimationsniveau – personell und sachlich. Gremien mit Externen: doppelte Mehrheit prüfen."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 20 Abs. 2 GG in drei Zügen",
+          "punkte": [
+            "Staatsgewalt ausgeübt?",
+            "Kette und Weisung vorhanden?",
+            "Niveau reicht – doppelte Mehrheit?"
+          ],
+          "icons": [
+            "wahlurne",
+            "gebaeude",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Wer hat dieses Gremium eigentlich legitimiert? Alle Staatsgewalt geht vom Volke aus (Art. 20 Abs. 2 GG). Nötig ist ein hinreichendes Legitimationsniveau aus personeller und sachlich-inhaltlicher Legitimation. Sitzen im Gremium nicht legitimierte Mitglieder, verlangt das BVerfG, dass die legitimierten die Mehrheit stellen und die Entscheidung tragen. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#demokratieprinzip",
+        "#20gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Legitimationskette: Reicht das Niveau?",
+      "coverText": "Doppelte Mehrheit prüfen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Ein Gremium darf nur verbindlich entscheiden, wenn seine Mitglieder über eine ununterbrochene Kette vom Volk legitimiert sind.",
+        "handlung": "{A} follows a long chain from a ballot box to a round table and stops at several chairs where the chain simply ends, while {B} hovers counting the chairs.",
+        "hinweisRegie": "Place the note in the free space above the chairs where the chain ends, slightly tilted toward them, so the missing links are clear without covering {B}'s counting gesture.",
+        "alternative": "{B} weighs four unmarked tokens against three stamped ones on a scale while {A} decides whether the stamped side still prevails."
+      },
+      "bildSzene": "chain from ballot box ends",
+      "bildSzeneAlt": "stamped and unmarked tokens on scale",
+      "quellen": [
+        "Art. 20 Abs. 2 GG",
+        "Themenpool: staat-590"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:22.932Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-556",
+      "slug": "2027-06-02-b3",
+      "titelZeilen": [
+        "Klage zurück-",
+        "genommen – die",
+        "Widerklage bleibt"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Klage zurückgenommen – die Widerklage bleibt",
+          "unter": "Widerklage · § 33 ZPO",
+          "text": "Ist die Widerklage einmal erhoben, lebt sie unabhängig weiter.",
+          "norm": "§ 33 ZPO",
+          "icon": "kreislauf",
+          "sprecher": "Die Klage ist weg, die Widerklage bleibt. Das überrascht viele. Hier sind die vier Punkte, die du bei der Widerklage prüfst.",
+          "marken": [
+            "Klage weg",
+            "Widerklage bleibt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Klage ist rechtshängig",
+          "text": "Bei Erhebung der Widerklage muss die Klage rechtshängig sein.",
+          "norm": "§ 261 ZPO",
+          "sprecher": "Punkt eins: Im Zeitpunkt der Widerklage muss die Klage rechtshängig sein. Die Widerklage wird in der mündlichen Verhandlung oder durch zugestellten Schriftsatz erhoben.",
+          "marken": [
+            "rechtshängig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Parteien mit vertauschten Rollen",
+          "text": "Der Beklagte klagt gegen den Kläger. Dritte nur als Drittwiderklage.",
+          "norm": null,
+          "sprecher": "Punkt zwei: Die Parteien sind dieselben, nur mit vertauschten Rollen. Der Beklagte klagt gegen den Kläger. Soll ein Dritter einbezogen werden, ist das eine Drittwiderklage mit eigenen Regeln.",
+          "marken": [
+            "Rollentausch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zusammenhang nach § 33 ZPO",
+          "text": "Rspr.: besondere Prozessvoraussetzung. Große Teile der Lehre: nur Gerichtsstand.",
+          "norm": "§ 33 Abs. 1 ZPO",
+          "sprecher": "Punkt drei: der Zusammenhang. Die Rechtsprechung sieht ihn als besondere Prozessvoraussetzung. Große Teile der Lehre lesen § 33 nur als Gerichtsstand. Lässt sich der Kläger rügelos ein, wird das meist egal.",
+          "marken": [
+            "Zusammenhang",
+            "Streit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Allgemeine Voraussetzungen",
+          "text": "Zuständigkeit, gleiche Prozessart, kein Ausschluss nach § 33 Abs. 2 ZPO.",
+          "norm": "§ 33 Abs. 2 ZPO",
+          "sprecher": "Punkt vier: die übrigen Voraussetzungen. Das Gericht muss zuständig sein, es muss dieselbe Prozessart sein, und § 33 Absatz 2 darf die Widerklage nicht ausschließen.",
+          "marken": [
+            "Zuständigkeit"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und wenn die Klage wegfällt?",
+          "text": "Rücknahme oder Erledigung der Klage lassen die Widerklage unberührt.",
+          "norm": "§ 269 ZPO",
+          "sprecher": "Und jetzt der Clou: Nimmt der Kläger die Klage später zurück oder erledigt sie sich, lässt das die Widerklage unberührt. Sie ist ein eigener Angriff und wird selbständig entschieden.",
+          "marken": [
+            "selbständig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Rechtshängigkeit zählt nur bei Erhebung. Danach steht die Widerklage allein.",
+          "norm": null,
+          "sprecher": "Merke: Die Klage muss nur rechtshängig sein, wenn die Widerklage erhoben wird. Danach steht die Widerklage auf eigenen Beinen.",
+          "marken": [
+            "eigene Beine"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Widerklage in vier Punkten",
+          "text": "Speichern für die nächste ZPO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste ZPO-Klausur. Und prüf die Widerklage immer getrennt von der Klage.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Klage zurückgenommen – die Widerklage bleibt. Rechtshängig muss die Klage nur im Zeitpunkt der Widerklageerhebung sein. Dazu kommen Parteiidentität mit vertauschten Rollen, der Zusammenhang nach § 33 ZPO (nach der Rspr. besondere Prozessvoraussetzung, nach großen Teilen der Lehre nur Gerichtsstand) und die allgemeinen Voraussetzungen. Rücknahme oder Erledigung der Klage lassen die Widerklage unberührt. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#widerklage",
+        "#33zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Widerklage: Sie überlebt die Klagerücknahme",
+      "coverText": "Eigener Angriff, eigenes Schicksal",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Ist die Widerklage einmal erhoben, besteht sie fort, auch wenn die Klage wegfällt.",
+        "handlung": "{B} pulls away one of two leaning crystal pillars, and {A} points his pointer at the second pillar, which keeps standing on its own.",
+        "hinweisRegie": "Place the note in the free space where the removed pillar stood, slightly tilted toward the remaining pillar, so the independent survival is clear without covering {B}'s hands.",
+        "alternative": "{A} cuts the rope of one of two tethered balloons while {B} watches the second balloon keep floating steadily."
+      },
+      "bildSzene": "second pillar keeps standing",
+      "bildSzeneAlt": "one balloon cut, other floats",
+      "quellen": [
+        "§ 33 ZPO",
+        "§ 261 ZPO",
+        "§ 269 ZPO",
+        "Themenpool: zpo-556"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:22.934Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-609",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Einem Nicht-EU-Ausländer wird die Berufsausübung beschränkt. Welches Grundrecht prüfst du?",
+      "optionen": [
+        "Art. 2 Abs. 1 GG als Auffanggrundrecht",
+        "Art. 12 Abs. 1 GG – die Berufsfreiheit gilt für jeden",
+        "Keines – er ist insoweit ungeschützt"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 12 Abs. 1 GG",
+        "Themenpool: grundr-609"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:22.934Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-609",
+      "ueberzeile": "Auflösung",
+      "titel": "Art. 2 Abs. 1 GG – er fängt auf, wo Deutschengrundrechte nicht greifen",
+      "text": "Art. 12 Abs. 1 GG schützt nur Deutsche. Für andere greift die allgemeine Handlungsfreiheit als Auffanggrundrecht. Sie steht unter dem weiten Vorbehalt der verfassungsmäßigen Ordnung. Für EU-Bürger ist umstritten, ob Art. 12 GG unionsrechtlich erweitert oder Art. 2 Abs. 1 GG mit gleichem Schutzniveau anzuwenden ist.",
+      "norm": "Art. 2 Abs. 1 GG",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 12 Abs. 1 GG",
+        "Art. 18 AEUV",
+        "Themenpool: grundr-609"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:22.934Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Art. 2 Abs. 1 GG als Auffanggrundrecht",
+        "Art. 12 Abs. 1 GG – die Berufsfreiheit gilt für jeden",
+        "Keines – er ist insoweit ungeschützt"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-241",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 823 Abs. 2 BGB mit § 263 StGB: So wird das bloße Vermögen geschützt",
+      "text": "§ 823 Abs. 1 BGB schützt das Vermögen als solches nicht. Über Abs. 2 geht es doch: § 263 StGB ist ein Schutzgesetz, das den Einzelnen vor Vermögensschäden bewahren soll. Das Verschulden richtet sich dann nach dem Schutzgesetz – beim Betrug ist also Vorsatz nötig.",
+      "norm": "§ 823 Abs. 2 BGB · § 263 StGB",
+      "quellen": [
+        "§ 823 Abs. 2 BGB",
+        "§ 263 StGB",
+        "Themenpool: delikt-241"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:22.934Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "streit-29",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "A will O erst betäuben, dann töten. O stirbt schon an der Betäubung: vollendeter Totschlag?",
+      "norm": "§ 16 StGB · § 22 StGB",
+      "optionen": [
+        "BGH: ja, wenn A beim Betäuben schon unmittelbar angesetzt hat – unwesentliche Abweichung.",
+        "Teile der Lit.: nein – Versuch und fahrlässige Tötung, der Vollendungsvorsatz fehlte."
+      ],
+      "text": "Klausur: Erst klären, ob die Betäubung schon Versuchsbeginn war. Lag sie noch im Vorbereitungsstadium, bleibt es bei § 222 StGB. Nur bei unmittelbarem Ansetzen kommt es auf den Streit an.",
+      "quellen": [
+        "§ 16 StGB",
+        "§ 22 StGB",
+        "§ 212 StGB",
+        "§ 222 StGB"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:22.934Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-835",
+      "ueberzeile": "Merksatz Zwangsvollstreckung",
+      "titel": "Wer zuerst pfändet, wird zuerst befriedigt",
+      "text": "Das frühere Pfandrecht geht vor (§ 804 Abs. 3 ZPO). Reicht der Erlös nicht, verteilt das Vollstreckungsgericht (§ 872 ZPO). Wer widerspricht, muss binnen eines Monats die Klage nachweisen (§ 878 ZPO).",
+      "norm": "§ 804 Abs. 3 ZPO · § 878 ZPO",
+      "quellen": [
+        "§ 804 Abs. 3 ZPO",
+        "§ 872 ZPO",
+        "§ 878 ZPO",
+        "Themenpool: zwangsv-835"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:22.934Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-585",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Vollstreckungsbescheid: ein Versäumnisurteil ohne mündliche Verhandlung",
+      "text": "Der Rechtspfleger erlässt ihn auf den Mahnbescheid, wenn kein Widerspruch eingelegt wurde. Er steht einem für vorläufig vollstreckbar erklärten Versäumnisurteil gleich (§ 700 Abs. 1 ZPO). Folge: Einspruch binnen zwei Wochen – sonst wird er rechtskräftig.",
+      "norm": "§ 699 ZPO · § 700 ZPO",
+      "quellen": [
+        "§ 699 ZPO",
+        "§ 700 ZPO",
+        "§ 339 ZPO",
+        "Themenpool: assessorz-585"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:22.934Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

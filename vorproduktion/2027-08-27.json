@@ -1,0 +1,872 @@
+{
+  "datum": "2027-08-27",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "sachen-512",
+        "themaTitel": "Vormerkung: Entstehung und Wirkung",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "stpo-077",
+        "themaTitel": "Wann darf ohne richterliche Anordnung durchsucht werden?",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-624",
+        "themaTitel": "Eigentumsgarantie: Inhaltsbestimmung vs. Enteignung",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "assessoroer-854"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "assessoroer-854"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "famerb-259"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "merksatz",
+        "themaId": "methodik-899"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:59",
+        "art": "begriff",
+        "themaId": "strafbt-746"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:10",
+        "art": "fehler",
+        "themaId": "stpo-926"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "sachen-512",
+      "poolTitel": "Vormerkung: Entstehung und Wirkung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 883 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-26",
+        "2027-07-29",
+        "2027-07-29"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "stpo-077",
+      "poolTitel": "Wann darf ohne richterliche Anordnung durchsucht werden?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 102 StPO",
+        "§ 105 StPO",
+        "Art. 13 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26",
+        "2027-04-23",
+        "2027-06-25"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-624",
+      "poolTitel": "Eigentumsgarantie: Inhaltsbestimmung vs. Enteignung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-08",
+        "2027-04-04",
+        "2027-08-06"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-854",
+      "poolTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-11",
+        "2027-06-01",
+        "2027-06-01"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-854",
+      "poolTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-11",
+        "2027-06-01",
+        "2027-06-01"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-259",
+      "poolTitel": "Was gilt für ein gemeinschaftliches Testament?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 2265 BGB",
+        "§ 2270 BGB",
+        "§ 2271 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2027-04-15"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "methodik-899",
+      "poolTitel": "Definitionen lernen: Wortlaut plus Funktion",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-06",
+        "2027-06-15",
+        "2027-06-26"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafbt-746",
+      "poolTitel": "Diebstahl: fremde bewegliche Sache und Wegnahme",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-21",
+        "2027-03-12",
+        "2027-05-03"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "stpo-926",
+      "poolTitel": "Wann erlauben §§ 100a, 100b StPO Telekommunikationsüberwachung und Online-Durchsuchung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 100a StPO",
+        "§ 100b StPO",
+        "Art. 10 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-20",
+        "2027-04-23",
+        "2027-06-25"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-512",
+      "slug": "2027-08-27-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schon an D übereignet – und K bekommt es trotzdem",
+          "titelZeilen": [
+            "Schon an D",
+            "übereignet – und K",
+            "bekommt es trotzdem"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Relativ unwirksam: § 883 II BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "V verkauft K notariell ein Grundstück. Für K wird eine Auflassungsvormerkung eingetragen. Bevor K umgeschrieben wird, lässt V das Grundstück an D auf; D wird als Eigentümer eingetragen. K will das Grundstück trotzdem."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Vormerkung entstanden?",
+              "text": "Gesicherter Anspruch (hier § 433 Abs. 1 S. 1 BGB), Bewilligung des V und Eintragung (§§ 883 Abs. 1, 885 BGB)."
+            },
+            {
+              "titel": "Vormerkungswidrige Verfügung",
+              "text": "Die Auflassung an D würde den Anspruch des K vereiteln."
+            },
+            {
+              "titel": "Rechtsfolge",
+              "text": "Die Verfügung ist K gegenüber unwirksam (§ 883 Abs. 2 BGB) – nur relativ, im Übrigen ist D Eigentümer."
+            },
+            {
+              "titel": "Durchsetzung",
+              "text": "K verlangt von V die Auflassung und von D die Zustimmung zur Eintragung (§ 888 Abs. 1 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Den Anspruch des K an § 275 BGB scheitern lassen, weil V nicht mehr Eigentümer ist. Im Verhältnis zu K gilt die Verfügung an D als unwirksam: V kann K noch auflassen, und D muss der Eintragung des K zustimmen."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "K kann von V die Auflassung (§ 433 Abs. 1 S. 1 BGB) und von D die Zustimmung zu seiner Eintragung (§ 888 Abs. 1 BGB) verlangen. Mit der Eintragung wird K Eigentümer – obwohl D schon vor ihm im Grundbuch stand."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vormerkung: Spätere Verfügungen sind dem Vorgemerkten gegenüber unwirksam. Auflassung vom Verkäufer, Zustimmung vom Dritten (§ 888 BGB)."
+        },
+        {
+          "art": "cta",
+          "titel": "Vormerkung im Fall",
+          "punkte": [
+            "Anspruch, Bewilligung, Eintragung",
+            "Vormerkungswidrige Verfügung?",
+            "§ 883 II: relativ unwirksam",
+            "§ 888: Zustimmung des Dritten"
+          ],
+          "icons": [
+            "vertrag",
+            "haus",
+            "schild",
+            "handschlag"
+          ]
+        }
+      ],
+      "caption": "Schon an D übereignet – und K bekommt das Grundstück trotzdem. Die Vormerkung macht vormerkungswidrige Verfügungen dem Vorgemerkten gegenüber unwirksam (§ 883 Abs. 2 BGB). K verlangt deshalb weiter von V die Auflassung und von D die Zustimmung zu seiner Eintragung (§ 888 Abs. 1 BGB). Wer hier § 275 BGB prüft, hat die Vormerkung übersehen. Speichern für die nächste Grundstücksklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#vormerkung",
+        "#883bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vormerkung: relativ unwirksam und § 888 BGB",
+      "coverText": "Relativ unwirksam: § 883 II BGB",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Die Vormerkung schützt den Käufer auch dann, wenn das Grundstück zwischenzeitlich an einen anderen übertragen wurde.",
+        "handlung": "{B} plants a small reserved flag on a plot of rocky land, while {A} tries to set up his own tent there and bumps into the flag's invisible protective line.",
+        "hinweisRegie": "Place the note in the free space beside the reserved flag, slightly tilted toward it, so the protective effect is visible without covering the tent or the characters' faces.",
+        "alternative": "{A} hands a house key to a newcomer, but {B} holds an earlier stamped ticket that makes the key glow only for her."
+      },
+      "bildSzene": "reserved flag blocks second tent",
+      "bildSzeneAlt": "earlier ticket overrides handed key",
+      "quellen": [
+        "§§ 883, 885, 888 BGB",
+        "§ 433 Abs. 1 BGB",
+        "§ 275 BGB",
+        "Themenpool: sachen-512"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.360Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-077",
+      "slug": "2027-08-27-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "„Richter hätte zugestimmt“ – das rettet nicht jede Durchsuchung",
+          "titelZeilen": [
+            "„Richter hätte",
+            "zugestimmt“ – das",
+            "rettet nicht jede",
+            "Durchsuchung"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Bewusste Umgehung wiegt schwer",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Polizei durchsucht am Vormittag die Wohnung des A wegen Verdachts des Drogenhandels. Den erreichbaren Ermittlungsrichter fragt sie bewusst nicht – „das dauert zu lange“. Ein Beweisverlust droht nicht, A ahnt nichts. Gefunden wird Kokain. Verwertbar?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Richtervorbehalt",
+              "text": "Durchsuchungen ordnet grundsätzlich der Richter an (Art. 13 Abs. 2 GG, § 105 Abs. 1 StPO)."
+            },
+            {
+              "titel": "Gefahr im Verzug",
+              "text": "Nur wenn die richterliche Anordnung den Durchsuchungszweck gefährden würde – mit Tatsachen belegt und dokumentiert."
+            },
+            {
+              "titel": "Rechtswidrigkeit",
+              "text": "Hier drohte kein Beweisverlust: Die Eilkompetenz fehlte, die Durchsuchung ist rechtswidrig."
+            },
+            {
+              "titel": "Verwertbarkeit",
+              "text": "Die Rspr. wägt ab. Ein Verbot liegt nahe, wenn der Richtervorbehalt bewusst oder willkürlich umgangen wurde."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Mit dem hypothetischen Ersatzeingriff alles retten: „Der Richter hätte die Durchsuchung ohnehin angeordnet.“ Wird der Richtervorbehalt bewusst umgangen, lässt der BGH diese Erwägung nicht gelten – sonst liefe der Vorbehalt leer."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Die Polizei hat den Richtervorbehalt bewusst übergangen. Nach der Rspr. ist das Kokain unverwertbar – auf einen hypothetisch rechtmäßigen Ermittlungsverlauf kommt es nicht an. In der Hauptverhandlung muss der Verteidiger der Verwertung rechtzeitig widersprechen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gefahr im Verzug ist die Ausnahme. Wer den Richter bewusst umgeht, kann sich nicht darauf berufen, er hätte ohnehin zugestimmt."
+        },
+        {
+          "art": "cta",
+          "titel": "Durchsuchung ohne Richter",
+          "punkte": [
+            "Richter erreichbar?",
+            "Gefahr im Verzug belegt?",
+            "Bewusste Umgehung?"
+          ],
+          "icons": [
+            "richter",
+            "uhr",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "„Der Richter hätte ja zugestimmt“ rettet nicht jede Durchsuchung. Gefahr im Verzug besteht nur, wenn die richterliche Anordnung den Durchsuchungszweck gefährden würde. Umgeht die Polizei den Richtervorbehalt bewusst, nimmt die Rechtsprechung ein Verwertungsverbot an und lässt den hypothetisch rechtmäßigen Ermittlungsverlauf nicht gelten. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#durchsuchung",
+        "#105stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Durchsuchung: Gefahr im Verzug und Verwertung",
+      "coverText": "Bewusste Umgehung wiegt schwer",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer den erreichbaren Richter bewusst übergeht, kann sich später nicht auf dessen hypothetische Zustimmung berufen.",
+        "handlung": "{A} hurries past an open office door where a judge figure sits waiting at a desk, carrying a crowbar toward a flat door, while {B} stands in the corridor and points back at the open office.",
+        "hinweisRegie": "Place the note in the free space between the open office door and {B}'s pointing hand, slightly tilted toward the office, so the skipped step is obvious without covering the characters' faces.",
+        "alternative": "{B} holds up an unsigned form while {A} has already opened a door and is carrying out a small box."
+      },
+      "bildSzene": "hurrying past waiting judge's office",
+      "bildSzeneAlt": "unsigned form, door already opened",
+      "quellen": [
+        "Art. 13 Abs. 2 GG",
+        "§§ 102, 105 Abs. 1 StPO",
+        "Themenpool: stpo-077"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.360Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-624",
+      "slug": "2027-08-27-b3",
+      "titelZeilen": [
+        "Art. 14 GG: Kein",
+        "Wahlrecht zwischen",
+        "Klage und Geld"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Art. 14 GG: Kein Wahlrecht zwischen Klage und Geld",
+          "unter": "Eigentum · Art. 14 GG",
+          "text": "Rechtswidriger Eingriff? Erst abwehren – nicht dulden und Entschädigung verlangen.",
+          "norm": "Art. 14 GG",
+          "icon": "haus",
+          "sprecher": "Dulden und kassieren gibt es bei Artikel 14 nicht. Wer sich gegen einen rechtswidrigen Eingriff nicht wehrt, bekommt dafür nicht einfach Geld. Das folgt aus zwei Weichen.",
+          "marken": [
+            "erst abwehren"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Enteignung – eng verstanden",
+          "text": "Entzug konkreter Eigentumspositionen zur Erfüllung öffentlicher Aufgaben.",
+          "norm": "Art. 14 Abs. 3 GG",
+          "sprecher": "Weiche eins: Enteignung ist nach dem BVerfG nur der vollständige oder teilweise Entzug konkreter Eigentumspositionen zur Erfüllung bestimmter öffentlicher Aufgaben. Sie braucht ein Gesetz mit Entschädigungsregel.",
+          "marken": [
+            "Entzug"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Sonst: Inhalts- und Schrankenbestimmung",
+          "text": "Abstrakt-generelle Festlegung von Rechten und Pflichten.",
+          "norm": "Art. 14 Abs. 1 S. 2 GG",
+          "sprecher": "Weiche zwei: Alles andere ist Inhalts- und Schrankenbestimmung. Sie legt abstrakt fest, was Eigentümer dürfen und was sie hinnehmen müssen.",
+          "marken": [
+            "Inhaltsbestimmung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zu hart? Keine Enteignung",
+          "text": "Unverhältnismäßige Inhaltsbestimmung bleibt Inhaltsbestimmung – und ist verfassungswidrig.",
+          "norm": null,
+          "sprecher": "Schritt drei: Ist die Regelung unverhältnismäßig hart, schlägt sie nicht in eine Enteignung um. Sie bleibt Inhaltsbestimmung, ist aber verfassungswidrig, solange der Gesetzgeber keinen Ausgleich vorsieht.",
+          "marken": [
+            "Trennungsthese"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Primärrechtsschutz zuerst",
+          "text": "Rechtswidrigen Eingriff anfechten, nicht hinnehmen.",
+          "norm": null,
+          "sprecher": "Schritt vier: Deshalb musst du einen rechtswidrigen Eingriff zuerst anfechten. Seit dem Nassauskiesungsbeschluss darfst du ihn nicht einfach hinnehmen und stattdessen Entschädigung verlangen.",
+          "marken": [
+            "Nassauskiesung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Ausgleichspflichtige Inhaltsbestimmung",
+          "text": "Ausgleich nur auf gesetzlicher Grundlage – vorrangig real, erst dann Geld.",
+          "norm": null,
+          "sprecher": "Wichtig für die Klausur: Eine ausgleichspflichtige Inhaltsbestimmung braucht eine gesetzliche Ausgleichsregel. Vorrang hat, die Belastung real zu vermeiden, etwa durch Ausnahmen oder Übergangsfristen. Geld kommt erst danach.",
+          "marken": [
+            "Ausgleich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Enteignung eng, Inhaltsbestimmung weit, Klage vor Geld.",
+          "norm": null,
+          "sprecher": "Merke: Enteignung ist eng, alles andere Inhaltsbestimmung. Und bei rechtswidrigen Eingriffen gilt: erst abwehren, nicht dulden und später kassieren.",
+          "marken": [
+            "Klage vor Geld"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für Art. 14 GG speichern",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur zum Eigentum.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Bei Art. 14 GG gibt es kein Wahlrecht zwischen Klage und Geld. Enteignung ist nur der gezielte Entzug konkreter Eigentumspositionen zur Erfüllung öffentlicher Aufgaben, alles andere ist Inhalts- und Schrankenbestimmung – auch wenn sie unverhältnismäßig hart ist. Einen rechtswidrigen Eingriff musst du deshalb zuerst abwehren; ein „Dulde und liquidiere“ lässt das BVerfG seit dem Nassauskiesungsbeschluss nicht zu.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#eigentum",
+        "#art14gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 14 GG: Enteignung oder Inhaltsbestimmung",
+      "coverText": "Nassauskiesung: erst abwehren",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Gegen einen rechtswidrigen Eigentumseingriff muss man sich zuerst wehren – ein späterer Geldanspruch ersetzt das nicht.",
+        "handlung": "{B} hovers in front of a small house and offers {A} a coin tray, while {A} pushes the tray aside with his pointer and taps a shield leaning against the house wall.",
+        "hinweisRegie": "Place the note in the free space between the pushed-aside coin tray and the shield, slightly tilted toward the shield, so defending first is the clear message without covering either character.",
+        "alternative": "{A} stands at a fork with one path marked by a shield and a closed path marked by coins, and {B} waves toward the shield path."
+      },
+      "bildSzene": "coin tray pushed aside, shield",
+      "bildSzeneAlt": "fork: shield path, closed coin path",
+      "quellen": [
+        "Art. 14 Abs. 1, 3 GG",
+        "BVerfGE 58, 300 (Nassauskiesung)",
+        "Themenpool: grundr-624"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.361Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-854",
+      "ueberzeile": "Prüfungsfrage 2. Examen ÖR",
+      "titel": "Die Behörde ordnet die sofortige Vollziehung an (§ 80 Abs. 2 S. 1 Nr. 4 VwGO). Welchen Antrag stellst du?",
+      "optionen": [
+        "Aufschiebende Wirkung des Widerspruchs wiederherstellen",
+        "Aufschiebende Wirkung des Widerspruchs anordnen",
+        "Einstweilige Anordnung nach § 123 VwGO erlassen"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 80 Abs. 1, 2, 5 VwGO",
+        "§ 123 Abs. 5 VwGO",
+        "Themenpool: assessoroer-854"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.361Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-854",
+      "ueberzeile": "Auflösung",
+      "titel": "Wiederherstellen – denn die aufschiebende Wirkung bestand schon",
+      "text": "Widerspruch und Anfechtungsklage haben grundsätzlich aufschiebende Wirkung (§ 80 Abs. 1 VwGO). Die Anordnung nach Abs. 2 S. 1 Nr. 4 hat sie beseitigt – das Gericht stellt sie wieder her (§ 80 Abs. 5 S. 1 VwGO). „Anordnen“ passt, wo sie kraft Gesetzes entfällt (Nr. 1–3). § 123 VwGO tritt zurück (§ 123 Abs. 5 VwGO).",
+      "norm": "§ 80 Abs. 5 S. 1 VwGO",
+      "quellen": [
+        "§ 80 Abs. 1, 2, 5 VwGO",
+        "§ 123 Abs. 5 VwGO",
+        "Themenpool: assessoroer-854"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.361Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Aufschiebende Wirkung des Widerspruchs wiederherstellen",
+        "Aufschiebende Wirkung des Widerspruchs anordnen",
+        "Einstweilige Anordnung nach § 123 VwGO erlassen"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-259",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 2265 BGB: Gemeinschaftlich testieren können nur Ehegatten",
+      "text": "Ein gemeinschaftliches Testament steht nur Ehegatten offen – nach dem LPartG auch eingetragenen Lebenspartnern. Verlobte, Geschwister oder unverheiratete Paare bleiben beim Einzeltestament oder Erbvertrag. Formvorteil: Es genügt, wenn einer eigenhändig schreibt und beide unterschreiben (§ 2267 BGB).",
+      "norm": "§ 2265 BGB · § 2267 BGB",
+      "quellen": [
+        "§ 2265 BGB",
+        "§ 2267 BGB",
+        "LPartG",
+        "Themenpool: famerb-259"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.361Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-899",
+      "ueberzeile": "Merksatz Klausurtechnik",
+      "titel": "Gleiches Wort, andere Definition: Begriffe gelten je Norm",
+      "text": "Tiere sind nach § 90a BGB keine Sachen, werden aber wie Sachen behandelt; für § 242 StGB sind sie nach h.M. schlicht Sachen. Lerne jede Definition mit ihrer Norm.",
+      "norm": "§ 90a BGB · § 242 StGB",
+      "quellen": [
+        "§ 90a BGB",
+        "§ 242 StGB",
+        "Themenpool: methodik-899"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.361Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-746",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Diebesfalle: Kein Gewahrsamsbruch – nur Versuch",
+      "text": "Bruch heißt: Aufhebung fremden Gewahrsams ohne oder gegen den Willen des Inhabers. Präpariert O eine Geldbörse als Falle und ist mit der Wegnahme einverstanden, um den Täter zu überführen, fehlt der Bruch. T weiß davon nichts – er macht sich wegen versuchten Diebstahls strafbar (§§ 242 Abs. 2, 22 StGB).",
+      "norm": "§ 242 StGB",
+      "quellen": [
+        "§ 242 Abs. 1, 2 StGB",
+        "§ 22 StGB",
+        "Themenpool: strafbt-746"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.361Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-926",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Online-Durchsuchung: Genügt jede Katalogtat der TKÜ?",
+      "falsch": "„Liegt eine Katalogtat für die Telekommunikationsüberwachung vor, ist auch die Online-Durchsuchung möglich.“",
+      "richtigText": "Nein. § 100b StPO hat einen eigenen, engeren Katalog besonders schwerer Straftaten (§ 100b Abs. 2 StPO). Die Tat muss auch im Einzelfall besonders schwer wiegen, und die Maßnahme ist nur zulässig, wenn andere Ermittlungen aussichtslos oder wesentlich erschwert wären.",
+      "quellen": [
+        "§ 100b Abs. 1, 2 StPO",
+        "§ 100a StPO",
+        "Themenpool: stpo-926"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.361Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

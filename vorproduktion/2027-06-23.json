@@ -1,0 +1,867 @@
+{
+  "datum": "2027-06-23",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-748",
+        "themaTitel": "Diebstahl mit Waffen/Bandendiebstahl",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "staat-589",
+        "themaTitel": "Staatsstrukturprinzipien des Art. 20 GG",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bgbat-428",
+        "themaTitel": "Anfechtung durch Vertreter: Wissenszurechnung",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "staat-592"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "staat-592"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "europa-705"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "streitstand",
+        "themaId": "revision-878"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "merksatz",
+        "themaId": "zpo-551"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:05",
+        "art": "begriff",
+        "themaId": "verwalt-382"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-748",
+      "poolTitel": "Diebstahl mit Waffen/Bandendiebstahl",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 244 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-589",
+      "poolTitel": "Staatsstrukturprinzipien des Art. 20 GG",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-22"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-428",
+      "poolTitel": "Anfechtung durch Vertreter: Wissenszurechnung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 123, 166 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-09",
+        "2027-03-02",
+        "2027-03-02"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-592",
+      "poolTitel": "Sozialstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-592",
+      "poolTitel": "Sozialstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "europa-705",
+      "poolTitel": "Rechtfertigung: geschriebene/ungeschriebene Gründe",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "AEUV; EuGH-Rechtsprechung"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "revision-878",
+      "poolTitel": "Was beweist das Hauptverhandlungsprotokoll?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 274 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-17",
+        "2027-04-22",
+        "2027-06-06"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "zpo-551",
+      "poolTitel": "Streitgegenstand im Zivilprozess",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 253, 308 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-28",
+        "2026-12-26",
+        "2027-03-18"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "verwalt-382",
+      "poolTitel": "Welche Nebenbestimmungen gibt es und wie greift man sie an?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 36 VwVfG",
+        "§ 42 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-02",
+        "2027-04-11",
+        "2027-04-11"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-748",
+      "slug": "2027-06-23-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Allein am Auto – und trotzdem Bandendiebstahl",
+          "titelZeilen": [
+            "Allein am Auto –",
+            "und trotzdem",
+            "Bandendiebstahl"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Mitwirkung ohne Tatort",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A, B und C verabreden, über Monate Navigationsgeräte aus parkenden Autos zu stehlen; C soll die Beute verkaufen. In einer Nacht bricht A allein einen Wagen auf. B hat das Auto vorher ausgespäht und hält per Telefon Kontakt. Bandendiebstahl nach § 244 Abs. 1 Nr. 2 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Bande",
+              "text": "Mindestens drei Personen, verbunden zur fortgesetzten Begehung mehrerer selbständiger, im Einzelnen noch ungewisser Taten."
+            },
+            {
+              "titel": "Auch C zählt",
+              "text": "Mitglied kann auch sein, wem nur untergeordnete Aufgaben zugedacht sind – etwa der Absatz der Beute."
+            },
+            {
+              "titel": "Mitwirkung eines anderen Mitglieds",
+              "text": "Nach dem BGH müssen nicht zwei Mitglieder am Tatort sein. Es genügt, dass ein anderes an der Tat mitwirkt – hier B."
+            },
+            {
+              "titel": "Vorsatz",
+              "text": "A kennt die Abrede und Bs Beitrag und handelt als Mitglied der Bande."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkfehler",
+          "text": "„Nur A war vor Ort – also kein Bandendiebstahl.“ Früher verlangte die Rspr. ein Zusammenwirken am Tatort. Der Große Senat des BGH hat das aufgegeben. Umgekehrt reichen seitdem zwei Personen nicht mehr: Die Bande braucht mindestens drei, einen gefestigten Bandenwillen aber nicht."
+        },
+        {
+          "art": "text",
+          "titel": "Die Lösung",
+          "punkte": [
+            "Bande (+): A, B und C, auf mehrere künftige Taten angelegt.",
+            "Mitwirkung (+): B wirkt an dieser Tat mit, auch ohne Anwesenheit.",
+            "§ 244 Abs. 1 Nr. 2 StGB (+); das Regelbeispiel des § 243 StGB tritt zurück."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Bande: mindestens drei. Mitwirkung: Ein anderes Mitglied wirkt an der Tat mit – am Tatort sein muss es nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 244 Abs. 1 Nr. 2 in drei Fragen",
+          "punkte": [
+            "Mindestens drei verbunden?",
+            "Für mehrere künftige Taten?",
+            "Wirkt ein anderes Mitglied mit?"
+          ],
+          "icons": [
+            "personen",
+            "kalender",
+            "telefon"
+          ]
+        }
+      ],
+      "caption": "Allein am Auto – und trotzdem Bandendiebstahl. Eine Bande besteht nach dem BGH aus mindestens drei Personen, die sich zur fortgesetzten Begehung von Taten verbunden haben. Für § 244 Abs. 1 Nr. 2 StGB muss ein anderes Bandenmitglied an der Tat mitwirken – am Tatort sein muss es nicht. Speichern für die nächste Diebstahlsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#244stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Bandendiebstahl: Mitwirkung ohne Tatort",
+      "coverText": "Mitwirkung ohne Tatort",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Für den Bandendiebstahl muss ein anderes Mitglied mitwirken – am Tatort sein muss es nicht.",
+        "handlung": "{A} works alone on a car door with a small tool, while far away {B} watches through a spyglass and raises a lantern as a signal.",
+        "hinweisRegie": "Place the note in the free space between the car door and the distant lantern, slightly tilted toward {B}, so the remote contribution stands out without covering {A}'s hands at the door.",
+        "alternative": "Three figures hold one rope from different distances, and only one of them stands at the knot."
+      },
+      "bildSzene": "lone thief, distant lookout signals",
+      "bildSzeneAlt": "three hands on one rope",
+      "quellen": [
+        "§ 244 Abs. 1 Nr. 2 StGB",
+        "§ 243 StGB",
+        "BGH, Großer Senat für Strafsachen (Bandenbegriff)",
+        "Themenpool: strafbt-748"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:07:12.266Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-589",
+      "slug": "2027-06-23-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Art. 20 GG rügen? Nur über ein Grundrecht",
+          "titelZeilen": [
+            "Art. 20 GG rügen?",
+            "Nur über ein",
+            "Grundrecht"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Prinzipien über Art. 2 Abs. 1 GG",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "B wendet sich mit der Verfassungsbeschwerde gegen ein Gesetz, das ihm eine neue Meldepflicht auferlegt. Er rügt allein, das Gesetz verstoße gegen das Rechtsstaatsprinzip, weil es unklar formuliert sei. Ist B beschwerdebefugt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Rügefähige Rechte",
+              "text": "Nötig ist die mögliche Verletzung eines Grundrechts oder grundrechtsgleichen Rechts (Art. 93 Abs. 1 Nr. 4a GG, § 90 Abs. 1 BVerfGG)."
+            },
+            {
+              "titel": "Art. 20 GG im Katalog?",
+              "text": "Genannt ist nur Art. 20 Abs. 4 GG, das Widerstandsrecht. Die Prinzipien der Abs. 1–3 sind kein subjektives Recht."
+            },
+            {
+              "titel": "Weg über Art. 2 Abs. 1 GG",
+              "text": "Die allgemeine Handlungsfreiheit weicht nur der verfassungsmäßigen Ordnung – dazu gehört das Bestimmtheitsgebot."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "B muss Art. 2 Abs. 1 GG oder ein spezielleres Grundrecht rügen. Das Rechtsstaatsprinzip wird dann in der Rechtfertigung geprüft."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Abkürzung",
+          "text": "„Verstoß gegen Art. 20 Abs. 3 GG“ als Beschwerdebefugnis – das trägt nicht. Die Strukturprinzipien sind objektives Recht. Zum Prüfungsmaßstab werden sie über ein Grundrecht: Ein Eingriff ist nur gerechtfertigt, wenn das Gesetz formell und materiell verfassungsgemäß ist."
+        },
+        {
+          "art": "text",
+          "titel": "Sonderfall Demokratie",
+          "text": "Aus dem Wahlrecht (Art. 38 Abs. 1 S. 1 GG) leitet das BVerfG in bestimmten Konstellationen – vor allem bei der Übertragung von Hoheitsrechten auf die EU – ein rügefähiges Recht ab, das an das Demokratieprinzip anknüpft. Das ist die Ausnahme, keine allgemeine Rüge von Art. 20 GG."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Art. 20 Abs. 1–3 GG sind objektives Recht: In der Verfassungsbeschwerde kommen sie nur über ein Grundrecht zum Zug – meist über Art. 2 Abs. 1 GG."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Verfassungsbeschwerde",
+          "punkte": [
+            "Welches Grundrecht ist betroffen?",
+            "Art. 20 GG erst in der Rechtfertigung",
+            "Art. 38 GG nur im Sonderfall"
+          ],
+          "icons": [
+            "person",
+            "waage",
+            "wahlurne"
+          ]
+        }
+      ],
+      "caption": "Art. 20 GG rügen? Nur über ein Grundrecht. Die Staatsstrukturprinzipien der Absätze 1 bis 3 sind objektives Verfassungsrecht und im Katalog des Art. 93 Abs. 1 Nr. 4a GG nicht genannt – anders als das Widerstandsrecht des Abs. 4. Über Art. 2 Abs. 1 GG werden sie aber zum Prüfungsmaßstab, weil nur ein verfassungsmäßiges Gesetz den Eingriff rechtfertigt. Speichern für die nächste Verfassungsbeschwerde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsbeschwerde",
+        "#20gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 20 GG in der Verfassungsbeschwerde",
+      "coverText": "Prinzipien über Art. 2 Abs. 1 GG",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Staatsstrukturprinzipien sind kein eigenes Rügerecht – sie werden erst über ein Grundrecht prüfbar.",
+        "handlung": "{B} tries to push a large pillar-shaped block through a small complaint hatch, while {A} points his pointer at a narrow side door labelled only with a small person symbol.",
+        "hinweisRegie": "Place the note in the free space between the hatch and the side door, slightly tilted toward the side door, so the detour via the individual right is clear without covering the pillar block.",
+        "alternative": "{A} carries a heavy column on the back of a small personal cart, since the column cannot roll by itself."
+      },
+      "bildSzene": "pillar block stuck at small hatch",
+      "bildSzeneAlt": "column carried on personal cart",
+      "quellen": [
+        "Art. 20 GG",
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 90 Abs. 1 BVerfGG",
+        "Art. 2 Abs. 1 GG",
+        "Art. 38 Abs. 1 S. 1 GG",
+        "Themenpool: staat-589"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:49.666Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-428",
+      "slug": "2027-06-23-b3",
+      "titelZeilen": [
+        "Getäuscht: der",
+        "Vertreter. Anfechten:",
+        "der Vertretene"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Getäuscht: der Vertreter. Anfechten: der Vertretene",
+          "unter": "Anfechtung · §§ 123, 166 BGB",
+          "text": "V täuscht Ks Vertreter X über die Unfallfreiheit des Wagens.",
+          "norm": "§ 166 Abs. 1 BGB",
+          "icon": "auto",
+          "sprecher": "Getäuscht wurde X, anfechten darf aber K. Klingt schief, folgt aber direkt aus dem Gesetz. X kauft als Vertreter für K einen Wagen, und V lügt ihn über die Unfallfreiheit an. Vier Schritte.",
+          "marken": [
+            "Vertreter",
+            "Täuschung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Wessen Erklärung?",
+          "text": "X erklärt selbst, aber im Namen des K – die Erklärung wirkt für und gegen K.",
+          "norm": "§ 164 Abs. 1 BGB",
+          "sprecher": "Schritt eins: Wessen Erklärung ist das? X gibt eine eigene Erklärung ab, aber im Namen des K. Nach § 164 wirkt sie unmittelbar für und gegen K. Vertragspartner von V ist also K.",
+          "marken": [
+            "§ 164 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Wessen Irrtum zählt?",
+          "text": "Willensmängel beurteilen sich nach der Person des Vertreters.",
+          "norm": "§ 166 Abs. 1 BGB",
+          "sprecher": "Schritt zwei: Wessen Irrtum zählt? Nach § 166 Absatz 1 kommt es auf die Person des Vertreters an. X wurde getäuscht und hat sich deshalb zum Kauf entschlossen. Das trägt § 123.",
+          "marken": [
+            "Vertreter zählt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Wer ficht an?",
+          "text": "Anfechtungsberechtigt ist K, denn die Erklärung wirkt für ihn. Gegner ist V.",
+          "norm": "§§ 123, 143 BGB",
+          "sprecher": "Schritt drei: Wer ficht an? Nicht X, sondern K. Das Anfechtungsrecht hat, für wen die Erklärung wirkt. Anfechtungsgegner ist V als Vertragspartner.",
+          "marken": [
+            "K ficht an"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Erklärung durch X?",
+          "text": "X kann für K anfechten – wenn seine Vollmacht das umfasst.",
+          "norm": "§ 164 BGB",
+          "sprecher": "Schritt vier: Kann X die Anfechtung selbst erklären? Ja, aber nur im Namen des K und nur, wenn seine Vollmacht das umfasst. Sonst muss K selbst anfechten.",
+          "marken": [
+            "Vollmacht"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Kehrseite: Wissen des K",
+          "text": "Handelt X nach bestimmten Weisungen, hilft K Xs Unkenntnis nicht bei dem, was K selbst kannte.",
+          "norm": "§ 166 Abs. 2 BGB",
+          "sprecher": "Die Kehrseite steht in Absatz 2: Handelt X nach bestimmten Weisungen des K, kann sich K bei Umständen, die er selbst kannte, nicht auf die Unkenntnis des X berufen. Kannte K den Unfall, hilft ihm Xs Unwissen nicht.",
+          "marken": [
+            "Weisung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Willensmangel: beim Vertreter. Anfechtungsrecht: beim Vertretenen.",
+          "norm": null,
+          "sprecher": "Merke: Beim Willensmangel schaust du auf den Vertreter. Das Anfechtungsrecht aber hat der Vertretene.",
+          "marken": [
+            "zwei Ebenen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Wessen Wissen, wessen Recht?",
+          "text": "Speichern für die nächste BGB-AT-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im Allgemeinen Teil. Und frag bei jedem Vertreter: Wessen Wissen, wessen Recht?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Getäuscht wurde der Vertreter – anfechten darf der Vertretene. Ob ein Willensmangel vorliegt, beurteilt sich nach § 166 Abs. 1 BGB in der Person des Vertreters. Das Anfechtungsrecht steht aber dem zu, für den die Erklärung wirkt. Und nach § 166 Abs. 2 BGB kann sich der Vertretene bei Weisungen nicht auf die Unkenntnis des Vertreters berufen. Speichern für die nächste BGB-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#anfechtung",
+        "#166bgb",
+        "#stellvertretung",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Täuschung des Vertreters: Wer ficht an?",
+      "coverText": "Irrtum beim Vertreter, Recht beim Chef",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Der Vertreter wird getäuscht, doch das Recht zur Anfechtung liegt beim Vertretenen.",
+        "handlung": "{A} proudly returns with a dented little vehicle he was talked into buying, while {B} takes a large return ticket out of his hands to hand in herself.",
+        "hinweisRegie": "Place the note in the free space between the dented vehicle and the return ticket, slightly tilted toward the ticket, so the shift of the right is visible without covering the vehicle's dent.",
+        "alternative": "{B} holds a messenger's cracked listening horn, realising the lie reached the messenger, not her."
+      },
+      "bildSzene": "dented vehicle, return ticket taken",
+      "bildSzeneAlt": "cracked listening horn of messenger",
+      "quellen": [
+        "§ 123 BGB",
+        "§ 164 BGB",
+        "§ 166 BGB",
+        "§ 143 BGB",
+        "Themenpool: bgbat-428"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:49.667Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-592",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Woraus leitet das BVerfG das Grundrecht auf ein menschenwürdiges Existenzminimum ab?",
+      "optionen": [
+        "Allein aus dem Sozialstaatsprinzip (Art. 20 Abs. 1 GG)",
+        "Aus dem Recht auf Leben (Art. 2 Abs. 2 S. 1 GG)",
+        "Aus Art. 1 Abs. 1 GG i.V.m. dem Sozialstaatsprinzip"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 1 Abs. 1 GG",
+        "Art. 20 Abs. 1 GG",
+        "Themenpool: staat-592"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:49.667Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-592",
+      "ueberzeile": "Auflösung",
+      "titel": "Aus der Menschenwürde in Verbindung mit dem Sozialstaatsprinzip",
+      "text": "Das BVerfG leitet das Gewährleistungsrecht aus Art. 1 Abs. 1 GG i.V.m. Art. 20 Abs. 1 GG ab. Das Sozialstaatsprinzip allein begründet keine konkreten Leistungsansprüche, sondern einen Gestaltungsauftrag. Die Höhe bestimmt der Gesetzgeber – realitätsgerecht und nachvollziehbar begründet.",
+      "norm": "Art. 1 Abs. 1 i.V.m. Art. 20 Abs. 1 GG",
+      "quellen": [
+        "Art. 1 Abs. 1 GG",
+        "Art. 20 Abs. 1 GG",
+        "Themenpool: staat-592"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:49.667Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Allein aus dem Sozialstaatsprinzip (Art. 20 Abs. 1 GG)",
+        "Aus dem Recht auf Leben (Art. 2 Abs. 2 S. 1 GG)",
+        "Aus Art. 1 Abs. 1 GG i.V.m. dem Sozialstaatsprinzip"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-705",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 36 AEUV: Rein wirtschaftliche Gründe rechtfertigen keine Beschränkung",
+      "text": "Geschrieben: Art. 36 AEUV – u. a. öffentliche Sittlichkeit, Ordnung und Sicherheit, Gesundheit, Kulturgut, gewerbliches Eigentum. Ungeschrieben: zwingende Erfordernisse wie Verbraucher- oder Umweltschutz, nach klassischer Rspr. nur bei unterschiedslos geltenden Maßnahmen. Immer: Verhältnismäßigkeit und keine willkürliche Diskriminierung (Art. 36 S. 2).",
+      "norm": "Art. 36 AEUV",
+      "quellen": [
+        "Art. 34 AEUV",
+        "Art. 36 AEUV",
+        "Themenpool: europa-705"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:49.667Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-878",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Vorsitzender ordnet an, die Verteidigung schweigt: Ist die Verfahrensrüge dann verloren?",
+      "norm": "§ 238 Abs. 2 StPO",
+      "optionen": [
+        "BGH: Grundsätzlich ja – wer die sachleitende Anordnung nicht nach § 238 Abs. 2 StPO beanstandet, kann sie später nicht rügen.",
+        "Teile der Lit.: Nein – die StPO kennt keine solche Präklusion; die Revision prüft den Rechtsfehler unabhängig vom Zwischenrechtsbehelf."
+      ],
+      "text": "Klausur: Die Präklusion betrifft nur Anordnungen des Vorsitzenden zur Sachleitung, die beanstandbar waren – nicht zwingende Verfahrensvorschriften, über die niemand disponieren kann. Beim unverteidigten Angeklagten wird sie zurückhaltend angewandt.",
+      "quellen": [
+        "§ 238 Abs. 2 StPO",
+        "§ 344 Abs. 2 StPO",
+        "§ 337 StPO",
+        "Themenpool: revision-878"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:07:12.266Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-551",
+      "ueberzeile": "Merksatz ZPO",
+      "titel": "Vertrag, Delikt, Bereicherung: ein Streitgegenstand",
+      "text": "Streitgegenstand sind Antrag und Lebenssachverhalt, nicht die Norm. Das Gericht prüft alle Anspruchsgrundlagen selbst – und die Rechtskraft erfasst sie alle.",
+      "norm": "§§ 253 Abs. 2 Nr. 2, 322 Abs. 1 ZPO",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 322 Abs. 1 ZPO",
+        "Themenpool: zpo-551"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:49.667Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-382",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Auflage: Sie zwingt, aber sie suspendiert nicht",
+      "text": "Auflage ist die Bestimmung, durch die dem Begünstigten ein Tun, Dulden oder Unterlassen vorgeschrieben wird (§ 36 Abs. 2 Nr. 4 VwVfG). Der VA wirkt sofort; die Auflage ist selbständig durchsetzbar. Die Bedingung macht die Wirkung dagegen von einem Ereignis abhängig – sie suspendiert, zwingt aber nicht.",
+      "norm": "§ 36 Abs. 2 Nr. 4 VwVfG",
+      "quellen": [
+        "§ 36 VwVfG",
+        "§ 49 Abs. 2 VwVfG",
+        "Themenpool: verwalt-382"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:49.667Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

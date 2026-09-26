@@ -1,0 +1,871 @@
+{
+  "datum": "2027-09-10",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "staat-359",
+        "themaTitel": "Was ist die Wesentlichkeitstheorie?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "bereich-218",
+        "themaTitel": "Wie funktioniert die Eingriffskondiktion?",
+        "fach": "bereich",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "stpo-771",
+        "themaTitel": "Durchsuchung beim Beschuldigten",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "verwalt-649"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "verwalt-649"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:55",
+        "art": "norm",
+        "themaId": "gesetzs-206"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:29",
+        "art": "merksatz",
+        "themaId": "schuldbt-493"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:54",
+        "art": "begriff",
+        "themaId": "zpo-564"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "fehler",
+        "themaId": "zwangsv-918"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "staat-359",
+      "poolTitel": "Was ist die Wesentlichkeitstheorie?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-14",
+        "2027-06-01",
+        "2027-09-06"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "bereich-218",
+      "poolTitel": "Wie funktioniert die Eingriffskondiktion?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-10"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-771",
+      "poolTitel": "Durchsuchung beim Beschuldigten",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 102 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-17",
+        "2027-07-23",
+        "2027-07-23"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-649",
+      "poolTitel": "Verwaltungsvollstreckung: Grundstrukturen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Bundes-/Landes-VwVG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07",
+        "2027-05-07"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-649",
+      "poolTitel": "Verwaltungsvollstreckung: Grundstrukturen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Bundes-/Landes-VwVG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07",
+        "2027-05-07"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "gesetzs-206",
+      "poolTitel": "Was folgt aus einer unberechtigten GoA?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 684 BGB",
+        "§ 812 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-18",
+        "2027-04-22"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "schuldbt-493",
+      "poolTitel": "Behandlungsvertrag und Arzthaftung",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 630a ff. BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-01"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "zpo-564",
+      "poolTitel": "Berufung: Zulässigkeit und Prüfungsumfang",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 511 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-20",
+        "2027-04-09",
+        "2027-08-13"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "zwangsv-918",
+      "poolTitel": "Vollstreckung für und gegen den Rechtsnachfolger: Wann braucht es die Klausel des § 727 ZPO?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 727 ZPO",
+        "§ 750 ZPO",
+        "§ 325 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-07",
+        "2027-05-06",
+        "2027-07-10"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-359",
+      "slug": "2027-09-10-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schulverweis per Erlass: Hier muss der Landtag selbst ran",
+          "titelZeilen": [
+            "Schulverweis per",
+            "Erlass: Hier muss",
+            "der Landtag",
+            "selbst ran"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Erlass ist kein Parlamentsgesetz",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Im Land L enthält das Schulgesetz keine Regel zu Ordnungsmaßnahmen. Ein Erlass des Kultusministeriums bestimmt, dass Schüler bei schweren Verstößen dauerhaft von der Schule verwiesen werden können. Gestützt darauf verweist die Schulleiterin den Schüler S von der Schule. Rechtmäßig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du",
+          "schritte": [
+            {
+              "titel": "1. Eingriff?",
+              "text": "Der Verweis trifft S intensiv in seiner freien Entfaltung (Art. 2 Abs. 1 GG), die Eltern in ihrem Erziehungsrecht (Art. 6 Abs. 2 GG)."
+            },
+            {
+              "titel": "2. Braucht es ein Gesetz?",
+              "text": "Ja. Das Schulverhältnis ist kein gesetzesfreier Innenraum. Die Figur des besonderen Gewaltverhältnisses hat das BVerfG aufgegeben."
+            },
+            {
+              "titel": "3. Reicht irgendeine Norm?",
+              "text": "Nein. Wesentliches für die Grundrechtsausübung muss das Parlament selbst regeln – hier Voraussetzungen und Art des Schulverweises."
+            },
+            {
+              "titel": "4. Was ist der Erlass?",
+              "text": "Eine Verwaltungsvorschrift. Sie bindet nur die Verwaltung intern und ist kein Parlamentsgesetz."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Denkfehler",
+          "text": "„Die Schulaufsicht liegt beim Staat (Art. 7 Abs. 1 GG), also darf das Ministerium die Schulordnung per Erlass festlegen.“ Art. 7 Abs. 1 GG weist dem Staat die Aufsicht zu – er ersetzt aber nicht die gesetzliche Grundlage für intensive Eingriffe in Grundrechte."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Für den Schulverweis fehlt eine parlamentsgesetzliche Grundlage. Der Erlass kann sie nicht ersetzen. Der Verweis ist rechtswidrig. Heute regeln die Schulgesetze der Länder Ordnungsmaßnahmen ausdrücklich – je nach Landesrecht in unterschiedlicher Dichte."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Je intensiver der Eingriff, desto mehr muss das Parlament selbst entscheiden. Ein Erlass bindet die Verwaltung – er trägt keinen Schulverweis."
+        },
+        {
+          "art": "cta",
+          "titel": "Wesentlichkeit in drei Fragen",
+          "punkte": [
+            "Welches Grundrecht, wie intensiv?",
+            "Regelt das Parlament selbst?",
+            "Oder nur Verordnung oder Erlass?"
+          ],
+          "icons": [
+            "schule",
+            "gebaeude",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Ein Erlass des Ministeriums erlaubt den Schulverweis – reicht das? Nein. Das Schulverhältnis ist kein gesetzesfreier Raum, und nach der Wesentlichkeitstheorie muss das Parlament intensive Grundrechtseingriffe selbst regeln. Eine Verwaltungsvorschrift bindet nur die Verwaltung. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#wesentlichkeitstheorie",
+        "#vorbehaltdesgesetzes",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schulverweis per Erlass: Das trägt nicht",
+      "coverText": "Erlass ist kein Parlamentsgesetz",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Ein interner Erlass kann einen harten Grundrechtseingriff nicht tragen; dafür braucht es das Parlament.",
+        "handlung": "{B} hovers in front of a school gate and holds up a thin internal memo as if it were a key, while {A} points calmly to a large, empty lock plate on the gate that the memo does not fit.",
+        "hinweisRegie": "Place the note in the free space next to the empty lock plate on the gate, slightly tilted toward the thin memo, so the mismatch stays visible and neither the gate nor the faces are covered.",
+        "alternative": "{A} stops {B} at a bridge whose load sign demands a heavy stone, while {B} offers only a light sheet of paper."
+      },
+      "bildSzene": "memo does not fit gate lock",
+      "bildSzeneAlt": "light paper at heavy-load bridge",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 2 Abs. 1 GG",
+        "Art. 6 Abs. 2 GG",
+        "Art. 7 Abs. 1 GG",
+        "Themenpool: staat-359"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-parlamentsvorbehalt",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:09.183Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "bereich",
+      "klausur": 1,
+      "fachLabel": "Bereicherungsrecht",
+      "themaId": "bereich-218",
+      "slug": "2027-09-10-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Unerlaubt untervermietet: Wem gehört der Untermietzins?",
+          "titelZeilen": [
+            "Unerlaubt unter-",
+            "vermietet: Wem",
+            "gehört der",
+            "Untermietzins?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Zuweisungsgehalt entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "M hat von V eine Wohnung gemietet. Ohne Erlaubnis des V vermietet er ein Zimmer für 400 € im Monat an U. V erfährt davon und verlangt von M die Herausgabe der bisher gezahlten Untermiete – gestützt auf § 812 Abs. 1 S. 1 Alt. 2 BGB. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du die Eingriffskondiktion",
+          "schritte": [
+            {
+              "titel": "1. Etwas erlangt",
+              "text": "M hat die Untermietzahlungen erlangt."
+            },
+            {
+              "titel": "2. In sonstiger Weise",
+              "text": "Nicht durch Leistung des V: V hat M nichts zugewandt. Es geht um einen möglichen Eingriff."
+            },
+            {
+              "titel": "3. Auf Kosten des V",
+              "text": "Kernfrage: Greift M in eine Rechtsposition ein, deren wirtschaftliche Verwertung allein V zugewiesen ist (Zuweisungsgehalt)?"
+            },
+            {
+              "titel": "4. Ohne Rechtsgrund",
+              "text": "Wird erst relevant, wenn der Eingriff in eine fremde Position feststeht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Auflösung",
+          "text": "Nach dem BGH scheitert der Anspruch an Schritt 3. Den Gebrauch der Wohnung hat V dem M vertraglich gegen Entgelt überlassen. Die Chance, durch Untervermietung Geld zu verdienen, ist V nicht zugewiesen. M verletzt den Vertrag – in eine fremde Rechtsposition greift er nicht ein."
+        },
+        {
+          "art": "text",
+          "titel": "Was V stattdessen hat",
+          "punkte": [
+            "Unterlassung des vertragswidrigen Gebrauchs nach Abmahnung (§ 541 BGB)",
+            "Fristlose Kündigung bei unbefugter Überlassung an Dritte (§ 543 Abs. 2 S. 1 Nr. 2 BGB)",
+            "Schadensersatz, soweit V ein eigener Schaden entsteht (§ 280 Abs. 1 BGB)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eingriffskondiktion setzt voraus, dass der Vorteil einem anderen zugewiesen ist. Wer nur den Vertrag verletzt, greift nicht in fremdes Recht ein."
+        },
+        {
+          "art": "cta",
+          "titel": "Eingriffskondiktion kurz",
+          "punkte": [
+            "Erst: keine Leistung des Anspruchstellers",
+            "Dann: Zuweisungsgehalt genau benennen",
+            "Vertragsverletzung ist kein Eingriff"
+          ],
+          "icons": [
+            "haus",
+            "schluessel",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "M vermietet ohne Erlaubnis unter – muss er die Untermiete an V herausgeben? Nach dem BGH nicht über die Eingriffskondiktion: Den Gebrauch der Wohnung hat V ihm vertraglich überlassen, der Untermieterlös ist V nicht zugewiesen. V bleiben Abmahnung, Unterlassung und Kündigung. Speichern für die nächste Bereicherungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bereicherungsrecht",
+        "#812bgb",
+        "#mietrecht",
+        "#schuldrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Untermiete ohne Erlaubnis: Herausgabe an V?",
+      "coverText": "Zuweisungsgehalt entscheidet",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Die Eingriffskondiktion greift nur, wenn der erlangte Vorteil wirklich dem anderen zugewiesen ist.",
+        "handlung": "{B} holds out an open hand toward a small pouch of coins that {A} has just received through a side door of a rented cabin, but {A} gently keeps the pouch close to herself.",
+        "hinweisRegie": "Place the note in the free space between the outstretched hand and the coin pouch, slightly tilted toward the side door, so the question of whom the money belongs to stays visible without covering hands or faces.",
+        "alternative": "{A} sits in a rented room and hands a key copy to a guest, while {B} watches from the doorway with folded arms."
+      },
+      "bildSzene": "hand reaching for coin pouch",
+      "bildSzeneAlt": "tenant hands key to guest",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+        "§ 540 BGB",
+        "§ 541 BGB",
+        "§ 543 BGB",
+        "Themenpool: bereich-218"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:09.183Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-771",
+      "slug": "2027-09-10-b3",
+      "titelZeilen": [
+        "Durchsuchungs-",
+        "beschluss mit",
+        "Verfallsdatum"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Durchsuchungsbeschluss mit Verfallsdatum",
+          "unter": "Durchsuchung · § 102 StPO",
+          "text": "Der richterliche Beschluss rechtfertigt die Durchsuchung nicht unbegrenzt.",
+          "norm": "§ 102 StPO",
+          "icon": "schluessel",
+          "sprecher": "Ein alter Durchsuchungsbeschluss rechtfertigt nichts mehr. Und auch ein frischer ist kein Blankoscheck. Hier ist, was § 102 StPO beim Verdächtigen verlangt – und wo der Beschluss seine Grenzen hat.",
+          "marken": [
+            "kein Blankoscheck"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Verdacht gegen den Beschuldigten",
+          "text": "Zureichende tatsächliche Anhaltspunkte für eine Straftat genügen.",
+          "norm": "§ 102 StPO",
+          "sprecher": "Schritt eins: Verdacht. Durchsucht werden darf beim Verdächtigen einer Straftat. Ein Anfangsverdacht auf Grundlage konkreter Tatsachen genügt – bloße Vermutungen reichen nicht.",
+          "marken": [
+            "Anfangsverdacht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Zweck: Ergreifen oder Beweise finden",
+          "text": "Es genügt die Vermutung, dass die Durchsuchung zum Ziel führt.",
+          "norm": "§ 102 StPO",
+          "sprecher": "Schritt zwei: der Zweck. Die Durchsuchung muss der Ergreifung dienen oder dem Auffinden von Beweismitteln. Beim Verdächtigen genügt die Vermutung, dass sie Erfolg bringt.",
+          "marken": [
+            "Vermutung genügt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Beschluss muss den Rahmen abstecken",
+          "text": "Tatvorwurf und gesuchte Beweismittel so konkret wie möglich.",
+          "norm": "Art. 13 Abs. 2 GG",
+          "sprecher": "Schritt drei: der Beschluss. Er muss den Tatvorwurf und die gesuchten Beweismittel so konkret beschreiben, dass der Rahmen der Durchsuchung erkennbar ist. Ein pauschales „Suche nach Beweismitteln“ reicht nicht.",
+          "marken": [
+            "konkret"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verhältnismäßigkeit",
+          "text": "Schwere der Tat, Stärke des Verdachts, Gewicht des Eingriffs.",
+          "norm": null,
+          "sprecher": "Schritt vier: Verhältnismäßigkeit. Die Wohnung ist besonders geschützt. Der Eingriff muss zur Schwere der Tat und zur Stärke des Verdachts passen.",
+          "marken": [
+            "Wohnung geschützt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Das Verfallsdatum",
+          "text": "Nach dem BVerfG trägt der Beschluss spätestens nach einem halben Jahr nicht mehr.",
+          "norm": null,
+          "sprecher": "Und das Verfallsdatum? Nach dem Bundesverfassungsgericht verliert der richterliche Beschluss spätestens nach etwa einem halben Jahr seine rechtfertigende Kraft. Dann braucht es eine neue Prüfung.",
+          "marken": [
+            "halbes Jahr"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Verdacht, Zweck, konkreter Beschluss, Verhältnismäßigkeit – und nicht zu alt.",
+          "norm": "§ 102 StPO",
+          "sprecher": "Merke: Verdacht, Zweck, ein konkreter Beschluss, Verhältnismäßigkeit. Und prüf das Datum.",
+          "marken": [
+            "Datum prüfen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speicher dir das Schema",
+          "text": "Für die nächste StPO-Zusatzfrage.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Zusatzfrage zur Strafprozessordnung.",
+          "marken": [
+            "StPO"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Ein Durchsuchungsbeschluss ist kein Blankoscheck: Er muss Tatvorwurf und gesuchte Beweismittel konkret benennen – und nach dem BVerfG verliert er spätestens nach etwa einem halben Jahr seine rechtfertigende Kraft. Davor stehen Verdacht, Zweck und Verhältnismäßigkeit nach § 102 StPO. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#durchsuchung",
+        "#102stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Durchsuchungsbeschluss mit Verfallsdatum",
+      "coverText": "Konkret und nicht zu alt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Ein richterlicher Beschluss erlaubt die Durchsuchung nur in einem klaren Rahmen und nicht auf unbestimmte Zeit.",
+        "handlung": "{A} tries to open a door with a large paper permit, but {B} taps a faded date stamp on the permit with his pointer.",
+        "hinweisRegie": "Place the note in the free space just above the faded date stamp, slightly tilted toward the door handle, so the expired permit is the focus while hands and faces stay uncovered.",
+        "alternative": "{A} holds a permit with a narrow outlined frame, while {B} shows that only one drawer inside the frame may be opened."
+      },
+      "bildSzene": "faded date stamp on permit",
+      "bildSzeneAlt": "permit frame limits one drawer",
+      "quellen": [
+        "§ 102 StPO",
+        "§ 105 StPO",
+        "Art. 13 Abs. 2 GG",
+        "Themenpool: stpo-771"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-grenze",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:09.184Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-649",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "Die Behörde ordnet die Beseitigung an, E legt Widerspruch ein. Darf sie jetzt schon ein Zwangsgeld festsetzen?",
+      "optionen": [
+        "Ja, der Widerspruch hindert die Vollstreckung nicht",
+        "Nein, der Widerspruch hat aufschiebende Wirkung",
+        "Ja, wenn sie das Zwangsgeld vorher angedroht hat"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 6 VwVG",
+        "§ 80 VwGO",
+        "Themenpool: verwalt-649"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:09.185Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-649",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – vollstreckt wird nur ein vollstreckbarer Verwaltungsakt",
+      "text": "Im gestreckten Verfahren braucht es einen Grundverwaltungsakt, der unanfechtbar ist oder dessen Rechtsbehelf keine aufschiebende Wirkung hat (§ 6 Abs. 1 VwVG; die Landesgesetze entsprechend). Der Widerspruch des E hemmt die Vollziehung (§ 80 Abs. 1 VwGO). Anders nur, wenn die Behörde die sofortige Vollziehung angeordnet hat (§ 80 Abs. 2 S. 1 Nr. 4 VwGO).",
+      "norm": "§ 6 Abs. 1 VwVG · § 80 VwGO",
+      "quellen": [
+        "§ 6 VwVG",
+        "§ 80 VwGO",
+        "Themenpool: verwalt-649"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:09.185Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja, der Widerspruch hindert die Vollstreckung nicht",
+        "Nein, der Widerspruch hat aufschiebende Wirkung",
+        "Ja, wenn sie das Zwangsgeld vorher angedroht hat"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "pairId": "gesetzs-206",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 678 BGB: Wer gegen den erkennbaren Willen eingreift, haftet für jeden Schaden",
+      "text": "Übernimmt jemand ein fremdes Geschäft, obwohl das dem Willen des Geschäftsherrn widerspricht, und musste er das erkennen, haftet er für alle Schäden aus der Geschäftsführung – auch ohne weiteres Verschulden bei der Ausführung. Anknüpfungspunkt ist das Übernahmeverschulden. Typischer Fall der unberechtigten GoA.",
+      "norm": "§ 678 BGB",
+      "quellen": [
+        "§ 678 BGB",
+        "§ 684 BGB",
+        "Themenpool: gesetzs-206"
+      ],
+      "fachLabel": "GoA/EBV",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:09.185Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-493",
+      "ueberzeile": "Merksatz Arzthaftung",
+      "titel": "Fachgerecht operiert, nicht aufgeklärt: Der Arzt haftet trotzdem",
+      "text": "Ohne Aufklärung (§ 630e BGB) keine wirksame Einwilligung (§ 630d BGB) – dann ist auch der fachgerechte Eingriff pflichtwidrig. Die Aufklärung muss der Behandelnde beweisen (§ 630h Abs. 2 BGB).",
+      "norm": "§§ 630d, 630e, 630h Abs. 2 BGB",
+      "quellen": [
+        "§ 630d BGB",
+        "§ 630e BGB",
+        "§ 630h BGB",
+        "Themenpool: schuldbt-493"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:09.185Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-564",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Unselbständige Anschlussberufung",
+      "text": "Der Berufungsbeklagte schließt sich der Berufung des Gegners an, um das Urteil auch zu seinen Gunsten ändern zu lassen – selbst nach Ablauf der eigenen Berufungsfrist, aber bis zum Ablauf der Frist zur Berufungserwiderung (§ 524 Abs. 2 S. 2 ZPO). Ihr Schicksal hängt an der Hauptberufung: Wird diese zurückgenommen oder verworfen, verliert sie ihre Wirkung (§ 524 Abs. 4 ZPO).",
+      "norm": "§ 524 ZPO",
+      "quellen": [
+        "§ 524 ZPO",
+        "Themenpool: zpo-564"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:09.185Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-918",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Sache im laufenden Prozess verkauft: Ist das Urteil gegen den Erwerber wertlos?",
+      "falsch": "K hat die streitige Maschine während des Herausgabeprozesses an D verkauft und übergeben. Das Urteil gegen K hilft gegen D nicht – der Kläger muss D neu verklagen.",
+      "richtigText": "Die Veräußerung ändert am Prozess nichts (§ 265 ZPO), und das Urteil wirkt gegen den Rechtsnachfolger nach Rechtshängigkeit (§ 325 Abs. 1 ZPO) – außer bei gutgläubigem Erwerb (§ 325 Abs. 2 ZPO). Der Kläger braucht eine Klausel gegen D (§ 727 ZPO). Kann er die Nachfolge nicht durch öffentliche Urkunden nachweisen, bleibt die Klage auf Erteilung der Klausel (§ 731 ZPO).",
+      "quellen": [
+        "§ 265 ZPO",
+        "§ 325 ZPO",
+        "§ 727 ZPO",
+        "§ 731 ZPO",
+        "Themenpool: zwangsv-918"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:09.185Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

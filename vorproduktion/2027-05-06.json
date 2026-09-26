@@ -1,0 +1,879 @@
+{
+  "datum": "2027-05-06",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "anklage-858",
+        "themaTitel": "Was leistet der konkrete Anklagesatz?",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "verwbt-113",
+        "themaTitel": "Wer ist Störer im Polizei- und Ordnungsrecht?",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuldbt-191",
+        "themaTitel": "Was ist der Nacherfüllungsanspruch und wer bestimmt die Art?",
+        "fach": "schuldbt",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "schuldbt-469"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "schuldbt-469"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "schuld-440"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:38",
+        "art": "streitstand",
+        "themaId": "zwangsv-918"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "merksatz",
+        "themaId": "handelsg-269"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:13",
+        "art": "begriff",
+        "themaId": "strafbt-334"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "anklage-858",
+      "poolTitel": "Was leistet der konkrete Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-28",
+        "2027-01-29",
+        "2027-04-02"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "verwbt-113",
+      "poolTitel": "Wer ist Störer im Polizei- und Ordnungsrecht?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-30",
+        "2027-02-01",
+        "2027-04-06"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuldbt-191",
+      "poolTitel": "Was ist der Nacherfüllungsanspruch und wer bestimmt die Art?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-09",
+        "2026-10-15",
+        "2027-04-28"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-469",
+      "poolTitel": "Mangelfolgeschaden und Integritätsinteresse",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, 823 I BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-16",
+        "2026-12-16",
+        "2027-02-05"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-469",
+      "poolTitel": "Mangelfolgeschaden und Integritätsinteresse",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, 823 I BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-16",
+        "2026-12-16",
+        "2027-02-05"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-440",
+      "poolTitel": "Unmöglichkeit: echte, praktische und persönliche Unmöglichkeit",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 275 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-12"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "zwangsv-918",
+      "poolTitel": "Vollstreckung für und gegen den Rechtsnachfolger: Wann braucht es die Klausel des § 727 ZPO?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 727 ZPO",
+        "§ 750 ZPO",
+        "§ 325 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-04",
+        "2027-01-06",
+        "2027-03-07"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "handelsg-269",
+      "poolTitel": "Wie haftet der Kommanditist?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 171 HGB",
+        "§ 172 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2026-11-24"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-334",
+      "poolTitel": "Wie unterscheidet man Missbrauchs- und Treubruchtatbestand der Untreue?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-31",
+        "2027-01-27"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-858",
+      "slug": "2027-05-06-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Konkreter Anklagesatz: sechs Bausteine auf einen Blick",
+          "titelZeilen": [
+            "Konkreter",
+            "Anklagesatz: sechs",
+            "Bausteine auf",
+            "einen Blick"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Tatsachen statt Gesetzesworte",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zwei Funktionen",
+          "punkte": [
+            "Umgrenzung: Welche Tat ist gemeint? Fehlt das, ist die Anklage unwirksam – Verfahrenshindernis.",
+            "Information: Was genau wird vorgeworfen? Lücken hier lassen sich im Verfahren eher beheben.",
+            "Rechtsgrundlage: § 200 Abs. 1 S. 1 StPO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die sechs Bausteine",
+          "punkte": [
+            "Wer: der Angeschuldigte",
+            "Wann: Tatzeit, so genau wie möglich",
+            "Wo: Tatort",
+            "Was: Tathandlung und Erfolg als Lebenssachverhalt",
+            "Innere Tatseite als Tatsache: „wusste“, „wollte“, „um … zu“",
+            "Tatsachen für Qualifikationen und Regelbeispiele"
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Tatsachen statt Rechtsbegriffe",
+          "links": {
+            "titel": "So",
+            "punkte": [
+              "nahm die Geldbörse aus der Jacke des O, um sie zu behalten",
+              "schlug O mit einem Baseballschläger auf den Kopf"
+            ]
+          },
+          "rechts": {
+            "titel": "Nicht so",
+            "punkte": [
+              "nahm eine fremde bewegliche Sache weg",
+              "verletzte O mittels eines gefährlichen Werkzeugs"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Mehrere Taten",
+          "text": "Jede prozessuale Tat bekommt einen eigenen, abgrenzbaren Sachverhalt. Bei gleichförmigen Serientaten lässt die Rspr. eine Umgrenzung über Tatzeitraum, Tatort, Begehungsweise und Mindestzahl genügen. Die Formulierungsmuster unterscheiden sich je nach Land – die Bausteine nicht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der konkrete Anklagesatz erzählt die Tat in Tatsachen: wer, wann, wo, was, mit welchem Wissen und Wollen – ohne Beweiswürdigung und ohne Gesetzesworte."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Abgabe prüfen",
+          "punkte": [
+            "Tat eindeutig umgrenzt?",
+            "Alle Merkmale als Tatsachen?",
+            "Qualifikation belegt?"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Der konkrete Anklagesatz in sechs Bausteinen: wer, wann, wo, was, die innere Tatseite als Tatsache und die Tatsachen für Qualifikationen oder Regelbeispiele. Er erfüllt zwei Funktionen – Umgrenzung und Information (§ 200 Abs. 1 S. 1 StPO). Ist die Tat nicht umgrenzt, ist die Anklage unwirksam. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#anklageschrift",
+        "#stpo",
+        "#referendariat",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Konkreter Anklagesatz: sechs Bausteine",
+      "coverText": "Tatsachen statt Gesetzesworte",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Der Anklagesatz setzt die Tat aus klar benannten Tatsachen zusammen.",
+        "handlung": "{A} slots six small building blocks into a frame one after another, while {B} points his stick at the gap where the last block still belongs.",
+        "hinweisRegie": "Place the note in the free space above the frame, slightly tilted toward the missing block, so the building sequence stays visible without covering {B}'s stick.",
+        "alternative": "{B} draws a clear boundary line around one scene on a large floor map while {A} labels it with small tokens."
+      },
+      "bildSzene": "six blocks slotted into frame",
+      "bildSzeneAlt": "boundary drawn around map scene",
+      "quellen": [
+        "§ 200 Abs. 1 S. 1 StPO",
+        "§ 264 StPO",
+        "Themenpool: anklage-858"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-bausteine",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:46:50.402Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-113",
+      "slug": "2027-05-06-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fässer des Pächters laufen aus: Haftet die Eigentümerin?",
+          "titelZeilen": [
+            "Fässer des Pächters",
+            "laufen aus: Haftet",
+            "die Eigentümerin?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Tun hier, Sache dort",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "E verpachtet ihr Gewerbegrundstück an P. P lagert dort Fässer mit Chemikalien, die undicht werden; es droht eine Verunreinigung des Grundwassers. Gegen wen darf die Behörde vorgehen? Maßgeblich ist das Polizei- und Ordnungsrecht des jeweiligen Landes – die Grundsätze sind vergleichbar."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Arten der Verantwortlichkeit",
+          "links": {
+            "titel": "Verhaltensstörer",
+            "punkte": [
+              "Verursacht die Gefahr durch eigenes Tun oder Unterlassen",
+              "Nach h.M. nur, wer selbst die Gefahrenschwelle überschreitet",
+              "Hier: P, der die Fässer lagert"
+            ]
+          },
+          "rechts": {
+            "titel": "Zustandsstörer",
+            "punkte": [
+              "Knüpft an die Sache an: Eigentümer oder Inhaber der tatsächlichen Gewalt",
+              "Verschulden ist unerheblich",
+              "Hier: E als Eigentümerin, P als Besitzer"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Die Auswahl",
+          "text": "Mehrere Störer: Die Behörde wählt nach pflichtgemäßem Ermessen. Leitend ist die effektive Gefahrenabwehr – wer die Gefahr am schnellsten und sichersten beseitigen kann. Oft liegt es nahe, zuerst den Verursacher heranzuziehen; zwingend ist das nicht."
+        },
+        {
+          "art": "text",
+          "titel": "Grenzen für E",
+          "punkte": [
+            "Nichtstörer werden nur im polizeilichen Notstand herangezogen – E ist aber Störerin",
+            "Die Kostenlast des Zustandsstörers kann nach dem BVerfG unzumutbar werden",
+            "Ausgleich unter mehreren Störern regelt das Landesrecht bzw. das Zivilrecht"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Verhaltensstörer haftet für sein Verhalten, der Zustandsstörer für seine Sache. Zwischen beiden wählt die Behörde nach Effektivität."
+        },
+        {
+          "art": "cta",
+          "titel": "Störerprüfung in drei Zügen",
+          "punkte": [
+            "Wer hat die Gefahr verursacht?",
+            "Wem gehört die Sache, wer hat sie?",
+            "Auswahl ermessensfehlerfrei?"
+          ],
+          "icons": [
+            "person",
+            "haus",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Die Fässer lagert der Pächter – aber auch die Eigentümerin kann herangezogen werden. Verhaltensstörer ist, wer die Gefahr durch eigenes Verhalten verursacht. Zustandsstörer ist, wer Eigentümer oder Inhaber der tatsächlichen Gewalt über die gefährliche Sache ist, ohne dass es auf Verschulden ankommt. Unter mehreren Störern wählt die Behörde nach Effektivität der Gefahrenabwehr. Speichern für die nächste Polizeirechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#polizeirecht",
+        "#störer",
+        "#gefahrenabwehr",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verhaltens- und Zustandsstörer abgrenzen",
+      "coverText": "Tun hier, Sache dort",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Für eine gefährliche Sache kann auch verantwortlich sein, wer sie nicht selbst gefährlich gemacht hat.",
+        "handlung": "{A} tries to plug a leaking barrel on a rocky plot with both hands, while {B} stands at the plot's fence holding the key to the gate.",
+        "hinweisRegie": "Place the note in the free space between the leaking barrel and the gate, slightly tilted toward the key in {B}'s hand, so both responsibilities are linked without covering the leak.",
+        "alternative": "{B} marks two paths on a map, one leading to a worker with a barrel and one to the owner of the land."
+      },
+      "bildSzene": "leaking barrel, owner holds gate key",
+      "bildSzeneAlt": "map with two marked paths",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Art. 14 Abs. 1 GG",
+        "Themenpool: verwbt-113"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:46:50.403Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-191",
+      "slug": "2027-05-06-b3",
+      "titelZeilen": [
+        "200 € Minderwert –",
+        "und doch nur",
+        "160 € zurück"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "200 € Minderwert – und doch nur 160 € zurück",
+          "unter": "Minderung · § 441 BGB",
+          "text": "Gemindert wird im Verhältnis – nicht um die Wertdifferenz.",
+          "norm": "§ 441 Abs. 3 BGB",
+          "icon": "rechner",
+          "sprecher": "Minderung heißt nicht: Kaufpreis minus Minderwert. Paragraf 441 BGB rechnet mit einem Verhältnis. Wer günstig gekauft hat, bekommt deshalb weniger zurück, als der Mangel kostet.",
+          "marken": [
+            "Verhältnis",
+            "nicht Differenz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Voraussetzungen wie beim Rücktritt",
+          "text": "Mangel und grundsätzlich eine erfolglose Frist zur Nacherfüllung.",
+          "norm": "§ 441 Abs. 1 BGB",
+          "sprecher": "Schritt eins: Die Minderung hat dieselben Voraussetzungen wie der Rücktritt. Also ein Mangel bei Gefahrübergang und grundsätzlich eine erfolglose Frist zur Nacherfüllung. Das Gesetz sagt: statt zurückzutreten.",
+          "marken": [
+            "statt Rücktritt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Auch bei kleinen Mängeln",
+          "text": "Der Ausschluss für unerhebliche Mängel gilt hier nicht.",
+          "norm": "§ 441 Abs. 1 S. 2 BGB",
+          "sprecher": "Schritt zwei: Anders als beim Rücktritt kannst du auch bei einem unerheblichen Mangel mindern. Der Ausschluss aus Paragraf 323 Absatz 5 Satz 2 greift hier nicht.",
+          "marken": [
+            "auch unerheblich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Formel",
+          "text": "Neuer Preis = Kaufpreis × Wert mit Mangel ÷ Wert ohne Mangel.",
+          "norm": "§ 441 Abs. 3 BGB",
+          "sprecher": "Schritt drei: die Formel. Der Preis sinkt in dem Verhältnis, in dem der Wert ohne Mangel zum wirklichen Wert steht. Maßgeblich ist der Zeitpunkt des Vertragsschlusses. Notfalls wird geschätzt.",
+          "marken": [
+            "bei Vertragsschluss"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Schon bezahlt?",
+          "text": "Den Mehrbetrag erstattet der Verkäufer.",
+          "norm": "§ 441 Abs. 4 BGB",
+          "sprecher": "Schritt vier: Hat der Käufer schon voll bezahlt, erstattet der Verkäufer den Mehrbetrag.",
+          "marken": [
+            "Rückzahlung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Das Beispiel",
+          "text": "Preis 800 €, Wert ohne Mangel 1.000 €, mit Mangel 800 €: neuer Preis 640 €.",
+          "norm": null,
+          "sprecher": "Ein Beispiel: Kaufpreis 800 Euro. Mangelfrei wäre die Sache 1.000 Euro wert, mit Mangel nur 800. Das Verhältnis ist vier Fünftel, der neue Preis also 640 Euro. Zurück gibt es 160 Euro, nicht 200.",
+          "marken": [
+            "160 statt 200"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Gemindert wird im Verhältnis der Werte – der gute Preis bleibt ein guter Preis.",
+          "norm": "§ 441 Abs. 3 BGB",
+          "sprecher": "Merke: Gemindert wird im Verhältnis der Werte. So bleibt das Preis-Leistungs-Verhältnis des Vertrags erhalten, und ein gutes Geschäft bleibt ein gutes Geschäft.",
+          "marken": [
+            "Verhältnis"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Rechne mit dem Verhältnis, nicht mit der Differenz",
+          "text": "Speichern für die nächste Kaufrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir die Formel für die nächste Kaufrechtsklausur. Und rechne immer mit dem Verhältnis, nie einfach mit der Differenz.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "200 € Minderwert – und doch nur 160 € zurück. Die Minderung nach § 441 Abs. 3 BGB zieht nicht einfach den Minderwert vom Kaufpreis ab, sondern setzt den Preis im Verhältnis herab: Wert mit Mangel zu Wert ohne Mangel, bezogen auf den Vertragsschluss. Anders als der Rücktritt ist sie auch bei unerheblichen Mängeln möglich. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#minderung",
+        "#441bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Minderung: Verhältnis statt Differenz",
+      "coverText": "Verhältnis statt Differenz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Gemindert wird im Verhältnis der Werte, nicht um die bloße Wertdifferenz.",
+        "handlung": "{A} slides exactly one fifth of the coins from {B}'s payment pile back across a stone table toward {B}.",
+        "hinweisRegie": "Leave free space above the stone table beside the returned coins, slightly tilted toward {B}, so the note sits near the fraction being moved without covering either pile or {A}'s hands.",
+        "alternative": "{B} cuts a cracked crystal bar into five equal parts while {A} keeps four and hands one back."
+      },
+      "bildSzene": "one fifth of coins slid back",
+      "bildSzeneAlt": "crystal bar cut into five parts",
+      "quellen": [
+        "§ 441 BGB",
+        "§ 437 Nr. 2 BGB",
+        "§ 323 Abs. 5 S. 2 BGB",
+        "Themenpool: schuldbt-191"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:04:09.574Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-469",
+      "ueberzeile": "Prüfungsfrage Schuldrecht BT",
+      "titel": "Mangelbedingt steht Ks Lieferwagen zwei Wochen still, K entgeht Gewinn. Worauf stützt er den Ausfallschaden?",
+      "optionen": [
+        "§§ 280 I, II, 286 BGB – nur bei Verzug",
+        "§§ 437 Nr. 3, 280 I BGB – ohne Frist",
+        "§§ 280 I, III, 281 BGB – erst nach Fristablauf"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§§ 437 Nr. 3, 280 Abs. 1 BGB",
+        "§ 286 BGB",
+        "Themenpool: schuldbt-469"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:46:50.404Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-469",
+      "ueberzeile": "Auflösung",
+      "titel": "§ 280 Abs. 1 BGB – ohne Frist und ohne Verzug",
+      "text": "Der Ausfallschaden entsteht aus der mangelhaften Lieferung selbst und lässt sich durch Nacherfüllung nicht mehr beseitigen. Nach dem BGH ist er Schadensersatz neben der Leistung (§§ 437 Nr. 3, 280 Abs. 1 BGB). Verzug braucht es nicht; das Vertretenmüssen wird vermutet.",
+      "norm": "§§ 437 Nr. 3, 280 Abs. 1 BGB",
+      "quellen": [
+        "§§ 437 Nr. 3, 280 Abs. 1 BGB",
+        "§ 286 BGB",
+        "Themenpool: schuldbt-469"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:46:50.404Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "§§ 280 I, II, 286 BGB – nur bei Verzug",
+        "§§ 437 Nr. 3, 280 I BGB – ohne Frist",
+        "§§ 280 I, III, 281 BGB – erst nach Fristablauf"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-440",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 275 Abs. 3 BGB: Unzumutbar nur bei persönlicher Leistung",
+      "text": "Der Schuldner kann verweigern, wenn er persönlich leisten muss und ihm die Leistung nach Abwägung mit dem Gläubigerinteresse nicht zuzumuten ist. Klassiker: Die Sängerin sagt ab, weil ihr Kind lebensgefährlich erkrankt ist. Abs. 2 misst dagegen den Aufwand am Leistungsinteresse. Beides sind Einreden.",
+      "norm": "§ 275 Abs. 2, 3 BGB",
+      "quellen": [
+        "§ 275 BGB",
+        "§ 326 Abs. 1 BGB",
+        "Themenpool: schuld-440"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:46:50.404Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-918",
+      "ueberzeile": "Streitstand Zwangsvollstreckung",
+      "titel": "Vorbehaltsware beim Schuldner: Wie pfändet der Gläubiger das Anwartschaftsrecht?",
+      "norm": "§§ 808, 857 ZPO",
+      "optionen": [
+        "BGH/h.M.: Doppelpfändung – Rechtspfändung nach § 857 ZPO und Sachpfändung nach § 808 ZPO.",
+        "Andere Ansichten: Eine Pfändung genügt – je nach Ansicht die der Sache oder die des Rechts."
+      ],
+      "text": "Warum der Aufwand? Die Rechtspfändung allein erfasst die Sache nicht; die Sachpfändung allein kann der Vorbehaltsverkäufer mit § 771 ZPO abwehren. Zahlt der Gläubiger den Restkaufpreis (§ 267 BGB), wird der Schuldner Eigentümer – das Pfandrecht besteht dann an der Sache.",
+      "quellen": [
+        "§ 808 ZPO",
+        "§ 857 ZPO",
+        "§ 771 ZPO",
+        "§ 267 BGB",
+        "Themenpool: zwangsv-918"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:04:09.574Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-269",
+      "ueberzeile": "Merksatz Gesellschaftsrecht",
+      "titel": "Vor der Eintragung haftet der Kommanditist voll",
+      "text": "Beginnt die KG mit seiner Zustimmung vor der Eintragung ihre Geschäfte, haftet er für die bis dahin begründeten Schulden wie ein Komplementär – außer der Gläubiger kannte seine Kommanditistenstellung. Danach zählt die Haftsumme.",
+      "norm": "§ 176 Abs. 1 HGB",
+      "quellen": [
+        "§ 171 HGB",
+        "§ 172 HGB",
+        "§ 176 HGB",
+        "Themenpool: handelsg-269"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:46:50.404Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-334",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Vermögensbetreuungspflicht",
+      "text": "Pflicht, fremde Vermögensinteressen wahrzunehmen – als Hauptpflicht, nicht nur als Nebenpflicht, und mit einem gewissen Spielraum eigener Entscheidung. Nach Rspr. und h.M. setzen beide Tatbestände des § 266 StGB sie voraus. Die bloße Pflicht, einen Kaufpreis zu zahlen oder eine Mietsache zurückzugeben, genügt nicht.",
+      "norm": "§ 266 Abs. 1 StGB",
+      "quellen": [
+        "§ 266 StGB",
+        "Themenpool: strafbt-334"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:46:50.404Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

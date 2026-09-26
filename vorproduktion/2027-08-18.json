@@ -1,0 +1,873 @@
+{
+  "datum": "2027-08-18",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-278",
+        "themaTitel": "Wie weit reicht die materielle Rechtskraft?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "anklage-790",
+        "themaTitel": "Einstellung nach § 170 II StPO",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-591",
+        "themaTitel": "Rechtsstaatsprinzip und Bestimmtheitsgebot",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "zpo-554"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "zpo-554"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "schuld-185"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "streitstand",
+        "themaId": "streit-41"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:43",
+        "art": "merksatz",
+        "themaId": "europa-108"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "begriff",
+        "themaId": "schuldbt-201"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-278",
+      "poolTitel": "Wie weit reicht die materielle Rechtskraft?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 322 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-18",
+        "2027-05-04",
+        "2027-08-07"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "anklage-790",
+      "poolTitel": "Einstellung nach § 170 II StPO",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 170 II StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-06",
+        "2027-08-03",
+        "2027-08-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-591",
+      "poolTitel": "Rechtsstaatsprinzip und Bestimmtheitsgebot",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 III GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-22",
+        "2027-05-29",
+        "2027-05-29"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-554",
+      "poolTitel": "Klagerücknahme",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 269 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-18",
+        "2027-04-18",
+        "2027-08-01"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-554",
+      "poolTitel": "Klagerücknahme",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 269 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-18",
+        "2027-04-18",
+        "2027-08-01"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-185",
+      "poolTitel": "Wann führt eine Störung der Geschäftsgrundlage zur Anpassung, wann zur Auflösung?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 313 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-10",
+        "2026-12-14"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-41",
+      "poolTitel": "Notwehr gegen Erpressung (Chantage)",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 32 StGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "europa-108",
+      "poolTitel": "Wann wirkt eine Richtlinie unmittelbar?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 288 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-08",
+        "2027-01-30",
+        "2027-05-10"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuldbt-201",
+      "poolTitel": "Welche Rechte hat der Verbraucher beim Widerruf?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 355 BGB",
+        "§ 357 BGB",
+        "§ 312g BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-27",
+        "2027-04-13",
+        "2027-04-13"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-278",
+      "slug": "2027-08-18-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Herausgabe gewonnen – das Eigentum ist trotzdem nicht rechtskräftig",
+          "titelZeilen": [
+            "Herausgabe",
+            "gewonnen – das",
+            "Eigentum ist nicht",
+            "rechtskräftig"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Vorfragen binden nicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K verklagt B erfolgreich auf Herausgabe eines Gemäldes nach § 985 BGB; das Urteil wird rechtskräftig. Später klagt B gegen K auf Feststellung, dass er, B, Eigentümer des Bildes ist. Ist das Gericht im zweiten Prozess an das Eigentum des K gebunden?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Umfang der Rechtskraft",
+              "text": "Rechtskräftig wird nur die Entscheidung über den erhobenen Anspruch (§ 322 Abs. 1 ZPO) – hier: B muss das Bild herausgeben."
+            },
+            {
+              "titel": "Vorfragen bleiben offen",
+              "text": "Das Eigentum des K war nur Vorfrage des Herausgabeanspruchs. Tatsachen und Vorfragen in den Gründen erwachsen nicht in Rechtskraft."
+            },
+            {
+              "titel": "Anderer Streitgegenstand",
+              "text": "Die Feststellung des Eigentums ist ein anderer Streitgegenstand. Das zweite Gericht prüft das Eigentum selbst."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Keine Bindung. Das zweite Gericht darf B als Eigentümer ansehen – rechtskräftig bleibt nur die Pflicht zur Herausgabe."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Rechtskraft auf die tragenden Gründe erstrecken. Die ZPO kennt das nur ausnahmsweise: bei der Aufrechnung, soweit über die Gegenforderung entschieden ist (§ 322 Abs. 2 ZPO)."
+        },
+        {
+          "art": "text",
+          "titel": "So sichert sich K ab",
+          "text": "Wer auch das Eigentum verbindlich klären will, erhebt eine Zwischenfeststellungsklage (§ 256 Abs. 2 ZPO). Dann wird das Rechtsverhältnis, von dem die Entscheidung abhängt, selbst Streitgegenstand – und rechtskräftig."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Rechtskräftig wird der Tenor, nicht die Begründung. Vorfragen bindet nur die Zwischenfeststellungsklage – oder § 322 Abs. 2 ZPO bei der Aufrechnung."
+        },
+        {
+          "art": "cta",
+          "titel": "Rechtskraft in drei Fragen",
+          "punkte": [
+            "Worüber wurde im Tenor entschieden?",
+            "Derselbe Streitgegenstand oder nur Vorfrage?",
+            "Zwischenfeststellung erhoben?"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Herausgabe gewonnen – aber ist damit auch das Eigentum rechtskräftig festgestellt? Nein. Nach § 322 Abs. 1 ZPO wird nur die Entscheidung über den erhobenen Anspruch rechtskräftig. Das Eigentum war beim Anspruch aus § 985 BGB bloß Vorfrage. Wer es verbindlich klären will, braucht eine Zwischenfeststellungsklage nach § 256 Abs. 2 ZPO. Ausnahme für Gründe: die Aufrechnung nach § 322 Abs. 2 ZPO. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#rechtskraft",
+        "#322zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rechtskraft: Tenor ja, Vorfrage nein",
+      "coverText": "Vorfragen binden nicht",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Das Urteil entscheidet nur, wer das Bild herausgeben muss – die Frage, wem es gehört, bleibt offen.",
+        "handlung": "{A} hands over a framed painting to {B}, while a small sealed glass dome covers only the handover itself, and a question-shaped ribbon still floats loosely around the painting's frame.",
+        "hinweisRegie": "Place the note in the free space beside the loose ribbon around the frame, slightly tilted toward it, so the open ownership question is visible without covering the glass dome or hands.",
+        "alternative": "{B} locks only one of two drawers in a crystal cabinet, while {A} points curiously at the second drawer that stays open."
+      },
+      "bildSzene": "painting handed over, ownership ribbon loose",
+      "bildSzeneAlt": "one drawer locked, one open",
+      "quellen": [
+        "§ 322 ZPO",
+        "§ 256 Abs. 2 ZPO",
+        "§ 985 BGB",
+        "Themenpool: zpo-278"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:35:07.348Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-790",
+      "slug": "2027-08-18-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Beweise dünn, Schaden klein – warum § 153 StPO hier nicht passt",
+          "titelZeilen": [
+            "Beweise dünn,",
+            "Schaden klein –",
+            "warum § 153 StPO",
+            "nicht passt"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Erst Tatverdacht, dann Opportunität",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "B soll im Supermarkt eine Flasche Wein für 8 € eingesteckt haben. Die Ermittlungen sind abgeschlossen: Die einzige Zeugin hat den Vorgang nicht selbst gesehen, das Video ist unergiebig. Der Referendar verfügt: „Einstellung nach § 153 Abs. 1 StPO – geringe Schuld.“ Richtig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Zuerst: hinreichender Tatverdacht?",
+              "text": "Ist eine Verurteilung nach Abschluss der Ermittlungen wahrscheinlich? Hier nicht – der Tatnachweis fehlt."
+            },
+            {
+              "titel": "Dann: § 170 Abs. 2 StPO",
+              "text": "Bieten die Ermittlungen keinen genügenden Anlass zur Anklage, stellt die StA nach § 170 Abs. 2 S. 1 StPO ein."
+            },
+            {
+              "titel": "Opportunität erst danach",
+              "text": "§ 153a StPO setzt hinreichenden Tatverdacht voraus. § 153 StPO hilft bei geringer Schuld – nicht, wenn die Tat unbeweisbar ist."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Einstellung nach § 170 Abs. 2 StPO – ohne jeden Schuldvorwurf. Für B ist das die günstigere Entscheidung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Zur „bequemen“ Opportunitätseinstellung greifen, obwohl der Tatnachweis fehlt. § 153 und § 153a StPO lassen einen Schuldvorwurf im Raum stehen; § 170 Abs. 2 StPO geht vor, wenn schon der hinreichende Tatverdacht fehlt."
+        },
+        {
+          "art": "text",
+          "titel": "Was zur Verfügung gehört",
+          "punkte": [
+            "Einstellung nach § 170 Abs. 2 StPO mit kurzer Begründung",
+            "Mitteilung an den Beschuldigten, soweit § 170 Abs. 2 S. 2 StPO es verlangt",
+            "Bescheid an den Antragsteller mit Gründen (§ 171 S. 1 StPO)",
+            "Ist er zugleich Verletzter: Belehrung über die Beschwerde (§ 171 S. 2 StPO)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kein hinreichender Tatverdacht: § 170 Abs. 2 StPO. Opportunität nach §§ 153, 153a StPO erst, wenn die Tat nachweisbar ist oder sein könnte."
+        },
+        {
+          "art": "cta",
+          "titel": "Einstellung in drei Schritten",
+          "punkte": [
+            "Hinreichenden Tatverdacht prüfen",
+            "Fehlt er: § 170 Abs. 2 StPO",
+            "Nachricht und Bescheid nicht vergessen"
+          ],
+          "icons": [
+            "lupe",
+            "dokument",
+            "umschlag"
+          ]
+        }
+      ],
+      "caption": "Beweise dünn, Schaden klein – also § 153 StPO? Nicht, wenn die Ermittlungen abgeschlossen sind und der Tatnachweis fehlt. Dann fehlt schon der hinreichende Tatverdacht, und die StA stellt nach § 170 Abs. 2 StPO ein. Die Opportunitätsvorschriften lassen einen Schuldvorwurf im Raum stehen; § 153a StPO setzt sogar hinreichenden Tatverdacht voraus. Danach: Mitteilung an den Beschuldigten und Bescheid an den Antragsteller. Speichern für die nächste Abschlussverfügung.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#abschlussverfügung",
+        "#staatsanwaltschaft",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 170 II vor § 153 StPO",
+      "coverText": "Erst Tatverdacht, dann Opportunität",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Fehlt schon der Tatnachweis, gehört die Akte in das Fach „kein Tatverdacht“ – nicht in das Fach „geringe Schuld“.",
+        "handlung": "{B} is about to drop a thin case file into a tray marked with a small feather, but {A} hovers in and redirects it into a different, empty tray marked with an open hand.",
+        "hinweisRegie": "Place the note in the free space between the two trays, slightly tilted toward the empty one {A} points at, so the correct choice is clear without covering the file or {B}'s hands.",
+        "alternative": "{A} holds a magnifying lens over a blurry video still, while {B} sets aside a small scale that he no longer needs."
+      },
+      "bildSzene": "droid redirects file to other tray",
+      "bildSzeneAlt": "blurry video still under lens",
+      "quellen": [
+        "§ 170 Abs. 2 StPO",
+        "§ 153 StPO",
+        "§ 153a StPO",
+        "§ 171 StPO",
+        "§ 242 StGB",
+        "Themenpool: anklage-790"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslungsfehler",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:35:07.348Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-591",
+      "slug": "2027-08-18-b3",
+      "titelZeilen": [
+        "Zwei Arten",
+        "Rückwirkung – nur",
+        "eine ist tabu"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zwei Arten Rückwirkung – nur eine ist grundsätzlich tabu",
+          "unter": "Rechtsstaatsprinzip · Art. 20 Abs. 3 GG",
+          "text": "Rückwirkende Gesetze sind nicht automatisch verfassungswidrig.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "icon": "kalender",
+          "sprecher": "Rückwirkende Gesetze sind verboten? Nicht immer. Das BVerfG unterscheidet zwei Arten. Nur eine ist grundsätzlich unzulässig.",
+          "marken": [
+            "echt oder unecht?",
+            "Vertrauensschutz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Grundlage: Vertrauensschutz",
+          "text": "Aus Rechtsstaatsprinzip und Grundrechten folgt Schutz des Vertrauens in die Rechtslage.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "sprecher": "Schritt eins: die Grundlage. Aus dem Rechtsstaatsprinzip und den Grundrechten folgt Vertrauensschutz. Wer sich auf die geltende Rechtslage einstellt, soll nicht nachträglich überrollt werden.",
+          "marken": [
+            "Rechtssicherheit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Echte Rückwirkung",
+          "text": "Das Gesetz ändert Rechtsfolgen für einen schon abgeschlossenen Sachverhalt.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "sprecher": "Schritt zwei: echte Rückwirkung. Das Gesetz greift nachträglich in einen abgeschlossenen Sachverhalt ein, die Rechtsfolgen sollen schon vor der Verkündung gelten. Sie ist grundsätzlich unzulässig.",
+          "marken": [
+            "grundsätzlich unzulässig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ausnahmen",
+          "text": "Kein schutzwürdiges Vertrauen, etwa bei unklarer Rechtslage oder zwingenden Gemeinwohlgründen.",
+          "norm": null,
+          "sprecher": "Schritt drei: Ausnahmen. Die echte Rückwirkung ist zulässig, wenn kein schutzwürdiges Vertrauen besteht. Etwa wenn man mit der Neuregelung rechnen musste, die Rechtslage unklar war oder zwingende Gründe des Gemeinwohls vorgehen.",
+          "marken": [
+            "kein Vertrauen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Unechte Rückwirkung",
+          "text": "Das Gesetz knüpft an einen laufenden Sachverhalt an und wirkt für die Zukunft.",
+          "norm": null,
+          "sprecher": "Schritt vier: unechte Rückwirkung. Der Sachverhalt ist noch nicht abgeschlossen, das Gesetz wirkt nur für die Zukunft. Sie ist grundsätzlich zulässig. Du wägst aber Vertrauen gegen das Gemeinwohl ab.",
+          "marken": [
+            "grundsätzlich zulässig"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Strafrecht: keine Ausnahme",
+          "text": "Art. 103 Abs. 2 GG verbietet rückwirkende Strafbegründung und -schärfung ausnahmslos.",
+          "norm": "Art. 103 Abs. 2 GG",
+          "sprecher": "Anders im Strafrecht. Nach Artikel 103 Absatz 2 Grundgesetz darf eine Tat nur bestraft werden, wenn die Strafbarkeit vor der Tat gesetzlich bestimmt war. Hier gibt es keine Abwägung.",
+          "marken": [
+            "Art. 103 II GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Echt: grundsätzlich verboten. Unecht: grundsätzlich erlaubt, aber abwägen.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "sprecher": "Merke: echte Rückwirkung grundsätzlich verboten, unechte grundsätzlich erlaubt, aber mit Abwägung.",
+          "marken": [
+            "echt ≠ unecht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst fragen: Ist der Sachverhalt abgeschlossen?",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Staatsrechtsklausur. Und frag zuerst: War der Sachverhalt schon abgeschlossen?",
+          "marken": [
+            "abgeschlossen?"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Zwei Arten Rückwirkung – nur eine ist grundsätzlich tabu. Echte Rückwirkung greift nachträglich in abgeschlossene Sachverhalte ein und ist grundsätzlich unzulässig, außer es fehlt an schutzwürdigem Vertrauen. Unechte Rückwirkung knüpft an noch laufende Sachverhalte an, wirkt für die Zukunft und ist grundsätzlich zulässig – nach Abwägung. Im Strafrecht gilt Art. 103 Abs. 2 GG ohne Ausnahme.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#rechtsstaatsprinzip",
+        "#rückwirkung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rückwirkung: echt oder unecht?",
+      "coverText": "Abgeschlossen oder laufend?",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Ob ein Gesetz zurückwirken darf, hängt daran, ob der Sachverhalt schon abgeschlossen war oder noch läuft.",
+        "handlung": "{A} points his pointer at a sealed, finished clay jar, while {B} stands beside a second jar that is still being filled on a potter's wheel and adjusts it carefully.",
+        "hinweisRegie": "Place the note in the open space between the sealed jar and the jar on the wheel, slightly tilted toward the sealed one, so the contrast is clear without covering the characters' hands.",
+        "alternative": "{B} holds a stop sign in front of a closed door from the past, while {A} gently opens a door that leads onto an unfinished path."
+      },
+      "bildSzene": "sealed jar versus jar on wheel",
+      "bildSzeneAlt": "closed past door, open future path",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: staat-591"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-arten",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:35:07.349Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-554",
+      "ueberzeile": "Prüfungsfrage Zivilprozessrecht",
+      "titel": "B zahlt nach Einreichung, aber vor Zustellung der Klage. K nimmt sofort zurück. Wer trägt die Kosten?",
+      "optionen": [
+        "Immer der Kläger, § 269 Abs. 3 S. 2 ZPO",
+        "Billiges Ermessen nach § 269 Abs. 3 S. 3 ZPO",
+        "Der Beklagte, § 91a ZPO direkt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 269 ZPO",
+        "Themenpool: zpo-554"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:35:07.350Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-554",
+      "ueberzeile": "Auflösung",
+      "titel": "Das Gericht entscheidet nach billigem Ermessen",
+      "text": "Grundsätzlich trägt der Kläger bei Rücknahme die Kosten (§ 269 Abs. 3 S. 2 ZPO). Ist aber der Anlass zur Klage vor Rechtshängigkeit weggefallen und nimmt der Kläger unverzüglich zurück, bestimmt sich die Kostentragung nach billigem Ermessen – auch wenn die Klage nie zugestellt wurde (§ 269 Abs. 3 S. 3 ZPO). § 91a ZPO passt nicht: Erledigung setzt Rechtshängigkeit voraus.",
+      "norm": "§ 269 Abs. 3 ZPO",
+      "quellen": [
+        "§ 269 ZPO",
+        "Themenpool: zpo-554"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:35:07.350Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Immer der Kläger, § 269 Abs. 3 S. 2 ZPO",
+        "Billiges Ermessen nach § 269 Abs. 3 S. 3 ZPO",
+        "Der Beklagte, § 91a ZPO direkt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-185",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 313 Abs. 3 BGB: Beim Dauerschuldverhältnis wird gekündigt, nicht zurückgetreten",
+      "text": "Ist eine Anpassung des Vertrags nicht möglich oder einem Teil nicht zumutbar, kann der benachteiligte Teil vom Vertrag zurücktreten. Bei Dauerschuldverhältnissen – etwa Miete oder Pacht – tritt an die Stelle des Rücktritts die Kündigung (§ 313 Abs. 3 S. 2 BGB). Vorher prüfen: Hat eine Partei das Risiko vertraglich übernommen, scheidet § 313 BGB aus.",
+      "norm": "§ 313 Abs. 3 BGB",
+      "quellen": [
+        "§ 313 BGB",
+        "Themenpool: schuld-185"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:35:07.350Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "streit-41",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Schweigegeld-Erpresser: Darf das Opfer sich in Notwehr wehren?",
+      "norm": "§ 32 StGB · § 154c StPO",
+      "optionen": [
+        "Eine Ansicht: Notwehr ist eingeschränkt – das Opfer kann auf staatliche Hilfe verwiesen werden, weil § 154c StPO es vor Verfolgung schützen kann.",
+        "Andere Ansicht: Die fortwirkende Drohung ist ein gegenwärtiger Angriff; das Opfer darf das erforderliche Mittel wählen, ohne auf die Polizei auszuweichen."
+      ],
+      "text": "Klausur: Gegenwärtigkeit sauber begründen (fortdauernde Drohung). Den Streit dann bei der Gebotenheit entscheiden. Lebensgefährliche Abwehr dürfte nach beiden Ansichten regelmäßig nicht gedeckt sein.",
+      "quellen": [
+        "§ 32 StGB",
+        "§ 253 StGB",
+        "§ 154c StPO"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:35:07.350Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-108",
+      "ueberzeile": "Merksatz Europarecht",
+      "titel": "Richtlinie wirkt gegen den Staat – auch gegen staatlich beherrschte Unternehmen",
+      "text": "Eine nicht umgesetzte Richtlinie kann nur gegenüber dem Staat unmittelbar wirken. „Staat“ versteht der EuGH aber weit: Erfasst sein können auch Einrichtungen, die unter staatlicher Aufsicht eine Aufgabe im öffentlichen Interesse erfüllen und dafür besondere Befugnisse haben – etwa kommunal beherrschte Versorgungsunternehmen.",
+      "norm": "Art. 288 Abs. 3 AEUV",
+      "quellen": [
+        "Art. 288 Abs. 3 AEUV",
+        "Themenpool: europa-108"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:35:07.350Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-201",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Widerruf: Paket zurückschicken allein genügt nicht",
+      "text": "Der Widerruf ist eine Erklärung gegenüber dem Unternehmer, aus der der Entschluss zum Widerruf eindeutig hervorgeht (§ 355 Abs. 1 S. 3 BGB). Eine Begründung braucht er nicht. Die kommentarlose Rücksendung der Ware reicht nicht. Zur Fristwahrung genügt die rechtzeitige Absendung. Folge: Beide Seiten müssen die empfangenen Leistungen zurückgewähren.",
+      "norm": "§ 355 BGB",
+      "quellen": [
+        "§ 355 BGB",
+        "§ 357 BGB",
+        "§ 312g BGB",
+        "Themenpool: schuldbt-201"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:35:07.350Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

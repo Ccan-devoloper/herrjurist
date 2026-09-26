@@ -1,0 +1,855 @@
+{
+  "datum": "2027-05-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "vwgo-661",
+        "themaTitel": "Klagefrist und Wiedereinsetzung",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "schuldbt-478",
+        "themaTitel": "Kündigungsbutton und Online-Verträge",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-134",
+        "themaTitel": "Wie prüft man die Untreue nach § 266 StGB?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "assessorz-819"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "assessorz-819"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:55",
+        "art": "norm",
+        "themaId": "europa-417"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:24",
+        "art": "merksatz",
+        "themaId": "verwalt-381"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:51",
+        "art": "begriff",
+        "themaId": "schuld-453"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "fehler",
+        "themaId": "revision-875"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "vwgo-661",
+      "poolTitel": "Klagefrist und Wiedereinsetzung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 74, 60 VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2026-12-12",
+        "2026-12-12"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "schuldbt-478",
+      "poolTitel": "Kündigungsbutton und Online-Verträge",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 312k BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2026-10-24",
+        "2027-02-26"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-134",
+      "poolTitel": "Wie prüft man die Untreue nach § 266 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-31"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-819",
+      "poolTitel": "Wann lohnt sich die Stufenklage?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 254 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-819",
+      "poolTitel": "Wann lohnt sich die Stufenklage?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 254 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "europa-417",
+      "poolTitel": "Wann gelten die Grundrechte der EU-Grundrechtecharta?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 51 GRCh"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "verwalt-381",
+      "poolTitel": "Wann muss angehört werden?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 28 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-20",
+        "2027-01-24",
+        "2027-02-09"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "schuld-453",
+      "poolTitel": "Schuldübernahme und Vertragsübernahme",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 414 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-17"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "revision-875",
+      "poolTitel": "Welche Fristen und Formen gelten für Einlegung und Begründung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 32d StPO",
+        "§ 341 StPO",
+        "§ 344 StPO",
+        "§ 345 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-02",
+        "2027-01-26",
+        "2027-03-27"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-661",
+      "slug": "2027-05-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zwei Wochen laut Belehrung – nach sechs geklagt und rechtzeitig",
+          "titelZeilen": [
+            "Zwei Wochen laut",
+            "Belehrung – nach",
+            "sechs geklagt und",
+            "rechtzeitig"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "§ 58 II VwGO vor § 60 VwGO",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Der Widerspruchsbescheid gegen K wird am 3. März zugestellt. In der Rechtsbehelfsbelehrung steht: „Gegen diesen Bescheid kann innerhalb von zwei Wochen Klage erhoben werden.“ K erhebt nach sechs Wochen Anfechtungsklage beim zuständigen Verwaltungsgericht. Ist die Klage verfristet?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Regelfrist",
+              "text": "Die Anfechtungsklage ist innerhalb eines Monats nach Zustellung des Widerspruchsbescheids zu erheben (§ 74 Abs. 1 S. 1 VwGO)."
+            },
+            {
+              "titel": "Fristbeginn nur mit Belehrung",
+              "text": "Die Frist beginnt nur, wenn richtig über Rechtsbehelf, Gericht, Sitz und Frist belehrt wurde (§ 58 Abs. 1 VwGO)."
+            },
+            {
+              "titel": "Belehrung unrichtig",
+              "text": "Zwei Wochen statt eines Monats: Die Frist ist unrichtig angegeben. Es gilt die Jahresfrist ab Zustellung (§ 58 Abs. 2 VwGO)."
+            },
+            {
+              "titel": "Wiedereinsetzung?",
+              "text": "Nicht nötig – eine Frist, die gewahrt ist, muss nicht wiederhergestellt werden (§ 60 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Die Klage ist fristgerecht. Weil die Belehrung unrichtig war, lief die Monatsfrist nie an; K hatte ein Jahr Zeit. Typische Falle: Die Monatsfrist ist nach sechs Wochen abgelaufen, also sofort zur Wiedereinsetzung springen. Erst § 58 VwGO prüfen, dann § 60 VwGO."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Belehrung fehlt oder ist unrichtig: Jahresfrist nach § 58 Abs. 2 VwGO. Wiedereinsetzung erst prüfen, wenn auch sie verstrichen ist."
+        },
+        {
+          "art": "cta",
+          "titel": "Klagefrist in drei Fragen",
+          "punkte": [
+            "Wann wurde zugestellt?",
+            "Stimmt die Belehrung?",
+            "Monat, Jahr oder Wiedereinsetzung?"
+          ],
+          "icons": [
+            "umschlag",
+            "lupe",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Die Belehrung nennt zwei Wochen, K klagt nach sechs – und ist trotzdem rechtzeitig. Die Monatsfrist des § 74 VwGO läuft nur, wenn richtig belehrt wurde. Ist die Belehrung unrichtig, gilt die Jahresfrist des § 58 Abs. 2 VwGO. Wer sofort zur Wiedereinsetzung springt, prüft an der falschen Stelle. Speichern für die nächste Zulässigkeitsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#klagefrist",
+        "#verwaltungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unrichtige Belehrung: ein Jahr statt ein Monat",
+      "coverText": "§ 58 II VwGO vor § 60 VwGO",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Eine unrichtige Belehrung setzt die kurze Frist gar nicht erst in Gang.",
+        "handlung": "{A} anxiously points at a small hourglass that has run out, while {B} lifts it to reveal it was never connected, and behind it a large calendar-sized hourglass is still running.",
+        "hinweisRegie": "Place the note in the free space next to the large still-running hourglass, slightly tilted toward it, so the longer deadline stands out without covering the small hourglass or {A}'s pointing hand.",
+        "alternative": "{B} shows {A} that the alarm clock he feared was never wound, while a larger clock in the back keeps ticking."
+      },
+      "bildSzene": "small hourglass disconnected, large running",
+      "bildSzeneAlt": "unwound alarm clock, big clock ticking",
+      "quellen": [
+        "§ 74 Abs. 1 VwGO",
+        "§ 58 VwGO",
+        "§ 60 VwGO",
+        "Themenpool: vwgo-661"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:21.010Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-478",
+      "slug": "2027-05-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Online-Abo per E-Mail gekündigt – zählt das?",
+          "titelZeilen": [
+            "Online-Abo per",
+            "E-Mail gekündigt –",
+            "zählt das?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Zusätzlicher Weg, kein Pflichtweg",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V hat online ein Fitnessstudio-Abo abgeschlossen. Die Website bietet einen ordnungsgemäßen Kündigungsbutton. V kündigt trotzdem fristgerecht per E-Mail. Das Studio meint, laut AGB könne nur über den Button oder per Einschreiben gekündigt werden. Ist die Kündigung wirksam?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Zweck des Buttons",
+              "text": "§ 312k BGB verpflichtet den Unternehmer zu einem einfachen Kündigungsweg – zusätzlich, nicht als Formzwang für den Verbraucher."
+            },
+            {
+              "titel": "2. AGB-Klausel prüfen",
+              "text": "Eine strengere Form als Textform darf in AGB für Verbrauchererklärungen grundsätzlich nicht verlangt werden (§ 309 Nr. 13 BGB)."
+            },
+            {
+              "titel": "3. Textform gewahrt",
+              "text": "Die E-Mail ist Textform (§ 126b BGB). Die Klausel mit Einschreiben ist unwirksam."
+            },
+            {
+              "titel": "4. Zugang",
+              "text": "Wirksam wird die Kündigung mit Zugang (§ 130 BGB). Den muss V hier beweisen – anders als beim Button."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Den Button als einzigen zulässigen Weg behandeln. § 312k BGB schützt den Verbraucher, er beschränkt ihn nicht. Der Unterschied liegt beim Beweis: Beim Button wird vermutet, dass die Kündigung zugegangen ist; bei der E-Mail nicht."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Die Kündigung per E-Mail ist wirksam, sofern sie zugeht. Die AGB-Klausel, die Einschreiben verlangt, ist nach § 309 Nr. 13 BGB unwirksam. Praxis-Tipp für V: Lesebestätigung oder Antwort des Studios sichern – oder gleich den Button nutzen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Kündigungsbutton ist ein zusätzlicher Weg, kein Pflichtweg. Textform genügt – nur den Zugang muss der Verbraucher dann beweisen."
+        },
+        {
+          "art": "cta",
+          "titel": "Abo-Kündigung in drei Fragen",
+          "punkte": [
+            "Welche Form verlangen die AGB?",
+            "Ist Textform gewahrt?",
+            "Wer beweist den Zugang?"
+          ],
+          "icons": [
+            "laptop",
+            "umschlag",
+            "quittung"
+          ]
+        }
+      ],
+      "caption": "Online-Abo, aber per E-Mail gekündigt – zählt das? Ja. Der Kündigungsbutton nach § 312k BGB ist ein zusätzlicher Weg für den Verbraucher, kein Pflichtweg. In AGB darf für seine Erklärungen grundsätzlich keine strengere Form als Textform verlangt werden (§ 309 Nr. 13 BGB). Den Zugang der E-Mail muss der Verbraucher aber selbst beweisen. Speichern für die nächste Verbraucherrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#312kbgb",
+        "#verbraucherrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kündigung per E-Mail trotz Kündigungsbutton",
+      "coverText": "Zusätzlicher Weg, kein Pflichtweg",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Ein bequemer neuer Ausgang verschließt die alten Ausgänge nicht.",
+        "handlung": "{A} walks out through an ordinary side door holding a sealed letter, while {B} stands by a large glowing exit button next to it and scratches his head.",
+        "hinweisRegie": "Place the note in the free space next to the side door {A} uses, slightly tilted toward it, so the second valid exit stands out without covering the glowing button or {B}'s face.",
+        "alternative": "{B} guards a shiny new bridge while {A} crosses the river on an older, still solid path right next to it."
+      },
+      "bildSzene": "side door used beside exit button",
+      "bildSzeneAlt": "old path next to new bridge",
+      "quellen": [
+        "§ 312k BGB",
+        "§ 309 Nr. 13 BGB",
+        "§ 126b BGB",
+        "§ 130 BGB",
+        "Themenpool: schuldbt-478"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:21.010Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-134",
+      "slug": "2027-05-28-b3",
+      "titelZeilen": [
+        "Griff in die Kasse:",
+        "Das übersehen viele",
+        "bei § 266 StGB"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Griff in die Kasse: Das übersehen viele bei § 266 StGB",
+          "unter": "Untreue · § 266 StGB",
+          "text": "Viele prüfen bei jedem veruntreuten Geld § 266 StGB – oft fehlt die Betreuungspflicht.",
+          "norm": "§ 266 StGB",
+          "icon": "geldbeutel",
+          "sprecher": "Wer in die Kasse greift, begeht nicht automatisch Untreue. Genau hier bejahen viele Paragraf 266 zu schnell.",
+          "marken": [
+            "nicht automatisch",
+            "§ 266 StGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Betreuungspflicht für beide Tatbestände",
+          "text": "Missbrauch und Treubruch setzen eine Vermögensbetreuungspflicht voraus.",
+          "norm": "§ 266 Abs. 1 StGB",
+          "sprecher": "Schritt eins: Beide Tatbestände des Paragrafen 266, Missbrauch und Treubruch, verlangen nach herrschender Meinung eine Vermögensbetreuungspflicht. Ohne sie keine Untreue.",
+          "marken": [
+            "Missbrauch",
+            "Treubruch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Was die Pflicht ausmacht",
+          "text": "Hauptpflicht, gewisses Gewicht, eigener Entscheidungsspielraum.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Die Pflicht muss eine Hauptpflicht sein, von einigem Gewicht und mit eigenem Entscheidungsspielraum. Rein mechanische Tätigkeiten reichen nicht, auch wenn dabei viel Geld durch die Hände geht.",
+          "marken": [
+            "Spielraum"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Kassiererin",
+          "text": "Kassieren nach festen Vorgaben: in der Regel keine Betreuungspflicht.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Kassiererin im Supermarkt. Sie kassiert nach festen Vorgaben und hat keinen eigenen Spielraum. Nach der Rechtsprechung fehlt ihr dann in der Regel die Vermögensbetreuungspflicht.",
+          "marken": [
+            "feste Vorgaben"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Stattdessen: Diebstahl oder Unterschlagung",
+          "text": "Je nach Gewahrsam § 242 oder § 246 StGB – bei anvertrautem Geld § 246 Abs. 2.",
+          "norm": "§§ 242, 246 StGB",
+          "sprecher": "Schritt vier: Was bleibt dann? Je nach Gewahrsamslage Diebstahl oder Unterschlagung. Ist ihr das Geld anvertraut, kommt die veruntreuende Unterschlagung nach Paragraf 246 Absatz 2 in Betracht.",
+          "marken": [
+            "§ 246 Abs. 2 StGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Gegenbeispiel",
+          "text": "Geschäftsführer oder Vermögensverwalter: klassische Betreuungspflicht.",
+          "norm": null,
+          "sprecher": "Anders beim Geschäftsführer einer GmbH oder beim Vermögensverwalter. Sie entscheiden eigenverantwortlich und mit echtem Spielraum über fremdes Vermögen. Das ist die typische Vermögensbetreuungspflicht.",
+          "marken": [
+            "Geschäftsführer"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Erst die Betreuungspflicht, dann § 266 StGB – sonst §§ 242, 246 StGB.",
+          "norm": null,
+          "sprecher": "Merke: Nicht jedes veruntreute Geld ist Untreue. Erst die Vermögensbetreuungspflicht begründen, sonst weiter zu Diebstahl oder Unterschlagung.",
+          "marken": [
+            "erst die Pflicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speichern für den nächsten Kassenfall",
+          "text": "Speichern für die nächste Vermögensdelikt-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur, in der jemand fremdes Geld einsteckt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Griff in die Kasse – und viele bejahen sofort Untreue. Doch § 266 StGB verlangt nach h.M. für Missbrauch und Treubruch eine Vermögensbetreuungspflicht: eine Hauptpflicht von Gewicht mit eigenem Entscheidungsspielraum. Die Kassiererin, die nach festen Vorgaben kassiert, hat sie nach der Rspr. in der Regel nicht. Dann bleiben Diebstahl oder Unterschlagung. Speichern für die nächste Vermögensdelikt-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#266stgb",
+        "#untreue",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kassengriff: Untreue oder Unterschlagung?",
+      "coverText": "Ohne Betreuungspflicht keine Untreue",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer fremdes Geld nur nach festen Vorgaben verwaltet, hat keine Betreuungspflicht im Sinne der Untreue.",
+        "handlung": "{A} slips a coin from a simple till drawer into his pocket, while {B} holds up a large ledger with a key, clearly marking that {A} was never given the key to the vault behind him.",
+        "hinweisRegie": "Place the note in the free space between the till drawer and the vault key in {B}'s hand, slightly tilted toward the key, so the missing responsibility stands out without covering the coin or faces.",
+        "alternative": "{B} compares a cashier's simple coin tray with a manager's desk full of decision papers, while {A} takes a coin from the tray."
+      },
+      "bildSzene": "coin from till, vault key withheld",
+      "bildSzeneAlt": "coin tray versus manager's desk",
+      "quellen": [
+        "§ 266 StGB",
+        "§ 242 StGB",
+        "§ 246 StGB",
+        "Themenpool: strafbt-134"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:21.011Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-819",
+      "ueberzeile": "Prüfungsfrage 2. Examen",
+      "titel": "Pflichtteilsberechtigter P kennt den Wert des Nachlasses nicht. Wie verklagt er den Erben am besten?",
+      "optionen": [
+        "Zahlungsklage mit geschätztem Betrag, später Klageänderung",
+        "Erst Auskunftsklage, Zahlung erst nach deren Rechtskraft",
+        "Stufenklage: Auskunft, ggf. eidesstattliche Versicherung, dann Zahlung"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 254 ZPO",
+        "§ 2314 BGB",
+        "§ 204 Abs. 1 Nr. 1 BGB",
+        "Themenpool: assessorz-819"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:21.011Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-819",
+      "ueberzeile": "Auflösung",
+      "titel": "Stufenklage – der Zahlungsantrag darf offenbleiben, bis die Auskunft vorliegt",
+      "text": "§ 254 ZPO erlaubt, die Klage auf Auskunft (hier § 2314 BGB) mit der Zahlungsklage zu verbinden und den Betrag erst später zu beziffern. Vorteil: Auch der Zahlungsanspruch wird schon mit Klageerhebung rechtshängig, die Verjährung ist gehemmt (§ 204 Abs. 1 Nr. 1 BGB). Das Gericht entscheidet Stufe für Stufe, über die Auskunft durch Teilurteil.",
+      "norm": "§ 254 ZPO",
+      "quellen": [
+        "§ 254 ZPO",
+        "§ 2314 BGB",
+        "§ 204 Abs. 1 Nr. 1 BGB",
+        "Themenpool: assessorz-819"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:21.011Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Zahlungsklage mit geschätztem Betrag, später Klageänderung",
+        "Erst Auskunftsklage, Zahlung erst nach deren Rechtskraft",
+        "Stufenklage: Auskunft, ggf. eidesstattliche Versicherung, dann Zahlung"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-417",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 51 Abs. 1 GRCh: Die Charta bindet die Mitgliedstaaten nur bei der Durchführung des Unionsrechts",
+      "text": "Die Grundrechtecharta gilt für die Organe der Union und für die Mitgliedstaaten ausschließlich bei der Durchführung des Unionsrechts. Der EuGH versteht das weit: Es genügt, dass der Fall in den Anwendungsbereich des Unionsrechts fällt. Das BVerfG prüft vollständig unionsrechtlich determiniertes Recht an der Charta, bei Gestaltungsspielraum vorrangig am Grundgesetz.",
+      "norm": "Art. 51 Abs. 1 GRCh",
+      "quellen": [
+        "Art. 51 GRCh",
+        "Art. 6 Abs. 1 EUV",
+        "Themenpool: europa-417"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:21.011Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-381",
+      "ueberzeile": "Merksatz Verwaltungsrecht",
+      "titel": "Allgemeinverfügung: Die Anhörung kann entfallen – muss aber nicht",
+      "text": "§ 28 Abs. 2 Nr. 4 VwVfG erlaubt, bei Allgemeinverfügungen von der Anhörung abzusehen. „Kann“ heißt Ermessen: Die Behörde muss es erkennbar ausüben.",
+      "norm": "§ 28 Abs. 2 Nr. 4 VwVfG",
+      "quellen": [
+        "§ 28 VwVfG",
+        "§ 35 S. 2 VwVfG",
+        "§ 45 VwVfG",
+        "Themenpool: verwalt-381"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:21.011Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-453",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Befreiende Schuldübernahme",
+      "text": "Ein Dritter tritt als neuer Schuldner an die Stelle des bisherigen, der frei wird. Entweder durch Vertrag mit dem Gläubiger (§ 414 BGB) oder durch Vertrag mit dem Schuldner, der erst mit Genehmigung des Gläubigers wirkt (§ 415 BGB). Abzugrenzen: Schuldbeitritt (beide haften) und Vertragsübernahme (die ganze Vertragsstellung wechselt).",
+      "norm": "§§ 414, 415 BGB",
+      "quellen": [
+        "§ 414 BGB",
+        "§ 415 BGB",
+        "§ 417 BGB",
+        "Themenpool: schuld-453"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:21.011Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-875",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Revisionsbegründung: Läuft die Monatsfrist ab Urteilsverkündung?",
+      "falsch": "Die Revisionsbegründung muss binnen eines Monats nach Verkündung des Urteils beim Gericht eingehen.",
+      "richtigText": "Nein. Eingelegt wird binnen einer Woche nach Verkündung (§ 341 Abs. 1 StPO). Die Monatsfrist zur Begründung beginnt erst mit Ablauf dieser Wochenfrist – und nur, wenn das Urteil bis dahin zugestellt ist; sonst mit der Zustellung (§ 345 Abs. 1 StPO). In der Praxis läuft sie also meist ab Zustellung.",
+      "quellen": [
+        "§ 341 StPO",
+        "§ 345 StPO",
+        "Themenpool: revision-875"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:58:21.011Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

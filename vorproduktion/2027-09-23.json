@@ -1,0 +1,882 @@
+{
+  "datum": "2027-09-23",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "zwangsv-588",
+        "themaTitel": "Zwangsvollstreckungsklausur: richtige Klage/Rechtsbehelf wählen",
+        "fach": "zwangsv",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "strafbt-136",
+        "themaTitel": "Was ist der Unterschied zwischen Raub und räuberischem Diebstahl?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-629",
+        "themaTitel": "Schutzpflichten des Staates",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:12",
+        "art": "frage",
+        "themaId": "strafbt-317"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:12",
+        "art": "antwort",
+        "themaId": "strafbt-317"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "schuldbt-203"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:22",
+        "art": "streitstand",
+        "themaId": "strafat-923"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "merksatz",
+        "themaId": "handelsg-269"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "begriff",
+        "themaId": "bgbat-150"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "zwangsv-588",
+      "poolTitel": "Zwangsvollstreckungsklausur: richtige Klage/Rechtsbehelf wählen",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§§ 766, 767, 771 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-18",
+        "2027-06-12",
+        "2027-09-05"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "strafbt-136",
+      "poolTitel": "Was ist der Unterschied zwischen Raub und räuberischem Diebstahl?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 249 StGB",
+        "§ 252 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-23",
+        "2027-03-14",
+        "2027-07-12"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-629",
+      "poolTitel": "Schutzpflichten des Staates",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Grundrechte"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-21",
+        "2027-03-07"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-317",
+      "poolTitel": "Wann liegt Verdeckungsabsicht vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2027-04-16",
+        "2027-05-05"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-317",
+      "poolTitel": "Wann liegt Verdeckungsabsicht vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2027-04-16",
+        "2027-05-05"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-203",
+      "poolTitel": "Wie haftet der Schenker?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 521 BGB",
+        "§ 523 BGB",
+        "§ 524 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-08",
+        "2027-04-14"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafat-923",
+      "poolTitel": "Außertatbestandliche Zielerreichung: Rücktritt trotz erteilten Denkzettels?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-16",
+        "2027-05-19",
+        "2027-07-22"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "handelsg-269",
+      "poolTitel": "Wie haftet der Kommanditist?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 171 HGB",
+        "§ 172 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-06",
+        "2027-07-25",
+        "2027-08-10"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "bgbat-150",
+      "poolTitel": "Wie grenzt man Angebot und invitatio ad offerendum ab?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 145 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15",
+        "2027-03-06",
+        "2027-06-11"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-588",
+      "slug": "2027-09-23-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "4 Wege gegen die Vollstreckung – je nach Angriffsziel",
+          "titelZeilen": [
+            "4 Wege gegen die",
+            "Vollstreckung – je",
+            "nach Angriffsziel"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Angriffsziel entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Leitfrage",
+          "text": "Bevor du eine Norm nennst, klär zwei Dinge: Wer wehrt sich – Schuldner oder Dritter? Und was wird angegriffen – das Vorgehen des Vollstreckungsorgans, eine Entscheidung im Vollstreckungsverfahren, der titulierte Anspruch oder der Zugriff auf eine fremde Sache?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Schuldner: Verfahren oder Anspruch?",
+          "links": {
+            "titel": "Erinnerung, § 766 ZPO",
+            "punkte": [
+              "Rügt Art und Weise der Vollstreckung",
+              "Etwa: unpfändbare Sache gepfändet (§ 811 ZPO)",
+              "Entscheidet das Vollstreckungsgericht"
+            ]
+          },
+          "rechts": {
+            "titel": "Abwehrklage, § 767 ZPO",
+            "punkte": [
+              "Rügt den titulierten Anspruch selbst",
+              "Etwa: nach dem Urteil gezahlt",
+              "Präklusion nach § 767 Abs. 2 ZPO"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Dritter oder Entscheidung?",
+          "links": {
+            "titel": "Drittwiderspruch, § 771",
+            "punkte": [
+              "Dritter mit veräußerungshinderndem Recht",
+              "Typisch: Eigentum an der gepfändeten Sache",
+              "Klage beim Gericht des Vollstreckungsorts"
+            ]
+          },
+          "rechts": {
+            "titel": "Beschwerde, § 793 ZPO",
+            "punkte": [
+              "Gegen Entscheidungen im ZV-Verfahren",
+              "Die ohne mündliche Verhandlung ergehen können",
+              "Sofortige Beschwerde: Notfrist zwei Wochen"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Die Abgrenzungsfalle",
+          "text": "S zahlt nach dem Urteil, G vollstreckt trotzdem. Kein Verfahrensfehler: Das Vollstreckungsorgan prüft den Anspruch nicht. S braucht die Vollstreckungsabwehrklage (§ 767 ZPO). Einwendungen, die schon vor Schluss der mündlichen Verhandlung bestanden, sind präkludiert (§ 767 Abs. 2 ZPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verfahren: Erinnerung. Titulierter Anspruch: § 767 ZPO. Fremde Sache: Drittwiderspruch. Entscheidung: sofortige Beschwerde."
+        },
+        {
+          "art": "cta",
+          "titel": "Rechtsbehelf in der ZV wählen",
+          "punkte": [
+            "Wer wehrt sich?",
+            "Was wird angegriffen?",
+            "Maßnahme oder Entscheidung?"
+          ],
+          "icons": [
+            "person",
+            "lupe",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "4 Wege gegen die Vollstreckung – welcher passt, entscheidet das Angriffsziel. Die Erinnerung (§ 766 ZPO) rügt das Verfahren, die Vollstreckungsabwehrklage (§ 767 ZPO) den titulierten Anspruch, die Drittwiderspruchsklage (§ 771 ZPO) den Zugriff auf eine fremde Sache. Gegen Entscheidungen im Vollstreckungsverfahren gibt es die sofortige Beschwerde (§ 793 ZPO). Speichern für die nächste ZV-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#767zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "ZV-Rechtsbehelfe: vier Wege, vier Angriffsziele",
+      "coverText": "Angriffsziel entscheidet",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Welcher Rechtsbehelf passt, hängt davon ab, was genau in der Vollstreckung angegriffen wird.",
+        "handlung": "{A} hovers in front of four differently shaped slots in a machine wall, while {B} holds a key and tries to match it to the right slot.",
+        "hinweisRegie": "Place the note in the free space above the four slots, slightly tilted toward the one {B} is aiming at, keeping the key, the slots and both faces visible.",
+        "alternative": "{B} stands at a crossroads with four signposts without text, each pointing to a different gate, while {A} sorts parcels by their shape."
+      },
+      "bildSzene": "key matched to four slots",
+      "bildSzeneAlt": "crossroads with four gates",
+      "quellen": [
+        "§ 766 ZPO",
+        "§ 767 ZPO",
+        "§ 771 ZPO",
+        "§ 793 ZPO",
+        "§ 811 ZPO",
+        "§ 569 Abs. 1 ZPO",
+        "Themenpool: zwangsv-588"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-rechtsbehelfe",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:38:32.257Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-136",
+      "slug": "2027-09-23-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Weggenommen, dann zugeschlagen – kein Raub",
+          "titelZeilen": [
+            "Weggenommen,",
+            "dann zugeschlagen –",
+            "kein Raub"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Wegnahme vollendet? Dann § 252",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "A steckt im Kaufhaus ein Parfum in seine Jackentasche. Am Ausgang hält ihn der Detektiv D fest. A stößt D zu Boden, um mit dem Parfum zu entkommen. Gewalt und Diebstahl liegen vor – aber ist das ein Raub?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Raub oder räuberischer Diebstahl?",
+          "links": {
+            "titel": "Raub, § 249 StGB",
+            "punkte": [
+              "Gewalt oder Drohung als Mittel der Wegnahme",
+              "Einsatz vor oder bei der Wegnahme",
+              "Mit Zueignungsabsicht"
+            ]
+          },
+          "rechts": {
+            "titel": "§ 252 StGB",
+            "punkte": [
+              "Diebstahl schon vollendet",
+              "Täter auf frischer Tat betroffen",
+              "Gewalt, um die Beute zu behalten"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der Zeitpunkt entscheidet",
+          "text": "Maßgeblich ist, ob die Wegnahme schon vollendet ist. Setzt A Gewalt ein, um den Gewahrsam erst zu brechen, liegt Raub vor. Hat er schon neuen Gewahrsam – kleine Ware in der eigenen Jackentasche genügt –, kommt nur § 252 StGB in Betracht."
+        },
+        {
+          "art": "text",
+          "titel": "Die Absicht entscheidet mit",
+          "text": "§ 252 StGB verlangt, dass A handelt, um sich im Besitz der Beute zu erhalten. Geht es ihm nur um die Flucht, fehlt diese Absicht: Dann bleibt es beim Diebstahl, daneben kommen Nötigung und Körperverletzung in Betracht. Im Fall will A mit dem Parfum entkommen – § 252 StGB ist erfüllt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gewalt, um wegzunehmen: Raub. Gewalt, um das schon Weggenommene zu behalten: § 252 StGB – bestraft gleich einem Räuber."
+        },
+        {
+          "art": "cta",
+          "titel": "Raub oder § 252 StGB?",
+          "punkte": [
+            "Wegnahme schon vollendet?",
+            "Auf frischer Tat betroffen?",
+            "Ziel: Beute behalten?"
+          ],
+          "icons": [
+            "uhr",
+            "detektiv",
+            "geldbeutel"
+          ]
+        }
+      ],
+      "caption": "Weggenommen, dann zugeschlagen – das ist kein Raub. Beim Raub ist die Gewalt Mittel der Wegnahme. Ist der Diebstahl schon vollendet und setzt der Täter Gewalt ein, um die Beute zu behalten, greift § 252 StGB. Er wird dann gleich einem Räuber bestraft, auch §§ 250, 251 StGB werden anwendbar. Speichern für die nächste Strafrecht-BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#raub",
+        "#252stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Raub oder räuberischer Diebstahl?",
+      "coverText": "Wegnahme vollendet? Dann § 252",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Wer erst nimmt und dann Gewalt anwendet, um die Beute zu behalten, begeht räuberischen Diebstahl – keinen Raub.",
+        "handlung": "{A} already clutches a small glittering bottle in a coat pocket and pushes past {B}, who blocks a glass exit door with an outstretched arm.",
+        "hinweisRegie": "Place the note in the free space next to the coat pocket with the bottle, slightly tilted toward the exit door, so the push and both faces remain visible.",
+        "alternative": "{B} holds a stolen crystal tightly against the chest and shoves away a pursuer at the edge of a mine tunnel, while {A} watches from the side."
+      },
+      "bildSzene": "pocketed bottle, push at exit",
+      "bildSzeneAlt": "crystal held, pursuer shoved away",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 249 StGB",
+        "§ 252 StGB",
+        "Themenpool: strafbt-136"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zeitpunkt-verwechslung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:38:32.257Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-629",
+      "slug": "2027-09-23-b3",
+      "titelZeilen": [
+        "Untätiger Staat,",
+        "verletztes",
+        "Grundrecht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Untätiger Staat, verletztes Grundrecht",
+          "unter": "Schutzpflichten · Art. 2 Abs. 2 GG",
+          "text": "Grundrechte verlangen nicht nur Abwehr – manchmal auch Schutz.",
+          "norm": "Art. 2 Abs. 2 S. 1 GG",
+          "icon": "schild",
+          "sprecher": "Der Staat tut gar nichts. Trotzdem kann er ein Grundrecht verletzen. Denn aus den Grundrechten folgen auch Pflichten, dich vor Gefahren durch andere zu schützen.",
+          "marken": [
+            "Schutzpflicht",
+            "Art. 2 Abs. 2 GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Herleitung",
+          "text": "Grundrechte sind auch objektive Wertentscheidungen. Daraus folgen Schutzpflichten.",
+          "norm": "Art. 1 Abs. 1 S. 2 GG",
+          "sprecher": "Schritt eins: die Herleitung. Grundrechte sind nicht nur Abwehrrechte, sondern auch objektive Wertentscheidungen. Das Bundesverfassungsgericht leitet daraus Schutzpflichten ab, besonders für Leben und Gesundheit.",
+          "marken": [
+            "objektive Dimension"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Die Gefahr",
+          "text": "Die Bedrohung kommt nicht vom Staat, sondern von Privaten oder anderen Quellen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Gefahr. Die Bedrohung geht nicht vom Staat aus, sondern etwa von Privaten. Deshalb passt das Eingriffsschema nicht. Die Frage lautet: Hat der Staat genug zum Schutz getan?",
+          "marken": [
+            "Gefahr durch Dritte"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Weiter Spielraum",
+          "text": "Wie der Staat schützt, entscheidet vor allem der Gesetzgeber.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Spielraum. Wie der Staat schützt, entscheidet vor allem der Gesetzgeber. Er hat dabei einen weiten Einschätzungs-, Wertungs- und Gestaltungsspielraum.",
+          "marken": [
+            "Gestaltungsspielraum"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Der Kontrollmaßstab",
+          "text": "Verletzt ist die Pflicht, wenn Schutz fehlt oder offensichtlich unzureichend ist.",
+          "norm": "Art. 2 Abs. 2 S. 1 GG",
+          "sprecher": "Schritt vier: der Maßstab. Verletzt ist die Schutzpflicht, wenn der Staat gar nichts tut oder seine Maßnahmen offensichtlich ungeeignet oder völlig unzulänglich sind. Das nennt man Untermaßverbot.",
+          "marken": [
+            "Untermaßverbot"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Klassiker",
+          "text": "Schwangerschaftsabbruch: Das BVerfG prägte hier das Untermaßverbot.",
+          "norm": null,
+          "sprecher": "Der Klassiker ist die Rechtsprechung zum Schwangerschaftsabbruch. Dort hat das Bundesverfassungsgericht betont, dass der Staat das ungeborene Leben wirksam schützen muss, und das Untermaßverbot geprägt.",
+          "marken": [
+            "Klassiker"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Schutzpflicht: kein Eingriffsschema, sondern Frage nach dem Mindestschutz.",
+          "norm": "Art. 2 Abs. 2 S. 1 GG",
+          "sprecher": "Merke: Bei der Schutzpflicht prüfst du nicht Eingriff und Rechtfertigung, sondern ob der Staat das Mindestmaß an Schutz gewährt.",
+          "marken": [
+            "Mindestschutz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Grundrechtsklausur speichern",
+          "text": "Speichern für die nächste Grundrechtsprüfung.",
+          "sprecher": "Speicher dir das für deine nächste Grundrechtsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Untätiger Staat, verletztes Grundrecht – das geht. Aus den Grundrechten folgen auch Schutzpflichten, vor allem für Leben und Gesundheit (Art. 2 Abs. 2 S. 1 GG). Der Gesetzgeber hat einen weiten Spielraum; verletzt ist die Pflicht erst, wenn Schutz fehlt oder offensichtlich unzureichend ist. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#schutzpflicht",
+        "#untermaßverbot",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schutzpflicht: Verletzung durch Unterlassen",
+      "coverText": "Mindestschutz statt Eingriffsschema",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Der Staat verletzt ein Grundrecht auch, wenn er vor Gefahren durch andere gar nicht oder völlig unzureichend schützt.",
+        "handlung": "{B} stands under a loose rock ledge while {A} holds a tiny umbrella far too small to shield {B} from falling pebbles.",
+        "hinweisRegie": "Place the note in the free space between the tiny umbrella and the rock ledge, slightly tilted toward the falling pebbles, keeping both faces fully visible.",
+        "alternative": "{A} builds a low fence around {B} while a larger creature approaches, and the fence clearly reaches only up to {B}'s ankles."
+      },
+      "bildSzene": "tiny umbrella under falling rocks",
+      "bildSzeneAlt": "ankle-high fence against approaching creature",
+      "quellen": [
+        "Art. 1 Abs. 1 GG",
+        "Art. 2 Abs. 2 S. 1 GG",
+        "Themenpool: grundr-629"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "unterlassen-statt-eingriff",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:38:32.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-317",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "A schlägt Zeugen Z nieder, um unerkannt zu entkommen, und nimmt Z's Tod billigend in Kauf. Verdeckungsmord?",
+      "optionen": [
+        "Nein – Verdeckungsabsicht verlangt direkten Tötungsvorsatz",
+        "Nur Totschlag – Verdecken setzt eine fremde Vortat voraus",
+        "Ja – bedingter Tötungsvorsatz genügt grundsätzlich"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-317"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:38:32.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-317",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – Verdeckungsabsicht und bedingter Tötungsvorsatz schließen sich nicht aus",
+      "text": "Nach dem BGH verträgt sich die Verdeckungsabsicht mit bedingtem Tötungsvorsatz, wenn der Täter die Verdeckung nicht gerade durch den Tod erreichen will – etwa weil es ihm um die unerkannte Flucht geht. Anders, wenn nach seiner Vorstellung erst der Tod des Opfers die Entdeckung verhindert. Die Vortat darf auch eine eigene sein.",
+      "norm": "§ 211 Abs. 2 Gr. 3 StGB",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-317"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:38:32.258Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – Verdeckungsabsicht verlangt direkten Tötungsvorsatz",
+        "Nur Totschlag – Verdecken setzt eine fremde Vortat voraus",
+        "Ja – bedingter Tötungsvorsatz genügt grundsätzlich"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-203",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 524 BGB: Für Mängel des Geschenks steht der Schenker nur bei Arglist ein",
+      "text": "Verschweigt der Schenker einen Fehler der verschenkten Sache arglistig, muss er den daraus entstehenden Schaden ersetzen (§ 524 Abs. 1 BGB). Sonst haftet er für Sachmängel grundsätzlich nicht – auch nicht bei grober Fahrlässigkeit. Strenger ist Abs. 2 nur für eine versprochene Gattungssache, die der Schenker erst erwerben sollte.",
+      "norm": "§ 524 Abs. 1 BGB",
+      "quellen": [
+        "§ 521 BGB",
+        "§ 524 BGB",
+        "Themenpool: schuldbt-203"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:38:32.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-923",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Rivale eingeschüchtert, weitere Messerstiche unnötig: Befreit das Aufhören vom Totschlagsversuch?",
+      "norm": "§ 24 Abs. 1 StGB",
+      "optionen": [
+        "BGH (Großer Senat): Ja – beim unbeendeten Versuch genügt das Ablassen, auch wenn das außertatbestandliche Ziel erreicht ist.",
+        "Teile der Lit.: Nein – wer sein Ziel schon erreicht hat, gibt nichts mehr auf; ein Rücktritt scheidet aus."
+      ],
+      "text": "Klausur: Erst den Rücktrittshorizont bestimmen, dann den Streit kurz darstellen und mit dem BGH entscheiden: Maßgeblich ist der Tatbestand, nicht das Motiv. Für den Opferschutz spricht, das Aufhören zu belohnen.",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafat-923"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:38:32.259Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-269",
+      "ueberzeile": "Merksatz Gesellschaftsrecht",
+      "titel": "Einlage zurückgezahlt: Der Kommanditist haftet wieder",
+      "text": "Er haftet bis zur eingetragenen Haftsumme, soweit die Einlage nicht geleistet ist (§ 171 Abs. 1, § 172 Abs. 1 HGB). Wird sie zurückgezahlt, gilt sie insoweit als nicht geleistet (§ 172 Abs. 4 HGB).",
+      "norm": "§ 172 Abs. 4 HGB",
+      "quellen": [
+        "§ 171 HGB",
+        "§ 172 HGB",
+        "Themenpool: handelsg-269"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:38:32.259Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-150",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Invitatio ad offerendum",
+      "text": "Die Aufforderung an andere, selbst ein Angebot abzugeben. Ihr fehlt der Rechtsbindungswille: Wer Waren im Schaufenster, im Katalog oder meist auch im Onlineshop präsentiert, will Vorrat und Zahlungsfähigkeit noch prüfen. Das Angebot (§ 145 BGB) macht dann der Kunde, der Anbieter nimmt an.",
+      "norm": "§ 145 BGB",
+      "quellen": [
+        "§ 145 BGB",
+        "Themenpool: bgbat-150"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:38:32.259Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,912 @@
+{
+  "datum": "2027-08-29",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "delikt-128",
+        "themaTitel": "Wie wird das allgemeine Persönlichkeitsrecht geschützt?",
+        "fach": "delikt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "strafat-300",
+        "themaTitel": "Wie prüft man das unechte Unterlassungsdelikt?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "strafat-721"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "strafat-721"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "staat-364"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "fehler",
+        "themaId": "stpo-928"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "tipp",
+        "themaId": "famerb-044"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:06",
+        "art": "zahl",
+        "themaId": "revision-886"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "delikt-128",
+      "poolTitel": "Wie wird das allgemeine Persönlichkeitsrecht geschützt?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 1 BGB",
+        "Art. 2 Abs. 1 GG",
+        "Art. 1 Abs. 1 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-15",
+        "2026-12-19",
+        "2027-08-21"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-300",
+      "poolTitel": "Wie prüft man das unechte Unterlassungsdelikt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-02-10"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-721",
+      "poolTitel": "Tatbestandsirrtum",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-14"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-721",
+      "poolTitel": "Tatbestandsirrtum",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-14"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-364",
+      "poolTitel": "Was ist die Ewigkeitsgarantie?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 79 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2026-11-30",
+        "2027-03-21"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "stpo-928",
+      "poolTitel": "Adhäsionsverfahren: Zivilansprüche im Strafprozess durchsetzen",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 403 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-23",
+        "2027-04-04",
+        "2027-06-27"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "famerb-044",
+      "poolTitel": "Was bedeutet „angemessen“ i.S.d. § 1357 BGB?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1357 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-21",
+        "2027-06-30"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "revision-886",
+      "poolTitel": "Was verbietet das Verschlechterungsverbot?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 358 Abs. 2 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-02",
+        "2027-04-02",
+        "2027-06-19"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-08-29-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Regeln im Schnelldurchlauf",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Regeln im",
+            "Schnelldurchlauf"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "EBV-Nutzungen: Der redliche, unverklagte Besitzer zahlt grds. nichts – Ausnahmen §§ 988, 993 BGB.",
+            "Minderung: bindet – danach nach dem BGH kein großer Schadensersatz mehr.",
+            "§ 109 BGB: Wer die Minderjährigkeit kannte, kann grds. nicht widerrufen.",
+            "Gefahr: Leistungsgefahr (§ 275 BGB) und Preisgefahr (§§ 326, 446 BGB) trennen.",
+            "Vormerkung: spätere Verfügung relativ unwirksam, Zustimmung nach § 888 BGB."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 108 StPO: Zufallsfund nur bei Gelegenheit, nicht bei gezielter Suche.",
+            "Anklagesatz: mehrere Taten einzeln nach Zeit, Ort und Gegenstand umgrenzen.",
+            "§ 246 StGB: Zueignung braucht einen nach außen erkennbaren Akt.",
+            "Raub: vollendet mit der Wegnahme, beendet mit gesicherter Beute.",
+            "Durchsuchung: Bewusste Umgehung des Richters rettet kein „hätte zugestimmt“."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Gewahrsam: Richter unverzüglich – die Tagesgrenze ist nur Obergrenze.",
+            "Folgenbeseitigung: unwahre amtliche Äußerung widerrufen, Geld über die Amtshaftung.",
+            "Art. 16 Abs. 2 GG: Auslieferung Deutscher in die EU nur per Gesetz und verhältnismäßig.",
+            "Klagebefugnis: Adressat, Dritter, Anspruchsteller, Gemeinde – je eigene Begründung.",
+            "Art. 14 GG: kein Dulde und Liquidiere – erst abwehren.",
+            "Ermessen auf null: Verpflichtungs- statt Bescheidungsurteil."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Entscheidungen in vier Sätzen lernen – inklusive Gegenseite.",
+            "Kopfsache: Abrufen statt wiederlesen – Wiedererkennen ist noch kein Können."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Kannst du zu jedem Bereich eine Norm und ihren Kernsatz ohne Unterlagen nennen?",
+            "Kannst du Vollendung und Beendigung oder Leistungs- und Preisgefahr in je einem Satz trennen?",
+            "Was hakt, kommt auf die Abrufliste für die nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht über Anspruch und Rechtsfolge",
+            "Strafrecht über Tatbestand und Verfahren",
+            "Öffentliches Recht als Prüfungskette",
+            "Technik und Kopfsache als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Regeln im Schnelldurchlauf, sortiert nach vier Bereichen. Im Zivilrecht ging es um EBV-Nutzungen, Minderung, Minderjährige, Gefahrtragung und Vormerkung, im Strafrecht um Zufallsfunde, Anklagesatz, Unterschlagung, Raub und Durchsuchung, im Öffentlichen Recht um Gewahrsam, Folgenbeseitigung, Art. 16 und Art. 14 GG, Klagebefugnis und Ermessen auf null. Dazu Klausurtechnik und Kopfsache. Geh nur die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Regeln, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Eine Woche Examenswissen lässt sich in vier Bereichen ordnen und gezielt wiederholen.",
+        "handlung": "{A} sorts a pile of small glowing cards into four trays on a table, while {B} taps one tray with his pointer to check a card at random.",
+        "hinweisRegie": "Place the note in the free space above the four trays, slightly tilted toward the tray {B} is tapping, so the idea of sorted review is visible without covering the cards or faces.",
+        "alternative": "{B} hangs four small lanterns on a line, and {A} lights them one after the other."
+      },
+      "bildSzene": "cards sorted into four trays",
+      "bildSzeneAlt": "four lanterns lit in turn",
+      "quellen": [
+        "§§ 987 ff. BGB",
+        "§ 441 BGB",
+        "§§ 108, 109 BGB",
+        "§§ 275, 326, 446, 447 BGB",
+        "§§ 883, 888 BGB",
+        "§ 108 StPO",
+        "§ 200 StPO",
+        "§ 53 StGB",
+        "§ 246 StGB",
+        "§ 249 StGB",
+        "§ 105 StPO",
+        "Art. 104 Abs. 2 GG",
+        "Art. 16 Abs. 2 GG",
+        "Art. 14 GG",
+        "§ 42 Abs. 2 VwGO",
+        "§ 40 VwVfG",
+        "§ 113 Abs. 5 VwGO",
+        "Themenpool: methodik-908",
+        "Themenpool: mindset-1"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.409Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "delikt",
+      "klausur": 1,
+      "fachLabel": "Deliktsrecht",
+      "themaId": "delikt-128",
+      "slug": "2027-08-29-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Persönlichkeitsrecht: fünf Schritte – im dritten fällt die Entscheidung",
+          "titelZeilen": [
+            "Persönlichkeits-",
+            "recht: fünf Schritte,",
+            "im dritten fällt",
+            "die Entscheidung"
+          ],
+          "coverBadge": "Klausurschema",
+          "coverText": "Rahmenrecht: abwägen statt Indiz",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Das allgemeine Persönlichkeitsrecht ist als „sonstiges Recht“ in § 823 Abs. 1 BGB anerkannt – abgeleitet aus Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG. Als offenes Rahmenrecht verlangt es einen eigenen Prüfungsaufbau."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Schutzbereich",
+              "text": "Welche Ausprägung? Etwa Privat- und Intimsphäre, Ehre oder das Recht am eigenen Bild (§§ 22, 23 KUG)."
+            },
+            {
+              "titel": "2. Eingriff",
+              "text": "Ein Verhalten des Schädigers berührt diese Ausprägung – etwa die Veröffentlichung eines Fotos oder einer Behauptung."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Rechtswidrigkeit",
+              "text": "Nicht indiziert: umfassende Güter- und Interessenabwägung, oft gegen Meinungs- und Pressefreiheit (Art. 5 Abs. 1 GG)."
+            },
+            {
+              "titel": "4. Verschulden",
+              "text": "Vorsatz oder Fahrlässigkeit (§ 276 BGB)."
+            },
+            {
+              "titel": "5. Rechtsfolge",
+              "text": "Unterlassung (§ 1004 BGB analog), Schadensersatz; Geldentschädigung nur bei schwerer Verletzung ohne anderen Ausgleich."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: die Sphären",
+          "text": "Wahre Berichte aus der Sozialsphäre muss der Betroffene meist hinnehmen, Eingriffe in die Intimsphäre dagegen kaum. Die Sphärentheorie ist aber nur eine Abwägungshilfe, kein Automatismus – entscheide am konkreten Fall."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "APR: Ausprägung, Eingriff, dann die Abwägung als Kern der Rechtswidrigkeit – erst danach Verschulden und Rechtsfolge."
+        },
+        {
+          "art": "cta",
+          "titel": "APR in fünf Schritten",
+          "punkte": [
+            "Ausprägung bestimmen",
+            "Eingriff feststellen",
+            "Abwägung als Schwerpunkt",
+            "Verschulden und Rechtsfolge"
+          ],
+          "icons": [
+            "person",
+            "lupe",
+            "waage",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Das allgemeine Persönlichkeitsrecht in fünf Schritten – und im dritten fällt die Entscheidung. Als Rahmenrecht indiziert der Eingriff nicht die Rechtswidrigkeit; sie ergibt sich erst aus einer umfassenden Güter- und Interessenabwägung, häufig gegen die Meinungs- und Pressefreiheit. Danach folgen Verschulden und Rechtsfolge: Unterlassung, Schadensersatz und bei schweren Verletzungen Geldentschädigung. Speichern für die nächste Deliktsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#deliktsrecht",
+        "#persönlichkeitsrecht",
+        "#823bgb",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Allgemeines Persönlichkeitsrecht: das Schema",
+      "coverText": "Rahmenrecht: abwägen statt Indiz",
+      "coverBadge": "Klausurschema",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Beim Persönlichkeitsrecht entscheidet erst die Abwägung, ob ein Eingriff rechtswidrig ist.",
+        "handlung": "{B} stands in front of a large balance scale holding a small portrait frame, while {A} hovers on the other side and places a folded newspaper onto the opposite pan.",
+        "hinweisRegie": "Place the note in the free space above the centre of the balance scale, slightly tilted toward the portrait pan, so the weighing is the focus without covering the portrait or faces.",
+        "alternative": "{A} walks through three nested curtains of different thickness, and {B} holds the innermost curtain firmly closed."
+      },
+      "bildSzene": "portrait versus newspaper on scale",
+      "bildSzeneAlt": "three nested curtains, inner held shut",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "Art. 1 Abs. 1, Art. 2 Abs. 1 GG",
+        "Art. 5 Abs. 1 GG",
+        "§§ 22, 23 KUG",
+        "§ 1004 BGB analog",
+        "Themenpool: delikt-128"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-schritte-schwerpunkt",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.409Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-300",
+      "slug": "2027-08-29-b3",
+      "titelZeilen": [
+        "Unterlassen: Bei",
+        "der Kausalität",
+        "kippen viele",
+        "Klausuren"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Unterlassen: Bei der Kausalität kippen viele Klausuren",
+          "unter": "Unterlassungsdelikt · § 13 StGB",
+          "text": "Kausalität beim Unterlassen: die gebotene Handlung hinzudenken – nicht etwas wegdenken.",
+          "norm": "§ 13 StGB",
+          "icon": "lupe",
+          "sprecher": "Beim Unterlassen denkst du nichts weg, du denkst hinzu. Genau hier kippen viele Klausuren: Sie prüfen die Kausalität wie beim aktiven Tun. So baust du das unechte Unterlassungsdelikt auf.",
+          "marken": [
+            "hinzudenken"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Tun oder Unterlassen?",
+          "text": "Nach der Rspr. entscheidet der Schwerpunkt der Vorwerfbarkeit.",
+          "norm": null,
+          "sprecher": "Schritt eins: Grenz ab, ob überhaupt ein Unterlassen vorliegt. Die Rechtsprechung fragt nach dem Schwerpunkt der Vorwerfbarkeit. Liegt er im aktiven Tun, prüfst du das Begehungsdelikt.",
+          "marken": [
+            "Schwerpunkt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Erfolg und mögliche Handlung",
+          "text": "Erfolg eingetreten, gebotene Rettungshandlung trotz Möglichkeit unterlassen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Der Erfolg ist eingetreten, und der Täter hat eine Handlung unterlassen, die ihm physisch-real möglich war.",
+          "marken": [
+            "möglich?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Quasi-Kausalität",
+          "text": "Hätte die hinzugedachte Handlung den Erfolg mit an Sicherheit grenzender Wahrscheinlichkeit verhindert?",
+          "norm": null,
+          "sprecher": "Schritt drei, die Quasi-Kausalität: Denk die gebotene Handlung hinzu. Wäre der Erfolg dann mit an Sicherheit grenzender Wahrscheinlichkeit ausgeblieben? Nur dann ist das Unterlassen ursächlich.",
+          "marken": [
+            "sicher verhindert?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Garantenstellung",
+          "text": "Rechtliche Pflicht, einzustehen: Beschützer- oder Überwachergarant.",
+          "norm": "§ 13 Abs. 1 StGB",
+          "sprecher": "Schritt vier: die Garantenstellung. Der Täter muss nach Paragraf 13 rechtlich dafür einstehen, dass der Erfolg nicht eintritt. Etwa als Beschützergarant, wie Eltern für ihre Kinder, oder als Überwachergarant für eine Gefahrenquelle.",
+          "marken": [
+            "Garant"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Entsprechung und Zumutbarkeit",
+          "text": "Entsprechungsklausel vor allem bei verhaltensgebundenen Delikten; Zumutbarkeit mitprüfen.",
+          "norm": "§ 13 Abs. 1 StGB",
+          "sprecher": "Dazu zwei Punkte: Die Entsprechungsklausel wird vor allem bei verhaltensgebundenen Delikten relevant. Und die Rettung muss zumutbar sein. Ob du das im Tatbestand oder in der Schuld prüfst, ist streitig.",
+          "marken": [
+            "zumutbar?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Beispiel: der Bademeister",
+          "text": "Hilft er nicht, obwohl er sicher hätte retten können: §§ 212, 13 StGB bei Vorsatz.",
+          "norm": "§§ 212, 13 StGB",
+          "sprecher": "Beispiel: Bademeister B sieht einen Schwimmer untergehen und bleibt sitzen. Hätte ein Sprung ins Wasser ihn mit an Sicherheit grenzender Wahrscheinlichkeit gerettet, ist das Unterlassen kausal. Bleibt das offen, bleibt bei Vorsatz nur der Versuch.",
+          "marken": [
+            "Bademeister"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Abgrenzen, Erfolg, hinzudenken, Garant, Entsprechung – dann Vorsatz, Rechtswidrigkeit, Schuld.",
+          "norm": null,
+          "sprecher": "Merke: abgrenzen, Erfolg und unterlassene Handlung, hinzudenken statt wegdenken, Garantenstellung. Danach Vorsatz, Rechtswidrigkeit und Schuld.",
+          "marken": [
+            "hinzudenken"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für das Unterlassungsdelikt speichern",
+          "text": "Speichern für die nächste Unterlassungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur mit einem Unterlassungsdelikt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Beim Unterlassen wird hinzugedacht, nicht weggedacht – das übersehen viele. Quasi-kausal ist das Unterlassen nur, wenn die gebotene Handlung den Erfolg mit an Sicherheit grenzender Wahrscheinlichkeit verhindert hätte. Der Aufbau: Abgrenzung Tun/Unterlassen, Erfolg und mögliche Handlung, Quasi-Kausalität, Garantenstellung nach § 13 StGB, Entsprechung und Zumutbarkeit, dann Vorsatz, Rechtswidrigkeit und Schuld.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtat",
+        "#unterlassen",
+        "#13stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unechtes Unterlassen: Aufbau und Kausalität",
+      "coverText": "Quasi-Kausalität statt Wegdenken",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Beim Unterlassen fragt man, ob die gebotene Rettung den Erfolg verhindert hätte – man denkt sie hinzu.",
+        "handlung": "{B} sits motionless on a lifeguard chair beside a pool, while {A} holds a semi-transparent outline of a rescue ring over the water where it would have landed.",
+        "hinweisRegie": "Place the note in the open space beside the semi-transparent rescue ring outline, slightly tilted toward it, so the imagined rescue is the focus without covering the chair or faces.",
+        "alternative": "{A} places a missing puzzle piece shaped like a helping hand into an otherwise complete picture of a rescue, while {B} watches."
+      },
+      "bildSzene": "imagined rescue ring over water",
+      "bildSzeneAlt": "missing helping-hand puzzle piece",
+      "quellen": [
+        "§ 13 StGB",
+        "§ 212 StGB",
+        "§§ 22, 23 StGB",
+        "Themenpool: strafat-300"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:27:55.590Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-721",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "T nimmt nach der Party ein Fahrrad mit, das er für sein eigenes hält. Es gehört O. Diebstahl?",
+      "optionen": [
+        "Ja – Verbotsirrtum, der nur bei Unvermeidbarkeit hilft",
+        "Nein – Tatbestandsirrtum: T fehlt der Vorsatz zu „fremd“",
+        "Ja – bei § 242 StGB genügt schon Fahrlässigkeit"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 16 Abs. 1 S. 1 StGB",
+        "§ 17 StGB",
+        "§ 15 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafat-721"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.410Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-721",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – wer die Sache für seine hält, irrt über „fremd“",
+      "text": "„Fremd“ ist ein normatives Tatbestandsmerkmal. Hält T das Rad für sein eigenes, kennt er einen Umstand nicht, der zum gesetzlichen Tatbestand gehört: Tatbestandsirrtum, § 16 Abs. 1 S. 1 StGB – kein Vorsatz. Fahrlässiger Diebstahl ist nicht strafbar (§ 15 StGB). Ein Verbotsirrtum (§ 17 StGB) läge vor, wenn T alles richtig erfasst, die Tat aber für erlaubt hält.",
+      "norm": "§ 16 Abs. 1 S. 1 StGB",
+      "quellen": [
+        "§ 16 Abs. 1 S. 1 StGB",
+        "§ 17 StGB",
+        "§ 15 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafat-721"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.410Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – Verbotsirrtum, der nur bei Unvermeidbarkeit hilft",
+        "Nein – Tatbestandsirrtum: T fehlt der Vorsatz zu „fremd“",
+        "Ja – bei § 242 StGB genügt schon Fahrlässigkeit"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-364",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 79 Abs. 3 GG: Grundsätze dürfen nicht „berührt“ werden – modifiziert schon",
+      "text": "Art. 79 Abs. 3 GG sperrt Verfassungsänderungen, die die Gliederung des Bundes in Länder, die grundsätzliche Mitwirkung der Länder bei der Gesetzgebung oder die Grundsätze der Art. 1 und 20 GG berühren. Nach dem BVerfG (Abhörurteil) sind systemimmanente Modifikationen erlaubt – geschützt ist der Kern der Grundsätze, nicht jede Einzelausprägung.",
+      "norm": "Art. 79 Abs. 3 GG",
+      "quellen": [
+        "Art. 79 Abs. 3 GG",
+        "BVerfGE 30, 1 (Abhörurteil)",
+        "Themenpool: staat-364"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.411Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-928",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Schmerzensgeld im Adhäsionsverfahren: Darf das Gericht einfach „ungeeignet“ sagen?",
+      "falsch": "„Das Strafgericht kann jeden Adhäsionsantrag als ungeeignet ablehnen, wenn er das Verfahren verzögern würde.“",
+      "richtigText": "Nicht beim Schmerzensgeld. Macht der Verletzte einen Anspruch nach § 253 Abs. 2 BGB geltend, darf das Gericht nach § 406 Abs. 1 StPO nur absehen, wenn der Antrag unzulässig ist oder unbegründet erscheint – nicht wegen fehlender Eignung. Möglich bleibt ein Grund- oder Teilurteil.",
+      "quellen": [
+        "§ 406 Abs. 1 StPO",
+        "§§ 403 ff. StPO",
+        "§ 253 Abs. 2 BGB",
+        "Themenpool: stpo-928"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.411Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-044",
+      "ueberzeile": "Klausurtipp Familienrecht",
+      "titel": "§ 1357 BGB ist keine Stellvertretung – der Vertragspartner muss von der Ehe nichts wissen",
+      "text": "Anders als bei § 164 BGB muss der handelnde Ehegatte nicht im Namen des anderen auftreten. § 1357 Abs. 1 S. 2 BGB berechtigt und verpflichtet beide kraft Gesetzes – auch wenn der Vertragspartner die Ehe gar nicht kennt. Prüf deshalb keine Offenkundigkeit, sondern: Ehe, kein Getrenntleben, angemessene Deckung des Lebensbedarfs, kein Ausschluss.",
+      "quellen": [
+        "§ 1357 BGB",
+        "§ 164 BGB",
+        "Themenpool: famerb-044"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.411Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-886",
+      "ueberzeile": "3 Punkte Strafprozess",
+      "titel": "Verschlechterungsverbot: Wo gilt es – und wo gerade nicht?",
+      "text": "Nach Einspruch gegen einen Strafbefehl darf das Urteil härter ausfallen (§ 411 Abs. 4 StPO). Bei Rechtsmitteln zugunsten des Angeklagten gilt dagegen das Verbot.",
+      "punkte": [
+        "Berufung: § 331 StPO",
+        "Revision: § 358 Abs. 2 StPO",
+        "Einspruch gegen Strafbefehl: kein Verbot, § 411 Abs. 4 StPO"
+      ],
+      "quellen": [
+        "§ 411 Abs. 4 StPO",
+        "§ 331 StPO",
+        "§ 358 Abs. 2 StPO",
+        "Themenpool: revision-886"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.411Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

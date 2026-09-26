@@ -1,0 +1,873 @@
+{
+  "datum": "2027-05-19",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-087",
+        "themaTitel": "Wie prüft man die Verfassungsbeschwerde?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "gesetzs-207",
+        "themaTitel": "Wie prüft man das Eigentümer-Besitzer-Verhältnis?",
+        "fach": "gesetzs",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-318",
+        "themaTitel": "Wie prüft man die Körperverletzung mit Todesfolge?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "strafbt-747"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "strafbt-747"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:50",
+        "art": "norm",
+        "themaId": "strafat-132"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "streitstand",
+        "themaId": "strafat-923"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:04",
+        "art": "merksatz",
+        "themaId": "bgbat-161"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:11",
+        "art": "begriff",
+        "themaId": "schuld-438"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-087",
+      "poolTitel": "Wie prüft man die Verfassungsbeschwerde?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 Abs. 1 Nr. 4a GG",
+        "§ 90 BVerfGG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-25"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "gesetzs-207",
+      "poolTitel": "Wie prüft man das Eigentümer-Besitzer-Verhältnis?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 987 BGB",
+        "§ 990 BGB",
+        "§ 994 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-318",
+      "poolTitel": "Wie prüft man die Körperverletzung mit Todesfolge?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 227 StGB",
+        "§ 18 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-28"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-747",
+      "poolTitel": "Gewahrsamsbruch und Gewahrsamsenklave",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-24",
+        "2027-02-27",
+        "2027-02-27"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-747",
+      "poolTitel": "Gewahrsamsbruch und Gewahrsamsenklave",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-24",
+        "2027-02-27",
+        "2027-02-27"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-132",
+      "poolTitel": "Was ist ein error in persona und wie wirkt die aberratio ictus?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-31",
+        "2027-02-04"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafat-923",
+      "poolTitel": "Außertatbestandliche Zielerreichung: Rücktritt trotz erteilten Denkzettels?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-09",
+        "2027-01-13",
+        "2027-03-16"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "bgbat-161",
+      "poolTitel": "Was ist Missbrauch der Vertretungsmacht?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 164 BGB",
+        "§ 242 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-16"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuld-438",
+      "poolTitel": "Leistungspflichten und Schutzpflichten",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 241 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-22"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-087",
+      "slug": "2027-05-19-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "VB gegen ein Urteil: Die Betroffenheit ist nicht das Thema",
+          "titelZeilen": [
+            "VB gegen ein Urteil:",
+            "Die Betroffenheit",
+            "ist nicht das Thema"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Rechtsweg und Frist zählen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "S wird wegen einer Äußerung auf einer Demonstration zu einer Geldstrafe verurteilt; die Revision bleibt erfolglos. Er sieht seine Meinungsfreiheit verletzt und will Verfassungsbeschwerde erheben. Wie prüfst du die Zulässigkeit – und wo liegen die Punkte?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Zulässigkeit, Teil 1",
+          "schritte": [
+            {
+              "titel": "Zuständigkeit",
+              "text": "Art. 93 Abs. 1 Nr. 4a GG, § 13 Nr. 8a BVerfGG."
+            },
+            {
+              "titel": "Beschwerdefähigkeit",
+              "text": "„Jedermann“: S als natürliche Person unproblematisch."
+            },
+            {
+              "titel": "Beschwerdegegenstand",
+              "text": "Akt öffentlicher Gewalt: das letztinstanzliche Urteil, regelmäßig mit den vorangegangenen Entscheidungen."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Zulässigkeit, Teil 2",
+          "schritte": [
+            {
+              "titel": "Beschwerdebefugnis",
+              "text": "Möglichkeit einer Verletzung von Art. 5 Abs. 1 GG. Als Verurteilter ist S selbst, gegenwärtig und unmittelbar betroffen – ein Satz genügt."
+            },
+            {
+              "titel": "Rechtswegerschöpfung, Subsidiarität",
+              "text": "§ 90 Abs. 2 S. 1 BVerfGG. Wird eine Gehörsverletzung gerügt, gehört die Anhörungsrüge zum Rechtsweg."
+            },
+            {
+              "titel": "Form und Frist",
+              "text": "Schriftlich mit Begründung (§§ 23, 92 BVerfGG), binnen eines Monats (§ 93 Abs. 1 BVerfGG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo die Punkte liegen",
+          "text": "Die Betroffenheitstrias ist beim Adressaten eines Urteils kein Problem – sie ist gegen Gesetze wichtig. Hier gehört die Zeit in Rechtsweg und Frist und dann in die Begründetheit: Hat das Gericht die Bedeutung von Art. 5 Abs. 1 GG verkannt? Das BVerfG prüft nur spezifisches Verfassungsrecht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Urteilsverfassungsbeschwerde: Betroffenheit kurz, Rechtsweg und Frist genau – und in der Begründetheit nur spezifisches Verfassungsrecht."
+        },
+        {
+          "art": "cta",
+          "titel": "Urteils-VB in drei Zügen",
+          "punkte": [
+            "Letztinstanzliche Entscheidung benennen",
+            "Rechtsweg und Monatsfrist prüfen",
+            "Spezifisches Verfassungsrecht?"
+          ],
+          "icons": [
+            "dokument",
+            "kalender",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Verfassungsbeschwerde gegen ein Urteil: Die Betroffenheit ist nicht das Thema. Wer verurteilt wurde, ist selbst, gegenwärtig und unmittelbar betroffen – das ist ein Satz. Die Punkte liegen bei Rechtswegerschöpfung und Subsidiarität (§ 90 Abs. 2 BVerfGG), der Monatsfrist (§ 93 Abs. 1 BVerfGG) und in der Begründetheit: Hat das Fachgericht spezifisches Verfassungsrecht verletzt? Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#verfassungsbeschwerde",
+        "#bverfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Urteilsverfassungsbeschwerde: richtig gewichten",
+      "coverText": "Rechtsweg und Frist zählen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Bei der Verfassungsbeschwerde gegen ein Urteil liegen die Probleme bei Rechtsweg, Frist und spezifischem Verfassungsrecht.",
+        "handlung": "{A} quickly ticks one small box on a short checklist, while {B} slowly lifts a heavy weight labelled only by shape onto a large scale.",
+        "hinweisRegie": "Place the note in the free space beside the heavy weight on the scale, slightly tilted toward it, so the real focus is visible without covering {A}'s quick tick or {B}'s pointer.",
+        "alternative": "{B} walks quickly past three small stepping stones and stops at one large gap that needs a bridge, while {A} measures it."
+      },
+      "bildSzene": "quick tick, heavy weight on scale",
+      "bildSzeneAlt": "small stones, then large gap",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 90 BVerfGG",
+        "§§ 23, 92, 93 BVerfGG",
+        "Themenpool: staat-087"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "gewichtung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:25.394Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "themaId": "gesetzs-207",
+      "slug": "2027-05-19-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "EBV: Die eine Voraussetzung, die viele vergessen",
+          "titelZeilen": [
+            "EBV: Die eine",
+            "Voraussetzung, die",
+            "viele vergessen"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Vindikationslage im Zeitpunkt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Gemeint ist die Vindikationslage",
+          "text": "Die §§ 987 ff. BGB gelten nur, wenn im Zeitpunkt von Nutzung, Schaden oder Verwendung eine Vindikationslage bestand: Eigentümer gegen Besitzer ohne Recht zum Besitz (§§ 985, 986 BGB). Viele springen direkt zur Redlichkeit – und übersehen, dass der Besitzer vielleicht berechtigt war."
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "D stiehlt Es Auto und verkauft es an den gutgläubigen B. B fährt ein Jahr damit, lässt eine Inspektion machen und nach einem Motorschaden den Motor reparieren. E verlangt das Auto und Nutzungsersatz. B will die Kosten für Inspektion und Reparatur."
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Vindikationslage",
+              "text": "Abhanden gekommen: kein Erwerb (§ 935 BGB). B besitzt ohne Recht zum Besitz gegenüber E."
+            },
+            {
+              "titel": "Nutzungen",
+              "text": "B ist redlich, unverklagt und hat entgeltlich erworben: kein Ersatz (§§ 987, 990, 988 BGB scheiden aus; § 993 Abs. 1 BGB)."
+            },
+            {
+              "titel": "Verwendungen",
+              "text": "Motor: notwendige Verwendung, ersatzfähig (§ 994 Abs. 1 S. 1 BGB). Inspektion: gewöhnliche Erhaltung – B behält ja die Nutzungen (S. 2)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Durchsetzung",
+          "text": "B muss das Auto herausgeben, kann aber wegen der Reparaturkosten ein Zurückbehaltungsrecht geltend machen (§ 1000 BGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kein EBV ohne Vindikationslage im maßgeblichen Zeitpunkt. Dann: redlich oder nicht, verklagt oder nicht – und Nutzungen gegen Erhaltungskosten."
+        },
+        {
+          "art": "cta",
+          "titel": "EBV in drei Zügen",
+          "punkte": [
+            "Vindikationslage im richtigen Zeitpunkt?",
+            "Redlich, unverklagt, entgeltlich?",
+            "Notwendig oder gewöhnlich erhalten?"
+          ],
+          "icons": [
+            "uhr",
+            "person",
+            "werkzeug"
+          ]
+        }
+      ],
+      "caption": "EBV: Die eine Voraussetzung, die viele vergessen, ist die Vindikationslage – und zwar im Zeitpunkt von Nutzung, Schaden oder Verwendung. Erst dann kommen Redlichkeit und Rechtshängigkeit. Der redliche, unverklagte, entgeltliche Besitzer schuldet keine Nutzungen; notwendige Verwendungen bekommt er ersetzt, gewöhnliche Erhaltungskosten aber nicht, solange ihm die Nutzungen bleiben (§ 994 Abs. 1 S. 2 BGB). Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#ebv",
+        "#eigentümerbesitzerverhältnis",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "EBV: Erst die Vindikationslage prüfen",
+      "coverText": "Vindikationslage im Zeitpunkt",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Bevor Nutzungen oder Verwendungen verrechnet werden, muss feststehen, dass der Besitzer gegenüber dem Eigentümer nicht zum Besitz berechtigt war.",
+        "handlung": "{A} lifts a crystal cart back toward its owner's mine, while {B} nervously checks a small repaired wheel on the cart, wondering who pays for it.",
+        "hinweisRegie": "Place the note in the free space above the crystal cart, slightly tilted toward the repaired wheel, so ownership and repair costs are both visible without covering {A}'s grip.",
+        "alternative": "{B} hands back a borrowed lantern with a new wick, while {A} weighs the old wick against the light it gave."
+      },
+      "bildSzene": "cart returned, repaired wheel",
+      "bildSzeneAlt": "lantern returned with new wick",
+      "quellen": [
+        "§§ 985, 986 BGB",
+        "§§ 987–993 BGB",
+        "§ 994 BGB",
+        "§ 1000 BGB",
+        "§ 935 BGB",
+        "Themenpool: gesetzs-207"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:25.394Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-318",
+      "slug": "2027-05-19-b3",
+      "titelZeilen": [
+        "Das Opfer stirbt",
+        "auf der Flucht –",
+        "trotzdem § 227 StGB"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Das Opfer stirbt auf der Flucht – trotzdem § 227 StGB",
+          "unter": "KV mit Todesfolge · § 227 StGB",
+          "text": "Auch eine panische Flucht kann die typische Gefahr verwirklichen.",
+          "norm": "§ 227 StGB",
+          "icon": "warnung",
+          "sprecher": "Das Opfer stirbt auf der Flucht. Trotzdem kann § 227 StGB greifen. Entscheidend ist ein Merkmal, das du genau prüfen musst: der gefahrspezifische Zusammenhang.",
+          "marken": [
+            "Flucht",
+            "§ 227 StGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Grunddelikt",
+          "text": "Körperverletzung nach §§ 223 ff. StGB – nach der Rspr. genügt auch der Versuch.",
+          "norm": "§ 223 StGB",
+          "sprecher": "Schritt eins: das Grunddelikt, eine Körperverletzung nach Paragraf 223 ff. Nach der Rechtsprechung kann auch eine nur versuchte Körperverletzung reichen, wenn schon die Handlung gefährlich war.",
+          "marken": [
+            "§§ 223 ff."
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Tod kausal verursacht",
+          "text": "Ohne den Angriff keine Flucht, ohne Flucht kein Sturz.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Der Tod muss kausal verursacht sein. Ohne den Angriff keine Flucht, ohne Flucht kein tödlicher Sturz.",
+          "marken": [
+            "kausal"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Gefahrspezifischer Zusammenhang",
+          "text": "Rspr.: Die Gefahr darf aus der Handlung stammen. Lit. teils: nur aus dem Verletzungserfolg.",
+          "norm": null,
+          "sprecher": "Schritt drei: der gefahrspezifische Zusammenhang. Im Tod muss sich die typische Gefahr der Körperverletzung verwirklichen. Die Rechtsprechung lässt die Gefahr der Handlung genügen, die Letalitätslehre verlangt, dass sie aus dem Verletzungserfolg selbst stammt.",
+          "marken": [
+            "Handlung oder Erfolg?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Wenigstens Fahrlässigkeit",
+          "text": "§ 18 StGB: vor allem Vorhersehbarkeit des Todes.",
+          "norm": "§ 18 StGB",
+          "sprecher": "Schritt vier: wenigstens Fahrlässigkeit nach Paragraf 18. Die Pflichtwidrigkeit liegt schon in der vorsätzlichen Körperverletzung. Prüfen musst du vor allem, ob der Tod vorhersehbar war.",
+          "marken": [
+            "§ 18 StGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Fluchtfall",
+          "text": "Panische Flucht als naheliegende Reaktion – anders, wenn das Opfer frei entscheidet.",
+          "norm": null,
+          "sprecher": "Und der Fluchtfall? Flieht das Opfer in Todesangst vor einem massiven Angriff, ist das eine naheliegende Reaktion. Die neuere Rechtsprechung hat den Zusammenhang in solchen Fällen bejaht. Anders, wenn das Opfer sich frei und eigenverantwortlich in Gefahr bringt.",
+          "marken": [
+            "Panik",
+            "keine freie Wahl"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Grunddelikt, Tod, typische Gefahr, Fahrlässigkeit.",
+          "norm": "§ 227 StGB",
+          "sprecher": "Merke: Grunddelikt, kausaler Tod, gefahrspezifischer Zusammenhang, wenigstens Fahrlässigkeit. Und den Streit um Handlung oder Erfolg entscheidest du nur, wenn es darauf ankommt.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Fluchtfall abrufen",
+          "text": "Speichern für die nächste BT-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Strafrechtsklausur. Und frag beim Fluchtfall immer: Hat das Opfer frei entschieden?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Das Opfer stirbt auf der Flucht – und trotzdem kann § 227 StGB greifen. Entscheidend ist der gefahrspezifische Zusammenhang: Nach der Rspr. darf sich die Gefahr schon aus der Körperverletzungshandlung ergeben, die Letalitätslehre verlangt sie im Verletzungserfolg. Eine panische Flucht vor einem massiven Angriff unterbricht den Zusammenhang nach der neueren Rspr. nicht ohne Weiteres. Speichern für die nächste BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#227stgb",
+        "#körperverletzung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 227 StGB: Tod auf der Flucht",
+      "coverText": "Handlung oder Erfolg?",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Auch wenn das Opfer auf der Flucht stirbt, kann sich darin die typische Gefahr des Angriffs verwirklichen.",
+        "handlung": "{A} stands at a narrow cliff path and blocks a threatening shadow with her arm, while {B} runs away in panic toward a crumbling edge.",
+        "hinweisRegie": "Place the note in the free space between the threatening shadow and the crumbling edge, slightly tilted toward the edge, so the chain from threat to fall is visible without covering either character.",
+        "alternative": "{B} jumps from a low window to escape a looming figure in the room, while {A} examines where the danger actually started."
+      },
+      "bildSzene": "panicked flight toward crumbling edge",
+      "bildSzeneAlt": "escape through window from looming figure",
+      "quellen": [
+        "§ 227 StGB",
+        "§ 18 StGB",
+        "§ 223 StGB",
+        "BGH-Rspr. (gefahrspezifischer Zusammenhang)",
+        "Themenpool: strafbt-318"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:25.396Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-747",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "Partygast A steckt beim Gastgeber eine Uhr ein und wird noch in der Wohnung ertappt. Vollendeter Diebstahl?",
+      "optionen": [
+        "Nein – in fremder Wohnung bleibt alles im Gewahrsam des Gastgebers",
+        "Nein – erst mit Verlassen der Wohnung ist der Gewahrsam gebrochen",
+        "Ja – die Hosentasche ist eine Gewahrsamsenklave"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 242 StGB",
+        "Themenpool: strafbt-747"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:25.396Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-747",
+      "ueberzeile": "Auflösung",
+      "titel": "Vollendet – die Hosentasche ist eine Gewahrsamsenklave",
+      "text": "Kleine, leicht bewegliche Sachen, die der Täter am Körper oder in der Kleidung trägt, ordnet die Verkehrsanschauung ihm zu – auch in fremden Räumen. Mit dem Einstecken begründet A neuen Gewahrsam, der Diebstahl ist vollendet. Beendet ist er erst mit gesichertem Gewahrsam – wichtig etwa für § 252 StGB.",
+      "norm": "§ 242 Abs. 1 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "Themenpool: strafbt-747"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:25.396Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – in fremder Wohnung bleibt alles im Gewahrsam des Gastgebers",
+        "Nein – erst mit Verlassen der Wohnung ist der Gewahrsam gebrochen",
+        "Ja – die Hosentasche ist eine Gewahrsamsenklave"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-132",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 16 StGB: Der Täter verwechselt das Opfer – was heißt das für den Anstifter?",
+      "text": "Für den Täter ist der error in persona bei gleichwertigen Objekten unbeachtlich: Er wollte den getroffenen Menschen töten. Für den Anstifter ist das umstritten. Die Rspr. hält die Verwechslung auch für ihn für unbeachtlich, solange sie sich im Rahmen des Vorhersehbaren hält. Teile der Literatur werten sie für ihn wie eine aberratio ictus – mit nur versuchter Anstiftung.",
+      "norm": "§ 16 Abs. 1 StGB · § 26 StGB",
+      "quellen": [
+        "§ 16 StGB",
+        "§ 26 StGB",
+        "§ 30 StGB",
+        "Themenpool: strafat-132"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:25.396Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-923",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "A verfehlt O mit dem ersten Schuss und gibt auf, obwohl er weiterschießen könnte. Fehlgeschlagener Versuch?",
+      "norm": "§ 24 Abs. 1 StGB",
+      "optionen": [
+        "Rspr. (Gesamtbetrachtung): nein – es zählt die Sicht nach der letzten Handlung.",
+        "Einzelaktstheorie (Teile der Lit.): ja – jeder fehlgegangene taugliche Akt ist ein eigener Versuch."
+      ],
+      "text": "Klausur: Nach der Rspr. ist der Versuch unbeendet, A kann durch bloßes Aufgeben zurücktreten (§ 24 Abs. 1 S. 1 Alt. 1 StGB). Kritik: Das belohne den hartnäckigen Täter. Wie beim Denkzettelfall zählt für die Rspr. die Tat als Ganzes.",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "Themenpool: strafat-923"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:25.396Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-161",
+      "ueberzeile": "Merksatz BGB AT",
+      "titel": "Evidenter Missbrauch: Der Vertretene darf genehmigen",
+      "text": "Drängt sich der Missbrauch auf, gilt nach h.M. § 177 BGB analog: Das Geschäft ist schwebend unwirksam, der Vertretene kann genehmigen. Bei Kollusion ist es nach § 138 BGB nichtig.",
+      "norm": "§ 177 BGB analog",
+      "quellen": [
+        "§ 164 BGB",
+        "§ 177 BGB",
+        "§ 138 BGB",
+        "§ 242 BGB",
+        "Themenpool: bgbat-161"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:25.396Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-438",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Schutzpflicht (§ 241 Abs. 2 BGB): meist nicht einklagbar, aber haftungsbegründend",
+      "text": "Schutzpflichten verpflichten jeden Teil zur Rücksicht auf Rechte, Rechtsgüter und Interessen des anderen. Anders als Leistungspflichten (§ 241 Abs. 1 BGB) sind sie in der Regel nicht selbstständig einklagbar. Ihre Verletzung führt zu Schadensersatz (§ 280 Abs. 1 BGB), bei Unzumutbarkeit auch statt der Leistung (§ 282 BGB) oder zum Rücktritt (§ 324 BGB).",
+      "norm": "§ 241 Abs. 2 BGB",
+      "quellen": [
+        "§ 241 BGB",
+        "§ 280 BGB",
+        "§ 282 BGB",
+        "§ 324 BGB",
+        "Themenpool: schuld-438"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:25.396Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

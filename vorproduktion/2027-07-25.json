@@ -1,0 +1,897 @@
+{
+  "datum": "2027-07-25",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "strafat-921",
+        "themaTitel": "Irrtum über den Kausalverlauf: Wann ist die Abweichung unwesentlich?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "grundr-626",
+        "themaTitel": "Asylgrundrecht und unionsrechtliche Überlagerung",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "schuldbt-476"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "schuldbt-476"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:01",
+        "art": "norm",
+        "themaId": "strafat-305"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "fehler",
+        "themaId": "strafat-924"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "tipp",
+        "themaId": "handelsg-269"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "zahl",
+        "themaId": "revision-885"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafat-921",
+      "poolTitel": "Irrtum über den Kausalverlauf: Wann ist die Abweichung unwesentlich?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-06",
+        "2027-05-07",
+        "2027-07-09"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-626",
+      "poolTitel": "Asylgrundrecht und unionsrechtliche Überlagerung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 16a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-12-14",
+        "2027-02-01",
+        "2027-02-01"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-476",
+      "poolTitel": "Verträge über digitale Produkte",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 327 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-17",
+        "2027-03-17",
+        "2027-03-17"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-476",
+      "poolTitel": "Verträge über digitale Produkte",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 327 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-17",
+        "2027-03-17",
+        "2027-03-17"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-305",
+      "poolTitel": "Was ist ein fehlgeschlagener Versuch?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-13",
+        "2027-05-25",
+        "2027-07-10"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "strafat-924",
+      "poolTitel": "Echte Wahlfeststellung, Postpendenz und in dubio pro reo: Was gilt wann?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "Art. 103 Abs. 2 GG",
+        "§ 261 StPO",
+        "§ 1 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2027-03-13",
+        "2027-05-16"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "handelsg-269",
+      "poolTitel": "Wie haftet der Kommanditist?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 171 HGB",
+        "§ 172 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2026-11-24",
+        "2027-05-06"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "revision-885",
+      "poolTitel": "Wann beruht ein Urteil auf dem Verfahrensfehler?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 338 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-23",
+        "2027-03-01",
+        "2027-05-24"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-07-25-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Beiträge, vier Bereiche: dein Wochenrückblick",
+          "titelZeilen": [
+            "18 Beiträge,",
+            "vier Bereiche: dein",
+            "Wochenrückblick"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 92 ZPO: Aufhebung ist nicht halbe-halbe – bei ungleichen Anwaltskosten eine Quote.",
+            "Anwartschaftsrecht: übertragbar, geschützt durch § 161 BGB, sonstiges Recht nach § 823 BGB.",
+            "§ 415 BGB: Ohne Genehmigung des Gläubigers bleibt der alte Schuldner in der Pflicht.",
+            "c.i.c.: Schuldverhältnis, Pflichtverletzung, vermutetes Vertretenmüssen, Schaden.",
+            "§ 750 ZPO: Qualifizierte Klausel mitzustellen, Sicherungsvollstreckung zwei Wochen warten.",
+            "Gehilfen: § 278 BGB ohne Entlastung, im Delikt § 831 BGB mit Entlastung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Anklageschrift: Angeschuldigter bis zur Eröffnung, der Anklagesatz umgrenzt die Tat.",
+            "Zwischenverfahren: Zweifelssatz nicht direkt, aber in der Prognose mitdenken.",
+            "Heileingriff: für die Rspr. tatbestandliche Körperverletzung – es zählt die Einwilligung.",
+            "Besetzungsrüge: ohne rechtzeitigen Einwand nach § 222b StPO grundsätzlich verloren.",
+            "§ 127 StPO: leichte Verletzungen beim Festhalten gedeckt, ernste Gefahren nicht."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 39 VwVfG: Formell zählt, ob Gründe genannt sind – ob sie tragen, ist materiell.",
+            "Verfassungsbeschwerde: Bei Gehörsverletzung erst die Anhörungsrüge.",
+            "Art. 65 GG: kein allgemeines Weisungsrecht, Einzelfragen nur bei grundlegender Bedeutung.",
+            "Anwendungsvorrang: aus Karlsruher Sicht mit Grundrechts-, Ultra-vires- und Identitätsvorbehalt.",
+            "§ 154 Abs. 3 VwGO: Der Beigeladene zahlt nur mit, wenn er Anträge gestellt hat."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Normenketten: § 346 BGB trägt allein keinen Anspruch – das Rücktrittsrecht gehört dazu.",
+            "Kopfsache: Vergleich dich mit deinem früheren Stand, nicht mit fremden Erzählungen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Warum trifft die Kostenaufhebung die Partei mit Anwalt härter?",
+            "Was muss A tun, bevor er wegen Art. 103 Abs. 1 GG nach Karlsruhe geht?",
+            "Welche Gewalt deckt § 127 StPO bei der Festnahme – und welche nicht?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Kosten, Anwartschaft, Gehilfen",
+            "Strafrecht: Anklage bis Revision",
+            "Öffentliches Recht: Form und Vorrang",
+            "Methodik und Kopf sortieren"
+          ],
+          "icons": [
+            "vertrag",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Beiträge aus vier Bereichen. Zivilrecht von der Kostenaufhebung bis zur Gehilfenhaftung, Strafrecht von der Anklageschrift bis zur Besetzungsrüge, Öffentliches Recht von der Begründung des Verwaltungsakts bis zum Anwendungsvorrang – dazu Normenketten und der Blick auf den eigenen Fortschritt. Geh die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Beiträge, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Am Wochenende werden die Themen der Woche geordnet und die Lücken für die Wiederholung sichtbar gemacht.",
+        "handlung": "{B} hovers and slides cards into four labelled drawers, while {A} pulls one card back out with his pointer and places it on a small 'repeat' tray.",
+        "hinweisRegie": "Place the note in the free space above the four drawers, slightly tilted toward the 'repeat' tray, so the sorting and the self-check are connected without covering either character.",
+        "alternative": "{A} draws four columns on a board while {B} pins cards under each and flips one card to its blank side."
+      },
+      "bildSzene": "cards sorted into four drawers",
+      "bildSzeneAlt": "four columns, one card flipped",
+      "quellen": [
+        "§ 92 ZPO",
+        "§ 161 BGB",
+        "§ 415 BGB",
+        "§ 311 Abs. 2 BGB",
+        "§ 750 ZPO",
+        "§ 278 BGB",
+        "§ 831 BGB",
+        "§ 200 StPO",
+        "§ 203 StPO",
+        "§ 223 StGB",
+        "§ 222b StPO",
+        "§ 127 StPO",
+        "§ 39 VwVfG",
+        "§ 321a ZPO",
+        "Art. 65 GG",
+        "Art. 23 GG",
+        "§ 154 VwGO",
+        "§ 346 BGB"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-anzahl-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:25.982Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-921",
+      "slug": "2027-07-25-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kausalverlauf: die Abweichung, an der viele Klausuren kippen",
+          "titelZeilen": [
+            "Kausalverlauf:",
+            "die Abweichung, an",
+            "der viele Klausuren",
+            "kippen"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Wesentliche Züge reichen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der verbreitete Kurzschluss",
+          "text": "Viele lesen „anders gestorben als geplant“ und streichen sofort den Vorsatz – oder übergehen die Abweichung ganz, weil der Erfolg ja eingetreten ist. Beides greift zu kurz. Der Vorsatz muss den Kausalverlauf nur in seinen wesentlichen Zügen umfassen."
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A stößt O von einer Brücke, damit er im Fluss ertrinkt. O schlägt beim Sturz auf einen Brückenpfeiler und stirbt schon am Aufprall. Vollendeter Totschlag?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema",
+          "schritte": [
+            {
+              "titel": "1. Objektiver Tatbestand",
+              "text": "Kausalität und objektive Zurechnung. Liegt der Verlauf außerhalb aller Lebenserfahrung, scheitert schon die Zurechnung."
+            },
+            {
+              "titel": "2. Vorsatz",
+              "text": "Er muss sich auf den Kausalverlauf in seinen wesentlichen Zügen beziehen (§ 16 Abs. 1 S. 1 StGB)."
+            },
+            {
+              "titel": "3. Abweichung wesentlich?",
+              "text": "Unwesentlich, wenn der Verlauf im Rahmen des Voraussehbaren bleibt und keine andere Bewertung der Tat rechtfertigt."
+            },
+            {
+              "titel": "4. Folge",
+              "text": "Unwesentlich: Vorsatz bleibt, Vollendung. Wesentlich: nur Versuch, daneben Fahrlässigkeit prüfen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung und Abgrenzung",
+          "text": "Der Aufprall am Pfeiler liegt beim Brückensturz nahe und ändert die Bewertung nicht: unwesentlich, vollendeter Totschlag. Nicht verwechseln: Trifft A ein anderes Objekt als anvisiert, ist das aberratio ictus – ein eigenes Problem. Früherer oder späterer Erfolgseintritt hat eigene Streitstände."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht jede Abweichung beseitigt den Vorsatz. Frag: Voraussehbar und gleich zu bewerten? Dann unwesentlich – Vollendung."
+        },
+        {
+          "art": "cta",
+          "titel": "Kausalverlauf in drei Fragen",
+          "punkte": [
+            "Objektiv zurechenbar?",
+            "Abweichung voraussehbar?",
+            "Andere Bewertung der Tat?"
+          ],
+          "icons": [
+            "kreislauf",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Kausalverlauf: die Abweichung, an der viele Klausuren kippen. Weicht der tatsächliche Verlauf vom vorgestellten ab, entfällt der Vorsatz nicht automatisch. Er muss den Kausalverlauf nur in seinen wesentlichen Zügen umfassen. Unwesentlich ist die Abweichung, wenn sie voraussehbar bleibt und keine andere Bewertung der Tat rechtfertigt – dann bleibt es bei der Vollendung. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#16stgb",
+        "#vorsatz",
+        "#kausalverlauf",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Irrtum über den Kausalverlauf: das Schema",
+      "coverText": "Wesentliche Züge reichen",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Weicht der Verlauf nur unwesentlich vom Plan ab, bleibt der Vorsatz bestehen.",
+        "handlung": "{B} nervously watches a rolling boulder bounce off a rock instead of following the planned groove, while {A} calmly points at the spot below where it still lands as expected.",
+        "hinweisRegie": "Place the note in the free space between the rock where the boulder bounced and the target spot below, slightly tilted toward the target, so the deviation and the unchanged result are both visible without covering faces.",
+        "alternative": "{A} throws a ball that takes a different bounce but still lands in the same basket, while {B} checks the basket."
+      },
+      "bildSzene": "boulder bounces, lands on target",
+      "bildSzeneAlt": "ball bounces into same basket",
+      "quellen": [
+        "§ 16 Abs. 1 StGB",
+        "§ 15 StGB",
+        "§ 212 StGB",
+        "§ 22 StGB",
+        "Themenpool: strafat-921"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:25.982Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-626",
+      "slug": "2027-07-25-b3",
+      "titelZeilen": [
+        "In der Heimat",
+        "verfolgt – und",
+        "trotzdem kein Asyl"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "In der Heimat verfolgt – und trotzdem kein Asyl",
+          "unter": "Asylgrundrecht · Art. 16a GG",
+          "text": "O wird in seiner Region wegen seines Glaubens verfolgt. Im Süden des Landes wäre er sicher.",
+          "norm": "Art. 16a Abs. 1 GG",
+          "icon": "globus",
+          "sprecher": "Wer verfolgt wird, hat nicht automatisch Asyl. O wird in seiner Heimatregion wegen seines Glaubens verfolgt. In einem anderen Landesteil wäre er sicher. Vier Schritte.",
+          "marken": [
+            "nicht automatisch",
+            "Art. 16a GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Politische Verfolgung",
+          "text": "Gezielte Rechtsverletzung wegen eines asylerheblichen Merkmals, von erheblicher Intensität.",
+          "norm": "Art. 16a Abs. 1 GG",
+          "sprecher": "Schritt eins: politische Verfolgung. Gemeint sind gezielte Rechtsverletzungen wegen asylerheblicher Merkmale, etwa Religion oder politischer Überzeugung. Sie müssen so intensiv sein, dass sie den Betroffenen aus der staatlichen Friedensordnung ausgrenzen.",
+          "marken": [
+            "asylerhebliche Merkmale"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Von wem?",
+          "text": "Grundsätzlich vom Staat oder einer staatsähnlichen Macht.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Urheber. Das Asylgrundrecht verlangt grundsätzlich staatliche oder staatsähnliche Verfolgung, oder der Staat muss sie sich zurechnen lassen.",
+          "marken": [
+            "staatlich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Inländische Fluchtalternative",
+          "text": "Wer in einem anderen Landesteil zumutbar sicher leben kann, ist nicht asylberechtigt.",
+          "norm": null,
+          "sprecher": "Schritt drei, der Knackpunkt bei O: die inländische Fluchtalternative. Das Asylrecht ist subsidiär. Kann O in einem anderen Teil seines Landes sicher und zumutbar leben, braucht er den Schutz in Deutschland nicht. Zumutbar heißt auch: Sein Existenzminimum muss dort gesichert sein.",
+          "marken": [
+            "subsidiär"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Einreise über sicheren Drittstaat",
+          "text": "Art. 16a Abs. 2 GG schließt das Grundrecht dann aus.",
+          "norm": "Art. 16a Abs. 2 GG",
+          "sprecher": "Schritt vier: die Einreise. Wer aus einem sicheren Drittstaat einreist, kann sich nach Artikel 16a Absatz 2 GG nicht auf das Asylgrundrecht berufen.",
+          "marken": [
+            "Drittstaat"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und das Unionsrecht?",
+          "text": "Der unionsrechtliche Flüchtlingsschutz kennt ebenfalls den internen Schutz.",
+          "norm": null,
+          "sprecher": "Und das Unionsrecht? Der Flüchtlingsschutz nach Unionsrecht überlagert das Grundrecht in der Praxis. Aber auch er kennt den Gedanken des internen Schutzes im eigenen Land.",
+          "marken": [
+            "interner Schutz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Asyl nur, wenn es im eigenen Land keinen sicheren und zumutbaren Ort gibt.",
+          "norm": null,
+          "sprecher": "Merke: Asylrecht ist Ersatzschutz. Gibt es im eigenen Land einen sicheren und zumutbaren Ort, fehlt es.",
+          "marken": [
+            "Ersatzschutz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Grundrechtsklausur",
+          "text": "Speichern für die nächste Klausur zu Art. 16a GG.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "In der Heimat verfolgt – und trotzdem kein Asyl. Das Grundrecht aus Art. 16a GG ist subsidiär: Kann der Verfolgte in einem anderen Teil seines Landes sicher und zumutbar leben, greift es nicht. Dazu kommen die Anforderungen an politische Verfolgung und die Drittstaatenregel des Art. 16a Abs. 2 GG. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#asylrecht",
+        "#art16agg",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 16a GG: inländische Fluchtalternative",
+      "coverText": "Asyl ist Ersatzschutz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Das Asylgrundrecht greift nicht, wenn der Verfolgte im eigenen Land einen sicheren Ort erreichen kann.",
+        "handlung": "{A} looks worried across a far border, while {B} points to a sheltered valley within the same mountain range that she had not noticed.",
+        "hinweisRegie": "Place the note in the free space above the sheltered valley, slightly tilted toward it, so the internal safe alternative is the focus without covering {A}'s face or the border line.",
+        "alternative": "{B} opens a door to a safe room inside the same house, while {A} is about to climb out of the window."
+      },
+      "bildSzene": "safe valley inside same range",
+      "bildSzeneAlt": "safe room door in same house",
+      "quellen": [
+        "Art. 16a Abs. 1 GG",
+        "Art. 16a Abs. 2 GG",
+        "Themenpool: grundr-626"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:25.983Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-476",
+      "ueberzeile": "Prüfungsfrage Schuldrecht BT",
+      "titel": "Verbraucher V abonniert eine Musik-App. Muss der Anbieter während der Laufzeit Updates liefern?",
+      "optionen": [
+        "Nein – geschuldet ist nur der Zustand bei Vertragsschluss",
+        "Ja – nötige Aktualisierungen einschließlich Sicherheitsupdates",
+        "Nur, wenn Updates ausdrücklich vereinbart wurden"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 327e BGB",
+        "§ 327f BGB",
+        "Themenpool: schuldbt-476"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:25.983Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-476",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – die Aktualisierungspflicht gehört zur Vertragsmäßigkeit",
+      "text": "Bei Verträgen über digitale Produkte muss der Unternehmer sicherstellen, dass Aktualisierungen bereitgestellt werden, die für den Erhalt der Vertragsmäßigkeit erforderlich sind – ausdrücklich auch Sicherheitsupdates (§ 327f Abs. 1 BGB). Im Abo gilt das für den gesamten Bereitstellungszeitraum. Fehlen sie, ist das Produkt mangelhaft (§ 327e BGB).",
+      "norm": "§ 327f BGB",
+      "quellen": [
+        "§ 327e BGB",
+        "§ 327f BGB",
+        "Themenpool: schuldbt-476"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:25.983Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – geschuldet ist nur der Zustand bei Vertragsschluss",
+        "Ja – nötige Aktualisierungen einschließlich Sicherheitsupdates",
+        "Nur, wenn Updates ausdrücklich vereinbart wurden"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-305",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 224 StGB: Versuch fehlgeschlagen – die vollendete Körperverletzung bleibt",
+      "text": "A sticht mit Tötungsvorsatz auf O ein; O überlebt verletzt, A hält die Tötung nicht mehr für erreichbar. Der Totschlagsversuch ist fehlgeschlagen. Aber auch ein Rücktritt würde nur den Versuch erfassen: Die vollendete gefährliche Körperverletzung (§ 224 Abs. 1 Nr. 2 StGB) bleibt strafbar. Klausur: Nach dem Versuch immer die vollendeten Delikte prüfen.",
+      "norm": "§ 224 Abs. 1 StGB",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "§ 224 Abs. 1 Nr. 2 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafat-305"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:25.983Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-924",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Sicher ist nur die Übernahme der Beute: Wahlfeststellung zwischen Diebstahl und Hehlerei?",
+      "falsch": "„Fest steht nur, dass A die gestohlene Uhr vom Dieb übernahm – ob er schon am Diebstahl beteiligt war, bleibt offen. Also Wahlfeststellung zwischen Diebstahl und Hehlerei.“",
+      "richtigText": "Sicher ist hier das spätere Geschehen, unsicher nur die Beteiligung an der Vortat. Nach der Rspr. wird A dann eindeutig wegen Hehlerei verurteilt (Postpendenz): Zu seinen Gunsten wird angenommen, dass er am Diebstahl nicht beteiligt war. Wahlfeststellung braucht es erst, wenn keines der Geschehen sicher feststeht.",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 259 StGB",
+        "§ 261 StPO",
+        "Themenpool: strafat-924"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:25.983Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-269",
+      "ueberzeile": "Klausurtipp Handelsrecht",
+      "titel": "Neuer Kommanditist in alter KG: Er haftet auch für Altschulden – aber begrenzt",
+      "text": "Wer in eine bestehende Handelsgesellschaft als Kommanditist eintritt, haftet auch für die vor seinem Eintritt begründeten Verbindlichkeiten – nach denselben Regeln wie für neue, also begrenzt auf seine Haftsumme (§ 173 Abs. 1 HGB). Eine abweichende Vereinbarung wirkt Dritten gegenüber nicht (§ 173 Abs. 2 HGB). Klausur: Wann die Schuld entstanden ist, spielt dann keine Rolle.",
+      "quellen": [
+        "§ 171 HGB",
+        "§ 172 HGB",
+        "§ 173 HGB",
+        "Themenpool: handelsg-269"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:25.983Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-885",
+      "ueberzeile": "3 Punkte Revision",
+      "titel": "Beruhen prüfen: je nach Rüge eine andere Frage",
+      "text": "§ 337 StPO verlangt, dass das Urteil auf der Gesetzesverletzung beruht. Wie du das prüfst, hängt von der Art des Fehlers ab:",
+      "punkte": [
+        "Absoluter Grund: Das Beruhen wird unwiderleglich vermutet (§ 338 StPO)",
+        "Relativer Verfahrensfehler: Möglich, dass das Urteil ohne ihn anders ausgefallen wäre?",
+        "Sachrüge: Bleibt der Schuld- oder Strafausspruch auch ohne den Rechtsfehler sicher bestehen?"
+      ],
+      "quellen": [
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "Themenpool: revision-885"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:25.983Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

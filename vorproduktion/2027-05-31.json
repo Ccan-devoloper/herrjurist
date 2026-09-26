@@ -1,0 +1,885 @@
+{
+  "datum": "2027-05-31",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "assessoroer-853",
+        "themaTitel": "Wie schreibt man eine Klageschrift im Verwaltungsprozess?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "ipr-890",
+        "themaTitel": "Welches Recht gilt für einen Vertrag ohne Rechtswahl?",
+        "fach": "ipr",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-739",
+        "themaTitel": "Mord: Verdeckungsabsicht",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:12",
+        "art": "frage",
+        "themaId": "zpo-549"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:12",
+        "art": "antwort",
+        "themaId": "zpo-549"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "strafat-733"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "tipp",
+        "themaId": "schuldbt-023"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:46",
+        "art": "zahl",
+        "themaId": "assessorz-818"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "streitstand",
+        "themaId": "streit-27"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "assessoroer-853",
+      "poolTitel": "Wie schreibt man eine Klageschrift im Verwaltungsprozess?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 81 VwGO",
+        "§ 82 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-04",
+        "2027-03-09",
+        "2027-05-11"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "ipr-890",
+      "poolTitel": "Welches Recht gilt für einen Vertrag ohne Rechtswahl?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 3 Rom I-VO",
+        "Art. 4 Rom I-VO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2027-01-05",
+        "2027-04-16"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-739",
+      "poolTitel": "Mord: Verdeckungsabsicht",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-10",
+        "2027-01-29",
+        "2027-01-29"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-549",
+      "poolTitel": "Prozessführungsbefugnis und Prozessstandschaft",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "ZPO, materielles Recht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30",
+        "2027-01-11",
+        "2027-01-11"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-549",
+      "poolTitel": "Prozessführungsbefugnis und Prozessstandschaft",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "ZPO, materielles Recht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30",
+        "2027-01-11",
+        "2027-01-11"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-733",
+      "poolTitel": "Sukzessive Mittäterschaft/Beihilfe",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 25 II, 27 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-18"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "schuldbt-023",
+      "poolTitel": "Wie werden Dienst- und Werkvertrag voneinander abgegrenzt?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 611 BGB",
+        "§ 631 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-12",
+        "2027-01-11",
+        "2027-05-24"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "assessorz-818",
+      "poolTitel": "Was bewirkt die Streitverkündung im Folgeprozess?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 72 ff. ZPO",
+        "§ 74 ZPO",
+        "§ 68 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-03",
+        "2027-01-17",
+        "2027-03-29"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "streit-27",
+      "poolTitel": "Eingriffsbegriff: klassisch oder modern?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-853",
+      "slug": "2027-05-31-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kein Antrag in der Klageschrift – Frist trotzdem gewahrt",
+          "titelZeilen": [
+            "Kein Antrag in der",
+            "Klageschrift – Frist",
+            "trotzdem gewahrt"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Antrag ist nur Soll-Inhalt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Am letzten Tag der Klagefrist reicht A Klage beim Verwaltungsgericht ein. Der Schriftsatz nennt A als Kläger, die Stadt als Beklagte und den angefochtenen Gebührenbescheid. Einen Antrag und eine Begründung enthält er nicht. Ist die Frist des § 74 VwGO gewahrt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Form (§ 81 VwGO)",
+              "text": "Die Klage ist schriftlich zu erheben. Anwälte und Behörden reichen grundsätzlich elektronisch ein (§ 55d VwGO)."
+            },
+            {
+              "titel": "Muss-Inhalt (§ 82 Abs. 1 S. 1)",
+              "text": "Kläger, Beklagter und Gegenstand des Klagebegehrens. Nur das braucht die Klage, um wirksam erhoben zu sein."
+            },
+            {
+              "titel": "Soll-Inhalt (§ 82 Abs. 1 S. 2, 3)",
+              "text": "Bestimmter Antrag, Tatsachen und Beweismittel, Bescheid und Widerspruchsbescheid in Abschrift. Fehlt das, bleibt die Klage wirksam."
+            },
+            {
+              "titel": "Nachbessern (§ 82 Abs. 2)",
+              "text": "Vorsitzender oder Berichterstatter fordern zur Ergänzung auf und können für den Muss-Inhalt eine Frist mit ausschließender Wirkung setzen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkfehler",
+          "text": "„Ohne Antrag ist die Klage unzulässig.“ Nein: Der Antrag ist nur Soll-Inhalt. Das Gericht ermittelt das Begehren und ist an die Fassung der Anträge nicht gebunden (§ 88 VwGO). Hier ist der Gegenstand durch den bezeichneten Bescheid klar – die Frist ist gewahrt."
+        },
+        {
+          "art": "text",
+          "titel": "Für deine Anwaltsklausur",
+          "punkte": [
+            "Rubrum: Kläger, Bevollmächtigter, Beklagter – je nach Landesrecht Rechtsträger oder Behörde (§ 78 VwGO).",
+            "Anträge vorne, sauber nach Klageart formuliert – plus Hinzuziehung eines Bevollmächtigten im Vorverfahren.",
+            "Begründung: Zulässigkeit knapp, Schwerpunkt Begründetheit; Beweismittel konkret benennen."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wirksam ist die Klage schon mit Kläger, Beklagtem und Gegenstand. Antrag und Begründung soll sie enthalten – sie sind keine Fristvoraussetzung."
+        },
+        {
+          "art": "cta",
+          "titel": "Klageschrift in drei Ebenen",
+          "punkte": [
+            "Form nach § 81 VwGO",
+            "Muss-Inhalt nach § 82 Abs. 1 S. 1",
+            "Soll-Inhalt nachreichen"
+          ],
+          "icons": [
+            "dokument",
+            "paragraf",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Kein Antrag in der Klageschrift – und die Klagefrist ist trotzdem gewahrt. Nach § 82 Abs. 1 S. 1 VwGO muss die Klage nur Kläger, Beklagten und Gegenstand des Klagebegehrens bezeichnen. Antrag, Tatsachen und Beweismittel sind Soll-Inhalt und können nachgereicht werden; das Gericht ermittelt das Begehren nach § 88 VwGO. In der Anwaltsklausur schreibst du natürlich trotzdem einen sauberen Antrag. Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#klageschrift",
+        "#82vwgo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klageschrift ohne Antrag: Frist gewahrt?",
+      "coverText": "Antrag ist nur Soll-Inhalt",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Eine Klage ist schon wirksam erhoben, wenn Kläger, Beklagter und Gegenstand feststehen – der Rest kann folgen.",
+        "handlung": "{A} accepts a thin envelope through a closing slot at the last second, while {B} nervously holds the thick folder of attachments he still has to bring.",
+        "hinweisRegie": "Place the note in the free space just above the closing slot, slightly tilted toward the thin envelope, so it reads as 'this is enough to be on time' without covering {B}'s folder.",
+        "alternative": "{B} places a small labelled crate on a departing conveyor while {A} signals that the missing contents may follow on the next belt."
+      },
+      "bildSzene": "thin envelope through closing slot",
+      "bildSzeneAlt": "labelled crate on departing conveyor",
+      "quellen": [
+        "§ 81 VwGO",
+        "§ 82 VwGO",
+        "§ 88 VwGO",
+        "§ 74 VwGO",
+        "§ 55d VwGO",
+        "§ 78 VwGO",
+        "Themenpool: assessoroer-853"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:45.293Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "ipr",
+      "klausur": 1,
+      "fachLabel": "Internationales Privatrecht",
+      "themaId": "ipr-890",
+      "slug": "2027-05-31-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ohne Rechtswahl: vier Stufen bis zum anwendbaren Recht",
+          "titelZeilen": [
+            "Ohne Rechtswahl:",
+            "vier Stufen bis zum",
+            "anwendbaren Recht"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Art. 5–8 vor Art. 4 prüfen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Haben die Parteien eines grenzüberschreitenden Vertrags kein Recht gewählt, bestimmt die Rom I-VO das Vertragsstatut objektiv. Sie gilt auch, wenn sie auf das Recht eines Drittstaats verweist (Art. 2 Rom I-VO). Die Reihenfolge der Prüfung ist fest – und wird oft verkürzt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Sonderregeln zuerst",
+              "text": "Beförderung, Verbraucher-, Versicherungs- und Arbeitsvertrag haben eigene Anknüpfungen (Art. 5–8 Rom I-VO)."
+            },
+            {
+              "titel": "2. Keine Rechtswahl",
+              "text": "Auch eine stillschweigende Wahl zählt, wenn sie sich eindeutig aus Vertrag oder Umständen ergibt (Art. 3 Abs. 1 S. 2 Rom I-VO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Katalog des Art. 4 Abs. 1",
+              "text": "Etwa Kauf: Recht des Verkäufers; Dienstleistung: des Dienstleisters; Grundstück: Recht des Lageorts."
+            },
+            {
+              "titel": "4. Charakteristische Leistung",
+              "text": "Passt kein oder mehr als ein Katalogfall: Recht am gewöhnlichen Aufenthalt dessen, der sie erbringt (Art. 4 Abs. 2)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: die Korrektur",
+          "text": "Ist der Vertrag offensichtlich enger mit einem anderen Staat verbunden, gilt dessen Recht (Ausweichklausel, Art. 4 Abs. 3). Lässt sich gar nichts bestimmen, entscheidet die engste Verbindung (Abs. 4). Gewöhnlicher Aufenthalt von Gesellschaften: Ort der Hauptverwaltung (Art. 19)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Sonderregel? Rechtswahl? Katalog? Charakteristische Leistung? Erst danach die Ausweichklausel – und nur bei offensichtlich engerer Verbindung."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 4 Rom I-VO in vier Zügen",
+          "punkte": [
+            "Art. 5–8 vorrangig?",
+            "Rechtswahl sicher verneint?",
+            "Katalogfall nach Abs. 1?",
+            "Sonst charakteristische Leistung"
+          ],
+          "icons": [
+            "stopp",
+            "vertrag",
+            "ordner",
+            "globus"
+          ]
+        }
+      ],
+      "caption": "Ohne Rechtswahl in vier Stufen zum Vertragsstatut: Sonderregeln der Art. 5–8 Rom I-VO, dann Art. 3 verneinen (auch stillschweigend), dann der Katalog des Art. 4 Abs. 1 und schließlich die charakteristische Leistung nach Art. 4 Abs. 2. Die Ausweichklausel des Abs. 3 greift nur bei offensichtlich engerer Verbindung. Speichern für die nächste IPR-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#ipr",
+        "#romivo",
+        "#internationalesprivatrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rom I-VO ohne Rechtswahl: das Schema",
+      "coverText": "Art. 5–8 vor Art. 4 prüfen",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Welches Recht ohne Rechtswahl gilt, findest du über eine feste Stufenfolge – Sonderregeln zuerst.",
+        "handlung": "{A} curiously tries a small travel suitcase on four stacked stepping stones, while {B} points his pointer at the special first stone that must be stepped on before the others.",
+        "hinweisRegie": "Place the note in the free space beside the first stepping stone, slightly tilted toward the stack, so the order of the steps is clear without covering {A}'s suitcase or {B}'s pointer.",
+        "alternative": "{B} sorts parcels with foreign stamps into four gates in a fixed order while {A} watches one parcel skip straight to a special side gate."
+      },
+      "bildSzene": "suitcase on four stepping stones",
+      "bildSzeneAlt": "foreign parcels sorted through four gates",
+      "quellen": [
+        "Art. 3 Rom I-VO",
+        "Art. 4 Rom I-VO",
+        "Art. 5–8 Rom I-VO",
+        "Art. 19 Rom I-VO",
+        "Themenpool: ipr-890"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-stufen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:45.293Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-739",
+      "slug": "2027-05-31-b3",
+      "titelZeilen": [
+        "Liegen lassen",
+        "kann Verdeckungs-",
+        "mord sein"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Liegen lassen kann Verdeckungsmord sein",
+          "unter": "Mord · § 211 StGB",
+          "text": "Tötung durch Unterlassen – aus Verdeckungsabsicht.",
+          "norm": "§§ 211, 13 StGB",
+          "icon": "polizeiauto",
+          "sprecher": "Er tut gar nichts – und begeht trotzdem Mord. Das geht, wenn er sein Opfer liegen lässt, damit seine Tat nicht herauskommt. Prüf das in vier Schritten.",
+          "marken": [
+            "Unterlassen",
+            "Mord?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Eine andere Straftat",
+          "text": "Vortat ist eine Straftat – auch die eigene. Eine Ordnungswidrigkeit genügt nicht.",
+          "norm": "§ 211 Abs. 2 StGB",
+          "sprecher": "Schritt eins: Es braucht eine andere Straftat, die verdeckt werden soll. Das darf auch die eigene sein, zum Beispiel die fahrlässige Körperverletzung beim Unfall. Eine bloße Ordnungswidrigkeit reicht nicht.",
+          "marken": [
+            "Vortat"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Garantenstellung",
+          "text": "Wer das Opfer durch eigenes Vorverhalten in Gefahr gebracht hat, muss helfen.",
+          "norm": "§ 13 StGB",
+          "sprecher": "Schritt zwei: Für das Unterlassen brauchst du eine Garantenstellung. Typisch ist Ingerenz. Wer das Opfer durch pflichtwidriges Vorverhalten in Lebensgefahr gebracht hat, muss es retten.",
+          "marken": [
+            "Ingerenz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rettung möglich und unterlassen",
+          "text": "Hilfe hätte den Tod mit an Sicherheit grenzender Wahrscheinlichkeit verhindert.",
+          "norm": "§ 13 StGB",
+          "sprecher": "Schritt drei: Die gebotene Rettung war möglich und hätte den Tod mit an Sicherheit grenzender Wahrscheinlichkeit verhindert. Der Täter erkennt das und nimmt den Tod mindestens billigend in Kauf.",
+          "marken": [
+            "Quasi-Kausalität"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ziel: nicht entdeckt werden",
+          "text": "Er bleibt untätig, damit Tat oder Täterschaft verborgen bleiben.",
+          "norm": "§ 211 Abs. 2 StGB",
+          "sprecher": "Schritt vier: die Verdeckungsabsicht. Er bleibt untätig, weil ein Notruf ihn als Täter überführen würde. Genau dieses Ziel macht aus dem Totschlag durch Unterlassen einen Mord.",
+          "marken": [
+            "Verdeckungsabsicht"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Klassiker: Unfallflucht",
+          "text": "A fährt O an, lässt ihn schwer verletzt liegen, damit niemand ihn findet.",
+          "norm": "§ 142 StGB",
+          "sprecher": "Der Klassiker: A fährt O an und flüchtet, damit ihn niemand als Fahrer erkennt. O stirbt, hätte aber gerettet werden können. Die Rechtsprechung hält Verdeckungsmord durch Unterlassen hier für möglich. Teile der Literatur sehen das kritisch.",
+          "marken": [
+            "Rspr.: möglich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Vortat, Garantenstellung, mögliche Rettung, Ziel der Verdeckung.",
+          "norm": null,
+          "sprecher": "Merke: Vortat, Garantenstellung, mögliche Rettung, und die Untätigkeit dient dem Verdecken. Dann ist Verdeckungsmord durch Unterlassen zu prüfen.",
+          "marken": [
+            "vier Punkte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Nicht nur aktives Töten prüfen",
+          "text": "Speichern für die nächste Tötungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Tötungsklausur. Und denk beim Liegenlassen immer an § 13.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Liegen lassen kann Verdeckungsmord sein. Wer sein Opfer durch pflichtwidriges Vorverhalten in Lebensgefahr bringt, ist Garant (§ 13 StGB). Unterlässt er die mögliche Rettung, damit seine Tat nicht entdeckt wird, kommt nach der Rechtsprechung Mord in Verdeckungsabsicht durch Unterlassen in Betracht. Teile der Literatur sehen das kritisch. Speichern für die nächste Tötungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#211stgb",
+        "#mord",
+        "#unterlassen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verdeckungsmord durch Unterlassen",
+      "coverText": "Ingerenz plus Verdeckungsabsicht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Auch wer nur untätig bleibt, kann aus Verdeckungsabsicht morden, wenn er zur Rettung verpflichtet ist.",
+        "handlung": "{A} stands still at a fork in a dark tunnel, deliberately turning away from a signal lamp, while {B} lies trapped under a fallen crystal slab in the side passage.",
+        "hinweisRegie": "Place the note in the free dark area between the unused signal lamp and {A}'s turned back, slightly tilted, so the deliberate inaction is the focus without covering {B}.",
+        "alternative": "{A} holds a rescue rope coiled in her hands and does not throw it, glancing toward a distant watchtower instead."
+      },
+      "bildSzene": "explorer ignores signal lamp in tunnel",
+      "bildSzeneAlt": "rescue rope held back, watchtower",
+      "quellen": [
+        "§ 211 StGB",
+        "§ 13 StGB",
+        "§ 142 StGB",
+        "Themenpool: strafbt-739"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:45.294Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-549",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Insolvenzverfahren über das Vermögen des S eröffnet: Wer ist Partei im Prozess um eine Masseforderung?",
+      "optionen": [
+        "S selbst, vertreten durch den Insolvenzverwalter",
+        "Der Insolvenzverwalter als Partei kraft Amtes",
+        "Die Gläubigerversammlung als Organ"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 80 Abs. 1 InsO",
+        "Themenpool: zpo-549"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:45.294Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-549",
+      "ueberzeile": "Auflösung",
+      "titel": "Der Insolvenzverwalter – als Partei kraft Amtes",
+      "text": "Mit der Eröffnung geht die Verwaltungs- und Verfügungsbefugnis über die Masse auf den Verwalter über (§ 80 Abs. 1 InsO). Nach der herrschenden Amtstheorie führt er den Prozess im eigenen Namen über fremdes Vermögen – ein Fall gesetzlicher Prozessstandschaft. S verliert insoweit die Prozessführungsbefugnis.",
+      "norm": "§ 80 Abs. 1 InsO",
+      "quellen": [
+        "§ 80 Abs. 1 InsO",
+        "Themenpool: zpo-549"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:45.294Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "S selbst, vertreten durch den Insolvenzverwalter",
+        "Der Insolvenzverwalter als Partei kraft Amtes",
+        "Die Gläubigerversammlung als Organ"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-733",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 25 Abs. 2 StGB: Wer später einsteigt, übernimmt nicht, was schon geschehen ist",
+      "text": "Sukzessive Mittäterschaft: Wer nach Beginn der Tat hinzutritt, kann Mittäter werden – nach der Rspr. bis zur Beendigung, nach vielen in der Lit. nur bis zur Vollendung. Für bereits vollständig abgeschlossene Tatteile haftet er aber nicht: Kenntnis und Billigung des Geschehenen reichen nach heute überwiegender Ansicht nicht für die Zurechnung.",
+      "norm": "§ 25 Abs. 2 StGB · § 27 StGB",
+      "quellen": [
+        "§ 25 Abs. 2 StGB",
+        "§ 27 StGB",
+        "Themenpool: strafat-733"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:45.294Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-023",
+      "ueberzeile": "Klausurtipp Schuldrecht BT",
+      "titel": "Maßanfertigung bestellt? Für die Mängel gilt meist Kaufrecht",
+      "text": "Wer die Lieferung herzustellender beweglicher Sachen schuldet, schließt einen Werklieferungsvertrag – darauf ist Kaufrecht anzuwenden (§ 650 Abs. 1 S. 1 BGB). Bei nicht vertretbaren Sachen wie dem Maßschrank kommen einzelne Werkvertragsnormen hinzu (§ 650 Abs. 1 S. 3 BGB). Prüfe also zuerst, ob am Ende eine bewegliche Sache geliefert wird.",
+      "quellen": [
+        "§ 650 BGB",
+        "§§ 433 ff. BGB",
+        "Themenpool: schuldbt-023"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:10:00.487Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-818",
+      "ueberzeile": "4 Punkte ZPO",
+      "titel": "Streitverkündung: vier Voraussetzungen, bevor § 68 ZPO den Dritten bindet",
+      "text": "Geprüft wird all das erst im Folgeprozess – dort, wo sich der Dritte auf die fehlende Bindung beruft.",
+      "punkte": [
+        "Streitverkündungsgrund nach § 72 Abs. 1 ZPO: Regress- oder Gewährleistungsanspruch gegen den Dritten",
+        "Form: Schriftsatz mit Grund und Lage des Rechtsstreits, zugestellt (§ 73 ZPO)",
+        "Beitritt nicht nötig – maßgeblich ist, wann er möglich war (§ 74 Abs. 3 ZPO)",
+        "Vorprozess durch Urteil entschieden – ein Vergleich bindet nicht"
+      ],
+      "quellen": [
+        "§ 72 ZPO",
+        "§ 73 ZPO",
+        "§ 74 ZPO",
+        "§ 68 ZPO",
+        "Themenpool: assessorz-818"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:45.294Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "streit-27",
+      "ueberzeile": "Streitstand Grundrechte",
+      "titel": "Das Ministerium warnt öffentlich vor einem Produkt: Ist das ein Grundrechtseingriff?",
+      "norm": "Art. 12 Abs. 1 GG",
+      "optionen": [
+        "Klassisch: nur final, unmittelbar, rechtsförmig, mit Befehl und Zwang – die Warnung fällt heraus.",
+        "Modern (h.M., BVerfG): jedes zurechenbare staatliche Handeln, das die Grundrechtsausübung erschwert."
+      ],
+      "text": "Klausur: Die Warnung ist ein Eingriff, wenn sie in Zielsetzung und Wirkung einem Eingriff gleichkommt. Begrenze über Zurechenbarkeit und Intensität. Bei Befehl und Zwang führen beide Begriffe zum selben Ergebnis – dann keinen Streit ausbreiten.",
+      "quellen": [
+        "Art. 12 Abs. 1 GG",
+        "Art. 2 Abs. 1 GG"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:45.294Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

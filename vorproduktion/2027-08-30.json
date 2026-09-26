@@ -1,0 +1,886 @@
+{
+  "datum": "2027-08-30",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "arbeit-250",
+        "themaTitel": "Wie prüft man die betriebsbedingte Kündigung?",
+        "fach": "arbeit",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "strafat-297",
+        "themaTitel": "Was ist ein Verbotsirrtum und wann ist er vermeidbar?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-647",
+        "themaTitel": "Ermessen: Entschließungs- und Auswahlermessen",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "stpo-777"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "stpo-777"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "schuld-187"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "tipp",
+        "themaId": "strafbt-331"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:41",
+        "art": "zahl",
+        "themaId": "assessorz-821"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "streitstand",
+        "themaId": "methodik-903"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "arbeit-250",
+      "poolTitel": "Wie prüft man die betriebsbedingte Kündigung?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1 Abs. 2 KSchG",
+        "§ 1 Abs. 3 KSchG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-01"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafat-297",
+      "poolTitel": "Was ist ein Verbotsirrtum und wann ist er vermeidbar?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 17 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-29",
+        "2027-02-05",
+        "2027-06-17"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-647",
+      "poolTitel": "Ermessen: Entschließungs- und Auswahlermessen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-03",
+        "2027-02-14",
+        "2027-02-14"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-777",
+      "poolTitel": "Untersuchungshaft: Haftgründe",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 112 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-15",
+        "2026-12-15",
+        "2027-04-28"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-777",
+      "poolTitel": "Untersuchungshaft: Haftgründe",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 112 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-15",
+        "2026-12-15",
+        "2027-04-28"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-187",
+      "poolTitel": "Wann muss der Rücktrittsgegner Wertersatz leisten?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 346 Abs. 2 BGB",
+        "§ 346 Abs. 3 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-10",
+        "2027-05-24"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "strafbt-331",
+      "poolTitel": "Was ist ein Dreiecksbetrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-12",
+        "2027-03-31",
+        "2027-05-20"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "assessorz-821",
+      "poolTitel": "Welchen Prüfungsumfang hat die Berufung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 513 ZPO",
+        "§ 529 ZPO",
+        "§ 531 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-16",
+        "2027-06-22",
+        "2027-08-09"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "methodik-903",
+      "poolTitel": "Hilfsgutachten: wann es rettet und wann es schadet",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-28",
+        "2027-06-19",
+        "2027-07-01"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "arbeit",
+      "klausur": 1,
+      "fachLabel": "Arbeitsrecht",
+      "themaId": "arbeit-250",
+      "slug": "2027-08-30-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Auftrag weg, Stelle in der Filiale nebenan frei: Hält die Kündigung?",
+          "titelZeilen": [
+            "Auftrag weg,",
+            "Stelle nebenan frei:",
+            "Hält die Kündigung?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Unternehmen, nicht nur Betrieb",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "U verliert seinen größten Kunden und streicht in Betrieb 1 die Stelle des Lageristen A. In Betrieb 2 desselben Unternehmens ist eine gleichwertige Lagerstelle frei, die A ohne Einarbeitung übernehmen könnte. U kündigt A ordentlich. Das KSchG ist anwendbar. Ist die Kündigung sozial gerechtfertigt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Unternehmerentscheidung",
+              "text": "Die Entscheidung, auf den Auftragsverlust mit Personalabbau zu reagieren, prüft das Gericht nur auf Unsachlichkeit oder Willkür."
+            },
+            {
+              "titel": "2. Wegfall des Beschäftigungsbedarfs",
+              "text": "Der Bedarf für A in Betrieb 1 entfällt dauerhaft – ein dringendes betriebliches Erfordernis (§ 1 Abs. 2 S. 1 KSchG)."
+            },
+            {
+              "titel": "3. Keine anderweitige Beschäftigung",
+              "text": "Ultima Ratio: Ein freier, vergleichbarer Platz im Unternehmen – auch in einem anderen Betrieb – geht vor (vgl. § 1 Abs. 2 S. 2 KSchG)."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "U hätte A die freie Stelle in Betrieb 2 anbieten müssen. Die Kündigung ist sozial ungerechtfertigt – die Sozialauswahl spielt keine Rolle."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nach dem Wegfall des Arbeitsplatzes sofort zur Sozialauswahl springen. Die Weiterbeschäftigung ist ein eigener Prüfungspunkt davor. Sie ist unternehmens-, nicht nur betriebsbezogen – im Grundsatz aber nicht konzernweit, und sie erfasst nur freie Stellen."
+        },
+        {
+          "art": "text",
+          "titel": "Was als „frei“ zählt",
+          "punkte": [
+            "Stellen, die bei Zugang der Kündigung unbesetzt sind",
+            "Stellen, die bis zum Ablauf der Kündigungsfrist sicher frei werden",
+            "Nicht: Stellen, die erst durch Kündigung anderer frei würden",
+            "Geht es nur zu schlechteren Bedingungen, kommt die Änderungskündigung in Betracht"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Betriebsbedingt kündigen heißt: Bedarf weg – und im ganzen Unternehmen kein freier Platz. Erst danach fragst du nach der Sozialauswahl."
+        },
+        {
+          "art": "cta",
+          "titel": "Betriebsbedingte Kündigung in vier Zügen",
+          "punkte": [
+            "Unternehmerentscheidung",
+            "Wegfall des Beschäftigungsbedarfs",
+            "Freier Platz im Unternehmen?",
+            "Sozialauswahl, § 1 Abs. 3 KSchG"
+          ],
+          "icons": [
+            "buero",
+            "kreuz",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Auftrag weg, Stelle in der Filiale nebenan frei – hält die betriebsbedingte Kündigung? Nicht, wenn der Arbeitnehmer auf einem freien, vergleichbaren Arbeitsplatz im Unternehmen weiterbeschäftigt werden kann. Diese Prüfung steht vor der Sozialauswahl und reicht über den einzelnen Betrieb hinaus. Frei sind nur Stellen, die bei Zugang der Kündigung offen sind oder bis zum Fristablauf sicher frei werden. Speichern für die nächste Arbeitsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#arbeitsrecht",
+        "#kschg",
+        "#kündigungsschutz",
+        "#zivilrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Betriebsbedingt: erst die freie Stelle prüfen",
+      "coverText": "Unternehmen, nicht nur Betrieb",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Bevor jemand gehen muss, wird nach einem freien Platz im ganzen Unternehmen gesucht.",
+        "handlung": "{A} is about to close a door behind a worker's empty chair, while {B} curiously points through a window to an identical empty chair in the neighbouring workshop.",
+        "hinweisRegie": "Place the note in the open space between the window and the empty chair in the neighbouring workshop, slightly tilted, so the free position is connected to the idea without covering either character's face.",
+        "alternative": "{B} holds a small lantern over a map of two connected workshops, while {A} hesitates with a stamp above a single card."
+      },
+      "bildSzene": "empty chair seen through window",
+      "bildSzeneAlt": "lantern over map of workshops",
+      "quellen": [
+        "§ 1 Abs. 2 KSchG",
+        "§ 1 Abs. 3 KSchG",
+        "Themenpool: arbeit-250"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.651Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-297",
+      "slug": "2027-08-30-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Strafnorm nie gelesen – Unrecht trotzdem gewusst",
+          "titelZeilen": [
+            "Strafnorm nie",
+            "gelesen – Unrecht",
+            "trotzdem gewusst"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Unrecht erkennen, nicht Norm",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 17 StGB entlastet nur, wer bei Begehung der Tat die Einsicht fehlt, Unrecht zu tun. Das Unrechtsbewusstsein verlangt nicht, die Strafnorm oder die Strafbarkeit zu kennen. Es genügt das Bewusstsein, gegen die Rechtsordnung zu verstoßen – nicht bloß gegen Moral oder Sitte."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Standort",
+              "text": "Tatbestand und Rechtswidrigkeit stehen fest. Der Verbotsirrtum ist ein Schuldproblem – nach der Schuldfähigkeit zu prüfen."
+            },
+            {
+              "titel": "2. Fehlende Unrechtseinsicht",
+              "text": "Hielt er sein Verhalten für erlaubt? Wer mit einem Verbot rechnet und das in Kauf nimmt, hat bedingtes Unrechtsbewusstsein – das genügt."
+            },
+            {
+              "titel": "3. Bezug zum Tatbestand",
+              "text": "Die Einsicht muss sich auf das spezifische Unrecht des Tatbestands beziehen. Bei mehreren Delikten prüfst du sie je Delikt."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Vermeidbarkeit",
+              "text": "Hatte er Anlass, über die Rechtslage nachzudenken oder sich zu erkundigen? Hat er sein Gewissen angespannt und verlässlichen Rat eingeholt?"
+            },
+            {
+              "titel": "5. Rechtsfolge",
+              "text": "Unvermeidbar: Er handelt ohne Schuld (§ 17 S. 1 StGB). Vermeidbar: Schuld bleibt, die Strafe kann gemildert werden (§ 17 S. 2 StGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: der Maßstab ist streng",
+          "text": "Die Rechtsprechung verlangt Gewissensanspannung und im Zweifel Erkundigung bei einer verlässlichen, sachkundigen und unvoreingenommenen Stelle. Ein bloßes Gefälligkeitsgutachten oder die Auskunft eines Bekannten reicht regelmäßig nicht. Ein Verbotsirrtum ist deshalb meist vermeidbar."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Unrechtsbewusstsein heißt: „Das ist rechtlich verboten.“ Den Paragrafen muss niemand kennen. Unvermeidbar ist der Irrtum nur nach ernsthafter Prüfung."
+        },
+        {
+          "art": "cta",
+          "titel": "Verbotsirrtum in drei Fragen",
+          "punkte": [
+            "Fehlte die Einsicht, Unrecht zu tun?",
+            "Hatte er Anlass zur Erkundigung?",
+            "Hätte verlässlicher Rat geholfen?"
+          ],
+          "icons": [
+            "lupe",
+            "telefon",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Strafnorm nie gelesen – und trotzdem wusste er, dass es Unrecht ist. Für § 17 StGB zählt nicht die Kenntnis des Paragrafen, sondern das Bewusstsein, gegen die Rechtsordnung zu verstoßen. Fehlt diese Einsicht, fragst du nach der Vermeidbarkeit: Anlass zum Nachdenken, Gewissensanspannung, Erkundigung bei einer verlässlichen Stelle. Unvermeidbar entfällt die Schuld, vermeidbar kann die Strafe gemildert werden. Speichern für die nächste Schuldprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#verbotsirrtum",
+        "#17stgb",
+        "#schuld",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verbotsirrtum: Paragrafenkenntnis ist egal",
+      "coverText": "Unrecht erkennen, nicht Norm",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Wer spürt, dass etwas rechtlich verboten ist, hat Unrechtsbewusstsein – auch ohne die Strafnorm je gelesen zu haben.",
+        "handlung": "{A} holds up a closed, sealed scroll, while {B} stands before a fenced-off crystal field and hesitates with one foot raised above the fence line.",
+        "hinweisRegie": "Place the note in the free space above the fence line next to {B}'s raised foot, slightly tilted toward the fence, so the hesitation is linked to the idea without covering the sealed scroll.",
+        "alternative": "{B} knocks on the door of a small advice hut before crossing a bridge, while {A} waits on the other side with a lantern."
+      },
+      "bildSzene": "hesitating before fenced crystal field",
+      "bildSzeneAlt": "knocking at advice hut door",
+      "quellen": [
+        "§ 17 StGB",
+        "Themenpool: strafat-297"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.651Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-647",
+      "slug": "2027-08-30-b3",
+      "titelZeilen": [
+        "Drei Ermessens-",
+        "fehler – einer wird",
+        "gern übersehen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Drei Ermessensfehler – einer wird gern übersehen",
+          "unter": "Ermessen · § 40 VwVfG",
+          "text": "Auch ein vertretbares Ergebnis ist rechtswidrig, wenn gar kein Ermessen ausgeübt wurde.",
+          "norm": "§ 40 VwVfG",
+          "icon": "waage",
+          "sprecher": "Das Ergebnis passt – und der Bescheid ist trotzdem rechtswidrig. Das passiert, wenn die Behörde ihr Ermessen gar nicht ausübt. Schauen wir uns die drei Ermessensfehler an.",
+          "marken": [
+            "Ergebnis reicht nicht",
+            "§ 40 VwVfG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Ermessen erkennen",
+          "text": "„Kann“, „darf“, „soll“: Ob und wie – Entschließungs- und Auswahlermessen.",
+          "norm": "§ 40 VwVfG",
+          "sprecher": "Schritt eins: Erkenne das Ermessen. Wörter wie „kann“ oder „darf“ zeigen es an. Das Entschließungsermessen betrifft das Ob, das Auswahlermessen das Wie: welches Mittel, gegen wen.",
+          "marken": [
+            "Ob und Wie"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Ermessensausfall",
+          "text": "Die Behörde hält sich für gebunden und erwägt nichts.",
+          "norm": null,
+          "sprecher": "Schritt zwei, der leise Fehler: der Ermessensausfall. Die Behörde meint, sie müsse so entscheiden, und erwägt gar nichts. Typisches Signal in der Begründung: „Wir sind verpflichtet“, obwohl die Norm nur „kann“ sagt.",
+          "marken": [
+            "gebunden geglaubt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ermessensfehlgebrauch",
+          "text": "Sachfremde Erwägungen oder wesentliche Belange übersehen.",
+          "norm": "§ 40 VwVfG",
+          "sprecher": "Schritt drei: der Fehlgebrauch. Die Behörde übt Ermessen aus, aber nicht entsprechend dem Zweck der Ermächtigung. Sie stellt sachfremde Erwägungen an oder übersieht wesentliche Belange.",
+          "marken": [
+            "Zweck verfehlt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ermessensüberschreitung",
+          "text": "Die Rechtsfolge liegt außerhalb des gesetzlichen Rahmens.",
+          "norm": "§ 40 VwVfG",
+          "sprecher": "Schritt vier: die Überschreitung. Die Behörde wählt eine Rechtsfolge, die das Gesetz gar nicht vorsieht, oder verletzt höherrangiges Recht, etwa den Grundsatz der Verhältnismäßigkeit.",
+          "marken": [
+            "Grenze überschritten"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Nachschieben hat Grenzen",
+          "text": "Ergänzen ja, erstmals Ermessen ausüben nein.",
+          "norm": "§ 114 S. 2 VwGO",
+          "sprecher": "Wichtig im Prozess: Nach § 114 Satz 2 VwGO darf die Behörde ihre Ermessenserwägungen ergänzen. Ein vollständiger Ausfall lässt sich so nicht heilen.",
+          "marken": [
+            "§ 114 S. 2 VwGO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Das Gericht prüft nur Fehler",
+          "text": "Kein eigenes Ermessen des Gerichts – nur Ausfall, Fehlgebrauch, Überschreitung.",
+          "norm": "§ 114 S. 1 VwGO",
+          "sprecher": "Merke: Das Gericht setzt kein eigenes Ermessen an die Stelle der Behörde. Es prüft nur Ausfall, Fehlgebrauch und Überschreitung.",
+          "marken": [
+            "nur Fehlerkontrolle"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Begründung lesen",
+          "text": "Speichern für die nächste Ermessensprüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für deine nächste Ermessensprüfung.",
+          "marken": [
+            "Begründung lesen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Drei Ermessensfehler – und einer wird gern übersehen: der Ausfall. Hält sich die Behörde für gebunden, obwohl die Norm „kann“ sagt, ist der Bescheid rechtswidrig, selbst wenn das Ergebnis vertretbar wäre. Daneben stehen Fehlgebrauch und Überschreitung. Das Gericht prüft nach § 114 S. 1 VwGO nur diese Fehler und ersetzt kein Ermessen. Speichern für die nächste Ermessensprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#ermessen",
+        "#vwvfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ermessen: Ausfall, Fehlgebrauch, Überschreitung",
+      "coverText": "„Wir müssen“ kann der Fehler sein",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Eine Behörde, die sich für gebunden hält, übt kein Ermessen aus – und entscheidet schon deshalb fehlerhaft.",
+        "handlung": "{A} hovers in front of a switch with three positions but keeps pressing only one fixed lever, while {B} points at the untouched dial beside it.",
+        "hinweisRegie": "Place the note in the free space next to the untouched dial, slightly tilted toward {B}'s pointing hand, so the unused choice is highlighted without covering the fixed lever or the characters.",
+        "alternative": "{B} weighs three crystals on a scale, while {A} stamps a decision without looking at the scale at all."
+      },
+      "bildSzene": "untouched dial beside fixed lever",
+      "bildSzeneAlt": "stamping without looking at scale",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "Themenpool: verwalt-647"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-fehler-einer-uebersehen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.652Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-777",
+      "ueberzeile": "Prüfungsfrage Strafprozessrecht",
+      "titel": "Gegen A bestehen Fluchtgefahr und Wiederholungsgefahr nach § 112a StPO. Worauf stützt sich der Haftbefehl?",
+      "optionen": [
+        "Auf beide Gründe gleichrangig – das Gericht wählt frei",
+        "Auf die Fluchtgefahr – § 112a StPO tritt grundsätzlich zurück",
+        "Auf die Wiederholungsgefahr – sie ist der speziellere Grund"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 112 StPO",
+        "§ 112a StPO",
+        "Themenpool: stpo-777"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.652Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-777",
+      "ueberzeile": "Auflösung",
+      "titel": "Auf die Fluchtgefahr – die Wiederholungsgefahr ist subsidiär",
+      "text": "Nach § 112a Abs. 2 StPO greift die Wiederholungsgefahr nicht, wenn die Voraussetzungen eines Haftbefehls nach § 112 StPO vorliegen und der Vollzug nicht nach § 116 Abs. 1, 2 StPO ausgesetzt werden könnte. Dann stützt sich der Haftbefehl auf die Fluchtgefahr. Die Wiederholungsgefahr ist ein Auffanghaftgrund.",
+      "norm": "§ 112a Abs. 2 StPO",
+      "quellen": [
+        "§ 112 StPO",
+        "§ 112a StPO",
+        "§ 116 StPO",
+        "Themenpool: stpo-777"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.652Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Auf beide Gründe gleichrangig – das Gericht wählt frei",
+        "Auf die Fluchtgefahr – § 112a StPO tritt grundsätzlich zurück",
+        "Auf die Wiederholungsgefahr – sie ist der speziellere Grund"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-187",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 346 Abs. 2 S. 2 BGB: Beim Wertersatz zählt zuerst der vereinbarte Preis",
+      "text": "Muss der Rückgewährschuldner Wertersatz leisten, ist eine im Vertrag bestimmte Gegenleistung der Berechnung zugrunde zu legen. Maßstab ist also grundsätzlich der vereinbarte Preis, nicht ein objektiver Marktwert. Ob die Pflicht überhaupt besteht, klärst du vorher mit § 346 Abs. 2 S. 1 BGB und den Ausnahmen des § 346 Abs. 3 BGB.",
+      "norm": "§ 346 Abs. 2 S. 2 BGB",
+      "quellen": [
+        "§ 346 Abs. 2 BGB",
+        "§ 346 Abs. 3 BGB",
+        "Themenpool: schuld-187"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.652Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-331",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "Dreiecksbetrug: Das Näheverhältnis prüfst du bei der Vermögensverfügung",
+      "text": "Verfügt ein Getäuschter über fremdes Vermögen, stellt sich die Zurechnungsfrage schon beim Merkmal Vermögensverfügung – nicht erst beim Schaden. Dort entscheidest du, ob der Verfügende im Lager des Geschädigten steht. Verneinst du das, scheidet § 263 StGB aus, und du prüfst Diebstahl in mittelbarer Täterschaft.",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 242 StGB",
+        "§ 25 Abs. 1 Alt. 2 StGB",
+        "Themenpool: strafbt-331"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.652Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-821",
+      "ueberzeile": "4 Punkte Berufung",
+      "titel": "Berufung: Vier Punkte, die von vornherein aus dem Spiel sind",
+      "text": "§ 513 Abs. 2 ZPO und die Folgenormen begrenzen den Prüfungsumfang. Wer eine Berufung begründet oder beurteilt, sollte sie kennen.",
+      "punkte": [
+        "Zuständigkeit des ersten Rechtszugs, § 513 Abs. 2 ZPO",
+        "Mehr als beantragt, § 528 ZPO",
+        "Nicht gerügte Verfahrensmängel ohne Amtsprüfung, § 529 Abs. 2 ZPO",
+        "Zu Recht zurückgewiesene Angriffsmittel, § 531 Abs. 1 ZPO"
+      ],
+      "quellen": [
+        "§ 513 ZPO",
+        "§ 528 ZPO",
+        "§ 529 ZPO",
+        "§ 531 ZPO",
+        "Themenpool: assessorz-821"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.652Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-903",
+      "ueberzeile": "Streitstand Klausurtechnik",
+      "titel": "Hilfsaufrechnung: Darf das Gericht die Klageforderung offenlassen?",
+      "norm": "§ 322 Abs. 2 ZPO",
+      "optionen": [
+        "Beweiserhebungstheorie (h.M., BGH): Erst die Klageforderung klären – sonst bleibt offen, ob die Gegenforderung verbraucht ist.",
+        "Klageabweisungstheorie: Greift die Aufrechnung jedenfalls, darf die Klageforderung aus Prozessökonomie offenbleiben."
+      ],
+      "text": "Klausur: mit der h.M. Du prüfst die Klageforderung vollständig. Erst wenn sie besteht, kommt es auf die Hilfsaufrechnung an. Ist die Klageforderung unbegründet, gehört die Aufrechnung allenfalls ins Hilfsgutachten.",
+      "quellen": [
+        "§ 322 Abs. 2 ZPO",
+        "§ 145 Abs. 3 ZPO",
+        "Themenpool: methodik-903"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:54:43.652Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,893 @@
+{
+  "datum": "2027-07-08",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "revision-877",
+        "themaTitel": "Wie baut man eine Verfahrensrüge auf?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "verwalt-094",
+        "themaTitel": "Was ist der Unterschied zwischen Entschließungs- und Auswahlermessen?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-547",
+        "themaTitel": "Sachliche und örtliche Zuständigkeit",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "sachen-224"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "sachen-224"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:55",
+        "art": "norm",
+        "themaId": "bgbat-154"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "streitstand",
+        "themaId": "methodik-938"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "merksatz",
+        "themaId": "schuld-020"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:07",
+        "art": "begriff",
+        "themaId": "strafat-064"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "revision-877",
+      "poolTitel": "Wie baut man eine Verfahrensrüge auf?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 344 StPO",
+        "§ 274 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2027-03-14",
+        "2027-05-25"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "verwalt-094",
+      "poolTitel": "Was ist der Unterschied zwischen Entschließungs- und Auswahlermessen?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2026-11-17",
+        "2027-02-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-547",
+      "poolTitel": "Sachliche und örtliche Zuständigkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "GVG; §§ 12 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-28",
+        "2027-02-26",
+        "2027-05-08"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-224",
+      "poolTitel": "Wann ist eine Sache abhandengekommen?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 935 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-27",
+        "2027-06-01"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-224",
+      "poolTitel": "Wann ist eine Sache abhandengekommen?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 935 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-27",
+        "2027-06-01"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-154",
+      "poolTitel": "Was ist ein lediglich rechtlicher Vorteil i.S.d. § 107 BGB?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 107 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-29",
+        "2026-12-08",
+        "2027-03-26"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "methodik-938",
+      "poolTitel": "Meinungsstreit darstellen: Ansichten, Argumente, Streitentscheid",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-10",
+        "2027-03-13",
+        "2027-05-09"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "schuld-020",
+      "poolTitel": "Was ist ein Vertrag mit Schutzwirkung zugunsten Dritter?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 157, 242 BGB",
+        "richterrechtliches Institut"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08",
+        "2026-11-06",
+        "2026-12-12"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafat-064",
+      "poolTitel": "Wie grenzt man Täterschaft und Teilnahme ab?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 StGB",
+        "§ 26 StGB",
+        "§ 27 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28",
+        "2027-01-28"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-877",
+      "slug": "2027-07-08-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verfahrensrüge: Ein Verweis aufs Protokoll reicht nicht",
+          "titelZeilen": [
+            "Verfahrensrüge:",
+            "Ein Verweis aufs",
+            "Protokoll reicht",
+            "nicht"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Was nicht drinsteht, zählt nicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Maßstab",
+          "text": "Bei Verfahrensrügen müssen die den Mangel enthaltenden Tatsachen angegeben werden (§ 344 Abs. 2 S. 2 StPO). Das Revisionsgericht prüft allein anhand der Begründungsschrift, ob – ihre Richtigkeit unterstellt – ein Verfahrensfehler vorliegt. Verweise auf Akten oder Protokoll ersetzen das nicht."
+        },
+        {
+          "art": "schritte",
+          "titel": "Aufbau der Rüge",
+          "schritte": [
+            {
+              "titel": "1. Angriffsrichtung",
+              "text": "Welche Verfahrensnorm ist verletzt? Konkret benennen, nicht nur „Verletzung formellen Rechts“."
+            },
+            {
+              "titel": "2. Verfahrenstatsachen",
+              "text": "Vollständig und aus sich heraus verständlich: Anträge, Beschlüsse, Abläufe – wo nötig im Wortlaut."
+            },
+            {
+              "titel": "3. Beruhen",
+              "text": "§ 337 StPO: Das Urteil kann auf dem Fehler beruhen. Bei § 338 StPO wird das Beruhen unwiderleglich vermutet."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Beweis",
+          "punkte": [
+            "Wesentliche Förmlichkeiten beweist nur das Protokoll (§ 274 StPO).",
+            "Das gilt positiv und negativ: Was nicht protokolliert ist, gilt als nicht geschehen.",
+            "Gegenbeweis nur durch Nachweis der Fälschung; sonst gilt der Freibeweis."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Stolpersteine",
+          "punkte": [
+            "Manche Verwertungsverbote setzen nach dem BGH einen Widerspruch in der Hauptverhandlung voraus.",
+            "Bei Anordnungen des Vorsitzenden verlangt die Rspr. oft die Beanstandung nach § 238 Abs. 2 StPO.",
+            "Begründungsfrist grundsätzlich ein Monat (§ 345 Abs. 1 StPO)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Norm benennen, Tatsachen vollständig vortragen, Beruhen darlegen. Was nur in der Akte steht, existiert für das Revisionsgericht nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Verfahrensrüge in drei Zügen",
+          "punkte": [
+            "Welche Norm ist verletzt?",
+            "Alle Tatsachen in der Begründung?",
+            "Beruhen oder § 338 StPO?"
+          ],
+          "icons": [
+            "paragraf",
+            "dokument",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Verfahrensrüge: Ein Verweis aufs Protokoll reicht nicht. Nach § 344 Abs. 2 S. 2 StPO müssen die Tatsachen, die den Mangel enthalten, in der Begründung selbst stehen – so vollständig, dass das Revisionsgericht ohne Akte prüfen kann. Bewiesen werden wesentliche Förmlichkeiten durch das Protokoll (§ 274 StPO). Dann das Beruhen nach § 337 StPO. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#344stpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfahrensrüge: Aufbau und Tatsachenvortrag",
+      "coverText": "Was nicht drinsteht, zählt nicht",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Das Revisionsgericht liest nur die Begründung – was dort fehlt, prüft es nicht.",
+        "handlung": "{B} hands over a thin sheet with an arrow pointing to a huge stack of files behind him, while {A} hovers and only lifts the thin sheet, ignoring the stack.",
+        "hinweisRegie": "Place the note in the free space between the thin sheet and the ignored stack of files, slightly tilted toward the sheet, so the missing content is linked there without covering {B}'s pointing hand.",
+        "alternative": "{A} holds a tray with only three labelled boxes, while {B} tries to add a fourth box that is left outside the tray."
+      },
+      "bildSzene": "thin sheet lifted, file stack ignored",
+      "bildSzeneAlt": "tray with three boxes, one left out",
+      "quellen": [
+        "§ 344 Abs. 2 StPO",
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "§ 274 StPO",
+        "§ 238 Abs. 2 StPO",
+        "§ 345 Abs. 1 StPO",
+        "Themenpool: revision-877"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verweis-reicht-nicht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:29.875Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-094",
+      "slug": "2027-07-08-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zwei Stufen im Ermessen – jede wird eigens geprüft",
+          "titelZeilen": [
+            "Zwei Stufen im",
+            "Ermessen – jede",
+            "wird eigens",
+            "geprüft"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Jede Stufe eigene Ermessensfehler",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Räumt eine Norm Ermessen ein („kann“), entscheidet die Behörde oft auf zwei Stufen: ob sie handelt und wie. § 40 VwVfG gilt für beide. Das Gericht prüft nach § 114 S. 1 VwGO nur, ob die gesetzlichen Grenzen eingehalten und das Ermessen zweckgerecht ausgeübt wurde."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die zwei Stufen",
+          "links": {
+            "titel": "Entschließungsermessen",
+            "punkte": [
+              "Frage: Schreitet die Behörde überhaupt ein?",
+              "Beispiel: Polizei greift bei einer Störung ein – oder nicht."
+            ]
+          },
+          "rechts": {
+            "titel": "Auswahlermessen",
+            "punkte": [
+              "Frage: Mit welchem Mittel und gegen wen?",
+              "Beispiel: Verfügung gegen den Handlungs- oder den Zustandsstörer."
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Reduzierung auf null – oft nur beim Ob",
+          "links": {
+            "titel": "Nur das Ob reduziert",
+            "punkte": [
+              "Die Behörde muss einschreiten, etwa bei Gefahr für Leib oder Leben.",
+              "Im Prozess: Bescheidungsurteil (§ 113 V 2 VwGO)."
+            ]
+          },
+          "rechts": {
+            "titel": "Auch das Wie reduziert",
+            "punkte": [
+              "Nur eine Maßnahme ist fehlerfrei.",
+              "Im Prozess: Verpflichtungsurteil (§ 113 V 1 VwGO)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Ermessensfehler – Ausfall, Überschreitung, Fehlgebrauch – für jede Stufe getrennt prüfen. Ist das Ob fehlerfrei, kann das Wie trotzdem fehlerhaft sein. Und: Erwägungen darf die Behörde im Prozess nur ergänzen, nicht erstmals anstellen (§ 114 S. 2 VwGO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst das Ob, dann das Wie – jede Stufe mit eigenen Ermessensfehlern. Reduziert sich nur das Ob auf null, gibt es nur ein Bescheidungsurteil."
+        },
+        {
+          "art": "cta",
+          "titel": "Ermessen in zwei Stufen",
+          "punkte": [
+            "Ob: Einschreiten fehlerfrei?",
+            "Wie: Mittel und Adressat fehlerfrei?",
+            "Reduzierung auf null – auf welcher Stufe?"
+          ],
+          "icons": [
+            "stopp",
+            "zielscheibe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Zwei Stufen im Ermessen – jede wird eigens geprüft. Das Entschließungsermessen fragt, ob die Behörde einschreitet, das Auswahlermessen, mit welchem Mittel und gegen wen. Ermessensfehler gibt es auf jeder Stufe. Reduziert sich nur das Ob auf null, bekommt der Kläger im Prozess meist nur ein Bescheidungsurteil nach § 113 Abs. 5 S. 2 VwGO. Speichern für die nächste Polizeirechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#ermessen",
+        "#114vwgo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ermessen: Ob und Wie getrennt prüfen",
+      "coverText": "Jede Stufe eigene Ermessensfehler",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Die Behörde entscheidet erst, ob sie handelt, und dann, wie – beides muss für sich fehlerfrei sein.",
+        "handlung": "{A} stands at a fork in the path and first decides to step forward at all, while {B} holds up three different tools and waits for her to pick one.",
+        "hinweisRegie": "Place the note in the free space between {A}'s first step and {B}'s three tools, slightly tilted toward the tools, so the two separate decisions are visible without covering either character.",
+        "alternative": "{B} flips a large switch from off to on, while {A} then turns a small dial to choose the strength."
+      },
+      "bildSzene": "first step at fork, three tools",
+      "bildSzeneAlt": "big switch then small dial",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "§ 113 Abs. 5 VwGO",
+        "Themenpool: verwalt-094"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-echte-stufen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:29.875Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-547",
+      "slug": "2027-07-08-b3",
+      "titelZeilen": [
+        "Wohnraummiete:",
+        "Amtsgericht – egal",
+        "wie hoch der",
+        "Streitwert"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Wohnraummiete: Amtsgericht – egal wie hoch der Streitwert",
+          "unter": "Zuständigkeit · § 23 GVG · §§ 12 ff. ZPO",
+          "text": "Sonderzuweisungen schlagen den Streitwert.",
+          "norm": "§ 23 Nr. 2 a GVG",
+          "icon": "haus",
+          "sprecher": "Mietstreit über zwanzigtausend Euro? Trotzdem Amtsgericht. Bei der Zuständigkeit schlagen Sonderzuweisungen den Streitwert. So prüfst du sachlich und örtlich in vier Schritten.",
+          "marken": [
+            "Wohnraum",
+            "Amtsgericht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Sachlich: Grundregel Streitwert",
+          "text": "Bis zur Grenze des § 23 Nr. 1 GVG das AG, darüber das LG.",
+          "norm": "§ 23 Nr. 1 GVG · § 71 Abs. 1 GVG",
+          "sprecher": "Schritt eins: die sachliche Zuständigkeit. Grundregel ist der Streitwert. Bis zur Grenze des Paragrafen 23 Nummer 1 GVG ist das Amtsgericht zuständig, darüber das Landgericht nach Paragraf 71.",
+          "marken": [
+            "Streitwert"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Sonderzuweisungen gehen vor",
+          "text": "Wohnraummiete: immer AG. Amtshaftung: immer LG.",
+          "norm": "§ 23 Nr. 2 a GVG · § 71 Abs. 2 GVG",
+          "sprecher": "Schritt zwei: Sonderzuweisungen gehen vor. Streitigkeiten aus einem Mietverhältnis über Wohnraum gehören ohne Rücksicht auf den Streitwert vor das Amtsgericht. Umgekehrt landen etwa Amtshaftungsklagen immer beim Landgericht.",
+          "marken": [
+            "streitwertunabhängig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Örtlich: allgemein und besonders",
+          "text": "Wohnsitz des Beklagten, daneben etwa Erfüllungs- oder Tatort. Wahl: § 35 ZPO.",
+          "norm": "§§ 12, 13, 29, 32, 35 ZPO",
+          "sprecher": "Schritt drei: die örtliche Zuständigkeit. Allgemeiner Gerichtsstand ist der Wohnsitz des Beklagten. Daneben stehen besondere Gerichtsstände, etwa der Erfüllungsort oder der Tatort. Unter mehreren wählt der Kläger.",
+          "marken": [
+            "Wahlrecht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ausschließlich verdrängt alles",
+          "text": "Miete über Räume: nur das Gericht am Ort der Räume.",
+          "norm": "§ 29a ZPO",
+          "sprecher": "Schritt vier: Ein ausschließlicher Gerichtsstand verdrängt alle anderen. Bei Miete über Räume ist nach Paragraf 29a nur das Gericht zuständig, in dessen Bezirk die Räume liegen.",
+          "marken": [
+            "ausschließlich"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Keine Heilung durch Rügelosigkeit",
+          "text": "Ausschließlich heißt: keine Vereinbarung, kein § 39 ZPO.",
+          "norm": "§ 40 Abs. 2 ZPO",
+          "sprecher": "Und Achtung: Eine ausschließliche Zuständigkeit lässt sich weder vereinbaren noch durch rügeloses Verhandeln begründen. Das regelt Paragraf 40 Absatz 2.",
+          "marken": [
+            "§ 40 II ZPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Sonderzuweisung vor Streitwert. Ausschließlich vor allgemein.",
+          "norm": null,
+          "sprecher": "Merke: Sonderzuweisung vor Streitwert, ausschließlicher vor allgemeinem Gerichtsstand.",
+          "marken": [
+            "Reihenfolge"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuständigkeit ohne Umweg",
+          "text": "Speichern für die nächste ZPO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste ZPO-Klausur und prüf bei jedem Mietfall zuerst die Sonderzuweisung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Wohnraummiete: Amtsgericht – egal wie hoch der Streitwert. Sachlich gilt zwar grundsätzlich die Streitwertgrenze des § 23 Nr. 1 GVG, aber Sonderzuweisungen gehen vor: Wohnraummiete immer AG (§ 23 Nr. 2 a GVG), Amtshaftung immer LG (§ 71 Abs. 2 GVG). Örtlich verdrängt der ausschließliche Gerichtsstand des § 29a ZPO alle anderen – und lässt sich nach § 40 Abs. 2 ZPO weder vereinbaren noch rügelos begründen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zivilprozessrecht",
+        "#zuständigkeit",
+        "#mietrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sachliche und örtliche Zuständigkeit",
+      "coverText": "Sonderzuweisung schlägt Streitwert",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Bestimmte Streitigkeiten gehören immer vor dasselbe Gericht, egal wie viel auf dem Spiel steht.",
+        "handlung": "{A} tries to carry a huge heavy crate toward a large building, while {B} taps a small house-shaped sign that redirects the crate to a smaller door nearby.",
+        "hinweisRegie": "Place the note in the free space next to the small house-shaped sign, slightly tilted toward the smaller door, so the redirection is visible without covering {A}'s heavy crate.",
+        "alternative": "{B} sorts parcels by size onto two conveyor belts, while {A} pulls one marked with a house symbol onto the small belt regardless of its size."
+      },
+      "bildSzene": "heavy crate redirected to small door",
+      "bildSzeneAlt": "house-marked parcel on small belt",
+      "quellen": [
+        "§ 23 GVG",
+        "§ 71 GVG",
+        "§§ 12, 13, 29, 29a, 32, 35 ZPO",
+        "§§ 39, 40 ZPO",
+        "Themenpool: zpo-547"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "sonderzuweisung-schlaegt-streitwert",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:29.877Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-224",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "E stirbt. Nachbar N holt Es Uhr aus der Wohnung und verkauft sie an den gutgläubigen K. Wird K Eigentümer?",
+      "optionen": [
+        "Nein – über § 857 BGB ist sie dem Erben abhandengekommen",
+        "Ja – der Erbe hatte nie tatsächlichen Besitz",
+        "Ja – N durfte sie für herrenlos halten"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 857 BGB",
+        "§ 932 BGB",
+        "§ 935 Abs. 1 BGB",
+        "Themenpool: sachen-224"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:29.877Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-224",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – der Erbenbesitz macht die Uhr abhandengekommen",
+      "text": "Mit dem Erbfall geht der Besitz auf den Erben über (§ 857 BGB) – ohne tatsächliche Sachherrschaft und ohne dass er davon weiß. Nimmt N die Uhr an sich, verliert der Erbe den Besitz ohne seinen Willen. Die Uhr ist abhandengekommen, § 935 Abs. 1 BGB sperrt den gutgläubigen Erwerb des K.",
+      "norm": "§ 857 BGB · § 935 Abs. 1 BGB",
+      "quellen": [
+        "§ 857 BGB",
+        "§ 932 BGB",
+        "§ 935 Abs. 1 BGB",
+        "Themenpool: sachen-224"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:29.877Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – über § 857 BGB ist sie dem Erben abhandengekommen",
+        "Ja – der Erbe hatte nie tatsächlichen Besitz",
+        "Ja – N durfte sie für herrenlos halten"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-154",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 107 BGB: Neutrale Geschäfte bleiben zustimmungsfrei",
+      "text": "Zustimmungsfrei ist, was dem Minderjährigen lediglich einen rechtlichen Vorteil bringt. Nach h.M. gilt das auch für rechtlich neutrale Geschäfte: Übereignet er eine fremde Sache, verliert er selbst nichts – die Einigung ist wirksam, der Erwerber kann nach § 932 BGB gutgläubig erwerben. Ebenso kann er als Vertreter handeln (§ 165 BGB).",
+      "norm": "§ 107 BGB · § 165 BGB",
+      "quellen": [
+        "§ 107 BGB",
+        "§ 165 BGB",
+        "§ 932 BGB",
+        "Themenpool: bgbat-154"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:29.877Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-938",
+      "ueberzeile": "Streitstand Methodenlehre",
+      "titel": "Ist der mögliche Wortsinn die Grenze der Auslegung?",
+      "norm": "Art. 103 Abs. 2 GG",
+      "optionen": [
+        "H.M.: ja – jenseits des möglichen Wortsinns beginnt die Rechtsfortbildung (Analogie, Reduktion).",
+        "Kritische Lit.: nein – der Wortsinn ist selbst Auslegungsergebnis, die Grenze ist fließend."
+      ],
+      "text": "Klausur: Mit der h.M. erst den Wortlaut ausschöpfen, dann offen sagen, dass du ihn verlässt: „Eine direkte Anwendung scheitert am Wortlaut; in Betracht kommt eine Analogie.“ Im Strafrecht macht Art. 103 Abs. 2 GG die Wortlautgrenze zulasten des Täters verbindlich.",
+      "quellen": [
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: methodik-938"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:29.877Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-020",
+      "ueberzeile": "Merksatz Schuldrecht AT",
+      "titel": "Eigener Vertragsanspruch? Dann keine Schutzwirkung",
+      "text": "Schutzbedürftig ist der Dritte nach der Rspr. nicht, wenn er eigene vertragliche Ansprüche gleichen Inhalts hat – etwa der Untermieter gegen den Hauptmieter.",
+      "norm": "§§ 157, 242 BGB",
+      "quellen": [
+        "§§ 157, 242 BGB",
+        "§ 328 BGB",
+        "Themenpool: schuld-020"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:29.877Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-064",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Organisationsherrschaft",
+      "text": "Mittelbare Täterschaft trotz voll verantwortlichem Vordermann: Nach dem BGH ist „Täter hinter dem Täter“, wer in einem organisierten Machtapparat Rahmenbedingungen nutzt, die regelhafte Abläufe auslösen – der Befehl wird ausgeführt, weil der Ausführende austauschbar ist. Die Übertragung auf Wirtschaftsunternehmen ist umstritten.",
+      "norm": "§ 25 Abs. 1 Alt. 2 StGB",
+      "quellen": [
+        "§ 25 Abs. 1 StGB",
+        "§§ 26, 27 StGB",
+        "Themenpool: strafat-064"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:29.877Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,888 @@
+{
+  "datum": "2027-06-21",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-385",
+        "themaTitel": "Wann liegt ein unbestimmter Rechtsbegriff mit Beurteilungsspielraum vor?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "sachen-514",
+        "themaTitel": "Grundschuld und Sicherungsgrundschuld",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-322",
+        "themaTitel": "Wie prüft man die Erpressung?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:06",
+        "art": "frage",
+        "themaId": "stpo-782"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:06",
+        "art": "antwort",
+        "themaId": "stpo-782"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "methodik-898"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "tipp",
+        "themaId": "stpo-784"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "zahl",
+        "themaId": "anklage-859"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "streitstand",
+        "themaId": "assessorz-812"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-385",
+      "poolTitel": "Wann liegt ein unbestimmter Rechtsbegriff mit Beurteilungsspielraum vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Fachrecht; Rechtsprechung"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2026-10-23",
+        "2026-11-12"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "sachen-514",
+      "poolTitel": "Grundschuld und Sicherungsgrundschuld",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1191 ff., 1192 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-322",
+      "poolTitel": "Wie prüft man die Erpressung?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 253 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-30"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-782",
+      "poolTitel": "Zwischenverfahren",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 199 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-01",
+        "2026-11-01",
+        "2026-12-31"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-782",
+      "poolTitel": "Zwischenverfahren",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 199 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-01",
+        "2026-11-01",
+        "2026-12-31"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "methodik-898",
+      "poolTitel": "Obersatztechnik: präzise und subsumtionsfähig formulieren",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-23",
+        "2027-03-19",
+        "2027-04-24"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "stpo-784",
+      "poolTitel": "Inbegriff der Hauptverhandlung und freie Beweiswürdigung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-09",
+        "2027-04-17",
+        "2027-05-29"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "anklage-859",
+      "poolTitel": "Wie bildet man die Normenkette der Anklage?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 52 StGB",
+        "§ 53 StGB",
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2027-02-16",
+        "2027-04-25"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-812",
+      "poolTitel": "Wie baut man die Hilfsaufrechnung im Urteil auf?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 322 Abs. 2 ZPO",
+        "§ 387 BGB",
+        "§ 45 Abs. 3 GKG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-15",
+        "2027-04-04",
+        "2027-04-20"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-385",
+      "slug": "2027-06-21-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "„Zuverlässig“ ist kein Ermessen – und kein Spielraum",
+          "titelZeilen": [
+            "„Zuverlässig“ ist",
+            "kein Ermessen –",
+            "und kein Spielraum"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Unbestimmt heißt nicht frei",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Behörde untersagt G sein Gewerbe, weil er wegen erheblicher Steuerrückstände unzuverlässig sei (§ 35 Abs. 1 GewO). G klagt. Prüft das Verwaltungsgericht selbst, ob G unzuverlässig ist – oder muss es die Einschätzung der Behörde hinnehmen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Tatbestand oder Rechtsfolge?",
+              "text": "„Unzuverlässig“ steht im Tatbestand. Ermessen gibt es nur auf der Rechtsfolgenseite – § 35 Abs. 1 GewO sagt aber: „ist zu untersagen“."
+            },
+            {
+              "titel": "Grundsatz: volle Kontrolle",
+              "text": "Unbestimmte Rechtsbegriffe legt das Gericht selbst aus und wendet sie selbst an (Art. 19 Abs. 4 GG)."
+            },
+            {
+              "titel": "Ausnahme: Beurteilungsspielraum",
+              "text": "Nur wenn das Gesetz der Behörde die Letztentscheidung erkennbar zuweist – anerkannt in engen Fallgruppen."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Die Zuverlässigkeit ist voll überprüfbar. Das Gericht prüft selbst, ob die Tatsachen die Prognose tragen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo die Rspr. Spielraum anerkennt",
+          "punkte": [
+            "Prüfungsentscheidungen: prüfungsspezifische Wertungen",
+            "Dienstliche Beurteilungen im Beamtenrecht",
+            "Wertungen weisungsfreier, pluralistisch besetzter Gremien",
+            "Prognose- und Risikoentscheidungen, soweit das Fachrecht sie der Behörde zuweist"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Verwechslung",
+          "text": "„Unbestimmter Begriff, also Spielraum“ – so kurz geht es nicht. Unbestimmtheit allein verschiebt keine Entscheidungsmacht. Und selbst wo ein Spielraum besteht, kontrolliert das Gericht: Verfahren, zutreffender Sachverhalt, allgemeingültige Bewertungsmaßstäbe, keine sachfremden Erwägungen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ermessen sitzt auf der Rechtsfolgenseite, der Beurteilungsspielraum im Tatbestand – und dort nur, wo das Gesetz ihn der Behörde zuweist."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen vor dem Spielraum",
+          "punkte": [
+            "Tatbestand oder Rechtsfolge?",
+            "Anerkannte Fallgruppe?",
+            "Wenn ja: nur die Grenzen kontrollieren"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "„Zuverlässig“ ist kein Ermessen – und in aller Regel auch kein Beurteilungsspielraum. Unbestimmte Rechtsbegriffe im Tatbestand prüft das Verwaltungsgericht grundsätzlich voll nach (Art. 19 Abs. 4 GG). Einen Spielraum der Behörde erkennt die Rspr. nur in engen Fallgruppen an, etwa bei Prüfungsentscheidungen. Die Gewerbeuntersagung nach § 35 GewO gehört nicht dazu. Speichern für die nächste Klausur im Verwaltungsrecht.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#beurteilungsspielraum",
+        "#35gewo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unzuverlässigkeit: voll gerichtlich überprüfbar",
+      "coverText": "Unbestimmt heißt nicht frei",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Ein unbestimmter Begriff im Tatbestand gibt der Behörde noch keine Entscheidungsfreiheit – das Gericht prüft selbst nach.",
+        "handlung": "{B} hovers with a sealed verdict card, while {A} calmly takes the card and holds it up against a lamp to check it herself.",
+        "hinweisRegie": "Place the note in the open space beside the lamp and the raised card, slightly tilted toward the light, so the idea of independent checking is linked to the card without covering {A}'s face or {B}.",
+        "alternative": "{A} re-weighs a sack on her own scale although {B} already attached a weight label to it."
+      },
+      "bildSzene": "explorer checks sealed card against lamp",
+      "bildSzeneAlt": "labelled sack re-weighed on own scale",
+      "quellen": [
+        "§ 35 Abs. 1 GewO",
+        "Art. 19 Abs. 4 GG",
+        "§ 114 VwGO",
+        "§ 40 VwVfG",
+        "Themenpool: verwalt-385"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:59.719Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-514",
+      "slug": "2027-06-21-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Grundschuld in vier Stationen – die Forderung kommt zuletzt",
+          "titelZeilen": [
+            "Grundschuld in",
+            "vier Stationen –",
+            "die Forderung",
+            "kommt zuletzt"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Duldung, nicht Zahlung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Bank B will aus der Grundschuld am Grundstück des E vorgehen. Anspruchsgrundlage: §§ 1147, 1192 Abs. 1 BGB – gerichtet auf Duldung der Zwangsvollstreckung, nicht auf Zahlung. Die Grundschuld ist nicht akzessorisch: Sie entsteht und besteht ohne gesicherte Forderung."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Grundschuld entstanden",
+              "text": "Einigung und Eintragung (§§ 873, 1191 BGB); bei der Briefgrundschuld zusätzlich Briefübergabe (§§ 1117, 1192 Abs. 1 BGB)."
+            },
+            {
+              "titel": "2. B ist Gläubiger",
+              "text": "Ursprünglich oder durch Abtretung (§§ 1154, 1192 Abs. 1 BGB) – auch gutgläubig nach § 892 BGB."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Fälligkeit",
+              "text": "Kapital erst nach Kündigung mit Sechsmonatsfrist fällig (§ 1193 Abs. 1) – bei der Sicherungsgrundschuld zwingend (Abs. 2 S. 2)."
+            },
+            {
+              "titel": "4. Einreden",
+              "text": "Erst hier die Forderung: Einreden aus dem Sicherungsvertrag, etwa Tilgung oder Nichtvalutierung (§§ 1157, 1192 Abs. 1a BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Abtretung",
+          "text": "Einreden aus dem Sicherungsvertrag kann E jedem Erwerber entgegenhalten; ein gutgläubig einredefreier Erwerb ist insoweit ausgeschlossen (§ 1192 Abs. 1a BGB). Und: Wird die Forderung getilgt, erlischt die Grundschuld nicht – E hat aus dem Sicherungsvertrag einen Rückgewähranspruch."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Entstehung, Gläubiger, Fälligkeit, Einreden – die gesicherte Forderung prüfst du erst bei den Einreden, über den Sicherungsvertrag."
+        },
+        {
+          "art": "cta",
+          "titel": "Grundschuld in vier Zügen",
+          "punkte": [
+            "Einigung und Eintragung",
+            "Gläubigerstellung klären",
+            "Kündigung nach § 1193 BGB",
+            "Einreden aus dem Sicherungsvertrag"
+          ],
+          "icons": [
+            "haus",
+            "person",
+            "kalender",
+            "vertrag"
+          ]
+        }
+      ],
+      "caption": "Die Grundschuld in vier Stationen – und die gesicherte Forderung taucht erst ganz am Ende auf. Der Anspruch aus §§ 1147, 1192 Abs. 1 BGB setzt eine entstandene Grundschuld, die Gläubigerstellung und die Fälligkeit nach Kündigung (§ 1193 BGB) voraus. Die Forderung kommt über die Einreden aus dem Sicherungsvertrag ins Spiel, die nach § 1192 Abs. 1a BGB auch gegen Erwerber wirken. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#grundschuld",
+        "#1192bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Grundschuld: das Prüfungsschema",
+      "coverText": "Duldung, nicht Zahlung",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Die Grundschuld steht für sich – die gesicherte Forderung wirkt erst über den Sicherungsvertrag als Einrede.",
+        "handlung": "{A} anchors a heavy crystal block to the ground with a chain, while {B} curiously discovers a small separate contract tag tied loosely to the chain's last link.",
+        "hinweisRegie": "Place the note in the free space near the last chain link and the loose tag, slightly tilted toward the tag, so it points to the late role of the secured claim without covering the block or {A}'s hands.",
+        "alternative": "{B} walks through four gates toward a house, holding a key that only fits the fourth gate's side lock."
+      },
+      "bildSzene": "crystal block chained, loose tag",
+      "bildSzeneAlt": "four gates, key fits last lock",
+      "quellen": [
+        "§ 1191 BGB",
+        "§ 1192 BGB",
+        "§ 1147 BGB",
+        "§ 1193 BGB",
+        "§ 1157 BGB",
+        "§ 873 BGB",
+        "§ 1117 BGB",
+        "§ 1154 BGB",
+        "§ 892 BGB",
+        "Themenpool: sachen-514"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-stationen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:59.719Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-322",
+      "slug": "2027-06-21-b3",
+      "titelZeilen": [
+        "Fällige Schuld",
+        "eingetrieben: keine",
+        "Erpressung"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Fällige Schuld eingetrieben: keine Erpressung",
+          "unter": "Erpressung · § 253 StGB",
+          "text": "A droht S Prügel an, wenn er die fälligen 500 € nicht zahlt.",
+          "norm": "§ 253 StGB",
+          "icon": "geldbeutel",
+          "sprecher": "Er droht, er kassiert – und ist trotzdem kein Erpresser. A verlangt nur Geld, das ihm zusteht. Prüf die Erpressung in vier Schritten, dann siehst du, wo sie scheitert.",
+          "marken": [
+            "Drohung",
+            "Anspruch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Nötigungsmittel",
+          "text": "Gewalt gegen eine Person oder Drohung mit einem empfindlichen Übel.",
+          "norm": "§ 253 Abs. 1 StGB",
+          "sprecher": "Schritt eins: das Nötigungsmittel. Gewalt oder Drohung mit einem empfindlichen Übel. Die angekündigten Prügel reichen dafür ohne Weiteres.",
+          "marken": [
+            "Drohung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Nötigungserfolg und Nachteil",
+          "text": "S zahlt. Ob die erloschene Schuld den Nachteil ausgleicht, kannst du offenlassen.",
+          "norm": "§ 253 Abs. 1 StGB",
+          "sprecher": "Schritt zwei: S zahlt, handelt also, und verliert Geld. Ob dem die erloschene Schuld als Ausgleich gegenübersteht, kannst du offenlassen. Denn jedenfalls scheitert es an Schritt vier.",
+          "marken": [
+            "Zahlung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vorsatz",
+          "text": "Vorsatz bezüglich Nötigungsmittel, Nötigungserfolg und Nachteil.",
+          "norm": "§ 15 StGB",
+          "sprecher": "Schritt drei: Vorsatz hinsichtlich Nötigungsmittel, Nötigungserfolg und Nachteil. Den hat A. Er weiß genau, was er tut.",
+          "marken": [
+            "Vorsatz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtswidrige Bereicherung?",
+          "text": "Fälliger, einredefreier Anspruch auf genau dieses Geld: Die Bereicherung ist nicht rechtswidrig.",
+          "norm": "§ 253 Abs. 1 StGB",
+          "sprecher": "Schritt vier, und hier kippt die Prüfung. A muss sich rechtswidrig bereichern wollen. Hat er einen fälligen und einredefreien Anspruch auf genau dieses Geld, ist die erstrebte Bereicherung nicht rechtswidrig. Hält er einen Anspruch nur irrig für gegeben, fehlt nach der Rechtsprechung der Vorsatz insoweit.",
+          "marken": [
+            "kein Unrecht"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Straflos? Nein – Nötigung",
+          "text": "Prügel als Mittel zum Eintreiben sind verwerflich: § 240 StGB bleibt.",
+          "norm": "§ 240 StGB",
+          "sprecher": "Straflos ist A trotzdem nicht. Übrig bleibt die Nötigung nach § 240. Wer seine Forderung mit Prügeln eintreibt, handelt verwerflich. Gewaltsame Selbsthilfe erlaubt das Recht nicht.",
+          "marken": [
+            "§ 240 StGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Anspruch auf das Geld? Keine rechtswidrige Bereicherung – aber § 240 prüfen.",
+          "norm": null,
+          "sprecher": "Merke: Wer nur verlangt, was ihm fällig und einredefrei zusteht, erpresst nicht. Die Nötigung prüfst du trotzdem.",
+          "marken": [
+            "Anspruch prüfen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst nach dem Anspruch fragen",
+          "text": "Speichern für die nächste Vermögensklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Vermögensklausur. Und frag bei jeder Drohung um Geld zuerst: Hat der Täter einen Anspruch darauf?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Er droht, er kassiert – und ist trotzdem kein Erpresser. Wer mit Drohungen Geld eintreibt, auf das er einen fälligen und einredefreien Anspruch hat, erstrebt keine rechtswidrige Bereicherung; § 253 StGB scheitert. Übrig bleibt regelmäßig die Nötigung nach § 240 StGB. Speichern für die nächste Vermögensklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#253stgb",
+        "#erpressung",
+        "#240stgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Erpressung: fällige Schuld eingetrieben",
+      "coverText": "Anspruch sperrt die Bereicherung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Wer mit Drohungen nur eintreibt, was ihm zusteht, bereichert sich nicht rechtswidrig – nötigt aber trotzdem.",
+        "handlung": "{A} nervously waves a big wrench at {B}, who hands over a small pouch of crystals that exactly matches an old IOU note pinned on the wall.",
+        "hinweisRegie": "Place the note in the free space between the pinned IOU note and the handed-over pouch, slightly tilted toward the note, so the matching claim is visible while the wrench stays clearly in view.",
+        "alternative": "{B} unwillingly returns a borrowed lantern while {A} blocks the tunnel exit with his arms spread wide."
+      },
+      "bildSzene": "mechanic with wrench collects pouch",
+      "bildSzeneAlt": "lantern returned, exit blocked",
+      "quellen": [
+        "§ 253 StGB",
+        "§ 240 StGB",
+        "§ 16 StGB",
+        "Themenpool: strafbt-322"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:59.720Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-782",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Das Gericht eröffnet das Hauptverfahren. Kann der Angeklagte den Eröffnungsbeschluss anfechten?",
+      "optionen": [
+        "Ja, mit der sofortigen Beschwerde",
+        "Ja, mit der einfachen Beschwerde nach § 304 StPO",
+        "Nein, für ihn ist der Beschluss unanfechtbar"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 210 StPO",
+        "§ 203 StPO",
+        "Themenpool: stpo-782"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:59.720Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-782",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – der Eröffnungsbeschluss ist für den Angeklagten unanfechtbar",
+      "text": "§ 210 Abs. 1 StPO schließt die Anfechtung durch den Angeklagten aus; seine Einwände klärt die Hauptverhandlung. Anders die Staatsanwaltschaft: Lehnt das Gericht die Eröffnung ab oder verweist es abweichend vom Antrag an ein Gericht niederer Ordnung, hat sie die sofortige Beschwerde (§ 210 Abs. 2 StPO).",
+      "norm": "§ 210 StPO",
+      "quellen": [
+        "§ 210 StPO",
+        "§ 203 StPO",
+        "Themenpool: stpo-782"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:59.720Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja, mit der sofortigen Beschwerde",
+        "Ja, mit der einfachen Beschwerde nach § 304 StPO",
+        "Nein, für ihn ist der Beschluss unanfechtbar"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-898",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 433 Abs. 2 BGB im Obersatz: Wer will was von wem – und woraus?",
+      "text": "Ein subsumtionsfähiger Obersatz nennt vier Dinge: Anspruchsteller, Anspruchsgegner, das konkrete Begehren und die Norm. Also: „V könnte gegen K einen Anspruch auf Zahlung von 800 € aus § 433 Abs. 2 BGB haben.“ Nicht: „Fraglich ist, ob V Geld bekommt.“ Ohne Betrag und Norm weißt du am Ende nicht, was du bejahst.",
+      "norm": "§ 433 Abs. 2 BGB",
+      "quellen": [
+        "§ 433 Abs. 2 BGB",
+        "Themenpool: methodik-898"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:59.720Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-784",
+      "ueberzeile": "Klausurtipp StPO",
+      "titel": "§ 261 StPO: Was nur vorgehalten wurde, ist nicht als Urkunde bewiesen",
+      "text": "Inbegriff der Hauptverhandlung ist nur, was dort prozessordnungsgemäß eingeführt wurde. Hält das Gericht einem Zeugen ein Schriftstück bloß vor, ist Beweismittel allein seine Antwort – nicht der Text. Stützt sich das Urteil auf den Wortlaut einer Urkunde, die weder verlesen (§ 249 StPO) noch sonst eingeführt wurde, liegt eine Verfahrensrüge nach § 261 StPO nahe.",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 249 StPO",
+        "Themenpool: stpo-784"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:59.720Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-859",
+      "ueberzeile": "3 Punkte Anklage",
+      "titel": "Zwei Taten in einer Anklage: Wo die Tatmehrheit sichtbar wird",
+      "text": "Die Anklage muss jede Tat bestimmt bezeichnen (§ 200 Abs. 1 S. 1 StPO). Die Tatmehrheit taucht deshalb nicht erst in der Paragrafenkette auf:",
+      "punkte": [
+        "Anklagesatz: etwa „durch zwei selbständige Handlungen“ – Formel je nach Landespraxis",
+        "Konkreter Tatvorwurf: jede Tat mit eigener Zeit, eigenem Ort, eigenem Geschehen",
+        "Paragrafenkette: am Ende § 53 StGB, bei Tateinheit innerhalb einer Tat zusätzlich § 52 StGB"
+      ],
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "§ 53 StGB",
+        "§ 52 StGB",
+        "Themenpool: anklage-859"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:59.720Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-812",
+      "ueberzeile": "Streitstand ZPO",
+      "titel": "Gegenforderung schon eingeklagt: Darf B mit ihr hilfsweise aufrechnen?",
+      "norm": "§ 261 Abs. 3 Nr. 1 ZPO · § 322 Abs. 2 ZPO",
+      "optionen": [
+        "BGH: Zulässig – die Aufrechnung macht die Gegenforderung nicht rechtshängig; ggf. Aussetzung nach § 148 ZPO.",
+        "Teile der Lit.: Unzulässig analog § 261 Abs. 3 Nr. 1 ZPO – sonst drohen widersprechende Entscheidungen."
+      ],
+      "text": "Klausur: Mit dem BGH die Aufrechnung zulassen. Im Urteil erst die Klageforderung, dann die Hilfsaufrechnung; rechtskräftig entschieden wird über die Gegenforderung nur bis zur Höhe der Klageforderung (§ 322 Abs. 2 ZPO). Streitwert: § 45 Abs. 3 GKG.",
+      "quellen": [
+        "§ 261 Abs. 3 Nr. 1 ZPO",
+        "§ 322 Abs. 2 ZPO",
+        "§ 148 ZPO",
+        "§ 45 Abs. 3 GKG",
+        "Themenpool: assessorz-812"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:59.720Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

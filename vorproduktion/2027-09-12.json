@@ -1,0 +1,896 @@
+{
+  "datum": "2027-09-12",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "verwalt-379",
+        "themaTitel": "Wie prüft man die Rechtmäßigkeit eines Verwaltungsakts?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "assessorz-584",
+        "themaTitel": "Prozessvergleich: Inhalt, Kosten, Vollstreckbarkeit",
+        "fach": "assessorz",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "strafat-732"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "strafat-732"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:13",
+        "art": "norm",
+        "themaId": "strafbt-741"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "fehler",
+        "themaId": "schuldbt-914"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "tipp",
+        "themaId": "grundr-377"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "zahl",
+        "themaId": "zwangsv-825"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "verwalt-379",
+      "poolTitel": "Wie prüft man die Rechtmäßigkeit eines Verwaltungsakts?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG",
+        "§ 40 VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-24"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessorz-584",
+      "poolTitel": "Prozessvergleich: Inhalt, Kosten, Vollstreckbarkeit",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 794 I Nr. 1 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-02-06"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-732",
+      "poolTitel": "Beihilfe",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 27 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-12"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-732",
+      "poolTitel": "Beihilfe",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 27 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-12"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-741",
+      "poolTitel": "Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-18",
+        "2027-05-17",
+        "2027-07-21"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "schuldbt-914",
+      "poolTitel": "Wann gibt es Entschädigung für nutzlos aufgewendete Urlaubszeit?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 651n Abs. 2 BGB",
+        "§ 651i Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-28",
+        "2027-05-02",
+        "2027-07-02"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "grundr-377",
+      "poolTitel": "Wann sind Grundrechte für Ausländer und juristische Personen anwendbar?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 19 Abs. 3 GG",
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-04",
+        "2027-05-26",
+        "2027-08-22"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zwangsv-825",
+      "poolTitel": "Welche Voraussetzungen trägt die Zwangsvollstreckung im Grundfall?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 704 ZPO",
+        "§ 724 ZPO",
+        "§ 750 ZPO",
+        "§ 796 Abs. 1 ZPO",
+        "§ 929 Abs. 1 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-01",
+        "2027-07-01",
+        "2027-07-04"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-09-12-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen, ein Selbsttest am Ende",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen, ein",
+            "Selbsttest",
+            "am Ende"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Abtretung: Der Schuldner behält Einwendungen und Aufrechnung (§§ 404, 406 BGB).",
+            "§ 613a BGB: Auftragsnachfolge allein ist kein Betriebsübergang.",
+            "Privatgutachten: qualifizierter Parteivortrag – kein Sachverständigenbeweis.",
+            "Rücktritt ohne Frist: Verweigerung, Arglist, § 440 BGB, Unmöglichkeit.",
+            "Eingriffskondiktion: Unerlaubte Untermiete verletzt nur den Vertrag."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Mittäterschaft: Zurechnung endet am gemeinsamen Tatplan – Exzess trägt jeder allein.",
+            "Beschlagnahme: Beweissicherung (§ 94 StPO) und Einziehungssicherung (§ 111b StPO) trennen.",
+            "Versuch: unmittelbares Ansetzen genügt, das erste Tatbestandsmerkmal ist nicht nötig.",
+            "Strafurteil: Tenor, dann Feststellungen, Beweiswürdigung, Würdigung, Strafzumessung.",
+            "Durchsuchung: Der Beschluss muss konkret sein und verliert mit der Zeit seine Kraft.",
+            "Blutprobe: Bei Trunkenheit im Verkehr keine richterliche Anordnung nötig."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Meinung gegen Ehre: erst deuten, dann abwägen.",
+            "Anfangs rechtswidrig: § 48 VwVfG – später unpassend: § 49 VwVfG.",
+            "Zwangsgeld: Beugemittel, wiederholbar, endet mit Erfüllung.",
+            "Klageart: Muss erst ein Bescheid ergehen? Dann Verpflichtungs-, sonst Leistungsklage.",
+            "Wesentlichkeit: Ein Erlass trägt keinen Schulverweis."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Signalwörter markieren und sofort einem Prüfungspunkt zuordnen.",
+            "Kopfsache: Unbekanntes Problem? Verorten, Wortlaut, Zweck, entscheiden."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Kannst du ohne Unterlagen sagen, wann § 48 und wann § 49 VwVfG greift?",
+            "Kannst du die vier Wege zum Rücktritt ohne Frist aufzählen?",
+            "Was du nicht sofort abrufen kannst, kommt auf die Liste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht über Anspruch und Einwendung",
+            "Strafrecht über Zurechnung und Verfahren",
+            "Öffentliches Recht als Prüfungskette",
+            "Technik und Kopfsache als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "18 Themen aus dieser Woche im Schnelldurchlauf: von der Abtretung über Mittäterexzess und Blutprobe bis zur Wesentlichkeitstheorie. Lies jeden Punkt, deck ihn ab und sag die Regel laut. Was hakt, kommt auf die Liste für nächste Woche. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#jurastudent",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Am Ende der Woche wird alles Gelernte noch einmal sortiert und abgefragt.",
+        "handlung": "{B} sets down a crate filled with eighteen small crystals sorted into four compartments, while {A} points at one compartment with his pointer as if asking a question.",
+        "hinweisRegie": "Place the note in the free space above the sorted crate, slightly tilted toward the compartment being pointed at, so the four groups stay visible without covering the crystals or faces.",
+        "alternative": "{A} holds up a single card from a short stack, while {B} thinks and answers with a raised finger."
+      },
+      "bildSzene": "crate with four crystal compartments",
+      "bildSzeneAlt": "quiz card held up",
+      "quellen": [
+        "Feed-Beiträge 2027-09-06 bis 2027-09-11"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:32.383Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-379",
+      "slug": "2027-09-12-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "VA rechtmäßig? Drei Ebenen, eine feste Reihenfolge",
+          "titelZeilen": [
+            "VA rechtmäßig?",
+            "Drei Ebenen, eine",
+            "feste Reihenfolge"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Erst die Grundlage, dann die Form",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Ob ein Verwaltungsakt (§ 35 VwVfG) rechtmäßig ist, prüfst du in drei Ebenen: Ermächtigungsgrundlage, formelle und materielle Rechtmäßigkeit. Die Reihenfolge ist kein Selbstzweck – erst die Grundlage zeigt, welche Behörde zuständig ist und welche Voraussetzungen du prüfen musst."
+        },
+        {
+          "art": "schritte",
+          "titel": "Ebene 1 und 2",
+          "schritte": [
+            {
+              "titel": "1. Ermächtigungsgrundlage",
+              "text": "Belastende VAs brauchen eine gesetzliche Grundlage (Vorbehalt des Gesetzes). Spezialgesetz vor Generalklausel."
+            },
+            {
+              "titel": "2a. Zuständigkeit",
+              "text": "Sachlich, örtlich (vgl. § 3 VwVfG) und instanziell – nach dem Fachgesetz und dem jeweiligen Landesrecht."
+            },
+            {
+              "titel": "2b. Verfahren",
+              "text": "Vor allem Anhörung (§ 28 VwVfG). Nachholung bis zum Abschluss der letzten Tatsacheninstanz möglich (§ 45 VwVfG)."
+            },
+            {
+              "titel": "2c. Form",
+              "text": "Schriftlicher VA: Begründung nach § 39 VwVfG, im Ermessensfall mit den leitenden Gesichtspunkten."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Ebene 3",
+          "schritte": [
+            {
+              "titel": "3a. Tatbestand",
+              "text": "Liegen die Voraussetzungen der Ermächtigungsgrundlage vor? Richtiger Adressat?"
+            },
+            {
+              "titel": "3b. Rechtsfolge",
+              "text": "Gebunden oder Ermessen? Ermessensfehler nach § 40 VwVfG, gerichtlich § 114 S. 1 VwGO."
+            },
+            {
+              "titel": "3c. Allgemeine Anforderungen",
+              "text": "Hinreichend bestimmt (§ 37 Abs. 1 VwVfG), verhältnismäßig, tatsächlich und rechtlich möglich."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Stolperstelle",
+          "text": "Wer mit der Anhörung beginnt, weiß noch nicht, welches Gesetz die Zuständigkeit regelt. Und § 46 VwVfG heilt nichts: Er schließt nur den Aufhebungsanspruch aus, wenn der Fehler die Entscheidung offensichtlich nicht beeinflusst hat. Den Verfahrensfehler selbst stellst du trotzdem fest."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Grundlage – Form – Inhalt. Erst die Ermächtigungsgrundlage sagt dir, was formell und materiell zu prüfen ist."
+        },
+        {
+          "art": "cta",
+          "titel": "VA-Prüfung in drei Ebenen",
+          "punkte": [
+            "Welche Ermächtigungsgrundlage?",
+            "Zuständigkeit, Verfahren, Form?",
+            "Tatbestand, Rechtsfolge, Bestimmtheit?"
+          ],
+          "icons": [
+            "paragraf",
+            "dokument",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Rechtmäßigkeit eines Verwaltungsakts in drei Ebenen: Ermächtigungsgrundlage, formelle Rechtmäßigkeit mit Zuständigkeit, Verfahren und Form, dann materielle Rechtmäßigkeit mit Tatbestand, Rechtsfolge und Bestimmtheit. Die Reihenfolge hat einen Grund: Erst die Grundlage sagt dir, was du prüfen musst. Speichern für die nächste Klausur im Verwaltungsrecht.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#verwaltungsakt",
+        "#vwvfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "VA-Prüfung: drei Ebenen, feste Reihenfolge",
+      "coverText": "Erst die Grundlage, dann die Form",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Die Prüfung eines Verwaltungsakts baut sich in drei Ebenen auf, und die unterste trägt alles andere.",
+        "handlung": "{A} hovers and places a third, top level onto a small three-level scaffold, while {B} steadies the bottom level with both hands.",
+        "hinweisRegie": "Place the note in the free space beside the bottom level of the scaffold, slightly tilted upward toward the top, so the order of levels is clear without covering hands or faces.",
+        "alternative": "{B} climbs a short ladder with three rungs, while {A} holds the base steady."
+      },
+      "bildSzene": "three-level scaffold, base steadied",
+      "bildSzeneAlt": "three-rung ladder held steady",
+      "quellen": [
+        "§ 35 VwVfG",
+        "§ 28 VwVfG",
+        "§ 37 VwVfG",
+        "§ 39 VwVfG",
+        "§ 40 VwVfG",
+        "§ 45 VwVfG",
+        "§ 46 VwVfG",
+        "§ 114 VwGO",
+        "Themenpool: verwalt-379"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-ebenen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:32.383Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-584",
+      "slug": "2027-09-12-b3",
+      "titelZeilen": [
+        "Vergleich",
+        "angefochten – wo",
+        "wird jetzt",
+        "gestritten?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vergleich angefochten – wo wird jetzt gestritten?",
+          "unter": "Prozessvergleich · § 794 Abs. 1 Nr. 1 ZPO",
+          "text": "Ist der Vergleich unwirksam, ist der alte Prozess nie beendet worden.",
+          "norm": "§ 779 BGB",
+          "icon": "handschlag",
+          "sprecher": "Angefochtener Vergleich? Dann meist keine neue Klage. Der alte Prozess läuft weiter. Warum das so ist und wann doch neu geklagt werden muss, zeigt dir die Doppelnatur des Prozessvergleichs.",
+          "marken": [
+            "alter Prozess"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Doppelnatur",
+          "text": "Prozesshandlung und materiell-rechtlicher Vertrag zugleich.",
+          "norm": "§ 779 BGB",
+          "sprecher": "Schritt eins: die Doppelnatur. Der Prozessvergleich ist zugleich Prozesshandlung und materiell-rechtlicher Vertrag nach Paragraf 779 BGB. Als Prozesshandlung beendet er den Rechtsstreit, soweit er reicht. Zugleich ist er Vollstreckungstitel.",
+          "marken": [
+            "zwei Seiten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Form",
+          "text": "Protokolliert, vorgelesen und genehmigt – oder per Beschluss.",
+          "norm": "§ 278 Abs. 6 ZPO",
+          "sprecher": "Schritt zwei: die Form. Der Vergleich wird im Termin protokolliert, vorgelesen und genehmigt. Oder die Parteien nehmen einen schriftlichen Vorschlag an, und das Gericht stellt das per Beschluss fest.",
+          "marken": [
+            "Protokoll"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Von Anfang an unwirksam",
+          "text": "Anfechtung oder Nichtigkeit: Der Prozess war nie beendet.",
+          "norm": "§ 142 Abs. 1 BGB",
+          "sprecher": "Schritt drei: Der Vergleich ist von Anfang an unwirksam, etwa nach einer Anfechtung. Dann entfällt auch die prozessbeendende Wirkung. Die Partei beantragt, das alte Verfahren fortzusetzen, und das Gericht klärt dort die Wirksamkeit.",
+          "marken": [
+            "fortsetzen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Später weggefallen",
+          "text": "Rücktritt oder Aufhebung: Die Beendigung bleibt – neue Klage.",
+          "norm": null,
+          "sprecher": "Schritt vier: Fällt der Vergleich erst nachträglich weg, etwa durch Rücktritt oder einen Aufhebungsvertrag, bleibt der alte Prozess nach dem BGH beendet. Dann muss neu geklagt werden.",
+          "marken": [
+            "neue Klage"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Tenor im zweiten Examen",
+          "text": "Wirksam? „Der Rechtsstreit ist durch den Vergleich vom … erledigt.“",
+          "norm": null,
+          "sprecher": "Und im Urteil? Hält das Gericht den Vergleich für wirksam, stellt es fest, dass der Rechtsstreit durch den Vergleich erledigt ist. Ist er unwirksam, entscheidet es in der Sache.",
+          "marken": [
+            "Feststellung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Anfänglich unwirksam: fortsetzen. Später weggefallen: neu klagen.",
+          "norm": "§ 794 Abs. 1 Nr. 1 ZPO",
+          "sprecher": "Merke: von Anfang an unwirksam heißt fortsetzen. Später weggefallen heißt neu klagen.",
+          "marken": [
+            "fortsetzen vs. neu"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speicher dir das für die Relation",
+          "text": "Für die nächste Zivilrechtsklausur im Referendariat.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im Referendariat.",
+          "marken": [
+            "2. Examen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Vergleich angefochten – und jetzt? Ist der Prozessvergleich von Anfang an unwirksam, etwa nach einer Anfechtung, wird der alte Prozess fortgesetzt: Die prozessbeendende Wirkung ist nie eingetreten. Fällt er erst später weg, etwa durch Rücktritt, bleibt der Prozess nach dem BGH beendet – dann ist neu zu klagen. Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#prozessvergleich",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vergleich angefochten: fortsetzen statt neu",
+      "coverText": "Fortsetzen oder neu klagen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Ist ein Prozessvergleich von Anfang an unwirksam, geht der alte Streit einfach weiter.",
+        "handlung": "{A} tears a handshake agreement in two, and {B} calmly reopens the door of the room where the dispute had ended.",
+        "hinweisRegie": "Place the note in the free space between the torn agreement and the reopened door, slightly tilted toward the door, so the return to the old room is visible without covering hands or faces.",
+        "alternative": "{B} picks up a paused board game and resumes it, while {A} holds a torn handshake card."
+      },
+      "bildSzene": "torn agreement, reopened door",
+      "bildSzeneAlt": "paused board game resumed",
+      "quellen": [
+        "§ 794 Abs. 1 Nr. 1 ZPO",
+        "§ 278 Abs. 6 ZPO",
+        "§ 160 ZPO",
+        "§ 162 ZPO",
+        "§ 779 BGB",
+        "§ 142 BGB",
+        "Themenpool: assessorz-584"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "fallfrage-verfahrensweg",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:32.384Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-732",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "T kauft bei V ein Brecheisen und sagt offen, er breche damit heute Nacht beim Nachbarn ein. Beihilfe des V?",
+      "optionen": [
+        "Nein, der Verkauf ist eine Alltagshandlung",
+        "Nein, T hätte das Brecheisen auch woanders bekommen",
+        "Ja, V weiß, dass T das Werkzeug für die Tat will"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 27 StGB",
+        "Themenpool: strafat-732"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:32.384Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-732",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – wer den Tatplan kennt, leistet keine neutrale Hilfe mehr",
+      "text": "Nach dem BGH verliert eine Alltagshandlung ihren neutralen Charakter, wenn das Handeln des Täters ausschließlich auf eine Straftat zielt und der Helfer das weiß. Hält er die Tat nur für möglich, ist Beihilfe regelmäßig zu verneinen – außer das Risiko war erkennbar hoch. Dass T sich das Werkzeug anderswo hätte beschaffen können, ändert nichts: Förderung der Tat genügt.",
+      "norm": "§ 27 Abs. 1 StGB",
+      "quellen": [
+        "§ 27 StGB",
+        "Themenpool: strafat-732"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:32.384Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein, der Verkauf ist eine Alltagshandlung",
+        "Nein, T hätte das Brecheisen auch woanders bekommen",
+        "Ja, V weiß, dass T das Werkzeug für die Tat will"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-741",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 226 StGB: Für die schwere Folge reicht Fahrlässigkeit",
+      "text": "Abs. 1 knüpft an eine Körperverletzung schwere Folgen wie den Verlust des Sehvermögens oder eines wichtigen Glieds. Für die Folge genügt Fahrlässigkeit (§ 18 StGB). Verursacht der Täter sie absichtlich oder wissentlich, greift Abs. 2 mit einer Mindeststrafe von drei Jahren.",
+      "norm": "§ 226 StGB · § 18 StGB",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 226 StGB",
+        "§ 18 StGB",
+        "Themenpool: strafbt-741"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:32.384Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-914",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Baulärm statt Erholung, die Reise lief aber: Mehr als Minderung?",
+      "falsch": "Geld für nutzlos aufgewendete Urlaubszeit gibt es nur, wenn die Reise ganz ausfällt. Findet sie statt, wenn auch mit Mängeln, bleibt es bei der Minderung.",
+      "richtigText": "§ 651n Abs. 2 BGB erfasst nicht nur die vereitelte, sondern auch die erheblich beeinträchtigte Pauschalreise. Dann kann der Reisende neben der Minderung (§ 651m BGB) eine angemessene Entschädigung in Geld verlangen. Ob die Beeinträchtigung erheblich ist, entscheidet eine Gesamtwürdigung der Mängel.",
+      "quellen": [
+        "§ 651m BGB",
+        "§ 651n Abs. 2 BGB",
+        "Themenpool: schuldbt-914"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:32.384Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-377",
+      "ueberzeile": "Klausurtipp Grundrechte",
+      "titel": "Gemeinde rügt Art. 103 Abs. 1 GG: Nicht vorschnell die Beschwerdefähigkeit verneinen",
+      "text": "Juristische Personen des öffentlichen Rechts sind grundsätzlich nicht grundrechtsfähig. Anders bei den Prozessgrundrechten aus Art. 101 Abs. 1 S. 2 und Art. 103 Abs. 1 GG: Sie schützen nach dem BVerfG jeden, der an einem gerichtlichen Verfahren beteiligt ist – auch Gemeinden und ausländische juristische Personen. Prüfe die Grundrechtsfähigkeit also je gerügtem Recht.",
+      "quellen": [
+        "Art. 19 Abs. 3 GG",
+        "Art. 101 Abs. 1 GG",
+        "Art. 103 Abs. 1 GG",
+        "Themenpool: grundr-377"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:32.384Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-825",
+      "ueberzeile": "4 Punkte Zwangsvollstreckung",
+      "titel": "Urteil nur gegen Sicherheit vollstreckbar: Das brauchst du vor dem Start",
+      "text": "Zu den allgemeinen Voraussetzungen kommt ein weiterer Nachweis – oder du wählst den kleineren Weg.",
+      "punkte": [
+        "Titel mit Klausel (§§ 704, 724 ZPO)",
+        "Zustellung spätestens mit Beginn (§ 750 Abs. 1 ZPO)",
+        "Sicherheit geleistet und durch öffentliche Urkunde nachgewiesen (§ 751 Abs. 2 ZPO)",
+        "Ohne Sicherheit nur Sicherungsvollstreckung (§ 720a ZPO), frühestens zwei Wochen nach Zustellung"
+      ],
+      "quellen": [
+        "§ 704 ZPO",
+        "§ 720a ZPO",
+        "§ 724 ZPO",
+        "§ 750 ZPO",
+        "§ 751 ZPO",
+        "Themenpool: zwangsv-825"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:32.384Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

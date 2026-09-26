@@ -1,0 +1,865 @@
+{
+  "datum": "2027-04-29",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "handelsg-266",
+        "themaTitel": "Was ist die kaufmännische Rügeobliegenheit?",
+        "fach": "handelsg",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "strafat-302",
+        "themaTitel": "Wie grenzt man Tun und Unterlassen ab?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-638",
+        "themaTitel": "Nebenbestimmungen",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:25",
+        "art": "frage",
+        "themaId": "staat-635"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:25",
+        "art": "antwort",
+        "themaId": "staat-635"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:04",
+        "art": "norm",
+        "themaId": "strafbt-070"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "streitstand",
+        "themaId": "streit-24"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:43",
+        "art": "merksatz",
+        "themaId": "sachen-233"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "begriff",
+        "themaId": "verwalt-141"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "handelsg-266",
+      "poolTitel": "Was ist die kaufmännische Rügeobliegenheit?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 377 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-28"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "strafat-302",
+      "poolTitel": "Wie grenzt man Tun und Unterlassen ab?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-08",
+        "2027-04-21"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-638",
+      "poolTitel": "Nebenbestimmungen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 36 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-06"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-635",
+      "poolTitel": "Konkrete Normenkontrolle",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 I GG; §§ 80 ff. BVerfGG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-17"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-635",
+      "poolTitel": "Konkrete Normenkontrolle",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 I GG; §§ 80 ff. BVerfGG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-17"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-070",
+      "poolTitel": "Wie grenzt man Diebstahl und Betrug ab?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB",
+        "§ 263 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-28",
+        "2027-02-02",
+        "2027-04-06"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-24",
+      "poolTitel": "Kostentragung bei Anscheinsgefahr und Gefahrenverdacht",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizei- und Ordnungsrecht der Länder"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "sachen-233",
+      "poolTitel": "Was ist die Sicherungsgrundschuld und welche Einreden hat der Eigentümer?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1191 BGB",
+        "§ 1192 Abs. 1a BGB",
+        "§ 1157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-01",
+        "2026-11-17"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "verwalt-141",
+      "poolTitel": "Wann liegt ein Verwaltungsakt vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-11",
+        "2026-12-11",
+        "2026-12-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "handelsg",
+      "klausur": 1,
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "themaId": "handelsg-266",
+      "slug": "2027-04-29-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Rüge erst nach Tagen angekommen? Die Absendung zählt",
+          "titelZeilen": [
+            "Rüge erst nach",
+            "Tagen angekommen?",
+            "Die Absendung",
+            "zählt"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Absendung wahrt die Frist",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Wann § 377 HGB gilt",
+          "punkte": [
+            "Kauf, der für beide Seiten ein Handelsgeschäft ist (§§ 343, 344 HGB)",
+            "Auch Werklieferungsverträge über bewegliche Sachen (§ 381 Abs. 2 HGB)",
+            "Ablieferung der Ware und ein Mangel – auch Falschlieferung (§ 434 Abs. 5 BGB) und Mengenabweichung"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Was der Käufer tun muss",
+          "punkte": [
+            "Unverzüglich nach Ablieferung untersuchen, soweit im ordnungsgemäßen Geschäftsgang tunlich",
+            "Offene Mängel unverzüglich anzeigen (§ 377 Abs. 1 HGB)",
+            "Versteckte Mängel unverzüglich nach Entdeckung anzeigen (§ 377 Abs. 3 HGB)"
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Rechtzeitig gerügt?",
+          "links": {
+            "titel": "Absendung",
+            "punkte": [
+              "Die rechtzeitige Absendung wahrt die Frist (§ 377 Abs. 4 HGB).",
+              "Das Verzögerungsrisiko trägt der Verkäufer."
+            ]
+          },
+          "rechts": {
+            "titel": "Zugang",
+            "punkte": [
+              "Nach dem BGH muss die Rüge dem Verkäufer aber zugehen.",
+              "Das Verlustrisiko bleibt damit beim Käufer."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Folge und Ausnahme",
+          "punkte": [
+            "Versäumt: Die Ware gilt als genehmigt (§ 377 Abs. 2, 3 HGB) – die Mängelrechte entfallen",
+            "Ausnahme: Der Verkäufer hat den Mangel arglistig verschwiegen (§ 377 Abs. 5 HGB)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beiderseitiger Handelskauf: untersuchen, unverzüglich rügen, rechtzeitig absenden. Sonst gilt die Ware als genehmigt – außer bei Arglist."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 377 HGB in drei Fragen",
+          "punkte": [
+            "Beide Seiten Kaufleute?",
+            "Unverzüglich gerügt?",
+            "Arglist des Verkäufers?"
+          ],
+          "icons": [
+            "handschlag",
+            "uhr",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Die Rüge kommt erst nach Tagen beim Verkäufer an – zu spät? Nicht unbedingt: Nach § 377 Abs. 4 HGB genügt die rechtzeitige Absendung. Zugehen muss sie nach dem BGH aber trotzdem. Dazu der Rest auf einen Blick: beiderseitiges Handelsgeschäft, unverzügliche Untersuchung und Rüge, Genehmigungsfiktion und die Ausnahme bei Arglist. Speichern für die nächste Handelsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#handelsrecht",
+        "#377hgb",
+        "#kaufrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 377 HGB: die Rügeobliegenheit kompakt",
+      "coverText": "Absendung wahrt die Frist",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Für die Frist zählt, wann die Rüge abgeschickt wurde – auch wenn sie spät ankommt.",
+        "handlung": "{A} drops a sealed message capsule into a pneumatic tube just before a small clock strikes, while {B} waits far away at the slow, winding end of the tube.",
+        "hinweisRegie": "Place the note in the free space next to the tube entrance and the clock, slightly tilted toward the capsule, so the moment of sending stands out without covering {A}'s hand or the clock face.",
+        "alternative": "{B} holds a crate with a visibly broken part while {A} already runs toward a mailbox with a hastily written note."
+      },
+      "bildSzene": "capsule sent before clock strikes",
+      "bildSzeneAlt": "broken crate, runner to mailbox",
+      "quellen": [
+        "§ 377 HGB",
+        "§ 381 Abs. 2 HGB",
+        "§§ 343, 344 HGB",
+        "§ 434 Abs. 5 BGB",
+        "Themenpool: handelsg-266"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:50.267Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-302",
+      "slug": "2027-04-29-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nicht desinfiziert heißt nicht: Unterlassen",
+          "titelZeilen": [
+            "Nicht desinfiziert",
+            "heißt nicht:",
+            "Unterlassen"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Fehlende Sorgfalt ist kein Unterlassen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Fabrikant F gibt Ziegenhaare an seine Arbeiterinnen aus, ohne sie vorschriftsmäßig zu desinfizieren. Mehrere erkranken. Hat F etwas getan – oder nur die Desinfektion unterlassen? Davon hängt ab, ob du § 13 StGB mit Garantenstellung prüfen musst."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Tun oder Unterlassen?",
+          "links": {
+            "titel": "Aktives Tun",
+            "punkte": [
+              "Energieeinsatz in Richtung Erfolg",
+              "Kausalität nach der Äquivalenzformel",
+              "Kein § 13 StGB, keine Garantenstellung"
+            ]
+          },
+          "rechts": {
+            "titel": "Unterlassen",
+            "punkte": [
+              "Gebotene Handlung wird nicht vorgenommen",
+              "Rettung mit an Sicherheit grenzender Wahrscheinlichkeit",
+              "§ 13 StGB: Garantenstellung, Möglichkeit, Zumutbarkeit"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Das Kriterium",
+          "text": "Die Rspr. fragt wertend nach dem Schwerpunkt der Vorwerfbarkeit, Teile der Lehre nach dem Energieeinsatz. Bei Fahrlässigkeit liegt der Schwerpunkt meist im Tun: Vorgeworfen wird das Handeln ohne die gebotene Sorgfalt – nicht das Unterlassen der Sorgfalt."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "F hat die Haare ausgegeben – ein aktives Tun. Die fehlende Desinfektion ist der Sorgfaltsverstoß dieses Tuns. Zu prüfen ist also § 229 StGB durch Tun, ohne Garantenstellung. Wäre es auch bei Desinfektion zu den Erkrankungen gekommen, wird der Pflichtwidrigkeitszusammenhang zum Problem."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht jedes „nicht getan“ ist Unterlassen. Beim Fahrlässigkeitsdelikt ist fehlende Sorgfalt meist nur die Pflichtwidrigkeit eines Tuns."
+        },
+        {
+          "art": "cta",
+          "titel": "Erst abgrenzen, dann prüfen",
+          "punkte": [
+            "Wo liegt der Schwerpunkt?",
+            "Tun: Äquivalenzformel",
+            "Unterlassen: § 13 StGB"
+          ],
+          "icons": [
+            "lupe",
+            "blitz",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Nicht desinfiziert – also ein Unterlassen? Meist nicht. Die Rspr. grenzt Tun und Unterlassen nach dem Schwerpunkt der Vorwerfbarkeit ab. Beim Fahrlässigkeitsdelikt liegt er regelmäßig im Tun: Vorgeworfen wird das Handeln ohne die gebotene Sorgfalt. Dann brauchst du keine Garantenstellung nach § 13 StGB, sondern die Äquivalenzformel und den Pflichtwidrigkeitszusammenhang. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#unterlassen",
+        "#13stgb",
+        "#fahrlässigkeit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Tun oder Unterlassen: der Schwerpunkt entscheidet",
+      "coverText": "Fehlende Sorgfalt ist kein Unterlassen",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Wer etwas Gefährliches ohne die nötige Vorsicht weitergibt, handelt – er unterlässt nicht bloß die Vorsicht.",
+        "handlung": "{B} hands a bundle of raw fibres across a workbench, while {A} points his pointer at the unused cleaning basin standing right beside the bundle.",
+        "hinweisRegie": "Place the note in the free space between the handed-over bundle and the unused basin, slightly tilted toward the handing gesture, so the active handing stands out without covering the basin or {B}'s face.",
+        "alternative": "{A} shows that a lever {B} actively pulled started a machine, while a safety switch next to it was simply never flipped."
+      },
+      "bildSzene": "fibres handed over, basin unused",
+      "bildSzeneAlt": "lever pulled, safety switch untouched",
+      "quellen": [
+        "§ 13 StGB",
+        "§ 229 StGB",
+        "§ 222 StGB",
+        "Themenpool: strafat-302"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:50.267Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-638",
+      "slug": "2027-04-29-b3",
+      "titelZeilen": [
+        "Nur die Bedingung",
+        "stört: allein",
+        "anfechten?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nur die Bedingung stört: allein anfechten?",
+          "unter": "Nebenbestimmungen · § 36 VwVfG",
+          "text": "Nach dem BVerwG ist die isolierte Anfechtung der Regelfall.",
+          "norm": "§ 36 VwVfG",
+          "icon": "schloss",
+          "sprecher": "Nur die Bedingung stört – darfst du sie allein anfechten? Nach dem Bundesverwaltungsgericht grundsätzlich ja, egal welche Nebenbestimmung.",
+          "marken": [
+            "isoliert",
+            "alle Arten"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Arten",
+          "text": "Befristung, Bedingung, Widerrufsvorbehalt – Auflage, Auflagenvorbehalt.",
+          "norm": "§ 36 Abs. 2 VwVfG",
+          "sprecher": "Schritt eins: die Arten. Befristung, Bedingung und Widerrufsvorbehalt sind Teil des Verwaltungsakts. Auflage und Auflagenvorbehalt treten hinzu und verlangen ein eigenes Tun, Dulden oder Unterlassen.",
+          "marken": [
+            "Teil oder Zusatz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Durfte die Behörde das?",
+          "text": "Gebunden: nur nach § 36 Abs. 1. Ermessen: nach § 36 Abs. 2.",
+          "norm": "§ 36 Abs. 1, 2 VwVfG",
+          "sprecher": "Schritt zwei: die Zulässigkeit. Besteht ein Anspruch auf den Verwaltungsakt, nur wenn eine Rechtsvorschrift es zulässt oder die Nebenbestimmung die gesetzlichen Voraussetzungen sichert. Sonst nach pflichtgemäßem Ermessen.",
+          "marken": [
+            "Anspruch?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Klageart",
+          "text": "Anfechtungsklage – außer die isolierte Aufhebung scheidet offenkundig aus.",
+          "norm": "§ 42 Abs. 1 VwGO",
+          "sprecher": "Schritt drei: der Rechtsschutz. Gegen belastende Nebenbestimmungen ist grundsätzlich die Anfechtungsklage statthaft. Unzulässig ist sie nur, wenn eine isolierte Aufhebung offenkundig ausscheidet.",
+          "marken": [
+            "Anfechtung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Kann der Rest allein stehen?",
+          "text": "Der Rest-VA muss sinnvoll und rechtmäßig bestehen bleiben können.",
+          "norm": "§ 113 Abs. 1 S. 1 VwGO",
+          "sprecher": "Schritt vier: die Begründetheit. Die Nebenbestimmung muss rechtswidrig sein, und der übrige Verwaltungsakt muss ohne sie sinnvoll und rechtmäßig bestehen bleiben können.",
+          "marken": [
+            "Teilbarkeit"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Gegenansicht",
+          "text": "Teile der Lit.: Bei Bedingung und Befristung nur Verpflichtungsklage.",
+          "norm": null,
+          "sprecher": "Teile der Literatur unterscheiden: Die Auflage greifst du isoliert an. Bei Bedingung und Befristung verlangen sie eine Verpflichtungsklage auf einen Verwaltungsakt ohne Einschränkung.",
+          "marken": [
+            "Streit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Anfechtung ist der Regelfall – ob die Nebenbestimmung allein fällt, klärt die Begründetheit.",
+          "norm": null,
+          "sprecher": "Merke: Die Anfechtungsklage gegen die Nebenbestimmung ist der Regelfall. Ob sie allein fällt, entscheidest du in der Begründetheit.",
+          "marken": [
+            "Regelfall"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Kann der Rest allein stehen?",
+          "text": "Speichern für die nächste Genehmigungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur mit Genehmigung und Nebenbestimmung. Und frag immer: Kann der Rest allein stehen?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Nur die Bedingung stört – kannst du sie allein anfechten? Nach dem BVerwG ist gegen belastende Nebenbestimmungen grundsätzlich die Anfechtungsklage statthaft, gleich welcher Art. Ob die Nebenbestimmung isoliert aufgehoben wird, klärt die Begründetheit: Sie muss rechtswidrig sein, und der Rest-VA muss sinnvoll und rechtmäßig bestehen bleiben können. Teile der Literatur verlangen bei Bedingung und Befristung eine Verpflichtungsklage. Speichern für die nächste Genehmigungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#nebenbestimmung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nebenbestimmung isoliert anfechten?",
+      "coverText": "Anfechtung ist der Regelfall",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Eine störende Nebenbestimmung kann man meist allein angreifen, wenn der Rest des Bescheids ohne sie stehen bleibt.",
+        "handlung": "{A} carefully unhooks one heavy padlock from a chain on an open gate, while {B} hovers beside the gate and checks that the gate stays upright without it.",
+        "hinweisRegie": "Place the note in the free space next to the removed padlock in {A}'s hand, slightly tilted toward the still standing gate, so the separability stands out without covering {B} or the chain.",
+        "alternative": "{B} snips a single tag off a permit banner while {A} holds the rest of the banner, which still hangs straight."
+      },
+      "bildSzene": "padlock removed, gate stays upright",
+      "bildSzeneAlt": "tag snipped off banner",
+      "quellen": [
+        "§ 36 VwVfG",
+        "§ 42 Abs. 1 VwGO",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "Themenpool: verwalt-638"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:50.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-635",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Das VG hält eine Rechtsverordnung des Bundes für verfassungswidrig. Muss es nach Art. 100 Abs. 1 GG vorlegen?",
+      "optionen": [
+        "Ja – jede Bundesnorm geht zur Prüfung nach Karlsruhe",
+        "Ja, wenn die Verordnung nach 1949 erlassen wurde",
+        "Nein – untergesetzliche Normen verwirft das VG selbst"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 100 Abs. 1 GG",
+        "§§ 80 ff. BVerfGG",
+        "Themenpool: staat-635"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:50.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-635",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – das Verwerfungsmonopol gilt nur für förmliche Gesetze",
+      "text": "Art. 100 Abs. 1 GG erfasst nur formelle, nachkonstitutionelle Gesetze – er schützt die Autorität des parlamentarischen Gesetzgebers. Rechtsverordnungen und Satzungen prüft das Fachgericht selbst und wendet sie nicht an, wenn es sie für nichtig hält. Auch vorkonstitutionelles Recht verwirft es selbst, außer der Gesetzgeber hat es nach 1949 in seinen Willen aufgenommen.",
+      "norm": "Art. 100 Abs. 1 GG",
+      "quellen": [
+        "Art. 100 Abs. 1 GG",
+        "§§ 80 ff. BVerfGG",
+        "Themenpool: staat-635"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:50.269Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – jede Bundesnorm geht zur Prüfung nach Karlsruhe",
+        "Ja, wenn die Verordnung nach 1949 erlassen wurde",
+        "Nein – untergesetzliche Normen verwirft das VG selbst"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-070",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§§ 242, 263 StGB: Über versteckte Ware verfügt die Kassiererin nicht",
+      "text": "Versteckt A Ware im Einkaufswagen und zahlt nur den Rest, fehlt nach h.M. eine Vermögensverfügung über die versteckte Ware: Die Kassiererin hat kein Verfügungsbewusstsein für eine Sache, die sie nicht wahrnimmt. A bricht den Gewahrsam des Marktes – Diebstahl, kein Betrug.",
+      "norm": "§§ 242, 263 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 263 StGB",
+        "Themenpool: strafbt-070"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:50.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "streit-24",
+      "ueberzeile": "Streitstand Polizeirecht",
+      "titel": "Anscheinsstörer: Muss er die Kosten des Einsatzes tragen?",
+      "norm": "Polizei- und Ordnungsrecht der Länder",
+      "optionen": [
+        "H.M.: Kostenebene ex post – zahlen muss nur, wer den Anschein zurechenbar veranlasst hat.",
+        "Andere Ansicht: Wer Störer war, trägt auch die Kosten – ex ante wie bei der Maßnahme."
+      ],
+      "text": "Klausur: Primär- und Kostenebene trennen. Die Maßnahme gegen den Anscheinsstörer ist rechtmäßig. Hat er den Anschein nicht zu verantworten, trägt er nach h.M. keine Kosten – je nach Landesrecht ggf. sogar Entschädigung wie ein Nichtstörer. Beim Gefahrenverdacht gilt Entsprechendes.",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder (Kosten- und Entschädigungsvorschriften)"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:50.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-233",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "Grundschuld: Einwände nur über den Sicherungsvertrag",
+      "text": "Nicht akzessorisch: § 1137 BGB gilt nicht (§ 1192 Abs. 1 BGB). Einwände gegen die Forderung helfen nur als Einrede aus dem Sicherungsvertrag – auch gegen Erwerber (§ 1192 Abs. 1a BGB).",
+      "norm": "§ 1192 Abs. 1, 1a BGB",
+      "quellen": [
+        "§ 1191 BGB",
+        "§ 1192 BGB",
+        "§ 1157 BGB",
+        "Themenpool: sachen-233"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:50.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-141",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Außenwirkung: Umsetzung nein, Versetzung ja",
+      "text": "Außenwirkung hat eine Maßnahme, die auf Rechtsfolgen außerhalb der Verwaltung zielt (§ 35 S. 1 VwVfG). Die Umsetzung eines Beamten innerhalb seiner Behörde betrifft nur seinen Dienstposten – kein VA. Die Versetzung zu einer anderen Behörde trifft ihn in seinem Amt und damit persönlich – ein VA.",
+      "norm": "§ 35 S. 1 VwVfG",
+      "quellen": [
+        "§ 35 VwVfG",
+        "Themenpool: verwalt-141"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:50.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,877 @@
+{
+  "datum": "2027-05-18",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "strafbt-334",
+        "themaTitel": "Wie unterscheidet man Missbrauchs- und Treubruchtatbestand der Untreue?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "assessoroer-710",
+        "themaTitel": "Anwaltsklausur: verwaltungsrechtliches Gutachten und Mandantenschreiben",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-449",
+        "themaTitel": "Rücktritt trotz Pflichtverletzung vor Fälligkeit",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "sachen-510"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "sachen-510"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "strafat-727"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:32",
+        "art": "zahl",
+        "themaId": "ipr-889"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:51",
+        "art": "streitstand",
+        "themaId": "assessorz-822"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "merksatz",
+        "themaId": "strafbt-337"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "strafbt-334",
+      "poolTitel": "Wie unterscheidet man Missbrauchs- und Treubruchtatbestand der Untreue?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-31",
+        "2027-01-27",
+        "2027-05-06"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "assessoroer-710",
+      "poolTitel": "Anwaltsklausur: verwaltungsrechtliches Gutachten und Mandantenschreiben",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-27",
+        "2027-01-25",
+        "2027-04-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-449",
+      "poolTitel": "Rücktritt trotz Pflichtverletzung vor Fälligkeit",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 323 IV BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-26",
+        "2027-02-27"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-510",
+      "poolTitel": "Grundstücksübereignung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 873, 925 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-01",
+        "2027-03-01",
+        "2027-05-11"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-510",
+      "poolTitel": "Grundstücksübereignung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 873, 925 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-01",
+        "2027-03-01",
+        "2027-05-11"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-727",
+      "poolTitel": "Unmittelbares Ansetzen",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-07"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "ipr-889",
+      "poolTitel": "In welcher Reihenfolge prüft man einen Fall mit Auslandsbezug?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "EuGVVO",
+        "Rom I-VO",
+        "EGBGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-27",
+        "2027-03-18"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessorz-822",
+      "poolTitel": "Wie entstehen Anwaltsgebühren im Zivilprozess?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "RVG",
+        "§ 91 ZPO"
+      ],
+      "typ": "formel",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2027-01-12",
+        "2027-03-17"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "strafbt-337",
+      "poolTitel": "Was ist Hehlerei und wann liegt sie vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 259 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2026-12-13",
+        "2027-02-12"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-334",
+      "slug": "2027-05-18-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fremde Geldstrafe bezahlt – und nichts vereitelt",
+          "titelZeilen": [
+            "Fremde Geldstrafe",
+            "bezahlt – und",
+            "nichts vereitelt"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Vollstreckt ist vollstreckt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "A ist rechtskräftig zu einer Geldstrafe verurteilt. Sein Freund F überweist den Betrag an die Staatskasse, damit A nicht selbst zahlen muss. Vollstreckungsvereitelung nach § 258 Abs. 2 StGB? Die Strafe soll A persönlich treffen – aber der Staat hat sein Geld."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Vereitelt die Zahlung die Vollstreckung?",
+          "links": {
+            "titel": "BGH",
+            "punkte": [
+              "Nein – der Staat erhält, was das Urteil verlangt",
+              "§ 258 Abs. 2 schützt die Vollstreckung, nicht die persönliche Last"
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Ja – die Geldstrafe ist höchstpersönlich",
+              "Ihr Strafzweck geht verloren, wenn ein Dritter zahlt"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme",
+          "text": "Für den BGH spricht der Wortlaut: Vereitelt ist nur, was nicht vollstreckt wird – hier fließt der volle Betrag. Zudem ließe sich kaum abgrenzen, ob schon ein Geschenk oder Darlehen vor der Zahlung erfasst wäre. Mit dem BGH ist § 258 Abs. 2 StGB zu verneinen."
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "punkte": [
+            "§ 258 Abs. 1 StGB betrifft die Verfolgung, Abs. 2 die Vollstreckung",
+            "Handelt der Täter zugunsten eines Angehörigen, ist er straffrei (§ 258 Abs. 6 StGB)",
+            "Wer zugleich die eigene Bestrafung vereiteln will, bleibt straflos (§ 258 Abs. 5 StGB)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nach dem BGH vereitelt nicht, wer eine fremde Geldstrafe bezahlt – der Staat bekommt, was ihm zusteht."
+        },
+        {
+          "art": "cta",
+          "titel": "Strafvereitelung in drei Zügen",
+          "punkte": [
+            "Verfolgung oder Vollstreckung?",
+            "Ganz oder teilweise vereitelt?",
+            "Abs. 5 oder Abs. 6 einschlägig?"
+          ],
+          "icons": [
+            "banknote",
+            "waage",
+            "familie"
+          ]
+        }
+      ],
+      "caption": "Die Geldstrafe des Freundes bezahlt – Strafvereitelung? Nach dem BGH nicht: § 258 Abs. 2 StGB schützt die Vollstreckung, und die ist mit der Zahlung vollständig erfolgt. Teile der Literatur halten die Geldstrafe für höchstpersönlich und bejahen die Strafbarkeit. Für Angehörige gilt ohnehin § 258 Abs. 6 StGB. Speichern für die nächste BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#strafvereitelung",
+        "#258stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fremde Geldstrafe bezahlt: § 258 StGB?",
+      "coverText": "Vollstreckt ist vollstreckt",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer die Geldstrafe eines anderen bezahlt, vereitelt nach dem BGH keine Vollstreckung.",
+        "handlung": "{A} drops a heavy coin pouch into an official collection chest while {B}, the actual debtor, watches in surprise with empty hands.",
+        "hinweisRegie": "Leave free space above the collection chest, slightly tilted toward {B}, so the note connects the payment with the real debtor; keep the pouch and {A}'s hand fully visible.",
+        "alternative": "{A} quietly settles {B}'s debt at a frontier outpost counter while {B} is still searching his empty pockets."
+      },
+      "bildSzene": "friend drops pouch into state chest",
+      "bildSzeneAlt": "debt settled while debtor searches pockets",
+      "quellen": [
+        "§ 258 StGB",
+        "Themenpool: strafbt-334"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:07:51.578Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-710",
+      "slug": "2027-05-18-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sechs Wochen alter Bescheid – und die Klage geht noch",
+          "titelZeilen": [
+            "Sechs Wochen alter",
+            "Bescheid – und die",
+            "Klage geht noch"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Falsche Belehrung, ein Jahr Zeit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Mandantin M legt dir in der Kanzlei eine Nutzungsuntersagung vor, zugestellt vor sechs Wochen. Die Rechtsbehelfsbelehrung nennt ein unzuständiges Verwaltungsgericht. Ein Widerspruchsverfahren findet nach dem Landesrecht nicht statt. M fragt: „Ist es zu spät?“"
+        },
+        {
+          "art": "schritte",
+          "titel": "So gehst du als Anwalt vor",
+          "schritte": [
+            {
+              "titel": "1. Frist zuerst",
+              "text": "Bevor du in die Sache einsteigst: Welche Frist läuft, wann endet sie? Das bestimmt alles Weitere."
+            },
+            {
+              "titel": "2. Rechtsbehelf bestimmen",
+              "text": "Kein Vorverfahren (§ 68 Abs. 1 S. 2 VwGO): Anfechtungsklage, ggf. Eilantrag nach § 80 Abs. 5 VwGO."
+            },
+            {
+              "titel": "3. Erfolgsaussichten",
+              "text": "Gutachten zur Rechtmäßigkeit der Verfügung – wie im ersten Examen, nur aus Sicht der Mandantin."
+            },
+            {
+              "titel": "4. Zweckmäßigkeit",
+              "text": "Was soll M tun? Kosten, Eilbedürftigkeit, Alternativen – und dann eine klare Empfehlung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Die Belehrung ist unrichtig, weil sie das falsche Gericht nennt. Die Monatsfrist des § 74 Abs. 1 VwGO beginnt daher nicht (§ 58 Abs. 1 VwGO). Es gilt die Jahresfrist des § 58 Abs. 2 VwGO. M kann noch klagen – Empfehlung trotzdem: zügig, damit die Nutzung nicht vollzogen wird."
+        },
+        {
+          "art": "text",
+          "titel": "Im Mandantenschreiben",
+          "text": "Beginne mit der Antwort auf Ms Frage: „Es ist nicht zu spät.“ Erkläre dann ohne Gutachtenstil, warum, und schließe mit dem, was M konkret tun soll."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Unrichtige oder fehlende Belehrung: keine Monatsfrist, sondern ein Jahr (§ 58 Abs. 2 VwGO) – in der Anwaltsklausur immer zuerst die Frist."
+        },
+        {
+          "art": "cta",
+          "titel": "Anwaltsklausur in vier Zügen",
+          "punkte": [
+            "Frist sichern",
+            "Rechtsbehelf wählen",
+            "Erfolgsaussichten prüfen",
+            "Klar empfehlen"
+          ],
+          "icons": [
+            "uhr",
+            "paragraf",
+            "waage",
+            "umschlag"
+          ]
+        }
+      ],
+      "caption": "Sechs Wochen alter Bescheid – und die Klage geht noch. Nennt die Rechtsbehelfsbelehrung das falsche Gericht, ist sie unrichtig; die Monatsfrist des § 74 Abs. 1 VwGO läuft dann nicht an, stattdessen gilt die Jahresfrist des § 58 Abs. 2 VwGO. In der Anwaltsklausur prüfst du deshalb zuerst die Frist, dann Rechtsbehelf, Erfolgsaussichten und Zweckmäßigkeit. Speichern für die nächste Anwaltsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#anwaltsklausur",
+        "#klagefrist",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anwaltsklausur: Frist trotz sechs Wochen offen",
+      "coverText": "Falsche Belehrung, ein Jahr Zeit",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Eine fehlerhafte Rechtsbehelfsbelehrung verlängert die Klagefrist auf ein Jahr.",
+        "handlung": "{A} calmly turns a large hourglass around to reveal a much bigger upper chamber, while {B} holds out a notice with a small visibly misprinted signpost stamp.",
+        "hinweisRegie": "Place the note in the free space beside the enlarged hourglass, slightly tilted toward the misprinted stamp, so the longer time is linked to the flawed notice without covering {A}'s hands.",
+        "alternative": "{B} points to a signpost aiming at the wrong building, while {A} shows that the road ahead is still open for a long time."
+      },
+      "bildSzene": "hourglass turned, misprinted notice",
+      "bildSzeneAlt": "signpost pointing to wrong building",
+      "quellen": [
+        "§ 58 VwGO",
+        "§ 74 VwGO",
+        "§ 68 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "Themenpool: assessoroer-710"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:04.796Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-449",
+      "slug": "2027-05-18-b3",
+      "titelZeilen": [
+        "Noch nicht fällig –",
+        "und schon",
+        "zurückgetreten"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Noch nicht fällig – und schon zurückgetreten",
+          "unter": "Rücktritt · § 323 Abs. 4 BGB",
+          "text": "Wenn feststeht, dass es schiefgeht, muss der Gläubiger nicht warten.",
+          "norm": "§ 323 Abs. 4 BGB",
+          "icon": "kalender",
+          "sprecher": "Rücktritt vor Fälligkeit? Das Gesetz erlaubt ihn ausdrücklich. In der Klausur wartet man gern den Termin ab. § 323 Absatz 4 BGB sagt aber: Wenn offensichtlich ist, dass es schiefgeht, musst du nicht warten.",
+          "marken": [
+            "vor Fälligkeit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Gegenseitiger Vertrag",
+          "text": "Wie immer bei § 323 BGB: ein Vertrag mit synallagmatischen Pflichten.",
+          "norm": "§ 323 Abs. 1 BGB",
+          "sprecher": "Schritt eins: ein gegenseitiger Vertrag. Wie bei jedem Rücktritt nach § 323 BGB, etwa ein Kauf- oder Werkvertrag.",
+          "marken": [
+            "Synallagma"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Leistung noch nicht fällig",
+          "text": "Der Termin liegt noch in der Zukunft.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Die Leistung ist noch nicht fällig. Genau deshalb scheitert der normale Weg über Absatz 1, denn eine Frist nach Fälligkeit kann es noch gar nicht geben.",
+          "marken": [
+            "Termin offen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Offensichtlich, dass der Rücktritt kommt",
+          "text": "Nicht bloße Zweifel – der spätere Rücktrittsgrund muss klar sein.",
+          "norm": "§ 323 Abs. 4 BGB",
+          "sprecher": "Schritt drei, der Kern: Es muss offensichtlich sein, dass die Voraussetzungen des Rücktritts eintreten werden. Bloße Zweifel reichen nicht. Beispiel: Der Bauunternehmer hat zwei Wochen vor dem Fertigstellungstermin noch nicht einmal angefangen.",
+          "marken": [
+            "offensichtlich",
+            "keine Zweifel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rücktrittserklärung",
+          "text": "Der Rücktritt wirkt erst durch Erklärung gegenüber dem Schuldner.",
+          "norm": "§ 349 BGB",
+          "sprecher": "Schritt vier: die Erklärung. Auch der vorzeitige Rücktritt wirkt erst, wenn der Gläubiger ihn gegenüber dem Schuldner erklärt, § 349 BGB.",
+          "marken": [
+            "§ 349 BGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Sonderfall: endgültige Verweigerung",
+          "text": "Verweigert der Schuldner schon vorher ernsthaft und endgültig, liegt der Fall klar.",
+          "norm": "§ 323 Abs. 2 Nr. 1 BGB",
+          "sprecher": "Ein klarer Fall ist, wenn der Schuldner schon vor Fälligkeit ernsthaft und endgültig erklärt, er werde nicht leisten. Dann ist offensichtlich, dass der Rücktrittsgrund eintritt, und eine Frist wäre sinnlos.",
+          "marken": [
+            "endgültig Nein"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Vertrag, nicht fällig, offensichtlich scheitern, Erklärung.",
+          "norm": "§ 323 Abs. 4 BGB",
+          "sprecher": "Merke: gegenseitiger Vertrag, noch nicht fällig, offensichtlich scheiternd, Erklärung. Fälligkeit ist also keine zwingende Voraussetzung jedes Rücktritts.",
+          "marken": [
+            "vier Punkte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem Warten: Absatz 4 prüfen",
+          "text": "Speichern für die nächste Schuldrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Schuldrechtsklausur. Und lies bei jedem Termin in der Zukunft Absatz 4 gleich mit.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Noch nicht fällig – und schon zurückgetreten. § 323 Abs. 4 BGB erlaubt den Rücktritt vor Fälligkeit, wenn offensichtlich ist, dass die Voraussetzungen des Rücktritts eintreten werden. Bloße Zweifel reichen nicht; klar ist der Fall etwa bei ernsthafter und endgültiger Leistungsverweigerung vor dem Termin. Wirksam wird der Rücktritt wie immer durch Erklärung (§ 349 BGB). Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#rücktritt",
+        "#323bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rücktritt vor Fälligkeit: § 323 Abs. 4 BGB",
+      "coverText": "Offensichtlich reicht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Steht schon vor dem Termin fest, dass nicht geleistet wird, darf der Gläubiger vorher aussteigen.",
+        "handlung": "{A} nervously points at an empty building plot where a house should already be half built, while {B} decisively steps back from the plot's entrance before the marked opening day.",
+        "hinweisRegie": "Place the note in the free space above the empty plot, slightly tilted toward {B}'s step back, so the early exit is visible without covering {A}'s pointing hand or the plot marker.",
+        "alternative": "{B} leaves a train platform early because the track ahead visibly ends in a gap, while {A} still checks the timetable."
+      },
+      "bildSzene": "empty building plot, early step back",
+      "bildSzeneAlt": "platform, track ends in gap",
+      "quellen": [
+        "§ 323 Abs. 4 BGB",
+        "§ 323 Abs. 2 Nr. 1 BGB",
+        "§ 349 BGB",
+        "Themenpool: schuld-449"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:04.798Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-510",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "V und K erklären die Auflassung in zwei getrennten Notarterminen nacheinander. Ist sie wirksam?",
+      "optionen": [
+        "Ja – getrennte Beurkundung wie bei § 128 BGB genügt",
+        "Nein – beide Teile müssen gleichzeitig anwesend sein",
+        "Ja – die Eintragung heilt den Mangel wie bei § 311b BGB"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 873 BGB",
+        "§ 925 BGB",
+        "Themenpool: sachen-510"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:04.798Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-510",
+      "ueberzeile": "Auflösung",
+      "titel": "Unwirksam – die Auflassung verlangt gleichzeitige Anwesenheit",
+      "text": "Die Auflassung muss bei gleichzeitiger Anwesenheit beider Teile vor einer zuständigen Stelle, regelmäßig dem Notar, erklärt werden (§ 925 Abs. 1 S. 1 BGB). Getrennte Beurkundung von Angebot und Annahme reicht nicht. Vertretung ist aber zulässig. Anders als beim Kaufvertrag (§ 311b Abs. 1 S. 2 BGB) heilt die Eintragung nichts: Das Grundbuch wird unrichtig.",
+      "norm": "§ 925 Abs. 1 BGB · § 873 BGB",
+      "quellen": [
+        "§ 873 BGB",
+        "§ 925 BGB",
+        "§ 311b BGB",
+        "Themenpool: sachen-510"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:04.798Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – getrennte Beurkundung wie bei § 128 BGB genügt",
+        "Nein – beide Teile müssen gleichzeitig anwesend sein",
+        "Ja – die Eintragung heilt den Mangel wie bei § 311b BGB"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-727",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 22 StGB: Der Versuch beginnt, wo keine wesentlichen Zwischenschritte mehr fehlen",
+      "text": "Versucht ist die Tat, wenn der Täter nach seiner Vorstellung unmittelbar zur Verwirklichung des Tatbestands ansetzt. Maßstab nach der Rspr.: Er überschreitet subjektiv die Schwelle zum „Jetzt geht es los“; objektiv soll sein Handeln ohne wesentliche Zwischenschritte in die Tatbestandsverwirklichung münden – das Rechtsgut ist aus seiner Sicht schon konkret gefährdet.",
+      "norm": "§ 22 StGB",
+      "quellen": [
+        "§ 22 StGB",
+        "Themenpool: strafat-727"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:04.798Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-889",
+      "ueberzeile": "4 Punkte IPR",
+      "titel": "Warenkauf mit einem Unternehmen aus Frankreich: Diese vier Stufen in dieser Reihenfolge",
+      "text": "Erst das Gericht, dann das Recht – und Einheitsrecht vor Kollisionsrecht.",
+      "punkte": [
+        "Internationale Zuständigkeit: EuGVVO vor den §§ 12 ff. ZPO",
+        "Einheitsrecht: UN-Kaufrecht (CISG) beim Warenkauf unter Unternehmern prüfen",
+        "Sonst Kollisionsrecht: Rom I-VO – erst Rechtswahl, dann Art. 4",
+        "Sachrecht anwenden, Ergebnis am ordre public messen"
+      ],
+      "quellen": [
+        "EuGVVO",
+        "CISG",
+        "Rom I-VO",
+        "Art. 3 EGBGB",
+        "Themenpool: ipr-889"
+      ],
+      "fachLabel": "IPR",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:04.798Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-822",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "B rechnet erst im Prozess auf, obwohl er es schon vorher konnte: Hat sich die Klage erledigt?",
+      "norm": "§ 91 ZPO · § 389 BGB",
+      "optionen": [
+        "BGH: ja – erledigendes Ereignis ist die Aufrechnungserklärung, nicht die Aufrechnungslage.",
+        "Teile der Lit.: nein – wegen der Rückwirkung (§ 389 BGB) war die Klage von Anfang an unbegründet."
+      ],
+      "text": "Es geht um die Kosten: Nach dem BGH stellt das Gericht auf die einseitige Erledigungserklärung die Erledigung fest, die Kosten trägt B (§ 91 ZPO). Nach der Gegenansicht wird die Klage abgewiesen – mit Kostenlast beim Kläger. Für den BGH spricht: Erst die Erklärung bringt die Forderung zum Erlöschen.",
+      "quellen": [
+        "§ 91 ZPO",
+        "§ 389 BGB",
+        "Themenpool: assessorz-822"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:04.798Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-337",
+      "ueberzeile": "Merksatz Strafrecht BT",
+      "titel": "Hehler kann nur sein, wer die Vortat nicht selbst als Täter begangen hat",
+      "text": "§ 259 StGB verlangt eine Tat, die „ein anderer“ begangen hat. Allein- und Mittäter der Vortat scheiden als Hehler aus. Wer zur Vortat nur angestiftet oder Hilfe geleistet hat, kann dagegen nach h.M. Hehler sein.",
+      "norm": "§ 259 Abs. 1 StGB",
+      "quellen": [
+        "§ 259 StGB",
+        "Themenpool: strafbt-337"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:04.798Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

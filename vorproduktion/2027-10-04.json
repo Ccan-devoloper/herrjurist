@@ -1,0 +1,891 @@
+{
+  "datum": "2027-10-04",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-623",
+        "themaTitel": "Unverletzlichkeit der Wohnung",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "ipr-893",
+        "themaTitel": "Wann ist ein deutsches Gericht international zuständig?",
+        "fach": "ipr",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-303",
+        "themaTitel": "Wann beginnt das unmittelbare Ansetzen zum Versuch?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "zpo-565"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "zpo-565"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "assessorz-813"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:32",
+        "art": "tipp",
+        "themaId": "delikt-241"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:44",
+        "art": "zahl",
+        "themaId": "zpo-917"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:27",
+        "art": "streitstand",
+        "themaId": "bgbat-003"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-623",
+      "poolTitel": "Unverletzlichkeit der Wohnung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 13 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-16"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "ipr-893",
+      "poolTitel": "Wann ist ein deutsches Gericht international zuständig?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 4 EuGVVO",
+        "Art. 7 EuGVVO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-11",
+        "2027-01-10",
+        "2027-08-23"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-303",
+      "poolTitel": "Wann beginnt das unmittelbare Ansetzen zum Versuch?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-04",
+        "2027-04-08",
+        "2027-08-20"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-565",
+      "poolTitel": "Allgemeine Vollstreckungsvoraussetzungen",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 704 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-03",
+        "2027-03-03",
+        "2027-09-20"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-565",
+      "poolTitel": "Allgemeine Vollstreckungsvoraussetzungen",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 704 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-03",
+        "2027-03-03",
+        "2027-09-20"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "assessorz-813",
+      "poolTitel": "Worin unterscheiden sich Teil-, Grund- und Schlussurteil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 301 ZPO",
+        "§ 304 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-29",
+        "2026-12-28",
+        "2027-07-14"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "delikt-241",
+      "poolTitel": "Was ist ein Schutzgesetz im Sinne des § 823 Abs. 2 BGB?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-15",
+        "2027-06-02",
+        "2027-07-15"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zpo-917",
+      "poolTitel": "Gewillkürter Parteiwechsel: Nach welchen Regeln kommt die neue Partei in den Prozess?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 263 ZPO",
+        "§ 269 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-07",
+        "2027-06-06",
+        "2027-08-05"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "bgbat-003",
+      "poolTitel": "Inwieweit werden sich widersprechende AGB Vertragsbestandteil?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 305 Abs. 2 BGB",
+        "§ 306 BGB",
+        "§ 154 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-06-05",
+        "2027-08-02",
+        "2027-08-04"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-623",
+      "slug": "2027-10-04-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Das Restaurant ist eine Wohnung – die Kontrolle darf trotzdem rein",
+          "titelZeilen": [
+            "Das Restaurant",
+            "ist eine Wohnung –",
+            "die Kontrolle darf",
+            "trotzdem rein"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Betreten ist keine Durchsuchung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Lebensmittelaufsicht betritt während der Öffnungszeiten ohne richterlichen Beschluss die Küche des Restaurants von R und sieht sich um. Die gesetzliche Grundlage erlaubt das Betreten zu Geschäftszeiten. R meint, Art. 13 GG sei verletzt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Schutzbereich",
+              "text": "Das BVerfG versteht „Wohnung“ weit: Auch Betriebs- und Geschäftsräume sind geschützt – also auch die Küche."
+            },
+            {
+              "titel": "2. Keine Durchsuchung",
+              "text": "Durchsuchen heißt: gezielt nach Verborgenem suchen. Bloßes Betreten und Besichtigen ist das nicht – Art. 13 Abs. 2 GG greift nicht."
+            },
+            {
+              "titel": "3. Gelockerter Maßstab",
+              "text": "Für Betreten und Besichtigen von Geschäftsräumen lässt das BVerfG geringere Anforderungen genügen als bei Privatwohnungen."
+            },
+            {
+              "titel": "4. Die Grenzen",
+              "text": "Gesetzliche Grundlage, erlaubter und erkennbarer Zweck, Erforderlichkeit, Betreten nur zu Geschäftszeiten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Denkweg hakt",
+          "text": "Aus „Geschäftsraum ist Wohnung“ wird oft geschlossen, es brauche stets einen Richter. Der Richtervorbehalt gilt aber nur für Durchsuchungen. Für die Nachschau zu Geschäftszeiten reicht eine Norm, die die genannten Grenzen einhält."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Das Betreten greift in den Schutzbereich ein, ist aber durch die gesetzliche Grundlage gedeckt, wenn die Kontrolle zu den Öffnungszeiten, zweckgebunden und verhältnismäßig erfolgt. Art. 13 GG ist dann nicht verletzt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Geschäftsräume sind geschützt – aber Betreten und Besichtigen zu Geschäftszeiten ist keine Durchsuchung und braucht keinen Richter."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 13 GG in drei Fragen",
+          "punkte": [
+            "Wohnung im weiten Sinn betroffen?",
+            "Durchsuchung oder bloße Nachschau?",
+            "Grenzen für Geschäftsräume eingehalten?"
+          ],
+          "icons": [
+            "haus",
+            "lupe",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Die Küche eines Restaurants ist eine „Wohnung“ im Sinne von Art. 13 GG – und trotzdem darf die Lebensmittelkontrolle ohne Richter hinein. Betreten und Besichtigen ist keine Durchsuchung. Für Geschäftsräume lässt das BVerfG deshalb einen gelockerten Maßstab genügen: gesetzliche Grundlage, erlaubter Zweck, Erforderlichkeit und Betreten nur zu Geschäftszeiten. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#art13gg",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 13 GG: Nachschau im Geschäftsraum",
+      "coverText": "Betreten ist keine Durchsuchung",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Auch Geschäftsräume sind geschützt, doch eine Besichtigung zu Öffnungszeiten ist keine Durchsuchung.",
+        "handlung": "{A} floats through an open kitchen door under a glowing 'open' lamp and only looks around with a small flashlight, while {B} at the stove watches with raised eyebrows but keeps cooking.",
+        "hinweisRegie": "Place the note in the free space near the glowing open lamp above the door, slightly tilted toward it, so the open door and the flashlight beam stay fully visible and no face is covered.",
+        "alternative": "{B} opens a shop window for customers while {A} peeks in from the counter without touching any drawer."
+      },
+      "bildSzene": "inspector droid peeks into open kitchen",
+      "bildSzeneAlt": "droid looks through open shop counter",
+      "quellen": [
+        "Art. 13 Abs. 1 GG",
+        "Art. 13 Abs. 2 GG",
+        "Art. 13 Abs. 7 GG",
+        "Themenpool: grundr-623"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.527Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "ipr",
+      "klausur": 1,
+      "fachLabel": "Internationales Privatrecht",
+      "themaId": "ipr-893",
+      "slug": "2027-10-04-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Brüssel Ia in fünf Stufen – Art. 4 kommt erst am Schluss",
+          "titelZeilen": [
+            "Brüssel Ia in",
+            "fünf Stufen –",
+            "Art. 4 kommt erst",
+            "am Schluss"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Ausschließliches geht vor",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Ob ein deutsches Gericht international zuständig ist, klärst du in Zivil- und Handelssachen zuerst nach der Brüssel-Ia-VO (EuGVVO). Die Gerichtsstände stehen nicht gleichrangig nebeneinander: Ausschließliche und schützende Zuständigkeiten gehen vor."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema (1/2)",
+          "schritte": [
+            {
+              "titel": "1. Anwendbarkeit",
+              "text": "Zivil- und Handelssache (Art. 1). Wohnt der Beklagte in einem Mitgliedstaat? Sonst gilt nationales Recht (Art. 6)."
+            },
+            {
+              "titel": "2. Ausschließliche Zuständigkeit",
+              "text": "Art. 24 geht allem vor – etwa dingliche Rechte an Grundstücken und deren Miete: Gerichte am Ort der Belegenheit."
+            },
+            {
+              "titel": "3. Schutzgerichtsstände",
+              "text": "Versicherungs-, Verbraucher-, Arbeitssachen (Art. 10 ff., 17 ff., 20 ff.): Der Schwächere wird grundsätzlich an seinem Wohnsitz verklagt."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema (2/2)",
+          "schritte": [
+            {
+              "titel": "4. Vereinbarung oder Einlassung",
+              "text": "Gerichtsstandsvereinbarung (Art. 25) oder rügelose Einlassung (Art. 26) – mit Grenzen in Schutzsachen."
+            },
+            {
+              "titel": "5. Besondere und allgemeiner Gerichtsstand",
+              "text": "Wahlweise Erfüllungsort, Delikt oder Niederlassung (Art. 7), Streitgenossen (Art. 8) – daneben immer der Wohnsitz des Beklagten (Art. 4)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Hat der Beklagte keinen Wohnsitz in der EU, prüfst du die §§ 12 ff. ZPO. Sie sind doppelfunktional: Begründen sie die örtliche Zuständigkeit eines deutschen Gerichts, indizieren sie zugleich die internationale."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst Anwendbarkeit, dann ausschließliche und schützende Zuständigkeiten – der Beklagtenwohnsitz trägt nur, wenn nichts vorgeht."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Auslandsklage",
+          "punkte": [
+            "Brüssel Ia anwendbar?",
+            "Art. 24 oder Schutzsache?",
+            "Vereinbarung oder Einlassung?",
+            "Art. 7, 8 oder Art. 4"
+          ],
+          "icons": [
+            "globus",
+            "schloss",
+            "schild",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Internationale Zuständigkeit in fünf Stufen: Anwendbarkeit der Brüssel-Ia-VO, ausschließliche Zuständigkeit nach Art. 24, Schutzgerichtsstände für Versicherte, Verbraucher und Arbeitnehmer, Vereinbarung oder rügelose Einlassung, und erst dann die besonderen Gerichtsstände und der Wohnsitz des Beklagten. Wohnt der Beklagte außerhalb der EU, helfen die doppelfunktionalen §§ 12 ff. ZPO. Speichern für die nächste Klausur mit Auslandsbezug.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#ipr",
+        "#zpo",
+        "#brüsselia",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Internationale Zuständigkeit: fünf Stufen",
+      "coverText": "Ausschließliches geht vor",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Die Gerichtsstände der Brüssel-Ia-VO werden in einer festen Rangfolge geprüft.",
+        "handlung": "{A} climbs a staircase of five stone steps toward a distant courthouse, while {B} taps with his pointer on the second step, which carries a heavy padlock.",
+        "hinweisRegie": "Place the note in the free space next to the padlocked second step, slightly tilted toward it, so the order of the steps stays readable and both characters remain uncovered.",
+        "alternative": "{B} sorts five luggage tags onto a travel map, and {A} insists that the one with the lock goes first."
+      },
+      "bildSzene": "five-step staircase with padlocked step",
+      "bildSzeneAlt": "luggage tags sorted on map",
+      "quellen": [
+        "Art. 1 EuGVVO",
+        "Art. 4 EuGVVO",
+        "Art. 6 EuGVVO",
+        "Art. 7 EuGVVO",
+        "Art. 24 EuGVVO",
+        "Art. 25 EuGVVO",
+        "Art. 26 EuGVVO",
+        "§§ 12 ff. ZPO",
+        "Themenpool: ipr-893"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-echte-stufen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.527Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-303",
+      "slug": "2027-10-04-b3",
+      "titelZeilen": [
+        "Niemand öffnet –",
+        "und trotzdem",
+        "versuchter Raub"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Niemand öffnet – und trotzdem versuchter Raub",
+          "unter": "Versuch · § 22 StGB",
+          "text": "Maskiert klingeln, um beim Öffnen sofort zuzuschlagen.",
+          "norm": "§ 22 StGB",
+          "icon": "tuer",
+          "sprecher": "Niemand macht auf, und doch ist es ein Versuch. Die Täter klingeln maskiert an der Haustür. Sie wollen jeden, der öffnet, sofort überwältigen und ausrauben. Es bleibt aber still.",
+          "marken": [
+            "nur geklingelt",
+            "schon Versuch?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Tatentschluss",
+          "text": "Vorsatz zum Raub samt Zueignungsabsicht – nach dem Tatplan.",
+          "norm": "§ 249 StGB",
+          "sprecher": "Schritt eins: der Tatentschluss. Die Täter wollen mit Gewalt wegnehmen und sich die Beute zueignen. Maßgeblich ist ihre Vorstellung vom weiteren Ablauf.",
+          "marken": [
+            "Tatplan zählt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "„Jetzt geht es los“",
+          "text": "Subjektiv ist die Schwelle überschritten, wenn nach dem Plan kein Zögern mehr kommt.",
+          "norm": "§ 22 StGB",
+          "sprecher": "Schritt zwei: die Schwelle zum Jetzt geht es los. Mit dem Klingeln ist aus Sicht der Täter alles bereit. Sobald jemand öffnet, schlagen sie zu.",
+          "marken": [
+            "Jetzt geht es los"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Keine wesentlichen Zwischenakte",
+          "text": "Zwischen Klingeln und Gewalt liegt nur noch das Öffnen der Tür.",
+          "norm": "§ 22 StGB",
+          "sprecher": "Schritt drei: Zwischenakte. Nach dem Klingeln müssen die Täter nichts Wesentliches mehr tun. Das Öffnen durch das Opfer ist kein eigener Schritt der Täter.",
+          "marken": [
+            "kein Zwischenakt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtsgut konkret gefährdet",
+          "text": "Wer an der Tür des Opfers klingelt, ist in dessen Schutzsphäre angekommen.",
+          "norm": null,
+          "sprecher": "Schritt vier: die Gefährdung. Aus Sicht der Täter kann der Überfall jeden Moment beginnen. Das Opfer ist schon konkret in Gefahr. Die Rechtsprechung hat in solchen Klingelfällen deshalb Versuch angenommen.",
+          "marken": [
+            "konkrete Gefahr"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Gegenprobe: Erst auskundschaften",
+          "text": "Wer nur ausspäht, wann das Opfer allein ist, bereitet noch vor.",
+          "norm": null,
+          "sprecher": "Die Gegenprobe: Wer nur das Haus beobachtet oder erst prüfen will, ob jemand da ist, bereitet vor. Dann fehlt der unmittelbare Zusammenhang zur Gewalt.",
+          "marken": [
+            "nur Vorbereitung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Das Klingeln kann schon der Anfang sein",
+          "text": "Entscheidend ist, ob nach dem Plan die Tat ohne weiteren Zwischenschritt folgt.",
+          "norm": "§ 22 StGB",
+          "sprecher": "Merke: Der Versuch hängt nicht davon ab, ob das Opfer mitspielt. Entscheidend ist, dass nach dem Tatplan kein wesentlicher Zwischenschritt mehr fehlt.",
+          "marken": [
+            "Plan entscheidet"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die AT-Klausur speichern",
+          "text": "Speichern für die nächste Versuchsprüfung.",
+          "sprecher": "Speicher dir den Klingelfall für deine nächste Versuchsprüfung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Niemand öffnet – und trotzdem liegt ein versuchter Raub vor. Wer maskiert klingelt, um den Öffnenden sofort zu überwältigen, setzt nach seiner Vorstellung unmittelbar an: Zwischen Klingeln und Gewalt fehlt kein wesentlicher Zwischenschritt, das Opfer ist bereits konkret gefährdet. Wer dagegen nur auskundschaftet, bereitet noch vor. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#versuch",
+        "#22stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Versuch: Klingeln als Beginn des Raubs",
+      "coverText": "Kein Zwischenschritt mehr nötig",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Schon das Klingeln kann Versuch sein, wenn danach sofort die Gewalt folgen soll.",
+        "handlung": "{A} wearing a clumsy mask presses a doorbell with one finger while {B} behind him already holds an empty sack wide open, both staring at the closed door.",
+        "hinweisRegie": "Place the note in the free space beside the doorbell and the closed door, slightly tilted toward the bell, so the finger on the button and the open sack stay clearly visible.",
+        "alternative": "{B} peers at a house through binoculars from far away while {A} counts the windows on his fingers."
+      },
+      "bildSzene": "masked figure presses doorbell, sack ready",
+      "bildSzeneAlt": "binoculars watching a distant house",
+      "quellen": [
+        "§ 22 StGB",
+        "§ 249 StGB",
+        "Themenpool: strafat-303"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.528Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-565",
+      "ueberzeile": "Prüfungsfrage Zivilprozessrecht",
+      "titel": "Das Zahlungsurteil gegen S ist noch nicht rechtskräftig, S hat Berufung eingelegt. Darf G schon vollstrecken?",
+      "optionen": [
+        "Nein – vollstreckt wird erst nach Rechtskraft",
+        "Nur wenn S der Vollstreckung zustimmt",
+        "Ja, wenn das Urteil für vorläufig vollstreckbar erklärt ist"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 704 ZPO",
+        "§§ 708, 709 ZPO",
+        "Themenpool: zpo-565"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.528Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-565",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – ein vorläufig vollstreckbares Urteil ist schon ein Titel",
+      "text": "Vollstreckt wird aus rechtskräftigen oder für vorläufig vollstreckbar erklärten Endurteilen (§ 704 ZPO). Je nach Fall ohne Sicherheitsleistung (§ 708 ZPO) oder nur gegen Sicherheit (§ 709 ZPO). Die Berufung ändert daran nichts. Daneben brauchst du wie immer Klausel und Zustellung.",
+      "norm": "§ 704 ZPO · §§ 708, 709 ZPO",
+      "quellen": [
+        "§ 704 ZPO",
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "Themenpool: zpo-565"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.529Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – vollstreckt wird erst nach Rechtskraft",
+        "Nur wenn S der Vollstreckung zustimmt",
+        "Ja, wenn das Urteil für vorläufig vollstreckbar erklärt ist"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-813",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 304 Abs. 2 ZPO: Grundurteil sofort anfechtbar",
+      "text": "Das Grundurteil ist „in Betreff der Rechtsmittel“ als Endurteil anzusehen. Wer über den Grund verliert, muss also nicht bis zum Betragsverfahren warten, sondern kann sofort Berufung einlegen. Ist der Anspruch für begründet erklärt, kann das Gericht auf Antrag anordnen, dass trotzdem schon über den Betrag verhandelt wird.",
+      "norm": "§ 304 Abs. 2 ZPO",
+      "quellen": [
+        "§ 304 ZPO",
+        "Themenpool: assessorz-813"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.529Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-241",
+      "ueberzeile": "Klausurtipp Deliktsrecht",
+      "titel": "Schutzgesetz gefunden? Prüfe auch, ob gerade dieser Schaden erfasst ist",
+      "text": "Bei § 823 Abs. 2 BGB reicht nicht, dass die Norm irgendwen schützt. Prüfe drei Fragen: Dient sie zumindest auch dem Schutz Einzelner? Gehört der Verletzte zum geschützten Personenkreis? Ist der eingetretene Schaden von der Art, vor der die Norm schützen soll? Beispiel: § 858 BGB schützt den Besitzer vor verbotener Eigenmacht.",
+      "quellen": [
+        "§ 823 Abs. 2 BGB",
+        "§ 858 BGB",
+        "Themenpool: delikt-241"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.529Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-917",
+      "ueberzeile": "3 Punkte Zivilprozessrecht",
+      "titel": "Kläger tritt die Forderung im Prozess ab: drei Punkte, bevor du einen Parteiwechsel prüfst",
+      "text": "Nicht jeder neue Rechtsinhaber wird automatisch Partei. Für die Abtretung während der Rechtshängigkeit regelt § 265 ZPO den Fall selbst.",
+      "punkte": [
+        "Der Prozess läuft mit dem Zedenten weiter (§ 265 Abs. 2 S. 1 ZPO)",
+        "Er muss auf Leistung an den Zessionar umstellen",
+        "Übernahme durch den Zessionar nur mit Zustimmung des Gegners"
+      ],
+      "quellen": [
+        "§ 265 ZPO",
+        "§ 263 ZPO",
+        "Themenpool: zpo-917"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.529Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-003",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Der Käufer nimmt die Ware widerspruchslos an: Hat er damit die AGB des Verkäufers akzeptiert?",
+      "norm": "§§ 150 II, 306 II BGB",
+      "optionen": [
+        "Letztes Wort (ältere Rspr.): Ja – Annahme der Ware = Annahme des Gegenangebots (§ 150 II BGB).",
+        "H.M.: Nein – Vertrag durch Vollzug; widersprechende Klauseln entfallen, es gilt Gesetz."
+      ],
+      "text": "Klausur: Mit der h.M. auf den Durchführungswillen abstellen; § 154 BGB tritt zurück, Lücken füllt § 306 Abs. 2 BGB. Sonst entscheidet der Zufall, wer zuletzt verweist – eine Abwehrklausel spricht erst recht gegen Annahme durch schlichtes Handeln.",
+      "quellen": [
+        "§ 150 Abs. 2 BGB",
+        "§ 154 BGB",
+        "§ 306 Abs. 2 BGB",
+        "Themenpool: bgbat-003"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.529Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

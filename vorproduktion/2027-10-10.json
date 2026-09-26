@@ -1,0 +1,915 @@
+{
+  "datum": "2027-10-10",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "zpo-275",
+        "themaTitel": "Wie prüft man die Zulässigkeit einer Klage?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "strafat-731",
+        "themaTitel": "Anstiftung",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:24",
+        "art": "frage",
+        "themaId": "assessorz-815"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:24",
+        "art": "antwort",
+        "themaId": "assessorz-815"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:13",
+        "art": "norm",
+        "themaId": "bgbat-164"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:15",
+        "art": "fehler",
+        "themaId": "anklage-858"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:46",
+        "art": "tipp",
+        "themaId": "verwalt-694"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "zahl",
+        "themaId": "zpo-051"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "zpo-275",
+      "poolTitel": "Wie prüft man die Zulässigkeit einer Klage?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 12 ZPO",
+        "§ 23 GVG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-30"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-731",
+      "poolTitel": "Anstiftung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 26 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-02-26",
+        "2027-03-19",
+        "2027-03-19"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-815",
+      "poolTitel": "Wie lautet der Tenor nach zulässigem Einspruch?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-23",
+        "2027-06-25",
+        "2027-08-02"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-815",
+      "poolTitel": "Wie lautet der Tenor nach zulässigem Einspruch?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-23",
+        "2027-06-25",
+        "2027-08-02"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-164",
+      "poolTitel": "Wie wirken Hemmung, Ablaufhemmung und Neubeginn der Verjährung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 203, 204 BGB",
+        "§§ 210, 211 BGB",
+        "§ 212 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-09",
+        "2027-03-10"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "anklage-858",
+      "poolTitel": "Was leistet der konkrete Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-06",
+        "2027-06-04",
+        "2027-08-08"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "verwalt-694",
+      "poolTitel": "Verschulden und anderweitige Ersatzmöglichkeit",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 839 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-18"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zpo-051",
+      "poolTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-06",
+        "2027-08-08",
+        "2027-09-27"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-10-10-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen in vier Bereichen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen in",
+            "vier Bereichen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Internationale Zuständigkeit: erst Art. 24 und Schutzsachen, zuletzt Art. 7 und Art. 4 EuGVVO.",
+            "Ausfallschaden wegen Mangels: BGH § 280 I BGB ohne Verzug, Teile der Lit. §§ 280 II, 286 BGB.",
+            "Prokura: Interne Grenzen wirken nicht nach außen (§ 50 I HGB) – außer bei Missbrauch.",
+            "Verjährt heißt nicht erloschen: Einrede; wer trotzdem zahlt, kann nicht zurückfordern.",
+            "Schmerzensgeld unbeziffert einklagen: nur mit Größenordnung, praktisch einem Mindestbetrag."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Versuch: Klingeln mit dem Plan, sofort zu überfallen, kann schon unmittelbares Ansetzen sein.",
+            "Einwilligung: § 228 StGB zieht die Grenze vor allem nach der Gefährlichkeit der Tat.",
+            "§ 244 I Nr. 3 StGB: Der Weg hinein zählt – die offene Tür ist kein Einsteigen.",
+            "§ 164 StGB: Die Verdächtigung muss objektiv unwahr sein; der Versuch ist straflos.",
+            "§ 258 StGB: Absicht nur fürs Vereiteln, für die Vortat genügt Eventualvorsatz."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht (1/2)",
+          "punkte": [
+            "Art. 13 GG: Nachschau im Geschäftsraum zu Geschäftszeiten ist keine Durchsuchung.",
+            "§ 80 V VwGO: erst die Vollziehungsanordnung, dann die summarische Erfolgsprüfung.",
+            "Widerrufsvorbehalt: liefert den Grund – Frist und Ermessen bleiben Pflicht."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht (2/2)",
+          "punkte": [
+            "Enteignender Eingriff: rechtmäßiges Handeln, atypische Folge, Sonderopfer.",
+            "Art. 100 GG: vorlegen nur bei Überzeugung von der Verfassungswidrigkeit, nicht bei Zweifeln.",
+            "Nichtstörer: nur im Notstand, nur auf Zeit, mit Entschädigung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Definitionen als Karte lernen – Bausteine, Funktion, Grenzfall.",
+            "Kopfsache: Die Note der Probeklausur ist Diagnose – Randbemerkungen nach Wissen, Aufbau, Zeit sortieren."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann darf die Polizei ohne Richter in ein Restaurant – und warum?",
+            "Warum ist der Klingelfall schon Versuch, das Auskundschaften aber nicht?",
+            "Was bleibt dem Gläubiger bei einer verjährten Forderung noch?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht an Anspruch und Stufe festmachen",
+            "Strafrecht Merkmal für Merkmal prüfen",
+            "Öffentliches Recht als Prüfreihenfolge abrufen",
+            "Technik und Kopf als Routine"
+          ],
+          "icons": [
+            "waage",
+            "polizei",
+            "gebaeude",
+            "abschluss"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus Zivilrecht, Strafrecht, Öffentlichem Recht sowie Klausurtechnik und Kopfsache – je Thema ein Kernsatz. Geh die Punkte durch und markiere alles, was du nicht ohne Unterlagen erklären kannst. Das kommt auf deine Wiederholungsliste. Zum Schluss der 30-Sekunden-Selbsttest. Speichern und am Wochenende durchgehen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Die Woche in vier getrennten Lernbereichen noch einmal durchgehen.",
+        "handlung": "{A} points with his pointer at four separate small crates on a shelf, while {B} lifts the lid of one crate and checks its contents against a short list.",
+        "hinweisRegie": "Place the note in the free space above the four crates, slightly tilted toward the opened one, so all four crates and both characters remain fully visible.",
+        "alternative": "{B} walks past four marked stations on a trail and stamps a card at each, while {A} waits at the last one."
+      },
+      "bildSzene": "four crates on shelf, one opened",
+      "bildSzeneAlt": "four trail stations, stamp card",
+      "quellen": [
+        "Art. 24 EuGVVO",
+        "§ 280 BGB",
+        "§ 50 HGB",
+        "§ 214 BGB",
+        "§ 253 ZPO",
+        "§ 22 StGB",
+        "§ 228 StGB",
+        "§ 244 StGB",
+        "§ 164 StGB",
+        "§ 258 StGB",
+        "Art. 13 GG",
+        "§ 80 VwGO",
+        "§ 49 VwVfG",
+        "Art. 14 GG",
+        "Art. 100 GG",
+        "Themenpool: methodik-899",
+        "Themenpool: mindset-7"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-anzahl-themen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.711Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-275",
+      "slug": "2027-10-10-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Klagezulässigkeit in fünf Blöcken – lang wird nur das Problem",
+          "titelZeilen": [
+            "Klagezulässigkeit",
+            "in fünf Blöcken –",
+            "lang wird nur",
+            "das Problem"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Kurz ansprechen, Problem vertiefen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Zulässigkeit prüft das Gericht von Amts wegen. Fehlt eine Sachurteilsvoraussetzung, wird die Klage durch Prozessurteil als unzulässig abgewiesen. In der Klausur gehst du alle Blöcke durch – ausführlich wird aber nur, was der Sachverhalt problematisch macht."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema (1/2)",
+          "schritte": [
+            {
+              "titel": "1. Klageerhebung",
+              "text": "Klageschrift mit Parteien, Gericht, Gegenstand, Grund und bestimmtem Antrag (§ 253 Abs. 2 ZPO), Zustellung an den Beklagten."
+            },
+            {
+              "titel": "2. Zuständigkeit",
+              "text": "Sachlich nach dem GVG, etwa der Streitwertgrenze in § 23 Nr. 1 GVG. Örtlich nach §§ 12 ff. ZPO, bei Auslandsbezug auch international."
+            },
+            {
+              "titel": "3. Parteien",
+              "text": "Partei- und Prozessfähigkeit (§§ 50, 51 f. ZPO), Prozessführungsbefugnis, vor dem Landgericht Anwaltszwang (§ 78 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema (2/2)",
+          "schritte": [
+            {
+              "titel": "4. Rechtsschutzbedürfnis",
+              "text": "Bei Leistungsklagen meist unproblematisch; bei der Feststellungsklage prüfst du das Feststellungsinteresse (§ 256 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "5. Keine Sperre",
+              "text": "Keine anderweitige Rechtshängigkeit derselben Sache (§ 261 Abs. 3 Nr. 1 ZPO) und keine entgegenstehende Rechtskraft (§ 322 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "punkte": [
+            "Unzuständig? Auf Antrag verweist das Gericht nach § 281 ZPO, statt abzuweisen.",
+            "Rügelose Einlassung begründet Zuständigkeit (§ 39 ZPO) – nicht bei ausschließlicher (§ 40 Abs. 2 ZPO).",
+            "Die sachliche Zuständigkeit des Amtsgerichts hängt nach § 23 GVG teils vom Gegenstand ab, nicht vom Wert."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Alle fünf Blöcke kurz ansprechen, nur das Problem ausführlich prüfen – und bei Unzuständigkeit an § 281 ZPO denken."
+        },
+        {
+          "art": "cta",
+          "titel": "Zulässigkeit auf einen Blick",
+          "punkte": [
+            "Klage ordnungsgemäß erhoben?",
+            "Zuständigkeit sachlich und örtlich",
+            "Partei-, Prozessfähigkeit, Vertretung",
+            "Rechtsschutzbedürfnis, keine Sperre"
+          ],
+          "icons": [
+            "dokument",
+            "gericht",
+            "personen",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Die Zulässigkeit der Klage in fünf Blöcken: ordnungsgemäße Klageerhebung, Zuständigkeit, Parteien, Rechtsschutzbedürfnis und keine entgegenstehende Rechtshängigkeit oder Rechtskraft. In der Klausur sprichst du alles kurz an und vertiefst nur, was der Fall hergibt. Und denk bei Unzuständigkeit an die Verweisung nach § 281 ZPO. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zivilprozessrecht",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zulässigkeit der Klage: fünf Blöcke",
+      "coverText": "Kurz ansprechen, Problem vertiefen",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Die Zulässigkeit besteht aus fünf Blöcken, von denen meist nur einer ausführlich wird.",
+        "handlung": "{A} stacks five stone blocks into a small gate, while {B} kneels at the one block with a visible crack and inspects it closely with a lamp.",
+        "hinweisRegie": "Place the note in the free space next to the cracked block, slightly tilted toward the lamp's light, so the five blocks and both characters stay clearly visible.",
+        "alternative": "{B} checks five lanterns along a bridge and lingers only at the flickering one while {A} ticks off the rest."
+      },
+      "bildSzene": "five stone blocks, one cracked",
+      "bildSzeneAlt": "five lanterns, one flickering",
+      "quellen": [
+        "§ 253 ZPO",
+        "§§ 12 ff. ZPO",
+        "§ 23 GVG",
+        "§ 71 GVG",
+        "§§ 50, 51 ZPO",
+        "§ 78 ZPO",
+        "§ 256 ZPO",
+        "§ 261 ZPO",
+        "§ 281 ZPO",
+        "§§ 39, 40 ZPO",
+        "Themenpool: zpo-275"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-echte-bloecke",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.711Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-731",
+      "slug": "2027-10-10-b3",
+      "titelZeilen": [
+        "Tresor offen",
+        "gelassen – ist das",
+        "schon Anstiftung?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Tresor offen gelassen – ist das schon Anstiftung?",
+          "unter": "Anstiftung · § 26 StGB",
+          "text": "A lässt den Tresor offen, damit T zugreift. T greift zu.",
+          "norm": "§ 26 StGB",
+          "icon": "schloss",
+          "sprecher": "Den Tresor offen gelassen, und trotzdem kein Anstifter. A will, dass sein Kollege T Geld stiehlt. Er redet nicht mit ihm, lässt aber abends den Tresor offen. T sieht das und nimmt das Geld.",
+          "marken": [
+            "kein Wort gewechselt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vorsätzliche rechtswidrige Haupttat",
+          "text": "T begeht einen Diebstahl – schuldhaft muss er nicht handeln.",
+          "norm": "§ 242 StGB",
+          "sprecher": "Schritt eins: die Haupttat. T begeht vorsätzlich und rechtswidrig einen Diebstahl. Ob T schuldhaft handelt, spielt für die Teilnahme keine Rolle.",
+          "marken": [
+            "limitierte Akzessorietät"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Bestimmen",
+          "text": "H.M.: geistiger Kontakt nötig. Eine tatanreizende Situation genügt nicht.",
+          "norm": "§ 26 StGB",
+          "sprecher": "Schritt zwei, der Kern: Bestimmen heißt, den Tatentschluss hervorrufen. Nach herrschender Meinung braucht es dafür einen geistigen Kontakt, eine kommunikative Einwirkung. Wer nur eine verlockende Gelegenheit schafft, bestimmt nicht. Die Gegenansicht lässt jede Verursachung genügen.",
+          "marken": [
+            "geistiger Kontakt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Doppelter Vorsatz",
+          "text": "Vorsatz zur konkreten Haupttat und zum Hervorrufen des Entschlusses.",
+          "norm": null,
+          "sprecher": "Schritt drei: der doppelte Anstiftervorsatz. Er muss sich auf eine in ihren Umrissen konkrete Haupttat richten und auf das Bestimmen. Und der Anstifter muss die Vollendung wollen. Wer nur einen Versuch will, etwa als Lockspitzel, ist kein Anstifter.",
+          "marken": [
+            "Vollendung gewollt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtsfolge",
+          "text": "Der Anstifter wird gleich einem Täter bestraft.",
+          "norm": "§ 26 StGB",
+          "sprecher": "Schritt vier: die Rechtsfolge. Der Anstifter wird gleich einem Täter bestraft. Deshalb verlangt man beim Bestimmen mehr als bloßes Mitverursachen.",
+          "marken": [
+            "gleich einem Täter"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Zurück zum Tresor",
+          "text": "Keine Anstiftung nach h.M. – aber Beihilfe durch das Offenlassen liegt nahe.",
+          "norm": "§ 27 StGB",
+          "sprecher": "Zurück zum Tresor: Nach herrschender Meinung ist A kein Anstifter, denn er hat T nicht beeinflusst, sondern nur die Gelegenheit geschaffen. Das heißt nicht straflos. Wer die Tat so erleichtert, kommt als Gehilfe in Betracht.",
+          "marken": [
+            "Beihilfe prüfen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Bestimmen braucht Kommunikation",
+          "text": "Gelegenheit schaffen ist nach h.M. kein Bestimmen – dann weiter zur Beihilfe.",
+          "norm": "§§ 26, 27 StGB",
+          "sprecher": "Merke: Ohne geistigen Kontakt kein Bestimmen. Prüf dann sofort die Beihilfe, statt den Teilnehmer laufen zu lassen.",
+          "marken": [
+            "dann § 27"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die AT-Klausur speichern",
+          "text": "Speichern für die nächste Teilnahmeprüfung.",
+          "sprecher": "Speicher dir den Tresorfall für deine nächste Klausur zur Teilnahme.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "A lässt den Tresor offen, damit T das Geld nimmt – ist das Anstiftung? Nach h.M. nicht: Bestimmen verlangt einen geistigen Kontakt, eine kommunikative Einwirkung auf den Täter. Wer nur eine tatanreizende Situation schafft, ruft den Entschluss nicht hervor; die Gegenansicht lässt jede Verursachung genügen. Straflos ist A deshalb nicht – prüf die Beihilfe nach § 27 StGB. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#anstiftung",
+        "#26stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anstiftung: Gelegenheit ist kein Bestimmen",
+      "coverText": "Bestimmen braucht geistigen Kontakt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Wer nur eine Gelegenheit schafft, stiftet nach h.M. nicht an – es fehlt der geistige Kontakt.",
+        "handlung": "{A} silently leaves a vault door ajar and tiptoes away without looking back, while {B} on the other side discovers the open door with wide eyes and reaches inside.",
+        "hinweisRegie": "Place the note in the free space between the tiptoeing figure and the ajar vault door, slightly tilted toward the door, so both characters and the gap stay clearly visible.",
+        "alternative": "{B} places a ladder under an open window and walks away, while {A} later finds it and starts to climb."
+      },
+      "bildSzene": "vault left ajar, discovered by other",
+      "bildSzeneAlt": "ladder left under open window",
+      "quellen": [
+        "§ 26 StGB",
+        "§ 27 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafat-731"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.713Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-815",
+      "ueberzeile": "Prüfungsfrage 2. Examen Zivilrecht",
+      "titel": "VU gegen B, zulässiger Einspruch, die Klage bleibt voll begründet. Wie lautet der Hauptsachetenor?",
+      "optionen": [
+        "B wird erneut verurteilt, an K zu zahlen",
+        "Das Versäumnisurteil wird aufrechterhalten",
+        "Der Einspruch wird als unbegründet zurückgewiesen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 343 ZPO",
+        "Themenpool: assessorz-815"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.713Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-815",
+      "ueberzeile": "Auflösung",
+      "titel": "Aufrechterhalten – nicht neu verurteilen",
+      "text": "Stimmt die neue Entscheidung mit dem VU überein, wird es aufrechterhalten (§ 343 S. 1 ZPO). Eine erneute Verurteilung schüfe einen zweiten Titel. Verworfen wird der Einspruch nur, wenn er unzulässig ist (§ 341 ZPO). Dazu: B trägt die weiteren Kosten; ergeht das Urteil gegen Sicherheit, beachte § 709 S. 3 ZPO.",
+      "norm": "§ 343 S. 1 ZPO",
+      "quellen": [
+        "§ 343 ZPO",
+        "§ 341 ZPO",
+        "§ 709 ZPO",
+        "Themenpool: assessorz-815"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.713Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "B wird erneut verurteilt, an K zu zahlen",
+        "Das Versäumnisurteil wird aufrechterhalten",
+        "Der Einspruch wird als unbegründet zurückgewiesen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-164",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 212 Abs. 1 Nr. 1 BGB: Die Abschlagszahlung als Anerkenntnis",
+      "text": "Erkennt der Schuldner den Anspruch gegenüber dem Gläubiger an, beginnt die Verjährung neu. Das geht auch ohne ausdrückliche Erklärung: Abschlagszahlung, Zinszahlung und Sicherheitsleistung nennt das Gesetz selbst. Anders als die Hemmung setzt der Neubeginn die volle Frist wieder in Gang.",
+      "norm": "§ 212 Abs. 1 Nr. 1 BGB",
+      "quellen": [
+        "§ 212 BGB",
+        "Themenpool: bgbat-164"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.713Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-858",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Reicht im konkreten Anklagesatz „mit einem gefährlichen Werkzeug“?",
+      "falsch": "A stach mit einem gefährlichen Werkzeug auf O ein und verletzte ihn.",
+      "richtigText": "Der konkrete Anklagesatz schildert Tatsachen, die jedes gesetzliche Merkmal ausfüllen: „A stach mit einem Küchenmesser mit etwa zehn Zentimeter langer Klinge zweimal in den linken Oberarm des O.“ Der Rechtsbegriff gehört in den abstrakten Teil. Nur so ist die Tat nach § 200 Abs. 1 S. 1 StPO hinreichend beschrieben.",
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "Themenpool: anklage-858"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.713Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-694",
+      "ueberzeile": "Klausurtipp Staatshaftung",
+      "titel": "§ 839 BGB: Hielt ein Kollegialgericht das Handeln für rechtmäßig, fehlt meist das Verschulden",
+      "text": "Verschulden prüfst du objektiviert: Maßstab ist der pflichtgetreue Durchschnittsbeamte. Hat ein mit mehreren Berufsrichtern besetztes Gericht die Amtshandlung nach sorgfältiger Prüfung für rechtmäßig gehalten, trifft den Beamten nach der Rspr. regelmäßig kein Vorwurf. Ausnahmen gelten etwa, wenn das Gericht von einem unvollständigen Sachverhalt ausging.",
+      "quellen": [
+        "§ 839 BGB",
+        "Art. 34 GG",
+        "Themenpool: verwalt-694"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.713Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-051",
+      "ueberzeile": "3 Punkte Zivilprozessrecht",
+      "titel": "Rechtshängigkeit wirkt auch im BGB: drei materielle Folgen",
+      "text": "Mit Zustellung der Klage tritt Rechtshängigkeit ein (§ 261 Abs. 1 ZPO). Das ändert nicht nur den Prozess, sondern auch die materielle Lage.",
+      "punkte": [
+        "Prozesszinsen ab Rechtshängigkeit (§ 291 BGB)",
+        "Verschärfte Haftung, etwa §§ 818 Abs. 4, 987 BGB",
+        "Verjährung gehemmt – bei demnächst erfolgter Zustellung ab Eingang (§ 204 BGB, § 167 ZPO)"
+      ],
+      "quellen": [
+        "§ 261 ZPO",
+        "§ 167 ZPO",
+        "§ 291 BGB",
+        "§ 204 BGB",
+        "Themenpool: zpo-051"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:44:58.713Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

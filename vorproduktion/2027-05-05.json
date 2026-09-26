@@ -1,0 +1,864 @@
+{
+  "datum": "2027-05-05",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-561",
+        "themaTitel": "Versäumnisurteil und Einspruch",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-317",
+        "themaTitel": "Wann liegt Verdeckungsabsicht vor?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-408",
+        "themaTitel": "Wie prüft man den Antrag nach § 80 Abs. 5 VwGO?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "stpo-776"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "stpo-776"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "stpo-769"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "streitstand",
+        "themaId": "verwbt-933"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "merksatz",
+        "themaId": "zpo-288"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:10",
+        "art": "begriff",
+        "themaId": "zpo-286"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-561",
+      "poolTitel": "Versäumnisurteil und Einspruch",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 330 ff., 338 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-13",
+        "2026-12-06",
+        "2027-04-28"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-317",
+      "poolTitel": "Wann liegt Verdeckungsabsicht vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2027-04-16"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-408",
+      "poolTitel": "Wie prüft man den Antrag nach § 80 Abs. 5 VwGO?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-12"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-776",
+      "poolTitel": "Vorläufige Festnahme",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 127 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-22",
+        "2026-12-25",
+        "2026-12-25"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-776",
+      "poolTitel": "Vorläufige Festnahme",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 127 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-22",
+        "2026-12-25",
+        "2026-12-25"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "stpo-769",
+      "poolTitel": "Zeugnisverweigerungsrechte",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 52 ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08",
+        "2026-12-29",
+        "2027-03-05"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "verwbt-933",
+      "poolTitel": "Was garantiert Art. 28 Abs. 2 GG den Gemeinden – und wo endet die Garantie?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Art. 93 Abs. 1 Nr. 4b GG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-29",
+        "2027-01-03",
+        "2027-03-04"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "zpo-288",
+      "poolTitel": "Wie wird eine Forderung gepfändet?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 829 ZPO",
+        "§ 835 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-22"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "zpo-286",
+      "poolTitel": "Was ist der Unterschied zwischen Arrest und einstweiliger Verfügung?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 916 ZPO",
+        "§ 935 ZPO",
+        "§ 940 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-21",
+        "2027-01-21"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-561",
+      "slug": "2027-05-05-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zweimal nicht erschienen – und kein Einspruch mehr",
+          "titelZeilen": [
+            "Zweimal nicht",
+            "erschienen – und",
+            "kein Einspruch",
+            "mehr"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "§ 345 ZPO schneidet ab",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Gegen B ergeht im ersten Termin ein Versäumnisurteil. B legt rechtzeitig Einspruch ein. Im Termin, der daraufhin bestimmt wird, erscheint B wieder nicht. Wie entscheidet das Gericht – und was kann B danach noch tun?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Einspruch zulässig",
+              "text": "Statthaft gegen das Versäumnisurteil, Frist zwei Wochen ab Zustellung (Notfrist), Form nach § 340 ZPO (§§ 338, 339 ZPO)."
+            },
+            {
+              "titel": "2. Wirkung",
+              "text": "Der Prozess wird in die Lage vor der Säumnis zurückversetzt (§ 342 ZPO)."
+            },
+            {
+              "titel": "3. Erneute Säumnis",
+              "text": "Erscheint der Einspruchsführer im Einspruchstermin wieder nicht, wird der Einspruch durch Versäumnisurteil verworfen (§ 345 ZPO)."
+            },
+            {
+              "titel": "4. Kein weiterer Einspruch",
+              "text": "Gegen dieses zweite Versäumnisurteil bleibt nur die Berufung – beschränkt auf fehlende schuldhafte Säumnis (§ 514 Abs. 2 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Zweites Versäumnisurteil: „Der Einspruch des Beklagten gegen das Versäumnisurteil vom … wird verworfen.“ B bleibt nur die Berufung: keine schuldhafte Säumnis. Ob das erste Urteil erneut auf Schlüssigkeit geprüft wird, ist streitig; der BGH verneint es außerhalb des § 700 Abs. 6 ZPO."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Im Einspruchstermin wird schlicht ein neues Versäumnisurteil „in der Sache“ erlassen oder das erste „aufrechterhalten“. § 345 ZPO verlangt die Verwerfung des Einspruchs – und schneidet den weiteren Einspruch ab."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wer nach seinem Einspruch wieder säumig ist, bekommt ein zweites Versäumnisurteil: Einspruch verworfen, nur noch Berufung nach § 514 Abs. 2 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Säumnis in drei Zügen",
+          "punkte": [
+            "Einspruch fristgerecht?",
+            "Säumig im Einspruchstermin?",
+            "Dann § 345, dann § 514 II ZPO"
+          ],
+          "icons": [
+            "kalender",
+            "uhr",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Zweimal nicht erschienen – dann gibt es keinen Einspruch mehr. Nach einem zulässigen Einspruch wird der Prozess zurückversetzt (§ 342 ZPO). Fehlt der Einspruchsführer im Einspruchstermin erneut, verwirft das Gericht den Einspruch durch zweites Versäumnisurteil (§ 345 ZPO). Dagegen bleibt nur die Berufung, gestützt darauf, dass keine schuldhafte Säumnis vorlag (§ 514 Abs. 2 ZPO). Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#versäumnisurteil",
+        "#zivilprozessrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zweites Versäumnisurteil: Einspruch verworfen",
+      "coverText": "§ 345 ZPO schneidet ab",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Wer nach seinem Einspruch erneut säumig ist, verliert den Einspruch endgültig.",
+        "handlung": "{A} hovers beside an empty chair in a hearing hall and closes a second gate behind the first one, while {B} arrives too late at the far end of the corridor.",
+        "hinweisRegie": "Place the note in the open space above the empty chair, slightly tilted toward the second gate, so the double absence and the closing gate are linked without covering {B}.",
+        "alternative": "{B} knocks on a door that {A} has already sealed twice, with only a narrow side window left open."
+      },
+      "bildSzene": "second gate closes beside empty chair",
+      "bildSzeneAlt": "door sealed twice, narrow window open",
+      "quellen": [
+        "§§ 330, 331 ZPO",
+        "§§ 338–340 ZPO",
+        "§ 342 ZPO",
+        "§ 345 ZPO",
+        "§ 514 Abs. 2 ZPO",
+        "§ 700 Abs. 6 ZPO",
+        "Themenpool: zpo-561"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:12.176Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-317",
+      "slug": "2027-05-05-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Tötung wegen eines Bußgelds – Verdeckungsmord?",
+          "titelZeilen": [
+            "Tötung wegen eines",
+            "Bußgelds – Ver-",
+            "deckungsmord?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Andere Straftat nötig",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A fährt deutlich zu schnell. Polizist P will ihn anhalten; A droht nur ein Bußgeld. Um der Kontrolle zu entgehen, fährt A den P mit Tötungsvorsatz an, P stirbt. Variante: Kurz zuvor hat A einen Radfahrer fahrlässig verletzt und will genau das verbergen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Totschlag",
+              "text": "Tötung des P mit Vorsatz – § 212 Abs. 1 StGB (+)."
+            },
+            {
+              "titel": "2. Verdeckungsabsicht",
+              "text": "A muss töten, um eine andere Straftat zu verdecken – eigene oder fremde. Es genügt, dass A sie sich vorstellt."
+            },
+            {
+              "titel": "3. Ausgangsfall",
+              "text": "Die Geschwindigkeitsüberschreitung ist hier nur eine Ordnungswidrigkeit, keine Straftat. Verdeckungsabsicht (−)."
+            },
+            {
+              "titel": "4. Variante",
+              "text": "§ 229 StGB ist eine Straftat. Verdeckungsabsicht (+), auch wenn nur die Täterschaft verborgen werden soll."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Ausgangsfall: kein Verdeckungsmord. Zu prüfen sind niedrige Beweggründe: Wer einen Menschen tötet, um einem Bußgeld zu entgehen, handelt aus einem Anlass, der in krassem Missverhältnis zur Tat steht – nach Gesamtwürdigung naheliegend. Variante: Mord in Verdeckungsabsicht (§ 211 Abs. 2 Gr. 3 StGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Verdeckungsabsicht wird bejaht, weil der Täter „irgendetwas“ verbergen will. Das Gesetz verlangt eine andere Straftat. Umgekehrt genügt schon eine fahrlässige Vortat – sie muss weder schwer noch vorsätzlich sein."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verdeckt werden muss eine andere Straftat. Eine Ordnungswidrigkeit reicht nicht – dann niedrige Beweggründe prüfen."
+        },
+        {
+          "art": "cta",
+          "titel": "Verdeckungsabsicht prüfen",
+          "punkte": [
+            "Was genau soll verborgen bleiben?",
+            "Straftat oder nur Ordnungswidrigkeit?",
+            "Sonst: niedrige Beweggründe"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Tötung, um einem Bußgeld zu entgehen – Verdeckungsmord? Nein: § 211 Abs. 2 StGB verlangt, dass der Täter eine andere Straftat verdecken will. Eine Ordnungswidrigkeit genügt nicht. Dann prüfst du niedrige Beweggründe. Schon eine fahrlässige Vortat wie § 229 StGB reicht dagegen für die Verdeckungsabsicht. Speichern für die nächste Tötungsdelikte-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#211stgb",
+        "#mord",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verdeckungsmord: Ordnungswidrigkeit genügt nicht",
+      "coverText": "Andere Straftat nötig",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Verdeckungsabsicht setzt voraus, dass eine Straftat verborgen werden soll – ein Bußgeld reicht nicht.",
+        "handlung": "{A} nervously hides a small parking ticket behind his back, while {B} lifts a large cover off a second, much heavier crate and inspects what lies inside.",
+        "hinweisRegie": "Place the note in the free space between the small ticket and the heavy crate, slightly tilted toward the crate, so the difference in weight is clear without covering {A}'s face.",
+        "alternative": "{B} weighs a feather-light slip against a heavy stone on a scale while {A} watches which side sinks."
+      },
+      "bildSzene": "small ticket hidden, heavy crate uncovered",
+      "bildSzeneAlt": "slip and stone on scale",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "§ 212 StGB",
+        "§ 229 StGB",
+        "Themenpool: strafbt-317"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:12.176Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-408",
+      "slug": "2027-05-05-b3",
+      "titelZeilen": [
+        "Sofortvollzug:",
+        "Die Begründung",
+        "muss nicht",
+        "überzeugen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Sofortvollzug: Die Begründung muss nicht überzeugen",
+          "unter": "Eilrechtsschutz · § 80 Abs. 5 VwGO",
+          "text": "§ 80 Abs. 3 VwGO ist eine Formvorschrift – ob die Gründe tragen, klärt die Interessenabwägung.",
+          "norm": "§ 80 Abs. 3 S. 1 VwGO",
+          "icon": "uhr",
+          "sprecher": "Die Begründung des Sofortvollzugs muss nicht überzeugen. Formell verlangt Paragraf 80 Absatz 3 VwGO nur, dass es eine schriftliche, auf den Einzelfall bezogene Begründung gibt. Ob sie inhaltlich trägt, ist keine Formfrage.",
+          "marken": [
+            "Form",
+            "nicht Inhalt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Statthaftigkeit",
+          "text": "Anfechtungssituation, und der Rechtsbehelf hat keine aufschiebende Wirkung.",
+          "norm": "§ 80 Abs. 2, 5 VwGO",
+          "sprecher": "Schritt eins: Statthaft ist der Antrag, wenn in der Hauptsache die Anfechtungsklage passt und die aufschiebende Wirkung entfällt, etwa weil die Behörde den Sofortvollzug angeordnet hat.",
+          "marken": [
+            "Anfechtungssituation"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Formelle Rechtmäßigkeit der Anordnung",
+          "text": "Zuständigkeit und schriftliche, einzelfallbezogene Begründung.",
+          "norm": "§ 80 Abs. 3 S. 1 VwGO",
+          "sprecher": "Schritt zwei, in der Begründetheit: Ist die Vollziehungsanordnung formell rechtmäßig? Zuständig ist die Ausgangs- oder Widerspruchsbehörde. Die Begründung muss schriftlich sein und auf den konkreten Fall eingehen. Floskeln reichen nicht.",
+          "marken": [
+            "keine Floskeln"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Folge eines Begründungsmangels",
+          "text": "Nach verbreiteter Ansicht hebt das Gericht dann nur die Anordnung auf.",
+          "norm": null,
+          "sprecher": "Schritt drei: Fehlt eine ordnungsgemäße Begründung, hebt das Gericht nach verbreiteter Ansicht nur die Vollziehungsanordnung auf. Die Behörde kann sie mit besserer Begründung erneut erlassen.",
+          "marken": [
+            "nur Anordnung weg"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Eigene Interessenabwägung",
+          "text": "Offensichtlich rechtswidrig: Antrag begründet. Offensichtlich rechtmäßig plus Eilbedürfnis: unbegründet.",
+          "norm": "§ 80 Abs. 5 S. 1 VwGO",
+          "sprecher": "Schritt vier: Das Gericht wägt selbst ab. Es prüft summarisch die Erfolgsaussichten in der Hauptsache. Ist der Verwaltungsakt offensichtlich rechtswidrig, gewinnt der Antragsteller. Ist er offensichtlich rechtmäßig und besteht ein besonderes Vollzugsinteresse, verliert er. Sonst entscheidet eine Folgenabwägung.",
+          "marken": [
+            "Erfolgsaussichten",
+            "Folgenabwägung"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Formell: Gibt es eine einzelfallbezogene Begründung? Materiell: eigene Abwägung des Gerichts.",
+          "norm": "§ 80 Abs. 3, 5 VwGO",
+          "sprecher": "Merke: Formell fragst du nur, ob es eine einzelfallbezogene Begründung gibt. Ob das Vollzugsinteresse wirklich überwiegt, entscheidet das Gericht in seiner eigenen Abwägung.",
+          "marken": [
+            "zwei Ebenen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Begründung und Abwägung nie vermischen",
+          "text": "Speichern für die nächste Eilrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Eilrechtsklausur. Und trenn sauber zwischen Form und Abwägung.",
+          "marken": [
+            "Form ≠ Abwägung"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Begründung des Sofortvollzugs muss nicht überzeugen – sie muss vorhanden, schriftlich und auf den Einzelfall bezogen sein (§ 80 Abs. 3 S. 1 VwGO). Ob das Vollzugsinteresse tatsächlich überwiegt, entscheidet das Gericht im Antrag nach § 80 Abs. 5 VwGO in einer eigenen Interessenabwägung, orientiert an den Erfolgsaussichten der Hauptsache. Speichern für die nächste Eilrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#eilrechtsschutz",
+        "#80vwgo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 80 V VwGO: Form und Abwägung trennen",
+      "coverText": "Form prüfen, dann abwägen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Die Begründung des Sofortvollzugs wird nur formell geprüft – über das Gewicht entscheidet die gerichtliche Abwägung.",
+        "handlung": "{A} holds up a sealed envelope and checks only that it carries a stamp, while {B} curiously places two weights on a large balance behind him.",
+        "hinweisRegie": "Place the note in the free space between the stamped envelope and the balance, slightly tilted toward the balance, so the two levels of review are separated without covering {B}'s hands.",
+        "alternative": "{B} ticks off a box on a small form while {A} weighs two glowing stones on a separate scale."
+      },
+      "bildSzene": "stamped envelope checked, balance behind",
+      "bildSzeneAlt": "form ticked beside separate scale",
+      "quellen": [
+        "§ 80 Abs. 2 S. 1 Nr. 4 VwGO",
+        "§ 80 Abs. 3 S. 1 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "Themenpool: vwgo-408"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:12.177Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-776",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Ladendieb D wird gestellt, zeigt sofort den Ausweis und will gehen. Darf L ihn nach § 127 I StPO festhalten?",
+      "optionen": [
+        "Ja – die frische Tat genügt immer",
+        "Ja, bis er den Schaden bezahlt hat",
+        "Nein, wenn weder Fluchtverdacht noch Identitätsfrage besteht"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 127 Abs. 1 S. 1 StPO",
+        "Themenpool: stpo-776"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:12.177Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-776",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur mit Festnahmegrund – die frische Tat allein reicht nicht",
+      "text": "§ 127 Abs. 1 S. 1 StPO verlangt neben dem Betreffen oder Verfolgen auf frischer Tat einen Festnahmegrund: Der Täter ist der Flucht verdächtig, oder seine Identität kann nicht sofort festgestellt werden. Weist D sich aus und gibt es keine Anhaltspunkte für eine Flucht, deckt die Norm das Festhalten nicht.",
+      "norm": "§ 127 Abs. 1 S. 1 StPO",
+      "quellen": [
+        "§ 127 Abs. 1 S. 1 StPO",
+        "Themenpool: stpo-776"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:12.177Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – die frische Tat genügt immer",
+        "Ja, bis er den Schaden bezahlt hat",
+        "Nein, wenn weder Fluchtverdacht noch Identitätsfrage besteht"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-769",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 53 Abs. 2 StPO: Entbunden, muss die Ärztin aussagen",
+      "text": "Berufsgeheimnisträger dürfen über das schweigen, was ihnen in dieser Eigenschaft anvertraut oder bekannt geworden ist (§ 53 Abs. 1 StPO). Anders als bei Angehörigen (§ 52 StPO) hängt das Recht am Beruf. Bei Ärzten, Anwälten und anderen Gruppen der Nr. 2 bis 3b entfällt es, wenn sie von der Schweigepflicht entbunden sind.",
+      "norm": "§ 53 Abs. 1, 2 StPO",
+      "quellen": [
+        "§ 52 StPO",
+        "§ 53 StPO",
+        "Themenpool: stpo-769"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:12.177Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-933",
+      "ueberzeile": "Streitstand Kommunalrecht",
+      "titel": "Stadtwerk macht Konkurrenz: Schützt die Gemeindeordnung den privaten Wettbewerber?",
+      "norm": "§ 42 Abs. 2 VwGO",
+      "optionen": [
+        "Frühere Rspr.: Nein – die Schranken schützen nur die Allgemeinheit.",
+        "Neuere OVG-Rspr., Teile der Lit.: Ja, wenn die Gemeindeordnung auch Private schützen will."
+      ],
+      "text": "Klausur: Drittschutz aus der Subsidiaritätsklausel des jeweiligen Landes herleiten (Schutznormtheorie). Art. 12 GG schützt grundsätzlich nicht vor Konkurrenz.",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "Art. 12 Abs. 1 GG",
+        "§ 42 Abs. 2 VwGO",
+        "Gemeindeordnungen der Länder",
+        "Themenpool: verwbt-933"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:12.177Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-288",
+      "ueberzeile": "Merksatz Zwangsvollstreckung",
+      "titel": "Nicht mehr pfänden als nötig",
+      "text": "Gepfändet wird nur, was zur Befriedigung des Gläubigers und für die Kosten nötig ist (§ 803 Abs. 1 S. 2 ZPO). Bringt die Verwertung keinen Überschuss über die Kosten, unterbleibt die Pfändung (§ 803 Abs. 2 ZPO). Rechtsbehelf: § 766 ZPO.",
+      "norm": "§ 803 ZPO",
+      "quellen": [
+        "§ 803 ZPO",
+        "§ 766 ZPO",
+        "Themenpool: zpo-288"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:02:54.532Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-286",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Leistungsverfügung",
+      "text": "Einstweilige Verfügung, die den Anspruch vorläufig erfüllt, statt ihn nur zu sichern – etwa die Rückgabe nach verbotener Eigenmacht oder die Zahlung eines Notbedarfs. Weil sie die Hauptsache vorwegnimmt, ist sie nur ausnahmsweise zulässig: wenn der Gläubiger dringend auf sofortige Erfüllung angewiesen ist. Angelehnt an § 940 ZPO, die Maßstäbe hat die Rspr. entwickelt.",
+      "norm": "§§ 935, 940 ZPO",
+      "quellen": [
+        "§ 916 ZPO",
+        "§ 935 ZPO",
+        "§ 940 ZPO",
+        "Themenpool: zpo-286"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:12.177Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

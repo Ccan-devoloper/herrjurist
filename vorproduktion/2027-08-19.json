@@ -1,0 +1,897 @@
+{
+  "datum": "2027-08-19",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "revision-883",
+        "themaTitel": "Wie weit prüft die Revision die Beweiswürdigung?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "assessoroer-708",
+        "themaTitel": "Behördenklausur: Ausgangsbescheid strukturieren",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-054",
+        "themaTitel": "Was sind die Voraussetzungen eines Versäumnisurteils gegen den Beklagten?",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:00",
+        "art": "frage",
+        "themaId": "staat-635"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:00",
+        "art": "antwort",
+        "themaId": "staat-635"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:13",
+        "art": "norm",
+        "themaId": "handelsg-267"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:25",
+        "art": "streitstand",
+        "themaId": "anklage-856"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "merksatz",
+        "themaId": "delikt-038"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "begriff",
+        "themaId": "schuld-170"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "revision-883",
+      "poolTitel": "Wie weit prüft die Revision die Beweiswürdigung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-25",
+        "2027-04-27",
+        "2027-06-28"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "assessoroer-708",
+      "poolTitel": "Behördenklausur: Ausgangsbescheid strukturieren",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwVfG; Spezialgesetz"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-25"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-054",
+      "poolTitel": "Was sind die Voraussetzungen eines Versäumnisurteils gegen den Beklagten?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 331 ZPO",
+        "§ 335 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-14"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-635",
+      "poolTitel": "Konkrete Normenkontrolle",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 I GG; §§ 80 ff. BVerfGG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-17",
+        "2027-04-29",
+        "2027-04-29"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-635",
+      "poolTitel": "Konkrete Normenkontrolle",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 I GG; §§ 80 ff. BVerfGG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-17",
+        "2027-04-29",
+        "2027-04-29"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "handelsg-267",
+      "poolTitel": "Wie wirkt das kaufmännische Bestätigungsschreiben?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 346 HGB",
+        "§ 242 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-17",
+        "2027-06-16",
+        "2027-07-11"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "anklage-856",
+      "poolTitel": "Wie ist die Anklageschrift aufgebaut?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-21",
+        "2027-06-20",
+        "2027-07-19"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "delikt-038",
+      "poolTitel": "Wann greift die Produzentenhaftung neben dem ProdHaftG?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 1 ProdHaftG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-12"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuld-170",
+      "poolTitel": "Was ist der Unterschied zwischen Unmöglichkeit und Unzumutbarkeit?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 275 Abs. 1 BGB",
+        "§ 275 Abs. 2 BGB",
+        "§ 275 Abs. 3 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-03",
+        "2027-02-16"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-883",
+      "slug": "2027-08-19-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Die Revision würdigt keine Beweise neu – sie sucht Rechtsfehler",
+          "titelZeilen": [
+            "Die Revision",
+            "würdigt nicht neu –",
+            "sie sucht",
+            "Rechtsfehler"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Lücke, Widerspruch, Denkfehler",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Ausgangspunkt",
+          "text": "Die Beweiswürdigung ist Sache des Tatgerichts (§ 261 StPO). Das Revisionsgericht setzt keine eigene Überzeugung an dessen Stelle. Es prüft auf die Sachrüge nur, ob die Würdigung in den Urteilsgründen rechtsfehlerhaft ist (§ 337 StPO)."
+        },
+        {
+          "art": "text",
+          "titel": "Wann die Würdigung rechtsfehlerhaft ist",
+          "punkte": [
+            "Sie ist in sich widersprüchlich, unklar oder lückenhaft.",
+            "Sie verstößt gegen Denkgesetze oder gesicherte Erfahrungssätze.",
+            "Sie stellt überspannte Anforderungen an die Überzeugungsbildung.",
+            "Naheliegende andere Möglichkeiten werden nicht erörtert."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Sachrüge oder Verfahrensrüge?",
+          "links": {
+            "titel": "Sachrüge",
+            "punkte": [
+              "Fehler ergibt sich aus den Urteilsgründen selbst.",
+              "Allgemein erhoben genügt sie; Ausführungen sind sinnvoll."
+            ]
+          },
+          "rechts": {
+            "titel": "Verfahrensrüge",
+            "punkte": [
+              "Fehler liegt im Weg zum Urteil, etwa § 261 StPO.",
+              "Tatsachen genau vortragen: § 344 II 2 StPO."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Die Grenze: kein Rekonstruieren",
+          "text": "Was ein Zeuge in der Hauptverhandlung genau gesagt hat, rekonstruiert das Revisionsgericht nicht. Die Rüge, er habe anders ausgesagt, dringt deshalb grundsätzlich nicht durch. Anders, wenn sich der Widerspruch ohne Rekonstruktion belegen lässt – etwa mit einer verlesenen Urkunde."
+        },
+        {
+          "art": "text",
+          "titel": "In dubio pro reo",
+          "text": "Der Zweifelssatz ist keine Beweisregel. Verletzt ist er nur, wenn das Urteil selbst erkennen lässt, dass das Gericht trotz eigener Zweifel verurteilt hat – nicht schon, weil ein anderes Gericht hätte zweifeln können."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht „wir hätten anders gewürdigt“, sondern: Wo ist die Würdigung lückenhaft, widersprüchlich oder unklar? Das ist der Maßstab der Revision."
+        },
+        {
+          "art": "cta",
+          "titel": "Beweiswürdigung angreifen",
+          "punkte": [
+            "Urteilsgründe auf Lücken lesen",
+            "Widersprüche konkret benennen",
+            "Keine Rekonstruktion der Aussagen"
+          ],
+          "icons": [
+            "lupe",
+            "dokument",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Die Revision würdigt keine Beweise neu – sie sucht Rechtsfehler. Die Beweiswürdigung gehört dem Tatgericht (§ 261 StPO). Auf die Sachrüge prüft das Revisionsgericht nur, ob sie widersprüchlich, unklar oder lückenhaft ist, gegen Denkgesetze oder Erfahrungssätze verstößt oder überspannte Anforderungen stellt. Was ein Zeuge genau gesagt hat, wird nicht rekonstruiert. Und der Zweifelssatz ist nur verletzt, wenn das Gericht trotz eigener Zweifel verurteilt hat.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#beweiswürdigung",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Revision: Beweiswürdigung auf Rechtsfehler",
+      "coverText": "Lücke, Widerspruch, Denkfehler",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Das Revisionsgericht prüft nicht, ob es selbst anders entschieden hätte, sondern ob die Begründung trägt.",
+        "handlung": "{A} runs her hand along a stone bridge built by someone else, searching for a missing stone, while {B} hovers nearby and deliberately leaves a new pile of stones untouched.",
+        "hinweisRegie": "Place the note in the free space near the gap in the bridge that {A} is inspecting, slightly tilted toward the gap, without covering her hand or {B}'s unused pile.",
+        "alternative": "{B} holds a finished chain up to the light while {A} taps exactly one weak link with a small hammer."
+      },
+      "bildSzene": "expedition leader checks bridge for gap",
+      "bildSzeneAlt": "chain held up, one weak link",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 337 StPO",
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: revision-883"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:45.250Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-708",
+      "slug": "2027-08-19-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ausgangsbescheid bekannt geben, Widerspruchsbescheid zustellen",
+          "titelZeilen": [
+            "Ausgangsbescheid",
+            "bekannt geben,",
+            "Widerspruchs-",
+            "bescheid zustellen"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "§ 41 VwVfG gegen § 73 III VwGO",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "In der Behördenklausur entwirfst du entweder den Ausgangsbescheid oder den Widerspruchsbescheid. Beide sehen ähnlich aus – folgen aber teils anderen Regeln. Wer sie vermischt, verschenkt sichere Punkte."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Form und Bekanntgabe",
+          "links": {
+            "titel": "Ausgangsbescheid",
+            "punkte": [
+              "Begründung nach § 39 VwVfG",
+              "Bekanntgabe nach § 41 VwVfG, z. B. per Post",
+              "Belehrung: Widerspruch oder – je nach Land – Klage"
+            ]
+          },
+          "rechts": {
+            "titel": "Widerspruchsbescheid",
+            "punkte": [
+              "Begründung, Belehrung, Zustellung: § 73 III 1 VwGO",
+              "Zustellung nach dem VwZG (§ 73 III 2 VwGO)",
+              "Belehrung über die Klage"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Inhalt des Tenors",
+          "links": {
+            "titel": "Ausgangsbescheid",
+            "punkte": [
+              "Die Regelung selbst, bestimmt (§ 37 I VwVfG)",
+              "Ggf. Sofortvollzug mit Begründung (§ 80 III VwGO)",
+              "Ggf. Androhung von Zwangsmitteln, Kosten"
+            ]
+          },
+          "rechts": {
+            "titel": "Widerspruchsbescheid",
+            "punkte": [
+              "Zurückweisung oder Aufhebung/Änderung",
+              "Kostenentscheidung (§ 73 III 3 VwGO)",
+              "Ggf. Hinzuziehung eines Bevollmächtigten (§ 80 II VwVfG)"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Landesrecht mitdenken",
+          "text": "Ob überhaupt ein Widerspruchsverfahren stattfindet, hängt vom Landesrecht ab (§ 68 Abs. 1 S. 2 VwGO). Zwangsmittel und Gebühren richten sich nach dem jeweiligen Landesrecht. Prüfe im Bearbeitervermerk, welche Teile verlangt sind."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ausgangsbescheid: bekannt geben (§ 41 VwVfG). Widerspruchsbescheid: begründen, belehren, zustellen (§ 73 Abs. 3 VwGO) – mit Kostenentscheidung."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Reinschrift prüfen",
+          "punkte": [
+            "Welcher Bescheid ist verlangt?",
+            "Bekanntgabe oder Zustellung?",
+            "Kosten und Belehrung vollständig?"
+          ],
+          "icons": [
+            "dokument",
+            "umschlag",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Ausgangsbescheid bekannt geben, Widerspruchsbescheid zustellen. Der Ausgangsbescheid wird nach § 41 VwVfG bekannt gegeben, etwa per einfacher Post. Der Widerspruchsbescheid ist nach § 73 Abs. 3 VwGO zu begründen, mit Rechtsbehelfsbelehrung zu versehen und nach dem VwZG zuzustellen; er enthält auch die Kostenentscheidung. Ob es ein Widerspruchsverfahren gibt, regelt das Landesrecht. Speichern für die nächste Behördenklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#widerspruchsbescheid",
+        "#vwvfg",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ausgangs- vs. Widerspruchsbescheid",
+      "coverText": "§ 41 VwVfG gegen § 73 III VwGO",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Zwei fast gleiche Bescheide gehen auf verschiedenen Wegen zum Empfänger: einfach per Post oder förmlich zugestellt.",
+        "handlung": "{A} drops a simple envelope into an ordinary mailbox, while {B} curiously hands a second, sealed envelope with a large wax seal directly to a waiting courier.",
+        "hinweisRegie": "Place the note in the free space between the mailbox and the courier's hand, slightly tilted toward the sealed envelope, so the difference in delivery is clear without covering either character.",
+        "alternative": "{B} sorts two nearly identical documents onto two different conveyor belts, one ending at a mailbox, one at a signing desk."
+      },
+      "bildSzene": "plain mail versus sealed courier delivery",
+      "bildSzeneAlt": "two belts: mailbox and signing desk",
+      "quellen": [
+        "§ 39 VwVfG",
+        "§ 41 VwVfG",
+        "§ 37 VwVfG",
+        "§ 80 VwVfG",
+        "§ 68 VwGO",
+        "§ 73 VwGO",
+        "§ 80 VwGO",
+        "Themenpool: assessoroer-708"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslungsfehler",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:45.251Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-054",
+      "slug": "2027-08-19-b3",
+      "titelZeilen": [
+        "Wieder säumig:",
+        "Kann B noch einmal",
+        "Einspruch einlegen?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Wieder säumig: Kann B noch einmal Einspruch einlegen?",
+          "unter": "Zweites Versäumnisurteil · § 345 ZPO",
+          "text": "Nach dem zweiten Versäumnisurteil gibt es keinen Einspruch mehr.",
+          "norm": "§ 345 ZPO",
+          "icon": "gericht",
+          "sprecher": "Zweimal säumig? Dann ist der Einspruch weg. B hat gegen ein Versäumnisurteil Einspruch eingelegt und fehlt im neuen Termin wieder. Was jetzt passiert, zeigen vier Schritte.",
+          "marken": [
+            "kein zweiter Einspruch",
+            "§ 345 ZPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erstes Versäumnisurteil",
+          "text": "Gegen das Versäumnisurteil ist der Einspruch statthaft.",
+          "norm": "§ 338 ZPO",
+          "sprecher": "Schritt eins: Gegen B ergeht ein Versäumnisurteil nach § 331 ZPO. Sein Rechtsbehelf ist der Einspruch, nicht die Berufung.",
+          "marken": [
+            "Einspruch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Einspruch: zwei Wochen Notfrist",
+          "text": "Zulässiger Einspruch versetzt den Prozess in die Lage vor der Säumnis zurück.",
+          "norm": "§§ 339, 342 ZPO",
+          "sprecher": "Schritt zwei: Der Einspruch muss binnen zwei Wochen ab Zustellung eingehen, das ist eine Notfrist. Ist er zulässig, wird der Prozess in die Lage vor der Säumnis zurückversetzt.",
+          "marken": [
+            "2 Wochen Notfrist"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Erneut säumig: zweites Versäumnisurteil",
+          "text": "Der Einspruch wird verworfen – ein weiterer Einspruch ist ausgeschlossen.",
+          "norm": "§ 345 ZPO",
+          "sprecher": "Schritt drei: B fehlt im Einspruchstermin erneut. Dann wird sein Einspruch durch ein zweites Versäumnisurteil verworfen. Gegen dieses Urteil hat er keinen Einspruch mehr.",
+          "marken": [
+            "Einspruch verworfen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Berufung nur eingeschränkt",
+          "text": "Nur mit der Begründung, dass kein Fall der schuldhaften Versäumung vorlag.",
+          "norm": "§ 514 Abs. 2 ZPO",
+          "sprecher": "Schritt vier: Bleibt nur die Berufung. Sie kann aber nur darauf gestützt werden, dass ein Fall der schuldhaften Versäumung nicht vorgelegen hat. Die Berufungssumme gilt dafür nicht.",
+          "marken": [
+            "§ 514 Abs. 2 ZPO"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Erstes Urteil nicht nachprüfen",
+          "text": "Nach dem BGH wird die Gesetzmäßigkeit des ersten Versäumnisurteils nicht geprüft.",
+          "norm": null,
+          "sprecher": "Wichtig: Nach dem BGH prüft das Gericht beim zweiten Versäumnisurteil nicht, ob das erste zu Recht ergangen ist. Anders nach einem Vollstreckungsbescheid: Dort verlangt § 700 Absatz 6 ZPO diese Prüfung.",
+          "marken": [
+            "Ausnahme: § 700 VI"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Erstes VU: Einspruch. Zweites VU: nur Berufung nach § 514 Abs. 2 ZPO.",
+          "norm": "§ 345 ZPO",
+          "sprecher": "Merke: gegen das erste Versäumnisurteil Einspruch, gegen das zweite nur die eingeschränkte Berufung.",
+          "marken": [
+            "Einspruch → Berufung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst zählen: erstes oder zweites Versäumnisurteil?",
+          "text": "Speichern für die nächste ZPO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste ZPO-Klausur. Und zähl immer zuerst: erstes oder zweites Versäumnisurteil?",
+          "marken": [
+            "erstes oder zweites?"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Wieder nicht erschienen – kann B noch einmal Einspruch einlegen? Nein. Gegen das erste Versäumnisurteil hat er den Einspruch (§§ 338, 339 ZPO). Fehlt er im Einspruchstermin erneut, wird der Einspruch durch zweites Versäumnisurteil verworfen (§ 345 ZPO). Dann bleibt nur die Berufung, gestützt darauf, dass keine schuldhafte Säumnis vorlag (§ 514 Abs. 2 ZPO). Die Gesetzmäßigkeit des ersten Urteils prüft das Gericht nach dem BGH nicht – anders nach einem Vollstreckungsbescheid.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#versäumnisurteil",
+        "#345zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zweites Versäumnisurteil: kein Einspruch mehr",
+      "coverText": "Nur noch § 514 Abs. 2 ZPO",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Wer nach seinem Einspruch wieder fehlt, verliert den bequemen Rückweg – es bleibt nur eine schmale Tür.",
+        "handlung": "{A} rushes toward a wide door that is just being bricked up, while {B} calmly points his pointer at a very narrow side door next to it.",
+        "hinweisRegie": "Place the note in the free space beside the narrow side door, slightly tilted toward it, so the limited remaining remedy is clear without covering {A}'s face or the bricked-up door.",
+        "alternative": "{B} shows two identical empty chairs at a courtroom table, the second one with a small closed lock on it, while {A} arrives too late."
+      },
+      "bildSzene": "wide door bricked, narrow door open",
+      "bildSzeneAlt": "second empty chair with lock",
+      "quellen": [
+        "§ 331 ZPO",
+        "§ 338 ZPO",
+        "§ 339 ZPO",
+        "§ 342 ZPO",
+        "§ 345 ZPO",
+        "§ 514 Abs. 2 ZPO",
+        "§ 700 Abs. 6 ZPO",
+        "Themenpool: zpo-054"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-635",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Das VG hält ein Bundesgesetz für verfassungswidrig – die Klage ist aber ohnehin unzulässig. Muss es vorlegen?",
+      "optionen": [
+        "Nein – es fehlt die Entscheidungserheblichkeit",
+        "Ja – die Überzeugung von der Verfassungswidrigkeit genügt",
+        "Nur, wenn ein Beteiligter die Vorlage beantragt"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 100 Abs. 1 GG",
+        "§ 80 BVerfGG",
+        "Themenpool: staat-635"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-635",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – ohne Entscheidungserheblichkeit keine Vorlage",
+      "text": "Art. 100 Abs. 1 GG verlangt, dass es für die Entscheidung auf die Gültigkeit des Gesetzes ankommt. Ist die Klage schon unzulässig, entscheidet das Gericht unabhängig vom Gesetz: Es weist ab. Die Vorlage wäre unzulässig. Die Begründung muss angeben, inwiefern die Entscheidung von der Gültigkeit abhängt (§ 80 Abs. 2 S. 1 BVerfGG).",
+      "norm": "Art. 100 Abs. 1 GG · § 80 Abs. 2 BVerfGG",
+      "quellen": [
+        "Art. 100 Abs. 1 GG",
+        "§ 80 BVerfGG",
+        "Themenpool: staat-635"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – es fehlt die Entscheidungserheblichkeit",
+        "Ja – die Überzeugung von der Verfassungswidrigkeit genügt",
+        "Nur, wenn ein Beteiligter die Vorlage beantragt"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-267",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 346 HGB: Schweigen bindet – auch wenn der Verhandler keine Vollmacht hatte",
+      "text": "Schweigt ein Kaufmann auf ein kaufmännisches Bestätigungsschreiben, gilt der Vertrag mit dem bestätigten Inhalt. Nach der Rechtsprechung überwindet das Schweigen sogar fehlende Vertretungsmacht dessen, der auf Empfängerseite verhandelt hat: Der Empfänger hätte das Schreiben prüfen und unverzüglich widersprechen können. Grenze bleibt die Redlichkeit des Absenders.",
+      "norm": "§ 346 HGB",
+      "quellen": [
+        "§ 346 HGB",
+        "§ 177 BGB",
+        "Themenpool: handelsg-267"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-856",
+      "ueberzeile": "Streitstand Anklage",
+      "titel": "Serientaten ohne genaue Tatzeiten: Ist die Anklage wirksam?",
+      "norm": "§ 200 Abs. 1 StPO",
+      "optionen": [
+        "Rechtsprechung: Genügt, wenn Tatzeitraum, Mindestzahl der Taten und das Tatbild so konkret sind, wie es die Ermittlungen erlauben.",
+        "Teile der Literatur: Ohne individualisierbare Einzeltaten ist die Umgrenzungsfunktion verfehlt und die Verteidigung erschwert."
+      ],
+      "text": "Klausur: Im Anklagesatz jede Tat so konkret wie möglich fassen – Zeitraum, Mindestzahl, Ort und Begehungsweise nennen. Fehler bei der Umgrenzung können die Anklage unwirksam machen; bloße Informationsmängel nicht.",
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "§ 264 StPO",
+        "Themenpool: anklage-856"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-038",
+      "ueberzeile": "Merksatz Deliktsrecht",
+      "titel": "Produktfehler: Der Hersteller muss sich entlasten",
+      "text": "Der Geschädigte beweist den Fehler aus dem Herstellerbereich. Beim Verschulden kehrt die Rechtsprechung die Beweislast um: Der Hersteller muss sich entlasten.",
+      "norm": "§ 823 Abs. 1 BGB",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: delikt-038"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-170",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Wirtschaftliche Unmöglichkeit: kein Fall des § 275 Abs. 2 BGB",
+      "text": "Steigen die Beschaffungskosten so stark, dass sich das Geschäft für den Schuldner nicht mehr lohnt, spricht man von wirtschaftlicher Unmöglichkeit. § 275 Abs. 2 BGB vergleicht aber den Aufwand des Schuldners mit dem Leistungsinteresse des Gläubigers – und das steigt mit dem Marktwert meist mit. Solche Fälle gehören, wenn überhaupt, zu § 313 BGB.",
+      "norm": "§ 275 Abs. 2 BGB",
+      "quellen": [
+        "§ 275 BGB",
+        "§ 313 BGB",
+        "Themenpool: schuld-170"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

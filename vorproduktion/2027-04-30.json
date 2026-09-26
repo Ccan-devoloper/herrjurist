@@ -1,0 +1,866 @@
+{
+  "datum": "2027-04-30",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "anklage-793",
+        "themaTitel": "Strafbefehlsantrag",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "staat-598",
+        "themaTitel": "Bundestag: Wahlrechtsgrundsätze und Status der Abgeordneten",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bgbat-006",
+        "themaTitel": "Wie wirkt die Stellvertretung ohne Vertretungsmacht?",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:09",
+        "art": "frage",
+        "themaId": "verwbt-400"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:09",
+        "art": "antwort",
+        "themaId": "verwbt-400"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "bgbat-002"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "merksatz",
+        "themaId": "bgbat-436"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:49",
+        "art": "begriff",
+        "themaId": "sachen-501"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:27",
+        "art": "fehler",
+        "themaId": "assessoroer-838"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "anklage-793",
+      "poolTitel": "Strafbefehlsantrag",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 407 ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05",
+        "2026-10-20"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-598",
+      "poolTitel": "Bundestag: Wahlrechtsgrundsätze und Status der Abgeordneten",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 38 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-006",
+      "poolTitel": "Wie wirkt die Stellvertretung ohne Vertretungsmacht?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 177 BGB",
+        "§ 179 BGB",
+        "§ 164 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-28"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwbt-400",
+      "poolTitel": "Wann ist ein Bebauungsplan abwägungsfehlerhaft?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 1 Abs. 7 BauGB",
+        "§ 214 BauGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-16",
+        "2027-02-04"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwbt-400",
+      "poolTitel": "Wann ist ein Bebauungsplan abwägungsfehlerhaft?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 1 Abs. 7 BauGB",
+        "§ 214 BauGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-16",
+        "2027-02-04"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-002",
+      "poolTitel": "Wie erfolgt die Abgrenzung zwischen Vertrag und Gefälligkeit?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 145 BGB",
+        "§ 241 Abs. 1 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07",
+        "2027-01-19"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "bgbat-436",
+      "poolTitel": "Verjährungsbeginn und kenntnisabhängige Regelverjährung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 195, 199 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2026-10-31"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "sachen-501",
+      "poolTitel": "Verarbeitung, Verbindung und Vermischung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 946 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-23"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "assessoroer-838",
+      "poolTitel": "Wie tenoriert man im vorläufigen Rechtsschutz?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-26",
+        "2026-12-27",
+        "2027-02-27"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-793",
+      "slug": "2027-04-30-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zweieinhalb Jahre erwartet: Der Strafrichter ist raus",
+          "titelZeilen": [
+            "Zweieinhalb Jahre",
+            "erwartet: Der",
+            "Strafrichter ist raus"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Straferwartung bestimmt das Gericht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A hat in zwölf Fällen Waren auf Rechnung bestellt, ohne zahlen zu wollen; Gesamtschaden 18.000 €. Er ist einschlägig vorbestraft. Die StA erwartet eine Gesamtfreiheitsstrafe von etwa zweieinhalb Jahren und sieht keinen Grund für eine Anklage zum Landgericht. Wo erhebt sie Anklage?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Vergehen oder Verbrechen?",
+              "text": "Betrug ist ein Vergehen (§ 12 Abs. 2 StGB) – auch im besonders schweren Fall des § 263 Abs. 3 StGB (§ 12 Abs. 3 StGB)."
+            },
+            {
+              "titel": "Amtsgericht oder Landgericht?",
+              "text": "Das AG ist zuständig, wenn keine höhere Strafe als vier Jahre zu erwarten ist und kein besonderer Fall vorliegt (§ 24 Abs. 1 GVG)."
+            },
+            {
+              "titel": "Strafrichter oder Schöffengericht?",
+              "text": "Strafrichter nur bei Vergehen mit Straferwartung bis zwei Jahre (§ 25 Nr. 2 GVG). Sonst: Schöffengericht (§ 28 GVG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Zuständigkeit am Strafrahmen des Delikts ablesen. Entscheidend ist die im Einzelfall zu erwartende Strafe. Und: Auch das Schöffengericht darf auf höchstens vier Jahre Freiheitsstrafe erkennen (§ 24 Abs. 2 GVG)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Vergehen, Straferwartung über zwei, aber unter vier Jahren, kein besonderer Fall: Die StA erhebt Anklage zum Schöffengericht beim Amtsgericht. In der Anklageschrift bezeichnet sie das Gericht, vor dem die Hauptverhandlung stattfinden soll (§ 200 Abs. 1 S. 1 StPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Bis zwei Jahre: Strafrichter. Bis vier Jahre: Schöffengericht. Darüber oder bei besonderer Bedeutung: Landgericht – maßgeblich ist die konkrete Straferwartung."
+        },
+        {
+          "art": "cta",
+          "titel": "Zuständigkeit in drei Fragen",
+          "punkte": [
+            "Vergehen oder Verbrechen?",
+            "Welche Strafe ist konkret zu erwarten?",
+            "Besondere Bedeutung oder Umfang?"
+          ],
+          "icons": [
+            "paragraf",
+            "waage",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Zweieinhalb Jahre Freiheitsstrafe erwartet – dann ist der Strafrichter nicht mehr zuständig. Er entscheidet bei Vergehen nur, wenn keine höhere Strafe als zwei Jahre zu erwarten ist (§ 25 Nr. 2 GVG). Bis vier Jahre bleibt es beim Amtsgericht, dort beim Schöffengericht (§§ 24, 28 GVG). Darüber oder bei besonderer Bedeutung klagt die StA zum Landgericht an. Speichern für die nächste Abschlussverfügung.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#staatsanwaltschaft",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anklage: Strafrichter, Schöffengericht oder LG?",
+      "coverText": "Straferwartung bestimmt das Gericht",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Welches Gericht zuständig ist, entscheidet die konkret zu erwartende Strafe.",
+        "handlung": "{A} places a heavy weight on a scale, and {B} steers a file cart away from a small door toward a medium-sized door as the pointer passes the first notch.",
+        "hinweisRegie": "Place the note in the free space between the small and the medium-sized door, slightly tilted toward the scale pointer, keeping {A}'s hand on the weight and {B}'s cart visible.",
+        "alternative": "{B} sorts parcels by weight onto three chutes of different sizes while {A} reads the scale."
+      },
+      "bildSzene": "scale pointer passes first notch",
+      "bildSzeneAlt": "parcels sorted onto three chutes",
+      "quellen": [
+        "§ 24 GVG",
+        "§ 25 GVG",
+        "§ 28 GVG",
+        "§ 12 StGB",
+        "§ 200 StPO",
+        "Themenpool: anklage-793"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-zustaendigkeit",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:19:20.003Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-598",
+      "slug": "2027-04-30-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Briefwahl ohne Grund: Verstößt das gegen Art. 38 GG?",
+          "titelZeilen": [
+            "Briefwahl ohne",
+            "Grund: Verstößt das",
+            "gegen Art. 38 GG?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Allgemeinheit gegen Geheimheit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Das Bundeswahlrecht erlaubt jedem die Briefwahl, ohne dass er einen Hinderungsgrund angeben muss. Wähler W meint, das verletze die geheime und freie Wahl: Niemand kontrolliere, wer zu Hause mitschaut. Hat er recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Maßstab",
+              "text": "Art. 38 Abs. 1 S. 1 GG: allgemein, unmittelbar, frei, gleich, geheim – dazu die Öffentlichkeit der Wahl (Art. 38 i.V.m. Art. 20 GG)."
+            },
+            {
+              "titel": "Beeinträchtigung",
+              "text": "Die Stimmabgabe zu Hause ist nicht staatlich überwacht. Geheimheit und Freiheit sind weniger gesichert als im Wahllokal."
+            },
+            {
+              "titel": "Rechtfertigung",
+              "text": "Die Grundsätze können einander begrenzen. Die Briefwahl fördert die Allgemeinheit der Wahl: Mehr Menschen können teilnehmen."
+            },
+            {
+              "titel": "Grenze",
+              "text": "Der Gesetzgeber muss Missbrauch vorbeugen – etwa durch eine Versicherung, selbst gewählt zu haben – und die Entwicklung beobachten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Wahlrechtsgrundsätze als starre, isolierte Schranken prüfen. Sie stehen nebeneinander, und der Gesetzgeber darf einen Grundsatz einschränken, um einen anderen zu verwirklichen – solange er einen schonenden Ausgleich findet."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nach dem BVerfG ist die Briefwahl verfassungsgemäß, auch ohne Angabe von Gründen. Die Einbußen bei Geheimheit, Freiheit und Öffentlichkeit sind durch die Förderung der Allgemeinheit gerechtfertigt, solange der Gesetzgeber Missbrauch hinreichend vorbeugt. W hat nicht recht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wahlrechtsgrundsätze begrenzen sich gegenseitig. Die Briefwahl ist gerechtfertigt, weil sie die Allgemeinheit der Wahl fördert."
+        },
+        {
+          "art": "cta",
+          "titel": "Wahlrecht in drei Fragen",
+          "punkte": [
+            "Welcher Grundsatz ist berührt?",
+            "Welcher wird gefördert?",
+            "Missbrauchsschutz ausreichend?"
+          ],
+          "icons": [
+            "wahlurne",
+            "waage",
+            "schloss"
+          ]
+        }
+      ],
+      "caption": "Briefwahl ohne jeden Grund – verstößt das gegen die geheime und freie Wahl? Nach dem BVerfG nicht. Die Wahlrechtsgrundsätze aus Art. 38 Abs. 1 S. 1 GG können einander begrenzen: Die Briefwahl schwächt zwar Geheimheit, Freiheit und Öffentlichkeit, fördert aber die Allgemeinheit der Wahl. Der Gesetzgeber muss nur Missbrauch hinreichend vorbeugen. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#wahlrecht",
+        "#art38gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Briefwahl und Art. 38 GG",
+      "coverText": "Allgemeinheit gegen Geheimheit",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Die Briefwahl schwächt die geheime Wahl, stärkt aber die Allgemeinheit – deshalb ist sie gerechtfertigt.",
+        "handlung": "{A} drops an envelope into a mailbox far from a crowded ballot hall, while {B} holds a small balance with a lock on one pan and a crowd of tiny figures on the other.",
+        "hinweisRegie": "Place the note in the free space next to the balance in {B}'s hand, slightly tilted toward the pan with the tiny figures, so the gained participation stands out without covering the mailbox or {A}'s face.",
+        "alternative": "{B} opens a second small door in the wall of a ballot hall so more figures can enter, while {A} checks that a curtain still covers the voting booth."
+      },
+      "bildSzene": "envelope in mailbox, balance weighing",
+      "bildSzeneAlt": "second door opened in ballot hall",
+      "quellen": [
+        "Art. 38 Abs. 1 GG",
+        "Art. 20 Abs. 1, 2 GG",
+        "Bundeswahlgesetz",
+        "Themenpool: staat-598"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:48:27.294Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-006",
+      "slug": "2027-04-30-b3",
+      "titelZeilen": [
+        "Ohne Vollmacht,",
+        "ohne es zu wissen",
+        "– und doch haftbar"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ohne Vollmacht, ohne es zu wissen – und doch haftbar",
+          "unter": "Vertreter ohne Vertretungsmacht · § 179 BGB",
+          "text": "Auch der gutgläubige Vertreter haftet – auf den Vertrauensschaden.",
+          "norm": "§ 179 Abs. 2 BGB",
+          "icon": "vertrag",
+          "sprecher": "Unwissentlich ohne Vollmacht gehandelt? Du haftest trotzdem. Nur der Umfang hängt davon ab, was du wusstest.",
+          "marken": [
+            "Haftung bleibt",
+            "Umfang variiert"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schwebend unwirksam",
+          "text": "Der Vertrag bindet den Vertretenen erst mit Genehmigung.",
+          "norm": "§ 177 Abs. 1 BGB",
+          "sprecher": "Schritt eins: Der Vertrag bindet den Vertretenen nicht, er ist schwebend unwirksam. Genehmigt der Vertretene, wirkt das auf den Vertragsschluss zurück, Paragraf 184.",
+          "marken": [
+            "schwebend"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Aufforderung und Widerruf",
+          "text": "Zwei Wochen nach Aufforderung gilt die Genehmigung als verweigert.",
+          "norm": "§§ 177 Abs. 2, 178 BGB",
+          "sprecher": "Schritt zwei: der Schwebezustand. Der andere Teil kann den Vertretenen zur Genehmigung auffordern. Äußert der sich nicht binnen zwei Wochen, gilt sie als verweigert. Und wer den Mangel nicht kannte, darf bis zur Genehmigung widerrufen.",
+          "marken": [
+            "zwei Wochen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vertreter kannte den Mangel",
+          "text": "Erfüllung oder Schadensersatz nach Wahl des anderen.",
+          "norm": "§ 179 Abs. 1 BGB",
+          "sprecher": "Schritt drei: Wird die Genehmigung verweigert und kannte der Vertreter den Mangel, haftet er nach Wahl des anderen auf Erfüllung oder Schadensersatz.",
+          "marken": [
+            "Wahlrecht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Vertreter wusste es nicht",
+          "text": "Nur Vertrauensschaden, begrenzt durch das Erfüllungsinteresse.",
+          "norm": "§ 179 Abs. 2 BGB",
+          "sprecher": "Schritt vier: Kannte er den Mangel nicht, haftet er nur auf den Vertrauensschaden, höchstens bis zur Höhe des Erfüllungsinteresses.",
+          "marken": [
+            "Vertrauensschaden"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Wann er gar nicht haftet",
+          "text": "Der andere kannte den Mangel oder musste ihn kennen.",
+          "norm": "§ 179 Abs. 3 BGB",
+          "sprecher": "Gar keine Haftung, wenn der andere den Mangel kannte oder kennen musste. Ebenso, wenn der Vertreter beschränkt geschäftsfähig war und ohne Zustimmung seines gesetzlichen Vertreters handelte.",
+          "marken": [
+            "Ausschluss"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Kenntnis: Erfüllung oder Schadensersatz. Unkenntnis: Vertrauensschaden.",
+          "norm": "§ 179 BGB",
+          "sprecher": "Merke: Wer den Mangel kannte, haftet auf Erfüllung oder Schadensersatz. Wer ihn nicht kannte, auf den Vertrauensschaden. Und wer als Vertragspartner Bescheid wusste, bekommt nichts.",
+          "marken": [
+            "Abs. 1 / Abs. 2"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst verweigert, dann § 179",
+          "text": "Speichern für die nächste Vertretungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur zur Stellvertretung. Und prüf Paragraf 179 erst, wenn die Genehmigung verweigert ist.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Ohne Vollmacht gehandelt, ohne es zu wissen – und trotzdem haftbar? Ja. Verweigert der Vertretene die Genehmigung, haftet der Vertreter nach § 179 BGB: bei Kenntnis nach Wahl des anderen auf Erfüllung oder Schadensersatz, bei Unkenntnis auf den Vertrauensschaden, begrenzt durch das Erfüllungsinteresse. Ausgeschlossen ist die Haftung, wenn der andere den Mangel kannte oder kennen musste. Speichern für die nächste Vertretungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#stellvertretung",
+        "#179bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 179 BGB: Haftung des falsus procurator",
+      "coverText": "Unkenntnis mindert nur den Umfang",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Wer ohne Vollmacht einen Vertrag schließt, haftet selbst – auch wenn er den Mangel nicht kannte, dann aber in geringerem Umfang.",
+        "handlung": "{A} proudly hands over a signed contract on someone else's behalf, while {B} returns with the contract torn at the corner and places a smaller weight into {A}'s open hands.",
+        "hinweisRegie": "Place the note in the free space above the smaller weight in {A}'s hands, slightly tilted toward it, so the reduced liability stands out without covering the torn contract or {B}'s face.",
+        "alternative": "{B} shows {A} two differently sized invoices, one for the full deal and one for wasted costs, while an empty chair marks the absent principal."
+      },
+      "bildSzene": "torn contract, smaller weight handed",
+      "bildSzeneAlt": "two invoice sizes, empty chair",
+      "quellen": [
+        "§ 177 BGB",
+        "§ 178 BGB",
+        "§ 179 BGB",
+        "§ 184 BGB",
+        "§ 164 BGB",
+        "Themenpool: bgbat-006"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:48:27.296Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-400",
+      "ueberzeile": "Prüfungsfrage Baurecht",
+      "titel": "Die Gemeinde hat einen abwägungserheblichen Belang gar nicht ermittelt. Wo prüfst du, ob das beachtlich ist?",
+      "optionen": [
+        "In § 214 Abs. 3 S. 2 BauGB als Mangel im Abwägungsvorgang",
+        "In § 214 Abs. 1 S. 1 Nr. 1 BauGB – als Verfahrensfehler",
+        "Gar nicht – jeder Abwägungsfehler macht den Plan unwirksam"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 1 Abs. 7 BauGB",
+        "§ 2 Abs. 3 BauGB",
+        "§ 214 BauGB",
+        "Themenpool: verwbt-400"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:48:27.296Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-400",
+      "ueberzeile": "Auflösung",
+      "titel": "In § 214 Abs. 1 S. 1 Nr. 1 BauGB – Ermittlungsfehler sind Verfahrensfehler",
+      "text": "§ 2 Abs. 3 BauGB verlangt, die abwägungserheblichen Belange zu ermitteln und zu bewerten. Fehler dabei sind beachtlich, wenn wesentliche Punkte betroffen, offensichtlich und auf das Ergebnis von Einfluss sind (§ 214 Abs. 1 S. 1 Nr. 1 BauGB). Als Abwägungsmangel kannst du sie nicht noch einmal geltend machen (§ 214 Abs. 3 S. 2 BauGB).",
+      "norm": "§ 2 Abs. 3 BauGB · § 214 BauGB",
+      "quellen": [
+        "§ 1 Abs. 7 BauGB",
+        "§ 2 Abs. 3 BauGB",
+        "§ 214 BauGB",
+        "Themenpool: verwbt-400"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:48:27.296Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "In § 214 Abs. 3 S. 2 BauGB als Mangel im Abwägungsvorgang",
+        "In § 214 Abs. 1 S. 1 Nr. 1 BauGB – als Verfahrensfehler",
+        "Gar nicht – jeder Abwägungsfehler macht den Plan unwirksam"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-002",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 662 BGB: Gratis heißt nicht unverbindlich",
+      "text": "Beim Auftrag verpflichtet sich der Beauftragte, ein Geschäft für den anderen unentgeltlich zu besorgen – ein echter Vertrag. Unentgeltlichkeit spricht also nicht gegen Rechtsbindungswillen. Und anders als Schenker (§ 521 BGB) und Verleiher (§ 599 BGB) haftet der Beauftragte ohne gesetzliche Haftungsmilderung.",
+      "norm": "§ 662 BGB",
+      "quellen": [
+        "§ 662 BGB",
+        "§ 521 BGB",
+        "§ 599 BGB",
+        "§ 241 Abs. 1 BGB",
+        "Themenpool: bgbat-002"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:48:27.296Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-436",
+      "ueberzeile": "Merksatz Verjährung",
+      "titel": "Verjährungsbeginn: Kenntnis der Tatsachen genügt",
+      "text": "§ 199 Abs. 1 Nr. 2 BGB verlangt Kenntnis der anspruchsbegründenden Umstände und des Schuldners – nicht die richtige rechtliche Würdigung. Ausnahme nach dem BGH: eine unsichere, zweifelhafte Rechtslage.",
+      "norm": "§ 199 Abs. 1 Nr. 2 BGB",
+      "quellen": [
+        "§ 195 BGB",
+        "§ 199 BGB",
+        "Themenpool: bgbat-436"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:48:27.297Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-501",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Neue Sache hergestellt: Wer gilt nach § 950 BGB als Hersteller?",
+      "text": "Wer durch Verarbeitung oder Umbildung eine neue bewegliche Sache herstellt, wird ihr Eigentümer – außer der Wert der Verarbeitung ist erheblich geringer als der Stoffwert. Hersteller ist, in wessen Namen und wirtschaftlichem Interesse produziert wird. Der bisherige Eigentümer erhält Ausgleich nach § 951 BGB.",
+      "norm": "§ 950 BGB · § 951 BGB",
+      "quellen": [
+        "§ 950 BGB",
+        "§ 951 BGB",
+        "§§ 946–948 BGB",
+        "Themenpool: sachen-501"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T03:19:20.009Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-838",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Eilantrag nach § 80 Abs. 5 VwGO begründet: Hebt das Gericht den Bescheid auf?",
+      "falsch": "„Der Bescheid des Antragsgegners vom … wird aufgehoben.“",
+      "richtigText": "Im Eilverfahren entscheidet das Gericht nur über die Vollziehbarkeit: „Die aufschiebende Wirkung des Widerspruchs des Antragstellers gegen den Bescheid vom … wird wiederhergestellt“ – oder angeordnet, wenn sie kraft Gesetzes entfällt. Dazu Kosten (§ 154 Abs. 1 VwGO) und Streitwert.",
+      "quellen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 154 Abs. 1 VwGO",
+        "Themenpool: assessoroer-838"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:48:27.297Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
