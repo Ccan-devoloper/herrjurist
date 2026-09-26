@@ -41,7 +41,15 @@ export const CONFIG = {
   plan: {
     beitraegeWerktag: Number(env("IG_BEITRAEGE_WERKTAG", 2)),
     beitraegeWochenende: Number(env("IG_BEITRAEGE_WOCHENENDE", 2)),
-    storiesProTag: Number(env("IG_STORIES_PRO_TAG", 9)),   // Instagram-Limit über die API: 100 Veröffentlichungen / 24 h
+    /* Stories sind Beziehungsformat, kein zweiter Feed. Nach der Messung vom
+       19.–25.09. waren die passiven Feed-Teaser schwächer als die eigenständigen
+       Stories und machten rund ein Drittel der Story-Menge aus. Deshalb sieben
+       hochwertige Kacheln statt neun und höchstens ein Feed-Teaser pro Tag. */
+    storiesProTag: Number(env("IG_STORIES_PRO_TAG", 7)),   // Instagram-Limit über die API: 100 Veröffentlichungen / 24 h
+    teaserProTag: Math.max(0, Number(env("IG_TEASER_PRO_TAG", 1))),
+    /* Quiz-Auflösung nicht mehr sofort hinter der Frage: Erst abstimmen lassen,
+       dann einige Stunden später erklären. */
+    quizAufloesungStunden: Math.max(1, Number(env("IG_QUIZ_AUFLOESUNG_STUNDEN", 4))),
     /* Lokale Uhrzeiten (Europe/Berlin), zu denen Beiträge erscheinen. */
     beitragsZeiten: ["08:00","12:30","18:30"],   // ohne Lernschleife; mit Lernen zugleich die Cold-Start-Anker
     /* Lernende Uhrzeiten: Der Bot probiert Stunden aus und behält, was
@@ -334,7 +342,9 @@ export const CONFIG = {
      bestehende Sitzung sieht für Instagram nach dem immer gleichen Gerät aus,
      eine Neuanmeldung von wechselnder Runner-IP nach einer Übernahme. */
   interaktiv: {
-    aktiv: env("IG_INTERAKTIV", "false") === "true",
+    /* Standard an, aber weiterhin hart durch Zugangsdaten + gespeicherte Sitzung
+       gegated. Ohne beides greift automatisch der offizielle Graph-Fallback. */
+    aktiv: env("IG_INTERAKTIV", "true") === "true",
     nutzer: env("IG_PRIVAT_USER", ""),
     passwort: env("IG_PRIVAT_PASS", ""),
     /* Welche Story-Arten eine Umfrage bekommen. "frage" trägt im Bild schon
@@ -342,6 +352,9 @@ export const CONFIG = {
        Antworten also gar nicht tragen, er fragt nur ab. */
     arten: env("IG_INTERAKTIV_ARTEN", "frage").split(",").map((a) => a.trim()).filter(Boolean),
     stickerFrage: env("IG_INTERAKTIV_FRAGE", "Was stimmt?"),
+    /* Feed-Teaser bekommen über denselben privaten, optionalen Weg einen echten
+       antippbaren Media-Sticker statt nur „Jetzt im Feed“ als Sackgasse. */
+    teaserMedienSticker: env("IG_TEASER_MEDIENSTICKER", "true") === "true",
     /* Nach einer Challenge oder einer Bremse von Instagram: so lange gar nicht
        erst wieder versuchen. Eine Wiederholungsschleife gegen eine
        Anmeldesperre ist genau das, was ein Konto endgültig kostet. */
@@ -576,12 +589,12 @@ export const CONFIG = {
 
   /* Hashtags: kleiner fester Kern + themenabhängige aus dem Autor. */
   hashtags: {
-    kern: ["#jura", "#jurastudium", "#staatsexamen", "#erstesstaatsexamen", "#zweitesstaatsexamen", "#examensvorbereitung"],
-    /* Entdecker-Hashtags: Long-Tail-Tags, die täglich zu zweit rotieren – so
-       wird jeder Tag ausprobiert und die Lernschleife sieht, welche neue
-       Follower bringen. */
-    entdecker: ["#jurastudent", "#jurastudentin", "#referendariat", "#rechtsreferendar", "#assessorexamen", "#examenskandidat", "#repetitorium", "#zivilrecht", "#strafrecht", "#öffentlichesrecht", "#verwaltungsrecht", "#staatsrecht", "#grundrechte", "#bgbat", "#schuldrecht", "#sachenrecht", "#zpo", "#stpo", "#klausurtraining", "#examenswissen", "#juratipps", "#lernenmitsystem", "#studygram", "#rechtswissenschaften"],
-    maxJeBeitrag: 14,
+    /* Instagram begrenzt Posts inzwischen auf höchstens fünf Hashtags. Zwei
+       globale Tags reichen; die restlichen Plätze gehören dem Rechtsgebiet,
+       dem konkreten Thema und – wenn passend – der Zielgruppe. */
+    kern: ["#jura", "#staatsexamen"],
+    entdecker: ["#jurastudium", "#rechtsreferendariat", "#examenskandidat", "#assessorexamen", "#klausurtraining", "#examenswissen"],
+    maxJeBeitrag: 5,
   },
 };
 
