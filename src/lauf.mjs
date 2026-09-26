@@ -737,7 +737,7 @@ async function main() {
     const jetztSekunden = lokaleMinuten(d) * 60 + d.getSeconds();
     const wartenMs = feedWartezeitMs(plan, jetztSekunden);
     if (wartenMs > 0) {
-      const naechster = plan.beitraege
+      const naechster = [...(plan.beitraege || []), ...(plan.stories || [])]
         .filter((e) => e.status !== "veroeffentlicht" && minutenVon(e.zeit) * 60 > jetztSekunden)
         .sort((a, b) => minutenVon(a.zeit) - minutenVon(b.zeit))[0];
       log(`Exakte Publikation: Vorarbeiten fertig; warte bis ${naechster?.zeit || "Feed-Slot"} Europe/Berlin.`);
