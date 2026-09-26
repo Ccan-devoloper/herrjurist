@@ -49,9 +49,7 @@ jobs:
           assert t.count(a) == 1
           t = t.replace(a, b).replace('new FormData()', 'new globalThis.FormData()')
           p.write_text(t)
-          # Preserve existing manual-finalization semantics. The new hash-bound
-          # exemption itself refuses pending/unknown findings, without changing
-          # unrelated short stories or weakening other existing checks.
+          # Keep unrelated manual-finalization rules unchanged.
           p = Path('src/pruefung.mjs')
           t = p.read_text()
           a = '''  if (manuellFinalisiert(story) && (story.faktencheckOffen || (story.beanstandetFachlich || []).length || ((story.beanstandet || []).length && !story.befundeTypisiert))) {
@@ -60,8 +58,6 @@ jobs:
           '''
           assert t.count(a) == 1
           p.write_text(t.replace(a, ''))
-          # The existing source-wiring assertion must include the verified
-          # preproduction context now passed to the same approval function.
           p = Path('test/bot.test.mjs')
           t = p.read_text()
           a = r'/const freigabe = storyFreigabe\(story\);/'
@@ -97,7 +93,11 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add src/pruefung.mjs src/lauf.mjs src/anbieter.mjs src/stimme.mjs src/stimmen.mjs .github/workflows/instagram.yml config/story-render-freigaben.json test/story-render-freigabe.test.mjs test/bot.test.mjs
+          # Workflow deployment uses the connected user's authorized GitHub tool,
+          # not the Actions token. Store the already-tested proposal as text.
+          cp .github/workflows/instagram.yml .github/instagram-cost-lock.yml.txt
+          git restore .github/workflows/instagram.yml
+          git add src/pruefung.mjs src/lauf.mjs src/anbieter.mjs src/stimme.mjs src/stimmen.mjs .github/instagram-cost-lock.yml.txt config/story-render-freigaben.json test/story-render-freigabe.test.mjs test/bot.test.mjs
           git commit -m 'fix: approve exact visible story renders and forbid paid APIs in Instagram runs'
           git push origin HEAD:fix/visuelle-story-freigabe-ohne-api-kosten
           git rev-parse HEAD
