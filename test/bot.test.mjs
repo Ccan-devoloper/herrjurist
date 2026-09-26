@@ -944,8 +944,13 @@ test("ElevenLabs läuft auf dem Monatsguthaben und fällt danach auf Piper zurü
   if (wunsch != null) process.env.IG_STIMME = wunsch;
 });
 
-test("Die Stimme wird ausprobiert und erst bei klarem Vorsprung festgeschrieben", async () => {
+test("Die Stimme wird ausprobiert und erst bei klarem Vorsprung festgeschrieben", async (t) => {
   const { stimmeBewerten, stimmeWaehlen, stimmenStatistik, gewinner } = await import("../src/stimmen.mjs");
+  const { CONFIG } = await import("../src/config.mjs");
+  const vorher = { stimme: CONFIG.reel.stimme, lernen: CONFIG.reel.stimmeLernen };
+  CONFIG.reel.stimme = "";
+  CONFIG.reel.stimmeLernen = true;
+  t.after(() => { CONFIG.reel.stimme = vorher.stimme; CONFIG.reel.stimmeLernen = vorher.lernen; });
 
   const erzaehler = stimmeBewerten({ voice_id: "a", name: "Anna", language: "de", gender: "female", age: "middle_aged", use_case: "informative_educational", descriptive: "calm" });
   const werbung = stimmeBewerten({ voice_id: "b", name: "Bert", language: "de", gender: "male", age: "young", use_case: "advertisement", descriptive: "excited" });
