@@ -1,0 +1,876 @@
+{
+  "datum": "2027-09-22",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-592",
+        "themaTitel": "Sozialstaatsprinzip",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "schuldbt-472",
+        "themaTitel": "Reparierbarkeit als objektives Beschaffenheitsmerkmal seit 31.07.2026",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-311",
+        "themaTitel": "Wie wirkt die Akzessorietät bei besonderen persönlichen Merkmalen?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "bgbat-435"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "bgbat-435"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:59",
+        "art": "norm",
+        "themaId": "schuldbt-191"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "streitstand",
+        "themaId": "anklage-870"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "merksatz",
+        "themaId": "sachen-235"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "begriff",
+        "themaId": "vwgo-104"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-592",
+      "poolTitel": "Sozialstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-23",
+        "2027-09-19",
+        "2027-09-19"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "schuldbt-472",
+      "poolTitel": "Reparierbarkeit als objektives Beschaffenheitsmerkmal seit 31.07.2026",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 434 Abs. 3 Satz 2 BGB",
+        "Art. 229 § 72 EGBGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-16",
+        "2027-02-21",
+        "2027-07-18"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-311",
+      "poolTitel": "Wie wirkt die Akzessorietät bei besonderen persönlichen Merkmalen?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 28 StGB",
+        "§ 29 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-01",
+        "2027-04-09",
+        "2027-09-04"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-435",
+      "poolTitel": "Fristenberechnung im BGB",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 186 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-10",
+        "2027-01-10"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-435",
+      "poolTitel": "Fristenberechnung im BGB",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 186 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-10",
+        "2027-01-10"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-191",
+      "poolTitel": "Was ist der Nacherfüllungsanspruch und wer bestimmt die Art?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-28",
+        "2027-05-06",
+        "2027-07-11"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "anklage-870",
+      "poolTitel": "Wann wird eingezogen, wann Wertersatz angeordnet?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 74 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-25",
+        "2027-05-13",
+        "2027-07-14"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "sachen-235",
+      "poolTitel": "Was bewirkt eine Vormerkung?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 883 BGB",
+        "§ 888 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-25",
+        "2027-05-14",
+        "2027-05-20"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "vwgo-104",
+      "poolTitel": "Wann ist die Fortsetzungsfeststellungsklage statthaft?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 113 Abs. 1 S. 4 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-05",
+        "2027-04-01",
+        "2027-04-21"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-592",
+      "slug": "2027-09-22-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wohngeld gesenkt – verletzt das den Sozialstaat?",
+          "titelZeilen": [
+            "Wohngeld gesenkt –",
+            "verletzt das den",
+            "Sozialstaat?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Gestaltungsauftrag, kein Besitzstand",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Der Bundesgesetzgeber senkt das Wohngeld für alle Bezieher spürbar. W bezieht Wohngeld und meint, das Sozialstaatsprinzip (Art. 20 Abs. 1 GG) verbiete es, einmal gewährte Leistungen wieder zu kürzen. Hat er recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Gehalt des Prinzips",
+              "text": "Art. 20 Abs. 1 GG verpflichtet den Staat auf soziale Sicherheit und Ausgleich. Wie er das erreicht, lässt die Norm offen."
+            },
+            {
+              "titel": "2. Spielraum des Gesetzgebers",
+              "text": "Die Ausgestaltung ist Sache des Gesetzgebers. Dazu gehört, Leistungen an veränderte Lagen und Haushalte anzupassen."
+            },
+            {
+              "titel": "3. Kein Besitzstand",
+              "text": "Ein allgemeines Verbot, Sozialleistungen zu kürzen, entnimmt die ganz überwiegende Ansicht dem Prinzip nicht."
+            },
+            {
+              "titel": "4. Echte Grenzen",
+              "text": "Grenzen ziehen Grundrechte und andere Prinzipien: Existenzminimum, Gleichheitssatz, Vertrauensschutz – je nach Leistung auch Art. 14 GG."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Ergebnis",
+          "text": "W hat nicht recht. Die Kürzung verstößt nicht schon deshalb gegen Art. 20 Abs. 1 GG, weil sie Leistungen zurücknimmt. Prüfen musst du, ob sie das Existenzminimum unterschreitet, Gruppen ohne Sachgrund ungleich behandelt oder schutzwürdiges Vertrauen enttäuscht."
+        },
+        {
+          "art": "text",
+          "titel": "Typischer Fehler",
+          "text": "Das Sozialstaatsprinzip wird wie ein Grundrecht geprüft – mit Schutzbereich und Eingriff. Es ist aber ein objektives Verfassungsprinzip: Auslegungsmaßstab und Gestaltungsauftrag. Es kann Grundrechtseingriffe sogar rechtfertigen, etwa die Versicherungspflicht in der Sozialversicherung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Sozialstaat heißt Gestaltungsauftrag, nicht Besitzstand. Kürzungen scheitern an Grundrechten und Vertrauensschutz – nicht am Prinzip allein."
+        },
+        {
+          "art": "cta",
+          "titel": "Sozialstaat in der Klausur",
+          "punkte": [
+            "Objektives Prinzip, kein Grundrecht",
+            "Weiter Spielraum, kein Kürzungsverbot",
+            "Grenzen: Existenzminimum, Art. 3, Vertrauen"
+          ],
+          "icons": [
+            "gebaeude",
+            "waage",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Wohngeld gesenkt – verletzt das den Sozialstaat? Meist nicht: Art. 20 Abs. 1 GG ist ein Gestaltungsauftrag an den Gesetzgeber und garantiert keinen Besitzstand an einmal gewährten Leistungen. Grenzen ziehen das Existenzminimum, der Gleichheitssatz und der Vertrauensschutz. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#sozialstaat",
+        "#art20gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Leistung gekürzt: Hilft das Sozialstaatsprinzip?",
+      "coverText": "Gestaltungsauftrag, kein Besitzstand",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Der Gesetzgeber darf Sozialleistungen umbauen und kürzen – Grenzen setzen erst Grundrechte und Vertrauensschutz.",
+        "handlung": "{B} lowers a stack of supply crates by one level with a hand crank, while {A} points calmly at a firm painted floor line the stack must never go below.",
+        "hinweisRegie": "Place the note in the free space just above the painted floor line, slightly tilted toward the lowered crates, keeping the crank, the crates and both faces fully visible.",
+        "alternative": "{A} adjusts a water tap to a smaller stream into a basin, while {B} watches a marked minimum level inside the basin that stays covered."
+      },
+      "bildSzene": "crate stack lowered above floor line",
+      "bildSzeneAlt": "tap reduced above minimum mark",
+      "quellen": [
+        "Art. 20 Abs. 1 GG",
+        "Art. 1 Abs. 1 GG",
+        "Art. 3 Abs. 1 GG",
+        "Art. 14 GG",
+        "Themenpool: staat-592"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "sozialfall-frage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:12.819Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-472",
+      "slug": "2027-09-22-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kaum reparierbar – und trotzdem kein Mangel",
+          "titelZeilen": [
+            "Kaum reparierbar –",
+            "und trotzdem",
+            "kein Mangel"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Maßstab: Sachen gleicher Art",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Verbraucher K kauft im Mai 2027 bei Händler V einen günstigen Wasserkocher. Kurz nach der Übergabe erfährt er, dass sich das einwandfrei arbeitende Gerät bauartbedingt kaum reparieren lässt. Zur Reparierbarkeit wurde nichts vereinbart. Ist der Wasserkocher mangelhaft?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Neuregelung anwendbar?",
+              "text": "Für Kaufverträge ab dem 31.07.2026 gehört die Reparierbarkeit zur üblichen Beschaffenheit (§ 434 Abs. 3 S. 2 BGB; Art. 229 § 72 EGBGB)."
+            },
+            {
+              "titel": "2. Vereinbarung zuerst",
+              "text": "Subjektive Anforderungen (§ 434 Abs. 2 BGB): V und K haben zur Reparierbarkeit nichts vereinbart. Es bleibt der objektive Maßstab."
+            },
+            {
+              "titel": "3. Der Vergleichsmaßstab",
+              "text": "Maßgeblich ist, was bei Sachen gleicher Art üblich ist und was der Käufer erwarten kann (§ 434 Abs. 3 S. 1 Nr. 2 BGB)."
+            },
+            {
+              "titel": "4. Subsumtion",
+              "text": "Sind vergleichbare Geräte üblicherweise ähnlich schlecht reparierbar, fehlt ein Mangel. Sind sie es nicht, ist die Sache mangelhaft."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Typischer Fehler",
+          "text": "Die Neuregelung wird als Pflicht gelesen, jede Sache müsse reparierbar sein. Sie nennt die Reparierbarkeit aber als Merkmal der üblichen Beschaffenheit. Prüfstein bleibt der Vergleich mit Sachen gleicher Art – dazu enthält der Sachverhalt meist Hinweise."
+        },
+        {
+          "art": "text",
+          "titel": "Ergebnis",
+          "text": "Ob der Wasserkocher mangelhaft ist, entscheidet der Vergleich: Weicht er in der Reparierbarkeit nach unten von dem ab, was bei solchen Geräten üblich ist, hat K die Rechte aus § 437 BGB. Sonst nicht – auch wenn eine Reparatur praktisch ausscheidet."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Reparierbarkeit ist übliche Beschaffenheit – gemessen an Sachen gleicher Art. Mangelhaft ist nur, was unüblich schlecht reparierbar ist."
+        },
+        {
+          "art": "cta",
+          "titel": "Reparierbarkeit prüfen",
+          "punkte": [
+            "Vertragsdatum und Parteien klären",
+            "Vereinbarung vor objektivem Maßstab",
+            "Vergleich mit Sachen gleicher Art"
+          ],
+          "icons": [
+            "kalender",
+            "vertrag",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Kaum reparierbar – und trotzdem kein Mangel? Das geht: Seit der Neuregelung gehört die Reparierbarkeit zur üblichen Beschaffenheit, gemessen wird aber an Sachen gleicher Art. Erst wenn die Kaufsache unüblich schlecht reparierbar ist, liegt ein Sachmangel vor. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#434bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Reparierbarkeit: Der Vergleich entscheidet",
+      "coverText": "Maßstab: Sachen gleicher Art",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Ob fehlende Reparierbarkeit ein Mangel ist, zeigt erst der Vergleich mit gleichartigen Sachen.",
+        "handlung": "{A} holds a sealed kettle next to a row of three similar kettles on a shelf, while {B} tries to open each one with a small screwdriver to compare.",
+        "hinweisRegie": "Place the note in the free space above the row of kettles, slightly tilted toward the sealed one in {A}'s hand, so the screwdriver and all kettles stay visible.",
+        "alternative": "{B} weighs a sealed device on one side of a balance against several comparable devices on the other, while {A} reads the balance."
+      },
+      "bildSzene": "sealed kettle compared with similar ones",
+      "bildSzeneAlt": "device weighed against comparable devices",
+      "quellen": [
+        "§ 434 Abs. 2, 3 BGB",
+        "§ 437 BGB",
+        "Art. 229 § 72 EGBGB",
+        "Themenpool: schuldbt-472"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-mangel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:12.819Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-311",
+      "slug": "2027-09-22-b3",
+      "titelZeilen": [
+        "Der Anstifter",
+        "kommt milder",
+        "davon als der Täter"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Der Anstifter kommt milder davon als der Täter",
+          "unter": "Untreue · § 266 StGB",
+          "text": "Wer selbst keine Vermögensbetreuungspflicht hat, bekommt eine Milderung.",
+          "norm": "§ 266 StGB",
+          "icon": "geldbeutel",
+          "sprecher": "Der Anstifter wird milder bestraft als der Täter. Klingt schief? Bei der Untreue ist das der Normalfall, wenn der Anstifter ein Außenstehender ist.",
+          "marken": [
+            "milder bestraft",
+            "§ 266 StGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Haupttat",
+          "text": "Prokurist T schädigt pflichtwidrig das Vermögen seiner Firma: Untreue.",
+          "norm": "§ 266 Abs. 1 StGB",
+          "sprecher": "Schritt eins: die Haupttat. Prokurist T verschiebt pflichtwidrig Firmengeld. Er hat eine Vermögensbetreuungspflicht und begeht Untreue nach § 266 StGB.",
+          "marken": [
+            "Haupttat"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der Außenstehende",
+          "text": "Freund A hat T dazu bestimmt. Täter kann A nicht sein – ihm fehlt die Pflicht.",
+          "norm": "§ 26 StGB",
+          "sprecher": "Schritt zwei: Sein Freund A hat T zu der Tat überredet. Täter einer Untreue kann A nicht sein, denn er hat keine Vermögensbetreuungspflicht. Er ist Anstifter.",
+          "marken": [
+            "nur Anstifter"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Das besondere Merkmal",
+          "text": "Die Vermögensbetreuungspflicht ist nach der Rspr. ein strafbegründendes persönliches Merkmal.",
+          "norm": "§ 28 Abs. 1 StGB",
+          "sprecher": "Schritt drei: Die Vermögensbetreuungspflicht ist nach der Rechtsprechung ein besonderes persönliches Merkmal, und zwar eines, das die Strafbarkeit überhaupt erst begründet.",
+          "marken": [
+            "strafbegründend"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Folge",
+          "text": "Dem Anstifter fehlt das Merkmal: Seine Strafe wird zwingend gemildert.",
+          "norm": "§ 28 Abs. 1 · § 49 Abs. 1 StGB",
+          "sprecher": "Schritt vier: Weil A das Merkmal fehlt, bleibt er zwar strafbar. Seine Strafe wird aber zwingend gemildert, nach Paragraf 28 Absatz 1 in Verbindung mit Paragraf 49 Absatz 1.",
+          "marken": [
+            "zwingend milder"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Anders bei strafschärfenden Merkmalen",
+          "text": "Schärft das Merkmal nur, verschiebt § 28 Abs. 2 StGB den Tatbestand – etwa bei § 340 StGB.",
+          "norm": "§ 28 Abs. 2 StGB",
+          "sprecher": "Anders bei Merkmalen, die die Strafe nur schärfen, etwa die Amtsträgereigenschaft bei der Körperverletzung im Amt. Dann haftet der Außenstehende nur als Teilnehmer am Grunddelikt, hier der Körperverletzung.",
+          "marken": [
+            "Abs. 2: Verschiebung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Strafbegründendes Merkmal fehlt: Teilnahme ja, Strafe milder.",
+          "norm": "§ 266 StGB · § 28 StGB",
+          "sprecher": "Merke: Fehlt dem Teilnehmer ein strafbegründendes Merkmal, bleibt er strafbar, aber mit gemilderter Strafe. Schärft das Merkmal nur, wird der Tatbestand verschoben.",
+          "marken": [
+            "Abs. 1: milder"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Beteiligungsklausur speichern",
+          "text": "Speichern für die nächste Prüfung der Teilnahme.",
+          "sprecher": "Speicher dir das für deine nächste Klausur zur Teilnahme.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Anstifter zur Untreue – und milder bestraft als der Täter. Die Vermögensbetreuungspflicht ist nach der Rechtsprechung ein strafbegründendes besonderes persönliches Merkmal. Fehlt es dem Außenstehenden, wird seine Strafe nach § 28 Abs. 1 i.V.m. § 49 Abs. 1 StGB gemildert. Schärft ein Merkmal nur, verschiebt § 28 Abs. 2 StGB den Tatbestand. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#266stgb",
+        "#untreue",
+        "#teilnahme",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Untreue: Außenstehender Anstifter wird gemildert",
+      "coverText": "Pflicht fehlt: Strafe gemildert",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Wer die Pflicht des Täters nicht trägt, kann ihn anstiften – wird aber milder bestraft.",
+        "handlung": "{B} whispers to {A}, who alone wears a heavy key ring of the company vault on the belt and is about to open a cash box.",
+        "hinweisRegie": "Place the note in the free space above the key ring on {A}'s belt, slightly tilted toward {B}'s whispering gesture, keeping the cash box and both faces visible.",
+        "alternative": "{A} carries a heavy responsibility badge while {B} without any badge pushes {A} gently toward an open safe."
+      },
+      "bildSzene": "whisperer beside vault key holder",
+      "bildSzeneAlt": "badge wearer nudged toward safe",
+      "quellen": [
+        "§ 266 StGB",
+        "§ 26 StGB",
+        "§ 28 StGB",
+        "§ 49 Abs. 1 StGB",
+        "§ 340 StGB",
+        "Themenpool: strafat-311"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ueberraschende-rechtsfolge",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:12.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-435",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "Eine Monatsfrist beginnt mit Zugang am Montag, 31.01.2028. Wann endet sie?",
+      "optionen": [
+        "Mit Ablauf des 28.02.2028",
+        "Mit Ablauf des 29.02.2028",
+        "Mit Ablauf des 02.03.2028"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 187 Abs. 1 BGB",
+        "§ 188 Abs. 2, 3 BGB",
+        "Themenpool: bgbat-435"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:12.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-435",
+      "ueberzeile": "Auflösung",
+      "titel": "Mit Ablauf des 29.02.2028 – einen 31. Februar gibt es nicht",
+      "text": "Der Zugangstag zählt nicht mit (§ 187 Abs. 1 BGB). Die Frist endet mit Ablauf des Tages im Folgemonat, der dieselbe Zahl trägt (§ 188 Abs. 2 BGB). Fehlt dieser Tag, endet sie mit Ablauf des letzten Tages des Monats (§ 188 Abs. 3 BGB) – 2028 ist ein Schaltjahr, also der 29.02., ein Dienstag.",
+      "norm": "§ 188 Abs. 3 BGB",
+      "quellen": [
+        "§ 187 Abs. 1 BGB",
+        "§ 188 Abs. 2, 3 BGB",
+        "Themenpool: bgbat-435"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:12.820Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit Ablauf des 28.02.2028",
+        "Mit Ablauf des 29.02.2028",
+        "Mit Ablauf des 02.03.2028"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-191",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 439 Abs. 4 BGB: Der Käufer wählt – der Verkäufer darf eine zu teure Wahl ablehnen",
+      "text": "Der Käufer bestimmt, ob nachgebessert oder neu geliefert wird. Der Verkäufer kann die gewählte Art verweigern, wenn sie nur mit unverhältnismäßigen Kosten möglich ist. Abzuwägen sind der Wert der mangelfreien Sache, die Bedeutung des Mangels und ob die andere Art ohne erhebliche Nachteile für den Käufer bleibt. Dann beschränkt sich der Anspruch auf die andere Art.",
+      "norm": "§ 439 Abs. 4 BGB",
+      "quellen": [
+        "§ 439 Abs. 1, 4 BGB",
+        "Themenpool: schuldbt-191"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:12.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-870",
+      "ueberzeile": "Streitstand Anklage & Strafakte",
+      "titel": "Einziehung über den Gewinn hinaus: Mildert das die Strafe?",
+      "norm": "§ 73 StGB · § 46 StGB",
+      "optionen": [
+        "BGH: Nein – Einziehung des Tatertrags ist keine Strafe, sondern Abschöpfung.",
+        "Teile der Lit.: Soweit sie über den Gewinn hinausgreift, wirkt sie wie Strafe."
+      ],
+      "text": "Klausur: Tatertrag zwingend einziehen, Strafe getrennt zumessen. Anders bei Tatmitteln (§ 74 StGB): Diese Einziehung hat nach der Rspr. Strafcharakter und kann bei erheblichem Wert in die Strafzumessung einfließen.",
+      "quellen": [
+        "§ 46 StGB",
+        "§ 73 StGB",
+        "§ 73d StGB",
+        "§ 74 StGB",
+        "Themenpool: anklage-870"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:12.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-235",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "Ohne Anspruch keine Vormerkung",
+      "text": "Die Vormerkung ist streng akzessorisch (§ 883 Abs. 1 BGB): Ist der Kaufvertrag nichtig, entsteht sie trotz Eintragung nicht. Erlischt der Anspruch, erlischt sie mit. Bei Abtretung geht sie mit über (§ 401 BGB).",
+      "norm": "§ 883 Abs. 1 BGB",
+      "quellen": [
+        "§ 883 BGB",
+        "§ 401 BGB",
+        "Themenpool: sachen-235"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:12.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-104",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Fortsetzungsfeststellungsinteresse",
+      "text": "Das berechtigte Interesse an der Feststellung, dass ein erledigter Verwaltungsakt rechtswidrig war. Anerkannt sind vor allem Wiederholungsgefahr, Rehabilitationsinteresse, ein schwerwiegender Grundrechtseingriff, der sich typischerweise schnell erledigt, und die Vorbereitung eines nicht aussichtslosen Amtshaftungsprozesses – Letzteres nur bei Erledigung nach Klageerhebung.",
+      "norm": "§ 113 Abs. 1 S. 4 VwGO",
+      "quellen": [
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "Themenpool: vwgo-104"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:12.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,896 @@
+{
+  "datum": "2027-09-29",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-559",
+        "themaTitel": "Zeugenbeweis und Parteivernehmung",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-720",
+        "themaTitel": "Zeitpunkt des Vorsatzes",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-657",
+        "themaTitel": "Fortsetzungsfeststellungsklage",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:06",
+        "art": "frage",
+        "themaId": "famerb-517"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:06",
+        "art": "antwort",
+        "themaId": "famerb-517"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "strafat-307"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "streitstand",
+        "themaId": "assessorz-824"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:04",
+        "art": "merksatz",
+        "themaId": "schuld-171"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "begriff",
+        "themaId": "staat-590"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-559",
+      "poolTitel": "Zeugenbeweis und Parteivernehmung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 373 ff., 445 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-08",
+        "2027-07-13",
+        "2027-07-13"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-720",
+      "poolTitel": "Zeitpunkt des Vorsatzes",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 15, 16 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-21",
+        "2027-05-21",
+        "2027-09-09"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-657",
+      "poolTitel": "Fortsetzungsfeststellungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 113 I 4 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-04",
+        "2027-06-15",
+        "2027-08-14"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "famerb-517",
+      "poolTitel": "Zugewinnausgleich: Anfangs- und Endvermögen",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1373 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-19",
+        "2026-09-19"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "famerb-517",
+      "poolTitel": "Zugewinnausgleich: Anfangs- und Endvermögen",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1373 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-19",
+        "2026-09-19"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-307",
+      "poolTitel": "Was ist mittelbare Täterschaft und wann liegt ein Täter hinter dem Täter vor?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 Abs. 1 Alt. 2 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-02",
+        "2027-07-13",
+        "2027-09-02"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-824",
+      "poolTitel": "Wie läuft die Kostenfestsetzung nach dem Urteil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 103 ZPO",
+        "§ 104 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-18",
+        "2027-05-20",
+        "2027-07-21"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "schuld-171",
+      "poolTitel": "Wer trägt die Gegenleistungsgefahr bei Unmöglichkeit?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 326 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-12",
+        "2027-03-10",
+        "2027-06-20"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "staat-590",
+      "poolTitel": "Demokratieprinzip und Legitimationskette",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 II GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-11",
+        "2027-05-11",
+        "2027-06-02"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-559",
+      "slug": "2027-09-29-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Der Geschäftsführer ist kein Zeuge der GmbH",
+          "titelZeilen": [
+            "Der Geschäfts-",
+            "führer ist kein",
+            "Zeuge der GmbH"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Rolle im Prozess entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die K-GmbH verklagt B auf Zahlung aus einem mündlich geschlossenen Vertrag. Verhandelt hat allein ihr Geschäftsführer G. B bestreitet den Vertragsschluss. Die K-GmbH benennt G „als Zeugen“. Wie wird G gehört?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Wer ist Partei?",
+              "text": "Partei ist die GmbH. Für sie handelt im Prozess ihr gesetzlicher Vertreter G."
+            },
+            {
+              "titel": "2. Zeuge oder Partei?",
+              "text": "Der gesetzliche Vertreter einer prozessunfähigen Partei wird wie eine Partei vernommen (§ 455 Abs. 1 S. 1 ZPO) – nicht als Zeuge."
+            },
+            {
+              "titel": "3. Parteivernehmung",
+              "text": "Sie ist subsidiär: auf Antrag der beweisbelasteten Partei für den Gegner (§ 445 ZPO), die eigene nur mit Einverständnis (§ 447 ZPO)."
+            },
+            {
+              "titel": "4. Von Amts wegen",
+              "text": "§ 448 ZPO, wenn schon eine gewisse Wahrscheinlichkeit für die Behauptung spricht. Daneben: Anhörung nach § 141 ZPO."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Denkweg hakt",
+          "text": "Viele behandeln jeden, der nicht selbst verklagt ist, als Zeugen. Maßgeblich ist aber die Rolle im Prozess. Der Prokurist oder ein einfacher Mitarbeiter der GmbH ist dagegen Zeuge (§§ 373 ff. ZPO) – er vertritt die GmbH nicht im Prozess."
+        },
+        {
+          "art": "text",
+          "titel": "Der Zeitpunkt entscheidet",
+          "punkte": [
+            "Maßgeblich ist die Stellung bei der Vernehmung",
+            "Wird G vorher abberufen, kann er als Zeuge aussagen",
+            "Das Gericht würdigt seine Nähe zur Partei dann frei (§ 286 ZPO)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wer die Partei im Prozess vertritt, sagt als Partei aus – nicht als Zeuge. Zeuge ist, wer im Prozess nicht Partei oder deren gesetzlicher Vertreter ist."
+        },
+        {
+          "art": "cta",
+          "titel": "Zeuge oder Partei?",
+          "punkte": [
+            "Wer ist Partei?",
+            "Gesetzlicher Vertreter: § 455 ZPO",
+            "Parteivernehmung nur nach §§ 445 ff.",
+            "Zeitpunkt der Vernehmung"
+          ],
+          "icons": [
+            "personen",
+            "aktentasche",
+            "richter",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Der Geschäftsführer ist kein Zeuge der GmbH. Als gesetzlicher Vertreter wird er wie eine Partei vernommen (§ 455 Abs. 1 ZPO) – und die Parteivernehmung ist nur unter den engen Voraussetzungen der §§ 445 ff. ZPO möglich. Der Prokurist dagegen ist Zeuge. Speichern für die nächste Beweisaufnahme in der ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#beweisrecht",
+        "#zivilprozess",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Geschäftsführer: Partei, nicht Zeuge",
+      "coverText": "Rolle im Prozess entscheidet",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Wer die Partei vertritt, sitzt auf ihrer Seite und nicht im Zeugenstand.",
+        "handlung": "{B} tries to guide a figure in a formal jacket toward an empty witness stand, while {A} hovers and gently steers that figure back to the party table on the other side.",
+        "hinweisRegie": "Place the note in the free space between the empty witness stand and the party table, slightly tilted, so both places and the redirecting gesture stay visible and no face is covered.",
+        "alternative": "{A} hands two different colored name badges to two people; the one in the formal jacket receives the badge matching the party table."
+      },
+      "bildSzene": "figure steered from stand to table",
+      "bildSzeneAlt": "two colored badges handed out",
+      "quellen": [
+        "§§ 373 ff. ZPO",
+        "§ 445 ZPO",
+        "§ 447 ZPO",
+        "§ 448 ZPO",
+        "§ 455 ZPO",
+        "§ 141 ZPO",
+        "Themenpool: zpo-559"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:02.491Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-720",
+      "slug": "2027-09-29-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Opfer stirbt vor dem geplanten Schuss – vollendet ist die Tat trotzdem",
+          "titelZeilen": [
+            "Opfer stirbt vor",
+            "dem geplanten",
+            "Schuss – trotzdem",
+            "vollendet"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Schon angesetzt? Dann Vollendung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "T will O töten. Plan: O mit einem starken Schlafmittel im Wein betäuben und dann im Wald erschießen. O trinkt den Wein – und stirbt, ohne dass T es wollte, schon an dem Mittel. Strafbarkeit nach § 212 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Objektiver Tatbestand",
+              "text": "T hat den Tod durch das Mittel kausal und zurechenbar verursacht."
+            },
+            {
+              "titel": "2. Versuchsstadium erreicht?",
+              "text": "Mit dem Beibringen des Mittels hat T nach seinem Plan unmittelbar angesetzt – der Schuss sollte ohne Zwischenschritte folgen."
+            },
+            {
+              "titel": "3. Vorsatz bei Begehung",
+              "text": "T handelte beim Beibringen mit Tötungsvorsatz. Der Erfolg tritt nur früher und anders ein als geplant."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Unwesentliche Abweichung vom Kausalverlauf: vollendeter Totschlag nach § 212 StGB (Rspr.)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkfehler",
+          "text": "„T wollte ja erst später töten – also nur § 222 StGB.“ Das stimmt nur, wenn T noch im Vorbereitungsstadium war, etwa beim bloßen Beschaffen des Mittels. Hat er schon angesetzt, trägt der Tötungsvorsatz den vorzeitigen Erfolg."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wo die Grenze verläuft",
+          "links": {
+            "titel": "Schon angesetzt",
+            "punkte": [
+              "Versuchsbeginn nach § 22 StGB erreicht",
+              "Vorzeitiger Erfolg: Vollendung",
+              "Teile der Lit.: nur Versuch plus § 222 StGB"
+            ]
+          },
+          "rechts": {
+            "titel": "Noch Vorbereitung",
+            "punkte": [
+              "Kein unmittelbares Ansetzen",
+              "Kein Vorsatz bei der Tat-handlung",
+              "Fahrlässige Tötung, § 222 StGB"
+            ]
+          }
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vorzeitiger Erfolg: Hat der Täter schon unmittelbar angesetzt, ist die Tat vollendet – vorher bleibt nur Fahrlässigkeit."
+        },
+        {
+          "art": "cta",
+          "titel": "Vorzeitiger Erfolgseintritt",
+          "punkte": [
+            "Wann trat der Erfolg ein?",
+            "War der Versuch schon begonnen?",
+            "Abweichung wesentlich?",
+            "Sonst: § 222 StGB"
+          ],
+          "icons": [
+            "uhr",
+            "zielscheibe",
+            "waage",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Das Opfer stirbt schon am Schlafmittel, nicht am geplanten Schuss – und die Tat ist trotzdem vollendet. Entscheidend ist, ob der Täter beim Beibringen schon unmittelbar zur Tötung angesetzt hat. Dann handelt er bei der Tat mit Vorsatz, und die Abweichung im Kausalverlauf ist nach der Rspr. unwesentlich. War er noch im Vorbereitungsstadium, bleibt nur § 222 StGB. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#vorsatz",
+        "#212stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorzeitiger Erfolgseintritt: trotzdem vollendet",
+      "coverText": "Schon angesetzt? Dann Vollendung",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Tritt der Erfolg früher ein als geplant, zählt, ob der Täter schon losgelegt hatte.",
+        "handlung": "{B} has just pushed the first domino of a long row, but the last domino already topples early through a shortcut, while {A} points with a pointer at the first pushed domino.",
+        "hinweisRegie": "Place the note in the free space above the first pushed domino, slightly tilted toward it, so the start of the row and the early fall at the end both stay visible without covering faces.",
+        "alternative": "{A} sets a timer for a later explosion of confetti, but the confetti bursts the moment the timer is switched on, and {B} looks surprised."
+      },
+      "bildSzene": "domino row topples early via shortcut",
+      "bildSzeneAlt": "confetti bursts when timer starts",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 22 StGB",
+        "§ 16 StGB",
+        "§ 222 StGB",
+        "Themenpool: strafat-720"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:02.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-657",
+      "slug": "2027-09-29-b3",
+      "titelZeilen": [
+        "Versammlung längst",
+        "vorbei – die Klage",
+        "lohnt trotzdem"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Versammlung längst vorbei – die Klage lohnt sich trotzdem",
+          "unter": "Fortsetzungsfeststellungsklage · § 113 VwGO",
+          "text": "Erledigt heißt nicht erledigt für das Gericht.",
+          "norm": "§ 113 Abs. 1 S. 4 VwGO",
+          "icon": "wahlurne",
+          "sprecher": "Die Versammlung ist vorbei – und die Klage trotzdem zulässig. Die Polizei hat sie aufgelöst, der Tag ist gelaufen. Trotzdem kann der Veranstalter klären lassen, ob das rechtmäßig war.",
+          "marken": [
+            "erledigt – na und?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erledigung",
+          "text": "Der Verwaltungsakt wirkt nicht mehr – hier durch Zeitablauf.",
+          "norm": "§ 43 Abs. 2 VwVfG",
+          "sprecher": "Schritt eins: Erledigung. Die Auflösungsverfügung hat sich mit dem Ende der Versammlung durch Zeitablauf erledigt. Eine Anfechtungsklage ginge ins Leere.",
+          "marken": [
+            "Zeitablauf"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Statthafte Klage",
+          "text": "Fortsetzungsfeststellungsklage – bei Erledigung vor Klageerhebung analog.",
+          "norm": "§ 113 Abs. 1 S. 4 VwGO",
+          "sprecher": "Schritt zwei: Statthaft ist die Fortsetzungsfeststellungsklage. Direkt passt § 113 Absatz 1 Satz 4 VwGO für die Erledigung nach Klageerhebung. Erledigt sich der Akt vorher, wendet die herrschende Meinung die Norm analog an.",
+          "marken": [
+            "analog"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Wiederholungsgefahr",
+          "text": "Droht unter im Wesentlichen gleichen Umständen dieselbe Maßnahme?",
+          "norm": null,
+          "sprecher": "Schritt drei: Das besondere Feststellungsinteresse. Erste Fallgruppe ist die Wiederholungsgefahr. Plant der Veranstalter ähnliche Versammlungen, droht dieselbe Maßnahme erneut.",
+          "marken": [
+            "Wiederholung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rehabilitation",
+          "text": "Die Maßnahme wirkt diskriminierend nach.",
+          "norm": null,
+          "sprecher": "Zweite Fallgruppe: Rehabilitation. Wirkt die Maßnahme nach außen diskriminierend, etwa weil der Veranstalter öffentlich als Störer dasteht, darf er das klären lassen.",
+          "marken": [
+            "Ansehen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Schwerer, kurzer Eingriff",
+          "text": "Gewichtiger Grundrechtseingriff, der sich typischerweise schnell erledigt.",
+          "norm": "Art. 8 GG",
+          "sprecher": "Und die wichtigste Gruppe hier: ein gewichtiger Grundrechtseingriff, der sich typischerweise so schnell erledigt, dass kein Gericht rechtzeitig entscheiden kann. Genau das ist bei Versammlungen der Fall.",
+          "marken": [
+            "Art. 8 GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Kurzlebig heißt nicht kontrollfrei",
+          "text": "Erledigt? Dann Feststellungsinteresse begründen – Fallgruppe benennen.",
+          "norm": "§ 113 Abs. 1 S. 4 VwGO",
+          "sprecher": "Merke: Erledigung beendet nicht den Rechtsschutz. Du brauchst nur ein besonderes Feststellungsinteresse und musst die passende Fallgruppe benennen.",
+          "marken": [
+            "Fallgruppe"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die VwGO-Klausur speichern",
+          "text": "Speichern für die nächste Erledigung.",
+          "sprecher": "Speicher dir das für deine nächste Klausur mit Erledigung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Versammlung ist längst vorbei – und die Klage lohnt sich trotzdem. Statthaft ist die Fortsetzungsfeststellungsklage, bei Erledigung vor Klageerhebung nach h.M. analog § 113 Abs. 1 S. 4 VwGO. Das Feststellungsinteresse folgt aus Wiederholungsgefahr, Rehabilitation oder einem gewichtigen Grundrechtseingriff, der sich typischerweise kurzfristig erledigt. Speichern für die nächste Erledigung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#fortsetzungsfeststellungsklage",
+        "#versammlungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "FFK nach Versammlung: Feststellungsinteresse",
+      "coverText": "Kurzlebig heißt nicht kontrollfrei",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Auch wenn die Maßnahme vorbei ist, darf ihre Rechtmäßigkeit noch geklärt werden.",
+        "handlung": "{A} holds up a torn event banner on an empty square after the crowd has left, while {B} carries a heavy magnifying lens toward it to examine the torn edge.",
+        "hinweisRegie": "Place the note in the free space above the torn banner, slightly tilted toward the magnifying lens, so the empty square and the examined edge remain visible and the faces are clear.",
+        "alternative": "{B} relights a candle that has already burned down, so {A} can inspect the wax traces left on the table."
+      },
+      "bildSzene": "torn banner examined on empty square",
+      "bildSzeneAlt": "burned candle traces inspected",
+      "quellen": [
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "§ 43 Abs. 2 VwVfG",
+        "Art. 8 GG",
+        "Themenpool: vwgo-657"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:02.493Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-517",
+      "ueberzeile": "Prüfungsfrage Familienrecht",
+      "titel": "Ehemann M erbt während der Ehe 100.000 €. Zählt das zu seinem Zugewinn?",
+      "optionen": [
+        "Nein – die Erbschaft wird dem Anfangsvermögen hinzugerechnet",
+        "Ja – alles, was während der Ehe hinzukommt, ist Zugewinn",
+        "Nur zur Hälfte, weil M die Erbschaft allein erhalten hat"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 1373 BGB",
+        "§ 1374 Abs. 2 BGB",
+        "Themenpool: famerb-517"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:02.493Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-517",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – die Erbschaft kommt ins Anfangsvermögen",
+      "text": "Zugewinn ist der Betrag, um den das Endvermögen das Anfangsvermögen übersteigt (§ 1373 BGB). Erwerb von Todes wegen wird nach § 1374 Abs. 2 BGB dem Anfangsvermögen hinzugerechnet – er ist nicht gemeinsam erwirtschaftet. Achtung: Wertsteigerungen des Geerbten während der Ehe fallen dagegen in den Zugewinn.",
+      "norm": "§ 1374 Abs. 2 BGB",
+      "quellen": [
+        "§ 1373 BGB",
+        "§ 1374 Abs. 2 BGB",
+        "Themenpool: famerb-517"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:02.493Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – die Erbschaft wird dem Anfangsvermögen hinzugerechnet",
+        "Ja – alles, was während der Ehe hinzukommt, ist Zugewinn",
+        "Nur zur Hälfte, weil M die Erbschaft allein erhalten hat"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-307",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 25 Abs. 1 Alt. 2 StGB: Wer ein Kind stehlen lässt, ist mittelbarer Täter",
+      "text": "Ein Kind unter 14 Jahren handelt ohne Schuld (§ 19 StGB). Wer es für eine Tat einsetzt, nutzt diesen Defekt aus und beherrscht das Geschehen – nach h.M. regelmäßig mittelbare Täterschaft. Weil das Kind vorsätzlich und rechtswidrig handelt, bliebe hilfsweise auch Anstiftung möglich.",
+      "norm": "§ 25 Abs. 1 Alt. 2 StGB",
+      "quellen": [
+        "§ 25 Abs. 1 StGB",
+        "§ 19 StGB",
+        "§ 26 StGB",
+        "Themenpool: strafat-307"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:02.493Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-824",
+      "ueberzeile": "Streitstand 2. Examen Zivilrecht",
+      "titel": "B zahlt nach Eingang der Klage, aber vor Zustellung: Kann K einseitig für erledigt erklären?",
+      "norm": "§ 91a ZPO · § 269 Abs. 3 S. 3 ZPO",
+      "optionen": [
+        "BGH: Nein – erledigen kann sich nur eine rechtshängige Klage; K nimmt zurück, Kosten nach § 269 Abs. 3 S. 3 ZPO.",
+        "Teile der Lit.: Ja – Erledigungsfeststellung auch zwischen Anhängigkeit und Rechtshängigkeit."
+      ],
+      "text": "Klausur: Die Streitfrage hat viel Gewicht verloren, weil § 269 Abs. 3 S. 3 ZPO das Kostenproblem löst. Erklärt K trotzdem für erledigt, prüfe, ob sich die Erklärung als Rücknahme mit Kostenantrag auslegen lässt.",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 269 Abs. 3 S. 3 ZPO",
+        "Themenpool: assessorz-824"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:02.493Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-171",
+      "ueberzeile": "Merksatz Schuldrecht AT",
+      "titel": "Wer das Surrogat verlangt, muss die Gegenleistung zahlen",
+      "text": "Ohne Leistung grundsätzlich keine Gegenleistung (§ 326 Abs. 1 S. 1 BGB). Verlangt der Gläubiger aber nach § 285 BGB den Ersatz, etwa die Versicherungssumme, schuldet er die Gegenleistung – gemindert, wenn der Ersatz weniger wert ist.",
+      "norm": "§ 326 Abs. 3 BGB",
+      "quellen": [
+        "§ 326 BGB",
+        "§ 285 BGB",
+        "Themenpool: schuld-171"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:02.493Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-590",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Legitimationsniveau",
+      "text": "Nach dem BVerfG kommt es nicht auf eine bestimmte Form demokratischer Legitimation an, sondern auf ihre Wirksamkeit. Personelle Legitimation (Kette von Ernennungen) und sachlich-inhaltliche (Gesetz, Weisung, Aufsicht) wirken zusammen. Entscheidend ist, dass sie gemeinsam ein ausreichendes Niveau erreichen.",
+      "norm": "Art. 20 Abs. 2 GG",
+      "quellen": [
+        "Art. 20 Abs. 2 GG",
+        "Themenpool: staat-590"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:34:02.493Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
