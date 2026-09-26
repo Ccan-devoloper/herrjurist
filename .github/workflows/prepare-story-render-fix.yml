@@ -26,6 +26,9 @@ jobs:
         run: node .github/prepare-story-render-fix.mjs
       - name: Offline regression tests, including actual tomorrow's assets
         shell: bash
+        env:
+          # Local decryption only, not a provider/API credential.
+          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
         run: |
           cat > .tmp/no-network.mjs <<'NODE'
           import http from 'node:http';
