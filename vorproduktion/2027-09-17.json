@@ -1,0 +1,840 @@
+{
+  "datum": "2027-09-17",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "zpo-285",
+        "themaTitel": "Wie wirkt eine Erledigung der Hauptsache?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "anklage-791",
+        "themaTitel": "Einstellung aus Opportunitätsgründen",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-606",
+        "themaTitel": "Verordnungsermächtigung",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "verwalt-695"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "verwalt-695"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:00",
+        "art": "norm",
+        "themaId": "bgbat-159"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "merksatz",
+        "themaId": "strafbt-339"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "begriff",
+        "themaId": "schuld-438"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:07",
+        "art": "fehler",
+        "themaId": "methodik-936"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "zpo-285",
+      "poolTitel": "Wie wirkt eine Erledigung der Hauptsache?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-21",
+        "2027-05-15",
+        "2027-07-18"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "anklage-791",
+      "poolTitel": "Einstellung aus Opportunitätsgründen",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 153 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-09",
+        "2027-06-07",
+        "2027-06-07"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-606",
+      "poolTitel": "Verordnungsermächtigung",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 80 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-26"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-695",
+      "poolTitel": "Aufopferungsanspruch",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Richterrecht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-695",
+      "poolTitel": "Aufopferungsanspruch",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Richterrecht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-159",
+      "poolTitel": "Was ist eine geltungserhaltende Reduktion und warum ist sie bei AGB unzulässig?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 306 BGB",
+        "§ 307 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-02",
+        "2027-05-12",
+        "2027-06-05"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "strafbt-339",
+      "poolTitel": "Wie ist die Brandstiftung aufgebaut?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 306 StGB",
+        "§ 306a StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-13",
+        "2027-01-30",
+        "2027-06-08"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "schuld-438",
+      "poolTitel": "Leistungspflichten und Schutzpflichten",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 241 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-22",
+        "2027-05-19"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "methodik-936",
+      "poolTitel": "Die vier Auslegungsmethoden sicher anwenden",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-15",
+        "2027-07-16",
+        "2027-08-14"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-285",
+      "slug": "2027-09-17-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vor Zustellung gezahlt – erledigt ist trotzdem nichts",
+          "titelZeilen": [
+            "Vor Zustellung",
+            "gezahlt – erledigt",
+            "ist trotzdem nichts"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Erst Zustellung, dann Rechtshängigkeit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "B schuldet K 3.000 € und zahlt trotz Mahnung nicht. K reicht Zahlungsklage ein. Zwei Tage später – die Klage ist noch nicht zugestellt – überweist B den vollen Betrag. K will nun „für erledigt erklären“, damit B die Kosten trägt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "1. Erledigung im Rechtssinne?",
+              "text": "Nach h.M. nur, wenn das Ereignis nach Rechtshängigkeit eintritt. Die tritt erst mit Zustellung ein (§§ 253 Abs. 1, 261 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "2. Einseitige Erledigungserklärung",
+              "text": "Sie liefe ins Leere: Die Klage war schon vor Rechtshängigkeit unbegründet. Sie würde abgewiesen – mit Kosten für K."
+            },
+            {
+              "titel": "3. Der richtige Weg",
+              "text": "Klagerücknahme: Fiel der Anlass vor Rechtshängigkeit weg, entscheidet das Gericht über die Kosten nach billigem Ermessen (§ 269 Abs. 3 S. 3 ZPO)."
+            },
+            {
+              "titel": "4. Ermessen",
+              "text": "Maßgeblich ist der bisherige Sach- und Streitstand. B war in Verzug und hatte Anlass zur Klage gegeben."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "K nimmt die Klage zurück und beantragt, B die Kosten aufzuerlegen. Das Gericht wird B voraussichtlich die Kosten nach § 269 Abs. 3 S. 3 ZPO auferlegen. Das gilt nach dem Gesetz auch dann, wenn die Klage nie zugestellt wurde."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vor Rechtshängigkeit gibt es nach h.M. keine Erledigung. Der Weg führt über die Rücknahme und § 269 Abs. 3 S. 3 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Zahlung im Prozess einordnen",
+          "punkte": [
+            "Wann trat das Ereignis ein?",
+            "Vor Zustellung: Rücknahme, § 269 III 3",
+            "Nach Zustellung: Erledigung, § 91a"
+          ],
+          "icons": [
+            "kalender",
+            "umschlag",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Vor Zustellung gezahlt – erledigt ist trotzdem nichts. Die Erledigung setzt nach h.M. ein Ereignis nach Rechtshängigkeit voraus, und die beginnt erst mit Zustellung. Richtig ist die Klagerücknahme: Fiel der Anlass zur Klage vorher weg, verteilt das Gericht die Kosten nach billigem Ermessen (§ 269 Abs. 3 S. 3 ZPO). Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zivilprozessrecht",
+        "#erledigung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vor Zustellung gezahlt: Rücknahme statt Erledigung",
+      "coverText": "Erst Zustellung, dann Rechtshängigkeit",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Wer zahlt, bevor die Klage beim Gegner ankommt, erledigt keinen Prozess, der noch gar nicht begonnen hat.",
+        "handlung": "{B} hands a bag of crystal coins to {A}, while behind them a sealed envelope still waits in an unopened delivery tube.",
+        "hinweisRegie": "Place the note in the free space next to the unopened delivery tube, slightly tilted, so the timing between payment and the undelivered envelope is visible without covering faces.",
+        "alternative": "{A} tries to stop a race that has not yet started, while {B} is still tying the starting ribbon."
+      },
+      "bildSzene": "payment before envelope delivered",
+      "bildSzeneAlt": "stopping a race before start",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 Abs. 1 ZPO",
+        "§ 269 Abs. 3 ZPO",
+        "Themenpool: zpo-285"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.720Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-791",
+      "slug": "2027-09-17-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nebentat einstellen: § 154a StPO passt dafür nicht",
+          "titelZeilen": [
+            "Nebentat einstellen:",
+            "§ 154a StPO passt",
+            "dafür nicht"
+          ],
+          "coverBadge": "Tenorfrage",
+          "coverText": "Erst den Tatbegriff klären",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Ermittlungen gegen A ergeben einen gewerbsmäßigen Betrug mit hohem Schaden. Einige Wochen später hat A außerdem ein Parfum im Wert von 30 € gestohlen. Die StA will sich auf den Betrug konzentrieren. Wie behandelt sie den Diebstahl in der Abschlussverfügung?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Zwei Taten oder eine?",
+              "text": "Betrug und späterer Diebstahl sind verschiedene Lebensvorgänge – zwei Taten im prozessualen Sinn (§ 264 StPO)."
+            },
+            {
+              "titel": "2. Ganze Tat: § 154 StPO",
+              "text": "Die StA kann von der Verfolgung absehen, wenn die Strafe neben der für den Betrug zu erwartenden nicht beträchtlich ins Gewicht fällt."
+            },
+            {
+              "titel": "3. Teile einer Tat: § 154a StPO",
+              "text": "Er beschränkt die Verfolgung innerhalb einer Tat, etwa auf einzelne Gesetzesverletzungen. Für eine eigene Tat passt er nicht."
+            },
+            {
+              "titel": "4. Abschlussverfügung",
+              "text": "Im Einstellungsteil: Von der Verfolgung des Diebstahls wird nach § 154 Abs. 1 StPO abgesehen. Den Betrug klagt sie an."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Verwechslung",
+          "text": "§ 154 und § 154a StPO werden oft nach dem Gewicht ausgewählt. Entscheidend ist aber der Tatbegriff: § 154 erfasst ganze prozessuale Taten, § 154a nur abtrennbare Teile oder einzelne Gesetzesverletzungen derselben Tat. Deshalb immer zuerst die Tat bestimmen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Andere Tat: § 154 StPO. Teil derselben Tat: § 154a StPO. Erst den prozessualen Tatbegriff klären, dann die Norm wählen."
+        },
+        {
+          "art": "cta",
+          "titel": "Opportunität sauber wählen",
+          "punkte": [
+            "Wie viele prozessuale Taten?",
+            "Ganze Tat: § 154 StPO",
+            "Teil einer Tat: § 154a StPO"
+          ],
+          "icons": [
+            "lupe",
+            "ordner",
+            "klemmbrett"
+          ]
+        }
+      ],
+      "caption": "Nebentat einstellen? Dafür passt § 154a StPO nicht. Ist der Diebstahl eine eigene Tat im prozessualen Sinn, sieht die StA nach § 154 Abs. 1 StPO von seiner Verfolgung ab, wenn er neben dem Betrug nicht beträchtlich ins Gewicht fällt. § 154a StPO beschränkt nur innerhalb derselben Tat. Speichern für die nächste Abschlussverfügung.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#abschlussverfügung",
+        "#staatsanwaltschaft",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nebentat: § 154 statt § 154a StPO",
+      "coverText": "Erst den Tatbegriff klären",
+      "coverBadge": "Tenorfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Eine eigene Tat wird anders zur Seite gelegt als ein Teil derselben Tat.",
+        "handlung": "{B} places a small separate crate aside on a shelf, while {A} holds up a large crate from which he has only removed a single loose panel.",
+        "hinweisRegie": "Place the note in the free space between the separate small crate and the large crate with the removed panel, slightly tilted, so both kinds of setting aside are visible.",
+        "alternative": "{A} unhooks a whole wagon from a small train, while {B} only removes a single plank from another wagon."
+      },
+      "bildSzene": "separate crate set aside",
+      "bildSzeneAlt": "unhooking a whole wagon",
+      "quellen": [
+        "§ 154 StPO",
+        "§ 154a StPO",
+        "§ 264 StPO",
+        "Themenpool: anklage-791"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslung-ohne-etikett",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.720Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-606",
+      "slug": "2027-09-17-b3",
+      "titelZeilen": [
+        "Verordnung ohne",
+        "zitierte Grundlage:",
+        "nichtig"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Verordnung ohne zitierte Grundlage: nichtig",
+          "unter": "Verordnungsermächtigung · Art. 80 GG",
+          "text": "Die Verordnung muss ihre Rechtsgrundlage selbst angeben.",
+          "norm": "Art. 80 Abs. 1 S. 3 GG",
+          "icon": "dokument",
+          "sprecher": "Inhaltlich einwandfrei – und trotzdem nichtig. Das passiert, wenn eine Rechtsverordnung ihre Ermächtigungsgrundlage nicht nennt. Prüfen wir Artikel 80 GG sauber durch.",
+          "marken": [
+            "Zitiergebot",
+            "nichtig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Ermächtigung durch Gesetz",
+          "text": "Die Exekutive braucht eine Ermächtigung in einem formellen Gesetz.",
+          "norm": "Art. 80 Abs. 1 S. 1 GG",
+          "sprecher": "Schritt eins: Ohne Ermächtigung in einem Gesetz darf die Exekutive keine Rechtsverordnung erlassen.",
+          "marken": [
+            "formelles Gesetz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Richtiger Adressat",
+          "text": "Bundesregierung, Bundesminister oder Landesregierungen.",
+          "norm": "Art. 80 Abs. 1 S. 1 GG",
+          "sprecher": "Schritt zwei: Ermächtigt werden können nur die Bundesregierung, ein Bundesminister oder die Landesregierungen. Soll weiter übertragen werden, muss das Gesetz das vorsehen, und es braucht wieder eine Rechtsverordnung.",
+          "marken": [
+            "Adressaten",
+            "Subdelegation"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Inhalt, Zweck und Ausmaß",
+          "text": "Das Gesetz selbst muss bestimmen, was geregelt werden darf.",
+          "norm": "Art. 80 Abs. 1 S. 2 GG",
+          "sprecher": "Schritt drei: Inhalt, Zweck und Ausmaß der Ermächtigung müssen im Gesetz bestimmt sein. Der Bürger soll vorhersehen können, was die Verordnung regeln darf.",
+          "marken": [
+            "Bestimmtheit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Zitiergebot",
+          "text": "Die Verordnung nennt ihre Rechtsgrundlage.",
+          "norm": "Art. 80 Abs. 1 S. 3 GG",
+          "sprecher": "Schritt vier: Die Verordnung muss ihre Rechtsgrundlage angeben. Fehlt das, ist sie nach dem Bundesverfassungsgericht nichtig, auch wenn es die Ermächtigung eigentlich gibt.",
+          "marken": [
+            "Rechtsgrundlage nennen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Zustimmung des Bundesrates",
+          "text": "In bestimmten Fällen braucht die Verordnung die Zustimmung des Bundesrates.",
+          "norm": "Art. 80 Abs. 2 GG",
+          "sprecher": "Denk daneben an Artikel 80 Absatz 2: Bestimmte Verordnungen brauchen die Zustimmung des Bundesrates.",
+          "marken": [
+            "Bundesrat"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Das Gesetz ermächtigt, die Verordnung zitiert",
+          "text": "Bestimmtheit prüfst du am Gesetz, das Zitiergebot an der Verordnung.",
+          "norm": null,
+          "sprecher": "Merke: Bestimmtheit prüfst du am Gesetz. Das Zitiergebot an der Verordnung selbst. Zwei Prüfungsgegenstände.",
+          "marken": [
+            "zwei Ebenen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 80 GG sicher prüfen",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für deine nächste Staatsrechtsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Verordnung ohne zitierte Grundlage: nichtig. Bei Art. 80 GG prüfst du das Gesetz – Ermächtigung, Adressat, Inhalt, Zweck und Ausmaß – und die Verordnung selbst. Sie muss ihre Rechtsgrundlage angeben (Art. 80 Abs. 1 S. 3 GG). Fehlt das, ist sie nach dem BVerfG nichtig. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#rechtsverordnung",
+        "#80gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 80 GG: das vergessene Zitiergebot",
+      "coverText": "Bestimmtheit am Gesetz prüfen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Eine Regel der Verwaltung trägt nur, wenn sie offen sagt, woher ihre Befugnis kommt.",
+        "handlung": "{A} presents a neatly stamped sheet, while {B} turns it over and finds the back empty where the source seal should be.",
+        "hinweisRegie": "Place the note in the free space next to the empty back of the sheet, slightly tilted, so the missing source seal is the focus without covering the stamp on the front.",
+        "alternative": "{B} examines a bridge whose anchoring post on one side is missing, while {A} proudly points to its polished railing."
+      },
+      "bildSzene": "sheet with empty back",
+      "bildSzeneAlt": "bridge missing anchoring post",
+      "quellen": [
+        "Art. 80 Abs. 1 GG",
+        "Art. 80 Abs. 2 GG",
+        "Themenpool: staat-606"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-695",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht AT",
+      "titel": "Welche Rechtsgüter schützt der allgemeine Aufopferungsanspruch?",
+      "optionen": [
+        "Nur das Eigentum an beweglichen Sachen",
+        "Nichtvermögensrechte wie Leben, Gesundheit, Freiheit",
+        "Jedes Vermögensrecht einschließlich Forderungen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Themenpool: verwalt-695"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-695",
+      "ueberzeile": "Auflösung",
+      "titel": "Leben, Gesundheit, Freiheit – fürs Eigentum gelten andere Institute",
+      "text": "Der Aufopferungsanspruch ist gewohnheitsrechtlich anerkannt (Grundgedanke der §§ 74, 75 Einl. ALR). Voraussetzungen: hoheitlicher Eingriff in ein nichtvermögenswertes Rechtsgut, der dem Betroffenen ein Sonderopfer für das Gemeinwohl auferlegt. Für Eigentum gelten der enteignende und der enteignungsgleiche Eingriff. Spezialgesetze gehen vor; Rechtsweg: ordentliche Gerichte.",
+      "norm": "§ 40 Abs. 2 S. 1 VwGO",
+      "quellen": [
+        "§ 40 Abs. 2 VwGO",
+        "Themenpool: verwalt-695"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.722Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur das Eigentum an beweglichen Sachen",
+        "Nichtvermögensrechte wie Leben, Gesundheit, Freiheit",
+        "Jedes Vermögensrecht einschließlich Forderungen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-159",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 306 BGB: Klausel weg, Vertrag bleibt – und die Lücke füllt das Gesetz",
+      "text": "Ist eine AGB-Klausel unwirksam, bleibt der Vertrag im Übrigen wirksam (§ 306 Abs. 1 BGB) – anders als die Auslegungsregel des § 139 BGB. Die Lücke füllt das dispositive Recht (Abs. 2), notfalls eine ergänzende Vertragsauslegung. Ganz unwirksam ist der Vertrag nur, wenn das Festhalten eine unzumutbare Härte wäre (Abs. 3).",
+      "norm": "§ 306 BGB",
+      "quellen": [
+        "§ 306 BGB",
+        "§ 139 BGB",
+        "Themenpool: bgbat-159"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-339",
+      "ueberzeile": "Merksatz Brandstiftung",
+      "titel": "§ 306a Abs. 2 StGB: Die Sache darf dem Täter gehören",
+      "text": "§ 306a Abs. 2 StGB verweist nur auf die Objekte des § 306 Abs. 1, nicht auf deren Fremdheit. Auch das eigene Auto kann genügen – wenn ein anderer in konkrete Gesundheitsgefahr gerät.",
+      "norm": "§ 306a Abs. 2 StGB",
+      "quellen": [
+        "§ 306 StGB",
+        "§ 306a StGB",
+        "Themenpool: strafbt-339"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-438",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Leistungstreuepflicht",
+      "text": "Nebenpflicht, die zur Leistungspflicht gehört (§ 241 Abs. 1 BGB): Der Schuldner muss alles unterlassen, was den Vertragszweck oder den Leistungserfolg gefährdet – etwa die verkaufte Maschine vor der Übergabe nicht unbrauchbar machen. Abgrenzung: Schutzpflichten nach § 241 Abs. 2 BGB schützen das Integritätsinteresse. Die Zuordnung im Einzelfall ist teils umstritten.",
+      "norm": "§ 241 Abs. 1 BGB",
+      "quellen": [
+        "§ 241 BGB",
+        "Themenpool: schuld-438"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-936",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Die Auslegungsmethoden haben keine feste Rangfolge",
+      "falsch": "„Erst wenn der Wortlaut nicht weiterhilft, darf ich auf Systematik und Zweck schauen.“",
+      "richtigText": "Der Wortlaut ist Ausgangspunkt, keine Sperre. Eine gesetzlich festgelegte Rangfolge gibt es nicht; die Methoden werden gemeinsam gewichtet, der Zweck oft besonders stark. Im Strafrecht ist der mögliche Wortsinn die Grenze.",
+      "quellen": [
+        "Themenpool: methodik-936"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:33:17.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
