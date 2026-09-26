@@ -9,11 +9,11 @@ import path from "node:path";
 process.env.IG_PRIVAT_KEY = process.env.IG_PRIVAT_KEY || "test-schluessel-nur-fuer-den-lauf";
 const { CONFIG } = await import("../src/config.mjs");
 const {
-  interaktivGeplant, umfrageBauen, sperreAktiv, sperreSetzen,
+  interaktivGeplant, umfrageBauen, medienStickerGeplant, medienStickerBauen, sperreAktiv, sperreSetzen,
   sitzungLaden, sitzungSichern, interaktivPosten, InteraktivFehler,
 } = await import("../src/interaktiv.mjs");
 
-const AN = { aktiv: true, nutzer: "kontoname", passwort: "geheim", arten: ["frage"], stickerFrage: "Was stimmt?", sperreStunden: 24 };
+const AN = { aktiv: true, nutzer: "kontoname", passwort: "geheim", arten: ["frage"], stickerFrage: "Was stimmt?", teaserMedienSticker: true, sperreStunden: 24 };
 const FRAGE = { art: "frage", optionen: ["A lang", "B lang", "C lang"] };
 const tmpdir = () => fs.mkdtempSync(path.join(os.tmpdir(), "ia-"));
 
@@ -45,6 +45,19 @@ test("Ohne gemessenen Platz wird keine Umfrage geraten", () => {
 test("Höchstens vier Optionen – mehr nimmt der Sticker nicht", () => {
   const viele = { art: "frage", optionen: ["a", "b", "c", "d", "e", "f"] };
   assert.deepEqual(umfrageBauen(viele, { x: 0, y: 0, width: 100, height: 100 }).optionen, ["A", "B", "C", "D"]);
+});
+
+test("Feed-Teaser bekommt nur mit echter Medien-ID einen antippbaren Sticker", () => {
+  const teaser = { art: "teaser" };
+  assert.equal(medienStickerGeplant(teaser, "17900000000000000", AN), true);
+  assert.equal(medienStickerGeplant(teaser, "trocken", AN), false);
+  assert.equal(medienStickerGeplant({ art: "frage" }, "17900000000000000", AN), false);
+  assert.equal(medienStickerGeplant(teaser, "17900000000000000", { ...AN, teaserMedienSticker: false }), false);
+  assert.deepEqual(
+    medienStickerBauen("17900000000000000"),
+    { media_pk: "17900000000000000", x: 0.5, y: 0.79, width: 0.48, height: 0.22 },
+  );
+  assert.throws(() => medienStickerBauen("trocken"), InteraktivFehler);
 });
 
 test("Sperre: gesetzt, wirksam, und danach wieder frei", () => {
