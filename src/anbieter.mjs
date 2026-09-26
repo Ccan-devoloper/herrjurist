@@ -37,6 +37,7 @@
    ========================================================================== */
 
 import Anthropic from "@anthropic-ai/sdk";
+import { providerKostenPruefen } from "./provider-kostensperre.mjs";
 import { CONFIG } from "./config.mjs";
 import { admissionReserveUsd, preisAus, erfassen, erfassenStueck } from "./kosten.mjs";
 import { InvarianteVerletzt } from "./budget.mjs";
@@ -123,6 +124,7 @@ function profilVon({ zweck, provider, modell, params, promptVersion, effort, den
  * genau einen Anbieteraufruf.
  */
 async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, optional, pflichtName, effort, denkmodus, promptVersion, senden, preis, admissionInputTokens = null }) {
+  providerKostenPruefen(zweck);
   if (!kontext?.budget) throw new OhneKontext(zweck);
   if (!kontext?.journal) throw new OhneKostenjournal(zweck);
   const { budget, telemetrie, journal } = kontext;
@@ -340,6 +342,7 @@ export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = 
  * Provider-Endpunkt in derselben zentralen Anbieterdatei.
  */
 export async function openaiBildEditSenden({ form, key, zeitlimitMs = 120000, fetchFn = fetch }) {
+  providerKostenPruefen("Bildbearbeitung");
   const steuerung = new AbortController();
   const wecker = setTimeout(() => steuerung.abort(), zeitlimitMs);
   try {
@@ -365,6 +368,7 @@ export async function openaiBildEditSenden({ form, key, zeitlimitMs = 120000, fe
  * keine Token-, sondern eine Stückgrenze.
  */
 export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null, preisUsd = null, slot = null, optional = true, modell = "gpt-image-1-mini", zeitlimitMs = 120000, url = "https://api.openai.com/v1/images/generations", fetchFn = fetch, kostenAusAntwort = null }) {
+  providerKostenPruefen(zweck);
   if (!kontext?.budget) throw new OhneKontext(zweck);
   if (!kontext?.journal) throw new OhneKostenjournal(zweck);
   const { budget, telemetrie, journal } = kontext;

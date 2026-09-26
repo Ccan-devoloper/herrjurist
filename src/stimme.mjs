@@ -26,6 +26,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync, spawnSync } from "node:child_process";
 import { CONFIG } from "./config.mjs";
+import { providerKostenPruefen, providerKostenSindGesperrt } from "./provider-kostensperre.mjs";
 
 export function ffmpegPfad() {
   return process.env.FFMPEG_PATH || "ffmpeg";
@@ -109,6 +110,7 @@ function istKontingentFehler(fehler) {
 
 /** Restguthaben des Monats in Zeichen; null, wenn es sich nicht ermitteln lässt. */
 export async function kontingentAbfragen({ frisch = false } = {}) {
+  if (providerKostenSindGesperrt()) return null;
   const key = CONFIG.reel.elevenlabsKey;
   if (!key) return null;
   if (!frisch && restCache != null) return restCache;
@@ -166,6 +168,7 @@ export function offlineAnbieter() {
 
 /* Welcher Anbieter läuft? Ohne frische Abfrage – nur nach gemerktem Stand. */
 export function stimmenAnbieter() {
+  if (providerKostenSindGesperrt()) return offlineAnbieter();
   const wunsch = (process.env.IG_STIMME || "").toLowerCase();
   if (wunsch) return wunsch;
   if (CONFIG.reel.elevenlabsKey && !stimmeStand().erschoepft) return "elevenlabs";
@@ -179,6 +182,7 @@ export function stimmenAnbieter() {
  * @param {number} zeichen Länge aller Sprechertexte des Reels
  */
 export async function anbieterFuerText(zeichen = 0) {
+  if (providerKostenSindGesperrt()) return offlineAnbieter();
   const wunsch = (process.env.IG_STIMME || "").toLowerCase();
   if (wunsch) return wunsch;
   if (!CONFIG.reel.elevenlabsKey) return offlineAnbieter();
@@ -222,6 +226,7 @@ function alignmentZuWoertern(alignment, start) {
 }
 
 async function elevenlabs(text, zielDatei, art = "normal", stimmeId = null) {
+  providerKostenPruefen("ElevenLabs-Spracherzeugung");
   const key = CONFIG.reel.elevenlabsKey;
   const id = stimmeId || CONFIG.reel.stimme;
   if (!id) throw new Error("Keine ElevenLabs-Stimme gewählt (ELEVENLABS_VOICE_ID oder state/stimmen.json)");

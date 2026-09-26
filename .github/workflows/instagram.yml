@@ -43,6 +43,10 @@ on:
         type: string
         default: ""
 
+env:
+  # Kostenverbot gilt auch fuer manuelle Hilfsmodi; keine Repository-Variable.
+  IG_PROVIDERKOSTEN_GESPERRT: "true"
+
 permissions:
   contents: write
   actions: write
@@ -144,7 +148,6 @@ jobs:
       - name: Tageslauf
         working-directory: .
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
           IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
@@ -154,9 +157,7 @@ jobs:
           # ohne Belegstelle weiter – kein Beitrag fällt deshalb aus.
           IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           IG_BILD_KI: ${{ vars.IG_BILD_KI }}
           IG_BILD_KI_GUETE: ${{ vars.IG_BILD_KI_GUETE }}
           IG_BILDER_FREISTELLEN: ${{ vars.IG_BILDER_FREISTELLEN }}

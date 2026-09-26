@@ -20,6 +20,7 @@
    ========================================================================== */
 
 import { CONFIG } from "./config.mjs";
+import { providerKostenPruefen } from "./provider-kostensperre.mjs";
 import { punkte } from "./insights.mjs";
 
 const API = "https://api.elevenlabs.io/v1";
@@ -83,6 +84,7 @@ export function stimmeBewerten(v) {
 }
 
 async function api(pfad, opt = {}) {
+  providerKostenPruefen("ElevenLabs-Stimmenbibliothek");
   const res = await fetch(`${API}${pfad}`, { ...opt, headers: { "xi-api-key": CONFIG.reel.elevenlabsKey, ...(opt.body ? { "Content-Type": "application/json" } : {}), ...(opt.headers || {}) } });
   if (!res.ok) throw new Error(`ElevenLabs ${res.status} ${pfad}: ${(await res.text()).slice(0, 200)}`);
   return res.json();
