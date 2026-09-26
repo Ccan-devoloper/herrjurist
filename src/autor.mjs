@@ -652,15 +652,15 @@ function captionNachbereiten(text, format) {
     }
   }
   const ctaRx = /\b(?:schick|sende|teil|weiterleit|speicher)\w*/i;
-  if (!zeilen.some((z) => ctaRx.test(z))) {
-    zeilen.push("Schick das deiner Lerngruppe und speichere es für die Wiederholung.");
-  }
-  /* Eine Hook-Frage in Zeile 1 ist kein Kommentar-CTA. Die letzte Zeile muss
-     ausdrücklich eine beantwortbare Frage sein. */
-  if (!/\?\s*$/.test(zeilen.at(-1) || "")) {
-    zeilen.push(CAPTION_FRAGEN[format] || "Wo würdest du das im Gutachten prüfen?");
-  }
-  return zeilen.slice(0, 7).join("\n");
+  const vorhandeneCta = zeilen.find((z) => ctaRx.test(z)) || null;
+  const vorhandeneAbschlussfrage = /\?\s*$/.test(zeilen.at(-1) || "") ? zeilen.at(-1) : null;
+  /* Maximal fünf Inhaltszeilen reservieren zwei sichere Plätze für CTA +
+     Kommentarfrage. So kann ein langes Modell-Ergebnis die beiden wichtigsten
+     Schlusszeilen nicht wieder aus dem 7-Zeilen-Limit verdrängen. */
+  const body = zeilen.filter((z) => z !== vorhandeneCta && z !== vorhandeneAbschlussfrage).slice(0, 5);
+  const cta = vorhandeneCta || "Schick das deiner Lerngruppe und speichere es für die Wiederholung.";
+  const frage = vorhandeneAbschlussfrage || CAPTION_FRAGEN[format] || "Wo würdest du das im Gutachten prüfen?";
+  return [...body, cta, frage].join("\n");
 }
 
 /* Besten Carousel-Hook wählen. Das gelernte Muster bleibt wichtig, bekommt
