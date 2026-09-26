@@ -6,8 +6,8 @@ Diese Vorlage ist das **redaktionelle Muster** für eine Ausgabe zum veröffentl
 
 1. **Betreff, Preheader und starker Hook:** Eine konkrete Irritation, Klausurfrage oder überraschende Folge aus dieser Woche. Präzise und wahr; keine austauschbare Überschrift und keine Zusage, die der Inhalt nicht einlöst. Der Betreff und Preheader ergänzen einander. Der Hook steht als große Titelzeile.
 2. **LexVerse-Header:** Logo, direkt darunter linksbündig ausschließlich die gelbe Pille `by herrjurist`, Inter-Schrift, dunkles Navy und Akzente in Gelb, Blau, Orange und Grün. Danach die wiederverwendbare intergalaktische Szene mit Mara, Rex, FORM-7, Flux, Zylla und Brakk. HTML für E-Mail-Clients mit Tabellen und Inline-Stilen, maximal 600 px breit.
-3. **Kurze Leseanweisung** und Link zum Instagram-Wochenrückblick.
-4. **Rechtsgebiete als farbige Abschnitte:** je Thema in derselben nachvollziehbaren Reihenfolge wie im Wochenrückblick eine Karte mit Kennzeichnung `1. Staatsexamen` und/oder `2. Staatsexamen`, prägnantem Themen-Hook, kurzem Einstieg, gelb hervorgehobener Einordnung der Prüfungsrelevanz, neuem Minifall, eingerückter Lösungsskizze, typischer Fehlerquelle sowie Links zum jeweiligen Beitrag und zu überprüfbaren Rechtsquellen.
+3. **Kurze Leseanweisung.** Der Wochenrückblick und seine Einzelbeiträge werden im Newsletter weder verlinkt noch mit Vorproduktions-IDs bezeichnet.
+4. **Rechtsgebiete als farbige Abschnitte:** je Thema in derselben nachvollziehbaren Reihenfolge wie im Wochenrückblick eine Karte mit Kennzeichnung `1. Staatsexamen` und/oder `2. Staatsexamen`, prägnantem Themen-Hook, kurzem Einstieg, gelb hervorgehobener Einordnung der Prüfungsrelevanz, neuem Minifall, eingerückter Lösungsskizze, typischer Fehlerquelle sowie Links zu überprüfbaren Rechtsgrundlagen.
 5. **Drei Wiederholungsfragen** und kurzer Abschluss. Die Zahl der Fälle entspricht den Themen des Wochenrückblicks; acht ist nur die Zahl des ersten Beispiels.
 
 ## Didaktischer Maßstab pro Thema
@@ -17,9 +17,9 @@ Diese Vorlage ist das **redaktionelle Muster** für eine Ausgabe zum veröffentl
 - **Minifall:** Neuer Sachverhalt mit konkreter Prüfungsfrage und entscheidenden Tatsachen; keine bloße Wiederholung des Beitrags. Der Fall muss mit den danach genannten Tatsachen lösbar sein.
 - **Lösungsskizze:** Juristische Prüfungsreihenfolge: Frage/Anspruch, Zulässigkeit oder Eröffnung, Voraussetzungen, Subsumtion und Ergebnis in der passenden Ebene. Keine zusätzliche Gliederungsebene allein wegen der Optik. Geschwisterpunkte immer mindestens paarweise: kein `A.` ohne `B.`, kein `I.` ohne `II.`, kein `1.` ohne `2.`; das gilt ebenso für `a)`/`b)` und `aa)`/`bb)`. Ebenen werden um je 22 px eingerückt. Ein bloßes Ergebnis ohne Subsumtion gilt redaktionell nicht als fertige Skizze.
 - **Examensbadge:** Kennzeichnung je Fall, ob erstes, zweites oder beide Staatsexamina; fachlich anhand der Tätigkeit und des Prüfungsstoffs gegenlesen.
-- **Quellen:** Link auf den zugehörigen Instagram-Beitrag und mindestens eine zitierfähige Norm oder Entscheidung; die Quelle muss die konkrete Aussage tatsächlich tragen.
+- **Rechtsgrundlagen:** Mindestens eine zitierfähige Norm oder Entscheidung pro Thema verlinken. Der Wochenrückblick und die Einzelbeiträge dienen beim Schreiben zur Themenauswahl und zum fachlichen Abgleich; ihre IDs und URLs erscheinen nicht im Newsletter.
 
-Formale Prüfungen erkennen fehlende Bausteine, falsche Anzahl/Nummerierung, unpaarige oder übersprungene Gliederungspunkte, fehlende Quellenlinks, fehlende Examensbadges und grob zu kurze/zu lange Inhalte. **Juristische Richtigkeit, Qualität eines Hooks, aktuelle Rechtslage, Subsumtion und tatsächliche Verknüpfung zum Beitrag müssen vor jeder Verwendung redaktionell geprüft werden.**
+Formale Prüfungen erkennen fehlende Bausteine, falsche Anzahl/Nummerierung, unpaarige oder übersprungene Gliederungspunkte, fehlende Quellenreferenzen, fehlende Examensbadges und grob zu kurze/zu lange Inhalte. **Juristische Richtigkeit, Qualität eines Hooks, aktuelle Rechtslage, Subsumtion und tatsächliche Verknüpfung zum Beitrag müssen vor jeder Verwendung redaktionell geprüft werden.**
 
 ## Lokales JSON-Format und Prüfung
 
@@ -36,7 +36,6 @@ Die JSON-Quelldatei enthält unveröffentlichte Inhalte und bleibt **außerhalb 
     "preheader": "[ergänzender Vorschautext]",
     "hook": "[starker Einstieg auf der Titelseite]",
     "deck": "[ein Satz zum Nutzen dieser Woche]",
-    "weekly_post_url": "https://www.instagram.com/p/BEITRAG/",
     "topic_count": 1,
     "quick_check": ["[konkrete Frage 1]", "[konkrete Frage 2]", "[konkrete Frage 3]"]
   },
@@ -59,7 +58,6 @@ Die JSON-Quelldatei enthält unveröffentlichte Inhalte und bleibt **außerhalb 
         { "marker": "B.", "text": "[zweiter Prüfungsschritt mit Ergebnis]" }
       ],
       "trap": "[typische Fehlleistung und richtige Abgrenzung]",
-      "instagram_post_url": "https://www.instagram.com/p/THEMENBEITRAG/",
       "sources": [{ "label": "[Norm oder Entscheidung]", "url": "https://www.gesetze-im-internet.de/..." }]
     }]
   }]
@@ -74,3 +72,5 @@ node bin/wochenbrief-entwurf.mjs /pfad/entwurf.json /pfad/wochenbrief.html
 ```
 
 Die zweite Form schreibt nur eine HTML-Datei. **Betreff und Preheader** stehen im JSON für die spätere manuelle Übernahme nach Kit; das HTML ist nur der Mailkörper. Erst nach inhaltlicher Sichtung den HTML-Körper manuell in einen **Kit-Entwurf** übernehmen. Für die Dashboard-Vorschau wie in `PREVIEW-VERSCHLUESSELUNG.md` beschrieben mit dem öffentlichen Schlüssel verschlüsseln und ausschließlich die `.enc.json` im Asset-Zweig ablegen. Kein automatischer Kit-Abgleich, keine Sendefunktion, keine automatische Veröffentlichung.
+
+Die Zuordnung zu den Vorproduktionsbeiträgen bleibt eine interne Redaktionsaufgabe. Die JSON-Quelldatei für die E-Mail benötigt dazu keine IDs und keine Instagram-URLs; der Renderer gibt solche Angaben auch dann nicht aus, wenn sie in älteren Entwurfsdateien noch vorhanden sind.

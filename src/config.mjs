@@ -392,15 +392,12 @@ export const CONFIG = {
        oder kostenlos von Piper (im Workflow installiert). Siehe stimme.mjs. */
     aktiv: env("IG_REELS", "true") === "true",
     elevenlabsKey: env("ELEVENLABS_API_KEY", ""),
-    stimme: env("ELEVENLABS_VOICE_ID", ""),   // fest eingestellte Stimme; leer = der Bot sucht und lernt selbst
-    /* Flash statt v3: halber Verbrauch je Zeichen. Das kostenlose Monatsguthaben
-       (10.000 Kredite) trägt damit rund 33 Reels – also den ganzen Monat mit
-       einer Stimme, statt Mitte des Monats auf Piper zu wechseln. */
-    modell: env("ELEVENLABS_MODEL", "eleven_flash_v2_5"),
-    /* Stimmenwahl: Der Bot sucht in der ElevenLabs-Bibliothek deutsche
-       Sprecher, probiert drei davon über die Reels aus und behält die, bei der
-       die Zahlen stimmen (stimmen.mjs). ELEVENLABS_VOICE_ID + IG_STIMME_LERNEN=false
-       stellt stattdessen eine feste Stimme ein. */
+    stimme: env("ELEVENLABS_VOICE_ID", "PhufIH7nYh2Up1uej6aY"),   // fest eingestellte Stimme; leer = der Bot sucht und lernt selbst
+    /* Multilingual v2 spricht deutsche Normzahlen zuverlässiger. Das Kontingent
+       wird vor jedem Reel geprüft; bei Bedarf greift der Offline-Anbieter. */
+    modell: env("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
+    /* Moritz Wegner ist als deutsche Erklärstimme voreingestellt. Die
+       Bibliothekssuche lässt sich bei Bedarf explizit aktivieren. */
     /* Deutsch geht vor Natuerlichkeit: Eine englische Stimme liest „§ 294 BGB"
        als „Paragraf 294 bie-dschie-bie" und betont deutsche Woerter falsch.
        Steht keine deutschsprachige Stimme zur Verfuegung - im kostenlosen
@@ -413,7 +410,7 @@ export const CONFIG = {
     layout: env("IG_REEL_LAYOUT", "erklaer"),
     erklaerMarken: Number(env("IG_REEL_MARKEN", "2")),        // Plaketten je Szene
     erklaerBilder: Number(env("IG_REEL_BILDER", "4")),        // hoechstens so viele Motive je Reel neu zeichnen
-    stimmeLernen: env("IG_STIMME_LERNEN", "true") === "true",
+    stimmeLernen: env("IG_STIMME_LERNEN", "false") === "true",
     stimmeAnzahl: Number(env("IG_STIMME_ANZAHL", "3")),          // so viele Kandidaten laufen gegeneinander
     stimmeErkundung: Number(env("IG_STIMME_ERKUNDUNG", "0.4")),  // 0 = nur ausnutzen, größer = mehr ausprobieren
     stimmeMessungen: Number(env("IG_STIMME_MESSUNGEN", "6")),    // so viele gemessene Reels je Stimme, bevor entschieden wird

@@ -10,7 +10,6 @@ function validDraft() {
       preheader: 'Drei Fälle aus dem Wochenrückblick mit Lösungen für deine Klausur.',
       hook: 'Ware geliefert. Kaufpreis offen – was prüfst du?',
       deck: 'Diese Woche übst du am Fall, welche Prüfung in der Klausur zuerst kommt.',
-      weekly_post_url: 'https://www.instagram.com/p/WOCHENRUECKBLICK/',
       topic_count: 1,
       quick_check: ['Welcher Anspruch ist zuerst zu prüfen?', 'Wo prüfst du den Einwand im Aufbau?', 'Wie lautet das Ergebnis für die Beteiligten?'],
     },
@@ -28,7 +27,6 @@ function validDraft() {
           { marker: 'B.', text: 'Anspruch nicht durch Zahlung nach § 362 BGB erloschen' },
         ],
         trap: 'Die Übergabe des Buchs erfüllt nicht zugleich die Kaufpreisschuld des Käufers.',
-        instagram_post_url: 'https://www.instagram.com/p/THEMENBEITRAG/',
         sources: [{ label: '§ 433 BGB', url: 'https://www.gesetze-im-internet.de/bgb/__433.html' }],
       }],
     }],
@@ -55,13 +53,11 @@ test('einsame und übersprungene Ebenen werden auch tief in der Skizze verworfen
   assert.match(pruefeGliederung(solution).join(' '), /folgt 1\./);
 });
 
-test('ein Thema ohne Herkunftsbeitrag oder Rechtsquelle scheitert und HTML wird escaped', () => {
+test('ein Thema ohne Rechtsgrundlage scheitert und HTML wird escaped', () => {
   const draft = validDraft();
-  draft.sections[0].cases[0].instagram_post_url = '';
   draft.sections[0].cases[0].sources = [];
-  assert.match(pruefeWochenbrief(draft).join(' '), /instagram_post_url.*sources/);
+  assert.match(pruefeWochenbrief(draft).join(' '), /sources/);
   assert.throws(() => rendereWochenbrief(draft));
-  draft.sections[0].cases[0].instagram_post_url = 'https://www.instagram.com/p/THEMENBEITRAG/';
   draft.sections[0].cases[0].sources = [{ label: '§ 433 BGB', url: 'https://www.gesetze-im-internet.de/bgb/__433.html' }];
   draft.sections[0].cases[0].headline = 'Erhält K <script>alert(1)</script> seine Fahrtkosten?';
   assert.ok(!rendereWochenbrief(draft).includes('<script>'));
@@ -72,4 +68,16 @@ test('Themenzahl und Entwurfsstatus sind verbindlich', () => {
   draft.issue.topic_count = 8;
   draft.status = 'publish';
   assert.match(pruefeWochenbrief(draft).join(' '), /status muss draft.*8 Themen angekündigt/);
+});
+
+test('Quellenkennungen und Instagram-Links erscheinen nicht im Newsletter', () => {
+  const draft = validDraft();
+  draft.issue.weekly_source_slug = '2026-09-27-b1';
+  draft.sections[0].cases[0].instagram_source_slug = '2026-09-24-b2';
+  draft.issue.weekly_post_url = 'https://www.instagram.com/p/WOCHENRUECKBLICK/';
+  draft.sections[0].cases[0].instagram_post_url = 'https://www.instagram.com/p/THEMENBEITRAG/';
+  assert.deepEqual(pruefeWochenbrief(draft), []);
+  const html = rendereWochenbrief(draft);
+  assert.doesNotMatch(html, /Vorproduktion|2026-09-24-b2|2026-09-27-b1|instagram\.com/);
+  assert.match(html, /Rechtsgrundlagen:.*§ 433 BGB/);
 });
