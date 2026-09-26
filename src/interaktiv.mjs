@@ -65,25 +65,6 @@ export function umfrageBauen(story, platz, { breite = 1080, hoehe = 1920, frage 
   };
 }
 
-/* Feed-Teaser sollen kein totes „Jetzt im Feed“ mehr sein. Wenn der private
-   Zusatzweg verfügbar ist, liegt ein echter antippbarer Feed-Media-Sticker auf
-   der Story. Die Position ist bewusst kompakt im unteren Bereich, damit Titel
-   und Motiv der gerenderten Teaser-Kachel sichtbar bleiben. */
-export function medienStickerGeplant(story, medienId, config = CONFIG.interaktiv) {
-  if (!config.aktiv || !config.teaserMedienSticker) return false;
-  if (!config.nutzer || !config.passwort) return false;
-  if (story?.art !== "teaser") return false;
-  return typeof medienId === "string" && /^[0-9]{5,}$/.test(medienId.trim());
-}
-
-export function medienStickerBauen(medienId, {
-  x = 0.5, y = 0.79, width = 0.48, height = 0.22,
-} = {}) {
-  const mediaPk = String(medienId || "").trim();
-  if (!/^[0-9]{5,}$/.test(mediaPk)) throw new InteraktivFehler("Ungültige Medien-ID für Story-Media-Sticker", "aufbau");
-  return { media_pk: mediaPk, x, y, width, height };
-}
-
 /* --- Sperre nach einer Challenge ----------------------------------------- */
 export const sperreAktiv = (ledger, jetzt = Date.now()) =>
   Boolean(ledger?.interaktivSperreBis && new Date(ledger.interaktivSperreBis).getTime() > jetzt);
@@ -187,7 +168,7 @@ function bruecke(auftrag, opt = {}) {
  *
  * @returns {Promise<string>} Medien-ID der Story
  */
-export async function interaktivPosten({ bildPfad, umfrage = null, medium = null, link = null, stateDir, ledger = {}, log = console.log, python, skript = BRUECKE, nutzer = CONFIG.interaktiv.nutzer, passwort = CONFIG.interaktiv.passwort }) {
+export async function interaktivPosten({ bildPfad, umfrage, link = null, stateDir, ledger = {}, log = console.log, python, skript = BRUECKE, nutzer = CONFIG.interaktiv.nutzer, passwort = CONFIG.interaktiv.passwort }) {
   if (sperreAktiv(ledger)) {
     throw new InteraktivFehler(`Gesperrt bis ${ledger.interaktivSperreBis} (${ledger.interaktivSperreGrund || "ohne Grund"})`, "gesperrt");
   }
@@ -204,7 +185,6 @@ export async function interaktivPosten({ bildPfad, umfrage = null, medium = null
        Anmeldung zu versuchen - das würde nur eine Sperre einbringen. */
     neuanmeldungErlaubt: CONFIG.interaktiv.neuanmeldung,
     umfrage,
-    medium,
     link,
   }, { python, skript });
 
