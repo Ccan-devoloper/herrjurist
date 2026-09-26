@@ -1,0 +1,903 @@
+{
+  "datum": "2027-10-03",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "verwalt-641",
+        "themaTitel": "Anhörung und Heilung",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "sachen-228",
+        "themaTitel": "Wie prüft man den Beseitigungs- und Unterlassungsanspruch?",
+        "fach": "sachen",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:17",
+        "art": "frage",
+        "themaId": "assessorz-580"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:17",
+        "art": "antwort",
+        "themaId": "assessorz-580"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:01",
+        "art": "norm",
+        "themaId": "schuldbt-198"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "fehler",
+        "themaId": "stpo-927"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "tipp",
+        "themaId": "methodik-902"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "zahl",
+        "themaId": "revision-885"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "verwalt-641",
+      "poolTitel": "Anhörung und Heilung",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§§ 28, 45 VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-20"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "sachen-228",
+      "poolTitel": "Wie prüft man den Beseitigungs- und Unterlassungsanspruch?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1004 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-10-12"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-580",
+      "poolTitel": "Anwaltsklausur: Mandantenbegehren und Zweckmäßigkeit",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-23",
+        "2027-03-23",
+        "2027-07-02"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-580",
+      "poolTitel": "Anwaltsklausur: Mandantenbegehren und Zweckmäßigkeit",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-23",
+        "2027-03-23",
+        "2027-07-02"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-198",
+      "poolTitel": "Wie sind Schönheitsreparaturklauseln im Mietrecht zu beurteilen?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 535 BGB",
+        "§ 307 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19",
+        "2027-06-29"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "stpo-927",
+      "poolTitel": "Wie erzwingt der Verletzte die Anklage? Beschwerde und Klageerzwingungsverfahren",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 171 StPO",
+        "§ 172 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-24",
+        "2027-03-28",
+        "2027-08-01"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "methodik-902",
+      "poolTitel": "Schwerpunkte setzen, wenn die Zeit knapp wird",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-22",
+        "2027-07-24",
+        "2027-08-21"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "revision-885",
+      "poolTitel": "Wann beruht ein Urteil auf dem Verfahrensfehler?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 338 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-24",
+        "2027-07-25",
+        "2027-09-19"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-10-03-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen aus vier Bereichen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen aus",
+            "vier Bereichen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 167 ZPO: Für die Verjährung zählt der Eingang, wenn demnächst zugestellt wird.",
+            "Zahlung an Minderjährige: Eigentum am Geld ja, Erfüllung ohne Zustimmung der Eltern nein.",
+            "GmbH-Geschäftsführer: wird wie eine Partei vernommen (§ 455 ZPO), nicht als Zeuge.",
+            "§ 426 BGB: eigener Ausgleichsanspruch und übergegangene Forderung nebeneinander.",
+            "Untermieter ohne Erlaubnis: Herausgabe grundsätzlich an den Hauptmieter (§ 986 I 2 BGB)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Notwehrprovokation: Notwehrlage bleibt, die Gebotenheit wird gestuft eingeschränkt.",
+            "§ 252 StPO: Berechtigtes Schweigen sperrt die frühere Aussage – außer beim Richter.",
+            "Vorzeitiger Erfolg: Nach Versuchsbeginn ist die Tat vollendet (Rspr.).",
+            "§ 239a StGB: stabile Lage, die gerade als Druckmittel dienen soll.",
+            "Neutrale Beihilfe: Das Wissen vom Tatentschluss entscheidet.",
+            "§ 35 StGB: entschuldigt nur – Hinnahmepflicht prüfen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Urteilsverfassungsbeschwerde: nur spezifisches Verfassungsrecht, keine Superrevision.",
+            "Fraktionsausschluss: allenfalls letztes Mittel – das Mandat bleibt.",
+            "Fortsetzungsfeststellungsklage: Feststellungsinteresse über eine Fallgruppe begründen.",
+            "Unbestimmter Rechtsbegriff: volle Kontrolle; Ermessen nur auf Fehler.",
+            "Sofortvollzug: eigene, einzelfallbezogene Begründung nach § 80 III 1 VwGO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Erst alle Daten auf einen Zeitstrahl – dort steckt das Prozessrecht.",
+            "Kopfsache: Der Ruhetag steht fest im Plan, wie jeder Lerntag."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann darf der Minderjährige Geld mit Erfüllungswirkung annehmen?",
+            "Welche vier Einfallstore prüft das BVerfG beim Urteil?",
+            "Warum ist der Richter bei § 252 StPO die Ausnahme?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht über Anspruch und Prozess",
+            "Strafrecht über Schuld und Beteiligung",
+            "Öffentliches Recht über Kontrolle",
+            "Klausurtechnik & Kopfsache"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus Zivilrecht, Strafrecht, Öffentlichem Recht sowie Klausurtechnik & Kopfsache. Von § 167 ZPO über § 252 StPO bis zum Sofortvollzug – je Bereich eine eigene Folie mit Kernsätzen. Geh nur die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst, und mach am Ende den 30-Sekunden-Selbsttest.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [],
+        "kernidee": "Vier getrennte Lernstationen: Zivilrecht, Strafrecht, Öffentliches Recht sowie Klausurtechnik & Kopfsache.",
+        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: vier getrennte Lernstationen für Zivilrecht, Strafrecht, Öffentliches Recht sowie Klausurtechnik & Kopfsache.",
+        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
+        "alternative": null
+      },
+      "bildSzene": "four separate learning stations",
+      "bildSzeneAlt": "four doors in a row",
+      "quellen": [
+        "§ 167 ZPO",
+        "§ 362 BGB",
+        "§ 455 ZPO",
+        "§ 426 BGB",
+        "§ 986 BGB",
+        "§ 32 StGB",
+        "§ 252 StPO",
+        "§ 212 StGB",
+        "§ 239a StGB",
+        "§ 27 StGB",
+        "§ 35 StGB",
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "Art. 38 Abs. 1 S. 2 GG",
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "§ 40 VwVfG",
+        "§ 80 Abs. 3 VwGO",
+        "Themenpool: methodik-905",
+        "Themenpool: mindset-6"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:41:01.684Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-641",
+      "slug": "2027-10-03-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Anhörung: fünf Stationen von der Pflicht bis zur Rettung",
+          "titelZeilen": [
+            "Anhörung: fünf",
+            "Stationen von der",
+            "Pflicht bis zur",
+            "Rettung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Nie mit der Rettung anfangen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Anhörung nach § 28 VwVfG ist der häufigste Verfahrensfehler in der Klausur. Der Aufbau entscheidet: erst klären, ob angehört werden musste und ob es ordnungsgemäß geschah – dann, ob der Fehler geheilt oder unbeachtlich ist."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Anhörungspflicht",
+              "text": "§ 28 Abs. 1 VwVfG: VA, der in Rechte eines Beteiligten eingreift. Beim bloß abgelehnten Antrag ist das umstritten."
+            },
+            {
+              "titel": "2. Keine Ausnahme",
+              "text": "§ 28 Abs. 2 VwVfG, etwa Gefahr im Verzug – Ermessen („kann“), keine Automatik. Zwingend entfällt sie nur nach Abs. 3."
+            },
+            {
+              "titel": "3. Ordnungsgemäß",
+              "text": "Gelegenheit, sich zu allen entscheidungserheblichen Tatsachen zu äußern – vor Erlass des VA."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Heilung",
+              "text": "§ 45 Abs. 1 Nr. 3, Abs. 2 VwVfG: Nachholung bis zum Abschluss der letzten Tatsacheninstanz."
+            },
+            {
+              "titel": "5. Unbeachtlichkeit",
+              "text": "§ 46 VwVfG: Aufhebung ausgeschlossen, wenn der Fehler die Entscheidung offensichtlich nicht beeinflusst hat."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: echte Nachholung",
+          "text": "Heilung setzt voraus, dass die Behörde das Vorbringen des Betroffenen ernsthaft zur Kenntnis nimmt und ihre Entscheidung kritisch überdenkt. Ob schon der Austausch von Schriftsätzen im Prozess genügt, ist umstritten. Bei Ermessensentscheidungen scheitert § 46 VwVfG oft."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Pflicht, Ausnahme, Durchführung – erst dann Heilung (§ 45) und Unbeachtlichkeit (§ 46). Nie mit der Rettung anfangen."
+        },
+        {
+          "art": "cta",
+          "titel": "Anhörung in fünf Stationen",
+          "punkte": [
+            "Pflicht nach § 28 I",
+            "Ausnahme nach § 28 II, III",
+            "Ordnungsgemäß durchgeführt",
+            "Heilung, dann § 46"
+          ],
+          "icons": [
+            "person",
+            "warnung",
+            "haken",
+            "werkzeug"
+          ]
+        }
+      ],
+      "caption": "Anhörung in fünf Stationen: Pflicht nach § 28 Abs. 1 VwVfG, keine Ausnahme nach Abs. 2 oder 3, ordnungsgemäße Durchführung – erst dann Heilung nach § 45 VwVfG und Unbeachtlichkeit nach § 46 VwVfG. Heilung verlangt eine echte Nachholung, bei der die Behörde ihre Entscheidung kritisch überdenkt. Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#anhörung",
+        "#vwvfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anhörung: fünf Stationen bis zur Heilung",
+      "coverText": "Nie mit der Rettung anfangen",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Wer gehört werden muss, wird zuerst gefragt – repariert wird erst danach.",
+        "handlung": "{A} holds a small listening horn toward {B}, who is about to speak, while a toolbox for repairs stands closed in the background, waiting for later.",
+        "hinweisRegie": "Place the note in the free space between the listening horn and the closed toolbox, slightly tilted, so the order from listening to repairing stays visible and no face is covered.",
+        "alternative": "{B} walks along five stepping stones across a pond; the last stone carries a repair kit, and {A} waves from the first."
+      },
+      "bildSzene": "listening horn held toward speaker",
+      "bildSzeneAlt": "five stepping stones across pond",
+      "quellen": [
+        "§ 28 VwVfG",
+        "§ 45 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-641"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-echte-stationen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:41:01.684Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-228",
+      "slug": "2027-10-03-b3",
+      "titelZeilen": [
+        "Sturm wirft den",
+        "Baum rüber – der",
+        "Nachbar räumt nicht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Sturm wirft den Baum rüber – der Nachbar muss nicht räumen",
+          "unter": "Beseitigungsanspruch · § 1004 BGB",
+          "text": "Eigentümer ist nicht automatisch Störer.",
+          "norm": "§ 1004 BGB",
+          "icon": "haus",
+          "sprecher": "Sein Baum liegt bei dir – räumen muss er nicht. Ein Orkan hat die gesunde Eiche des Nachbarn umgeworfen. Du verlangst Beseitigung nach § 1004 BGB. So prüfst du das.",
+          "marken": [
+            "gesunder Baum"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Beeinträchtigung",
+          "text": "Der Stamm auf deinem Grundstück beeinträchtigt dein Eigentum.",
+          "norm": "§ 1004 Abs. 1 BGB",
+          "sprecher": "Schritt eins: die Beeinträchtigung. Der Stamm liegt auf deinem Grundstück und stört dich in der Nutzung. Den Besitz hat dir niemand entzogen, also passt § 1004 und nicht § 985.",
+          "marken": [
+            "Beeinträchtigung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Handlungsstörer?",
+          "text": "Der Nachbar hat nichts getan – der Sturm war es.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Ist der Nachbar Handlungsstörer? Nein. Er hat die Beeinträchtigung nicht durch eigenes Tun oder Unterlassen verursacht. Umgeworfen hat den Baum der Sturm.",
+          "marken": [
+            "kein Tun"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zustandsstörer?",
+          "text": "Eigentum an der Störquelle allein reicht nicht.",
+          "norm": null,
+          "sprecher": "Schritt drei: Ist er Zustandsstörer? Hier liegt der Fehler vieler Lösungen. Eigentum an der Sache, von der die Störung ausgeht, reicht allein nicht. Die Beeinträchtigung muss ihm zurechenbar sein.",
+          "marken": [
+            "Zurechnung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Naturereignis",
+          "text": "Zurechenbar nur bei verletzter Sicherungspflicht.",
+          "norm": null,
+          "sprecher": "Schritt vier: Bei Naturereignissen fragt der BGH, ob der Eigentümer die Störung zu verantworten hat, etwa weil er Sicherungspflichten verletzt hat. Einen gesunden, kontrollierten Baum, den ein Orkan umwirft, rechnet man ihm danach regelmäßig nicht zu.",
+          "marken": [
+            "Sicherungspflicht"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Kranker Baum",
+          "text": "Morsch und nie kontrolliert: Dann ist der Nachbar Störer.",
+          "norm": null,
+          "sprecher": "Anders, wenn der Baum erkennbar morsch war und der Nachbar ihn nie kontrolliert hat. Dann ist er Störer, und bei Verschulden kommt sogar Schadensersatz nach § 823 BGB in Betracht.",
+          "marken": [
+            "morsch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Wurzeln sind anders",
+          "text": "Eindringende Wurzeln: Hier ist der Eigentümer regelmäßig Störer.",
+          "norm": null,
+          "sprecher": "Und zur Abgrenzung: Wachsen die Wurzeln seines Baums in dein Grundstück, sieht der BGH den Eigentümer regelmäßig als Störer. Das Wachstum geht auf seine Pflanzung und Unterhaltung zurück.",
+          "marken": [
+            "Wurzeln"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Störer ist, wem die Störung zurechenbar ist",
+          "text": "Nicht wer Eigentümer ist, sondern wer die Störung zu verantworten hat.",
+          "norm": "§ 1004 BGB",
+          "sprecher": "Merke: Störer ist nicht einfach der Eigentümer, sondern wer die Beeinträchtigung zu verantworten hat. Bei Naturereignissen entscheidet die Sicherungspflicht.",
+          "marken": [
+            "verantworten"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Sachenrechtsklausur speichern",
+          "text": "Speichern für den nächsten Nachbarfall.",
+          "sprecher": "Speicher dir das für deinen nächsten Nachbarfall.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Der Sturm wirft Nachbars Baum in deinen Garten – und der Nachbar muss nicht räumen? Nach § 1004 BGB ist er nur Störer, wenn ihm die Beeinträchtigung zurechenbar ist. Bei Naturereignissen fragt der BGH, ob er Sicherungspflichten verletzt hat. Beim gesunden, kontrollierten Baum regelmäßig nicht – beim morschen schon. Eindringende Wurzeln sind anders zu beurteilen. Speichern für den nächsten Nachbarfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#1004bgb",
+        "#nachbarrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 1004 BGB: Sturmschaden und Störer",
+      "coverText": "Eigentümer ist nicht gleich Störer",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Wer Eigentümer der Störquelle ist, muss nicht automatisch für die Folgen eines Naturereignisses aufkommen.",
+        "handlung": "{A} stands next to a large fallen tree trunk lying across a garden fence after a storm, while {B} examines the healthy, solid wood at the broken base with a small lamp.",
+        "hinweisRegie": "Place the note in the free space above the healthy broken base of the trunk, slightly tilted toward it, so the fallen tree and the fence remain visible and neither face is covered.",
+        "alternative": "{B} points at thick roots slowly pushing under a neighbour's path, while {A} compares them with a tree toppled by wind nearby."
+      },
+      "bildSzene": "storm-felled tree across garden fence",
+      "bildSzeneAlt": "roots pushing under neighbour's path",
+      "quellen": [
+        "§ 1004 BGB",
+        "§ 985 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: sachen-228"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:41:01.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-580",
+      "ueberzeile": "Prüfungsfrage 2. Examen",
+      "titel": "Anwaltsklausur: B hat ein Schuldanerkenntnis unterschrieben. Welcher Klageweg ist zweckmäßig?",
+      "optionen": [
+        "Eine Feststellungsklage",
+        "Eine Stufenklage",
+        "Der Urkundenprozess"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§§ 592 ff. ZPO",
+        "§ 599 ZPO",
+        "§ 708 Nr. 4 ZPO",
+        "Themenpool: assessorz-580"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:41:01.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-580",
+      "ueberzeile": "Auflösung",
+      "titel": "Der Urkundenprozess – schnell zum vollstreckbaren Titel",
+      "text": "Lassen sich alle anspruchsbegründenden Tatsachen durch Urkunden beweisen, ist der Urkundenprozess statthaft (§ 592 ZPO). Einwendungen des Beklagten sind dort nur mit beschränkten Beweismitteln möglich; es ergeht ggf. ein Vorbehaltsurteil (§ 599 ZPO). Es ist ohne Sicherheitsleistung vorläufig vollstreckbar (§ 708 Nr. 4 ZPO).",
+      "norm": "§§ 592, 599, 708 Nr. 4 ZPO",
+      "quellen": [
+        "§§ 592 ff. ZPO",
+        "§ 599 ZPO",
+        "§ 708 Nr. 4 ZPO",
+        "Themenpool: assessorz-580"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:41:01.685Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Eine Feststellungsklage",
+        "Eine Stufenklage",
+        "Der Urkundenprozess"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-198",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 307 Abs. 1 BGB: Quotenabgeltungsklauseln halten nach dem BGH nicht",
+      "text": "Solche Klauseln verpflichten den Mieter, beim Auszug vor Fälligkeit der Schönheitsreparaturen anteilig die Kosten zu tragen. Der BGH hält sie für unwirksam: Bei Vertragsschluss kann der Mieter nicht realistisch abschätzen, was auf ihn zukommt. Ohne wirksame Abwälzung bleibt es bei § 535 Abs. 1 S. 2 BGB – renovieren muss der Vermieter.",
+      "norm": "§ 307 Abs. 1 BGB",
+      "quellen": [
+        "§ 307 BGB",
+        "§ 535 Abs. 1 S. 2 BGB",
+        "Themenpool: schuldbt-198"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:41:01.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-927",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Eingestellt nach § 153 StPO – ab zum OLG?",
+      "falsch": "Die Staatsanwaltschaft stellt das Verfahren wegen Geringfügigkeit nach § 153 Abs. 1 StPO ein. Der Verletzte erzwingt die Anklage im Klageerzwingungsverfahren.",
+      "richtigText": "Das Klageerzwingungsverfahren ist bei Einstellungen nach den Opportunitätsvorschriften, etwa §§ 153 Abs. 1, 153a Abs. 1 StPO, ausgeschlossen – ebenso bei reinen Privatklagedelikten (§ 172 Abs. 2 S. 3 StPO). Es greift vor allem bei Einstellungen nach § 170 Abs. 2 StPO.",
+      "quellen": [
+        "§ 172 Abs. 2 StPO",
+        "§ 153 StPO",
+        "§ 153a StPO",
+        "§ 170 Abs. 2 StPO",
+        "Themenpool: stpo-927"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:41:01.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-902",
+      "ueberzeile": "Klausurtipp Klausurtechnik",
+      "titel": "Zeit läuft ab: Die restlichen Punkte im Urteilsstil – nicht abbrechen",
+      "text": "Bleiben nur noch Minuten, schreib die offenen Prüfungspunkte in je einem Satz im Urteilsstil: Ergebnis plus tragender Grund. Ein kurzes, vollständiges Gutachten zeigt dem Korrektor, dass du den Fall überblickst. Ein Abbruch mitten im Obersatz zeigt nur, dass die Zeit fehlte.",
+      "quellen": [
+        "Themenpool: methodik-902"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:41:01.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-885",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "§ 338 StPO: Bei diesen vier Fehlern fragt niemand nach dem Beruhen",
+      "text": "Absolute Revisionsgründe: Das Beruhen wird grundsätzlich unwiderleglich vermutet. Klausurklassiker:",
+      "punkte": [
+        "Nr. 1: Gericht falsch besetzt – Rügepräklusion beachten",
+        "Nr. 5: notwendige Person abwesend",
+        "Nr. 6: Öffentlichkeit verletzt",
+        "Nr. 7: Urteilsgründe fehlen oder kommen zu spät"
+      ],
+      "quellen": [
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "Themenpool: revision-885"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:41:01.685Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,870 @@
+{
+  "datum": "2027-09-24",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "anklage-857",
+        "themaTitel": "Was steht im abstrakten Anklagesatz?",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "assessoroer-854",
+        "themaTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bgbat-420",
+        "themaTitel": "Zugang elektronischer Erklärungen und Messenger",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:06",
+        "art": "frage",
+        "themaId": "vwgo-668"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:06",
+        "art": "antwort",
+        "themaId": "vwgo-668"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:50",
+        "art": "norm",
+        "themaId": "famerb-045"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "merksatz",
+        "themaId": "methodik-904"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:46",
+        "art": "begriff",
+        "themaId": "zpo-572"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "fehler",
+        "themaId": "assessorz-920"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "anklage-857",
+      "poolTitel": "Was steht im abstrakten Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-28",
+        "2027-07-01",
+        "2027-09-03"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "assessoroer-854",
+      "poolTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-01",
+        "2027-08-27",
+        "2027-08-27"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-420",
+      "poolTitel": "Zugang elektronischer Erklärungen und Messenger",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-05-14",
+        "2027-05-14"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-668",
+      "poolTitel": "Einstweilige Anordnung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-09",
+        "2027-04-09",
+        "2027-06-18"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-668",
+      "poolTitel": "Einstweilige Anordnung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-09",
+        "2027-04-09",
+        "2027-06-18"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-045",
+      "poolTitel": "Müssen Kinder im Haushalt helfen?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1619 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-10",
+        "2026-09-12",
+        "2026-12-24"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "methodik-904",
+      "poolTitel": "Normenketten bilden statt Einzelnormen lernen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-27",
+        "2027-07-24",
+        "2027-07-26"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "zpo-572",
+      "poolTitel": "Forderungspfändung und Pfändungs-/Überweisungsbeschluss",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 829 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-15",
+        "2027-07-21",
+        "2027-07-21"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "assessorz-920",
+      "poolTitel": "Verteidigung gegen Arrest und einstweilige Verfügung: Widerspruch, Aufhebung, Schadensersatz",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 924 ZPO",
+        "§§ 926, 927 ZPO",
+        "§ 945 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-20",
+        "2027-05-22",
+        "2027-07-23"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-857",
+      "slug": "2027-09-24-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nichts gezahlt – und trotzdem Betrug im Anklagesatz",
+          "titelZeilen": [
+            "Nichts gezahlt –",
+            "und trotzdem Betrug",
+            "im Anklagesatz"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "„versucht zu haben“ gehört hinein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A bietet im Internet ein Smartphone für 600 € an, das er gar nicht besitzt. Er will nur das Geld kassieren. Käufer K wird misstrauisch und zahlt nicht. Die Staatsanwaltschaft erhebt Anklage. Wie lautet der abstrakte Anklagesatz?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "1. Tat bestimmen",
+              "text": "A hat getäuscht, K hat aber weder geirrt noch verfügt. Der Betrug ist nicht vollendet, aber versucht (§ 263 Abs. 2 StGB)."
+            },
+            {
+              "titel": "2. Gesetzesworte statt Fakten",
+              "text": "Der abstrakte Anklagesatz gibt die gesetzlichen Merkmale der Tat wieder (§ 200 Abs. 1 S. 1 StPO) – ohne Namen, Summen oder Plattform."
+            },
+            {
+              "titel": "3. Versuch sichtbar machen",
+              "text": "Schon im abstrakten Satz steht, dass die Tat nur versucht wurde: „… versucht zu haben, …“."
+            },
+            {
+              "titel": "4. Bezeichnung und Vorschriften",
+              "text": "Es folgen die rechtliche Bezeichnung als versuchter Betrug und die angewendeten Vorschriften einschließlich §§ 22, 23 Abs. 1 StGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Etwa: A wird angeklagt, versucht zu haben, in der Absicht, sich einen rechtswidrigen Vermögensvorteil zu verschaffen, das Vermögen eines anderen durch Vorspiegelung falscher Tatsachen zu beschädigen – strafbar als versuchter Betrug gemäß §§ 263 Abs. 1, 2, 22, 23 Abs. 1 StGB."
+        },
+        {
+          "art": "text",
+          "titel": "Worauf du achten musst",
+          "text": "Die Einzelheiten – Angebot, Käufer K, 600 € – gehören erst in den konkreten Anklagesatz. Die genaue Formulierung unterscheidet sich je nach Land und Ausbildungspraxis. Entscheidend ist: Tatbestand, Versuch und Vorschriften müssen vollständig und stimmig sein."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Versuch gehört schon in den abstrakten Anklagesatz: „versucht zu haben“ – und §§ 22, 23 StGB in die Vorschriftenliste."
+        },
+        {
+          "art": "cta",
+          "titel": "Abstrakter Anklagesatz beim Versuch",
+          "punkte": [
+            "Vollendet oder nur versucht?",
+            "Gesetzesworte, keine Fakten",
+            "Versuch und §§ 22, 23 StGB zeigen"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Nichts gezahlt – und trotzdem steht Betrug im Anklagesatz, nämlich als Versuch. Täuscht A, ohne dass K irrt und zahlt, bleibt es beim versuchten Betrug. Das muss schon der abstrakte Anklagesatz zeigen („versucht zu haben“), und §§ 22, 23 Abs. 1 StGB gehören in die Vorschriftenliste. Die Einzelheiten folgen im konkreten Anklagesatz. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#anklageschrift",
+        "#stpo",
+        "#betrug",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Versuchter Betrug im abstrakten Anklagesatz",
+      "coverText": "„versucht zu haben“ gehört hinein",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Auch wenn der Betrug scheitert, wird angeklagt – der abstrakte Anklagesatz muss den Versuch ausweisen.",
+        "handlung": "{B} holds out an empty display box toward {A}, who keeps a coin pouch firmly closed and steps back with a suspicious look.",
+        "hinweisRegie": "Place the note in the free space between the empty box and the closed pouch, slightly tilted toward the pouch, keeping both hands and faces fully visible.",
+        "alternative": "{A} files a single form into a transparent folder while {B} points at an unfinished bridge that stops halfway across a gap."
+      },
+      "bildSzene": "empty box offered, pouch kept closed",
+      "bildSzeneAlt": "unfinished bridge over a gap",
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "§ 263 StGB",
+        "§ 22 StGB",
+        "§ 23 Abs. 1 StGB",
+        "Themenpool: anklage-857"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "versuch-uebersehen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:40:34.218Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-854",
+      "slug": "2027-09-24-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Eilantrag des Nachbarn: vier Bausteine",
+          "titelZeilen": [
+            "Eilantrag des",
+            "Nachbarn:",
+            "vier Bausteine"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "§ 80a statt § 123 VwGO",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Behörde erteilt B eine Baugenehmigung für ein Mehrfamilienhaus an der Grenze zu N. N hat – je nach Landesrecht – Widerspruch eingelegt oder Anfechtungsklage erhoben. B baut trotzdem. Du entwirfst als Anwalt von N den Eilantrag. Was gehört in die Antragsschrift?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die vier Bausteine",
+          "schritte": [
+            {
+              "titel": "1. Rubrum",
+              "text": "Antragsteller N, Antragsgegner (Rechtsträger oder – je nach Landesrecht – Behörde). Die Beiladung des Bauherrn B regst du an."
+            },
+            {
+              "titel": "2. Antrag",
+              "text": "Die aufschiebende Wirkung des Rechtsbehelfs gegen die Baugenehmigung anzuordnen (§§ 80a Abs. 3, 80 Abs. 5 S. 1 VwGO)."
+            },
+            {
+              "titel": "3. Zulässigkeit",
+              "text": "Statthaft, da keine aufschiebende Wirkung (§ 212a Abs. 1 BauGB). Antragsbefugt: mögliche Verletzung drittschützender Normen."
+            },
+            {
+              "titel": "4. Begründetheit",
+              "text": "Abwägung nach Erfolgsaussichten: Verletzt die Genehmigung voraussichtlich nachbarschützende Normen, überwiegt Ns Aussetzungsinteresse."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Typischer Fehler",
+          "text": "Weil schon gebaut wird, beantragt N eine einstweilige Anordnung nach § 123 VwGO. Sie ist ausgeschlossen, soweit §§ 80, 80a VwGO greifen (§ 123 Abs. 5 VwGO). Sicherungsmaßnahmen wie einen Baustopp kann das Gericht im Verfahren nach § 80a Abs. 3 VwGO selbst treffen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nachbar gegen Baugenehmigung: Antrag nach §§ 80a Abs. 3, 80 Abs. 5 VwGO auf Anordnung der aufschiebenden Wirkung – nicht § 123 VwGO."
+        },
+        {
+          "art": "cta",
+          "titel": "Nachbar-Eilantrag entwerfen",
+          "punkte": [
+            "Rubrum mit Beiladung des Bauherrn",
+            "Antrag: aufschiebende Wirkung anordnen",
+            "Drittschutz in den Mittelpunkt"
+          ],
+          "icons": [
+            "ordner",
+            "dokument",
+            "haus"
+          ]
+        }
+      ],
+      "caption": "Eilantrag des Nachbarn gegen eine Baugenehmigung: vier Bausteine. Rubrum mit Beiladung des Bauherrn, Antrag auf Anordnung der aufschiebenden Wirkung nach §§ 80a Abs. 3, 80 Abs. 5 VwGO, Zulässigkeit mit § 212a BauGB und Drittschutz, Begründetheit als Abwägung nach Erfolgsaussichten. § 123 VwGO ist daneben gesperrt. Speichern für die nächste Assessorklausur im Öffentlichen Recht.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#baurecht",
+        "#eilverfahren",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nachbar-Eilantrag: vier Bausteine",
+      "coverText": "§ 80a statt § 123 VwGO",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Der Nachbar stoppt einen Bau im Eilverfahren über § 80a VwGO – mit einer sauber gebauten Antragsschrift.",
+        "handlung": "{A} raises a flat palm toward a crane lifting a wall element next to a fence, while {B} stacks four building blocks into a small neat tower.",
+        "hinweisRegie": "Place the note in the free space above the four stacked blocks, slightly tilted toward the crane, so the fence, the raised palm and both faces stay visible.",
+        "alternative": "{B} hands {A} a four-part folding screen that {A} sets up at the property line to halt a digging machine."
+      },
+      "bildSzene": "palm raised to crane, four blocks",
+      "bildSzeneAlt": "folding screen halting digger",
+      "quellen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 80a Abs. 1, 3 VwGO",
+        "§ 123 Abs. 5 VwGO",
+        "§ 212a Abs. 1 BauGB",
+        "Themenpool: assessoroer-854"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-bausteine",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:40:34.218Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-420",
+      "slug": "2027-09-24-b3",
+      "titelZeilen": [
+        "Ungelesen –",
+        "und trotzdem",
+        "zugegangen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ungelesen – und trotzdem zugegangen",
+          "unter": "Zugang · § 130 BGB",
+          "text": "Zugang heißt nicht Kenntnisnahme – es kommt auf die Möglichkeit an.",
+          "norm": "§ 130 Abs. 1 S. 1 BGB",
+          "icon": "telefon",
+          "sprecher": "Die Nachricht wurde nie gelesen. Trotzdem ist sie zugegangen. Denn für den Zugang nach § 130 BGB zählt nicht, ob der Empfänger liest, sondern ob er lesen konnte.",
+          "marken": [
+            "ungelesen",
+            "zugegangen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Abgabe",
+          "text": "Der Erklärende schickt die Nachricht willentlich an den Empfänger ab.",
+          "norm": null,
+          "sprecher": "Schritt eins: die Abgabe. Der Erklärende hat die Nachricht willentlich in Richtung Empfänger auf den Weg gebracht, also abgeschickt.",
+          "marken": [
+            "abgeschickt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Machtbereich",
+          "text": "Die Nachricht liegt auf dem Gerät oder Konto des Empfängers.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Machtbereich. Die Nachricht ist auf dem Gerät oder im Konto des Empfängers angekommen. Ob er die App öffnet, ist seine Sache.",
+          "marken": [
+            "angekommen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Kenntnis zu erwarten",
+          "text": "Unter normalen Umständen ist mit dem Lesen zu rechnen.",
+          "norm": null,
+          "sprecher": "Schritt drei: Unter gewöhnlichen Umständen ist mit Kenntnisnahme zu rechnen. Bei Privatleuten nicht mitten in der Nacht, bei Unternehmen zu den üblichen Geschäftszeiten.",
+          "marken": [
+            "gewöhnliche Umstände"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Kanal eröffnet",
+          "text": "Der Empfänger nutzt den Kanal für Erklärungen dieser Art.",
+          "norm": null,
+          "sprecher": "Schritt vier: Nach verbreiteter Ansicht muss der Empfänger den Kanal für solche Erklärungen eröffnet haben, etwa weil ihr darüber schon Geschäftliches besprochen habt.",
+          "marken": [
+            "Kanal offen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Zugang ersetzt keine Form",
+          "text": "Mietkündigung per Messenger: zugegangen, aber formunwirksam.",
+          "norm": "§ 568 Abs. 1 BGB",
+          "sprecher": "Achtung: Zugang ersetzt keine Form. Eine Kündigung des Wohnraummietvertrags braucht die Schriftform nach § 568 BGB. Per Messenger geht sie zwar zu, ist aber formunwirksam.",
+          "marken": [
+            "Form fehlt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Zugang: Machtbereich plus Möglichkeit der Kenntnisnahme. Lesen ist egal.",
+          "norm": "§ 130 Abs. 1 S. 1 BGB",
+          "sprecher": "Merke: Zugegangen ist die Erklärung, wenn sie im Machtbereich des Empfängers ist und er unter normalen Umständen Kenntnis nehmen kann. Ob er wirklich liest, spielt keine Rolle.",
+          "marken": [
+            "Lesen egal"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die BGB-AT-Klausur speichern",
+          "text": "Speichern für die nächste Zugangsprüfung.",
+          "sprecher": "Speicher dir das für deine nächste Klausur im BGB AT.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Ungelesen – und trotzdem zugegangen. Für den Zugang nach § 130 BGB zählt, ob die Nachricht in den Machtbereich des Empfängers gelangt ist und er unter gewöhnlichen Umständen Kenntnis nehmen konnte. Ob er wirklich liest, ist egal. Aber: Zugang ersetzt keine Form – eine Wohnraumkündigung per Messenger scheitert an § 568 BGB. Speichern für die nächste BGB-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#130bgb",
+        "#willenserklärung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zugang: Lesen ist nicht nötig",
+      "coverText": "Möglichkeit der Kenntnis genügt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Eine Nachricht geht zu, sobald sie ankommt und gelesen werden könnte – ob sie gelesen wird, ist egal.",
+        "handlung": "{A} slides a glowing message capsule into {B}'s mailbox tube, while {B} sits nearby with arms crossed and deliberately looks away.",
+        "hinweisRegie": "Place the note in the free space above the mailbox tube, slightly tilted toward the arriving capsule, keeping {B}'s averted face and the capsule visible.",
+        "alternative": "{B} sleeps next to a small device that lights up with an incoming message while {A} stands at the door with a clock showing morning."
+      },
+      "bildSzene": "message capsule, recipient looks away",
+      "bildSzeneAlt": "device lights up beside sleeper",
+      "quellen": [
+        "§ 130 Abs. 1 BGB",
+        "§ 568 Abs. 1 BGB",
+        "§ 126 BGB",
+        "Themenpool: bgbat-420"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kenntnis-irrelevant",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:40:34.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-668",
+      "ueberzeile": "Prüfungsfrage Verwaltungsprozessrecht",
+      "titel": "A beantragt beim Verwaltungsgericht eine einstweilige Anordnung. Wie macht er seine Tatsachen glaubhaft?",
+      "optionen": [
+        "Mit präsenten Beweismitteln, auch per eidesstattlicher Versicherung",
+        "Nur mit Urkunden im Original",
+        "Gar nicht – das Gericht ermittelt von Amts wegen"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 123 Abs. 3 VwGO",
+        "§ 920 Abs. 2 ZPO",
+        "§ 294 ZPO",
+        "Themenpool: vwgo-668"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:40:34.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-668",
+      "ueberzeile": "Auflösung",
+      "titel": "Mit präsenten Beweismitteln – auch per Versicherung an Eides statt",
+      "text": "§ 123 Abs. 3 VwGO verweist auf § 920 Abs. 2 ZPO: Anordnungsanspruch und -grund sind glaubhaft zu machen. Nach § 294 ZPO sind alle Beweismittel zulässig, die sofort verfügbar sind, einschließlich der eidesstattlichen Versicherung. Es genügt überwiegende Wahrscheinlichkeit. Die Amtsermittlung ersetzt den Vortrag nicht.",
+      "norm": "§ 294 ZPO",
+      "quellen": [
+        "§ 123 Abs. 3 VwGO",
+        "§ 920 Abs. 2 ZPO",
+        "§ 294 ZPO",
+        "Themenpool: vwgo-668"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:40:34.219Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit präsenten Beweismitteln, auch per eidesstattlicher Versicherung",
+        "Nur mit Urkunden im Original",
+        "Gar nicht – das Gericht ermittelt von Amts wegen"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-045",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1619 BGB: Das Kind im Elternhaus schuldet Mithilfe – auch volljährig",
+      "text": "Solange das Kind dem elterlichen Hausstand angehört und von den Eltern erzogen oder unterhalten wird, muss es in Haushalt und Geschäft der Eltern mithelfen – so, wie es seinen Kräften und seiner Lebensstellung entspricht. Klausurrelevant ist die Folge: Wird das Kind getötet oder verletzt, können die Eltern Ersatz für entgangene Dienste verlangen (§ 845 BGB).",
+      "norm": "§ 1619 BGB",
+      "quellen": [
+        "§ 1619 BGB",
+        "§ 845 BGB",
+        "Themenpool: famerb-045"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:40:34.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-904",
+      "ueberzeile": "Merksatz Klausurtechnik",
+      "titel": "Lerne die Kette, nicht das Glied",
+      "text": "Rücktritt wegen Mangels ist nicht „§ 437“, sondern eine Kette: §§ 437 Nr. 2, 440, 323 BGB für das Recht, § 346 BGB für die Folgen. Wer die Kette kennt, findet jede Voraussetzung.",
+      "norm": null,
+      "quellen": [
+        "§ 437 BGB",
+        "§ 323 BGB",
+        "§ 346 BGB",
+        "Themenpool: methodik-904"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:40:34.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-572",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Pfändungs- und Überweisungsbeschluss",
+      "text": "Beschluss des Vollstreckungsgerichts, der eine Geldforderung des Schuldners pfändet und dem Gläubiger überweist. Der Drittschuldner darf nicht mehr an den Schuldner zahlen, der Schuldner nicht verfügen (§ 829 Abs. 1 ZPO). Wirksam mit Zustellung an den Drittschuldner (§ 829 Abs. 3 ZPO). Die Überweisung zur Einziehung lässt den Gläubiger einziehen (§ 835 ZPO).",
+      "norm": "§§ 829, 835 ZPO",
+      "quellen": [
+        "§ 829 ZPO",
+        "§ 835 ZPO",
+        "Themenpool: zpo-572"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:40:34.220Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-920",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Einstweilige Verfügung durch Beschluss: Der Gegner legt Widerspruch ein",
+      "falsch": "Gegen die ohne mündliche Verhandlung erlassene einstweilige Verfügung legt der Antragsgegner sofortige Beschwerde ein.",
+      "richtigText": "Statthaft ist der Widerspruch (§§ 924, 936 ZPO); über ihn wird nach mündlicher Verhandlung durch Endurteil entschieden (§ 925 ZPO). Daneben: Anordnung der Klageerhebung (§ 926 ZPO), Aufhebung wegen veränderter Umstände (§ 927 ZPO), später Schadensersatz nach § 945 ZPO. Die sofortige Beschwerde ist das Mittel des Antragstellers gegen die Zurückweisung.",
+      "quellen": [
+        "§ 924 ZPO",
+        "§ 925 ZPO",
+        "§ 926 ZPO",
+        "§ 927 ZPO",
+        "§ 936 ZPO",
+        "§ 945 ZPO",
+        "Themenpool: assessorz-920"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:40:34.220Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

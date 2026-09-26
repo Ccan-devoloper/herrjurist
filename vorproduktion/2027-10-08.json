@@ -1,0 +1,866 @@
+{
+  "datum": "2027-10-08",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "zpo-550",
+        "themaTitel": "Bestimmtheit des Klageantrags",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-719",
+        "themaTitel": "Vorsatzformen: Absicht, direkter Vorsatz, Eventualvorsatz",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-635",
+        "themaTitel": "Konkrete Normenkontrolle",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "strafat-724"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "strafat-724"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:01",
+        "art": "norm",
+        "themaId": "sachen-239"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:26",
+        "art": "merksatz",
+        "themaId": "delikt-034"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:47",
+        "art": "begriff",
+        "themaId": "schuld-454"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "fehler",
+        "themaId": "zwangsv-827"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "zpo-550",
+      "poolTitel": "Bestimmtheit des Klageantrags",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 II Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-17",
+        "2027-09-25",
+        "2027-09-25"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-719",
+      "poolTitel": "Vorsatzformen: Absicht, direkter Vorsatz, Eventualvorsatz",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-17",
+        "2027-07-10",
+        "2027-10-06"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-635",
+      "poolTitel": "Konkrete Normenkontrolle",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 I GG; §§ 80 ff. BVerfGG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-04-29",
+        "2027-08-19",
+        "2027-08-19"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-724",
+      "poolTitel": "Notwehr: Erforderlichkeit und Gebotenheit",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 32 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-01",
+        "2027-06-15",
+        "2027-06-15"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-724",
+      "poolTitel": "Notwehr: Erforderlichkeit und Gebotenheit",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 32 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-01",
+        "2027-06-15",
+        "2027-06-15"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-239",
+      "poolTitel": "Wann kollidieren Sicherungsübereignung und verlängerter Eigentumsvorbehalt?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 398 BGB",
+        "§ 138 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-01",
+        "2027-07-05",
+        "2027-08-09"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "delikt-034",
+      "poolTitel": "Trifft Fahrradfahrer ein Mitverschulden bei fehlendem Helm?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 254 BGB",
+        "§ 823 Abs. 1 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-24"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "schuld-454",
+      "poolTitel": "Gesamtschuld und Innenausgleich",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 421 ff., 426 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-03",
+        "2027-04-03",
+        "2027-09-30"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "zwangsv-827",
+      "poolTitel": "Was präkludiert § 767 Abs. 2 ZPO?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 767 Abs. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-03",
+        "2027-06-05",
+        "2027-08-06"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-550",
+      "slug": "2027-10-08-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schmerzensgeld ohne feste Summe – und der Antrag ist bestimmt",
+          "titelZeilen": [
+            "Schmerzensgeld",
+            "ohne feste Summe –",
+            "und der Antrag",
+            "ist bestimmt"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Größenordnung muss sein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "K wird bei einem Unfall schwer verletzt. Er verklagt B auf „ein angemessenes Schmerzensgeld, dessen Höhe in das Ermessen des Gerichts gestellt wird“. Verletzungen und Behandlung schildert er genau, einen Betrag nennt er nirgends. Ist der Antrag bestimmt genug?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "1. Grundsatz",
+              "text": "§ 253 Abs. 2 Nr. 2 ZPO verlangt einen bestimmten Antrag. Wer Geld will, muss grundsätzlich beziffern."
+            },
+            {
+              "titel": "2. Ausnahme",
+              "text": "Hängt die Höhe vom Ermessen des Gerichts ab – wie beim Schmerzensgeld (§ 287 ZPO) –, lässt die Rspr. einen unbezifferten Antrag zu."
+            },
+            {
+              "titel": "3. Bedingung",
+              "text": "K muss die tatsächlichen Grundlagen darlegen und eine Größenordnung angeben, in der Praxis einen Mindestbetrag."
+            },
+            {
+              "titel": "4. Zweck",
+              "text": "Die Größenordnung klärt Zuständigkeit und Kostenrisiko – und später, ob K durch das Urteil beschwert ist."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Ohne jede Größenordnung ist der Antrag nach der Rspr. zu unbestimmt; das Gericht muss K darauf hinweisen (§ 139 ZPO). Ergänzt K „mindestens 8.000 Euro“, ist die Klage zulässig. Spricht das Gericht diesen Betrag oder mehr zu, ist K nicht beschwert."
+        },
+        {
+          "art": "text",
+          "titel": "Formulierung für die Praxis",
+          "text": "„Der Beklagte wird verurteilt, an den Kläger ein angemessenes Schmerzensgeld, dessen Höhe in das Ermessen des Gerichts gestellt wird, mindestens jedoch 8.000 Euro, nebst Zinsen … zu zahlen.“"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schmerzensgeld darf unbeziffert eingeklagt werden – aber nie ohne Größenordnung."
+        },
+        {
+          "art": "cta",
+          "titel": "Unbezifferter Antrag in drei Schritten",
+          "punkte": [
+            "Ermessen des Gerichts bei der Höhe?",
+            "Tatsachen vollständig vorgetragen?",
+            "Mindestbetrag genannt?"
+          ],
+          "icons": [
+            "waage",
+            "dokument",
+            "banknote"
+          ]
+        }
+      ],
+      "caption": "Schmerzensgeld ohne feste Summe einklagen – geht das mit § 253 Abs. 2 Nr. 2 ZPO? Ja, wenn die Höhe im Ermessen des Gerichts steht. Die Rspr. verlangt aber, dass der Kläger die Grundlagen vorträgt und eine Größenordnung nennt, praktisch einen Mindestbetrag. Der klärt Zuständigkeit, Kostenrisiko und die spätere Beschwer. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#253zpo",
+        "#schmerzensgeld",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unbezifferter Antrag: nur mit Mindestbetrag",
+      "coverText": "Größenordnung muss sein",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Ein Schmerzensgeldantrag darf die Höhe offenlassen, braucht aber eine untere Grenze.",
+        "handlung": "{A} hands over an open envelope with a blank amount line, and {B} hovers beside it and draws a single bold line at the bottom of a measuring scale.",
+        "hinweisRegie": "Place the note in the free space next to the bold bottom line of the measuring scale, slightly tilted toward it, so the blank envelope and the line remain clearly visible.",
+        "alternative": "{B} opens a gauge with a free upper range, while {A} fixes a small marker at the minimum mark."
+      },
+      "bildSzene": "blank envelope, minimum line on scale",
+      "bildSzeneAlt": "gauge with marker at minimum",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 287 ZPO",
+        "§ 139 ZPO",
+        "§ 253 Abs. 2 BGB",
+        "Themenpool: zpo-550"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:39:38.086Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-719",
+      "slug": "2027-10-08-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vortat nur für möglich gehalten: Strafvereitelung trotzdem?",
+          "titelZeilen": [
+            "Vortat nur für",
+            "möglich gehalten:",
+            "Strafvereitelung",
+            "trotzdem?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Absicht nur beim Vereiteln",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "T deutet A gegenüber an, er habe „vielleicht was“ mit dem Einbruch bei O zu tun. A hält das für möglich. Er gibt T bei der Polizei ein falsches Alibi – gerade damit T nicht bestraft wird. Die Ermittlungen gegen den tatsächlich schuldigen T verzögern sich deshalb erheblich. § 258 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Grundsatz",
+              "text": "Nach § 15 StGB genügt jeder Vorsatz, also auch Eventualvorsatz – soweit das Gesetz nichts anderes verlangt."
+            },
+            {
+              "titel": "2. Die Ausnahme",
+              "text": "§ 258 Abs. 1 StGB verlangt für das Vereiteln Absicht oder Wissentlichkeit."
+            },
+            {
+              "titel": "3. Die Vortat",
+              "text": "Für die Vortat bleibt es beim Grundsatz: Dass T sie begangen hat, muss A nur für möglich halten und in Kauf nehmen."
+            },
+            {
+              "titel": "4. Subsumtion",
+              "text": "A will gerade, dass T nicht bestraft wird: Absicht. Eine erhebliche Verzögerung genügt als teilweises Vereiteln."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Denkweg hakt",
+          "text": "Das „absichtlich oder wissentlich“ in § 258 StGB wird oft auf den ganzen Tatbestand übertragen. Eine gesteigerte Vorsatzform gilt aber nur für das Merkmal, bei dem sie steht. Für alle übrigen Merkmale reicht dolus eventualis."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "A hat die Strafvereitelung verwirklicht: bedingter Vorsatz bezüglich der Vortat, Absicht bezüglich des Vereitelns. Er ist nach § 258 Abs. 1 StGB strafbar, das Angehörigenprivileg des Abs. 6 greift für den Freund nicht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vorsatz wird für jedes Merkmal einzeln bestimmt: Die strenge Form gilt nur dort, wo das Gesetz sie verlangt."
+        },
+        {
+          "art": "cta",
+          "titel": "Vorsatz Merkmal für Merkmal",
+          "punkte": [
+            "Verlangt die Norm eine besondere Form?",
+            "Für welches Merkmal genau?",
+            "Für den Rest: Eventualvorsatz"
+          ],
+          "icons": [
+            "lupe",
+            "zielscheibe",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "A hält die Vortat nur für möglich – kann er trotzdem wegen Strafvereitelung strafbar sein? Ja. § 258 Abs. 1 StGB verlangt Absicht oder Wissentlichkeit nur für das Vereiteln. Für die Vortat genügt nach § 15 StGB bedingter Vorsatz. Eine gesteigerte Vorsatzform gilt immer nur für das Merkmal, bei dem sie steht. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#vorsatz",
+        "#258stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorsatzformen bei der Strafvereitelung",
+      "coverText": "Absicht nur beim Vereiteln",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Jedes Tatbestandsmerkmal hat seine eigene Vorsatzform.",
+        "handlung": "{A} deliberately slides a false signpost into the ground to send a pursuer the wrong way, while {B} beside her squints uncertainly at a blurry figure fleeing in the distance.",
+        "hinweisRegie": "Place the note in the free space between the false signpost and the blurry fleeing figure, slightly tilted toward the signpost, so both elements remain visible.",
+        "alternative": "{B} holds two filters in front of two separate lamps, one sharp and one foggy, while {A} compares them."
+      },
+      "bildSzene": "false signpost, blurry fleeing figure",
+      "bildSzeneAlt": "sharp and foggy filters compared",
+      "quellen": [
+        "§ 258 StGB",
+        "§ 15 StGB",
+        "Themenpool: strafat-719"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:39:38.086Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-635",
+      "slug": "2027-10-08-b3",
+      "titelZeilen": [
+        "Nur Zweifel? Dann",
+        "keine Vorlage",
+        "nach Art. 100 GG"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nur Zweifel? Dann keine Vorlage nach Art. 100 GG",
+          "unter": "Konkrete Normenkontrolle · Art. 100 Abs. 1 GG",
+          "text": "Vorgelegt wird nur, wenn das Gericht von der Verfassungswidrigkeit überzeugt ist.",
+          "norm": "Art. 100 Abs. 1 GG",
+          "icon": "gericht",
+          "sprecher": "Das Gericht zweifelt am Gesetz und darf trotzdem nicht vorlegen. Für die konkrete Normenkontrolle reichen Zweifel nicht. So prüfst du die Vorlage.",
+          "marken": [
+            "Zweifel ≠ Überzeugung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vorlageberechtigt",
+          "text": "Jedes staatliche Gericht, gleich welcher Instanz.",
+          "norm": "Art. 100 Abs. 1 GG",
+          "sprecher": "Schritt eins: Vorlegen darf jedes staatliche Gericht, vom Amtsgericht bis zum Bundesgerichtshof. Behörden können nicht vorlegen.",
+          "marken": [
+            "Gericht, nicht Behörde"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vorlagegegenstand",
+          "text": "Formelles, nachkonstitutionelles Gesetz. Verordnungen prüft das Gericht selbst.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Gegenstand. Vorgelegt werden nur formelle Gesetze, die nach dem Grundgesetz erlassen wurden. Eine Rechtsverordnung prüft das Fachgericht selbst und wendet sie im Zweifel nicht an.",
+          "marken": [
+            "formelles Gesetz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Überzeugung",
+          "text": "Bloße Zweifel reichen nicht. Vorher verfassungskonforme Auslegung versuchen.",
+          "norm": null,
+          "sprecher": "Schritt drei, der Knackpunkt: Das Gericht muss von der Verfassungswidrigkeit überzeugt sein. Zweifel genügen nicht. Und lässt sich das Gesetz verfassungskonform auslegen, muss das Gericht diesen Weg gehen.",
+          "marken": [
+            "überzeugt?",
+            "Auslegung zuerst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Entscheidungserheblichkeit",
+          "text": "Bei Gültigkeit anders entscheiden als bei Ungültigkeit.",
+          "norm": null,
+          "sprecher": "Schritt vier: Entscheidungserheblichkeit. Das Gericht müsste bei Gültigkeit des Gesetzes anders entscheiden als bei seiner Ungültigkeit.",
+          "marken": [
+            "käme es darauf an?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "An wen geht die Vorlage?",
+          "text": "Verstoß gegen das GG: BVerfG. Landesgesetz gegen Landesverfassung: Landesverfassungsgericht.",
+          "norm": "Art. 100 Abs. 1 GG",
+          "sprecher": "Und wohin? Bei einem Verstoß gegen das Grundgesetz an das Bundesverfassungsgericht. Verletzt ein Landesgesetz nur die Landesverfassung, entscheidet das Landesverfassungsgericht.",
+          "marken": [
+            "BVerfG oder Land"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Das Verwerfungsmonopol",
+          "text": "Nur das Verfassungsgericht darf ein Parlamentsgesetz verwerfen – aber nur auf überzeugte Vorlage.",
+          "norm": "§§ 80 ff. BVerfGG",
+          "sprecher": "Merke: Ein Parlamentsgesetz darf nur das Verfassungsgericht verwerfen. Das Fachgericht legt vor, wenn es überzeugt ist, und sonst wendet es das Gesetz an.",
+          "marken": [
+            "Verwerfungsmonopol"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Staatsrechtsklausur speichern",
+          "text": "Speichern für die nächste Normenkontrolle.",
+          "sprecher": "Speicher dir das für deine nächste Klausur zur Normenkontrolle.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Das Gericht zweifelt am Gesetz – und darf trotzdem nicht vorlegen. Art. 100 Abs. 1 GG verlangt, dass das Gericht von der Verfassungswidrigkeit überzeugt ist; vorher muss es eine verfassungskonforme Auslegung versuchen. Dazu kommen ein formelles, nachkonstitutionelles Gesetz und die Entscheidungserheblichkeit. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#normenkontrolle",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 100 GG: Überzeugung statt Zweifel",
+      "coverText": "Erst verfassungskonform auslegen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Ein Fachgericht legt ein Gesetz erst vor, wenn es von dessen Verfassungswidrigkeit überzeugt ist.",
+        "handlung": "{A} hesitates with a heavy sealed parcel at the edge of a slide leading down to a distant tower, while {B} first tries to bend a crooked metal bar straight with both hands.",
+        "hinweisRegie": "Place the note in the free space between the parcel and the metal bar being bent, slightly tilted toward the bar, so the slide and both characters stay fully visible.",
+        "alternative": "{B} holds a magnifying glass over a cracked stone while {A} waits beside a mail chute with an unsent letter."
+      },
+      "bildSzene": "parcel at slide, bar being straightened",
+      "bildSzeneAlt": "magnifier over cracked stone, chute",
+      "quellen": [
+        "Art. 100 Abs. 1 GG",
+        "§§ 80 ff. BVerfGG",
+        "Themenpool: staat-635"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:39:38.087Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-724",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "O flieht mit zwei Äpfeln aus dem Garten des A. Nur ein Schuss könnte ihn stoppen. Darf A schießen?",
+      "optionen": [
+        "Ja – Notwehr kennt keine Güterabwägung",
+        "Nein – bei krassem Missverhältnis nicht geboten",
+        "Ja, wenn er vorher einen Warnschuss abgibt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 32 StGB",
+        "Themenpool: strafat-724"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:39:38.087Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-724",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – für zwei Äpfel ist der Schuss nicht geboten",
+      "text": "Der Angriff aufs Eigentum dauert während der Flucht mit der Beute an, und der Schuss wäre das einzige sichere Mittel – also erforderlich. § 32 StGB verlangt aber auch, dass die Verteidigung geboten ist. Bei einem unerträglichen Missverhältnis – Bagatelle gegen Lebensgefahr – ist das Notwehrrecht eingeschränkt. A muss O ziehen lassen.",
+      "norm": "§ 32 StGB",
+      "quellen": [
+        "§ 32 StGB",
+        "Themenpool: strafat-724"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:39:38.087Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – Notwehr kennt keine Güterabwägung",
+        "Nein – bei krassem Missverhältnis nicht geboten",
+        "Ja, wenn er vorher einen Warnschuss abgibt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-239",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 185 BGB: Die Weiterverkaufsermächtigung deckt keine Sicherungsübereignung",
+      "text": "Beim verlängerten Eigentumsvorbehalt darf der Käufer die Ware im ordnungsgemäßen Geschäftsverkehr weiterveräußern – der Lieferant hat eingewilligt (§ 185 Abs. 1 BGB). Eine Sicherungsübereignung an die eigene Bank gehört nicht dazu: Sie dient der Kreditsicherung, nicht dem Absatz. Ob die Bank trotzdem erwirbt, entscheiden dann die Regeln über den gutgläubigen Erwerb.",
+      "norm": "§ 185 Abs. 1 BGB",
+      "quellen": [
+        "§ 185 BGB",
+        "§ 930 BGB",
+        "Themenpool: sachen-239"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:39:38.087Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-034",
+      "ueberzeile": "Merksatz Deliktsrecht",
+      "titel": "Mitverschulden braucht keine Pflicht – aber einen Maßstab",
+      "text": "§ 254 BGB meint Verschulden gegen sich selbst. Beim Fahrradhelm fragt der BGH, ob Helmtragen zur Unfallzeit dem allgemeinen Verkehrsbewusstsein entsprach – nicht, ob es Pflicht war.",
+      "norm": "§ 254 Abs. 1 BGB",
+      "quellen": [
+        "§ 254 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: delikt-034"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:39:38.087Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-454",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Gesamtschuld: Nur wer auf gleicher Stufe haftet",
+      "text": "Gesamtschuldner schulden eine Leistung so, dass jeder das Ganze leisten muss, der Gläubiger sie aber nur einmal verlangen kann (§ 421 BGB). Die Rspr. verlangt zusätzlich gleichstufige Verpflichtungen. Daran fehlt es bei Bürge und Hauptschuldner: Der Bürge haftet nur hilfsweise – zahlt er, geht die Forderung auf ihn über (§ 774 BGB).",
+      "norm": "§ 421 BGB",
+      "quellen": [
+        "§ 421 BGB",
+        "§ 426 BGB",
+        "§ 774 BGB",
+        "Themenpool: schuld-454"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:39:38.087Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-827",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Das Urteil ist inhaltlich falsch – also Vollstreckungsabwehrklage?",
+      "falsch": "Das Gericht hat die Forderung zu Unrecht zugesprochen. Also erhebe ich Vollstreckungsabwehrklage und trage alles noch einmal vor.",
+      "richtigText": "§ 767 ZPO korrigiert keine Fehlurteile. Der Schuldner kann nur Einwendungen gegen den titulierten Anspruch erheben, und nach § 767 Abs. 2 ZPO nur solche, deren Gründe nach Schluss der letzten mündlichen Tatsachenverhandlung entstanden sind – etwa eine spätere Zahlung. Gegen ein falsches Urteil helfen Rechtsmittel oder Einspruch.",
+      "quellen": [
+        "§ 767 ZPO",
+        "Themenpool: zwangsv-827"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:39:38.087Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
