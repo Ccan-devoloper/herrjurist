@@ -1,0 +1,910 @@
+{
+  "datum": "2027-09-27",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-295",
+        "themaTitel": "Was ist die Notwehrprovokation?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "staat-634",
+        "themaTitel": "Urteilsverfassungsbeschwerde und spezifisches Verfassungsrecht",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-051",
+        "themaTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "schuldbt-472"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "schuldbt-472"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "verwalt-393"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "tipp",
+        "themaId": "ipr-894"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "zahl",
+        "themaId": "anklage-859"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:25",
+        "art": "streitstand",
+        "themaId": "verwalt-931"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-295",
+      "poolTitel": "Was ist die Notwehrprovokation?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 32 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2026-12-13",
+        "2027-03-11"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "staat-634",
+      "poolTitel": "Urteilsverfassungsbeschwerde und spezifisches Verfassungsrecht",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 I Nr. 4a GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-051",
+      "poolTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-04-04",
+        "2027-06-06",
+        "2027-08-08"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-472",
+      "poolTitel": "Reparierbarkeit als objektives Beschaffenheitsmerkmal seit 31.07.2026",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 434 Abs. 3 Satz 2 BGB",
+        "Art. 229 § 72 EGBGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-21",
+        "2027-07-18",
+        "2027-09-22"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-472",
+      "poolTitel": "Reparierbarkeit als objektives Beschaffenheitsmerkmal seit 31.07.2026",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 434 Abs. 3 Satz 2 BGB",
+        "Art. 229 § 72 EGBGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-21",
+        "2027-07-18",
+        "2027-09-22"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-393",
+      "poolTitel": "Was ist ein enteignungsgleicher Eingriff?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-11",
+        "2027-05-10",
+        "2027-07-10"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "ipr-894",
+      "poolTitel": "Wie schützt das IPR Verbraucher und Arbeitnehmer?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 6 Rom I-VO",
+        "Art. 8 Rom I-VO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-04",
+        "2027-01-10",
+        "2027-05-30"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "anklage-859",
+      "poolTitel": "Wie bildet man die Normenkette der Anklage?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 52 StGB",
+        "§ 53 StGB",
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-16",
+        "2027-04-25",
+        "2027-06-21"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "verwalt-931",
+      "poolTitel": "Besorgnis der Befangenheit im Verwaltungsverfahren: §§ 20, 21 VwVfG",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 20 VwVfG",
+        "§ 21 VwVfG",
+        "§ 46 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-23",
+        "2027-05-24",
+        "2027-07-27"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-295",
+      "slug": "2027-09-27-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "A beleidigt B, B schlägt zu: Darf A sofort das Messer ziehen?",
+          "titelZeilen": [
+            "A beleidigt B,",
+            "B schlägt zu: Darf",
+            "A sofort das",
+            "Messer ziehen?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Provokation wirkt bei der Gebotenheit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A beschimpft B vor dessen Freunden grob. B geht daraufhin mit Fäusten auf A los. A könnte ausweichen und den Raum verlassen, zieht aber sofort ein Klappmesser und sticht B in den Arm. Ist A nach § 32 StGB gerechtfertigt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Notwehrlage",
+              "text": "Bs Faustangriff ist gegenwärtig und rechtswidrig. Dass A ihn provoziert hat, ändert daran nichts."
+            },
+            {
+              "titel": "2. Erforderlichkeit",
+              "text": "Geeignet und das mildeste gleich wirksame Mittel? Ausweichen ist hier kein Verteidigungsmittel – die Frage stellt sich erst später."
+            },
+            {
+              "titel": "3. Gebotenheit",
+              "text": "Hier sitzt das Problem: A hat den Angriff durch rechtswidriges, vorwerfbares Vorverhalten (Beleidigung) herausgefordert."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Nach der Rspr. muss A erst ausweichen, dann sich auf Schutzwehr beschränken. Der sofortige Stich ist nicht geboten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Denkweg hakt",
+          "text": "Viele verneinen schon die Notwehrlage, weil A „selbst schuld“ sei. Der provozierte Angriff bleibt aber rechtswidrig. Die Provokation wirkt erst bei der Gebotenheit – und schränkt das Notwehrrecht dort nur ein, statt es zu streichen."
+        },
+        {
+          "art": "text",
+          "titel": "Zwei Arten der Provokation",
+          "punkte": [
+            "Absichtsprovokation: Angriff gewollt, um B „in Notwehr“ zu verletzen – nach h.M. grundsätzlich keine Notwehr",
+            "Sonst vorwerfbares Vorverhalten: ausweichen, dann Schutzwehr, Trutzwehr nur als letztes Mittel"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Provokation streicht nicht die Notwehrlage, sondern beschränkt die Gebotenheit: erst ausweichen, dann schützen, zuletzt zurückschlagen."
+        },
+        {
+          "art": "cta",
+          "titel": "Notwehr nach Provokation",
+          "punkte": [
+            "Notwehrlage bleibt bestehen",
+            "Erforderlichkeit normal prüfen",
+            "Gebotenheit: Art der Provokation",
+            "Dreistufig einschränken"
+          ],
+          "icons": [
+            "blitz",
+            "waage",
+            "warnung",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "A beleidigt B, B schlägt zu – darf A sofort das Messer ziehen? Die Notwehrlage bleibt trotz Provokation bestehen, denn Bs Angriff ist rechtswidrig. Das Problem liegt bei der Gebotenheit: Nach vorwerfbarem Vorverhalten muss A erst ausweichen und sich dann auf Schutzwehr beschränken. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#notwehr",
+        "#32stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Notwehr nach Beleidigung: erst ausweichen",
+      "coverText": "Provokation wirkt bei der Gebotenheit",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Wer den Angriff selbst herausgefordert hat, darf sich wehren – aber zuerst muss er ausweichen.",
+        "handlung": "{B} charges forward with raised fists while {A} stands next to an open side door and, instead of fighting, steps half a pace toward the exit with one hand raised defensively.",
+        "hinweisRegie": "Place the note in the free space near the open side door, slightly tilted toward it, so the escape route stays the visual focus and neither the raised fists nor the faces are covered.",
+        "alternative": "{A} holds up a small round shield in front of the charging {B}, while a sharp tool lies untouched on a crate beside {A}."
+      },
+      "bildSzene": "charging figure, other steps toward exit",
+      "bildSzeneAlt": "shield raised, sharp tool untouched",
+      "quellen": [
+        "§ 32 StGB",
+        "Themenpool: strafat-295"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:30:15.547Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-634",
+      "slug": "2027-09-27-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Urteilsverfassungsbeschwerde: Das BVerfG prüft nur vier Einfallstore",
+          "titelZeilen": [
+            "Urteils-",
+            "verfassungs-",
+            "beschwerde: nur",
+            "vier Einfallstore"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Keine Superrevision",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Mit der Verfassungsbeschwerde gegen ein Urteil (Art. 93 Abs. 1 Nr. 4a GG) wird nicht die einfache Rechtsanwendung nachkontrolliert. Das BVerfG ist keine Superrevisionsinstanz – es prüft nur die Verletzung spezifischen Verfassungsrechts."
+        },
+        {
+          "art": "schritte",
+          "titel": "Zulässigkeit in Kürze",
+          "schritte": [
+            {
+              "titel": "1. Beschwerdegegenstand",
+              "text": "Letztinstanzliches Urteil als Akt öffentlicher Gewalt; oft zusammen mit den Vorinstanzen angegriffen."
+            },
+            {
+              "titel": "2. Beschwerdebefugnis",
+              "text": "Möglichkeit einer Grundrechtsverletzung; selbst, gegenwärtig, unmittelbar betroffen."
+            },
+            {
+              "titel": "3. Rechtsweg und Subsidiarität",
+              "text": "Rechtsweg erschöpft (§ 90 Abs. 2 BVerfGG), alle prozessualen Möglichkeiten genutzt, etwa die Anhörungsrüge."
+            },
+            {
+              "titel": "4. Frist",
+              "text": "Ein Monat ab Zustellung oder Bekanntgabe der vollständigen Entscheidung (§ 93 Abs. 1 BVerfGG)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Begründetheit: die Einfallstore",
+          "schritte": [
+            {
+              "titel": "1. Grundrecht grundsätzlich verkannt",
+              "text": "Das Gericht übersieht Bedeutung und Tragweite eines Grundrechts, etwa bei der Abwägung (Heck’sche Formel)."
+            },
+            {
+              "titel": "2. Verfassungswidrige Norm",
+              "text": "Das Urteil stützt sich auf ein Gesetz, das selbst gegen das Grundgesetz verstößt."
+            },
+            {
+              "titel": "3. Willkür",
+              "text": "Die Auslegung ist unter keinem denkbaren Aspekt mehr vertretbar (Art. 3 Abs. 1 GG)."
+            },
+            {
+              "titel": "4. Grenzen der Rechtsfortbildung",
+              "text": "Das Gericht setzt sich an die Stelle des Gesetzgebers (Art. 20 Abs. 3 GG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Die Grenze ist fließend: Je intensiver der Grundrechtseingriff, desto genauer schaut das BVerfG auch auf die Auslegung im Einzelnen. In der Klausur sagst du ausdrücklich, welches Einfallstor du prüfst – und warum der Fehler mehr ist als eine bloß falsche Anwendung einfachen Rechts."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Falsch entschieden reicht nicht: Gefragt ist, ob das Gericht gerade Verfassungsrecht verletzt hat."
+        },
+        {
+          "art": "cta",
+          "titel": "Spezifisches Verfassungsrecht prüfen",
+          "punkte": [
+            "Grundrecht verkannt?",
+            "Norm verfassungswidrig?",
+            "Willkür?",
+            "Rechtsfortbildung überdehnt?"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf",
+            "waage",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Das BVerfG ist keine Superrevisionsinstanz. Bei der Urteilsverfassungsbeschwerde prüft es nur spezifisches Verfassungsrecht: ein grundsätzlich verkanntes Grundrecht, eine verfassungswidrige Norm, Willkür oder überdehnte Rechtsfortbildung. Davor stehen Rechtswegerschöpfung, Subsidiarität und die Monatsfrist. Speichern für die nächste Verfassungsbeschwerde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsbeschwerde",
+        "#bverfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Urteilsverfassungsbeschwerde: vier Einfallstore",
+      "coverText": "Keine Superrevision",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Das Verfassungsgericht schaut nur durch wenige, genau definierte Tore auf ein Urteil.",
+        "handlung": "{A} taps with a pointer on one of four small hatches in a tall wall, while {B} hovers beside it holding a thick bundle of papers that clearly does not fit through the narrow opening.",
+        "hinweisRegie": "Place the note in the free space above the four hatches, slightly tilted, so the narrow openings and the oversized bundle remain fully visible and the characters' faces stay clear.",
+        "alternative": "{B} sorts a pile of cards into four slim slots on a machine, while {A} points at the many cards that stay on the table."
+      },
+      "bildSzene": "pointer on four hatches in wall",
+      "bildSzeneAlt": "cards sorted into four slots",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 90 Abs. 2 BVerfGG",
+        "§ 93 Abs. 1 BVerfGG",
+        "Art. 3 Abs. 1 GG",
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-634"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:30:15.547Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-051",
+      "slug": "2027-09-27-b3",
+      "titelZeilen": [
+        "Am 30.12. einge-",
+        "reicht, im Januar",
+        "zugestellt"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Am 30.12. eingereicht, im Januar zugestellt – nicht verjährt",
+          "unter": "Rückwirkung · § 167 ZPO",
+          "text": "Rechtshängig erst mit Zustellung – die Verjährung ist trotzdem gehemmt.",
+          "norm": "§ 167 ZPO",
+          "icon": "kalender",
+          "sprecher": "Zugestellt im Januar – und trotzdem nicht verjährt. Die Klage ging am 30. Dezember bei Gericht ein, die Verjährung lief am 31. ab. So löst du den Fall.",
+          "marken": [
+            "30.12. eingereicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Anhängig mit Eingang",
+          "text": "Die Klage ist anhängig, sobald sie bei Gericht eingeht.",
+          "norm": null,
+          "sprecher": "Schritt eins: Anhängig ist die Klage schon mit dem Eingang bei Gericht. Das hilft für die Verjährung aber noch nicht.",
+          "marken": [
+            "Eingang"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Rechtshängig mit Zustellung",
+          "text": "Erhoben ist die Klage erst mit Zustellung an den Beklagten.",
+          "norm": "§§ 253 Abs. 1, 261 Abs. 1 ZPO",
+          "sprecher": "Schritt zwei: Erhoben und damit rechtshängig ist die Klage erst mit der Zustellung an den Beklagten. Und die Hemmung nach § 204 BGB knüpft an die Erhebung an.",
+          "marken": [
+            "Zustellung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rückwirkung nach § 167 ZPO",
+          "text": "Zustellung „demnächst“: Die Wirkung tritt schon mit Eingang ein.",
+          "norm": "§ 167 ZPO",
+          "sprecher": "Schritt drei: Paragraf 167 ZPO. Soll die Zustellung eine Frist wahren oder die Verjährung hemmen, wirkt sie auf den Eingang zurück – wenn sie demnächst erfolgt.",
+          "marken": [
+            "demnächst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Was „demnächst“ heißt",
+          "text": "Gerichtsinterne Verzögerungen schaden nicht, eigene schon.",
+          "norm": null,
+          "sprecher": "Schritt vier: Was heißt demnächst? Verzögerungen im Gerichtsbetrieb gehen nicht zulasten des Klägers. Verzögert er selbst mehr als nur geringfügig, etwa weil er den Kostenvorschuss liegen lässt, entfällt die Rückwirkung.",
+          "marken": [
+            "Kostenvorschuss"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Nicht für alles",
+          "text": "Prozesszinsen laufen erst ab echter Rechtshängigkeit.",
+          "norm": "§ 291 BGB",
+          "sprecher": "Achtung: Die Rückwirkung gilt nur für Fristen und Verjährung. Prozesszinsen nach § 291 BGB laufen erst ab der tatsächlichen Rechtshängigkeit.",
+          "marken": [
+            "nur Fristen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Eingang zählt – wenn zügig zugestellt wird",
+          "text": "Anhängig mit Eingang, rechtshängig mit Zustellung, Rückwirkung nach § 167 ZPO.",
+          "norm": "§ 167 ZPO",
+          "sprecher": "Merke: Anhängig mit Eingang, rechtshängig mit Zustellung. Für die Verjährung zählt der Eingang, wenn demnächst zugestellt wird.",
+          "marken": [
+            "Eingang zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Verjährungsklausur speichern",
+          "text": "Speichern für den nächsten Fristfall.",
+          "sprecher": "Speicher dir das für deinen nächsten Fristfall im Zivilprozess.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Am 30.12. eingereicht, im Januar zugestellt – und trotzdem nicht verjährt. Rechtshängig wird die Klage zwar erst mit Zustellung (§§ 253 Abs. 1, 261 Abs. 1 ZPO). Nach § 167 ZPO wirkt die Zustellung für Verjährung und Fristen aber auf den Eingang zurück, wenn sie demnächst erfolgt. Speichern für den nächsten Fristfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#rechtshängigkeit",
+        "#verjährung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 167 ZPO: Eingang zählt für die Verjährung",
+      "coverText": "Rückwirkung bei Zustellung „demnächst“",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Die spätere Zustellung wirkt auf den Tag zurück, an dem die Klage einging.",
+        "handlung": "{A} drops a sealed letter into a slot just before a large clock strikes midnight, while {B} delivers the same letter days later to a door and a glowing line connects both moments.",
+        "hinweisRegie": "Place the note in the free space along the glowing line between the letter slot and the door, slightly tilted, so both moments stay visible and nothing covers the clock or the faces.",
+        "alternative": "{B} plants a flag on a hill at dusk, and {A} later lights it at night, yet the flag's shadow still falls where the sun was."
+      },
+      "bildSzene": "letter posted before midnight, delivered later",
+      "bildSzeneAlt": "flag planted at dusk, lit later",
+      "quellen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 Abs. 1 ZPO",
+        "§ 167 ZPO",
+        "§ 204 Abs. 1 Nr. 1 BGB",
+        "§ 291 BGB",
+        "Themenpool: zpo-051"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:30:15.549Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-472",
+      "ueberzeile": "Prüfungsfrage Kaufrecht",
+      "titel": "Kaufvertrag nach dem 31.07.2026, zur Reparierbarkeit steht nichts im Vertrag: Wo prüfst du sie?",
+      "optionen": [
+        "Nur als subjektive Anforderung – ohne Vereinbarung keine Rolle",
+        "Bei den objektiven Anforderungen des § 434 Abs. 3 BGB",
+        "Gar nicht – das betrifft nur den Hersteller"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 434 Abs. 3 BGB",
+        "Art. 229 § 72 EGBGB",
+        "Themenpool: schuldbt-472"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:30:15.549Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-472",
+      "ueberzeile": "Auflösung",
+      "titel": "Bei den objektiven Anforderungen – auch ohne Vereinbarung",
+      "text": "Seit der Neuregelung zählt die Reparierbarkeit zur üblichen Beschaffenheit, die der Käufer bei Sachen gleicher Art erwarten kann (§ 434 Abs. 3 BGB). Du prüfst sie also auch, wenn der Vertrag schweigt. Achte vorher auf das Übergangsrecht (Art. 229 § 72 EGBGB) und darauf, ob wirksam etwas anderes vereinbart wurde.",
+      "norm": "§ 434 Abs. 3 BGB",
+      "quellen": [
+        "§ 434 Abs. 3 BGB",
+        "Art. 229 § 72 EGBGB",
+        "Themenpool: schuldbt-472"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:30:15.549Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur als subjektive Anforderung – ohne Vereinbarung keine Rolle",
+        "Bei den objektiven Anforderungen des § 434 Abs. 3 BGB",
+        "Gar nicht – das betrifft nur den Hersteller"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-393",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 14 GG: Für ein verfassungswidriges Parlamentsgesetz gibt es keinen enteignungsgleichen Eingriff",
+      "text": "Der BGH lehnt eine Haftung für „legislatives Unrecht“ über den enteignungsgleichen Eingriff ab: Über Ansprüche, die den Haushalt in unabsehbarem Umfang belasten, soll der Gesetzgeber selbst entscheiden. Das betrifft formelle Gesetze. Bei untergesetzlichen Normen und bei Vollzugsakten kann es anders liegen – dort bleibt der Anspruch denkbar.",
+      "norm": "Art. 14 GG",
+      "quellen": [
+        "Art. 14 GG",
+        "Themenpool: verwalt-393"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:30:15.549Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-894",
+      "ueberzeile": "Klausurtipp IPR",
+      "titel": "Rechtswahl gegenüber einem Verbraucher: nicht verwerfen, sondern vergleichen",
+      "text": "Eine Rechtswahl ist auch im Verbrauchervertrag zulässig (Art. 6 Abs. 2 Rom I-VO). Sie darf dem Verbraucher aber nicht den Schutz der zwingenden Vorschriften seines Aufenthaltsstaats nehmen. Also: gewähltes Recht anwenden und für die konkrete Frage prüfen, ob das Aufenthaltsrecht günstiger ist. Für Arbeitsverträge gilt das Gleiche nach Art. 8 Abs. 1 Rom I-VO.",
+      "quellen": [
+        "Art. 6 Abs. 2 Rom I-VO",
+        "Art. 8 Abs. 1 Rom I-VO",
+        "Themenpool: ipr-894"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:30:15.549Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-859",
+      "ueberzeile": "4 Punkte Anklage",
+      "titel": "Die Vorschriftenkette: vier Bausteine, die Konkurrenzen stehen hinten",
+      "text": "Eine verbreitete Reihenfolge in der Liste der anzuwendenden Vorschriften – regionale Gepflogenheiten können abweichen:",
+      "punkte": [
+        "Tatbestände des BT, Grunddelikt vor Qualifikation",
+        "AT-Vorschriften: Versuch, Täterschaft, Teilnahme",
+        "Konkurrenzen: §§ 52, 53 StGB",
+        "Rechtsfolgenvorschriften, etwa §§ 69, 69a StGB"
+      ],
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "§ 52 StGB",
+        "§ 53 StGB",
+        "Themenpool: anklage-859"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:30:15.549Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-931",
+      "ueberzeile": "Streitstand Verwaltungsrecht AT",
+      "titel": "Die Behörde entscheidet über ihr eigenes Vorhaben: Ist sie „befangen“?",
+      "norm": "§§ 20, 21 VwVfG",
+      "optionen": [
+        "Überwiegend (Rspr.): §§ 20, 21 VwVfG knüpfen an Personen an; eine institutionelle Befangenheit der Behörde als solche erfassen sie nicht.",
+        "Andere Ansicht: Das Neutralitätsgebot verlangt dann zumindest eine organisatorische und personelle Trennung innerhalb der Behörde."
+      ],
+      "text": "Klausur: Prüfe zuerst, ob ein einzelner Amtsträger nach § 20 VwVfG ausgeschlossen ist oder § 21 VwVfG greift. Die Identität von Behörde und Vorhabenträger allein macht den VA nach überwiegender Ansicht nicht fehlerhaft. Wer der Gegenansicht folgt, prüft danach § 46 VwVfG.",
+      "quellen": [
+        "§ 20 VwVfG",
+        "§ 21 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-931"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:30:15.549Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

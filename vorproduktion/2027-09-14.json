@@ -1,0 +1,884 @@
+{
+  "datum": "2027-09-14",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "bgbat-002",
+        "themaTitel": "Wie erfolgt die Abgrenzung zwischen Vertrag und Gefälligkeit?",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "strafat-733",
+        "themaTitel": "Sukzessive Mittäterschaft/Beihilfe",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-632",
+        "themaTitel": "Verfassungsbeschwerde: Beschwerdebefugnis",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:17",
+        "art": "frage",
+        "themaId": "stpo-346"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:17",
+        "art": "antwort",
+        "themaId": "stpo-346"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "famerb-047"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "zahl",
+        "themaId": "ipr-890"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:54",
+        "art": "streitstand",
+        "themaId": "bgbat-911"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "merksatz",
+        "themaId": "schuldbt-026"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "bgbat-002",
+      "poolTitel": "Wie erfolgt die Abgrenzung zwischen Vertrag und Gefälligkeit?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 145 BGB",
+        "§ 241 Abs. 1 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-19",
+        "2027-04-30",
+        "2027-08-31"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "strafat-733",
+      "poolTitel": "Sukzessive Mittäterschaft/Beihilfe",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 25 II, 27 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-18",
+        "2027-05-31"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-632",
+      "poolTitel": "Verfassungsbeschwerde: Beschwerdebefugnis",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 90 BVerfGG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-05",
+        "2027-06-08",
+        "2027-06-08"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-346",
+      "poolTitel": "Welche Rechte hat der Beschuldigte bei der Vernehmung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136 StPO",
+        "§ 163a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-16",
+        "2027-03-16",
+        "2027-06-29"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-346",
+      "poolTitel": "Welche Rechte hat der Beschuldigte bei der Vernehmung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136 StPO",
+        "§ 163a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-16",
+        "2027-03-16",
+        "2027-06-29"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-047",
+      "poolTitel": "Worin unterscheiden sich Vor- und Nacherbe von Erbe und Vermächtnisnehmer?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 2100 BGB",
+        "§ 1939 BGB",
+        "§ 2174 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-09",
+        "2027-04-22"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "ipr-890",
+      "poolTitel": "Welches Recht gilt für einen Vertrag ohne Rechtswahl?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 3 Rom I-VO",
+        "Art. 4 Rom I-VO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-16",
+        "2027-05-31",
+        "2027-07-04"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "bgbat-911",
+      "poolTitel": "Bindet eine abhandengekommene Willenserklärung, die ohne Willen in den Verkehr gelangt?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB",
+        "§ 122 BGB analog",
+        "§ 172 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-11",
+        "2027-05-10",
+        "2027-07-13"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "schuldbt-026",
+      "poolTitel": "Ist Vertragspartner des Anwalts stets der Mandant?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 675 BGB",
+        "§ 611 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-002",
+      "slug": "2027-09-14-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Aus Gefälligkeit geholfen – und trotzdem voll haften?",
+          "titelZeilen": [
+            "Aus Gefälligkeit",
+            "geholfen – und",
+            "trotzdem voll",
+            "haften?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Kein Vertrag heißt nicht: keine Haftung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "N gießt unentgeltlich die Pflanzen seiner verreisten Nachbarin E. Er lässt leicht fahrlässig einen Wasserhahn offen, das Parkett der E wird zerstört. Einen Vertrag wollten beide nicht schließen. N haftet aus § 823 Abs. 1 BGB – aber für jede Fahrlässigkeit?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die Ansichten",
+          "links": {
+            "titel": "Rechtsprechung (BGH)",
+            "punkte": [
+              "Gefälligkeit: kein Vertrag, Delikt nach § 276 BGB",
+              "Keine generelle Haftungsmilderung",
+              "Stillschweigender Haftungsverzicht nur ausnahmsweise",
+              "Besteht Haftpflichtschutz, meist kein Verzicht"
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Wertungswiderspruch zu Leihe, Schenkung, Verwahrung",
+              "Dort gilt ein milderer Maßstab (§§ 521, 599, 690 BGB)",
+              "Deshalb analoge Anwendung auf Gefälligkeiten",
+              "N haftete nur für grobe Fahrlässigkeit"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme und Klausurhinweis",
+          "text": "Für den BGH: Wer sich nicht binden will, bekommt nicht per Analogie Vorteile eines Vertrags. Die Lit. betont, dass Uneigennützigkeit nicht strenger haften soll. Klausur: Erst Rechtsbindungswillen verneinen, dann Delikt – und hier den Streit mit Blick auf eine Haftpflichtversicherung entscheiden."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gefälligkeit schließt Vertragshaftung aus, nicht Deliktshaftung. Eine Milderung gibt es nach dem BGH nur über einen ausnahmsweisen Haftungsverzicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Gefälligkeit in drei Schritten",
+          "punkte": [
+            "Rechtsbindungswille?",
+            "Deliktischer Anspruch",
+            "Haftungsmaßstab: Streit entscheiden"
+          ],
+          "icons": [
+            "handschlag",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Aus Gefälligkeit geholfen – und trotzdem voll haften? Ohne Rechtsbindungswillen entsteht kein Vertrag, die Deliktshaftung bleibt aber bestehen. Der BGH lehnt eine allgemeine Haftungsmilderung ab und nimmt einen stillschweigenden Haftungsverzicht nur ausnahmsweise an, kaum bei bestehender Haftpflichtversicherung. Teile der Literatur wenden die milderen Maßstäbe der §§ 521, 599, 690 BGB analog an. Speichern für die nächste Klausur zum Allgemeinen Teil.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#gefälligkeit",
+        "#schuldrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gefälligkeit: Haftung bleibt – Streit um den Maßstab",
+      "coverText": "Kein Vertrag heißt nicht: keine Haftung",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Wer ohne Vertrag hilft, entgeht nicht jeder Haftung, wenn dabei etwas schiefgeht.",
+        "handlung": "{A} happily waters a row of alien plants as a favour, while {B} stares in shock at a small stream of water running from a forgotten open tap across the floor.",
+        "hinweisRegie": "Place the note in the free space above the water stream near the open tap, slightly tilted, so the careless moment is linked to the idea without covering the plants or faces.",
+        "alternative": "{B} carries a neighbour's crystal lamp as a favour and stumbles, while {A} catches only half of it."
+      },
+      "bildSzene": "favour watering, forgotten open tap",
+      "bildSzeneAlt": "stumbling with neighbour's lamp",
+      "quellen": [
+        "§ 241 Abs. 1 BGB",
+        "§ 823 Abs. 1 BGB",
+        "§ 276 BGB",
+        "§ 521 BGB",
+        "§ 599 BGB",
+        "§ 690 BGB",
+        "Themenpool: bgbat-002"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:29:25.991Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-733",
+      "slug": "2027-09-14-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nach dem Schlag dazugekommen: Raubt B mit?",
+          "titelZeilen": [
+            "Nach dem Schlag",
+            "dazugekommen:",
+            "Raubt B mit?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Abgeschlossenes wirkt nicht zurück",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A schlägt O nieder, um ihn auszurauben. O bleibt bewusstlos liegen. Da kommt As Bekannter B hinzu, erfasst die Lage und nimmt zusammen mit A Os Uhr und Handy an sich. Die Beute teilen sie. Strafbarkeit des B?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "1. Raub in Mittäterschaft?",
+              "text": "Die Gewalt war abgeschlossen, bevor B hinzukam. Zu ihr hat B nichts beigetragen."
+            },
+            {
+              "titel": "2. Sukzessive Mittäterschaft",
+              "text": "Ältere Rspr.: Einverständnis mit dem Geschehen kann genügen. H.L.: Abgeschlossenes lässt sich nicht nachträglich zurechnen."
+            },
+            {
+              "titel": "3. Stellungnahme",
+              "text": "Ein Beitrag wirkt nicht zurück. Auch der BGH ist bei bereits abgeschlossenen Tatteilen inzwischen deutlich zurückhaltender."
+            },
+            {
+              "titel": "4. Was bleibt",
+              "text": "Die Wegnahme führt B gemeinsam mit A aus: Diebstahl in Mittäterschaft, §§ 242, 25 Abs. 2 StGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Bonus-Punkt",
+          "text": "B nutzt die Hilflosigkeit des bewusstlosen O aus. Damit liegt das Regelbeispiel des § 243 Abs. 1 S. 2 Nr. 6 StGB nahe. Die Gewalt des A wird B nicht zugerechnet – ihre Folge, die Hilflosigkeit, darf er aber für sich ausnutzen."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "A: Raub, § 249 StGB. B: kein Raub, sondern Diebstahl in Mittäterschaft in einem besonders schweren Fall (§§ 242, 243 Abs. 1 S. 2 Nr. 6, 25 Abs. 2 StGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wer später einsteigt, übernimmt nur, was er noch mitgestaltet. Die abgeschlossene Gewalt bleibt beim Ersttäter."
+        },
+        {
+          "art": "cta",
+          "titel": "Später Eingestiegene prüfen",
+          "punkte": [
+            "Was war beim Einstieg schon abgeschlossen?",
+            "Welche Tatteile gestaltet er noch mit?",
+            "Welche Lage nutzt er nur aus?"
+          ],
+          "icons": [
+            "uhr",
+            "personen",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Nach dem Schlag dazugekommen: Raubt B mit? Nach wohl überwiegender Ansicht nicht. Die Gewalt war abgeschlossen, bevor B hinzukam, und ein späterer Beitrag wirkt nicht zurück. B nimmt aber gemeinsam mit A weg und nutzt die Hilflosigkeit des Opfers aus: Diebstahl in Mittäterschaft, nahe am Regelbeispiel des § 243 Abs. 1 S. 2 Nr. 6 StGB. Speichern für die nächste Beteiligungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#mittäterschaft",
+        "#249stgb",
+        "#strafrechtbt",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Später eingestiegen: kein Raub für B",
+      "coverText": "Abgeschlossenes wirkt nicht zurück",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Wer erst nach der Gewalt dazukommt, trägt nur den Teil, an dem er selbst noch mitwirkt.",
+        "handlung": "{A} arrives late at a scene where a crystal guard already lies asleep on the ground, and {B} and {A} lift a crystal chest together from beside the sleeping guard.",
+        "hinweisRegie": "Place the note in the free space between the sleeping guard and the lifted chest, slightly tilted, so the gap between the earlier act and the joint lifting is clear without covering faces.",
+        "alternative": "{B} stands at a finished bridge while {A} only joins for the last stretch of carrying stones across it."
+      },
+      "bildSzene": "late arrival lifts chest together",
+      "bildSzeneAlt": "joining only the last stretch",
+      "quellen": [
+        "§ 25 Abs. 2 StGB",
+        "§ 249 StGB",
+        "§ 242 StGB",
+        "§ 243 StGB",
+        "Themenpool: strafat-733"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:29:25.992Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-632",
+      "slug": "2027-09-14-b3",
+      "titelZeilen": [
+        "Gesetz noch nicht",
+        "in Kraft – und",
+        "schon betroffen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Gesetz noch nicht in Kraft – und schon betroffen",
+          "unter": "Beschwerdebefugnis · § 90 BVerfGG",
+          "text": "Gegenwärtig betroffen kann sein, wen das Gesetz schon heute zu Entscheidungen zwingt.",
+          "norm": "§ 90 Abs. 1 BVerfGG",
+          "icon": "kalender",
+          "sprecher": "Das Gesetz gilt erst nächstes Jahr. Die Verfassungsbeschwerde kann trotzdem schon jetzt zulässig sein. Es kommt auf die Beschwerdebefugnis an.",
+          "marken": [
+            "noch nicht in Kraft",
+            "trotzdem zulässig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Möglichkeit der Verletzung",
+          "text": "Eine Grundrechtsverletzung darf nicht von vornherein ausgeschlossen sein.",
+          "norm": "§ 90 Abs. 1 BVerfGG",
+          "sprecher": "Schritt eins: Der Beschwerdeführer muss behaupten, in einem Grundrecht oder grundrechtsgleichen Recht verletzt zu sein. Das muss möglich erscheinen, nicht sicher.",
+          "marken": [
+            "möglich genügt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Selbst betroffen",
+          "text": "Eigene Grundrechte – nicht die von Mitgliedern oder Dritten.",
+          "norm": null,
+          "sprecher": "Schritt zwei: selbst. Er muss in eigenen Rechten betroffen sein. Fremde Grundrechte kann er nicht geltend machen, auch nicht als Verband für seine Mitglieder.",
+          "marken": [
+            "eigene Rechte"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Gegenwärtig betroffen",
+          "text": "Schon jetzt, nicht irgendwann – aber auch Dispositionen zählen.",
+          "norm": null,
+          "sprecher": "Schritt drei: gegenwärtig. Grundsätzlich muss er schon jetzt betroffen sein. Das BVerfG lässt es aber genügen, wenn ihn das Gesetz bereits heute zu Entscheidungen zwingt, die er später nicht mehr korrigieren kann. Etwa, weil er seinen Betrieb umstellen muss.",
+          "marken": [
+            "Dispositionen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Unmittelbar betroffen",
+          "text": "Kein Vollzugsakt dazwischen – sonst erst gegen diesen vorgehen.",
+          "norm": null,
+          "sprecher": "Schritt vier: unmittelbar. Braucht das Gesetz noch einen Vollzugsakt, etwa einen Bescheid, musst du grundsätzlich erst diesen abwarten und angreifen. Ausnahme: Das Abwarten ist unzumutbar, etwa wenn nur ein Bußgeld droht.",
+          "marken": [
+            "kein Vollzugsakt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Frist bei Gesetzen",
+          "text": "Ein Jahr seit Inkrafttreten des Gesetzes.",
+          "norm": "§ 93 Abs. 3 BVerfGG",
+          "sprecher": "Und denk an die Frist: Gegen ein Gesetz läuft sie ein Jahr seit seinem Inkrafttreten.",
+          "marken": [
+            "ein Jahr"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Selbst, gegenwärtig, unmittelbar",
+          "text": "Die drei Merkmale prüfst du getrennt – jedes hat seine eigenen Ausnahmen.",
+          "norm": null,
+          "sprecher": "Merke: selbst, gegenwärtig, unmittelbar. Drei Merkmale, getrennt geprüft. Beim zweiten zählen auch heutige Zwänge.",
+          "marken": [
+            "drei Merkmale"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beschwerdebefugnis sicher prüfen",
+          "text": "Speichern für die nächste Verfassungsbeschwerde.",
+          "norm": null,
+          "sprecher": "Speicher dir das für deine nächste Verfassungsbeschwerde.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Gesetz noch nicht in Kraft – und trotzdem schon betroffen. Für die Beschwerdebefugnis prüfst du die mögliche Grundrechtsverletzung und dann getrennt: selbst, gegenwärtig, unmittelbar. Gegenwärtig betroffen ist nach dem BVerfG auch, wen das Gesetz schon heute zu später nicht mehr korrigierbaren Dispositionen zwingt. Und gegen Gesetze gilt die Jahresfrist des § 93 Abs. 3 BVerfGG. Speichern für die nächste Verfassungsbeschwerde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsbeschwerde",
+        "#bverfgg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfassungsbeschwerde: schon vor Inkrafttreten",
+      "coverText": "Heutige Zwänge zählen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Ein Gesetz kann schon wirken, bevor es gilt, weil es heute zu Entscheidungen zwingt.",
+        "handlung": "{A} points his pointer at a closed gate that only opens next year, while {B} already has to dismantle a workshop in front of it.",
+        "hinweisRegie": "Place the note in the free space between the closed gate and the half-dismantled workshop, slightly tilted, so the present pressure of a future rule is visible without covering the characters.",
+        "alternative": "{B} reorganises crates today under a banner showing only a future date symbol, while {A} watches with a pointer."
+      },
+      "bildSzene": "dismantling before a closed gate",
+      "bildSzeneAlt": "crates rearranged under future banner",
+      "quellen": [
+        "§ 90 Abs. 1 BVerfGG",
+        "§ 93 Abs. 3 BVerfGG",
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "Themenpool: staat-632"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:29:25.993Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-346",
+      "ueberzeile": "Prüfungsfrage Strafprozessrecht",
+      "titel": "B will vor der Vernehmung seinen Verteidiger anrufen. Die Polizei lehnt ab, B gesteht. Verwertbar?",
+      "optionen": [
+        "Ja – belehrt worden war B ja",
+        "Ja – nur ein Richter hätte den Anruf erlauben müssen",
+        "Nein – die Verteidigerkonsultation wurde verweigert"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Themenpool: stpo-346"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:29:25.993Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-346",
+      "ueberzeile": "Auflösung",
+      "titel": "Grundsätzlich nicht verwertbar – der Kontakt zum Verteidiger wurde abgeschnitten",
+      "text": "Der Beschuldigte darf jederzeit, auch schon vor seiner Vernehmung, einen Verteidiger befragen (§ 136 Abs. 1 S. 2 StPO, für die Polizei über § 163a Abs. 4 StPO). Die Belehrung allein genügt nicht, wenn die Polizei den gewünschten Kontakt dann verhindert. Nach der Rspr. führt das grundsätzlich zu einem Beweisverwertungsverbot.",
+      "norm": "§ 136 Abs. 1 S. 2 StPO",
+      "quellen": [
+        "§ 136 StPO",
+        "§ 163a Abs. 4 StPO",
+        "Themenpool: stpo-346"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:29:25.993Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – belehrt worden war B ja",
+        "Ja – nur ein Richter hätte den Anruf erlauben müssen",
+        "Nein – die Verteidigerkonsultation wurde verweigert"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-047",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 2113 BGB: Der Vorerbe verkauft das Grundstück – der Nacherbe kann es später kippen",
+      "text": "Verfügt der Vorerbe über ein Nachlassgrundstück, ist das mit dem Nacherbfall unwirksam, soweit es das Recht des Nacherben vereiteln oder beeinträchtigen würde (§ 2113 Abs. 1 BGB). Unentgeltliche Verfügungen erfasst Abs. 2. Von Abs. 1 kann der Erblasser befreien (§ 2136 BGB), von Abs. 2 nicht. Gutgläubige Erwerber schützt Abs. 3 – daher der Nacherbenvermerk im Grundbuch.",
+      "norm": "§ 2113 BGB",
+      "quellen": [
+        "§ 2100 BGB",
+        "§ 2113 BGB",
+        "§ 2136 BGB",
+        "Themenpool: famerb-047"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:29:25.993Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-890",
+      "ueberzeile": "4 Punkte IPR",
+      "titel": "Vertrag ohne Rechtswahl: Bei diesen vier Verträgen gilt nicht Art. 4 Rom I-VO",
+      "text": "Art. 4 Rom I-VO gilt nur unbeschadet der Art. 5 bis 8. Bevor du nach der charakteristischen Leistung fragst, prüf die Sonderregeln:",
+      "punkte": [
+        "Beförderungsverträge, Art. 5 Rom I-VO",
+        "Verbraucherverträge: oft Aufenthaltsrecht des Verbrauchers, Art. 6",
+        "Versicherungsverträge, Art. 7 Rom I-VO",
+        "Arbeitsverträge: meist gewöhnlicher Arbeitsort, Art. 8"
+      ],
+      "quellen": [
+        "Art. 4 Rom I-VO",
+        "Art. 5 Rom I-VO",
+        "Art. 6 Rom I-VO",
+        "Art. 7 Rom I-VO",
+        "Art. 8 Rom I-VO",
+        "Themenpool: ipr-890"
+      ],
+      "fachLabel": "IPR",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:29:25.993Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-911",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Unterschriebene Kündigung, vom Mitbewohner ungefragt eingeworfen: Ist gekündigt?",
+      "norm": "§ 122 BGB analog",
+      "optionen": [
+        "H.M.: Nein – ohne willentliche Abgabe keine Willenserklärung; bei Fahrlässigkeit Vertrauensschaden analog § 122 BGB.",
+        "Andere Ansicht: Zurechenbar in den Verkehr gelangt – die Erklärung wirkt, kann aber analog §§ 119, 122 BGB angefochten werden."
+      ],
+      "text": "Klausur: Bei der Abgabe ansetzen und mit der h.M. verneinen – gebunden ist nur, wer die Erklärung absenden wollte. Den Empfänger schützt der Ersatz des Vertrauensschadens.",
+      "quellen": [
+        "§ 130 BGB",
+        "§ 119 BGB",
+        "§ 122 BGB",
+        "Themenpool: bgbat-911"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:29:25.993Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-026",
+      "ueberzeile": "Merksatz Schuldrecht BT",
+      "titel": "Vertragspartner des Anwalts ist, wer ihn beauftragt – nicht unbedingt, wem er hilft",
+      "text": "Der Anwaltsvertrag ist ein Geschäftsbesorgungsvertrag mit Dienstvertragscharakter (§§ 675, 611 BGB). Vertragspartner ist, wer ihn im eigenen Namen schließt – etwa Eltern für ihr volljähriges Kind oder ein Unternehmen für seinen Mitarbeiter. Der Vertretene ist dann oft über einen Vertrag mit Schutzwirkung zugunsten Dritter geschützt.",
+      "norm": "§ 675 Abs. 1 BGB",
+      "quellen": [
+        "§ 675 BGB",
+        "§ 611 BGB",
+        "Themenpool: schuldbt-026"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:29:25.993Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

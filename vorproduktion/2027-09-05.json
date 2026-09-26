@@ -1,0 +1,910 @@
+{
+  "datum": "2027-09-05",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "anklage-789",
+        "themaTitel": "Abschlussverfügung der Staatsanwaltschaft: Aufbau",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "grundr-371",
+        "themaTitel": "Was ist ein allgemeines Gesetz im Sinne des Art. 5 Abs. 2 GG?",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "assessorz-586"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "assessorz-586"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:55",
+        "art": "norm",
+        "themaId": "arbeit-043"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:24",
+        "art": "fehler",
+        "themaId": "verwbt-933"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "tipp",
+        "themaId": "zwangsv-588"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "zahl",
+        "themaId": "revision-876"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "anklage-789",
+      "poolTitel": "Abschlussverfügung der Staatsanwaltschaft: Aufbau",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 170, 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-23"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-371",
+      "poolTitel": "Was ist ein allgemeines Gesetz im Sinne des Art. 5 Abs. 2 GG?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 Abs. 2 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-02-11",
+        "2027-03-12",
+        "2027-07-10"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-586",
+      "poolTitel": "Aktenvortrag Zivilrecht: Aufbau in 10 Minuten",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; materielles Recht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-16",
+        "2027-07-27"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-586",
+      "poolTitel": "Aktenvortrag Zivilrecht: Aufbau in 10 Minuten",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; materielles Recht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-16",
+        "2027-07-27"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "arbeit-043",
+      "poolTitel": "Wie grenzt man Arbeitnehmer und freien Mitarbeiter ab?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 611a BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-30"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "verwbt-933",
+      "poolTitel": "Was garantiert Art. 28 Abs. 2 GG den Gemeinden – und wo endet die Garantie?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Art. 93 Abs. 1 Nr. 4b GG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-04",
+        "2027-05-05",
+        "2027-07-05"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "zwangsv-588",
+      "poolTitel": "Zwangsvollstreckungsklausur: richtige Klage/Rechtsbehelf wählen",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§§ 766, 767, 771 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-29",
+        "2027-02-18",
+        "2027-06-12"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "revision-876",
+      "poolTitel": "Was verlangt § 344 Abs. 2 Satz 2 StPO?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 344 Abs. 2 Satz 2 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-09",
+        "2027-06-04",
+        "2027-08-11"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-09-05-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Beiträge, vier Bereiche: die Woche zum Abrufen",
+          "titelZeilen": [
+            "18 Beiträge,",
+            "vier Bereiche:",
+            "die Woche zum",
+            "Abrufen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Betriebsbedingte Kündigung: erst freier Platz im Unternehmen, dann Sozialauswahl.",
+            "Empfangsbote: Zugang, sobald mit der Weitergabe zu rechnen ist.",
+            "§ 107 BGB: Schenkung und Erwerb trennen – persönliche Pflichten sind ein Nachteil.",
+            "Übergabe: Besitzerwerb, Besitzaufgabe – und Veranlassung durch den Veräußerer.",
+            "§ 985 BGB: nur gegen den, der jetzt besitzt.",
+            "§ 818 Abs. 3 BGB: ab Rechtshängigkeit oder Kenntnis gesperrt."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 17 StGB: Unrechtsbewusstsein ja, Paragrafenkenntnis nein.",
+            "§ 358 Abs. 2 StPO: Tagessatzzahl nie erhöhen – die Höhe ist umstritten.",
+            "Prozessbetrug per Versäumnisurteil: Irrtum des Richters fraglich.",
+            "Mittelbare Täterschaft: erst den Vordermann prüfen.",
+            "Notwehr begründet keine Ingerenz – es bleibt § 323c StGB."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Ermessen: Ausfall, Fehlgebrauch, Überschreitung – das Gericht ersetzt nichts.",
+            "Art. 33 Abs. 2 GG: Anspruch auf faire Auswahl, nicht auf das Amt.",
+            "Anhörung vergessen: Heilung nach § 45 VwVfG vor § 46 VwVfG.",
+            "Richtlinie: unmittelbare Wirkung nur zugunsten des Einzelnen gegen den Staat.",
+            "Art. 3 Abs. 3 GG: auch mittelbare Benachteiligung zählt."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: 7-30-90 – fällige Wiederholungen vor neuem Stoff.",
+            "Kopfsache: Die Note misst eine Klausur, nicht dein Examen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Kannst du Empfangsbote, Empfangsvertreter und Erklärungsbote in je einem Satz trennen?",
+            "Weißt du, wann eine Anhörung geheilt ist und wann § 46 VwVfG greift?",
+            "Was hakt, kommt auf die Abrufliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Anspruch und Einwand",
+            "Strafrecht: Tatbestand und Verfahren",
+            "Öffentliches Recht: Prüfungskette",
+            "Technik und Kopf als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "18 Beiträge, vier Bereiche: die Woche zum Abrufen. Im Zivilrecht ging es um Kündigung, Zugang, Minderjährige, Übergabe, Vindikation und Entreicherung, im Strafrecht um Verbotsirrtum, Verschlechterungsverbot, Prozessbetrug, mittelbare Täterschaft und Ingerenz, im Öffentlichen Recht um Ermessen, Konkurrentenstreit, Anhörung, Richtlinien und mittelbare Diskriminierung. Dazu Wiederholungstechnik und der Umgang mit einer schlechten Probeklausur. Geh nur die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Beiträge zum Abrufen",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Die Woche wird noch einmal sortiert abgerufen – Bereich für Bereich.",
+        "handlung": "{A} curiously pulls small glowing cards out of a floating archive drawer held open by {B}, sorting them into four neat piles on a table.",
+        "hinweisRegie": "Place the note in the free space above the four card piles, slightly tilted toward the pile being filled, so the sorting of the week is highlighted without covering the drawer or the characters.",
+        "alternative": "{B} projects four small rotating holograms in a row, while {A} taps each one to check whether it lights up."
+      },
+      "bildSzene": "cards sorted into four piles",
+      "bildSzeneAlt": "four holograms tapped in turn",
+      "quellen": [
+        "§ 1 Abs. 2 KSchG",
+        "§ 130 BGB",
+        "§ 107 BGB",
+        "§ 929 S. 1 BGB",
+        "§ 985 BGB",
+        "§§ 818, 819 BGB",
+        "§ 17 StGB",
+        "§ 358 Abs. 2 StPO",
+        "§ 263 StGB",
+        "§ 25 Abs. 1 StGB",
+        "§§ 13, 323c StGB",
+        "§ 114 VwGO",
+        "Art. 33 Abs. 2 GG",
+        "§§ 28, 45, 46 VwVfG",
+        "Art. 288 Abs. 3 AEUV",
+        "Art. 3 Abs. 2, 3 GG",
+        "Themenpool: methodik-909",
+        "Themenpool: mindset-2"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:32:38.757Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-789",
+      "slug": "2027-09-05-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Abschlussverfügung: § 154a StPO stellt keine Tat ein",
+          "titelZeilen": [
+            "Abschlussverfügung:",
+            "§ 154a StPO stellt",
+            "keine Tat ein"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Teil der Tat oder andere Tat?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Am Ende der Ermittlungen entscheidet die Staatsanwaltschaft über den gesamten Akteninhalt: jede prozessuale Tat, jeder Beschuldigte bekommt eine Erledigung. Besonders oft verwechselt werden dabei § 154 StPO und § 154a StPO – obwohl sie an ganz verschiedenen Stellen ansetzen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Abschlussvermerk",
+              "text": "Soll angeklagt werden, wird der Abschluss der Ermittlungen in den Akten vermerkt (§ 169a StPO)."
+            },
+            {
+              "titel": "2. Einstellungen",
+              "text": "Kein hinreichender Tatverdacht: § 170 Abs. 2 StPO. Verdacht, aber Verfolgung verzichtbar: etwa §§ 153, 153a StPO."
+            },
+            {
+              "titel": "3. Nebentat weglassen",
+              "text": "Eine andere Tat fällt neben der angeklagten nicht beträchtlich ins Gewicht: Absehen nach § 154 Abs. 1 StPO."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Innerhalb der Tat beschränken",
+              "text": "Abtrennbare Tatteile oder einzelne Gesetzesverletzungen derselben Tat: Beschränkung nach § 154a StPO, aktenkundig machen."
+            },
+            {
+              "titel": "5. Bescheide und Mitteilungen",
+              "text": "Anzeigeerstatter über Einstellungen bescheiden (§ 171 StPO), Beschuldigten benachrichtigen."
+            },
+            {
+              "titel": "6. Anklage und Zuleitung",
+              "text": "Anklageschrift fertigen, Akten mit dem Antrag auf Eröffnung an das zuständige Gericht senden."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: § 154 oder § 154a?",
+          "text": "§ 154 StPO betrifft eine andere prozessuale Tat – sie wird nicht verfolgt. § 154a StPO lässt die Tat angeklagt und nimmt nur Teile oder Gesetzesverletzungen heraus. Maßstab ist der prozessuale Tatbegriff (§ 264 StPO). Formdetails: je nach Land."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 154 StPO: eine andere Tat fällt weg. § 154a StPO: dieselbe Tat, weniger Stoff – angeklagt wird sie trotzdem."
+        },
+        {
+          "art": "cta",
+          "titel": "Abschlussverfügung in vier Fragen",
+          "punkte": [
+            "Welche Taten, welche Beschuldigten?",
+            "Hinreichender Tatverdacht?",
+            "Andere Tat oder Teil derselben Tat?",
+            "Wer muss informiert werden?"
+          ],
+          "icons": [
+            "ordner",
+            "lupe",
+            "stopp",
+            "umschlag"
+          ]
+        }
+      ],
+      "caption": "Abschlussverfügung: § 154a StPO stellt keine Tat ein. § 154 StPO lässt eine andere, daneben unbedeutende Tat fallen. § 154a StPO dagegen beschränkt die Verfolgung innerhalb derselben Tat auf das Wesentliche – die Tat selbst wird trotzdem angeklagt. Maßstab ist der prozessuale Tatbegriff. Davor stehen Abschlussvermerk und Einstellungen, danach Bescheide, Mitteilungen und Anklage. Speichern für die nächste staatsanwaltliche Klausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#abschlussverfügung",
+        "#staatsanwaltschaft",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Abschlussverfügung: § 154 oder § 154a StPO?",
+      "coverText": "Teil der Tat oder andere Tat?",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Am Ende der Ermittlungen bekommt jede Tat ihre eigene, passende Entscheidung.",
+        "handlung": "{A} hovers beside three sealed file folders and stamps each one with a different coloured seal, while {B} checks the folders against a list and hands over the last one.",
+        "hinweisRegie": "Place the note in the free space next to the three differently sealed folders, slightly tilted toward the middle one, so the separate decisions are highlighted without covering the stamps or the characters.",
+        "alternative": "{B} guides three small carts onto three different rail tracks at a switch, while {A} watches from above."
+      },
+      "bildSzene": "folders stamped with different seals",
+      "bildSzeneAlt": "three carts onto separate tracks",
+      "quellen": [
+        "§ 169a StPO",
+        "§ 170 StPO",
+        "§§ 153, 153a StPO",
+        "§§ 154, 154a StPO",
+        "§ 171 StPO",
+        "§ 200 StPO",
+        "§ 264 StPO",
+        "Themenpool: anklage-789"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "normverwechslung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:32:38.757Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-371",
+      "slug": "2027-09-05-b3",
+      "titelZeilen": [
+        "„Allgemein“ heißt",
+        "nicht: gilt für",
+        "jeden"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "„Allgemein“ heißt nicht: gilt für jeden",
+          "unter": "Meinungsfreiheit · Art. 5 Abs. 2 GG",
+          "text": "Allgemein ist ein Gesetz, das sich nicht gegen eine bestimmte Meinung richtet.",
+          "norm": "Art. 5 Abs. 2 GG",
+          "icon": "zeitung",
+          "sprecher": "Allgemein heißt hier nicht: Das Gesetz gilt für jeden. Fast jedes Gesetz gilt für jeden. Bei Artikel 5 Absatz 2 GG geht es um etwas anderes – und genau das prüfst du so.",
+          "marken": [
+            "nicht: für jeden"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schutzbereich und Eingriff",
+          "text": "Werturteil oder Tatsachenbehauptung mit Meinungsbezug – und ein staatlicher Eingriff.",
+          "norm": "Art. 5 Abs. 1 S. 1 GG",
+          "sprecher": "Schritt eins: Schutzbereich und Eingriff. Geschützt sind Werturteile und Tatsachenbehauptungen, soweit sie zur Meinungsbildung beitragen. Ein Verbot oder eine Sanktion greift ein.",
+          "marken": [
+            "Meinung?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Nicht gegen die Meinung als solche",
+          "text": "Das Gesetz darf keine bestimmte Meinung verbieten (Sonderrechtslehre).",
+          "norm": "Art. 5 Abs. 2 GG",
+          "sprecher": "Schritt zwei: Das Gesetz darf sich nicht gegen eine bestimmte Meinung als solche richten. Ein Verbot, Regierungskritik zu plakatieren, ist Sonderrecht. Ein Verbot, überhaupt Plakate an Bäume zu hängen, ist meinungsneutral.",
+          "marken": [
+            "meinungsneutral?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Schutz eines Rechtsguts schlechthin",
+          "text": "Es schützt ein Gut, das ohne Rücksicht auf eine Meinung zu schützen ist.",
+          "norm": null,
+          "sprecher": "Schritt drei: Das Gesetz dient dem Schutz eines Rechtsguts, das ohne Rücksicht auf eine bestimmte Meinung zu schützen ist. Das BVerfG verbindet diese Abwägungsformel mit der Sonderrechtslehre.",
+          "marken": [
+            "Rechtsgut schlechthin"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Wechselwirkung",
+          "text": "Das Gesetz im Licht der Meinungsfreiheit auslegen und verhältnismäßig anwenden.",
+          "norm": null,
+          "sprecher": "Schritt vier: Auch ein allgemeines Gesetz muss im Licht der Meinungsfreiheit ausgelegt werden. Das ist die Wechselwirkungslehre. Hier prüfst du die Verhältnismäßigkeit im Einzelfall.",
+          "marken": [
+            "Wechselwirkung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Zwei weitere Schranken",
+          "text": "Jugendschutz und Recht der persönlichen Ehre stehen daneben.",
+          "norm": "Art. 5 Abs. 2 GG",
+          "sprecher": "Daneben nennt Artikel 5 Absatz 2 zwei weitere Schranken: die gesetzlichen Bestimmungen zum Schutz der Jugend und das Recht der persönlichen Ehre.",
+          "marken": [
+            "Jugend · Ehre"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Ausnahme",
+          "text": "§ 130 Abs. 4 StGB ist nicht allgemein – das BVerfG hält ihn trotzdem für zulässig.",
+          "norm": "§ 130 Abs. 4 StGB",
+          "sprecher": "Und die bekannte Ausnahme: Paragraf 130 Absatz 4 StGB ist kein allgemeines Gesetz. Das BVerfG hält ihn wegen des einzigartigen Unrechts der NS-Herrschaft trotzdem für zulässig.",
+          "marken": [
+            "Ausnahme"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Allgemein = meinungsneutral und rechtsgutschützend. Danach Wechselwirkung.",
+          "norm": null,
+          "sprecher": "Merke: Allgemein ist ein Gesetz, das meinungsneutral ist und ein Rechtsgut schlechthin schützt. Danach kommt die Wechselwirkung.",
+          "marken": [
+            "meinungsneutral"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Grundrechtsklausur speichern",
+          "text": "Speichern für die nächste Prüfung der Meinungsfreiheit.",
+          "norm": null,
+          "sprecher": "Speicher dir das für deine nächste Prüfung der Meinungsfreiheit.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "„Allgemein“ heißt bei Art. 5 Abs. 2 GG nicht: gilt für jeden. Allgemein ist ein Gesetz, das sich nicht gegen eine bestimmte Meinung als solche richtet und dem Schutz eines Rechtsguts schlechthin dient – das BVerfG verbindet Sonderrechtslehre und Abwägungsformel. Danach legst du das Gesetz im Licht der Meinungsfreiheit aus. Die bekannte Ausnahme bleibt § 130 Abs. 4 StGB. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#meinungsfreiheit",
+        "#art5gg",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 5 Abs. 2 GG: was „allgemein“ bedeutet",
+      "coverText": "Meinungsneutral statt „für jeden“",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Ein allgemeines Gesetz trifft jede Meinung gleich – es sortiert nicht nach Inhalt.",
+        "handlung": "{A} points his stick at a rope barrier that blocks all signs equally, while {B} carries two differently coloured signs and stops at the same rope with both.",
+        "hinweisRegie": "Place the note in the free space above the rope barrier, slightly tilted toward the two signs, so the equal treatment of both is highlighted without covering the characters or the rope.",
+        "alternative": "{B} holds up a sieve that lets every coloured pebble through equally, while {A} checks the pebbles underneath."
+      },
+      "bildSzene": "one rope stops two signs",
+      "bildSzeneAlt": "sieve passing all pebbles equally",
+      "quellen": [
+        "Art. 5 Abs. 1, 2 GG",
+        "§ 130 Abs. 4 StGB",
+        "Themenpool: grundr-371"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "begriffsklarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:32:38.758Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-586",
+      "ueberzeile": "Prüfungsfrage 2. Examen Zivilrecht",
+      "titel": "Aktenvortrag Zivilrecht: Gehört die Beweiswürdigung schon in den Sachbericht?",
+      "optionen": [
+        "Ja – die Zuhörer sollen gleich wissen, was bewiesen ist",
+        "Nur das Ergebnis, als feststehende Tatsache formuliert",
+        "Nein – der Sachbericht berichtet, gewürdigt wird später"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Themenpool: assessorz-586"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:32:38.758Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-586",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – im Sachbericht wird berichtet, nicht gewürdigt",
+      "text": "Der Sachbericht trennt Unstreitiges und Streitiges und nennt, welche Beweise erhoben wurden und was sie ergeben haben – neutral, ohne Bewertung. Ob du einem Zeugen glaubst, gehört in die rechtliche Würdigung, dort, wo es auf die Tatsache ankommt. Sonst nimmst du das Ergebnis vorweg, ohne es zu begründen. Details des Aufbaus variieren je nach Land.",
+      "norm": "§ 286 ZPO",
+      "quellen": [
+        "§ 286 ZPO",
+        "Themenpool: assessorz-586"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:32:38.758Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – die Zuhörer sollen gleich wissen, was bewiesen ist",
+        "Nur das Ergebnis, als feststehende Tatsache formuliert",
+        "Nein – der Sachbericht berichtet, gewürdigt wird später"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-043",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 611a BGB: Wirtschaftlich abhängig heißt nicht Arbeitnehmer",
+      "text": "Arbeitnehmer ist, wer weisungsgebunden und fremdbestimmt in persönlicher Abhängigkeit arbeitet (§ 611a Abs. 1 BGB). Entscheidend sind Weisungen zu Inhalt, Durchführung, Zeit und Ort. Wer nur wirtschaftlich von einem Auftraggeber abhängt, ist nicht schon deshalb Arbeitnehmer – er kann aber arbeitnehmerähnliche Person sein.",
+      "norm": "§ 611a Abs. 1 BGB",
+      "quellen": [
+        "§ 611a BGB",
+        "§ 5 Abs. 1 ArbGG",
+        "Themenpool: arbeit-043"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:32:38.758Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-933",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Aufsichtsverfügung gegen die Gemeinde: gleich nach Karlsruhe?",
+      "falsch": "„Gemeinde G greift die Anordnung der Kommunalaufsicht mit der Kommunalverfassungsbeschwerde nach Art. 93 Abs. 1 Nr. 4b GG an.“",
+      "richtigText": "Die Kommunalverfassungsbeschwerde richtet sich nur gegen Gesetze (auch Rechtsverordnungen) und rügt nur Art. 28 Abs. 2 GG. Gegen Landesgesetze ist sie ausgeschlossen, soweit das Landesverfassungsgericht angerufen werden kann. Eine Aufsichtsverfügung ist ein Verwaltungsakt: Die Gemeinde klagt vor dem Verwaltungsgericht.",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "Art. 93 Abs. 1 Nr. 4b GG",
+        "§ 91 BVerfGG",
+        "§ 42 Abs. 1 VwGO",
+        "Themenpool: verwbt-933"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:32:38.758Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-588",
+      "ueberzeile": "Klausurtipp Zwangsvollstreckung",
+      "titel": "§ 766 oder § 793 ZPO? Frag, ob schon jemand entschieden hat",
+      "text": "Gegen Vollstreckungsmaßnahmen, die ohne Anhörung des Betroffenen ergangen sind, hilft die Erinnerung (§ 766 ZPO) – auch gegen einen Pfändungsbeschluss ohne vorherige Anhörung. Hat das Vollstreckungsgericht nach Anhörung entschieden, etwa über eine Erinnerung, ist die sofortige Beschwerde (§ 793 ZPO) statthaft. Bei Rechtspflegerentscheidungen § 11 RPflG mitdenken.",
+      "quellen": [
+        "§ 766 ZPO",
+        "§ 793 ZPO",
+        "§ 11 RPflG",
+        "Themenpool: zwangsv-588"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:32:38.758Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-876",
+      "ueberzeile": "3 Punkte Revision",
+      "titel": "§ 338 StPO vermutet das Beruhen – die Tatsachen musst du trotzdem liefern",
+      "text": "Auch ein absoluter Revisionsgrund wird nur geprüft, wenn die Verfahrensrüge die Tatsachen vollständig mitteilt (§ 344 Abs. 2 S. 2 StPO). Beispiel Abwesenheit nach § 338 Nr. 5 StPO – vorzutragen ist insbesondere:",
+      "punkte": [
+        "Wer fehlte, etwa der notwendige Verteidiger",
+        "Während welches wesentlichen Teils der Hauptverhandlung",
+        "Warum seine Anwesenheit vorgeschrieben war"
+      ],
+      "quellen": [
+        "§ 338 Nr. 5 StPO",
+        "§ 344 Abs. 2 S. 2 StPO",
+        "§ 145 StPO",
+        "Themenpool: revision-876"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:32:38.758Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,872 @@
+{
+  "datum": "2027-09-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "verwbt-399",
+        "themaTitel": "Wie funktioniert die unmittelbare Ausführung im Polizeirecht?",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "assessorz-803",
+        "themaTitel": "Was steht im Bearbeitervermerk und warum liest man ihn zuerst?",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "revision-799",
+        "themaTitel": "Revisionsgutachten: Sachrüge",
+        "fach": "revision",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "bgbat-431"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "bgbat-431"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "bgbat-158"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:34",
+        "art": "streitstand",
+        "themaId": "methodik-937"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "merksatz",
+        "themaId": "strafat-730"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "begriff",
+        "themaId": "staat-357"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "verwbt-399",
+      "poolTitel": "Wie funktioniert die unmittelbare Ausführung im Polizeirecht?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "assessorz-803",
+      "poolTitel": "Was steht im Bearbeitervermerk und warum liest man ihn zuerst?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-19",
+        "2027-04-12",
+        "2027-09-13"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "revision-799",
+      "poolTitel": "Revisionsgutachten: Sachrüge",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-13"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-431",
+      "poolTitel": "AGB-Inhaltskontrolle und geltungserhaltende Reduktion",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 306, 307-309 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-14",
+        "2027-06-18",
+        "2027-07-16"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-431",
+      "poolTitel": "AGB-Inhaltskontrolle und geltungserhaltende Reduktion",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 306, 307-309 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-14",
+        "2027-06-18",
+        "2027-07-16"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-158",
+      "poolTitel": "Wie wirkt § 139 BGB bei Teilnichtigkeit?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 139 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-05"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "methodik-937",
+      "poolTitel": "Analogie und teleologische Reduktion: Voraussetzungen und saubere Formulierung",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [
+        "Art. 103 Abs. 2 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-05-12",
+        "2027-07-10",
+        "2027-07-11"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafat-730",
+      "poolTitel": "Täterschaft und Teilnahme: Abgrenzung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 25 ff. StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-20",
+        "2027-05-21",
+        "2027-06-30"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "staat-357",
+      "poolTitel": "Wann ist ein Gesetz zustimmungsbedürftig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 84 GG",
+        "Art. 104a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-21",
+        "2027-07-01",
+        "2027-07-01"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-399",
+      "slug": "2027-09-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Unmittelbare Ausführung: drei Merkmale, eine gedachte Verfügung",
+          "titelZeilen": [
+            "Unmittelbare",
+            "Ausführung: drei",
+            "Merkmale, eine",
+            "gedachte Verfügung"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Erst die gedachte Grundverfügung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Polizei handelt selbst oder durch einen Beauftragten, weil sie den Verantwortlichen nicht rechtzeitig heranziehen kann – etwa den verreisten Eigentümer eines Hauses, dessen loses Dach auf den Gehweg zu stürzen droht. Geregelt je nach Landesrecht; nicht jedes Land kennt das Institut."
+        },
+        {
+          "art": "text",
+          "titel": "Die drei Merkmale",
+          "punkte": [
+            "1. Eine Verfügung gegen den Verantwortlichen wäre rechtmäßig (hypothetische Grundverfügung).",
+            "2. Der Zweck ist durch seine Inanspruchnahme nicht oder nicht rechtzeitig erreichbar.",
+            "3. Die Polizei führt die Maßnahme selbst oder durch einen Beauftragten aus."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Abgrenzung zum Sofortvollzug",
+          "links": {
+            "titel": "Unmittelbare Ausführung",
+            "punkte": [
+              "Maßnahme der Gefahrenabwehr",
+              "Verantwortlicher nicht erreichbar",
+              "Kein entgegenstehender Wille"
+            ]
+          },
+          "rechts": {
+            "titel": "Sofortvollzug",
+            "punkte": [
+              "Vollstreckung ohne vorherigen VA",
+              "Richtet sich gegen einen Willen",
+              "Regeln des Vollstreckungsrechts"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Kosten und Rechtsschutz",
+          "text": "Die Kosten fordert die Behörde je nach Landesrecht per Bescheid vom Verantwortlichen. Die Maßnahme selbst ist meist erledigt. Gegen den Kostenbescheid gehst du mit der Anfechtungsklage vor – und prüfst dort inzident, ob die unmittelbare Ausführung rechtmäßig war."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Prüf zuerst die gedachte Verfügung gegen den Verantwortlichen. Nur wenn sie rechtmäßig wäre, trägt die unmittelbare Ausführung."
+        },
+        {
+          "art": "cta",
+          "titel": "Unmittelbare Ausführung prüfen",
+          "punkte": [
+            "Gedachte Grundverfügung rechtmäßig?",
+            "Verantwortlicher nicht rechtzeitig erreichbar?",
+            "Kostenbescheid: inzident prüfen"
+          ],
+          "icons": [
+            "polizei",
+            "uhr",
+            "quittung"
+          ]
+        }
+      ],
+      "caption": "Unmittelbare Ausführung: drei Merkmale und eine gedachte Verfügung. Die Polizei handelt selbst, weil sie den Verantwortlichen nicht rechtzeitig heranziehen kann. Rechtmäßig ist das nur, wenn eine Verfügung gegen ihn rechtmäßig wäre. Vom Sofortvollzug grenzt du nach dem Willen des Betroffenen ab – je nach Landesrecht. Speichern für die nächste Polizeirechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#polizeirecht",
+        "#verwaltungsrecht",
+        "#gefahrenabwehr",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unmittelbare Ausführung auf einem Blatt",
+      "coverText": "Erst die gedachte Grundverfügung",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Die Polizei handelt selbst, weil der Verantwortliche nicht erreichbar ist – aber nur, wenn eine Anordnung an ihn rechtmäßig wäre.",
+        "handlung": "{A} steadies a loose roof panel on an empty house while {B} tightens it with a wrench, the owner's door firmly closed behind them.",
+        "hinweisRegie": "Place the note in the free space beside the loose roof panel, slightly tilted, so the danger and the repair are clearly visible without covering the characters.",
+        "alternative": "{B} drags a toppled crystal barrier off a path while {A} knocks in vain on a nearby locked door."
+      },
+      "bildSzene": "securing roof panel, owner absent",
+      "bildSzeneAlt": "clearing barrier, locked door",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Themenpool: verwbt-399"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-merkmale",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:31:58.261Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-803",
+      "slug": "2027-09-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gleiche Akte, anderer Auftrag: Richter- oder Anwaltsklausur",
+          "titelZeilen": [
+            "Gleiche Akte,",
+            "anderer Auftrag:",
+            "Richter oder Anwalt"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Rolle vor Rechtsfrage",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Dieselbe Akte kann zwei völlig verschiedene Klausuren tragen. Welche du schreibst, steht nicht im Sachverhalt, sondern im Vermerk für die Bearbeitung. Er legt Rolle, Produkt und Unterstellungen fest – deshalb liest du ihn zuerst."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Was der Vermerk jeweils verlangt",
+          "links": {
+            "titel": "Richterklausur",
+            "punkte": [
+              "Entscheidung: Urteil oder Beschluss",
+              "Tenor, oft Tatbestand, Entscheidungs-gründe",
+              "Urteilsstil",
+              "Neutrale Sicht auf beide Parteien"
+            ]
+          },
+          "rechts": {
+            "titel": "Anwaltsklausur",
+            "punkte": [
+              "Gutachten zur Frage des Mandanten",
+              "Zweckmäßigkeit: Was ist zu tun?",
+              "Schriftsatz oder Schreiben an ihn",
+              "Sicht des Mandanten"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Was der Vermerk oft regelt",
+          "links": {
+            "titel": "Unterstellungen",
+            "punkte": [
+              "Zustellungen ordnungsgemäß",
+              "Vollmachten liegen vor",
+              "Nicht mehr prüfen"
+            ]
+          },
+          "rechts": {
+            "titel": "Hilfsgutachten",
+            "punkte": [
+              "Wenn es nach deiner Lösung nicht mehr darauf ankommt",
+              "Nur soweit verlangt"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Wo es kippt",
+          "text": "Wer die Akte zuerst liest, löst den Fall oft aus der falschen Rolle: Er entscheidet, wo er beraten soll, oder prüft Zustellungen, die unterstellt sind. Beides kostet Zeit und trifft nicht die Aufgabe."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst der Vermerk, dann die Akte: Rolle, Produkt und Unterstellungen bestimmen, was du überhaupt prüfst."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem Aktenstudium klären",
+          "punkte": [
+            "Wer bin ich – Gericht oder Anwalt?",
+            "Welches Produkt wird verlangt?",
+            "Was ist unterstellt?"
+          ],
+          "icons": [
+            "richter",
+            "dokument",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Gleiche Akte, anderer Auftrag: Ob du ein Urteil entwirfst oder einen Mandanten berätst, steht im Vermerk für die Bearbeitung. Er legt Rolle, Produkt und Unterstellungen fest. Wer zuerst die Akte liest, löst den Fall schnell aus der falschen Rolle. Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#assessorexamen",
+        "#zpo",
+        "#klausurtraining",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Richter- oder Anwaltsklausur: Vermerk entscheidet",
+      "coverText": "Rolle vor Rechtsfrage",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Dieselbe Akte wird zu einer anderen Aufgabe, je nachdem, welche Rolle man einnimmt.",
+        "handlung": "{A} hovers over a single file and projects two different hats above it, while {B} curiously reaches for one of the hats.",
+        "hinweisRegie": "Place the note in the free space between the two projected hats, slightly tilted, so the choice of role above the one file is clear without covering faces.",
+        "alternative": "{B} stands at a fork with one file under her arm, while {A} holds up two differently shaped keys."
+      },
+      "bildSzene": "one file, two hats",
+      "bildSzeneAlt": "fork with two keys",
+      "quellen": [
+        "Themenpool: assessorz-803"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "rollenwechsel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:31:58.261Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-799",
+      "slug": "2027-09-16-b3",
+      "titelZeilen": [
+        "Beweiswürdigung",
+        "unangreifbar? Mit",
+        "der Sachrüge nicht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Beweiswürdigung unangreifbar? Mit der Sachrüge nicht",
+          "unter": "Sachrüge · Revision",
+          "text": "Die Würdigung ist Sache des Tatrichters – ihre Rechtsfehler nicht.",
+          "norm": "§ 261 StPO",
+          "icon": "lupe",
+          "sprecher": "Die Beweiswürdigung ist unangreifbar? Nicht ganz. Mit der allgemeinen Sachrüge prüft das Revisionsgericht auch sie – aber nur auf Rechtsfehler.",
+          "marken": [
+            "Sachrüge",
+            "nur Rechtsfehler"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Grundlage ist nur das Urteil",
+          "text": "Geprüft wird die Urteilsurkunde – nicht Akte oder Protokoll.",
+          "norm": null,
+          "sprecher": "Schritt eins: Grundlage der Sachrüge ist allein das schriftliche Urteil. Was nur in der Akte oder im Protokoll steht, kommt über die Sachrüge nicht ins Spiel.",
+          "marken": [
+            "nur Urteilsurkunde"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Tragen die Feststellungen den Schuldspruch?",
+          "text": "Jedes Tatbestandsmerkmal braucht festgestellte Tatsachen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Tragen die Feststellungen den Schuldspruch? Fehlt für ein Merkmal die Tatsachengrundlage, ist das ein sachlich-rechtlicher Fehler.",
+          "marken": [
+            "Subsumtion"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Beweiswürdigung auf Rechtsfehler",
+          "text": "Lücken, Widersprüche, Verstöße gegen Denkgesetze oder Erfahrungssätze.",
+          "norm": "§ 261 StPO",
+          "sprecher": "Schritt drei: die Beweiswürdigung. Das Revisionsgericht würdigt nicht neu. Es prüft, ob sie lückenhaft, widersprüchlich oder unklar ist oder gegen Denkgesetze und gesicherte Erfahrungssätze verstößt.",
+          "marken": [
+            "Lücke",
+            "Widerspruch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Strafzumessung auf Rechtsfehler",
+          "text": "Falsche Strafrahmen, unzulässige Erwägungen, Doppelverwertung.",
+          "norm": "§ 46 StGB",
+          "sprecher": "Schritt vier: die Strafzumessung. Auch sie bleibt Sache des Tatrichters, aber ein falscher Strafrahmen oder eine verbotene Doppelverwertung nach Paragraf 46 Absatz 3 StGB sind Rechtsfehler.",
+          "marken": [
+            "Strafrahmen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Nicht im Urteil? Dann Verfahrensrüge",
+          "text": "Wer mit dem Akteninhalt argumentiert, braucht eine Verfahrensrüge.",
+          "norm": null,
+          "sprecher": "Und wenn du mit etwas aus der Hauptverhandlung argumentierst, das nicht im Urteil steht? Dann brauchst du eine Verfahrensrüge, keine Sachrüge.",
+          "marken": [
+            "Verfahrensrüge"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Nicht neu würdigen – Fehler suchen",
+          "text": "Die Sachrüge öffnet das ganze Urteil, aber nur für Rechtsfehler.",
+          "norm": null,
+          "sprecher": "Merke: Die Sachrüge öffnet das ganze Urteil – auch die Beweiswürdigung. Aber gesucht werden Rechtsfehler, keine bessere Würdigung.",
+          "marken": [
+            "Rechtsfehler"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Sachrüge sicher begründen",
+          "text": "Speichern für die nächste Revisionsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für deine nächste Revisionsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Beweiswürdigung unangreifbar? Mit der Sachrüge nicht ganz. Das Revisionsgericht prüft allein anhand des Urteils, ob die Feststellungen den Schuldspruch tragen und ob Beweiswürdigung und Strafzumessung rechtsfehlerfrei sind: Lücken, Widersprüche, Verstöße gegen Denkgesetze. Was nur in Akte oder Protokoll steht, braucht eine Verfahrensrüge. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#sachrüge",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sachrüge: auch die Beweiswürdigung",
+      "coverText": "Nicht neu würdigen, Fehler finden",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Das Revisionsgericht schaut nicht neu hin, sondern sucht Risse in der Begründung.",
+        "handlung": "{A} taps a large crystal slab with his pointer, while {B} leans in and shines a lamp on a thin crack running through it.",
+        "hinweisRegie": "Place the note in the free space next to the illuminated crack, slightly tilted, so the flaw in the slab is the focus and the pointer and lamp stay visible.",
+        "alternative": "{B} checks the joints of a finished stone arch with a small hammer, while {A} watches with a pointer."
+      },
+      "bildSzene": "lamp on crack in slab",
+      "bildSzeneAlt": "checking joints of stone arch",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 337 StPO",
+        "§ 344 Abs. 2 StPO",
+        "§ 46 StGB",
+        "Themenpool: revision-799"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:31:58.263Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-431",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "Eine AGB-Preisklausel ist angemessen, aber kaum verständlich formuliert. Findet eine Kontrolle statt?",
+      "optionen": [
+        "Nein – Preisabreden sind vollständig kontrollfrei",
+        "Nur nach § 309 Nr. 1 BGB, sonst nicht",
+        "Ja – das Transparenzgebot gilt auch für Preisklauseln"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 307 BGB",
+        "Themenpool: bgbat-431"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:31:58.263Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-431",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – auch eine Preisklausel muss klar und verständlich sein",
+      "text": "Hauptleistungs- und Preisabreden sind nach § 307 Abs. 3 S. 1 BGB von der Angemessenheitsprüfung ausgenommen. § 307 Abs. 3 S. 2 BGB nimmt das Transparenzgebot aber ausdrücklich aus: Eine unklare Klausel kann nach § 307 Abs. 1 S. 2 BGB unangemessen benachteiligen und ist dann unwirksam. An ihre Stelle tritt das Gesetz (§ 306 Abs. 2 BGB).",
+      "norm": "§ 307 Abs. 3 S. 2 BGB",
+      "quellen": [
+        "§ 306 BGB",
+        "§ 307 BGB",
+        "Themenpool: bgbat-431"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:31:58.263Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – Preisabreden sind vollständig kontrollfrei",
+        "Nur nach § 309 Nr. 1 BGB, sonst nicht",
+        "Ja – das Transparenzgebot gilt auch für Preisklauseln"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-158",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 139 BGB: Die salvatorische Klausel rettet den Rest nicht automatisch",
+      "text": "Ist ein Teil nichtig, ist im Zweifel das ganze Geschäft nichtig. Eine salvatorische Erhaltensklausel ändert nach dem BGH nur die Beweislast: Wer Gesamtnichtigkeit will, muss darlegen, dass die Parteien den Rest nicht gewollt hätten. Betrifft der nichtige Teil den Kern des Vertrags, kann das Geschäft trotz Klausel insgesamt fallen.",
+      "norm": "§ 139 BGB",
+      "quellen": [
+        "§ 139 BGB",
+        "Themenpool: bgbat-158"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:31:58.263Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-937",
+      "ueberzeile": "Streitstand Klausurtechnik",
+      "titel": "Notwehr sozialethisch eingeschränkt – verstößt das gegen Art. 103 Abs. 2 GG?",
+      "norm": "Art. 103 Abs. 2 GG · § 32 StGB",
+      "optionen": [
+        "Rspr./h.M.: Nein – das Merkmal „geboten“ in § 32 Abs. 1 StGB trägt die Einschränkungen.",
+        "Teile der Lit.: Art. 103 Abs. 2 GG gilt auch für Rechtfertigungsgründe; eine Reduktion zulasten des Täters ist bedenklich."
+      ],
+      "text": "Methodisch der Kern: Einschränkung durch Auslegung eines offenen Merkmals ist erlaubt, eine teleologische Reduktion zulasten des Täters problematisch. In der Klausur mit der h.M. an „geboten“ anknüpfen – das hält die Lösung im Wortlaut.",
+      "quellen": [
+        "Art. 103 Abs. 2 GG",
+        "§ 32 StGB",
+        "Themenpool: methodik-937"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:31:58.263Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-730",
+      "ueberzeile": "Merksatz Strafrecht AT",
+      "titel": "Alle Merkmale selbst verwirklicht: Gehilfe kann er nicht mehr sein",
+      "text": "Wer sämtliche Tatbestandsmerkmale eigenhändig und voll verantwortlich erfüllt, ist Täter (§ 25 Abs. 1 Alt. 1 StGB) – auch wenn er im fremden Interesse handelt.",
+      "norm": "§ 25 Abs. 1 Alt. 1 StGB",
+      "quellen": [
+        "§ 25 StGB",
+        "Themenpool: strafat-730"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:31:58.263Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-357",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Einspruchsgesetz",
+      "text": "Der Regelfall: Bundesgesetze brauchen die Zustimmung des Bundesrates nur, wo das GG sie ausdrücklich verlangt. Sonst kann der Bundesrat nach dem Vermittlungsverfahren nur Einspruch einlegen (Art. 77 Abs. 3 GG). Den Einspruch kann der Bundestag zurückweisen (Art. 77 Abs. 4 GG) – der Bundesrat verzögert, verhindert aber nicht.",
+      "norm": "Art. 77 Abs. 3, 4 GG",
+      "quellen": [
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Themenpool: staat-357"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:31:58.263Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
