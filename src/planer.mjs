@@ -307,9 +307,19 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
     beitraege[i] = eintrag;
   }
 
-  /* Stories: Teaser je Beitrag + eigenständige Karten, bis zur Tagesmenge. */
+  /* Stories: höchstens wenige, gezielte Feed-Teaser statt einer Kopie jedes
+     Beitrags. Eigene Daten 19.–25.09.: Teaser lagen bei ca. 93 Reach im Schnitt
+     und erzeugten praktisch keine direkte Interaktion. Wenn wir einen Teaser
+     nutzen, bekommt ihn deshalb der laut Lernschleife stärkste Tagesbeitrag. */
   const stories = [];
-  for (const b of beitraege) stories.push({ art: "teaser", beitragSlot: b.slot, zeit: b.zeit });
+  const teaserAnzahl = Math.min(CONFIG.plan.teaserProTag ?? 1, beitraege.length);
+  const formatGewicht = (CONFIG.plan.lernen && strategie?.formatGewicht) || {};
+  const teaserKandidaten = beitraege
+    .map((b, index) => ({ b, index, gewicht: Number(formatGewicht[b.format] ?? 1) }))
+    .sort((a, b) => (b.gewicht - a.gewicht) || (a.index - b.index))
+    .slice(0, teaserAnzahl)
+    .sort((a, b) => a.index - b.index);
+  for (const { b } of teaserKandidaten) stories.push({ art: "teaser", beitragSlot: b.slot, zeit: b.zeit });
   /* Zwei Arten stehen jeden Tag: Die Quizfrage ist das stärkste Format für
      Antworten, die Norm des Tages der Markenkern. Der Rest rotiert, damit
      über die Woche alle Arten drankommen - vorher lief die Liste jeden Tag
@@ -365,10 +375,21 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
   const ohneZeit = stories.filter((s) => !s.zeit);
   const storyZeitenListe = storyZeiten(ohneZeit.length, zufall);
   ohneZeit.forEach((s, i) => { s.zeit = storyZeitenListe[i]; });
-  stories.forEach((s, i) => { s.slot = `s${i + 1}`; });
-  /* Auflösung direkt hinter der Frage – niemand kommt für die Antwort zurück. */
-  for (let i = 0; i < stories.length; i++) if (stories[i].art === "antwort") stories[i].zeit = stories[i - 1].zeit;
+  /* Eine Quizfrage braucht Zeit zum Abstimmen. Die Auflösung kommt standardmäßig
+     vier Stunden später (konfigurierbar), höchstens am Ende des Story-Fensters.
+     Damit wird aus „lesen → sofort Lösung sehen“ ein echter Rückkehr-/Vote-Anlass. */
+  const storyBis = minutenVon(CONFIG.plan.storyFenster[1]);
+  const quizAbstand = Math.max(60, Number(CONFIG.plan.quizAufloesungStunden || 4) * 60);
+  for (let i = 0; i < stories.length; i++) {
+    if (stories[i].art !== "antwort") continue;
+    const frage = stories.slice(0, i).reverse().find((s) => s.art === "frage" && s.thema?.id === stories[i].thema?.id);
+    if (!frage?.zeit) continue;
+    stories[i].zeit = hhmm(Math.min(storyBis, minutenVon(frage.zeit) + quizAbstand));
+  }
   stories.sort((a, b) => minutenVon(a.zeit) - minutenVon(b.zeit));
+  /* Slots folgen der tatsächlichen Chronologie. Das hält Frage/Auflösung und
+     die späteren Insight-Auswertungen nachvollziehbar. */
+  stories.forEach((s, i) => { s.slot = `s${i + 1}`; });
 
   return { datum, wochentag: wt, beitraege, stories, anlass, abendAnlass };
 }
