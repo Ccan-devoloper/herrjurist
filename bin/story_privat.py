@@ -76,7 +76,7 @@ def main():
 
     try:
         from instagrapi import Client
-        from instagrapi.types import StoryPoll, StoryLink
+        from instagrapi.types import StoryPoll, StoryLink, StoryMedia
         from instagrapi.exceptions import (
             ChallengeRequired, TwoFactorRequired, LoginRequired,
             PleaseWaitFewMinutes, ClientError,
@@ -135,7 +135,7 @@ def main():
         antwort(ok=True, medienId="", sitzung=client.get_settings())
 
     # --- Story hochladen ------------------------------------------------
-    polls, links = [], []
+    polls, links, medias = [], [], []
     u = auftrag.get("umfrage")
     if u:
         polls.append(StoryPoll(
@@ -146,9 +146,20 @@ def main():
     if l:
         links.append(StoryLink(webUri=l["url"], x=l.get("x", 0.5), y=l.get("y", 0.82),
                                width=l.get("width", 0.6), height=l.get("height", 0.07)))
+    m = auftrag.get("medium")
+    if m:
+        try:
+            medias.append(StoryMedia(
+                media_pk=int(m["media_pk"]),
+                x=m.get("x", 0.5), y=m.get("y", 0.79),
+                width=m.get("width", 0.48), height=m.get("height", 0.22),
+            ))
+        except (KeyError, TypeError, ValueError) as e:
+            antwort(ok=False, art="aufbau", fehler=f"Ungültiger Media-Sticker: {e}",
+                    sitzung=client.get_settings())
 
     try:
-        story = client.photo_upload_to_story(bild, links=links, polls=polls)
+        story = client.photo_upload_to_story(bild, links=links, medias=medias, polls=polls)
     except ChallengeRequired:
         antwort(ok=False, art="challenge", fehler="Challenge beim Hochladen - NICHT wiederholen",
                 sitzung=client.get_settings())

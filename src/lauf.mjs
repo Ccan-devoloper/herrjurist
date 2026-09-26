@@ -29,7 +29,7 @@ import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, b
 import { reelBauen, layoutFuer } from "./reel.mjs";
 import { motiveVerteilen } from "./erklaervideo.mjs";
 import { beitragRendern, storyRendern, storyRendernInteraktiv, browserBeenden } from "./render.mjs";
-import { interaktivGeplant, interaktivPosten, umfrageBauen, sperreAktiv } from "./interaktiv.mjs";
+import { interaktivGeplant, interaktivPosten, umfrageBauen, medienStickerGeplant, medienStickerBauen, sperreAktiv } from "./interaktiv.mjs";
 import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
 import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets as vorproduktionFeedAssets, storyAsset as vorproduktionStoryAsset, feedWartezeitMs } from "./vorproduktion-live.mjs";
@@ -1223,6 +1223,7 @@ async function main() {
     if (frei() <= 0) { log("Tageskontingent erschöpft – Story verschoben."); break; }
     try {
       let story;
+      let teaserMedienId = null;
       if (eintrag.art === "teaser") {
         let beitrag = fertigeBeitraege.get(eintrag.beitragSlot) || hosting.jsonLesen(`inhalte/${datum}-${eintrag.beitragSlot}.json`, null);
         const b = plan.beitraege.find((x) => x.slot === eintrag.beitragSlot);
@@ -1230,6 +1231,7 @@ async function main() {
            Medien-ID nicht gibt. Der Planstatus allein reicht nicht: Am 18.09.
            stand er auf „veröffentlicht“, während die ID „trocken“ lautete. */
         if (!beitrag || !veroeffentlichtBestaetigt(b)) { log(`Story ${eintrag.slot}: Beitrag ${eintrag.beitragSlot} noch nicht veröffentlicht – später.`); continue; }
+        teaserMedienId = b.medienId;
         story = teaserAusBeitrag(beitrag, eintrag.slot);
       } else {
         story = geschrieben.get(eintrag.slot);
@@ -1274,43 +1276,74 @@ async function main() {
       }
 
       let medienId = null;
-      if (vorproduktionAktiv) {
+      const zielBild = path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`);
+      const stilOpt = { variante: varianteStory(eintrag.slot) };
+      const pollGeplant = interaktivGeplant(story);
+      const mediaStickerGeplant = medienStickerGeplant(story, teaserMedienId);
+
+      /* Private Zusatzschnittstelle nur dort, wo sie echten Mehrwert bringt:
+         Quiz = abstimmbar, Teaser = antippbarer Feed-Media-Sticker. Der Weg ist
+         vollständig optional; jeder Fehler fällt auf den offiziellen Graph-
+         Upload zurück. Das gilt auch bei Vorproduktion. */
+      if (!trocken && (pollGeplant || mediaStickerGeplant) && !sperreAktiv(ledger)) {
+        try {
+          let pfad, umfrage = null;
+          if (pollGeplant) {
+            const gerendert = await storyRendernInteraktiv(story, zielBild, stilOpt);
+            pfad = gerendert.pfad;
+            umfrage = umfrageBauen(story, gerendert.platz);
+          } else {
+            pfad = await storyRendern(story, zielBild, stilOpt);
+          }
+          medienId = await interaktivPosten({
+            bildPfad: pfad,
+            umfrage,
+            medium: mediaStickerGeplant ? medienStickerBauen(teaserMedienId) : null,
+            stateDir: hosting.stateDir,
+            ledger,
+            log,
+          });
+          eintrag.interaktiv = true;
+          eintrag.interaktivTyp = pollGeplant ? "umfrage" : "feed-sticker";
+          kontingent.genutzt += 1;
+          await hosting.veroeffentlichen([pfad], datum, `Story ${datum} ${eintrag.slot} (interaktiv)`);
+        } catch (e) {
+          const was = pollGeplant ? "Umfrage" : "Feed-Sticker";
+          console.warn(`  ! ${was} für Story ${eintrag.slot} nicht gesetzt (${e.art || "fehler"}: ${e.message}) – offizieller Story-Upload folgt.`);
+        }
+      }
+
+      if (!medienId && vorproduktionAktiv) {
         const asset = vorproduktionStoryAsset(vorproduktion, eintrag.slot);
         medienId = await ig.storyPosten({ bildUrl: asset.bildUrl });
         kontingent.genutzt += 1;
         log(`  Vorproduktion: fertige Story ${eintrag.slot} wird unverändert verwendet.`);
-      } else {
+      } else if (!medienId) {
         /* Bild in der Story: nur, wo der Autor eine Szene genannt hat (Begriff,
            Tipp); der Teaser bringt den Freisteller des Beitrags schon mit. */
         await motivBesorgen(story, "Story-Motiv", { ki: false });
-        const zielBild = path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`);
-        const stilOpt = { variante: varianteStory(eintrag.slot) };
-
-        if (!trocken && interaktivGeplant(story) && !sperreAktiv(ledger)) {
-          try {
-            const { pfad, platz } = await storyRendernInteraktiv(story, zielBild, stilOpt);
-            medienId = await interaktivPosten({ bildPfad: pfad, umfrage: umfrageBauen(story, platz), stateDir: hosting.stateDir, ledger, log });
-            eintrag.interaktiv = true;
-            await hosting.veroeffentlichen([pfad], datum, `Story ${datum} ${eintrag.slot} (interaktiv)`);
-          } catch (e) {
-            console.warn(`  ! Umfrage für Story ${eintrag.slot} nicht gesetzt (${e.art || "fehler"}: ${e.message}) – normale Story folgt.`);
-          }
-        }
-        if (!medienId) {
-          const bild = await storyRendern(story, zielBild, stilOpt);
-          const [url] = await hosting.veroeffentlichen([bild], datum, `Story ${datum} ${eintrag.slot}`);
-          medienId = await ig.storyPosten({ bildUrl: url });
-          kontingent.genutzt += 1;
-        }
+        const bild = await storyRendern(story, zielBild, stilOpt);
+        const [url] = await hosting.veroeffentlichen([bild], datum, `Story ${datum} ${eintrag.slot}`);
+        medienId = await ig.storyPosten({ bildUrl: url });
+        kontingent.genutzt += 1;
       }
       const echt = veroeffentlichungEintragen(eintrag, medienId);
       if (!echt.bestaetigt) { probelaeufe.push({ slot: eintrag.slot, art: "story", kennung: echt.kennung, zeit: new Date().toISOString() }); log(`  ○ Probelauf: Story ${eintrag.slot} ${echt.grund} – der Plan bleibt unverändert.`); }
-      if (echt.bestaetigt) vermerken(ledger, { datum, art: "story", slot: eintrag.slot, storyArt: story.art, thema: story.themaId || eintrag.themaId || null, fach: story.fach, titel: story.titel || story.text || "", medienId, veroeffentlicht: new Date().toISOString() });
+      if (echt.bestaetigt) vermerken(ledger, {
+        datum, art: "story", slot: eintrag.slot, storyArt: story.art,
+        thema: story.themaId || eintrag.themaId || null, fach: story.fach,
+        titel: story.titel || story.text || "", medienId,
+        beitragSlot: eintrag.beitragSlot || null,
+        zielMedienId: teaserMedienId || null,
+        interaktiv: !!eintrag.interaktiv,
+        interaktivTyp: eintrag.interaktivTyp || null,
+        veroeffentlicht: new Date().toISOString(),
+      });
       ledgerSpeichern(ledgerPfad, ledger);
       planSpeichern(hosting, plan);
       hosting.commit(`Veröffentlicht: Story ${datum} ${eintrag.slot}`);
       await hosting.push();
-      if (echt.bestaetigt) log(`  ✓ Story ${eintrag.slot} ${story.art}${eintrag.interaktiv ? " mit Umfrage" : ""} → ${medienId}`);
+      if (echt.bestaetigt) log(`  ✓ Story ${eintrag.slot} ${story.art}${eintrag.interaktivTyp === "umfrage" ? " mit Umfrage" : eintrag.interaktivTyp === "feed-sticker" ? " mit Feed-Sticker" : ""} → ${medienId}`);
       else log(`  ○ Story ${eintrag.slot} ${story.art} gerendert, aber nicht gesendet.`);
     } catch (e) {
       if (istKostenKontrollFehler(e)) { log(`  ⏸ ${e.message}`); continue; }
