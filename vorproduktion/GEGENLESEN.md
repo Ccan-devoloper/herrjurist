@@ -55,3 +55,9 @@ Art. 229 § 72 EGBGB). Stammt aus dem Themenpool, von keinem Agenten verifiziert
 2027-02-25 s7 (geprüft, vorsichtiger gefasst), 2027-04-06 s8, 2027-04-13 b1, 2027-04-20 s8, 2027-05-24 s9,
 2027-06-03 s7, 2027-06-15 b1, 2027-06-29 s8, 2027-07-27 s8, 2027-08-05 s7, 2027-08-16 s9, 2027-09-09 s7,
 2027-09-15 s7, 2027-10-06 s7.
+
+## 5. Aus der Schlussrunde
+- 2027-10-09 s8 öffentliche Zustellung einer Kündigung (§ 132 Abs. 2 BGB, Frist § 188 ZPO).
+- 2027-02-13 b2 Strafzumessung in der Revision (§ 354 Abs. 1a StPO).
+- Inhaltlich ähnlich trotz verschiedener Titel (bewusst belassen): Probeklausur-Reels 2027-09-04/10-09,
+  Schmerzensgeld ohne Betrag (3×), Scherzerklärung 2027-01-24/07-16.
