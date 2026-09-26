@@ -1,0 +1,55 @@
+name: Verify visual story approval without provider costs
+on:
+  push:
+    branches: [fix/visuelle-story-freigabe-ohne-api-kosten]
+    paths:
+      - .github/workflows/prepare-story-render-fix.yml
+permissions:
+  contents: write
+concurrency:
+  group: verify-visual-story-approval
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/visuelle-story-freigabe-ohne-api-kosten
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install test dependencies only, without lifecycle scripts or provider credentials
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Apply scoped patch and verify unchanged approved GitHub media
+        run: node .github/prepare-story-render-fix.mjs
+      - name: Offline regression tests, including actual tomorrow's assets
+        shell: bash
+        run: |
+          cat > .tmp/no-network.mjs <<'NODE'
+          import http from 'node:http';
+          import https from 'node:https';
+          const deny = () => { throw new Error('NETWORK_DISABLED_DURING_TESTS'); };
+          globalThis.fetch = async () => deny();
+          http.request = deny;
+          http.get = deny;
+          https.request = deny;
+          https.get = deny;
+          NODE
+          export IG_PREFLIGHT_ASSET_DIR="$PWD/.tmp/story-gate-assets"
+          export NODE_OPTIONS="--import=$PWD/.tmp/no-network.mjs"
+          node --test test/story-render-freigabe.test.mjs
+          node --test test/*.test.mjs > /tmp/story-fix-suite.log 2>&1 || { tail -100 /tmp/story-fix-suite.log; grep -A 25 '^not ok' /tmp/story-fix-suite.log; exit 1; }
+          tail -12 /tmp/story-fix-suite.log
+          git diff --check
+      - name: Lint changed production and test files
+        run: ./node_modules/.bin/eslint src/story-render-freigabe.mjs src/provider-kostensperre.mjs src/pruefung.mjs src/lauf.mjs src/anbieter.mjs src/stimme.mjs src/stimmen.mjs test/story-render-freigabe.test.mjs
+      - name: Commit tested code and approval records to feature branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/pruefung.mjs src/lauf.mjs src/anbieter.mjs src/stimme.mjs src/stimmen.mjs .github/workflows/instagram.yml config/story-render-freigaben.json
+          git commit -m 'fix: approve exact visible story renders and forbid paid APIs in Instagram runs'
+          git push origin HEAD:fix/visuelle-story-freigabe-ohne-api-kosten
+          git rev-parse HEAD
