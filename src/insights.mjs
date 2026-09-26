@@ -15,13 +15,26 @@
 import { CONFIG } from "./config.mjs";
 import { hhmm } from "./zeit.mjs";
 
-const METRIKEN_BILD = "reach,saved,shares,likes,comments,total_interactions";
-const METRIKEN_REEL = "reach,saved,shares,likes,comments,total_interactions,views";
-const METRIKEN_REEL_WATCH = "ig_reels_avg_watch_time,ig_reels_video_view_total_time";
-const METRIK_REEL_SKIP = "reels_skip_rate";
+/* Seit Graph API v22 ist `views` die formatübergreifende Sichtbarkeitsmetrik:
+   Bilder und Karussells brauchen sie genauso wie Reels. Die Media-Insights sind
+   Lifetime-Zähler; deshalb speichern wir weiter mehrere Snapshots und können
+   damit die Wachstumskurve jedes Beitrags rekonstruieren. */
+const METRIKEN_FEED = ["reach", "views", "saved", "shares", "likes", "comments", "total_interactions"];
+const METRIKEN_REEL_WATCH = ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time"];
+const METRIKEN_REEL_OPTIONAL = ["reels_skip_rate"];
+const METRIKEN_MEDIA_OPTIONAL = ["reposts"];
 /* Wachstumskennzahlen: neue Follower und Profilbesuche je Beitrag – nicht jede
-   API-Version liefert sie, deshalb mit Rückfall auf die Grundmetriken. */
-const METRIKEN_WACHSTUM = "follows,profile_visits";
+   API-Version liefert sie, deshalb tolerant und getrennt von den Kernmetriken. */
+const METRIKEN_WACHSTUM = ["follows", "profile_visits"];
+
+/* Kontoweit speichern wir die wichtigsten App-Ansichten für die üblichen
+   Vergleichsfenster. Ein fehlendes/neu eingeführtes Feld darf nie die übrigen
+   Kennzahlen mitreißen. */
+const METRIKEN_KONTO = [
+  "views", "reach", "accounts_engaged", "total_interactions",
+  "likes", "comments", "shares", "saves", "replies", "reposts",
+  "profile_links_taps",
+];
 
 /* Stories haben einen eigenen Metriksatz. Anders als Feed/Reels sind ihre
    Insights nur kurz verfuegbar; deshalb werden sie durch den stuendlichen
@@ -48,30 +61,39 @@ function werte(r) {
   return o;
 }
 
-/* Kennzahlen eines Mediums (Fehler → null, z. B. fehlende Berechtigung). */
-export async function medienInsights(ig, medium) {
-  const istReel = medium.media_type === "VIDEO" || medium.media_product_type === "REELS";
-  const basis = istReel ? METRIKEN_REEL : METRIKEN_BILD;
+/* Eine Metrikgruppe zuerst günstig in einem Request lesen. Scheitert die
+   Gruppe (z. B. weil Meta ein Feld auf diesem Konto noch nicht ausrollt),
+   werden die Felder einzeln probiert. So kostet ein neues/fehlendes Feld nicht
+   den ganzen Datensatz. */
+async function metrikenTolerant(ig, id, metriken, extra = {}) {
+  const liste = [...new Set((metriken || []).filter(Boolean))];
+  const out = {};
+  if (!liste.length) return out;
   try {
-    let out;
-    try {
-      out = werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: `${basis},${METRIKEN_WACHSTUM}` }, { versuche: 1 }));
-    } catch {
-      out = werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: basis }));
-    }
-    /* Instagram nennt neben Sends/Likes auch Watch Time als zentrales
-       Rankingsignal. Die Reel-Watch-Metriken werden separat abgefragt:
-       Falls ein Konto/API-Stand sie nicht liefert, verlieren wir dadurch
-       nicht die robusten Basis-Insights. */
-    if (istReel) {
-      try { Object.assign(out, werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: METRIKEN_REEL_WATCH }, { versuche: 1 }))); }
-      catch { /* optionale Metrik, Basiswerte bleiben */ }
-      /* Meta liefert die Skip-Rate nicht auf jedem Konto/API-Stand. Deshalb
-         separat: Ein unbekanntes Feld darf die Watch-Time nicht mitreißen. */
-      try { Object.assign(out, werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: METRIK_REEL_SKIP }, { versuche: 1 }))); }
-      catch { /* optional */ }
-    }
+    Object.assign(out, werte(await ig.anfrage("GET", `${id}/insights`, { metric: liste.join(","), ...extra }, { versuche: 1 })));
     return out;
+  } catch { /* unten einzeln */ }
+  for (const metric of liste) {
+    try { Object.assign(out, werte(await ig.anfrage("GET", `${id}/insights`, { metric, ...extra }, { versuche: 1 }))); }
+    catch { /* optional/auf diesem Konto nicht verfügbar */ }
+  }
+  return out;
+}
+
+/* Kennzahlen eines Mediums. `views` wird für ALLE Feed-Formate erhoben,
+   nicht nur für Reels. Damit sind Karussell-Ansichten künftig genauso
+   rekonstruierbar wie Reel-Views. */
+export async function medienInsights(ig, medium) {
+  try {
+    const istReel = medium.media_type === "VIDEO" || medium.media_product_type === "REELS";
+    const out = await metrikenTolerant(ig, medium.id, METRIKEN_FEED);
+    Object.assign(out, await metrikenTolerant(ig, medium.id, METRIKEN_WACHSTUM));
+    Object.assign(out, await metrikenTolerant(ig, medium.id, METRIKEN_MEDIA_OPTIONAL));
+    if (istReel) {
+      Object.assign(out, await metrikenTolerant(ig, medium.id, METRIKEN_REEL_WATCH));
+      Object.assign(out, await metrikenTolerant(ig, medium.id, METRIKEN_REEL_OPTIONAL));
+    }
+    return Object.keys(out).length ? out : null;
   } catch {
     return null;
   }
@@ -327,15 +349,46 @@ export async function kontoSnapshotAktualisieren(ig, snapshots, {
   }
 }
 
-/* Konto: Follower, Reichweite der letzten 7 Tage, Online-Stunden. */
+function totalWerte(r) {
+  const out = {};
+  for (const m of r?.data || []) {
+    const v = m?.total_value?.value;
+    if (typeof v === "number" && Number.isFinite(v)) out[m.name] = v;
+    else if (Array.isArray(m?.values)) out[m.name] = m.values.reduce((a, x) => a + (Number(x?.value) || 0), 0);
+  }
+  return out;
+}
+
+async function kontoMetrikenZeitraum(ig, tage) {
+  const bis = Math.floor(Date.now() / 1000);
+  const extra = { period: "day", metric_type: "total_value", since: bis - tage * 86400, until: bis };
+  try {
+    const r = await ig.anfrage("GET", `${ig.kontoId}/insights`, { metric: METRIKEN_KONTO.join(","), ...extra }, { versuche: 1 });
+    return totalWerte(r);
+  } catch { /* einzelne Metriken sichern */ }
+  const out = {};
+  for (const metric of METRIKEN_KONTO) {
+    try {
+      Object.assign(out, totalWerte(await ig.anfrage("GET", `${ig.kontoId}/insights`, { metric, ...extra }, { versuche: 1 })));
+    } catch { /* auf diesem Login/API-Stand nicht verfügbar */ }
+  }
+  return out;
+}
+
+/* Konto: Follower plus vollständige Kernmetriken für 7/14/30 Tage. Damit lässt
+   sich die Zahl „Ansichten“ aus Instagram künftig direkt mit unseren
+   gespeicherten API-Snapshots abgleichen, statt nur aus einzelnen Posts zu
+   schätzen. */
 export async function kontoInsights(ig) {
-  const out = { follower: null, reichweite7: null, onlineStunden: null };
+  const out = { follower: null, reichweite7: null, ansichten7: null, onlineStunden: null, zeitraeume: {} };
   try { out.follower = (await ig.anfrage("GET", ig.kontoId, { fields: "followers_count,media_count" })).followers_count; } catch { /* egal */ }
   try { const p = await ig.anfrage("GET", ig.kontoId, { fields: "biography,website,profile_picture_url,name" }, { versuche: 1 }); out.profil = { bio: p.biography || "", website: p.website || "", bild: !!p.profile_picture_url, name: p.name || "" }; } catch { /* egal */ }
-  try {
-    const r = await ig.anfrage("GET", `${ig.kontoId}/insights`, { metric: "reach", period: "day", metric_type: "total_value", since: Math.floor(Date.now() / 1000) - 7 * 86400, until: Math.floor(Date.now() / 1000) });
-    out.reichweite7 = r.data?.[0]?.total_value?.value ?? r.data?.[0]?.values?.reduce((a, v) => a + (v.value || 0), 0) ?? null;
-  } catch { /* egal */ }
+  for (const tage of [7, 14, 30]) {
+    const m = await kontoMetrikenZeitraum(ig, tage);
+    if (Object.keys(m).length) out.zeitraeume[String(tage)] = m;
+  }
+  out.reichweite7 = out.zeitraeume["7"]?.reach ?? null;
+  out.ansichten7 = out.zeitraeume["7"]?.views ?? null;
   try {
     const r = await ig.anfrage("GET", `${ig.kontoId}/insights`, { metric: "online_followers", period: "lifetime" });
     const v = r.data?.[0]?.values?.[0]?.value;
@@ -427,7 +480,7 @@ export function dauerWaehlen(datum, strategie = null, { min = 0 } = {}) {
 
 export function strategieAbleiten(ledger, konto = {}) {
   const eintraege = (ledger.veroeffentlicht || []).filter((e) => e.art === "beitrag" && e.insights && punkte(e.insights) != null);
-  const strategie = { stand: new Date().toISOString().slice(0, 10), beitraege: eintraege.length, formatGewicht: {}, fachGewicht: {}, hookGewicht: {}, besteStunden: null, follower: konto.follower ?? null, reichweite7: konto.reichweite7 ?? null };
+  const strategie = { stand: new Date().toISOString().slice(0, 10), beitraege: eintraege.length, formatGewicht: {}, fachGewicht: {}, hookGewicht: {}, besteStunden: null, follower: konto.follower ?? null, reichweite7: konto.reichweite7 ?? null, ansichten7: konto.ansichten7 ?? null, kontoZeitraeume: konto.zeitraeume || {} };
   if (eintraege.length >= 6) {
     const mittel = eintraege.reduce((a, e) => a + punkte(e.insights), 0) / eintraege.length || 1;
     const gruppe = (key, scorer = (m) => punkte(m)) => {
@@ -528,7 +581,16 @@ export async function lernschleife(ig, ledger, hosting, { log = console.log } = 
   hosting.jsonSchreiben("strategie.json", strategie);
   /* Follower-Verlauf für den Bericht. */
   const verlauf = hosting.jsonLesen("follower.json", []);
-  if (konto.follower != null) { verlauf.push({ datum: new Date().toISOString().slice(0, 10), follower: konto.follower, reichweite7: konto.reichweite7 }); hosting.jsonSchreiben("follower.json", verlauf.slice(-400)); }
+  if (konto.follower != null) {
+    verlauf.push({
+      datum: new Date().toISOString().slice(0, 10),
+      follower: konto.follower,
+      reichweite7: konto.reichweite7,
+      ansichten7: konto.ansichten7,
+      zeitraeume: konto.zeitraeume || {},
+    });
+    hosting.jsonSchreiben("follower.json", verlauf.slice(-400));
+  }
   log(`Lernschleife: ${n} Beiträge gemessen · ${strategie.beitraege} bewertet · Follower ${konto.follower ?? "?"} · beste Zeiten ${strategie.besteStunden?.join(", ") || "Standard"}`);
   return { strategie, konto };
 }
