@@ -1,0 +1,37 @@
+name: Testreel § 224 · Microstory
+
+on:
+  push:
+    branches: [codex/reel-test-20260927]
+    paths:
+      - 'reel-test-2026-09-27/**'
+      - '.github/workflows/reel-test-20260927.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: ffmpeg bereitstellen
+        run: sudo apt-get update -qq >/dev/null && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: ElevenLabs sprechen und Reel rendern
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL: ${{ vars.ELEVENLABS_MODEL }}
+        run: node reel-test-2026-09-27/render.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reel-test-2026-09-27
+          path: |
+            reel-test-2026-09-27/out/herrjurist-224-microstory-test.mp4
+            reel-test-2026-09-27/out/sprecher-elevenlabs.mp3
+            reel-test-2026-09-27/out/timing.json
+          if-no-files-found: warn
+          retention-days: 30
