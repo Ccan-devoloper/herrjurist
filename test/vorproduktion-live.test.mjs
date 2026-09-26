@@ -97,6 +97,17 @@ test("Feed-Wartezeit zielt auf die echte Veröffentlichungsminute",()=>{
   assert.equal(feedWartezeitMs(plan,6*3600),90*60*1000);
 });
 
+test("Frühe Story bestimmt die Wartezeit vor einem späteren Feed-Slot",()=>{
+  const plan={
+    beitraege:[{slot:"b1",zeit:"08:30",status:"geplant"}],
+    stories:[
+      {slot:"s4",zeit:"07:15",status:"geplant"},
+      {slot:"s5",zeit:"07:15",status:"veroeffentlicht"}
+    ]
+  };
+  assert.equal(feedWartezeitMs(plan,7*3600+5*60),10*60*1000);
+});
+
 test("Kein Warten wenn ein Feed-Slot bereits fällig ist oder zu weit entfernt liegt",()=>{
   assert.equal(feedWartezeitMs({beitraege:[{zeit:"07:30",status:"geplant"}]},7*3600+31*60),0);
   assert.equal(feedWartezeitMs({beitraege:[{zeit:"12:00",status:"geplant"}]},9*3600),0);
