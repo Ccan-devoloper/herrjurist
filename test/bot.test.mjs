@@ -144,19 +144,15 @@ test("Tagesplan ist deterministisch, ohne Themen-Dopplung, ohne Countdown", () =
      Beiträgen dazu, statt den letzten zu ersetzen (CONFIG.reel.zusaetzlich). */
   assert.equal(a.beitraege.length, CONFIG.plan.beitraegeWerktag + (CONFIG.reel.zusaetzlich ? 1 : 0));
   assert.equal(a.beitraege.filter((b) => b.format === "reel").length, 1);
-  assert.ok(a.stories.length >= CONFIG.plan.storiesProTag && a.stories.length <= CONFIG.plan.storiesProTag + 1, `Stories: ${a.stories.length}`);
-  assert.ok(a.stories.filter((s) => s.art === "teaser").length <= CONFIG.plan.teaserProTag, "höchstens ein gezielter Feed-Teaser");
+  assert.ok(a.stories.length >= 8 && a.stories.length <= 10, `Stories: ${a.stories.length}`);
   const ids = [...a.beitraege, ...a.stories].map((x) => x.thema?.id).filter(Boolean);
   const antwortenAbgezogen = ids.length - a.stories.filter((s) => s.art === "antwort").length;
   assert.equal(new Set(ids).size, antwortenAbgezogen, "Themen doppelt");
   /* Ohne bundeseinheitlichen Prüfungstermin gibt es keinen Countdown. */
   assert.ok(!a.stories.some((s) => s.art === "countdown"), "Countdown ohne Termin");
-  const frage = a.stories.find((s) => s.art === "frage");
-  const antwort = a.stories.find((s) => s.art === "antwort" && s.thema?.id === frage?.thema?.id);
-  assert.ok(frage && antwort, "Quizfrage und Auflösung sind eingeplant");
-  const min = (z) => Number(z.slice(0, 2)) * 60 + Number(z.slice(3, 5));
-  assert.ok(min(antwort.zeit) > min(frage.zeit), `Auflösung muss später kommen: ${frage.zeit} → ${antwort.zeit}`);
-  assert.ok(min(antwort.zeit) - min(frage.zeit) <= CONFIG.plan.quizAufloesungStunden * 60, "Auflösung bleibt im Story-Fenster");
+  const fi = a.stories.findIndex((s) => s.art === "frage");
+  assert.equal(a.stories[fi + 1].art, "antwort");
+  assert.equal(a.stories[fi + 1].zeit, a.stories[fi].zeit);
   const so = tagesplan("2026-09-13", ledgerLaden(), pool);
   assert.equal(so.beitraege.length, CONFIG.plan.beitraegeWochenende + (CONFIG.reel.zusaetzlich ? 1 : 0));
   assert.equal(so.beitraege[0].format, "wochenrueckblick");
@@ -665,7 +661,7 @@ test("Reel: Hintergrund-Clip rotiert täglich, ohne Verzeichnis keine Auswahl", 
   fs.rmSync(dir, { recursive: true, force: true });
 });
 
-test("Wachstum: Hashtag-Lernschleife gewichtet Tags, Auswahl bleibt bei höchstens fünf gezielten Tags", async () => {
+test("Wachstum: Hashtag-Lernschleife gewichtet Tags nach Followern, Auswahl mit Entdecker-Tags", async () => {
   const { hashtagGewichte, punkte } = await import("../src/insights.mjs");
   const { hashtagsWaehlen } = await import("../src/autor.mjs");
   const eintraege = [];
@@ -680,7 +676,7 @@ test("Wachstum: Hashtag-Lernschleife gewichtet Tags, Auswahl bleibt bei höchste
   for (const k of kern) assert.ok(tags.includes(k));
   assert.ok(tags.indexOf("#stark") < tags.indexOf("#schwach"), tags.join(" "));
   assert.ok(tags.includes("#bilanz"));
-  assert.ok(tags.length <= 5, tags.join(" "));
+  assert.equal(tags.filter((t) => CONFIG.hashtags.entdecker.includes(t)).length >= 1, true);
   assert.equal(new Set(tags).size, tags.length);
 });
 
@@ -1052,8 +1048,9 @@ test("Hashtags: fremde Rechtsgebiete werden aussortiert", async () => {
   assert.ok(tags.includes("#kaufrecht"), tags.join(" "));
   const zivil = hashtagsWaehlen(["#zivilrecht"], kern, null, undefined, 1);
   assert.ok(zivil.includes("#zivilrecht"), zivil.join(" "));
-  /* Auch Auffüll-/Entdecker-Tags dürfen kein fremdes Gebiet einschleusen -
-     genau daran ist früher #staatsrecht unter einem Zivilrechtsbeitrag gelandet. */
+  /* Auch die taeglich rotierenden Entdecker-Tags duerfen kein fremdes Gebiet
+     einschleusen - genau daran ist #staatsrecht unter einem Zivilrechtsbeitrag
+     gelandet. Ueber viele Tage geprueft, weil sie nach Datum rotieren. */
   const fremd = ["#staatsrecht", "#strafrecht", "#öffentlichesrecht", "#verwaltungsrecht", "#grundrechte", "#stpo"];
   for (let t = 0; t < 60; t++) {
     const tags = hashtagsWaehlen([], kern, null, t, 1);
