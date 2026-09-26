@@ -57,9 +57,9 @@ for (let i = 0; i < 5; i++) {
   const output = path.join(out, `segment-${String(i + 1).padStart(2, '0')}.mp4`);
   const fps = 30;
   const frames = Math.ceil(duration * fps);
-  let filter = `scale=1080:1920,zoompan=z='min(zoom+0.00020,1.045)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=${fps},format=yuv420p`;
-  if (i === 0) filter += `,drawtext=fontfile=${font}:text='Ein Becher?':fontsize=76:fontcolor=white:borderw=4:bordercolor=black:box=1:boxcolor=black@0.58:boxborderw=20:x=(w-text_w)/2:y=250`;
-  if (i === 4) filter += `,drawtext=fontfile=${font}:text='§ 224 I Nr. 2':fontsize=70:fontcolor=white:borderw=4:bordercolor=black:box=1:boxcolor=black@0.58:boxborderw=20:x=(w-text_w)/2:y=260`;
+  let filter = `scale=1080:1920,zoompan=z='if(lt(mod(on,110),55),1.015+mod(on,55)*0.00020,1.105+mod(on,55)*0.00020)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=${fps},format=yuv420p`;
+  if (i === 0) filter += `,drawtext=fontfile=${font}:text='Ein Becher?':fontsize=76:fontcolor=white:borderw=4:bordercolor=black:box=1:boxcolor=black@0.58:boxborderw=20:x=(w-text_w)/2:y=285`;
+  if (i === 4) filter += `,drawtext=fontfile=${font}:text='§ 224 I Nr. 2':fontsize=70:fontcolor=white:borderw=4:bordercolor=black:box=1:boxcolor=black@0.58:boxborderw=20:x=(w-text_w)/2:y=285`;
   run('ffmpeg', ['-y','-loglevel','error','-loop','1','-framerate',String(fps),'-i',input,'-vf',filter,'-frames:v',String(frames),'-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-an',output]);
   segments.push({ input, output, start: cuts[i], duration, frames });
 }
