@@ -134,7 +134,7 @@ jobs:
       # Festlegungen verschieben - und dann faellt der Freisteller aus, nicht
       # der Zusatzweg. Der Schritt laeuft nur, wenn der Schalter an ist.
       - name: instagrapi (nur fuer interaktive Stories)
-        if: vars.IG_INTERAKTIV == 'true'
+        if: vars.IG_INTERAKTIV != 'false'
         run: |
           python3 -m venv .venv-ig
           .venv-ig/bin/pip install --quiet --upgrade pip
@@ -192,7 +192,8 @@ jobs:
           # Interaktive Stories ueber die private Schnittstelle. IG_PRIVAT_PASS
           # ist das Passwort des Kontos, nicht ein API-Token: Es oeffnet das
           # ganze Konto. Es steht nur hier als Secret und darf nirgendwo sonst
-          # auftauchen. Ohne IG_INTERAKTIV=true wird es gar nicht erst benutzt.
+          # auftauchen. Standard ist aktiv, sobald Zugangsdaten + gespeicherte Sitzung
+          # vorhanden sind; IG_INTERAKTIV=false schaltet den privaten Zusatzweg aus.
           IG_INTERAKTIV: ${{ vars.IG_INTERAKTIV }}
           IG_INTERAKTIV_ARTEN: ${{ vars.IG_INTERAKTIV_ARTEN }}
           IG_PRIVAT_USER: ${{ secrets.IG_PRIVAT_USER }}
