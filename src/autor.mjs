@@ -154,8 +154,8 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Kernaussagen und Merksätze aus dem Skelett NIE übernehmen, auch nicht leicht umgestellt – schreibe einen eigenen Merksatz mit anderem Satzbau und anderen Wörtern.
 - Hervorhebungen mit *Sternchen* um das Wort – sparsam, ein bis zwei je Folie.
 - icon: genau einer aus: ${Object.keys(ICONS).join(", ")}. Nimm das konkreteste Zeichen zum Thema – das, was in der Geschichte des Falls vorkommt: Tötungsdelikt → messer oder polizei, Kaufvertrag → handschlag oder einkaufswagen, Mietrecht → haus oder schluessel, Erbrecht → schriftrolle, Verkehrsunfall → auto, Kündigung → umschlag, Insolvenz → geld-weg. Die allgemeinen Zeichen (waage, paragraf, buch, dokument) sind nur Rückfall, wenn wirklich nichts Konkretes passt.
-- Caption: 4–7 kurze Absätze/Zeilen. Zeile 1 ist ein natürlicher Such-/Hook-Satz mit dem konkreten juristischen Thema. Danach die Kernantwort in 2–4 knappen Sätzen. Vorletzte Zeile: „Schick das deiner Lerngruppe und speichere es für die Wiederholung.“ oder sinngleich. LETZTE Zeile: eine konkrete, leicht beantwortbare Frage zum Inhalt, die echte Kommentare auslöst (nicht „Was denkst du?“). ${CONFIG.marke.website ? `Am Ende darf ein Hinweis „Mehr auf ${CONFIG.marke.website} (Link in Bio)“ stehen.` : "Keine Website, keine Plattform, kein Produkt erwähnen – auch nicht „Link in Bio“."} Keine Hashtags in der Caption; die kommen separat.
-- Hashtags: höchstens 5, nur gezielte Tags. Keine Hashtag-Wolke. Neben den Kernhashtags wähle Rechtsgebiet/Fach und höchstens ein bis zwei wirklich themenspezifische Suchbegriffe.
+- Caption: 4–8 Zeilen. Zeile 1 ist der Hook (die Frage oder die Pointe), dann die Kernantwort in 2–4 Sätzen, dann die Aufforderung, den Beitrag an die Lerngruppe weiterzuleiten und zu speichern, plus eine echte Frage an die Leser:innen, die eine Antwort im Kommentar provoziert. ${CONFIG.marke.website ? `Am Ende darf ein Hinweis „Mehr auf ${CONFIG.marke.website} (Link in Bio)“ stehen.` : "Keine Website, keine Plattform, kein Produkt erwähnen – auch nicht „Link in Bio“."} Keine Hashtags in der Caption; die kommen separat.
+- Hashtags: 8–14 Stück, deutsch, kleingeschrieben, spezifisch zum Thema plus diese Kernhashtags: ${CONFIG.hashtags.kern.join(" ")}.
 - kurztitel: 3–6 Wörter für die Story-Ankündigung und das Reel-Cover. Er muss grammatisch aufgehen: entweder eine Nominalphrase ohne Verb („Mord und Totschlag: das Verhältnis“) oder ein vollständiger Satz/eine vollständige Frage („Sitzt alles?“). Falsch wäre „Wochenrückblick: alles sitzen?“ – ein Infinitiv ohne Subjektbezug.
 - BILDREGEL FÜR KARUSSELLS: NUR Folie 1 (Cover/Titelfolie) bekommt eine Charakter-Szene. Alle inneren Karussell-Slides bleiben reine Text-/Strukturfolien: niemals Bildhintergrund oder dekoratives Motiv; dort sind nur Typografie, Kästen, Linien, Pfeile und kleine Icons erlaubt.
 - VISUELLE COVER-REGIE IST TEIL DEINER REDAKTIONELLEN AUFGABE. Schreibe nicht nur den juristischen Text, sondern entwickle für Folie 1 ein eigenständiges Bildkonzept. Keine feste Bildformel je Rechtsgebiet: derselbe Themenbereich darf morgen völlig anders inszeniert werden.
@@ -406,10 +406,9 @@ async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, e
   return { daten, usage: response.usage, schluessel };
 }
 
-/* Hashtags: seit Ende 2025 begrenzt Instagram Posts auf höchstens fünf.
-   Deshalb keine rotierende Hashtag-Wolke mehr: globale Kern-Tags + passendes
-   Rechtsgebiet + die stärksten konkreten Modell-Tags. Nur wenn Plätze frei
-   bleiben, kommt ein passender Zielgruppen-/Entdecker-Tag dazu. */
+/* Hashtags: Vorschläge des Modells + Kern-Hashtags, sortiert nach gelerntem
+   Gewicht (welche Tags Follower und Reichweite brachten), dazu zwei täglich
+   rotierende Entdecker-Tags. Höchstens maxJeBeitrag. */
 /* Gebiets-Hashtags gehören zum Beitrag, nicht in die Rotation: Ein Beitrag zum
    Schuldrecht mit #öffentlichesrecht ist schlicht falsch ausgezeichnet – er
    landet bei Leuten, die etwas anderes suchen, und wirkt unsauber. */
@@ -436,25 +435,15 @@ export function hashtagsWaehlen(vorschlaege, kern, strategie = null, tag = Math.
   const norm = (h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase().replace(/\s+/g, "");
   const g = strategie?.hashtagGewicht || {};
   const passt = (h) => !klausur || !ALLE_GEBIET_TAGS.includes(h) || (FACH_TAGS[klausur] || []).includes(h);
-  const max = Math.min(5, CONFIG.hashtags.maxJeBeitrag || 5);
-  const liste = [];
-  const push = (h) => {
-    const x = norm(h);
-    if (x.length > 1 && passt(x) && !liste.includes(x) && liste.length < max) liste.push(x);
-  };
-  for (const h of kern || []) push(h);
-  /* Das eigene Rechtsgebiet ist wichtiger als ein allgemeiner Entdecker-Tag. */
-  if (klausur && GEBIET_TAGS[klausur]) push(GEBIET_TAGS[klausur]);
-  const eigene = [...new Set((vorschlaege || []).map(norm))]
-    .filter((h) => !liste.includes(h) && passt(h))
-    .sort((a, b) => (g[b] ?? 1) - (g[a] ?? 1));
-  for (const h of eigene) push(h);
-  /* Nur auffüllen, wenn das Modell weniger als fünf brauchbare Tags geliefert
-     hat. Der Tages-Seed bricht Gleichstände, ohne irrelevante Gebiete zu mischen. */
-  const entdecker = (CONFIG.hashtags.entdecker || []).map(norm).filter((h) => passt(h) && !liste.includes(h))
-    .sort((a, b) => ((g[b] ?? 1) - (g[a] ?? 1)) || ((streuung(`${tag}:${a}`) % 97) - (streuung(`${tag}:${b}`) % 97)));
-  for (const h of entdecker) push(h);
-  return liste.slice(0, max);
+  const eigene = [...new Set(vorschlaege.map(norm))].filter((h) => !kern.includes(h) && passt(h)).sort((a, b) => (g[b] ?? 1) - (g[a] ?? 1));
+  const entdecker = (CONFIG.hashtags.entdecker || []).filter(passt);
+  const neu = entdecker.length ? [entdecker[tag % entdecker.length], entdecker[(tag * 7 + 3) % entdecker.length]] : [];
+  /* Das eigene Gebiet steht immer dabei. */
+  if (klausur && GEBIET_TAGS[klausur]) neu.unshift(GEBIET_TAGS[klausur]);
+  const max = CONFIG.hashtags.maxJeBeitrag;
+  const liste = [...kern, ...neu];
+  for (const h of eigene) if (liste.length < max && !liste.includes(h)) liste.push(h);
+  return [...new Set(liste)].slice(0, max);
 }
 
 /* Faktencheck, der einen fertigen Entwurf nie verwirft: Fällt der Prüfaufruf
@@ -628,41 +617,6 @@ const HOOK_KONKRETE_FRAGE = /^(?:wie\s+prüf|wann\s+(?:ist|liegt|greift|muss|dar
 const HOOK_STOP = new Set(["der","die","das","den","dem","des","ein","eine","einer","eines","und","oder","mit","ohne","für","von","bei","was","wie","wann","warum","welche","welcher","welches","prüfen","prüfung"]);
 const hookWoerter = (s) => String(s || "").toLocaleLowerCase("de-DE").match(/[\p{L}\p{N}§]+/gu) || [];
 
-
-const CAPTION_FRAGEN = {
-  schema: "An welcher Stelle dieses Schemas würdest du in der Klausur am ehesten hängen?",
-  spickzettel: "Welchen Prüfungsschritt würdest du auf dieser Karte noch ergänzen?",
-  klausurtechnik: "Welcher Aufbaufehler kostet dich in Klausuren am meisten Zeit?",
-  minifall: "Wie würdest du den Fall im Gutachten ansetzen?",
-  pruefungsfrage: "Welche Antwort hättest du in der Klausur zuerst vertreten?",
-  vergleich: "Welche Seite dieser Abgrenzung verwechselst du am ehesten?",
-  streitstand: "Welche Ansicht würdest du in der Klausur vertreten – und mit welchem Argument?",
-  wochenrueckblick: "Welches Thema davon musst du diese Woche noch einmal wiederholen?",
-};
-function captionNachbereiten(text, format) {
-  let zeilen = String(text || "").split(/\n+/).map((z) => z.trim()).filter(Boolean);
-  /* Viele Modellantworten ignorierten die Absatzvorgabe und kamen als ein
-     dichter Block zurück. Wir ändern keine Aussage, sondern setzen nur
-     lesbare Grenzen zwischen vorhandenen Sätzen. */
-  if (zeilen.length <= 2 && zeilen.join(" ").length > 220) {
-    const saetze = zeilen.join(" ").split(/(?<=[.!?])\s+(?=[A-ZÄÖÜ§])/u).map((s) => s.trim()).filter(Boolean);
-    if (saetze.length >= 3) {
-      zeilen = [saetze[0]];
-      for (let i = 1; i < saetze.length; i += 2) zeilen.push(saetze.slice(i, i + 2).join(" "));
-    }
-  }
-  const ctaRx = /\b(?:schick|sende|teil|weiterleit|speicher)\w*/i;
-  const vorhandeneCta = zeilen.find((z) => ctaRx.test(z)) || null;
-  const vorhandeneAbschlussfrage = /\?\s*$/.test(zeilen.at(-1) || "") ? zeilen.at(-1) : null;
-  /* Maximal fünf Inhaltszeilen reservieren zwei sichere Plätze für CTA +
-     Kommentarfrage. So kann ein langes Modell-Ergebnis die beiden wichtigsten
-     Schlusszeilen nicht wieder aus dem 7-Zeilen-Limit verdrängen. */
-  const body = zeilen.filter((z) => z !== vorhandeneCta && z !== vorhandeneAbschlussfrage).slice(0, 5);
-  const cta = vorhandeneCta || "Schick das deiner Lerngruppe und speichere es für die Wiederholung.";
-  const frage = vorhandeneAbschlussfrage || CAPTION_FRAGEN[format] || "Wo würdest du das im Gutachten prüfen?";
-  return [...body, cta, frage].join("\n");
-}
-
 /* Besten Carousel-Hook wählen. Das gelernte Muster bleibt wichtig, bekommt
    aber zwei harte Leitplanken: Thema auf der ersten Kachel erkennbar und kein
    unbelegtes Clickbait-Versprechen. */
@@ -805,7 +759,7 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie, wochenTh
   for (const f of folien) felderKuerzen(f, ["titel", "untertitel", "text", "norm", "formel", "richtigText", "falsch"]);
   for (const f of folien) for (const seite of ["links", "rechts"]) if (f[seite]) felderKuerzen(f[seite], ["titel", "text"]);
   for (const f of folien) if (Array.isArray(f.schritte)) f.schritte = f.schritte.map((x) => (typeof x === "string" ? normKurz(x) : felderKuerzen(x, ["titel", "text", "norm"])));
-  daten.caption = captionNachbereiten(normKurz(daten.caption || ""), format);
+  daten.caption = normKurz(daten.caption || "");
   /* Sicherheitsnetz: keine Website, kein Plattformname auf Folien oder in der Caption. */
   const verboten = /(github\.io|github\.com|examenscampus|link in bio|website)/i;
   for (const f of folien) for (const k of ["titel", "text", "untertitel"]) if (f[k] && verboten.test(f[k])) f[k] = f[k].replace(verboten, "").replace(/\s{2,}/g, " ").trim();
