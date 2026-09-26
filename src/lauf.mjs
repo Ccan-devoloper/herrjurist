@@ -17,6 +17,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CONFIG } from "./config.mjs";
+import { providerKostenSperren } from "./provider-kostensperre.mjs";
 import { manuellFinalisiert, manuellesCarouselAssetGate, tagesinhaltManuellFinalisiert } from "./finalisierung.mjs";
 import { istKostenKontrollFehler, budgetStoppGrund } from "./kostenfehler.mjs";
 import { mindsetThema } from "./kalender.mjs";
@@ -204,6 +205,8 @@ async function titelfolieBebildern(beitrag) {
 }
 
 async function main() {
+  providerKostenSperren();
+  log("Providerkosten dauerhaft fuer diesen Lauf gesperrt: keine kostenpflichtigen KI-, Bild- oder Voice-Aufrufe.");
   log(`Instagram-Bot · ${datum} · Stil ${CONFIG.marke.stil} · ${trocken ? "TROCKENLAUF" : "live"}`);
 
   /* IG_NO_PUSH=true: nichts in den Assets-Zweig pushen – für Trockenläufe
@@ -860,7 +863,7 @@ async function main() {
        Sie werden hier nachgeprüft - das kostet nur die Prüfung, nicht das
        Schreiben. Klappt es wieder nicht, warten sie auf den nächsten Lauf. */
     const ungeprueft = [...geschrieben.values()].filter((s) => !manuellFinalisiert(s) && s.faktencheckOffen);
-    if (ungeprueft.length) {
+    if (ungeprueft.length && !vorproduktionAktiv) {
       /* Erst neu rechnen, dann prüfen. Die Rücklage stammt sonst aus der Zeit
          VOR dem Schreiben der Texte und hält Geld für Dinge zurück, die
          inzwischen unbezahlbar geworden sind - am 17.09. lagen so 0.04 $ für
@@ -925,6 +928,7 @@ async function main() {
   const textBesorgen = async (eintrag) => {
     const vorhanden = hosting.jsonLesen(textDatei(eintrag), null);
     if (vorhanden) return vorhanden;
+    if (vorproduktionAktiv) throw new Error(`Vorproduktion ${datum} ${eintrag.slot}: Inhalt fehlt; kein KI-Fallback.`);
     /* Die Obergrenze je Beitrag gilt HIER, nicht nur in der Vorab-Schleife:
        textBesorgen läuft auch zur Sendezeit (Lösungsskizze, oder wenn das
        Vorschreiben vorübergehend scheiterte). Ein Ausweichbeitrag ruft
@@ -1238,7 +1242,7 @@ async function main() {
            dem Altbestand auch nicht. Eine frühere FORMbeanstandung darf nur
            eine erneute Formprüfung aufheben - nie einen fachlichen Befund
            (Safety 0c, Review-Auftrag Abschnitte 13 bis 15). */
-        const freigabe = storyFreigabe(story);
+        const freigabe = storyFreigabe(story, { vorproduktion });
         if (!freigabe.frei) {
           log(`Story ${eintrag.slot}: ${freigabe.grund}${freigabe.warten ? " – später." : " – übersprungen."}`);
           if (!freigabe.warten) eintrag.status = "uebersprungen";

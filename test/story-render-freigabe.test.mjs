@@ -95,11 +95,18 @@ test("actual 27 September assets: all nine stories and quiz pass offline", { ski
     assert.ok(p.format === "reel" ? a.videoPfad && a.coverPfad : a.bildPfade.length === 7);
   }
   const before = JSON.stringify(vp.tag);
+  const antwort = plan.stories.find((p) => p.art === "antwort");
+  assert.equal(quizPaarFreigabe(antwort, plan.stories, lesen).status, "warten", "answer must wait for question publication");
   for (const p of plan.stories) {
     const s = lesen(p.slot);
     const result = storyFreigabe(s, { vorproduktion: vp });
     assert.equal(result.frei, true, p.slot + ": " + result.grund);
-    if (["frage", "antwort"].includes(p.art)) assert.equal(quizPaarFreigabe(p, plan.stories, lesen).status, "frei");
+    if (["frage", "antwort"].includes(p.art)) {
+      const paar = quizPaarFreigabe(p, plan.stories, lesen);
+      assert.equal(paar.status, "frei", p.slot + ": " + paar.grund);
+      // Simulate successful question publication locally; never call Instagram.
+      if (p.art === "frage") p.status = "veroeffentlicht";
+    }
     if (["s7", "s8"].includes(p.slot)) assert.equal(storyFreigabe(s).frei, false, "without verified asset context the length gate remains active");
   }
   assert.equal(JSON.stringify(vp.tag), before, "no text, image metadata, schedule or publication status mutations");
@@ -124,7 +131,7 @@ test("cost lock prevents text, review, image, voice and fallback requests before
     () => openaiAufruf({ zweck: "faktencheck", params: {}, modell: "test", fetchFn: send }),
     () => bildAufruf({ senden: send, preisUsd: 0 }),
     () => bildAufruf({ fetchFn: send, preisUsd: 0 }),
-    () => openaiBildEditSenden({ form: new FormData(), fetchFn: send }),
+    () => openaiBildEditSenden({ form: new globalThis.FormData(), fetchFn: send }),
   ]) {
     await assert.rejects(request, (e) => e instanceof ProviderKostenGesperrt && istKostenKontrollFehler(e));
   }

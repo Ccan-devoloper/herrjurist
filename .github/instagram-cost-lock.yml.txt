@@ -1,0 +1,352 @@
+name: Instagram-Bot · Herr Jurist
+
+# Läuft stündlich ab UTC 05:00. Der Runner startet vor der Publikationsminute; bei Vorproduktion wartet der Tageslauf selbst bis zur Planzeit (Europe/Berlin).
+# und veröffentlicht alle Beiträge/Stories, deren Uhrzeit im Tagesplan erreicht ist.
+# Hinweis: GitHub registriert den Zeitplan erst, wenn diese Datei auf dem
+# Standardzweig geändert wurde; ein Lauf ist idempotent (nur fällige Einträge).
+on:
+  schedule:
+    - cron: "0 5-20 * * *"
+  workflow_dispatch:
+    inputs:
+      modus:
+        description: "trocken = nur erzeugen und in den Asset-Zweig legen · live = veröffentlichen · planen = nur Tagesplan zeigen · nachrendern = gespeicherten Tag ohne Claude-Kosten neu bauen · startklar = nur prüfen, ob alles zum Veröffentlichen bereitsteht · token = prüfen, welche Berechtigungen der Token trägt (kostenlos) · quellen = prüfen, welche Recherche-Quellen erreichbar sind und eine datierte Liste liefern (kostenlos)"
+        type: choice
+        default: trocken
+        options: [trocken, live, planen, nachrendern, startklar, token, quellen]
+      datum:
+        description: "Nur für nachrendern: welcher Tag (JJJJ-MM-TT, leer = heute)"
+        type: string
+        default: ""
+      alles:
+        description: "Alle Einträge des Tages sofort veröffentlichen (Uhrzeiten ignorieren)"
+        type: boolean
+        default: false
+      auffuellen:
+        description: "Feed auffüllen: so viele Beiträge am Stück veröffentlichen (nur Beiträge, keine Reels/Stories; setzt bei Abbruch fort)"
+        type: string
+        default: ""
+      wecker:
+        description: "Intern: Lauf gehört zur Weckkette (löst den nächsten Lauf selbst aus)"
+        type: boolean
+        default: false
+      nur_wecken:
+        description: "Intern: nichts veröffentlichen, nur die Weckkette fortsetzen"
+        type: boolean
+        default: false
+      break_glass_usd:
+        description: "Break Glass: Core-Deckel NUR FÜR DIESEN LAUF auf diesen Betrag (leer = Regeldeckel 0,32 $). Nur von Hand, nie aus dem Zeitplan."
+        type: string
+        default: ""
+      break_glass_grund:
+        description: "Break Glass: Begründung (Pflicht, sonst wirkt der Betrag nicht)"
+        type: string
+        default: ""
+
+env:
+  # Kostenverbot gilt auch fuer manuelle Hilfsmodi; keine Repository-Variable.
+  IG_PROVIDERKOSTEN_GESPERRT: "true"
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  posten:
+    if: github.event.inputs.nur_wecken != 'true'
+    runs-on: ubuntu-latest
+    # Ein planmäßiger Stundenlauf braucht wenige Minuten; hängt er (Browser,
+    # Upload, Netz), hielt er mit 300 Minuten die Concurrency-Gruppe fünf
+    # Stunden und damit fünf Slots. Nur ein manueller Lauf (Auffüllen mit
+    # Pausen zwischen den Beiträgen) darf so lange dauern.
+    timeout-minutes: ${{ (github.event_name == 'schedule' || github.event.inputs.wecker == 'true') && 120 || 300 }}
+    # Nur ein veröffentlichender Lauf zur Zeit – die Weckkette (Job unten) hält
+    # die Gruppe nicht, damit Zeitplan und Kette sich nicht gegenseitig blockieren.
+    concurrency:
+      group: instagram-bot
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Abhängigkeiten
+        working-directory: .
+        run: npm ci
+
+      - name: Chromium-Cache
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      # Der Chrome-Paketspiegel von Google liefert gelegentlich „Hash Sum mismatch“
+      # bei apt-get update; er wird für Playwright nicht gebraucht und deshalb
+      # vorher entfernt. Schlägt die Installation der Systempakete trotzdem fehl,
+      # reicht der gecachte Browser (die Runner bringen die Bibliotheken mit).
+      - name: Chromium installieren
+        working-directory: .
+        run: |
+          sudo rm -f /etc/apt/sources.list.d/google-chrome*.list /etc/apt/sources.list.d/google.list || true
+          npx playwright install --with-deps chromium || npx playwright install chromium
+
+      # Kostenlose Offline-Stimme für Reels (Piper „Thorsten“, neuronal). Wird nur
+      # gebraucht, wenn kein ElevenLabs-Schlüssel gesetzt ist; kostet sonst nichts.
+      - name: Freisteller-Modell (Cache)
+        id: rembg-cache
+        uses: actions/cache@v4
+        with:
+          # rembg 2.0.8x legt Modelle unter ~/.rembg ab; das Verzeichnis ~/.u2net
+          # ist der Ablageort älterer Versionen. Beide, damit nichts jeden Lauf
+          # neu geladen wird.
+          path: |
+            ~/.rembg
+            ~/.u2net
+          key: rembg-isnet-v2
+
+      - name: Freisteller installieren
+        run: pip install --quiet "rembg[cli]" onnxruntime
+
+      - name: Piper-Stimme (Cache)
+        id: piper-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/piper-voices
+          key: piper-voice-de_DE-thorsten-high-v1
+
+      - name: ffmpeg und Piper installieren
+        run: |
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq ffmpeg >/dev/null
+          ffmpeg -version | head -1
+          pip install --quiet piper-tts
+          if [ ! -f ~/.cache/piper-voices/de_DE-thorsten-high.onnx ]; then
+            mkdir -p ~/.cache/piper-voices
+            python3 -m piper.download_voices --data-dir ~/.cache/piper-voices de_DE-thorsten-high
+          fi
+          ls -la ~/.cache/piper-voices
+
+      # Interaktive Stories (native Umfrage) laufen ueber instagrapi. Bewusst in
+      # einem EIGENEN venv: Der Lauf bringt schon rembg und onnxruntime mit,
+      # die auf bestimmte Versionen von numpy und Pillow festgelegt sind.
+      # Ein zusaetzliches Paket in dieselbe Umgebung zu legen, kann diese
+      # Festlegungen verschieben - und dann faellt der Freisteller aus, nicht
+      # der Zusatzweg. Der Schritt laeuft nur, wenn der Schalter an ist.
+      - name: instagrapi (nur fuer interaktive Stories)
+        if: vars.IG_INTERAKTIV == 'true'
+        run: |
+          python3 -m venv .venv-ig
+          .venv-ig/bin/pip install --quiet --upgrade pip
+          .venv-ig/bin/pip install --quiet instagrapi
+          .venv-ig/bin/python -c "import instagrapi; print('instagrapi', instagrapi.__version__)"
+
+      - name: Tageslauf
+        working-directory: .
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
+          IG_APP_ID: ${{ secrets.IG_APP_ID }}
+          IG_APP_SECRET: ${{ secrets.IG_APP_SECRET }}
+          # Öffnet die Wissensbasis in daten/wissen. Fehlt er, schreibt der Bot
+          # ohne Belegstelle weiter – kein Beitrag fällt deshalb aus.
+          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          IG_BILD_KI: ${{ vars.IG_BILD_KI }}
+          IG_BILD_KI_GUETE: ${{ vars.IG_BILD_KI_GUETE }}
+          IG_BILDER_FREISTELLEN: ${{ vars.IG_BILDER_FREISTELLEN }}
+          IG_BILDER: ${{ vars.IG_BILDER }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL: ${{ vars.ELEVENLABS_MODEL }}
+          IG_REELS: ${{ vars.IG_REELS }}
+          IG_REEL_TAGE: ${{ vars.IG_REEL_TAGE }}
+          IG_REEL_ANIMATION: ${{ vars.IG_REEL_ANIMATION }}
+          # Kein IG_TAGESBUDGET_USD aus vars mehr: Die Variable stand auf 0.27 und
+          # hat den im Code beschlossenen Deckel still überschrieben - die Änderung
+          # lief durch Review und CI und wirkte trotzdem nicht. Der Deckel steht
+          # jetzt nur noch in src/config.mjs, wo er nachvollziehbar ist.
+          # Break Glass: wirkt nur bei workflow_dispatch, nur mit Begründung und
+          # nur für diesen einen Lauf. Ein Lauf aus dem Zeitplan bekommt die
+          # Variablen gar nicht erst gesetzt - richtlinie.mjs lehnt ihn sonst ab.
+          IG_BREAK_GLASS: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.break_glass_usd != '' && github.event.inputs.break_glass_grund != '' }}
+          IG_BREAK_GLASS_USD: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.break_glass_usd || '' }}
+          IG_BREAK_GLASS_GRUND: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.break_glass_grund || '' }}
+          # Temporäre 24h-Kostenmessung: 1 EUR entspricht beim Aktivieren
+          # 1.14847 USD. Die Policy-Funktion prüft den festen Ablaufzeitpunkt
+          # selbst; danach gilt automatisch wieder der Regeldeckel.
+          IG_KOSTENMESSUNG_CORE_USD: "1.14847"
+          IG_KOSTENMESSUNG_BIS: "2026-09-22T02:06:26.000Z"
+          IG_KI_MODELL_PRUEFUNG: ${{ vars.IG_KI_MODELL_PRUEFUNG }}
+          IG_KI_VERSUCHE: ${{ vars.IG_KI_VERSUCHE }}
+          IG_STIMME: ${{ vars.IG_STIMME }}
+          IG_SCHLUESSELWORT: ${{ vars.IG_SCHLUESSELWORT }}
+          IG_FAKTENCHECK: ${{ vars.IG_FAKTENCHECK }}
+          IG_FAKTENCHECK_STRIKT: ${{ vars.IG_FAKTENCHECK_STRIKT }}
+          IG_LERNEN: ${{ vars.IG_LERNEN }}
+          IG_NACHRICHTEN: ${{ vars.IG_NACHRICHTEN }}
+          # Interaktive Stories ueber die private Schnittstelle. IG_PRIVAT_PASS
+          # ist das Passwort des Kontos, nicht ein API-Token: Es oeffnet das
+          # ganze Konto. Es steht nur hier als Secret und darf nirgendwo sonst
+          # auftauchen. Ohne IG_INTERAKTIV=true wird es gar nicht erst benutzt.
+          IG_INTERAKTIV: ${{ vars.IG_INTERAKTIV }}
+          IG_INTERAKTIV_ARTEN: ${{ vars.IG_INTERAKTIV_ARTEN }}
+          IG_PRIVAT_USER: ${{ secrets.IG_PRIVAT_USER }}
+          IG_PRIVAT_PASS: ${{ secrets.IG_PRIVAT_PASS }}
+          # Einmal am eigenen Rechner erzeugt. Der Tageslauf meldet sich NIE
+          # selbst an: Eine Anmeldung von der Runner-IP hat Instagram am 17.09.
+          # mit "Please wait a few minutes" abgewiesen.
+          IG_PRIVAT_SITZUNG: ${{ secrets.IG_PRIVAT_SITZUNG }}
+          IG_PRIVAT_KEY: ${{ secrets.IG_PRIVAT_KEY }}
+          IG_PYTHON: ${{ github.workspace }}/.venv-ig/bin/python
+          BERICHT_EMAIL: ${{ vars.BERICHT_EMAIL }}
+          SMTP_HOST: ${{ vars.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ vars.SMTP_FROM }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ vars.THREADS_USER_ID }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          FB_PAGE_ID: ${{ vars.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+          TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+          TT_REFRESH_TOKEN: ${{ secrets.TT_REFRESH_TOKEN }}
+          LI_ACCESS_TOKEN: ${{ secrets.LI_ACCESS_TOKEN }}
+          LI_PERSON_URN: ${{ vars.LI_PERSON_URN }}
+          PIPER_VOICES_DIR: /home/runner/.cache/piper-voices
+          IG_GRAPH_HOST: ${{ vars.IG_GRAPH_HOST }}
+          IG_HANDLE: ${{ vars.IG_HANDLE }}
+          IG_WEBSITE: ${{ vars.IG_WEBSITE }}
+          IG_MARKE: ${{ vars.IG_MARKE }}
+          IG_EXAMEN_DATUM: ${{ vars.IG_EXAMEN_DATUM }}
+          IG_EXAMEN_ENDE: ${{ vars.IG_EXAMEN_ENDE }}
+          # Manuell: nur „live“ veröffentlicht. Zeitplan: live, außer die Variable IG_PAUSE ist auf true.
+          IG_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.modus != 'live') || vars.IG_PAUSE == 'true' }}
+          # Bei Zeitplan/Weckkette bedeutet die Planzeit die tatsächliche
+          # Publikationsminute. Manuelle Live-Läufe bleiben Sofortläufe.
+          IG_EXAKT_WARTEN: ${{ github.event_name == 'schedule' || github.event.inputs.wecker == 'true' }}
+          # Nur fuer die Startklar-Pruefung: Ein manueller Lauf ist immer
+          # trocken, an IG_DRY_RUN laesst sich also nicht ablesen, ob der
+          # Zeitplan veroeffentlichen wuerde. Die Variable selbst sagt es.
+          IG_PAUSE: ${{ vars.IG_PAUSE }}
+          GIT_AUTHOR_NAME: instagram-bot
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          IG_ABLEGEN: "1"
+        run: |
+          # Nachrendern baut nur die Kacheln neu und ruft Claude kein einziges
+          # Mal auf - der Tagesetat bleibt unberührt. Ergebnis: vorschau/<datum>/
+          # Startklar spricht mit Instagram, veroeffentlicht aber nichts - und
+          # ruft Claude kein einziges Mal auf.
+          if [ "${{ github.event.inputs.modus }}" = "token" ]; then
+            node bin/token-pruefen.mjs
+            exit $?
+          fi
+          if [ "${{ github.event.inputs.modus }}" = "quellen" ]; then
+            node bin/quellen-pruefen.mjs
+            exit $?
+          fi
+          if [ "${{ github.event.inputs.modus }}" = "startklar" ]; then
+            node bin/startklar.mjs
+            exit $?
+          fi
+          if [ "${{ github.event.inputs.modus }}" = "nachrendern" ]; then
+            node bin/nachrendern.mjs "${{ github.event.inputs.datum }}"
+            exit $?
+          fi
+          ARGS=""
+          if [ "${{ github.event.inputs.modus }}" = "planen" ]; then ARGS="--nur-planen"; fi
+          if [ "${{ github.event.inputs.alles }}" = "true" ]; then ARGS="$ARGS --alles"; fi
+          if [ -n "${{ github.event.inputs.auffuellen }}" ]; then ARGS="$ARGS --auffuellen=${{ github.event.inputs.auffuellen }}"; fi
+          node src/lauf.mjs $ARGS
+
+      # Rohtelemetrie: eine NDJSON-Zeile je bezahltem Aufruf, mit Versuch,
+      # Modell, Tokens, Ceiling, reserviert/tatsächlich/freigegeben. Sie gehört
+      # NICHT in den Asset-Zweig - ein Git-Zweig ist kein Zeitreihenspeicher,
+      # und jeder Klon schleppte die Historie mit. Hier liegt sie als Artefakt
+      # mit begrenzter Aufbewahrung; im Asset-Zweig stehen nur die kleinen
+      # rollenden Fenster je Profil (state/profile.json).
+      - name: Telemetrie sichern
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: telemetrie-${{ github.run_id }}
+          path: out/**/telemetrie.ndjson
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Ausgaben sichern (bei Fehlern zur Diagnose)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: instagram-ausgabe-${{ github.run_id }}
+          path: out
+          if-no-files-found: ignore
+          retention-days: 7
+
+  # Weckkette: GitHub löst „schedule“ nicht zuverlässig aus (Läufe fehlen oder
+  # kommen Stunden später). Deshalb wartet nach jedem planmäßigen Lauf ein
+  # kleiner Job bis kurz nach dem nächsten Vorbereitungsstart (volle Stunde, 05–20 UTC) und
+  # startet den Lauf selbst, falls GitHub ihn nicht gestartet hat. Kommt der
+  # Zeitplan doch, übernimmt dessen Lauf die Kette – es lebt immer genau eine.
+  weckruf:
+    needs: posten
+    if: always() && (github.event_name == 'schedule' || github.event.inputs.wecker == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - name: Bis zum nächsten Slot warten, dann nachsehen und ggf. wecken
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -e
+          # Nur eine Kette: Läuft oder wartet bereits ein jüngerer Lauf dieses Workflows
+          # (höhere Run-ID), trägt der die Kette weiter – dieser Job endet. Geprüft zu
+          # Beginn und noch einmal direkt vor dem Wecken (ein planmäßiger Lauf von GitHub
+          # startet sonst eine zweite Kette). „pending“ sind Läufe, die auf die
+          # Concurrency-Gruppe warten.
+          juengere_kette() {
+            local n=0 st
+            for st in in_progress queued pending waiting requested; do
+              n=$((n + $(gh api "repos/$GH_REPO/actions/runs?status=$st&per_page=50" --jq "[.workflow_runs[] | select(.path == \".github/workflows/instagram.yml\" and .id > $GITHUB_RUN_ID)] | length")))
+            done
+            echo $n
+          }
+          if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
+          jetzt=$(date -u +%s)
+          # Nächster Vorbereitungsstart: nächste volle Stunde zwischen 05 und 20 UTC, sonst morgen 05:00.
+          h=$((10#$(date -u +%H))); m=$((10#$(date -u +%M)))
+          tag=$(date -u +%F)
+          zielh=$((h+1))
+          if [ $zielh -lt 5 ]; then zielh=5; fi
+          if [ $zielh -gt 20 ]; then zielh=5; tag=$(date -u -d "$tag +1 day" +%F); fi
+          slot=$(date -u -d "$tag $(printf %02d $zielh):00:00" +%s)
+          warten=$((slot + 120 - jetzt))
+          echo "Nächster Slot: $(date -u -d @$slot +%FT%TZ) – warte $warten s"
+          if [ $warten -gt 19800 ]; then
+            # Länger als 5,5 h (Nachtpause): zwischendurch einmal nur die Kette weiterreichen.
+            sleep 19800
+            if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
+            gh workflow run instagram.yml -f modus=live -f wecker=true -f nur_wecken=true
+            exit 0
+          fi
+          [ $warten -gt 0 ] && sleep $warten
+          if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
+          seit=$(date -u -d @$slot +%FT%TZ)
+          n=$(gh api "repos/$GH_REPO/actions/runs?created=>=$seit&per_page=20" --jq '[.workflow_runs[] | select(.path == ".github/workflows/instagram.yml")] | length')
+          echo "Läufe seit $seit: $n"
+          if [ "$n" = "0" ]; then
+            echo "Zeitplan hat nicht ausgelöst – wecke selbst."
+            gh workflow run instagram.yml -f modus=live -f wecker=true
+          else
+            echo "Zeitplan hat ausgelöst – dieser Lauf übernimmt die Kette."
+          fi

@@ -2508,7 +2508,7 @@ test("Bezahlte Story-Texte überleben ein leeres Budget und erscheinen erst nach
   const pruef = fs.readFileSync(new URL("../src/pruefung.mjs", import.meta.url), "utf8");
   assert.match(pruef, /if \(story\.faktencheckOffen\) return \{ frei: false, warten: true/,
     "die Freigabe lässt Stories mit offener Prüfung durch");
-  assert.match(lauf, /const freigabe = storyFreigabe\(story\);/,
+  assert.match(lauf, /const freigabe = storyFreigabe\(story, \{ vorproduktion \}\);/,
     "der Tageslauf fragt die Freigabe nicht");
   assert.match(lauf, /storiesPruefen\(ungeprueft\)/, "der Tageslauf holt die offene Prüfung nicht nach");
   assert.ok(BudgetFehler);

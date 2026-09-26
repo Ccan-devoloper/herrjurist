@@ -17,6 +17,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { manuellFinalisiert } from "./finalisierung.mjs";
 import { THEMEN } from "../daten/themen.mjs";
+import { visuelleStoryLaengeFreigegeben } from "./story-render-freigabe.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
 /* Der Themenpool ist die einzige Textquelle des Bots – er ist der Korpus. */
@@ -714,13 +715,13 @@ export function fachpruefungAbschliessen(story, befunde = []) {
    Altbestand ohne Herkunft (`befundeTypisiert` fehlt) gilt als ungeklaert und
    wird nicht durch einen Formcheck freigegeben - er braucht eine vollstaendige
    neue Pruefung oder er erscheint nicht. */
-export function storyFreigabe(story) {
+export function storyFreigabe(story, opt = {}) {
   if (!story) return { frei: false, warten: true, grund: "kein Text vorhanden" };
   /* Eine im Chat finalisierte Story wird nicht wieder in die bezahlte
      Reparatur-/Faktencheck-Schleife geschickt. Ein kostenloser lokaler
      Formcheck bleibt als letzte Schranke erhalten. */
   if (manuellFinalisiert(story)) {
-    const lokal = pruefeBeitrag({ stories: [story] });
+    const lokal = pruefeBeitrag({ stories: [story] }, opt);
     if (!lokal.ok) return { frei: false, warten: false, grund: `manuell finalisiert, aber lokal ungueltig: ${lokal.fehler.join("; ")}` };
     return { frei: true, bereinigt: false, manuell: true, grund: "manuell finalisiert – kein API-Faktencheck" };
   }
@@ -831,7 +832,7 @@ export function pruefeBeitrag(beitrag, opt = {}) {
   }
   for (const s of beitrag.stories || []) {
     const l = (s.text || "").length;
-    if (l > GRENZEN.storyTextZeichen) fehler.push(`Story „${s.titel || s.art}“: Text zu lang (${l} > ${GRENZEN.storyTextZeichen})`);
+    if (l > GRENZEN.storyTextZeichen && !visuelleStoryLaengeFreigegeben(s, opt.vorproduktion)) fehler.push(`Story „${s.titel || s.art}“: Text zu lang (${l} > ${GRENZEN.storyTextZeichen})`);
     if (s.art === "zahl") {
       const zahl = String(s.zahl ?? "").trim();
       if (!zahl) fehler.push("Story „Zahl des Tages“ braucht eine konkrete, zum Thema passende Zahl.");
