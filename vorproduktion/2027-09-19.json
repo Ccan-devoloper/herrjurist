@@ -1,0 +1,886 @@
+{
+  "datum": "2027-09-19",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "schuld-440",
+        "themaTitel": "Unmöglichkeit: echte, praktische und persönliche Unmöglichkeit",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "revision-885",
+        "themaTitel": "Wann beruht ein Urteil auf dem Verfahrensfehler?",
+        "fach": "revision",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "staat-592"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "staat-592"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "assessoroer-855"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "fehler",
+        "themaId": "strafat-922"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:00",
+        "art": "tipp",
+        "themaId": "stpo-348"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "zahl",
+        "themaId": "zwangsv-835"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "schuld-440",
+      "poolTitel": "Unmöglichkeit: echte, praktische und persönliche Unmöglichkeit",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 275 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-12",
+        "2027-05-06",
+        "2027-08-17"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "revision-885",
+      "poolTitel": "Wann beruht ein Urteil auf dem Verfahrensfehler?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 338 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-03-01",
+        "2027-05-24",
+        "2027-07-25"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-592",
+      "poolTitel": "Sozialstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26",
+        "2027-06-23",
+        "2027-06-23"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-592",
+      "poolTitel": "Sozialstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26",
+        "2027-06-23",
+        "2027-06-23"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "assessoroer-855",
+      "poolTitel": "Wo steht im zweiten Examen noch Gutachtenstil?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-07",
+        "2027-07-04",
+        "2027-07-06"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "strafat-922",
+      "poolTitel": "Erfolgsqualifizierter Versuch und versuchte Erfolgsqualifikation: Was ist strafbar?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 18 StGB",
+        "§ 11 Abs. 2 StGB",
+        "§ 227 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-16",
+        "2027-03-21",
+        "2027-07-17"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "stpo-348",
+      "poolTitel": "Wann besteht ein Zeugnisverweigerungsrecht?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 52 StPO",
+        "§ 53 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-19"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zwangsv-835",
+      "poolTitel": "Wie läuft das Verteilungsverfahren bei mehreren Gläubigern?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 872 ZPO",
+        "§ 878 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2027-03-05",
+        "2027-06-02"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-09-19-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Beiträge, vier Bereiche zum Wiederholen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Beiträge, vier",
+            "Bereiche zum",
+            "Wiederholen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Gefälligkeit: kein Vertrag, aber Deliktshaftung – Haftungsmaßstab ist umstritten.",
+            "Drittschadensliquidation: Der Anspruchsinhaber macht den Schaden des Dritten geltend.",
+            "Sachpfändung: Gewahrsam des Schuldners zählt; beim Dritten nur mit Herausgabebereitschaft.",
+            "Vor Zustellung gezahlt: Rücknahme mit § 269 Abs. 3 S. 3 ZPO statt Erledigung.",
+            "Assessorklausur: Der Vermerk legt fest, ob du als Gericht oder Anwalt schreibst."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Sukzessive Mittäterschaft: Abgeschlossene Gewalt wird dem Späteren nicht zugerechnet.",
+            "Anklage: Das Gericht ist an die rechtliche Würdigung nicht gebunden (§ 265 StPO).",
+            "Beweisantragsrüge: ohne vollständigen Vortrag nach § 344 Abs. 2 S. 2 StPO unzulässig.",
+            "Sachrüge: prüft auch die Beweiswürdigung – aber nur auf Rechtsfehler.",
+            "Nebentat einstellen: § 154 StPO für eigene Taten, § 154a nur innerhalb einer Tat."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Zusicherung: rechtswidrig, aber wirksam – sie bindet bis zur Rücknahme.",
+            "Beschwerdebefugnis: selbst, gegenwärtig, unmittelbar – getrennt prüfen.",
+            "Gespeicherte Chats: informationelle Selbstbestimmung, nicht Art. 10 GG.",
+            "Unmittelbare Ausführung: erst die gedachte Grundverfügung prüfen.",
+            "Art. 80 GG: Ohne zitierte Rechtsgrundlage ist die Verordnung nichtig.",
+            "Normenkontrolle: Jahresfrist ab Bekanntmachung (§ 47 Abs. 2 S. 1 VwGO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Beim Erlaubnistatbestandsirrtum erst die gedachte Rechtfertigung, dann der Streit.",
+            "Kopfsache: An schwachen Tagen zählt ein festes Mindestprogramm."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann beginnt die Frist der Normenkontrolle?",
+            "Wer klagt bei der Drittschadensliquidation – und wer kann Abtretung verlangen?",
+            "Warum rettet die Rücknahme den Kläger, der vor Zustellung sein Geld bekommt?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht an Anspruch und Kosten festziehen",
+            "Strafrecht an Beteiligung und Revision wiederholen",
+            "Öffentliches Recht als Prüfungsketten abrufen",
+            "Klausurtechnik & Kopfsache als Routine"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Beiträge aus Zivilrecht, Strafrecht, Öffentlichem Recht sowie Klausurtechnik & Kopfsache. Von der Gefälligkeit über die Sachrüge bis zur Normenkontrolle – je Bereich die Kernsätze auf einer Folie. Mach den 30-Sekunden-Selbsttest und wiederhole gezielt, was noch stockt.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: vier Lernbereiche",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Am Ende der Woche wird sortiert, was sitzt und was noch einmal auf den Stapel muss.",
+        "handlung": "{B} sorts glowing crystals into four open crates, while {A} holds one crystal up to the light with his pointer to check it.",
+        "hinweisRegie": "Place the note in the free space above the four open crates, slightly tilted, so the sorting into areas is visible and the checked crystal stays uncovered.",
+        "alternative": "{A} and {B} stack four labelled-by-colour trays on a cart at the end of a long corridor."
+      },
+      "bildSzene": "sorting crystals into four crates",
+      "bildSzeneAlt": "stacking four coloured trays",
+      "quellen": [
+        "§ 241 Abs. 1 BGB",
+        "§ 823 Abs. 1 BGB",
+        "§ 808 ZPO",
+        "§ 809 ZPO",
+        "§ 269 Abs. 3 ZPO",
+        "§ 25 Abs. 2 StGB",
+        "§ 265 StPO",
+        "§ 244 StPO",
+        "§ 344 Abs. 2 StPO",
+        "§ 154 StPO",
+        "§ 154a StPO",
+        "§ 38 VwVfG",
+        "§ 90 BVerfGG",
+        "Art. 2 Abs. 1 GG",
+        "Art. 80 GG",
+        "§ 47 VwGO"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-anzahl-beitraege",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:36:44.879Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-440",
+      "slug": "2027-09-19-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Viel teurer geworden? Viele prüfen § 275 BGB – zu Unrecht",
+          "titelZeilen": [
+            "Viel teurer",
+            "geworden? Viele",
+            "prüfen § 275 BGB –",
+            "zu Unrecht"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Preissteigerung gehört zu § 313",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Klassiker",
+          "text": "V hat Stahl zum Festpreis verkauft. Der Einkaufspreis hat sich verdreifacht. V beruft sich auf § 275 Abs. 2 BGB. Das greift regelmäßig nicht: Mit dem Marktpreis steigt auch das Leistungsinteresse des Käufers. Bloße Verteuerung ist eine Frage der Geschäftsgrundlage (§ 313 BGB), nicht der Unmöglichkeit."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Abs. 1: echte Unmöglichkeit",
+              "text": "Leistung für den Schuldner oder für jedermann unmöglich. Der Anspruch entfällt kraft Gesetzes."
+            },
+            {
+              "titel": "2. Abs. 2: praktische Unmöglichkeit",
+              "text": "Aufwand steht in grobem Missverhältnis zum Leistungsinteresse des Gläubigers. Vertretenmüssen fließt ein. Einrede."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Abs. 3: persönliche Unzumutbarkeit",
+              "text": "Nur bei persönlich zu erbringender Leistung, nach Abwägung mit dem Gläubigerinteresse. Einrede."
+            },
+            {
+              "titel": "4. Rechtsfolgen",
+              "text": "Primäranspruch entfällt; Gegenleistung nach § 326 BGB; Schadensersatz über § 275 Abs. 4 BGB mit §§ 280, 283–285, 311a BGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Missverhältnis richtig messen",
+          "text": "Verglichen wird der Aufwand des Schuldners mit dem Interesse des Gläubigers – nicht mit dem vereinbarten Preis. Klassiker für Abs. 2 ist der Ring auf dem Seegrund: riesiger Aufwand für einen kleinen Wert. Für die Preissteigerung bleibt § 313 BGB mit Anpassung vor Rücktritt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 275 Abs. 2 BGB vergleicht Aufwand und Gläubigerinteresse. Wird nur die Leistung teurer, führt der Weg zu § 313 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Unmöglichkeit sauber trennen",
+          "punkte": [
+            "Geht es gar nicht? Abs. 1",
+            "Aufwand gegen Gläubigerinteresse? Abs. 2",
+            "Nur teurer? § 313 BGB"
+          ],
+          "icons": [
+            "stopp",
+            "waage",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Viel teurer geworden? Viele prüfen § 275 Abs. 2 BGB – zu Unrecht. Die Norm vergleicht den Aufwand des Schuldners mit dem Leistungsinteresse des Gläubigers, und das steigt mit dem Marktpreis. Bloße Verteuerung gehört zu § 313 BGB. Das Schema: Abs. 1 wirkt kraft Gesetzes, Abs. 2 und 3 sind Einreden, Rechtsfolgen über § 275 Abs. 4 und § 326 BGB. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#275bgb",
+        "#unmöglichkeit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 275 BGB: teurer heißt nicht unmöglich",
+      "coverText": "Preissteigerung gehört zu § 313",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Eine teurer gewordene Leistung ist noch lange keine unmögliche.",
+        "handlung": "{A} stares nervously at a steeply rising price tag on a crate of metal bars, while {B} calmly points out that the crate is still right there and can be delivered.",
+        "hinweisRegie": "Place the note in the free space next to the rising price tag, slightly tilted, so the contrast between the high price and the deliverable crate is visible without covering faces.",
+        "alternative": "{B} dives for a tiny ring at the bottom of a deep lake, while {A} holds a huge pile of diving equipment on the shore."
+      },
+      "bildSzene": "rising price tag, crate ready",
+      "bildSzeneAlt": "diving for ring in lake",
+      "quellen": [
+        "§ 275 BGB",
+        "§ 313 BGB",
+        "§ 326 BGB",
+        "§ 280 BGB",
+        "§ 283 BGB",
+        "§ 311a BGB",
+        "Themenpool: schuld-440"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:36:44.880Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-885",
+      "slug": "2027-09-19-b3",
+      "titelZeilen": [
+        "Beruhen in drei",
+        "Schritten – § 338",
+        "überspringt sie"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Beruhen in drei Schritten – § 338 überspringt sie",
+          "unter": "Revision · § 337 StPO",
+          "text": "Beim relativen Grund prüfst du das Beruhen, beim absoluten wird es vermutet.",
+          "norm": "§ 337 Abs. 1 StPO",
+          "icon": "gericht",
+          "sprecher": "Beim absoluten Revisionsgrund fragst du nicht nach dem Beruhen. Beim relativen schon, und zwar in drei Schritten. Schauen wir uns beide an.",
+          "marken": [
+            "relativ",
+            "absolut"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Welcher Urteilsteil ist betroffen?",
+          "text": "Schuldspruch, Strafausspruch oder beides.",
+          "norm": "§ 337 Abs. 1 StPO",
+          "sprecher": "Schritt eins: Welcher Teil des Urteils ist betroffen? Ein Fehler kann nur den Strafausspruch berühren, etwa bei einer Zeugin, die allein zur Strafzumessung ausgesagt hat. Dann wirkt die Revision nur insoweit.",
+          "marken": [
+            "Schuld oder Strafe"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Möglichkeit genügt",
+          "text": "Es reicht, dass das Urteil ohne den Fehler anders hätte ausfallen können.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Das Urteil beruht auf dem Fehler, wenn nicht auszuschließen ist, dass es ohne ihn anders ausgefallen wäre. Eine Gewissheit brauchst du nicht. Die bloße Möglichkeit genügt.",
+          "marken": [
+            "nicht auszuschließen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ausschluss nur konkret",
+          "text": "Das Beruhen entfällt nur, wenn der Fehler sich sicher nicht ausgewirkt hat.",
+          "norm": "§ 52 Abs. 3 StPO",
+          "sprecher": "Schritt drei: Ausschließen lässt sich das Beruhen nur mit konkreten Umständen. Beispiel: Eine Angehörige wird nicht über ihr Zeugnisverweigerungsrecht belehrt, kannte es aber nachweislich und wollte ohnehin aussagen. Dann kann das Beruhen entfallen.",
+          "marken": [
+            "konkrete Umstände"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "§ 338 StPO: Beruhen wird vermutet",
+          "text": "Bei den absoluten Gründen ist das Urteil stets als beruhend anzusehen.",
+          "norm": "§ 338 StPO",
+          "sprecher": "Und die absoluten Gründe? Paragraf 338 StPO sagt: Das Urteil ist stets als auf dem Fehler beruhend anzusehen. Dort prüfst du also nur, ob der Katalogfall vorliegt, zum Beispiel ein nicht vorschriftsmäßig besetztes Gericht. Die Rechtsprechung macht nur in engen Ausnahmen eine Einschränkung, wenn ein Einfluss denkgesetzlich ausgeschlossen ist.",
+          "marken": [
+            "stets beruhend"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Relativ: Möglichkeit prüfen. Absolut: Katalog prüfen",
+          "text": "Das Beruhen ist beim relativen Grund der eigene dritte Prüfungspunkt.",
+          "norm": null,
+          "sprecher": "Merke: Beim relativen Grund prüfst du Fehler und Beruhen getrennt. Beim absoluten Grund prüfst du den Katalogfall, und das Beruhen ist gesetzlich vermutet.",
+          "marken": [
+            "getrennt prüfen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beruhen sicher prüfen",
+          "text": "Speichern für die nächste Revisionsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für deine nächste Revisionsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Beruhen in drei Schritten – und § 338 StPO überspringt sie. Beim relativen Revisionsgrund klärst du, welcher Urteilsteil betroffen ist, ob ein anderes Ergebnis möglich erscheint und ob konkrete Umstände das ausschließen. Bei den absoluten Gründen wird das Beruhen vermutet; du prüfst nur den Katalogfall. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#337stpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beruhen: drei Schritte, eine Vermutung",
+      "coverText": "Möglichkeit genügt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Ob ein Fehler das Ergebnis getragen hat, wird bei manchen Fehlern geprüft und bei anderen einfach unterstellt.",
+        "handlung": "{A} traces a thin thread from a broken gear to a finished machine, while {B} hovers beside a second machine already stamped with a warning seal.",
+        "hinweisRegie": "Place the note in the free space between the traced thread and the sealed second machine, slightly tilted, so the two ways of linking fault and result are visible.",
+        "alternative": "{B} weighs a small defect on a scale next to a verdict block, while {A} simply places a seal on another block without weighing."
+      },
+      "bildSzene": "thread from gear to machine",
+      "bildSzeneAlt": "weighing defect versus sealing",
+      "quellen": [
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "§ 52 Abs. 3 StPO",
+        "Themenpool: revision-885"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-schritte-eine-ausnahme",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:36:44.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-592",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Ein Gesetz führt eine Pflichtversicherung ein. Kann das Sozialstaatsprinzip diesen Grundrechtseingriff rechtfertigen?",
+      "optionen": [
+        "Nein – Staatsstrukturprinzipien spielen bei Grundrechten keine Rolle",
+        "Ja – es ist selbst Eingriffsgrundlage für die Behörden",
+        "Ja – als legitimer Zweck, aber nur über ein Gesetz"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 20 Abs. 1 GG",
+        "Themenpool: staat-592"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:36:44.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-592",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – als Gemeinwohlziel, aber nie ohne gesetzliche Grundlage",
+      "text": "Das Sozialstaatsprinzip (Art. 20 Abs. 1 GG) richtet sich vor allem an den Gesetzgeber und lässt ihm weiten Spielraum. In der Verhältnismäßigkeitsprüfung kann es als legitimer Zweck dienen, etwa für soziale Sicherungssysteme. Eine Eingriffsbefugnis für die Verwaltung folgt daraus aber nicht; dafür braucht es ein Gesetz.",
+      "norm": "Art. 20 Abs. 1 GG",
+      "quellen": [
+        "Art. 20 Abs. 1 GG",
+        "Themenpool: staat-592"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:36:44.881Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – Staatsstrukturprinzipien spielen bei Grundrechten keine Rolle",
+        "Ja – es ist selbst Eingriffsgrundlage für die Behörden",
+        "Ja – als legitimer Zweck, aber nur über ein Gesetz"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-855",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 117 Abs. 2 Nr. 5 VwGO: Entscheidungsgründe begründen – sie prüfen nicht",
+      "text": "Das Urteil enthält Entscheidungsgründe, und die schreibst du im Urteilsstil: Ergebnis zuerst, dann die Begründung. Gutachtenstil gehört in der ÖR-Assessorklausur vor allem dorthin, wo der Bearbeitervermerk ein Gutachten oder Hilfsgutachten verlangt – etwa zu Fragen, auf die es nach deiner Lösung nicht mehr ankommt.",
+      "norm": "§ 117 Abs. 2 Nr. 5 VwGO",
+      "quellen": [
+        "§ 117 VwGO",
+        "Themenpool: assessoroer-855"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:36:44.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-922",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Raub nur versucht, Opfer tot: Bleibt es beim bloßen Versuch?",
+      "falsch": "„Der Raub ist nicht vollendet – also scheidet § 251 StGB aus, es bleibt beim versuchten Raub und § 222 StGB.“",
+      "richtigText": "Erfolgsqualifizierter Versuch: Geht der Tod schon aus der Gewalt des Raubversuchs hervor und handelt der Täter insoweit wenigstens leichtfertig, ist versuchter Raub mit Todesfolge strafbar (§§ 251, 22, 23 StGB). Der Versuch des Grunddelikts genügt.",
+      "quellen": [
+        "§ 251 StGB",
+        "§ 22 StGB",
+        "§ 18 StGB",
+        "Themenpool: strafat-922"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:36:44.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-348",
+      "ueberzeile": "Klausurtipp Strafprozessrecht",
+      "titel": "§ 52 StPO: Prüf den Angehörigenkreis genau – die Lebensgefährtin gehört nicht dazu",
+      "text": "Zeugnisverweigerungsrecht haben unter anderem Verlobte, Ehegatten und Lebenspartner – auch wenn die Ehe nicht mehr besteht –, Verwandte in gerader Linie, in der Seitenlinie bis zum dritten Grad und Verschwägerte bis zum zweiten Grad. Nichteheliche Lebensgefährten nennt § 52 Abs. 1 StPO nicht. Und denk an die Belehrung nach § 52 Abs. 3 StPO.",
+      "quellen": [
+        "§ 52 StPO",
+        "Themenpool: stpo-348"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:36:44.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-835",
+      "ueberzeile": "5 Punkte Zwangsvollstreckung",
+      "titel": "Verteilungsverfahren: Vom hinterlegten Erlös zum Geld in fünf Schritten",
+      "text": "Reicht der hinterlegte Erlös nicht für alle Gläubiger, verteilt das Vollstreckungsgericht (§ 872 ZPO). So läuft es ab:",
+      "punkte": [
+        "Aufforderung zur Forderungsberechnung (§ 873)",
+        "Teilungsplan des Gerichts (§ 874)",
+        "Verteilungstermin (§ 875)",
+        "Widerspruch gegen den Plan (§ 876)",
+        "Widerspruchsklage binnen eines Monats (§ 878)"
+      ],
+      "quellen": [
+        "§ 872 ZPO",
+        "§ 873 ZPO",
+        "§ 874 ZPO",
+        "§ 875 ZPO",
+        "§ 876 ZPO",
+        "§ 878 ZPO",
+        "Themenpool: zwangsv-835"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "5",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:36:44.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
