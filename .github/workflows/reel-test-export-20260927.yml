@@ -1,0 +1,33 @@
+name: Testreel § 224 · Ergebnis bereitstellen
+
+on:
+  push:
+    branches: [codex/reel-test-20260927]
+    paths:
+      - '.github/workflows/reel-test-export-20260927.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fertiges Reel aus dem erfolgreichen Renderlauf holen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p reel-test-2026-09-27/published
+          gh run download 36279237186 --repo "$GITHUB_REPOSITORY" --name reel-test-2026-09-27 --dir reel-test-2026-09-27/published
+          test -s reel-test-2026-09-27/published/herrjurist-224-microstory-test.mp4
+          mv reel-test-2026-09-27/published/herrjurist-224-microstory-test.mp4 reel-test-2026-09-27/preview.mp4
+          rm -rf reel-test-2026-09-27/published
+      - name: Vorschau nur auf diesem Testzweig ablegen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f reel-test-2026-09-27/preview.mp4
+          git commit -m "Store rendered §224 microstory preview"
+          git push origin HEAD:codex/reel-test-20260927
