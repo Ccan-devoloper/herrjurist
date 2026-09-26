@@ -19,9 +19,9 @@ for(const [name,id] of candidates){
 }
 const transcripts={};
 for(const [name] of candidates){
- const data=new FormData();
+ const data=new globalThis.FormData();
  data.append('model_id','scribe_v2');
- data.append('file',new Blob([fs.readFileSync(`voice-test-de/${name}.mp3`)],{type:'audio/mpeg'}),`${name}.mp3`);
+ data.append('file',new globalThis.Blob([fs.readFileSync(`voice-test-de/${name}.mp3`)],{type:'audio/mpeg'}),`${name}.mp3`);
  const res=await fetch('https://api.elevenlabs.io/v1/speech-to-text',{method:'POST',headers:{'xi-api-key':key},body:data});
  if(!res.ok)throw Error(name+' transcription HTTP '+res.status+' '+(await res.text()).slice(0,300));
  transcripts[name]=(await res.json()).text;
