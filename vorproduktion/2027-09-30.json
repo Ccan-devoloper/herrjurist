@@ -1,0 +1,887 @@
+{
+  "datum": "2027-09-30",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "strafbt-925",
+        "themaTitel": "§§ 239a, 239b StGB im Zwei-Personen-Verhältnis: Wann trägt die Bemächtigungslage?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "verwalt-648",
+        "themaTitel": "Ermessensfehlerlehre",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-454",
+        "themaTitel": "Gesamtschuld und Innenausgleich",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "grundr-610"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "grundr-610"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "strafbt-330"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "streitstand",
+        "themaId": "streit-42"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:00",
+        "art": "merksatz",
+        "themaId": "delikt-242"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "begriff",
+        "themaId": "vwgo-660"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "strafbt-925",
+      "poolTitel": "§§ 239a, 239b StGB im Zwei-Personen-Verhältnis: Wann trägt die Bemächtigungslage?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 239a StGB",
+        "§ 239b StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-09",
+        "2027-06-08",
+        "2027-08-07"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "verwalt-648",
+      "poolTitel": "Ermessensfehlerlehre",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG; § 114 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-10",
+        "2027-03-13",
+        "2027-04-15"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-454",
+      "poolTitel": "Gesamtschuld und Innenausgleich",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 421 ff., 426 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-31",
+        "2027-04-03",
+        "2027-04-03"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-610",
+      "poolTitel": "Recht auf informationelle Selbstbestimmung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I i.V.m. Art. 1 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-31",
+        "2027-02-12",
+        "2027-09-15"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-610",
+      "poolTitel": "Recht auf informationelle Selbstbestimmung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I i.V.m. Art. 1 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-31",
+        "2027-02-12",
+        "2027-09-15"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-330",
+      "poolTitel": "Wann liegt eine Vermögensverfügung vor und wie grenzt man sie vom Diebstahl ab?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB",
+        "§ 242 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-01",
+        "2027-03-16",
+        "2027-05-03"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-42",
+      "poolTitel": "Abbruch von Vertragsverhandlungen bei formbedürftigen Verträgen",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 311 Abs. 2, 241 Abs. 2 BGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "delikt-242",
+      "poolTitel": "Wann haftet man nach § 826 BGB?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 826 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-05"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "vwgo-660",
+      "poolTitel": "Vorverfahren",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 68 ff. VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-26",
+        "2027-04-02",
+        "2027-05-22"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-925",
+      "slug": "2027-09-30-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§§ 239a, 239b StGB im Zwei-Personen-Fall: drei Filter",
+          "titelZeilen": [
+            "§§ 239a, 239b StGB",
+            "im Zwei-Personen-",
+            "Fall: drei Filter"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Nicht jeder Raub ist Geiselnahme",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Warum überhaupt Filter?",
+          "text": "Wörtlich passt § 239a StGB auf fast jeden Raub mit Waffe: Wer O ein Messer vorhält, „bemächtigt“ sich seiner, um zu erpressen. Damit würde jeder Raub zum Verbrechen mit mindestens fünf Jahren. Deshalb legt die Rspr. die Tatbestände im Zwei-Personen-Verhältnis einschränkend aus."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die drei Filter",
+          "schritte": [
+            {
+              "titel": "1. Stabile Bemächtigungslage",
+              "text": "Die Lage muss eine eigenständige Bedeutung haben – mehr als der bloße Moment der Drohung."
+            },
+            {
+              "titel": "2. Funktionaler Zusammenhang",
+              "text": "Der Täter will die Lage selbst als Druckmittel nutzen, um O zur Leistung zu bringen."
+            },
+            {
+              "titel": "3. Zeitlicher Zusammenhang",
+              "text": "Die Erpressung soll während der fortdauernden Lage geschehen – nicht erst danach."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "239a oder 239b?",
+          "links": {
+            "titel": "§ 239a StGB",
+            "punkte": [
+              "Ziel: Erpressung (§ 253 StGB)",
+              "Sorge um das Opfer als Druckmittel",
+              "Vermögensbezug nötig"
+            ]
+          },
+          "rechts": {
+            "titel": "§ 239b StGB",
+            "punkte": [
+              "Ziel: jede Nötigung",
+              "Drohung mit Tod, schwerer Verletzung oder langer Freiheits-entziehung",
+              "Kein Vermögensbezug nötig"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Weitere Klausurpunkte",
+          "punkte": [
+            "Vollendet schon mit Bemächtigung in Erpressungsabsicht – gezahlt werden muss nicht",
+            "Tätige Reue: Opfer freigelassen und Leistung aufgegeben (§ 239a Abs. 4 StGB)",
+            "Tod des Opfers: Erfolgsqualifikation nach § 239a Abs. 3 StGB"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Im Zwei-Personen-Fall braucht es eine stabile Lage, die gerade als Druckmittel für die Erpressung dienen soll – sonst bleibt es bei §§ 249, 255 StGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor § 239a StGB prüfen",
+          "punkte": [
+            "Lage mit eigenem Gewicht?",
+            "Lage als Druckmittel?",
+            "Leistung während der Lage?"
+          ],
+          "icons": [
+            "schloss",
+            "zielscheibe",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "§§ 239a, 239b StGB im Zwei-Personen-Fall: Ohne Einschränkung wäre fast jeder Raub mit Waffe ein erpresserischer Menschenraub. Die Rspr. verlangt deshalb eine stabile Bemächtigungslage, die gerade als Druckmittel dienen soll, und eine Erpressung noch während dieser Lage. Fehlt das, bleibt es bei §§ 249, 255 StGB. Speichern für die nächste BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#239astgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§§ 239a, 239b StGB: drei Filter",
+      "coverText": "Nicht jeder Raub ist Geiselnahme",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Erst wenn die Zwangslage eigenes Gewicht hat und als Druckmittel dient, greifen die Menschenraubtatbestände.",
+        "handlung": "{A} pushes a heavy crystal through three narrowing frames in a row, while {B} points with a pointer at the last, narrowest frame where the crystal gets stuck.",
+        "hinweisRegie": "Place the note in the free space beside the third and narrowest frame, slightly tilted toward it, so all three frames and the stuck crystal stay visible without covering the faces.",
+        "alternative": "{B} tries to lock a door with a flimsy thread, while {A} holds up a solid chain as the only lock that really holds."
+      },
+      "bildSzene": "crystal pushed through three narrowing frames",
+      "bildSzeneAlt": "flimsy thread versus solid chain lock",
+      "quellen": [
+        "§ 239a StGB",
+        "§ 239b StGB",
+        "§ 249 StGB",
+        "§ 253 StGB",
+        "§ 255 StGB",
+        "Themenpool: strafbt-925"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-filter",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:59.721Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-648",
+      "slug": "2027-09-30-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "„Zuverlässig“ ist kein Ermessen – das Gericht prüft voll",
+          "titelZeilen": [
+            "„Zuverlässig“ ist",
+            "kein Ermessen – das",
+            "Gericht prüft voll"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Tatbestand voll, Rechtsfolge begrenzt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Unterschied",
+          "text": "Ermessen sitzt auf der Rechtsfolgenseite („kann“, „darf“). Unbestimmte Rechtsbegriffe sitzen im Tatbestand („zuverlässig“, „Gefahr“, „öffentliches Interesse“). Die Kontrolldichte ist völlig verschieden – deshalb musst du beides sauber trennen."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Ermessen oder unbestimmter Begriff?",
+          "links": {
+            "titel": "Ermessen",
+            "punkte": [
+              "Rechtsfolge: „kann“, „darf“",
+              "Gericht prüft nur Ermessensfehler",
+              "Mehrere richtige Entscheidungen möglich"
+            ]
+          },
+          "rechts": {
+            "titel": "Unbestimmter Rechtsbegriff",
+            "punkte": [
+              "Tatbestand: „zuverlässig“, „Gefahr“",
+              "Gericht legt aus und subsumiert voll",
+              "Nur eine richtige Antwort"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Die Ermessensfehler",
+          "punkte": [
+            "Nichtgebrauch: Die Behörde erkennt ihr Ermessen nicht",
+            "Überschreitung: Sie wählt eine Rechtsfolge außerhalb des Rahmens",
+            "Fehlgebrauch: sachfremde Erwägungen oder Abwägungsdefizit",
+            "Unverhältnismäßigkeit und Grundrechtsverstoß"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Ausnahme: Beurteilungsspielraum",
+          "text": "Nur ausnahmsweise entscheidet die Behörde auch im Tatbestand letztverbindlich, etwa bei Prüfungsentscheidungen, dienstlichen Beurteilungen oder Wertungen pluraler Gremien. Denn Art. 19 Abs. 4 GG verlangt grundsätzlich volle gerichtliche Kontrolle."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tatbestand voll prüfen, Rechtsfolge auf Ermessensfehler prüfen – ein Spielraum im Tatbestand ist die Ausnahme."
+        },
+        {
+          "art": "cta",
+          "titel": "Erst verorten, dann prüfen",
+          "punkte": [
+            "Tatbestand oder Rechtsfolge?",
+            "Tatbestand: volle Kontrolle",
+            "Rechtsfolge: Ermessensfehler",
+            "Spielraum nur ausnahmsweise"
+          ],
+          "icons": [
+            "lupe",
+            "haken",
+            "waage",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "„Zuverlässig“ ist kein Ermessen. Unbestimmte Rechtsbegriffe im Tatbestand kontrolliert das Gericht voll, das Ermessen auf der Rechtsfolgenseite nur auf Ermessensfehler (§ 40 VwVfG, § 114 S. 1 VwGO). Ein Beurteilungsspielraum ist wegen Art. 19 Abs. 4 GG die Ausnahme. Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#ermessen",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ermessen oder unbestimmter Rechtsbegriff?",
+      "coverText": "Tatbestand voll, Rechtsfolge begrenzt",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Im Tatbestand schaut das Gericht ganz genau hin, auf der Rechtsfolgenseite nur auf Fehler im Spielraum.",
+        "handlung": "{A} shines a bright full spotlight on the left half of a table, while {B} examines the right half only through a narrow slit in a screen.",
+        "hinweisRegie": "Place the note in the free space above the dividing line of the table, slightly tilted, so the full light on one side and the narrow slit on the other stay visible and no face is covered.",
+        "alternative": "{B} measures a board precisely with a ruler, while {A} only checks whether a second board lies within a marked corridor."
+      },
+      "bildSzene": "spotlight left, narrow slit right",
+      "bildSzeneAlt": "ruler versus marked corridor",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 S. 1 VwGO",
+        "Art. 19 Abs. 4 GG",
+        "Themenpool: verwalt-648"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:59.721Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-454",
+      "slug": "2027-09-30-b3",
+      "titelZeilen": [
+        "Innenausgleich:",
+        "Viele sehen einen",
+        "Anspruch – es sind",
+        "zwei"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Innenausgleich: Viele sehen einen Anspruch – es sind zwei",
+          "unter": "Gesamtschuld · § 426 BGB",
+          "text": "§ 426 BGB gibt dem Zahlenden zwei Wege zum Rückgriff.",
+          "norm": "§ 426 BGB",
+          "icon": "personen",
+          "sprecher": "Viele prüfen beim Rückgriff nur einen Anspruch. § 426 BGB gibt dir zwei. Und welcher trägt, entscheidet oft über den Fall.",
+          "marken": [
+            "zwei Ansprüche"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Außen: jeder schuldet alles",
+          "text": "Der Gläubiger kann von jedem die ganze Leistung verlangen – aber nur einmal.",
+          "norm": "§ 421 BGB",
+          "sprecher": "Schritt eins: Außen kann der Gläubiger von jedem Gesamtschuldner die ganze Leistung verlangen, insgesamt aber nur einmal. Zahlt einer, ist der Ausgleich eine Frage des Innenverhältnisses.",
+          "marken": [
+            "einmal"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Anspruch eins: Abs. 1",
+          "text": "Eigener Ausgleichsanspruch – zu gleichen Teilen, wenn nichts anderes bestimmt ist.",
+          "norm": "§ 426 Abs. 1 S. 1 BGB",
+          "sprecher": "Schritt zwei: Absatz 1 gibt einen eigenen Ausgleichsanspruch. Grundsätzlich haften alle zu gleichen Teilen, soweit sich aus Vertrag oder Gesetz nichts anderes ergibt.",
+          "marken": [
+            "eigener Anspruch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Anspruch zwei: Abs. 2",
+          "text": "Die Forderung des Gläubigers geht auf den Zahlenden über – mit Sicherheiten.",
+          "norm": "§ 426 Abs. 2 BGB",
+          "sprecher": "Schritt drei: Absatz 2. Soweit der Zahlende Ausgleich verlangen kann, geht die Forderung des Gläubigers kraft Gesetzes auf ihn über. Mit ihr wandern Bürgschaften und Pfandrechte mit.",
+          "marken": [
+            "Sicherheiten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Warum beide zählen",
+          "text": "Der übergegangene Anspruch trägt auch seine Einreden mit sich.",
+          "norm": "§§ 412, 404 BGB",
+          "sprecher": "Schritt vier: Der übergegangene Anspruch bringt auch Einwendungen und Einreden mit, etwa eine laufende Verjährung. Der Anspruch aus Absatz 1 verjährt dagegen eigenständig. Deshalb immer beide prüfen.",
+          "marken": [
+            "eigene Verjährung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Einer fällt aus",
+          "text": "Der Ausfall wird auf die übrigen verteilt.",
+          "norm": "§ 426 Abs. 1 S. 2 BGB",
+          "sprecher": "Und wenn einer nicht zahlen kann? Dann wird sein Anteil auf die übrigen Ausgleichspflichtigen verteilt.",
+          "marken": [
+            "Ausfall teilen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Zwei Anspruchsgrundlagen",
+          "text": "Abs. 1: eigener Anspruch. Abs. 2: übergegangene Forderung mit Sicherheiten.",
+          "norm": "§ 426 BGB",
+          "sprecher": "Merke: Absatz 1 ist dein eigener Anspruch, Absatz 2 die übergegangene Forderung mit ihren Sicherheiten. Beide stehen nebeneinander.",
+          "marken": [
+            "Abs. 1 + Abs. 2"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Schuldrechtsklausur speichern",
+          "text": "Speichern für den nächsten Regress.",
+          "sprecher": "Speicher dir das für deinen nächsten Regressfall.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Beim Innenausgleich sehen viele nur einen Anspruch – § 426 BGB gibt aber zwei. Absatz 1 ist ein eigener Ausgleichsanspruch mit eigener Verjährung. Absatz 2 lässt die Forderung des Gläubigers samt Sicherheiten übergehen, aber auch mit ihren Einreden. Fällt ein Gesamtschuldner aus, tragen die anderen seinen Anteil mit. Speichern für den nächsten Regressfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#gesamtschuld",
+        "#426bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 426 BGB: zwei Wege zum Innenausgleich",
+      "coverText": "Eigener und übergegangener Anspruch",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer für alle gezahlt hat, kann auf zwei Wegen bei den anderen zurückholen.",
+        "handlung": "{A} has just paid a large coin into a machine and now pulls two separate levers at once, while {B} watches two small coin chutes open on either side.",
+        "hinweisRegie": "Place the note in the free space between the two opening coin chutes, slightly tilted, so both levers and both chutes remain visible and the faces of the characters are not covered.",
+        "alternative": "{B} walks toward a river crossing where a bridge and a ferry both lead to the same far bank, while {A} points at both."
+      },
+      "bildSzene": "two levers opening two coin chutes",
+      "bildSzeneAlt": "bridge and ferry to same bank",
+      "quellen": [
+        "§ 421 BGB",
+        "§ 426 BGB",
+        "§ 412 BGB",
+        "§ 404 BGB",
+        "Themenpool: schuld-454"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:59.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-610",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Die Behörde speichert nur Name und Anschrift von A in einer Datei. Liegt ein Eingriff vor?",
+      "optionen": [
+        "Nein – geschützt sind nur sensible Daten",
+        "Nur wenn die Daten veröffentlicht werden",
+        "Ja – es gibt kein von vornherein belangloses Datum"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+        "Themenpool: grundr-610"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:59.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-610",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – auch scheinbar harmlose Daten sind geschützt",
+      "text": "Das Recht auf informationelle Selbstbestimmung schützt die Befugnis, selbst über Preisgabe und Verwendung persönlicher Daten zu bestimmen. Unter den Bedingungen automatisierter Verarbeitung gibt es nach dem BVerfG kein belangloses Datum. Die Speicherung ist ein Eingriff – ob er gerechtfertigt ist, ist die nächste Frage.",
+      "norm": "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+      "quellen": [
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+        "Themenpool: grundr-610"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:59.722Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – geschützt sind nur sensible Daten",
+        "Nur wenn die Daten veröffentlicht werden",
+        "Ja – es gibt kein von vornherein belangloses Datum"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-330",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 263 StGB: Auch wer nichts tut, kann verfügen",
+      "text": "Vermögensverfügung ist jedes Handeln, Dulden oder Unterlassen, das unmittelbar vermögensmindernd wirkt. Täuscht T den Gläubiger G, die Schuld sei längst bezahlt, und macht G die Forderung deshalb nicht mehr geltend, verfügt G durch Unterlassen. Der Schaden kann in der wirtschaftlich entwerteten Forderung liegen.",
+      "norm": "§ 263 StGB",
+      "quellen": [
+        "§ 263 StGB",
+        "Themenpool: strafbt-330"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:59.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "streit-42",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Grundstückskauf platzt kurz vor dem Notartermin: Haftet der Abbrechende auf Schadensersatz?",
+      "norm": "§§ 311 Abs. 2, 241 Abs. 2 BGB",
+      "optionen": [
+        "BGH: nur bei schwerem Treueverstoß, meist vorsätzlich vorgespiegelter Abschlussbereitschaft – sonst würde der Formzweck unterlaufen.",
+        "Andere Ansicht: allgemeine Regeln – schon der grundlose Abbruch nach geschaffenem Vertrauen genügt."
+      ],
+      "text": "Klausur: § 311b Abs. 1 BGB soll vor übereilter Bindung schützen. Ein Schadensersatz für jeden Abbruch wäre ein mittelbarer Abschlusszwang. Folge daher dem BGH.",
+      "quellen": [
+        "§ 311 Abs. 2 BGB",
+        "§ 241 Abs. 2 BGB",
+        "§ 280 Abs. 1 BGB",
+        "§ 311b Abs. 1 BGB"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:59.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-242",
+      "ueberzeile": "Merksatz Deliktsrecht",
+      "titel": "§ 826 BGB: Die Umstände kennen reicht – die Wertung nicht nötig",
+      "text": "Der Schädiger muss die Umstände kennen, die sein Verhalten sittenwidrig machen, nicht die Wertung selbst. Für den Schaden genügt bedingter Vorsatz.",
+      "norm": "§ 826 BGB",
+      "quellen": [
+        "§ 826 BGB",
+        "Themenpool: delikt-242"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:59.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-660",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Devolutiveffekt",
+      "text": "Hilft die Ausgangsbehörde dem Widerspruch nicht ab (§ 72 VwGO), geht die Sache an die nächsthöhere Behörde (§ 73 Abs. 1 S. 2 Nr. 1 VwGO). Ausnahmen: Ist die nächsthöhere eine oberste Behörde, entscheidet die Ausgangsbehörde selbst; in Selbstverwaltungsangelegenheiten grundsätzlich die Selbstverwaltungsbehörde.",
+      "norm": "§ 73 Abs. 1 VwGO",
+      "quellen": [
+        "§ 72 VwGO",
+        "§ 73 Abs. 1 VwGO",
+        "Themenpool: vwgo-660"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:59.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

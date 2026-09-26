@@ -1,0 +1,877 @@
+{
+  "datum": "2027-10-06",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-326",
+        "themaTitel": "Wann ist ein Wohnungseinbruchdiebstahl gegeben?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-644",
+        "themaTitel": "Widerruf rechtmäßiger Verwaltungsakte",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "handelsg-265",
+        "themaTitel": "Wie funktioniert die Prokura?",
+        "fach": "handelsg",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "verwalt-390"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "verwalt-390"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:59",
+        "art": "norm",
+        "themaId": "verwalt-383"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:26",
+        "art": "streitstand",
+        "themaId": "strafbt-925"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:55",
+        "art": "merksatz",
+        "themaId": "bgbat-151"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "begriff",
+        "themaId": "strafat-719"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-326",
+      "poolTitel": "Wann ist ein Wohnungseinbruchdiebstahl gegeben?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 244 Abs. 1 Nr. 3 StGB",
+        "§ 244 Abs. 4 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-04",
+        "2027-05-04",
+        "2027-08-20"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-644",
+      "poolTitel": "Widerruf rechtmäßiger Verwaltungsakte",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 49 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-15",
+        "2027-03-24",
+        "2027-10-02"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "handelsg-265",
+      "poolTitel": "Wie funktioniert die Prokura?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 48 HGB",
+        "§ 49 HGB",
+        "§ 50 HGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-390",
+      "poolTitel": "Wann ist ein öffentlich-rechtlicher Vertrag nichtig?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 59 VwVfG",
+        "§ 56 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-10-21",
+        "2027-04-14"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-390",
+      "poolTitel": "Wann ist ein öffentlich-rechtlicher Vertrag nichtig?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 59 VwVfG",
+        "§ 56 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-10-21",
+        "2027-04-14"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-383",
+      "poolTitel": "Wie unterscheidet man gebundene Entscheidung und Ermessen?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-03",
+        "2027-05-13"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafbt-925",
+      "poolTitel": "§§ 239a, 239b StGB im Zwei-Personen-Verhältnis: Wann trägt die Bemächtigungslage?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 239a StGB",
+        "§ 239b StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-06-08",
+        "2027-08-07",
+        "2027-09-30"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "bgbat-151",
+      "poolTitel": "Wie kommt ein Vertrag bei einer Internetauktion zustande?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 145 BGB",
+        "§ 156 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-11"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafat-719",
+      "poolTitel": "Vorsatzformen: Absicht, direkter Vorsatz, Eventualvorsatz",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-13",
+        "2027-03-17",
+        "2027-07-10"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-326",
+      "slug": "2027-10-06-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Durch die offene Terrassentür gestohlen – kein Wohnungseinbruch",
+          "titelZeilen": [
+            "Durch die offene",
+            "Terrassentür",
+            "gestohlen – kein",
+            "Wohnungseinbruch"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Offene Tür ist kein Einsteigen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "An einem Sommerabend steht die Terrassentür des Einfamilienhauses von O offen. A geht hinein, nimmt aus dem Wohnzimmer Schmuck mit und verschwindet auf demselben Weg. Ist A wegen Wohnungseinbruchdiebstahls strafbar?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Grundtatbestand",
+              "text": "A nimmt fremde bewegliche Sachen weg, mit Zueignungsabsicht: § 242 Abs. 1 StGB ist erfüllt."
+            },
+            {
+              "titel": "2. Wohnung",
+              "text": "Das Wohnzimmer eines bewohnten Hauses ist Wohnung im Sinne des § 244 Abs. 1 Nr. 3 StGB."
+            },
+            {
+              "titel": "3. Begehungsweise",
+              "text": "Nötig ist, dass A einbricht, einsteigt, mit einem falschen Schlüssel eindringt oder sich verborgen hält."
+            },
+            {
+              "titel": "4. Subsumtion",
+              "text": "Die offene Tür ist ein zum Eintreten bestimmter Zugang. A bricht nichts auf und steigt nicht ein – keine Variante passt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Denkweg hakt",
+          "text": "„Er war in der Wohnung und hat gestohlen“ reicht nicht. § 244 Abs. 1 Nr. 3 StGB knüpft an die Art des Hineingelangens an. Einsteigen heißt: durch eine nicht zum Eintreten bestimmte Öffnung hineingelangen und dabei ein Hindernis überwinden – etwa durchs Fenster klettern."
+        },
+        {
+          "art": "text",
+          "titel": "Ergebnis",
+          "text": "Kein Wohnungseinbruchdiebstahl, auch kein Regelbeispiel des § 243 Abs. 1 S. 2 Nr. 1 StGB. A ist wegen Diebstahls (§ 242 StGB) und Hausfriedensbruchs (§ 123 StGB) strafbar. Wäre A durchs gekippte Fenster geklettert, sähe es anders aus."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht der Tatort, sondern der Weg hinein macht den Wohnungseinbruch: einbrechen, einsteigen, falscher Schlüssel oder verborgen halten."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 244 I Nr. 3 StGB prüfen",
+          "punkte": [
+            "Wohnung betroffen?",
+            "Wie ist der Täter hineingelangt?",
+            "Bei Privatwohnung: Abs. 4 prüfen"
+          ],
+          "icons": [
+            "haus",
+            "tuer",
+            "schluessel"
+          ]
+        }
+      ],
+      "caption": "Die Terrassentür steht offen, A geht hinein und nimmt Schmuck mit – ein Wohnungseinbruchdiebstahl ist das nicht. § 244 Abs. 1 Nr. 3 StGB verlangt eine bestimmte Art des Hineingelangens: einbrechen, einsteigen, mit falschem Schlüssel eindringen oder sich verborgen halten. Wer durch eine offene Tür geht, erfüllt keine davon. Es bleibt bei §§ 242, 123 StGB. Speichern für die nächste BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#244stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 244 I Nr. 3 StGB: Der Weg hinein zählt",
+      "coverText": "Offene Tür ist kein Einsteigen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Für den Wohnungseinbruch zählt, wie der Täter hineingelangt – durch eine offene Tür reicht es nicht.",
+        "handlung": "{A} strolls casually through a wide-open patio door with a small jewelry box, while {B} outside stands next to a closed window holding an unused crowbar and looks puzzled.",
+        "hinweisRegie": "Place the note in the free space between the wide-open patio door and the closed window, slightly tilted toward the door, so both entrances stay clearly visible.",
+        "alternative": "{B} walks through an open garden gate while {A} next to it struggles to climb over the fence."
+      },
+      "bildSzene": "walking through open patio door",
+      "bildSzeneAlt": "open gate versus climbed fence",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 244 Abs. 1 Nr. 3 StGB",
+        "§ 243 Abs. 1 S. 2 Nr. 1 StGB",
+        "§ 123 StGB",
+        "Themenpool: strafbt-326"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:31.846Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-644",
+      "slug": "2027-10-06-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Widerruf vorbehalten: Darf die Behörde dann einfach widerrufen?",
+          "titelZeilen": [
+            "Widerruf",
+            "vorbehalten:",
+            "Darf die Behörde",
+            "einfach widerrufen?"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Vorbehalt ersetzt kein Ermessen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "B erhält eine Genehmigung „unter dem Vorbehalt des jederzeitigen Widerrufs“. Das Fachgesetz regelt den Widerruf nicht. Zwei Jahre später widerruft die Behörde – Begründung: Sie habe sich das ja vorbehalten. Ist der Widerruf rechtmäßig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Rechtmäßiger begünstigender VA",
+              "text": "Die Genehmigung begünstigt B; an ihrer Rechtmäßigkeit bestehen keine Zweifel. Einschlägig ist § 49 VwVfG."
+            },
+            {
+              "titel": "2. Widerrufsgrund",
+              "text": "Vorbehalt im VA: § 49 Abs. 2 S. 1 Nr. 1 VwVfG. Nach verbreiteter Ansicht genügt ein wirksamer, bestandskräftiger Vorbehalt."
+            },
+            {
+              "titel": "3. Frist",
+              "text": "Ein Jahr ab Kenntnis der maßgeblichen Tatsachen (§ 49 Abs. 2 S. 2 i.V.m. § 48 Abs. 4 VwVfG)."
+            },
+            {
+              "titel": "4. Ermessen",
+              "text": "„Kann widerrufen“: Die Behörde muss abwägen – Zweck des Vorbehalts, Interessen des B. Fehlen Erwägungen, liegt ein Ermessensausfall vor."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Denkweg hakt",
+          "text": "Der Vorbehalt liefert nur den Widerrufsgrund. Er ersetzt weder die Frist noch die Ermessensentscheidung. „Weil wir es uns vorbehalten haben“ ist keine Ermessenserwägung."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Der Widerrufsgrund liegt vor, doch die Behörde hat ihr Ermessen nicht ausgeübt. Der Widerruf ist rechtswidrig. Beachte außerdem: Eine Entschädigung nach § 49 Abs. 6 VwVfG gibt es nur in den Fällen der Nr. 3 bis 5 – beim Vorbehalt also nicht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ein Widerrufsvorbehalt öffnet die Tür zum Widerruf – durchgehen muss die Behörde mit Frist und fehlerfreiem Ermessen."
+        },
+        {
+          "art": "cta",
+          "titel": "Widerruf nach § 49 II VwVfG",
+          "punkte": [
+            "Rechtmäßiger begünstigender VA",
+            "Widerrufsgrund nach Nr. 1 bis 5",
+            "Jahresfrist",
+            "Ermessen und Wirkung für die Zukunft"
+          ],
+          "icons": [
+            "dokument",
+            "schluessel",
+            "kalender",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Die Genehmigung stand unter Widerrufsvorbehalt – darf die Behörde dann einfach widerrufen? Nein. Der Vorbehalt liefert nur den Widerrufsgrund nach § 49 Abs. 2 S. 1 Nr. 1 VwVfG. Die Jahresfrist gilt trotzdem, und die Behörde muss ihr Ermessen ausüben. „Wir haben es uns vorbehalten“ ist keine Abwägung. Eine Entschädigung nach § 49 Abs. 6 VwVfG gibt es in diesem Fall nicht. Speichern für die nächste Klausur im Verwaltungsrecht.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#widerruf",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Widerrufsvorbehalt: Ermessen bleibt Pflicht",
+      "coverText": "Vorbehalt ersetzt kein Ermessen",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Der Widerrufsvorbehalt eröffnet nur den Widerruf, die Behörde muss trotzdem abwägen.",
+        "handlung": "{A} holds a key already inserted in an unlocked door but hesitates, while {B} places a small balance scale in its other hand before it may push the door open.",
+        "hinweisRegie": "Place the note in the free space next to the small balance scale, slightly tilted toward it, so the key in the lock and the hesitating gesture remain fully visible.",
+        "alternative": "{B} holds a ticket that allows entry, but {A} at the gate still checks a clock and a scale before letting her pass."
+      },
+      "bildSzene": "key in door, balance scale handed",
+      "bildSzeneAlt": "ticket checked with clock, scale",
+      "quellen": [
+        "§ 49 Abs. 2 VwVfG",
+        "§ 49 Abs. 6 VwVfG",
+        "§ 48 Abs. 4 VwVfG",
+        "§ 40 VwVfG",
+        "Themenpool: verwalt-644"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:31.846Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "handelsg",
+      "klausur": 1,
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "themaId": "handelsg-265",
+      "slug": "2027-10-06-b3",
+      "titelZeilen": [
+        "Prokurist ignoriert",
+        "die Weisung – das",
+        "übersehen viele"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Prokurist ignoriert die Weisung – das übersehen viele",
+          "unter": "Prokura · §§ 48–50 HGB",
+          "text": "Interne Grenzen binden den Prokuristen, nicht den Vertragspartner.",
+          "norm": "§ 50 Abs. 1 HGB",
+          "icon": "handschlag",
+          "sprecher": "Intern verboten, nach außen trotzdem wirksam. Viele lassen den Vertrag scheitern, weil der Prokurist gegen eine Weisung gehandelt hat. Das ist der Klassiker bei der Prokura.",
+          "marken": [
+            "intern ≠ extern"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erteilung",
+          "text": "Nur der Inhaber oder sein gesetzlicher Vertreter, und nur ausdrücklich.",
+          "norm": "§ 48 Abs. 1 HGB",
+          "sprecher": "Schritt eins: die Erteilung. Prokura erteilt nur der Inhaber des Handelsgeschäfts oder sein gesetzlicher Vertreter, und zwar ausdrücklich. Die Eintragung ins Handelsregister wirkt nur deklaratorisch.",
+          "marken": [
+            "ausdrücklich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Umfang",
+          "text": "Alle Geschäfte, die der Betrieb irgendeines Handelsgewerbes mit sich bringt.",
+          "norm": "§ 49 Abs. 1 HGB",
+          "sprecher": "Schritt zwei: der Umfang. Die Prokura deckt alle Geschäfte, die der Betrieb irgendeines Handelsgewerbes mit sich bringt. Nicht nur die üblichen Geschäfte der eigenen Branche.",
+          "marken": [
+            "irgendein Handelsgewerbe"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Gesetzliche Grenzen",
+          "text": "Grundstücke veräußern und belasten nur mit besonderer Befugnis.",
+          "norm": "§ 49 Abs. 2 HGB",
+          "sprecher": "Schritt drei: die gesetzlichen Grenzen. Grundstücke veräußern oder belasten darf der Prokurist nur mit besonderer Befugnis. Grundlagengeschäfte, etwa selbst Prokura erteilen oder das Geschäft einstellen, gehören nicht dazu.",
+          "marken": [
+            "Grundstücke",
+            "Grundlagen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Interne Beschränkung",
+          "text": "Gegenüber Dritten unwirksam.",
+          "norm": "§ 50 Abs. 1 HGB",
+          "sprecher": "Schritt vier: der Klassiker. Beschränkt der Inhaber die Prokura intern, etwa auf Geschäfte bis zehntausend Euro, ist das Dritten gegenüber unwirksam. Der Vertrag bindet das Unternehmen. Intern haftet der Prokurist.",
+          "marken": [
+            "nach außen unwirksam"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Ausnahme: Missbrauch",
+          "text": "Kollusion oder evidenter Missbrauch – dann schützt § 50 HGB den Dritten nicht.",
+          "norm": null,
+          "sprecher": "Die Ausnahme ist der Missbrauch der Vertretungsmacht. Wirkt der Dritte mit dem Prokuristen zusammen oder drängt sich der Missbrauch geradezu auf, kann er sich nicht auf den Vertrag berufen.",
+          "marken": [
+            "Kollusion",
+            "evident"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Das Außenverhältnis steht im Gesetz",
+          "text": "Den Umfang der Prokura bestimmt das HGB, nicht die interne Weisung.",
+          "norm": "§§ 49, 50 HGB",
+          "sprecher": "Merke: Den Umfang der Prokura bestimmt das Gesetz. Interne Weisungen regeln nur, was der Prokurist darf, nicht, was er kann.",
+          "marken": [
+            "dürfen ≠ können"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die HGB-Klausur speichern",
+          "text": "Speichern für die nächste Vertretungsprüfung.",
+          "sprecher": "Speicher dir das für deine nächste Klausur zum Handelsrecht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Der Prokurist hält sich nicht an die interne Grenze – und der Vertrag ist trotzdem wirksam. Das übersehen viele: Den Umfang der Prokura bestimmt § 49 HGB, und interne Beschränkungen sind Dritten gegenüber unwirksam (§ 50 Abs. 1 HGB). Gesetzliche Grenzen gibt es nur wenige, etwa beim Veräußern und Belasten von Grundstücken. Die Ausnahme ist der Missbrauch der Vertretungsmacht. Speichern für die nächste Handelsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#handelsrecht",
+        "#hgb",
+        "#prokura",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Prokura: interne Grenze, externe Wirkung",
+      "coverText": "Dürfen ist nicht Können",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Interne Weisungen begrenzen, was der Prokurist darf, aber nicht, was er nach außen kann.",
+        "handlung": "{A} happily shakes hands with a customer over a signed deal, while behind it {B} holds up a small sticky note with a crossed-out limit that nobody outside can see.",
+        "hinweisRegie": "Place the note in the free space near the handshake, slightly tilted toward the joined hands, so the hidden sticky note behind stays visible and no face is covered.",
+        "alternative": "{B} draws a thin chalk line on the floor inside a shop, while {A} at the open counter still hands goods to customers across it."
+      },
+      "bildSzene": "handshake, hidden limit note behind",
+      "bildSzeneAlt": "chalk line inside shop ignored",
+      "quellen": [
+        "§ 48 HGB",
+        "§ 49 HGB",
+        "§ 50 HGB",
+        "§ 53 HGB",
+        "Themenpool: handelsg-265"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:31.847Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-390",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht AT",
+      "titel": "Ein subordinationsrechtlicher Vertrag hätte als VA nur einen einfachen Rechtsfehler. Ist er nichtig?",
+      "optionen": [
+        "Ja – rechtswidrige Verträge sind stets nichtig",
+        "Nein – öffentlich-rechtliche Verträge sind immer wirksam",
+        "Nur wenn beide Vertragspartner die Rechtswidrigkeit kannten"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 59 Abs. 2 Nr. 2 VwVfG",
+        "Themenpool: verwalt-390"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:31.847Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-390",
+      "ueberzeile": "Auflösung",
+      "titel": "Nichtig nur, wenn beide die Rechtswidrigkeit kannten",
+      "text": "Rechtswidrig heißt beim Vertrag nicht automatisch nichtig. Für subordinationsrechtliche Verträge nennt § 59 Abs. 2 VwVfG eigene Gründe: Nichtig ist er etwa, wenn ein VA mit gleichem Inhalt nichtig wäre (Nr. 1) oder wenn er als VA rechtswidrig wäre und beide Vertragschließenden das wussten (Nr. 2). Daneben gilt § 59 Abs. 1 VwVfG mit den BGB-Nichtigkeitsgründen.",
+      "norm": "§ 59 Abs. 2 VwVfG",
+      "quellen": [
+        "§ 59 VwVfG",
+        "Themenpool: verwalt-390"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:31.847Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – rechtswidrige Verträge sind stets nichtig",
+        "Nein – öffentlich-rechtliche Verträge sind immer wirksam",
+        "Nur wenn beide Vertragspartner die Rechtswidrigkeit kannten"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-383",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 114 VwGO gilt nur für die Rechtsfolge – unbestimmte Begriffe prüft das Gericht voll",
+      "text": "Ermessen steht auf der Rechtsfolgenseite („kann“, „darf“). Nur dort beschränkt § 114 S. 1 VwGO die Kontrolle auf Ermessensfehler. Unbestimmte Rechtsbegriffe im Tatbestand, etwa „Zuverlässigkeit“, legt das Gericht dagegen selbst aus und wendet sie voll an. Ein Beurteilungsspielraum der Behörde ist die Ausnahme, etwa bei Prüfungsentscheidungen.",
+      "norm": "§ 114 S. 1 VwGO",
+      "quellen": [
+        "§ 114 VwGO",
+        "Themenpool: verwalt-383"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:31.847Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-925",
+      "ueberzeile": "Streitstand Strafrecht BT",
+      "titel": "Täter und Opfer allein: Passen §§ 239a, 239b StGB überhaupt im Zwei-Personen-Verhältnis?",
+      "norm": "§§ 239a, 239b StGB",
+      "optionen": [
+        "BGH (Großer Senat): Ja – aber nur mit stabilisierter Bemächtigungslage, die für die Nötigung eigenständig genutzt werden soll.",
+        "Teile der Lit.: Nein oder nur stark eingeschränkt – gedacht für Drei-Personen-Fälle, sonst wird jeder Raub zum Menschenraub."
+      ],
+      "text": "Klausur: Mit dem BGH die Normen anwenden, dann die Einschränkungen genau prüfen. Fallen Bemächtigen und Nötigung in einem Akt zusammen, fehlt die stabilisierte Lage – es bleibt bei §§ 249, 253, 255 StGB.",
+      "quellen": [
+        "§ 239a StGB",
+        "§ 239b StGB",
+        "Themenpool: strafbt-925"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:31.847Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-151",
+      "ueberzeile": "Merksatz BGB AT",
+      "titel": "Auktion grundlos abgebrochen: Vertrag mit dem Höchstbietenden",
+      "text": "Das Einstellen bindet als Angebot (§ 145 BGB). Wer ohne berechtigten Grund abbricht, hat einen Vertrag mit dem dann Höchstbietenden – nach dem BGH auch weit unter Wert.",
+      "norm": "§§ 145, 156 BGB",
+      "quellen": [
+        "§ 145 BGB",
+        "§ 156 BGB",
+        "§ 138 BGB",
+        "Themenpool: bgbat-151"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:31.847Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-719",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Absicht: Der Erfolg muss nicht das Endziel sein",
+      "text": "Absicht (dolus directus 1. Grades) ist zielgerichtetes Wollen. Es genügt, dass der Täter den Erfolg als notwendiges Zwischenziel anstrebt. Beispiel § 263 StGB: Wer täuscht, um mit dem erlangten Geld Schulden zu tilgen, hat Bereicherungsabsicht – auch wenn ihm die Bereicherung selbst gleichgültig ist. Die Wissensseite ist schwach: Für möglich halten reicht.",
+      "norm": "§ 263 Abs. 1 StGB",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 263 StGB",
+        "Themenpool: strafat-719"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-26T02:35:31.847Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
