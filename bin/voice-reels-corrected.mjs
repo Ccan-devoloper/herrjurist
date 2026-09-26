@@ -22,7 +22,7 @@ function germanNumber(n){
 }
 function spoken(raw){
  let out=normGesprochen(raw);
- out=out.replace(/\b(Paragrafen?|Artikel|Absatz|Satz|Nummer|Halbsatz)\s+(\d{1,4})([a-z])?\b/gi,(_,label,digit,letter)=>`${label} ${germanNumber(Number(digit))}${letter?' '+letter:''}`);
+ out=out.replace(/\b(Paragraf(?:en)?|Artikel|Absatz|Satz|Nummer|Halbsatz)\s+(\d{1,4})([a-z])?\b/gi,(_,label,digit,letter)=>`${label} ${germanNumber(Number(digit))}${letter?' '+letter:''}`);
  out=out.replace(/\bFortsetzungsfeststellungsinteresse\b/gi,'Fortsetzungs-Feststellungs-Interesse');
  out=out.replace(/\bVA\b/g,'Verwaltungsakt');
  out=out.replace(/\bGbR\b/g,'Gesellschaft bürgerlichen Rechts');
