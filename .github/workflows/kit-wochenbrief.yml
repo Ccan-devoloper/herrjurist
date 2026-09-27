@@ -3,7 +3,7 @@ name: Kit-Wochenbrief terminieren
 on:
   # Mehrere Gelegenheiten am Sonntagmorgen; das Skript ist idempotent.
   schedule:
-    - cron: '17 6,7,8 * * 0'
+    - cron: '17 5,6,7 * * 0'
   workflow_dispatch:
     inputs:
       dry_run:
@@ -12,7 +12,7 @@ on:
         default: true
         type: boolean
       as_of:
-        description: 'Nur für Dry Run: ISO-Testzeitpunkt, z. B. 2026-10-11T06:20:00Z'
+        description: 'Nur für Dry Run: ISO-Testzeitpunkt, z. B. 2026-10-11T05:20:00Z'
         required: false
         type: string
 

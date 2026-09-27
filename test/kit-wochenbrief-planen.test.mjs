@@ -5,7 +5,7 @@ import { dueEntry, scheduleDue, validatePlan } from '../bin/kit-wochenbrief-plan
 
 const entries = JSON.parse(fs.readFileSync(new URL('../newsletter/kit-versandplan.json', import.meta.url), 'utf8')).broadcasts;
 const issue = entries[0];
-const before = new Date('2026-10-11T06:20:00Z');
+const before = new Date('2026-10-11T05:20:00Z');
 const content = '<h1>WOCHENBRIEF 04 · 11. OKTOBER 2026</h1><p>Inhalt</p>';
 
 function draft(overrides = {}) {
@@ -36,7 +36,7 @@ test('Plan berücksichtigt Berliner Datum und die Zeitumstellung', () => {
   assert.doesNotThrow(() => validatePlan(entries));
   assert.equal(dueEntry(entries, before)?.issue, 4);
   assert.equal(dueEntry(entries, new Date('2026-10-24T23:30:00Z'))?.issue, 6);
-  assert.equal(dueEntry(entries, new Date('2026-10-10T06:20:00Z')), null);
+  assert.equal(dueEntry(entries, new Date('2026-10-10T05:20:00Z')), null);
 });
 
 test('Entwurf wird mit korrektem Termin und Inhalt genau einmal geplant', async () => {
@@ -58,7 +58,7 @@ test('Dry Run und bereits terminierte Ausgabe lösen keinen PUT aus', async () =
   assert.equal(calls.length, 1);
   calls.length = 0;
   assert.equal((await scheduleDue(args(draft({ status: 'scheduled', send_at: issue.send_at }), calls, {
-    now: new Date('2026-10-11T09:00:00Z'),
+    now: new Date('2026-10-11T08:00:00Z'),
   }))).action, 'already_scheduled');
   assert.equal(calls.length, 1);
 });
@@ -74,7 +74,7 @@ test('Falscher Absender, anderes Publikum und später Lauf sperren den Versand',
     assert.equal(calls.length, 1);
   }
   const calls = [];
-  await assert.rejects(scheduleDue(args(draft(), calls, { now: new Date('2026-10-11T07:45:00Z') })), /weniger als 20 Minuten/);
+  await assert.rejects(scheduleDue(args(draft(), calls, { now: new Date('2026-10-11T06:45:00Z') })), /weniger als 20 Minuten/);
   assert.equal(calls.length, 1);
 });
 
@@ -82,7 +82,7 @@ test('Ohne Secret oder ohne fälligen Eintrag wird nichts an Kit geschrieben', a
   const calls = [];
   await assert.rejects(scheduleDue(args(draft(), calls, { apiKey: '' })), /KIT_API_KEY/);
   assert.equal(calls.length, 0);
-  assert.equal((await scheduleDue(args(draft(), calls, { now: new Date('2026-10-12T06:20:00Z') }))).action, 'none');
+  assert.equal((await scheduleDue(args(draft(), calls, { now: new Date('2026-10-12T05:20:00Z') }))).action, 'none');
   assert.equal(calls.length, 0);
   await assert.rejects(scheduleDue(args(draft(), calls, { now: new Date('2026-12-20T07:20:00Z') })), /Kein freigegebener/);
   assert.equal(calls.length, 0);

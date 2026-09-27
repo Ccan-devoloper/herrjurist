@@ -36,8 +36,8 @@ export function validatePlan(entries) {
     previousDate = e.date;
     const stamp = new Date(e.send_at);
     const local = berlinParts(stamp);
-    if (Number.isNaN(stamp.getTime()) || local.date !== e.date || local.hour !== 10 || local.minute !== 0 || stamp.getUTCDay() !== 0) {
-      throw new Error(`Zeit oder Wochentag von Wochenbrief ${e.issue} stimmt nicht (10:00 Europe/Berlin).`);
+    if (Number.isNaN(stamp.getTime()) || local.date !== e.date || local.hour !== 9 || local.minute !== 0 || stamp.getUTCDay() !== 0) {
+      throw new Error(`Zeit oder Wochentag von Wochenbrief ${e.issue} stimmt nicht (09:00 Europe/Berlin).`);
     }
   }
 }
