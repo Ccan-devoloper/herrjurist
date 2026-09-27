@@ -14,7 +14,6 @@ for (const take of takes) {
   const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/with-timestamps?output_format=mp3_44100_128`,{
     method:'POST',headers:{'xi-api-key':key,'Content-Type':'application/json'},
     body:JSON.stringify({text:take.text,model_id:'eleven_v3',language_code:'de',seed:take.seed,
-      previous_text:'Rex holt mit dem schweren Thermobecher aus und trifft Maras Schutzhelm. Sie erschrickt und zuckt bei dem Treffer zusammen.',
       voice_settings:{stability:0.35,similarity_boost:0.75}})
   });
   if (!response.ok) throw new Error(`${take.name}: ElevenLabs ${response.status} ${(await response.text()).slice(0,300)}`);
