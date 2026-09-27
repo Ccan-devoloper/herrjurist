@@ -1,0 +1,19 @@
+name: Testreel · Mara Stimme suchen
+on:
+  push:
+    branches: [codex/reel-test-20260927]
+    paths:
+      - 'reel-test-2026-09-27/mara-voice-search.mjs'
+      - '.github/workflows/mara-voice-search.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verfügbare Stimmen prüfen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node reel-test-2026-09-27/mara-voice-search.mjs
