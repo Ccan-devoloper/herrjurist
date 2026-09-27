@@ -109,3 +109,22 @@ test('Ohne Secret oder ohne fälligen Eintrag wird nichts an Kit geschrieben', a
   await assert.rejects(scheduleDue(args(draft(), calls, { now: new Date('2027-10-17T06:20:00Z') })), /Kein freigegebener/);
   assert.equal(calls.length, 0);
 });
+
+test('Markierte Quellen-/Themenpool-Abweichungen sperren die Terminierung', async () => {
+  const calls = [];
+  const target = entries.find(e => e.issue === 14);
+  assert.equal(target.review_required, true);
+  await assert.rejects(scheduleDue(args(draft(), calls, {
+    now: new Date('2026-12-20T06:20:00Z'),
+  })), /redaktionelle Themenpool-\/Quellenprüfung/);
+  assert.equal(calls.length, 0);
+});
+
+test('Angeglichene HTML-Größe ist zulässig, übergroße Mail wird gesperrt', async () => {
+  const calls = [];
+  const actual = draft({ content: content + 'x'.repeat(81000) });
+  assert.equal((await scheduleDue(args(actual, calls, { dryRun: true }))).action, 'dry_run');
+  calls.length = 0;
+  await assert.rejects(scheduleDue(args(draft({ content: content + 'x'.repeat(91000) }), calls)), /HTML ist zu groß/);
+  assert.equal(calls.length, 1);
+});

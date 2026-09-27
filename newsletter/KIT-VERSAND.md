@@ -39,10 +39,14 @@ Prüfung vor dem Merge gemeinsam angepasst werden.
 
 Die Entwürfe 14–56 wurden aus den 18 Einzelbeiträgen der jeweils
 vorangehenden Montag-bis-Samstag-Woche erzeugt. Der Klartext des
-verschlüsselten Themenpools stand dabei nicht zur Verfügung; abgeglichen
-wurden die Themenpool-IDs und Normen aus den Vorproduktionsdaten mit den
-ausformulierten Beiträgen. Die verlinkten amtlichen Normseiten wurden auf
-Erreichbarkeit geprüft. Diese Prüfung ersetzt keine erneute fachliche
+verschlüsselten Themenpools wurde anschließend über einen einmaligen,
+verschlüsselten GitHub-Actions-Abgleich lokal eingesehen. 570 benutzte IDs
+standen im Pool, acht Kopfsache-IDs in der separaten statischen Definition.
+Bei 38 Beiträgen in 23 Ausgaben stimmen Poolnormen und Beitragsquellen nicht
+direkt überein. Diese Ausgaben tragen im Versandplan `review_required: true`;
+der Workflow terminiert sie auch mit API-Schlüssel erst nach Klärung und
+Entfernung dieser Markierung. Die verlinkten amtlichen Normseiten wurden auf
+Erreichbarkeit geprüft. Das ersetzt keine erneute fachliche
 Rechtsstandsprüfung zu den jeweiligen Sendeterminen.
 
 Kit dokumentiert, dass die Empfängerliste beim Terminieren fixiert werden

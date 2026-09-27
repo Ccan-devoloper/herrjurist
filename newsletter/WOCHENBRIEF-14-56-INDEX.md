@@ -1,8 +1,10 @@
 # Wochenbriefe 14–56: Kit-Entwürfe
 
-Die 43 Entwürfe beruhen je auf den 18 Einzelbeiträgen der vorangehenden Montag-bis-Samstag-Woche. Fachthemen enthalten eine konkrete Frage oder einen Prüfauftrag mit Lösungsweg; Methodik und Kopfsache eine anwendbare Übung. Die Themenpool-IDs und Quellenmetadaten aus der Vorproduktion wurden mit den Einzelbeiträgen abgeglichen. Der Themenpool selbst ist verschlüsselt und wurde nicht im Klartext gelesen.
+Die 43 Entwürfe beruhen je auf den 18 Einzelbeiträgen der vorangehenden Montag-bis-Samstag-Woche. Ihre Darstellung folgt der Reihe 04–13: 690 px Webbreite, mobil 100 %, vier Bereichsfarben (Blau, Orange, Grün, Gelb), Bereichsuntertitel, getrennte Examensbadges und paarige, eingerückte Lösungsskizzen mit A./I./II./B. Konkrete Minifälle oder fachliche Prüfungsfragen stehen nur in Zivilrecht, Strafrecht und Öffentlichem Recht. Methodik und Kopfsache enthalten anwendbare Übungen statt erfundener Fälle. Einleitung und Drei-Fragen-Check sind je Woche themenspezifisch.
 
-Amtliche Normlinks wurden technisch geprüft (BauGB-Links korrigiert); das ist keine vollständige juristische Prüfung aller Aussagen. Bei den Ausgaben weit in 2027 ist der Rechtsstand kurz vor dem Versand erneut zu prüfen. Die Entwürfe stehen in Kit auf »draft«.
+Der aktuelle verschlüsselte Themenpool wurde für einen einmaligen Abgleich mit dem GitHub-Secret lokal entschlüsselt; weder Schlüssel noch Klartext wurden ins Repository oder Actions-Log geschrieben. 570 der 578 verwendeten eindeutigen Themen-IDs liegen darin; acht Kopfsache-IDs stammen aus der separaten statischen Definition. Pooltitel, Fach und Poolnormen stimmen bei diesen 570 mit den Metadaten der Vorproduktion überein. Bei **38 Einzelbeiträgen in 23 Ausgaben** überschneiden sich die im Beitrag zitierten Normen nicht direkt mit den Normen des zugeordneten Pool-Eintrags. Das umfasst verwandte Unterthemen und offensichtlich veraltete/falsche IDs. Diese Ausgaben sind im Versandplan mit `review_required: true` gesperrt, bis die konkrete Quellenzuordnung fachlich geklärt ist. Betroffen: 14–21, 25–26, 28–36, 41, 45, 47 und 55.
+
+Amtliche Normlinks wurden technisch geprüft (BauGB-Links korrigiert); das ist keine vollständige juristische Prüfung aller Aussagen. Bei den Ausgaben weit in 2027 ist der Rechtsstand kurz vor dem Versand erneut zu prüfen. Die Entwürfe stehen in Kit auf »draft«. Eine Markierung im Versandplan kann erst nach inhaltlicher Prüfung der betreffenden Ausgabe entfernt werden.
 
 | Nr. | Sonntag, 09:00 Berlin | Kit-Entwurf | Betreff |
 | ---: | --- | --- | --- |

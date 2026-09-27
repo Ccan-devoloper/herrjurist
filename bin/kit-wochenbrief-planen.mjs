@@ -29,7 +29,8 @@ export function validatePlan(entries) {
   let previousDate = '';
   for (const e of entries) {
     if (!Number.isInteger(e.id) || !Number.isInteger(e.issue) || !/^\d{4}-\d{2}-\d{2}$/.test(e.date) ||
-        typeof e.subject !== 'string' || !e.subject.trim() || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(e.send_at)) {
+        typeof e.subject !== 'string' || !e.subject.trim() || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(e.send_at) ||
+        (e.review_required !== undefined && typeof e.review_required !== 'boolean')) {
       throw new Error('Ungültiger Eintrag im Kit-Versandplan.');
     }
     if (ids.has(e.id) || dates.has(e.date) || e.date <= previousDate) throw new Error('Doppelte oder unsortierte Kit-ID/Datum im Versandplan.');
@@ -71,7 +72,7 @@ function assertReady(b, e) {
     throw new Error(`Wochenbrief ${e.issue} richtet sich nicht an alle Abonnenten.`);
   }
   if (!b.content?.includes(`WOCHENBRIEF ${String(e.issue).padStart(2, '0')} ·`) ||
-      Buffer.byteLength(b.content, 'utf8') > 72000) {
+      Buffer.byteLength(b.content, 'utf8') > 90000) {
     throw new Error(`Wochenbrief ${e.issue}: Kennzeichnung fehlt oder HTML ist zu groß.`);
   }
   if (!b.preview_text || !b.email_template?.id || !b.thumbnail_url) {
@@ -90,6 +91,7 @@ export async function scheduleDue({ entries, now, apiKey, expectedFrom, fetchImp
     return { action: 'none' };
   }
   if (!apiKey || !expectedFrom) throw new Error('KIT_API_KEY (Secret) und KIT_FROM_ADDRESS (Variable) fehlen.');
+  if (e.review_required) throw new Error(`Wochenbrief ${e.issue}: redaktionelle Themenpool-/Quellenprüfung steht noch aus; keine automatische Terminierung.`);
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(expectedFrom)) throw new Error('KIT_FROM_ADDRESS muss eine vollständige E-Mail-Adresse sein.');
   const target = new Date(e.send_at);
   const { broadcast: b } = await kitRequest(fetchImpl, String(e.id), apiKey);
