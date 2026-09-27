@@ -1,9 +1,9 @@
 {
   "datum": "2026-09-29",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
-  "liveVerknuepft": false,
-  "vorproduktionStatus": "review",
+  "freigabeBetreiber": true,
+  "liveVerknuepft": true,
+  "vorproduktionStatus": "freigegeben",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungUsd": 0,
@@ -372,88 +372,55 @@
       "szenen": [
         {
           "art": "hook",
-          "nummer": null,
-          "titel": "Einer unterschreibt für die GbR – das reicht meist nicht",
-          "unter": "Vertretung der GbR nach dem MoPeG",
-          "text": "Ausgangspunkt ist die Gesamtvertretung.",
-          "norm": "§ 720 BGB",
-          "icon": "personen",
-          "sprecher": "Einer unterschreibt für die GbR – reicht das? Meistens nicht. Nach § 720 BGB sind grundsätzlich alle Gesellschafter gemeinsam vertretungsbefugt, wenn der Gesellschaftsvertrag nichts anderes bestimmt.",
-          "marken": [
-            "Gesamtvertretung",
-            "§ 720 BGB"
-          ]
+          "titel": "Rex unterschreibt allein",
+          "text": "Die Signatur ist sichtbar, der Vertrag steht unmittelbar bevor.",
+          "sprecher": "Rex unterschreibt allein."
         },
         {
-          "art": "schritt",
-          "nummer": 1,
-          "titel": "Erst den Gesellschaftsvertrag lesen",
-          "text": "Der Vertrag kann von der gesetzlichen Gesamtvertretung abweichen.",
-          "norm": "§ 720 Abs. 1 BGB",
-          "sprecher": "Schritt eins: Lies den Gesellschaftsvertrag. Die gesetzliche Gesamtvertretung ist nur der Ausgangspunkt. Der Vertrag kann etwa Einzelvertretung oder eine andere Vertretungsordnung vorsehen.",
-          "marken": [
-            "Gesellschaftsvertrag"
-          ]
+          "art": "frage",
+          "titel": "Vertrag geschlossen? Stopp!",
+          "text": "Der Scanner blockiert die Einzelunterschrift nach zwei Sekunden.",
+          "sprecher": "Vertrag geschlossen? Stopp!"
         },
         {
-          "art": "schritt",
-          "nummer": 2,
-          "titel": "Innen und außen auseinanderhalten",
-          "text": "Geschäftsführung und Vertretung sind nicht dieselbe Frage.",
-          "norm": "§§ 715 ff., 720 BGB",
-          "sprecher": "Schritt zwei: Trenne Geschäftsführung und Vertretung. Geschäftsführung beantwortet, wer intern handeln darf. Vertretung beantwortet, wer die Gesellschaft gegenüber Dritten wirksam bindet.",
-          "marken": [
-            "innen ≠ außen"
-          ]
+          "art": "fall",
+          "titel": "Zwei Gesellschafter",
+          "text": "Rex und Mara betreiben dieselbe Sternwerkstatt-GbR.",
+          "sprecher": "Er und Mara betreiben die Sternwerkstatt-GbR."
         },
         {
-          "art": "schritt",
-          "nummer": 3,
-          "titel": "Umfang der Vertretungsmacht prüfen",
-          "text": "Interne Beschränkungen wirken gegenüber Dritten nicht ohne Weiteres.",
-          "norm": "§ 720 BGB",
-          "sprecher": "Schritt drei: Prüfe den Umfang der Vertretungsmacht. Interne Vorgaben und die Vertretungsmacht nach außen sind getrennt zu behandeln; eine bloße interne Beschränkung darf nicht vorschnell wie eine Außenbeschränkung behandelt werden.",
-          "marken": [
-            "Vertretungsmacht"
-          ]
+          "art": "vorfrage",
+          "titel": "Vertrag und Ermächtigung",
+          "text": "Keine abweichende Vertretungsregel im Gesellschaftsvertrag und keine Ermächtigung für Rex.",
+          "sprecher": "Der Gesellschaftsvertrag regelt die Vertretung nicht; eine Ermächtigung fehlt."
         },
         {
-          "art": "punkt",
-          "nummer": null,
-          "titel": "Dann das konkrete Geschäft subsumieren",
-          "text": "Wer hat gehandelt, in wessen Namen und mit welcher Vertretungsmacht?",
-          "norm": "§§ 164 ff. BGB",
-          "sprecher": "Danach subsumierst du das konkrete Geschäft nach den allgemeinen Stellvertretungsregeln: Wer hat gehandelt, war das Handeln für die Gesellschaft erkennbar und reichte die Vertretungsmacht?",
-          "marken": [
-            "§§ 164 ff. BGB"
-          ]
+          "art": "norm",
+          "titel": "§ 720 BGB – gemeinsam",
+          "text": "Gesetzlicher Ausgangspunkt ist die gemeinsame Vertretung der Gesellschafter.",
+          "norm": "§ 720 Abs. 1, 2 BGB",
+          "sprecher": "Dann gilt Paragraf sieben zwanzig BGB: Beide vertreten gemeinsam."
+        },
+        {
+          "art": "folge",
+          "titel": "Rex allein reicht nicht",
+          "text": "Die Einzelunterschrift bindet die GbR in diesem Fall zunächst nicht.",
+          "sprecher": "Rex allein bindet die GbR zunächst nicht."
+        },
+        {
+          "art": "auflösung",
+          "titel": "Mara zeichnet mit",
+          "text": "Zweite Signatur und sichtbar öffnendes Vertragstor.",
+          "sprecher": "Mara zeichnet mit: Das Vertragstor öffnet sich."
         },
         {
           "art": "merke",
-          "nummer": null,
-          "titel": "Die Reihenfolge schützt vor Aufbaufehlern",
-          "text": "Gesellschaftsvertrag → Vertretungsordnung → konkretes Vertreterhandeln.",
-          "norm": "§ 720 BGB",
-          "sprecher": "Merke: Gesellschaftsvertrag, Vertretungsordnung, konkretes Vertreterhandeln. Wer sofort bei § 164 BGB anfängt, übersieht schnell die gesellschaftsrechtliche Vorfrage.",
-          "marken": [
-            "Vertrag → Ordnung → Handeln"
-          ]
-        },
-        {
-          "art": "cta",
-          "nummer": null,
-          "titel": "Drei Ebenen sichtbar machen",
-          "text": "Innenzuständigkeit, Außenvertretung und konkretes Rechtsgeschäft getrennt prüfen.",
-          "norm": null,
-          "sprecher": "Mach in der Klausur drei Ebenen sichtbar: interne Geschäftsführung, Vertretungsmacht nach außen und anschließend das konkrete Rechtsgeschäft. Das hält den Aufbau sauber.",
-          "marken": [
-            "innen",
-            "außen",
-            "Geschäft"
-          ]
+          "titel": "Vertrag → Vertretung → Handeln",
+          "text": "Gesellschaftsvertrag, Vertretungsordnung, Vertreterhandeln in dieser Reihenfolge.",
+          "sprecher": "Merke: Gesellschaftsvertrag, Vertretungsordnung, Vertreterhandeln."
         }
       ],
-      "caption": "Einer unterschreibt für die GbR – das reicht meist nicht\n\nBei der GbR ist die Vertretung seit dem MoPeG ausdrücklich in § 720 BGB geregelt. Ausgangspunkt ist Gesamtvertretung, soweit der Gesellschaftsvertrag nichts anderes vorsieht. In der Klausur Geschäftsführung und Vertretung nicht vermischen: Erst die gesellschaftsrechtliche Vertretungsordnung klären, dann das konkrete Vertreterhandeln nach §§ 164 ff. BGB prüfen.",
+      "caption": "Rex unterschreibt allein für die Sternwerkstatt-GbR. Reicht das? Im Fall regelt der Gesellschaftsvertrag die Vertretung nicht, und eine Ermächtigung für Rex fehlt. Dann vertreten Rex und Mara die GbR nach § 720 Abs. 1 BGB grundsätzlich gemeinsam. Erst mit Maras Mitzeichnung ist die gemeinsame Vertretung im gezeigten Vertrag vollständig. Merke für die Klausur: Gesellschaftsvertrag → Vertretungsordnung → konkretes Vertreterhandeln.",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -466,41 +433,60 @@
         "#stellvertretung",
         "#examensvorbereitung"
       ],
-      "kurztitel": "GbR: Wer darf vertreten?",
+      "kurztitel": "GbR: Eine Unterschrift zu wenig",
       "titelZeilen": [
-        "Einer unterschreibt",
-        "für die GbR –",
-        "reicht meist nicht"
+        "REX ALLEIN?",
+        "DIE GbR",
+        "BLEIBT GESPERRT"
       ],
-      "coverText": "Innen und außen trennen",
-      "coverBadge": "Reel",
-      "coverBildAuslassen": true,
+      "coverText": "§ 720 BGB: gemeinsam vertreten",
+      "coverBadge": "Mini-Fall",
+      "coverBildAuslassen": false,
       "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Mehrere Gesellschafter stehen an einem gemeinsamen Ausgangstor; die Vertretungsordnung entscheidet, wer die Gesellschaft nach außen bindet.",
-        "handlung": "Spätere Charakterebene visualisiert ausschließlich diesen juristischen Kern: Mehrere Gesellschafter stehen an einem gemeinsamen Ausgangstor; die Vertretungsordnung entscheidet, wer die Gesellschaft nach außen bindet. Keine generische Jura-Dekoration.",
-        "hinweisRegie": "Aha-Hinweis kompakt in der freien unteren Bühne; Charakter-/Bildlayer bleibt in der Review-Fassung leer.",
+        "charaktere": [
+          "Rex Rohrbruch",
+          "Mara Sternpfad",
+          "Form-7"
+        ],
+        "kernidee": "Rex setzt allein die Unterschrift auf das blau leuchtende Werkstatt-Dokument; der Vertragsscan wird sogleich abgewiesen.",
+        "handlung": "Cover ist ein Standbild aus Sekunde 0,8 der freigegebenen MP4, keine separate Illustration. Die Figuren entsprechen ihren Golden References.",
+        "hinweisRegie": "Keine nachträgliche Texttafel oder Cover-Layoutdatei über das Filmbild legen.",
         "alternative": null
       },
       "quellen": [
-        "§ 720 BGB",
-        "§§ 164 ff. BGB",
+        "§ 720 Abs. 1, 2 BGB (amtlicher Gesetzestext)",
         "Themenpool: handelsg-532"
       ],
       "hookTyp": "fehler",
       "hookMuster": "konsequenz",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
+      "bildStatus": "freigegebene-illustrationen",
       "manuellGeprueft": true,
       "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
+      "finalisiertVon": "betreiberfreigabe-reel-29-cinematic-einzelwort",
+      "fachStand": "redaktionell-2026-09-27",
       "hookUpdate": {
         "stand": "2026-09-25T12:19:07.945Z",
         "quelle": "vorproduktion/hook-update.json"
+      },
+      "bildregie": true,
+      "finalisiertAm": "2026-09-27T12:26:10.937Z",
+      "infoVorproduktion": "FREIGEGEBENES REEL · 29.09.2026 · b3 · 18:30 Europe/Berlin · 29,707 s · 1080 × 1920 · 30 fps · H.264/AAC. Veröffentliche exakt vorproduktion/2026-09-29/fertig/b3/2026-09-29-b3.mp4; Cover aus Sekunde 0,8 desselben Reels. Nutzerfreigabe im Chat am 27.09.2026. Quellen der Produktion: GitHub Ccan-devoloper/herrjurist, Branch codex/reel-test-20260929, Commit 7ba726a0ee1bc4cd48b0479eb41e3be91325e994, reel-2026-09-29/render.mjs, erfolgreicher GitHub-Actions-Lauf 36318437308. Video-SHA256: 6a12934d71ab14e298fbd8836533803e09f1a711e02bdc68ab79f5d115f99bb4.\n\nRECHTSKERN UND MEHRWERT: Ein konkreter Fall erklärt § 720 Abs. 1 BGB. Rex unterschreibt allein, obwohl er und Mara die beiden Gesellschafter sind. Der Gesellschaftsvertrag bestimmt keine abweichende Vertretung; auch eine Ermächtigung für Rex im Sinn von § 720 Abs. 2 fehlt. Daher gemeinsame Vertretung. Einzelunterschrift bindet die GbR in diesem Fall zunächst nicht; Mara zeichnet mit. Das Merke liefert die klausurtaugliche Reihenfolge: Gesellschaftsvertrag → Vertretungsordnung → konkretes Vertreterhandeln. § 715 BGB zur internen Geschäftsführung nicht mit Außenvertretung vermischen. Normtext am amtlichen Gesetzestext gesondert geprüft.\n\nROTER FADEN UND TIMING: 0–2 s Rex setzt allein die Signatur an; 2,00 s Scanner-Widerspruch/Impact-Bild, also Konflikt innerhalb der ersten drei Sekunden. Ab 4,30 s Rex und Mara als Partner; 7,60 s Vertragsprüfung; 12,37 s große in die Werkstatt gezeichnete §-720-Tafel; 17,43 s kurze Rückblende auf die blockierte Einzelunterschrift; 20,53 s Mara zeichnet mit; 22,37 s Vertragstor öffnet sich; ab 24,10 s eigenes Merke-Bild. Acht Bildmotive, elf feste Bildbeats. Anime-artige Motion durch Antizipation, 2-Frame-Impact, passende Speedlines, harte motivierte Nähe-/Ferne-Sprünge und Ursache-Reaktion; keinerlei permanenter zoompan oder zitternder Ken-Burns-Effekt. Die Schluss-Tafel bleibt 5,61 s lesbar. Alle Figuren, Requisiten und der blaue Werkstattraum erzählen dieselbe Handlung.\n\nBILDREFERENZEN UND FARBE: Rex, Mara und Form-7 vor jeder Szene mit assets/charaktere/rex-rohrbruch.jpg.b64, mara-sternpfad.jpg.b64 und form-7.jpg.b64 abgleichen: Gesicht, Kleidung, Ausrüstung, Silhouette, Proportionen. Zivilrecht-Kobaltblau #2d5be3 mit Cyan, natürliche Figurenfarben. § 720 BGB und GEMEINSAM sowie das Merke-Schema 1 VERTRAG / 2 VERTRETUNG / 3 HANDELN sind bereits auf perspektivisch gezeichneten Hologrammtafeln im Bild; keine flach aufgesetzte Schrift. Für NACHFOLGEN die Hauptfiguren und Konstellationen bewusst abwechseln und zur Fallhandlung passend wählen; dieses Reel mit Rex/Mara/Form-7 ist freigegeben, aber keine Standardbesetzung. Für tatsächlich genutzte Figuren bleiben Golden References verbindlich.\n\nSTIMME, EFFEKTE, CAPTIONS: ElevenLabs-Stimme PhufIH7nYh2Up1uej6aY, eleven_multilingual_v2, speed 1.06; § 720 bewusst als „Paragraf sieben zwanzig“ gesprochen (Regel: erst über § 200 gruppiert; Jahre normal). 0,42 s Vorlauf; Sprechertext exakt wie in den acht szenen.sprecher. ElevenLabs-SFX: scharfer Scanner-Widerspruch auf Sekunde 2, dezente Normprojektion ab 12,45 s, Vertragstor-Öffnung auf 22,37 s. Die Töne folgen den sichtbaren Ereignissen, keine fremden Schreie. 48 eingebrannte Einzelwort-Captions, ausschließlich Erzählerworte, zeitlich aus dem ElevenLabs-Alignment; Nimbus Sans fett 72 px (lange Worte 64/55), weiß, 2,5 px dunkle Kontur, 2 px Schatten, 106→100 % kurzer Auftakt, immer mittig unten (ASS Alignment 2, MarginV 280). ASS und Alignment/Timing liegen neben der MP4 bzw. im audio-Unterordner. Keine Captions für Geräusche.\n\nQUALITÄTSGATE: Gesamten 9:16-Export auf Mobilgröße und mit Ton ansehen. In den ersten drei Sekunden müssen Fall und Stopp fesseln; der juristische Erkenntnisgewinn muss am Ende ausdrücklich benennbar sein. Keine falsch platzierten Sounds, keine Bildzitterei, keine Textgeometriefehler, keine Golden-Reference-Abweichungen, Norm und Merke dürfen nicht durch Captions verdeckt werden. Ziel möglichst um 30 s; die tatsächlichen 29,707 s sind freigegeben. Die veröffentlichte MP4 ist maßgeblich; nicht automatisch aus älteren Piper-Szenentexten neu rendern.",
+      "produktionsReferenz": {
+        "gitBranch": "codex/reel-test-20260929",
+        "source": "reel-2026-09-29/render.mjs",
+        "commit": "7ba726a0ee1bc4cd48b0479eb41e3be91325e994",
+        "workflowRun": 36318437308,
+        "fassung": "gbr-cinematic-v3-einzelwort",
+        "dauerSekunden": 29.707,
+        "sprecher": "ElevenLabs PhufIH7nYh2Up1uej6aY",
+        "untertitel": "vorproduktion/2026-09-29/fertig/b3/untertitel-einzelwort.ass",
+        "videoSha256": "6a12934d71ab14e298fbd8836533803e09f1a711e02bdc68ab79f5d115f99bb4",
+        "coverSha256": "dd58f9d894e187383d580a4e0794b906ad791f41ceb92ce141fb3c0b5d5ae5c5",
+        "captionStil": "nur Sprecher, Einzelwort, weiß, unten"
       }
     },
     "s4": {
@@ -739,15 +725,15 @@
   },
   "renderVorschau": {
     "status": "fertig",
-    "erzeugtAm": "2026-09-24T21:26:30.260Z",
+    "erzeugtAm": "2026-09-27T12:26:10.937Z",
     "pfad": "vorproduktion/2026-09-29/fertig",
     "providerKostenUsd": 0,
     "textProviderKostenUsd": 0,
     "faktencheckProviderKostenUsd": 0,
     "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "reelStimme": "piper-offline",
-    "freigabeBetreiber": false,
+    "reelStimme": "elevenlabs-freigegeben-cinematic-einzelwort",
+    "freigabeBetreiber": true,
     "coverbilderAngewandt": {
       "stand": "2026-09-25T19:46:07.424Z",
       "providerKostenUsd": 0,
@@ -767,7 +753,7 @@
     }
   },
   "liveRegel": {
-    "veroeffentlichen": false,
+    "veroeffentlichen": true,
     "freigabeErforderlich": true
   }
 }
