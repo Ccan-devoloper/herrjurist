@@ -16,6 +16,7 @@ for (const [index, segment] of script.segments.entries()) {
     if (line.role !== 'narrator') continue;
     const voice = settings[line.role];
     const basename = `${String(index + 1).padStart(2, '0')}-${segment.id}-${String(lineIndex + 1).padStart(2, '0')}`;
+    if (process.env.HERR_JURIST_AUDIO_ONLY && basename !== process.env.HERR_JURIST_AUDIO_ONLY) continue;
     const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice.id}/with-timestamps?output_format=mp3_44100_128`, {
       method: 'POST',
       headers: { 'xi-api-key': key, 'Content-Type': 'application/json' },
