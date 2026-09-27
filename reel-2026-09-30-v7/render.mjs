@@ -121,6 +121,8 @@ const events={
   zylla_at:zyllaVisibleAt,
   consent_at:lineStart(4),
   law1_at:lineStart(5),
+  law1_reaction_at:lineStart(5)+Math.min(2.75,
+    .55*(lineStart(6)-lineStart(5))),
   law2_at:lineStart(6),
   shield_at:shieldAt,
   cross_at:crossAt

@@ -50,8 +50,11 @@ def render_frame(t, timing, images, masks):
         return images['04-statement']
     if t < e['law1_at']:
         return images['01-consent']
+    # One motivated return to Zylla's exhausted face during the legal reason.
+    # It changes the full shot only once after a long legal-image hold.
     if t < e['law2_at']:
-        return images['05-law1']
+        return (images['05-law1'] if t < e['law1_reaction_at']
+                else images['04-statement'])
     if t < e['shield_at']:
         return images['06-law2']
     if t < e['cross_at']:
