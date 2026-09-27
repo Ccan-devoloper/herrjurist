@@ -11,13 +11,13 @@ for (const dir of [audio, out, framesDir]) fs.mkdirSync(dir, { recursive: true }
 // One causal story. The signature is shown first, then the earlier prohibited
 // interrogation explains why that signature cannot save this statement.
 const lines = [
-  'Zylla unterschreibt: Meine Aussage dürft ihr nutzen. Klingt wirksam?',
+  'Zylla unterschreibt. Aussage verwertbar? Stopp!',
   'Zurück in die Vernehmung.',
   'Brakk hält sie die ganze Nacht wach, bis sie erschöpft redet.',
   'Zylla ist längst am Ende, doch er fragt weiter.',
   'Ihre Aussage landet trotzdem im Protokoll.',
-  'Doch Paragraf einhundertsechsunddreißig A der Strafprozessordnung verbietet solche Ermüdung.',
-  'Absatz drei: Auch Zyllas spätere Zustimmung macht diese Aussage nicht verwertbar.',
+  'Doch Paragraf einhundertsechsunddreißig A verbietet Ermüdung.',
+  'Absatz drei: Selbst Zustimmung rettet die Aussage nicht.',
   'Eine Unterschrift heilt keine verbotene Vernehmungsmethode.'
 ];
 const script = lines.join(' ');

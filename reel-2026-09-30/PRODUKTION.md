@@ -8,7 +8,7 @@
 
 **Sprechertext:**
 
-> Zylla unterschreibt: Meine Aussage dürft ihr nutzen. Klingt wirksam? Zurück in die Vernehmung. Brakk hält sie die ganze Nacht wach, bis sie erschöpft redet. Zylla ist längst am Ende, doch er fragt weiter. Ihre Aussage landet trotzdem im Protokoll. Doch Paragraf einhundertsechsunddreißig A der Strafprozessordnung verbietet solche Ermüdung. Absatz drei: Auch Zyllas spätere Zustimmung macht diese Aussage nicht verwertbar. Eine Unterschrift heilt keine verbotene Vernehmungsmethode.
+> Zylla unterschreibt. Aussage verwertbar? Stopp! Zurück in die Vernehmung. Brakk hält sie die ganze Nacht wach, bis sie erschöpft redet. Zylla ist längst am Ende, doch er fragt weiter. Ihre Aussage landet trotzdem im Protokoll. Doch Paragraf einhundertsechsunddreißig A verbietet Ermüdung. Absatz drei: Selbst Zustimmung rettet die Aussage nicht. Eine Unterschrift heilt keine verbotene Vernehmungsmethode.
 
 **Bildführung:** Zehn von ImageGen mit den Golden References für Zylla und Brakk erzeugte Kontaktbögen (`sheets/`) enthalten zusammen 70 Einzelbilder. Der 2×2- bzw. 3×3-Bogen ist **nur Produktionsmaterial**: Jedes Panel wird einzeln ausgeschnitten und in strenger Leserichtung nacheinander bildfüllend gezeigt. Im fertigen Reel erscheint niemals eine Mehrbildtafel. Die Bildfolgen folgen den acht Sätzen des Sprechers und werden anhand seines ElevenLabs-Zeichenalignments verteilt; Ziel 2–4 Bildwechsel pro Sekunde bei einer echten 30-fps-H.264-Datei. Feste Crops ohne Dauerzoom oder Jitter. Orange Fachfarbe, derselbe Vernehmungsraum, konsistente Figuren und Requisiten; alle Panels gegen die Golden References und untereinander prüfen.
 
