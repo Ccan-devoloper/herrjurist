@@ -25,6 +25,8 @@ function validDraft() {
           { marker: 'I.', text: 'Wirksamer Kaufvertrag über das Buch für zwanzig Euro' },
           { marker: 'II.', text: 'Kaufpreisforderung fällig nach der Abrede der Parteien' },
           { marker: 'B.', text: 'Anspruch nicht durch Zahlung nach § 362 BGB erloschen' },
+          { marker: 'I.', text: 'K hat trotz Fälligkeit keine Zahlung an V erbracht' },
+          { marker: 'II.', text: 'Der Kaufpreisanspruch besteht daher weiterhin in voller Höhe' },
         ],
         trap: 'Die Übergabe des Buchs erfüllt nicht zugleich die Kaufpreisschuld des Käufers.',
         sources: [{ label: '§ 433 BGB', url: 'https://www.gesetze-im-internet.de/bgb/__433.html' }],
@@ -41,7 +43,8 @@ test('vollständiger Entwurf rendert Logo, Examensbadges, Quellen und Einrückun
   assert.match(html, /by herrjurist/);
   assert.match(html, /1\. Staatsexamen/);
   assert.match(html, /2\. Staatsexamen/);
-  assert.match(html, /padding:5px 0 5px 22px/);
+  assert.match(html, /padding:5px 13px 5px 22px/);
+  assert.match(html, /max-width:690px/);
   assert.match(html, /gesetze-im-internet\.de/);
 });
 
@@ -80,4 +83,24 @@ test('Quellenkennungen und Instagram-Links erscheinen nicht im Newsletter', () =
   const html = rendereWochenbrief(draft);
   assert.doesNotMatch(html, /Vorproduktion|2026-09-24-b2|2026-09-27-b1|instagram\.com/);
   assert.match(html, /Rechtsgrundlagen:.*§ 433 BGB/);
+});
+
+test('Prüffrage und Methodik folgen Master 02 ohne erfundenen Fall', () => {
+  const draft = validDraft();
+  const item = draft.sections[0].cases[0];
+  item.question = 'Wann entsteht der Kaufpreisanspruch und wann geht er durch Erfüllung unter?';
+  delete item.fact;
+  draft.methods = [{
+    id: '02', field: 'KOPFSACHE', headline: 'Die nächste Prüfungsfrage wiederfinden',
+    exams: [1, 2], intro: 'Wenn die Bearbeitung stockt, bringt ein kleiner nächster Schritt die Struktur zurück.',
+    steps: ['Markiere die letzte sichere Stelle der Lösungsskizze.', 'Formuliere den nächsten Obersatz, bevor du Details nachliest.'],
+    note: 'Ein kontrollierter Neustart erhält Zeit für die übrigen Klausurteile.',
+  }];
+  draft.issue.topic_count = 2;
+  assert.deepEqual(pruefeWochenbrief(draft), []);
+  const html = rendereWochenbrief(draft);
+  assert.match(html, /KLAUSURFRAGE.*DU BIST DRAN/);
+  assert.match(html, /Klausurtechnik &amp; Kopfsache · 02–02/);
+  assert.match(html, /DIREKT ANWENDEN/);
+  assert.equal((html.match(/MINIFALL/g) || []).length, 0);
 });
