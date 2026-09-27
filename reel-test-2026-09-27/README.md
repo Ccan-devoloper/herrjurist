@@ -13,3 +13,7 @@ Lokal kann dieselbe Fassung mit `REEL_VOICE_PATH`, `REEL_IMPACT_PATH` und `REEL_
 ## Variante 4: Hook, Treffer und Schluss
 
 `render-v4.mjs` kürzt die Sprecherfassung und verwendet ein neues eigenständiges Schlussmotiv. Der Treffer bekommt getrennte ElevenLabs-Spuren für den schweren Schlag und das kurze Visierknacken sowie einen knappen Tiefton. Beide Treffergeräusche beginnen genau auf dem sichtbaren Kontakt; beim Replay sind sie leiser. Die vormals schwarzen Textkästen entfallen: Der Einstieg hat eine zweistufige Comic-Überschrift, die Norm und der Merksatz sitzen klein im Hologramm. Der Schnitt endet kurz nach dem gesprochenen Merksatz.
+
+## Variante 5: ursprünglicher Text, Comic-Grafiken und Maras Aufschrei
+
+`render-v5.mjs` nimmt den vollständigen Sprechertext der 23-Sekunden-Fassung zurück. Die neue Merkszene beginnt exakt mit dem gesprochenen „Merke“. Ein scharfer Treffer-Effekt plus Visierknacken liegt auf dem ersten Kontakt, gefolgt von einem kurzen generierten weiblichen Aufschrei; beim Replay ertönt nur der Treffer in reduzierter Stärke. Die grafischen Aufkleber `overlays/comic-burst.webp` und `overlays/law-hologram.webp` sind eigens gezeichnete transparente Bildmotive. Exakte deutsche Überschrift und Norm werden beim Rendern in die Grafik gesetzt, damit die Zeichen verlässlich stimmen. Im Schlussbild bleibt die Norm groß lesbar.
