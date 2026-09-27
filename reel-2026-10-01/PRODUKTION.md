@@ -31,17 +31,15 @@ dargestellt werden.
 
 Exakter Erzählertext:
 
-> Alle Instanzen durch. Karlsruhe bleibt trotzdem zu. Warum?
+> Rechtsweg erschöpft. Karlsruhe bleibt zu. Warum?
 >
-> Zurück. Mara hätte den Grundrechtsverstoß schon beim Fachgericht rügen
-> können. Sie schwieg.
+> Zurück. Mara hätte den Grundrechtsverstoß vor Gericht rügen können.
+> Sie schwieg.
 >
-> Paragraf neunzig Absatz zwei Satz eins verlangt Rechtswegerschöpfung.
-> Subsidiarität verlangt darüber hinaus, zumutbare Möglichkeiten vor den
-> Fachgerichten zu nutzen.
+> Paragraf neunzig Absatz zwei Satz eins: Rechtsweg erschöpfen.
+> Subsidiarität geht weiter: zumutbare fachgerichtliche Chancen nutzen.
 >
-> Ein ausgeschöpfter Rechtsweg öffnet nicht beide Türen. In der Klausur:
-> beide Hürden getrennt prüfen.
+> Die erste Tür öffnet nicht die zweite. In der Klausur: getrennt prüfen.
 
 Mara sagt am wieder erreichten Tor: „Aber ich war doch überall!“ Der
 Erzähler überlässt ihr die Irritation, statt sie zu wiederholen. Die

@@ -13,12 +13,12 @@ const voices = {
   mara: '2aL479c8D3QMIPExj0tw'      // Selena, bereits für Mara etabliert
 };
 const lines = [
-  'Alle Instanzen durch. Karlsruhe bleibt trotzdem zu. Warum?',
-  'Zurück. Mara hätte den Grundrechtsverstoß schon beim Fachgericht rügen können.',
+  'Rechtsweg erschöpft. Karlsruhe bleibt zu. Warum?',
+  'Zurück. Mara hätte den Grundrechtsverstoß vor Gericht rügen können.',
   'Sie schwieg.',
-  'Paragraf neunzig Absatz zwei Satz eins verlangt Rechtswegerschöpfung.',
-  'Subsidiarität verlangt darüber hinaus, zumutbare Möglichkeiten vor den Fachgerichten zu nutzen.',
-  'Ein ausgeschöpfter Rechtsweg öffnet nicht beide Türen. In der Klausur: beide Hürden getrennt prüfen.'
+  'Paragraf neunzig Absatz zwei Satz eins: Rechtsweg erschöpfen.',
+  'Subsidiarität geht weiter: zumutbare fachgerichtliche Chancen nutzen.',
+  'Die erste Tür öffnet nicht die zweite. In der Klausur: getrennt prüfen.'
 ];
 const script = lines.join(' ');
 const maraText = '[frustrated] Aber ich war doch überall!';
@@ -151,15 +151,15 @@ function caption(start, end, shown) {
     ',Phrase,,0,0,0,,{\\fs' + size + '\\fad(70,70)}' + shown + '\n';
 }
 const phrases = [
-  ['Alle Instanzen durch.'], ['Karlsruhe bleibt'], ['trotzdem zu.'], ['Warum?'],
-  ['Zurück.'], ['Mara hätte den'], ['Grundrechtsverstoß schon'],
-  ['beim Fachgericht rügen können.'], ['Sie schwieg.'],
+  ['Rechtsweg erschöpft.'], ['Karlsruhe bleibt zu.'], ['Warum?'],
+  ['Zurück.'], ['Mara hätte den'], ['Grundrechtsverstoß'],
+  ['vor Gericht rügen können.'], ['Sie schwieg.'],
   ['Paragraf neunzig Absatz zwei Satz eins','§ 90 Abs. 2 S. 1'],
-  ['verlangt Rechtswegerschöpfung.'],
-  ['Subsidiarität verlangt'], ['darüber hinaus,'],
-  ['zumutbare Möglichkeiten'], ['vor den Fachgerichten'], ['zu nutzen.'],
-  ['Ein ausgeschöpfter Rechtsweg'], ['öffnet nicht beide Türen.'],
-  ['In der Klausur:'], ['beide Hürden getrennt prüfen.']
+  ['Rechtsweg erschöpfen.'],
+  ['Subsidiarität geht weiter:'], ['zumutbare fachgerichtliche'],
+  ['Chancen nutzen.'],
+  ['Die erste Tür'], ['öffnet nicht die zweite.'],
+  ['In der Klausur:'], ['getrennt prüfen.']
 ];
 if (phrases.map(p => p[0]).join(' ').replace(/\s/g,'') !==
     script.replace(/\s/g,'')) throw Error('Narrator caption coverage differs');
