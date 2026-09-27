@@ -13,6 +13,9 @@ const lines = [
   'Dann kann er ein gefährliches Werkzeug sein. Merke: Beschaffenheit und Verwendung prüfen.'
 ];
 const script = lines.join(' ');
+const approvedDir = path.join(dir,'audio-v5');
+const approvedTiming = fs.existsSync(path.join(approvedDir,'timing.json')) ? JSON.parse(fs.readFileSync(path.join(approvedDir,'timing.json'),'utf8')) : null;
+if (approvedTiming && approvedTiming.script !== script) throw new Error('Freigegebene Audiofassung passt nicht zum Skript.');
 const key = process.env.ELEVENLABS_API_KEY;
 const voice = process.env.ELEVENLABS_VOICE_ID || 'PhufIH7nYh2Up1uej6aY';
 const model = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
@@ -23,7 +26,7 @@ function run(command, args) {
 }
 function duration(file) { return Number(run('ffprobe', ['-v','error','-show_entries','format=duration','-of','default=nw=1:nk=1',file])); }
 
-let voicePath = process.env.REEL_VOICE_PATH;
+let voicePath = process.env.REEL_VOICE_PATH || (approvedTiming ? path.join(approvedDir,'sprecher.mp3') : null);
 let alignment;
 let startTimes;
 if (!voicePath) {
@@ -47,13 +50,13 @@ const boundaries = lines.map((line, i) => {
   if (i < lines.length - 1) char++;
   return Math.min(voiceDuration, seconds);
 });
-const lead = 0.52; // Kontakt und kurzer Schrei vor dem ersten gesprochenen Wort.
-const base = alignment ? [0, ...boundaries.slice(0,4).map(t=>t+lead), voiceDuration+lead+0.18] :
-  [0,2.136,6.316,10.542,16.985,voiceDuration+0.18].map((t,i)=>i? t+lead : 0);
+const lead = approvedTiming?.lead ?? 0.52; // Kontakt und kurzer Schrei vor dem ersten gesprochenen Wort.
+const base = approvedTiming?.boundaries ?? (alignment ? [0, ...boundaries.slice(0,4).map(t=>t+lead), voiceDuration+lead+0.18] :
+  [0,2.136,6.316,10.542,16.985,voiceDuration+0.18].map((t,i)=>i? t+lead : 0));
 const b = base;
 const merkeIndex = script.indexOf('Merke:');
 const exactMerke = startTimes?.[merkeIndex];
-const merkeAt = Number.isFinite(exactMerke) ? exactMerke + lead : b[4]+(b[5]-b[4])*.53;
+const merkeAt = approvedTiming?.merkeAt ?? (Number.isFinite(exactMerke) ? exactMerke + lead : b[4]+(b[5]-b[4])*.53);
 const beats = [
   {at:0, until:.42, image:'shot-01.jpg'},
   {at:.42, until:b[1], image:'shot-01.jpg', punch:1.13, textStyle:'hook'},
@@ -121,10 +124,10 @@ async function elevenSfx(name, text, seconds) {
   fs.writeFileSync(target,Buffer.from(await response.arrayBuffer()));
   return target;
 }
-let impact = await elevenSfx('impact','One VERY LOUD sharp explosive WHACK as a heavy solid stainless steel travel mug violently strikes a hard helmet visor. Bright crunchy midrange impact and a brief metal snap, immediate attack, short tail. Not soft, not muffled, no bass boom, no gentle clink, no speech, no music.',0.85);
-let crack = await elevenSfx('crack','One short high-energy brittle visor CRACK at the instant of a hard blow, with a tiny rattling shard tail. Sharp close microphone sound, no deep thud, no bell or chime, no speech, no music.',0.68);
-let yelp = await elevenSfx('mara-yelp','One short startled adult female cartoon pain yelp, a natural sharp "Ah!" immediately after being struck. Close dry voice, less than one second, no words beyond this one vocalization, no screaming crowd, no music, no ambience.',0.78);
-let scanner = await elevenSfx('scanner','One short clean futuristic evidence scan ping, quiet and precise, no voice, no music, no ambience.',0.7);
+let impact = approvedTiming ? path.join(approvedDir,'impact.mp3') : await elevenSfx('impact','One VERY LOUD sharp explosive WHACK as a heavy solid stainless steel travel mug violently strikes a hard helmet visor. Bright crunchy midrange impact and a brief metal snap, immediate attack, short tail. Not soft, not muffled, no bass boom, no gentle clink, no speech, no music.',0.85);
+let crack = approvedTiming ? path.join(approvedDir,'crack.mp3') : await elevenSfx('crack','One short high-energy brittle visor CRACK at the instant of a hard blow, with a tiny rattling shard tail. Sharp close microphone sound, no deep thud, no bell or chime, no speech, no music.',0.68);
+let yelp = approvedTiming ? path.join(approvedDir,'mara-yelp.mp3') : await elevenSfx('mara-yelp','One short startled adult female cartoon pain yelp, a natural sharp "Ah!" immediately after being struck. Close dry voice, less than one second, no words beyond this one vocalization, no screaming crowd, no music, no ambience.',0.78);
+let scanner = approvedTiming ? path.join(approvedDir,'scanner.mp3') : await elevenSfx('scanner','One short clean futuristic evidence scan ping, quiet and precise, no voice, no music, no ambience.',0.7);
 if (!impact) impact = process.env.REEL_IMPACT_PATH || null;
 if (!crack) crack = process.env.REEL_CRACK_PATH || null;
 if (!yelp) yelp = process.env.REEL_YELP_PATH || null;
@@ -137,11 +140,11 @@ if (!scanner) {
 const ms = t => Math.max(0,Math.round(t*1000));
 const replay = beats[6].at;
 const audioFilter = `[1:a]loudnorm=I=-16:TP=-1.5:LRA=11,adelay=${ms(lead)}:all=1[v];`+
-  `[2:a]highpass=f=160,equalizer=f=1850:t=q:w=1.4:g=7,volume=1.40,adelay=0:all=1[h1];`+
-  `[2:a]highpass=f=160,equalizer=f=1850:t=q:w=1.4:g=7,volume=0.82,adelay=${ms(replay)}:all=1[h2];`+
-  `[3:a]highpass=f=550,volume=0.94,adelay=12:all=1[c1];`+
-  `[3:a]highpass=f=550,volume=0.55,adelay=${ms(replay)+12}:all=1[c2];`+
-  `[4:a]highpass=f=260,volume=0.92,adelay=145:all=1[y];`+
+  `[2:a]highpass=f=160,equalizer=f=1850:t=q:w=1.4:g=7,volume=3.1,adelay=0:all=1[h1];`+
+  `[2:a]highpass=f=160,equalizer=f=1850:t=q:w=1.4:g=7,volume=1.8,adelay=${ms(replay)}:all=1[h2];`+
+  `[3:a]atrim=start=0.10,asetpts=PTS-STARTPTS,highpass=f=550,volume=0.95,adelay=10:all=1[c1];`+
+  `[3:a]atrim=start=0.10,asetpts=PTS-STARTPTS,highpass=f=550,volume=0.55,adelay=${ms(replay)+10}:all=1[c2];`+
+  `[4:a]highpass=f=260,volume=0.36,adelay=250:all=1[y];`+
   `[5:a]volume=0.13,adelay=${ms(beats[5].at)}:all=1[s];`+
   `[v][h1][h2][c1][c2][y][s]amix=inputs=7:duration=longest:normalize=0,alimiter=limit=0.86[a]`;
 const destination = path.join(out,'herrjurist-224-test-v5.mp4');

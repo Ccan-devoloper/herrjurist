@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: ffmpeg bereitstellen
         run: sudo apt-get update -qq >/dev/null && sudo apt-get install -y -qq ffmpeg >/dev/null
-      - name: ElevenLabs sprechen, Maras Aufschrei und V5 rendern
+      - name: Freigegebene ElevenLabs-Spuren mischen und V5 rendern
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
