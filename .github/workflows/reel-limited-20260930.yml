@@ -1,0 +1,48 @@
+name: 30.09. StPO – coherent limited animation review
+
+on:
+  push:
+    branches: [codex/reel-test-20260930]
+    paths:
+      - 'reel-2026-09-30-v3/**'
+      - '.github/workflows/reel-limited-20260930.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install render dependencies
+        run: |
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq ffmpeg fonts-urw-base35 >/dev/null
+          python -m pip install --disable-pip-version-check pillow numpy
+      - name: Render approved narrator voice, sound and limited animation
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: PhufIH7nYh2Up1uej6aY
+        run: node reel-2026-09-30-v3/render.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reel-2026-09-30-136a-neu-prueffassung
+          path: |
+            reel-2026-09-30-v3/out/herrjurist-2026-09-30-136a-neu-prueffassung.mp4
+            reel-2026-09-30-v3/out/cover.jpg
+            reel-2026-09-30-v3/out/timing.json
+            reel-2026-09-30-v3/out/untertitel-einzelwort.ass
+            reel-2026-09-30-v3/audio/*.mp3
+            reel-2026-09-30-v3/audio/alignment.json
+          if-no-files-found: warn
+          retention-days: 30
