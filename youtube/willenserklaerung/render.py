@@ -379,12 +379,17 @@ def legal_notation(words):
 def groups_of_words(words):
     result, current = [], []
     for word in words:
+        # Legal citations render as several visible tokens even when they
+        # replace one spoken word sequence in the alignment.
+        if current and sum(len(w[0].split()) for w in current + [word]) > 5:
+            result.append(current)
+            current = []
         current.append(word)
-        if len(current) >= 4 or (len(current) >= 2 and re.search(r"[,;.!?…:]$", word[0])):
+        if sum(len(w[0].split()) for w in current) >= 4 or (len(current) >= 2 and re.search(r"[,;.!?…:]$", word[0])):
             result.append(current)
             current = []
     if current:
-        if result and len(current) == 1 and len(result[-1]) < 5:
+        if result and len(current) == 1 and sum(len(w[0].split()) for w in result[-1] + current) <= 5:
             result[-1].extend(current)
         else:
             result.append(current)
