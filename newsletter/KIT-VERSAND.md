@@ -3,9 +3,11 @@
 Der GitHub-Workflow `kit-wochenbrief.yml` prüft sonntags morgens den in
 `kit-versandplan.json` freigegebenen Kit-Entwurf und terminiert ihn für 09:00
 Uhr **Europe/Berlin**. Kit verschickt ihn selbst. Die Liste enthält derzeit
-Wochenbrief 04–13 (11. Oktober bis 13. Dezember 2026). Danach geschieht
+Wochenbrief 04–56 (11. Oktober 2026 bis 10. Oktober 2027). Danach geschieht
 nichts, bis weitere geprüfte Ausgaben mit ID, Datum und Betreff eingetragen
-sind. Die Redaktion und Rechtsstandsprüfung bleiben eigene Arbeitsschritte.
+sind. Die Redaktion und Rechtsstandsprüfung bleiben eigene Arbeitsschritte;
+insbesondere bei Ausgaben weit in der Zukunft müssen Normen und Entscheidungen
+kurz vor dem Versand erneut auf Änderungen geprüft werden.
 
 ## Einmalige Aktivierung
 
@@ -31,6 +33,14 @@ Ein bereits terminierter oder versendeter Brief wird nicht doppelt versendet.
 Der Versand ist an 09:00 Berliner Zeit gebunden; die UTC-Termine im Plan
 berücksichtigen die Zeitumstellung. Bei einer anderen Uhrzeit müssen Plan und
 Prüfung vor dem Merge gemeinsam angepasst werden.
+
+Die Entwürfe 14–56 wurden aus den 18 Einzelbeiträgen der jeweils
+vorangehenden Montag-bis-Samstag-Woche erzeugt. Der Klartext des
+verschlüsselten Themenpools stand dabei nicht zur Verfügung; abgeglichen
+wurden die Themenpool-IDs und Normen aus den Vorproduktionsdaten mit den
+ausformulierten Beiträgen. Die verlinkten amtlichen Normseiten wurden auf
+Erreichbarkeit geprüft. Diese Prüfung ersetzt keine erneute fachliche
+Rechtsstandsprüfung zu den jeweiligen Sendeterminen.
 
 Kit dokumentiert, dass die Empfängerliste beim Terminieren fixiert werden
 kann. Deshalb terminiert der Workflow erst am Sonntagmorgen. GitHub-Cron

@@ -34,8 +34,12 @@ function args(b, calls, overrides = {}) {
 
 test('Plan berücksichtigt Berliner Datum und die Zeitumstellung', () => {
   assert.doesNotThrow(() => validatePlan(entries));
+  assert.equal(entries.length, 53);
   assert.equal(dueEntry(entries, before)?.issue, 4);
   assert.equal(dueEntry(entries, new Date('2026-10-24T23:30:00Z'))?.issue, 6);
+  assert.equal(entries.find(e => e.date === '2027-03-21')?.send_at, '2027-03-21T08:00:00Z');
+  assert.equal(entries.find(e => e.date === '2027-03-28')?.send_at, '2027-03-28T07:00:00Z');
+  assert.equal(entries.at(-1).date, '2027-10-10');
   assert.equal(dueEntry(entries, new Date('2026-10-10T05:20:00Z')), null);
 });
 
@@ -84,6 +88,6 @@ test('Ohne Secret oder ohne fälligen Eintrag wird nichts an Kit geschrieben', a
   assert.equal(calls.length, 0);
   assert.equal((await scheduleDue(args(draft(), calls, { now: new Date('2026-10-12T05:20:00Z') }))).action, 'none');
   assert.equal(calls.length, 0);
-  await assert.rejects(scheduleDue(args(draft(), calls, { now: new Date('2026-12-20T07:20:00Z') })), /Kein freigegebener/);
+  await assert.rejects(scheduleDue(args(draft(), calls, { now: new Date('2027-10-17T06:20:00Z') })), /Kein freigegebener/);
   assert.equal(calls.length, 0);
 });
