@@ -12,7 +12,7 @@ Die fünf Szenenbilder wurden mit Maras und Rex' Golden References aus `main/ass
 
 - Erzähler: freigegebene Stimme Moritz, Voice-ID `PhufIH7nYh2Up1uej6aY`, `eleven_multilingual_v2`, Einstellungen aus der V7-Produktionsreferenz (Stabilität 0,42; Ähnlichkeit 0,82; Stil 0,38; Speaker Boost; Tempo 1,08). Die neun MP3s und Zeichen-Alignments stammen aus GitHub-Actions-Lauf 36358083600. Der gewählte Take bleibt fixiert.
 - Mara: zwei kurze deutschsprachige Charakter-Takes; Rex: ein kurzer eigener Take. Keine Figur wiederholt den Erzählertext.
-- 44 Bildzustände; harte Schnitte und stabile Hintergründe. 185 Untertitel-Cues aus den tatsächlichen Erzähler-Alignments; juristische Normen erscheinen im Subtitle als Kurznotation.
+- 44 Bildzustände; harte Schnitte und stabile Hintergründe. 190 Untertitel-Cues aus den tatsächlichen Erzähler-Alignments; juristische Normen erscheinen im Subtitle als Kurznotation.
 - Ausgabe: H.264, 1920 × 1080, 30 fps, yuv420p; AAC mono 48 kHz, 192 kbit/s; MP4 mit Faststart. Sprachende etwa 4:59, Gesamtdauer etwa 5:07,6.
 - Render: `python youtube/willenserklaerung/render.py` und danach `ffmpeg` mit der lokalen `work/slides.txt`, `work/master.wav` und `work/captions.ass`. Die Ton-Masters gehören nach `audio/` und die drei Figuren-Takes nach `character-audio/`.
 
