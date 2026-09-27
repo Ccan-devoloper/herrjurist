@@ -19,18 +19,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: ffmpeg bereitstellen
         run: sudo apt-get update -qq >/dev/null && sudo apt-get install -y -qq ffmpeg >/dev/null
-      - name: Maras Aufschrei zur Treffer-Nahaufnahme mit V7 rendern
+      - name: Gezeichnete Anime-Trefferfolge mit V8 rendern
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
           ELEVENLABS_MODEL: ${{ vars.ELEVENLABS_MODEL }}
-        run: node reel-test-2026-09-27/render-v7.mjs
+        run: node reel-test-2026-09-27/render-v8.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: reel-test-2026-09-27-v7
+          name: reel-test-2026-09-27-v8
           path: |
-            reel-test-2026-09-27/out-v7/herrjurist-224-test-v7.mp4
-            reel-test-2026-09-27/out-v7/timing.json
+            reel-test-2026-09-27/out-v8/herrjurist-224-test-v8.mp4
+            reel-test-2026-09-27/out-v8/timing.json
           if-no-files-found: warn
           retention-days: 30

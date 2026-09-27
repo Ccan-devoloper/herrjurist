@@ -27,3 +27,7 @@ Die ausgewählten ElevenLabs-Spuren und ihre Zeichenzeiten liegen in `audio-v5/`
 ## Variante 7: Aufschrei auf der Treffer-Nahaufnahme
 
 `render-v7.mjs` verwendet dieselben Bilder, den Sprechertext und die Schlussprojektion. Der kurze Laut am Reel-Anfang entfällt. `audio-v7/mara-close-cry.mp3` ist eine intensivere ElevenLabs-v3-Stimmprobe derselben Mara-Stimme; sie setzt beim Schnitt auf `shot-08-impact-close.jpg` bei rund 13,10 Sekunden ein. Ein kurzes Visierknacken betont den Bildkontakt. Der Erzähler wird während des etwa 1,5 Sekunden langen Aufschreis leicht abgesenkt. Der Video-Render prüft anschließend die vollständige MP4-Datei.
+
+## Variante 8: gezeichnete Anime-Trefferfolge
+
+`render-v8.mjs` hält die Gesamtlänge, Sprecherfassung, Figurenwelt und übrigen Szenen von Variante 7 bei. Drei neue Zeichnungen ergänzen den etwa 2,5 Sekunden langen Replay-Moment: `shot-12-anticipation.jpg` zeigt den Becher 7 Frames vor dem Treffer, `shot-13-impact-frame.jpg` ist eine kontrastreiche 2-Frame-Kontaktzeichnung und `shot-14-reaction.jpg` zeigt Maras offene, schmerzhafte Reaktion mit herabfallender Zigarette und Visier-Splittern. Die bisherige Nahaufnahme wird nach dem Kontakt 11 Frames gehalten. Die Audiozeiten folgen den tatsächlich gerenderten Framegrenzen: kräftiger Schlag, Visierknacken und ElevenLabs-Aufschrei beginnen auf dem Kontaktframe bei etwa 13,13 Sekunden. Die Sprecherstimme wird während des Kontakts und der Reaktion kurz abgesenkt. Es gibt keinen fortlaufenden Kamera-Zoom.
