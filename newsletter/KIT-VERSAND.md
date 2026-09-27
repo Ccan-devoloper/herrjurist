@@ -37,6 +37,8 @@ Der Versand ist an 09:00 Berliner Zeit gebunden; die UTC-Termine im Plan
 berücksichtigen die Zeitumstellung. Bei einer anderen Uhrzeit müssen Plan und
 Prüfung vor dem Merge gemeinsam angepasst werden.
 
+Die bearbeitbaren Entwürfe 04–56 folgen gestalterisch Wochenbrief 02 als Master. Der Bereich Klausurtechnik & Kopfsache hat daher wie in 02 einen blauen Kopf; Gelb kennzeichnet Prüfungsrelevanz und den Kurzcheck. Die zweistufige Skizze A./I./II./B./I./II. und die getrennten Examensbadges wurden in allen Entwürfen geprüft. Wo ein Fachbeitrag keinen Sachverhalt enthält, steht eine quellengestützte Prüffrage statt eines erfundenen Minifalls. Ausgabe 03 ist bereits versendet und in Kit nicht rückwirkend editierbar. Die HTML-Bodys liegen bei 86–99 KB; der Workflow akzeptiert höchstens 100 KB, damit eine weiter angewachsene oder unvollständige Mail auffällt. Die tatsächliche Darstellung und mögliche Kürzung hängen zusätzlich vom empfangenden Mailprogramm und Kit-Template ab.
+
 Die Entwürfe 14–56 wurden aus den 18 Einzelbeiträgen der jeweils
 vorangehenden Montag-bis-Samstag-Woche erzeugt. Der Klartext des
 verschlüsselten Themenpools wurde anschließend über einen einmaligen,
