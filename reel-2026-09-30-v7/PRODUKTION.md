@@ -6,7 +6,7 @@ Testbranch codex/reel-test-20260930-v7-ruhiger-schnitt. Kein geplanter Reel-Slot
 
 Hook: Zylla hat ihre Einwilligung unterschrieben, die Aussage bleibt dennoch unverwertbar. Eine kurze Rückblende zeigt, dass Brakk sie gezielt die ganze Nacht wach hält und sie immer wieder wegnickt. Aufnahme-Klick vor dem Tischschlag; Brakk sagt „Nicht einschlafen! Rede endlich!“, Zylla antwortet hörbar und erschöpft „Ich war’s.“ Anschließend erscheint ihre Einwilligung. Die Normprojektionen nennen § 136a StPO und Abs. 3, die Pointe lautet: Auch Einwilligung heilt die unverwertbare Aussage nicht.
 
-Der Sprechertext wurde für die gespielte Form gekürzt und zeitlich freigestellt. Die bekannte Erzählerstimme Moritz bleibt für Kontinuität; Brakk und Zylla behalten ihre Figurenstimmen. Eleven v3 steuert Zyllas erschöpfte Darbietung, während der Erzähler bei Multilingual v2 bleibt. Die Figurenlaute und gesprochenen Worte werden nur an sichtbarer Handlung eingesetzt.
+Der Sprechertext wurde für die gespielte Form gekürzt und zeitlich freigestellt. Die bekannte Erzählerstimme Moritz bleibt für Kontinuität; Brakk und Zylla behalten ihre Figurenstimmen. Eleven v3 steuert Zyllas erschöpfte Darbietung, während der Erzähler bei Multilingual v2 bleibt. Zyllas sehr leise generierte Sprachspur wird in der Mischung angehoben, damit „Ich war’s“ verständlich bleibt. Die Figurenlaute und gesprochenen Worte werden nur an sichtbarer Handlung eingesetzt. Die ElevenLabs-Takes des ersten erfolgreichen Renderlaufs (29,73 s) sind als Audiodateien und zugehörige Zeichenzeiten im Testbranch fixiert, damit die natürliche Schwankung neuer TTS-Durchläufe nicht über 30 s führt.
 
 ## Bild, Ton und QA
 

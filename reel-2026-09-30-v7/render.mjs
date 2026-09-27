@@ -223,7 +223,9 @@ const ms=t=>Math.round(Math.max(0,t)*1000);
 const filters=[
   '[1:a]loudnorm=I=-16:TP=-1.5:LRA=11,volume=.83[narrator]',
   '[2:a]highpass=f=80,volume=.94,adelay='+ms(brakkAt)+':all=1[brakk]',
-  '[3:a]highpass=f=110,volume=.86,adelay='+ms(zyllaAt)+':all=1[zylla]'
+  // V3 delivered an intentionally weak performance at about -26 LUFS.
+  // Lift the line so the words remain clear without undoing her exhaustion.
+  '[3:a]highpass=f=110,volume=2.7,adelay='+ms(zyllaAt)+':all=1[zylla]'
 ];
 effects.forEach((e,i)=>filters.push('['+(i+4)+':a]highpass=f=90,volume='+
   e.volume+',adelay='+ms(e.at)+':all=1[s'+i+']'));
