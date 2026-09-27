@@ -3,12 +3,12 @@ import path from 'node:path';
 const key = process.env.ELEVENLABS_API_KEY;
 if (!key) throw new Error('ELEVENLABS_API_KEY fehlt');
 const voiceId = '2aL479c8D3QMIPExj0tw'; // Selena: deutsche, tiefere und ausdrucksstarke Frauenstimme.
-const output = path.resolve('reel-test-2026-09-27/mara-voice-tests');
+const output = path.resolve('reel-test-2026-09-27/mara-voice-tests-v7');
 fs.mkdirSync(output,{recursive:true});
 const takes = [
-  {name:'short-ah',text:'[shouts in sudden pain] Ah!',seed:91224},
-  {name:'short-au',text:'[sharp startled cry] Au!',seed:91324},
-  {name:'breath-ah',text:'[gasps sharply, then cries out briefly] Ah!',seed:91424}
+  {name:'impact-ah-1',text:'[screams sharply in sudden pain] Aaah!',seed:91524},
+  {name:'impact-ah-2',text:'[loud, pained cry] Aah!',seed:91624},
+  {name:'impact-au-3',text:'[shouts loudly in shock and pain] Aua!',seed:91724}
 ];
 for (const take of takes) {
   const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/with-timestamps?output_format=mp3_44100_128`,{

@@ -20,7 +20,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: mara-voice-tests
-          path: reel-test-2026-09-27/mara-voice-tests/
+          name: mara-voice-tests-v7
+          path: reel-test-2026-09-27/mara-voice-tests-v7/
           if-no-files-found: warn
           retention-days: 14
