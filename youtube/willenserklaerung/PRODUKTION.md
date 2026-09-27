@@ -18,7 +18,7 @@ Die fünf Szenenbilder wurden mit Maras und Rex' Golden References aus `main/ass
 
 ## Rechtsprüfung
 
-Der Themenpool `daten/themen.json.enc` wurde nicht als Autorität vorausgesetzt. Die für seine AES-Entschlüsselung nötige Umgebungsvariable `IG_WISSEN_KEY` stand in dieser Arbeitsumgebung nicht zur Verfügung. Das Skript wurde anhand des geltenden Gesetzestextes und einer universitären Prüfungserklärung neu aufgebaut.
+Der Themenpool `daten/themen.json.enc` wurde über den bereits im Repository eingerichteten GitHub-Actions-Schlüssel entschlüsselt. Acht Einträge erwähnen Willenserklärungen; die direkt einschlägigen Einträge benennen den objektiven und subjektiven Tatbestand (`§§ 116 ff., 133, 157 BGB`), die Auslegung (`§§ 133, 157 BGB`) und den Zugang unter Abwesenden (`§ 130 BGB`). Sie enthalten für diese Kernpunkte Titel und Normen, aber keine ausformulierte Prüfung. Deshalb wurde das Skript unabhängig anhand des geltenden Gesetzestextes und einer universitären Darstellung aufgebaut und geprüft. Der Schlüssel und der Klartext wurden nicht in den öffentlichen Branch oder die Actions-Protokolle geschrieben.
 
 | Aussage im Film | Beleg und Präzisierung |
 | --- | --- |
