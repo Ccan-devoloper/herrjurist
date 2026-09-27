@@ -11,10 +11,10 @@ const lines = [
   'Rex zieht dagegen vor Gericht und reicht Klage ein.',
   'Doch kurz danach hebt die Behörde das Verbot wieder auf.',
   'Prozess vorbei? Nein: Nächste Woche soll dieselbe Sperre erneut kommen.',
-  'Form-7 erklärt: Der Verwaltungsakt erledigt sich erst nach der Klageerhebung.',
+  'Form-7: Das Verbot erledigt sich erst nach der Klage.',
   'Dann greift Paragraf eins dreizehn Absatz eins Satz vier VwGO.',
-  'Die konkrete Wiederholungsgefahr kann Rex das nötige Feststellungsinteresse geben.',
-  'Merke: Erst den Erledigungszeitpunkt, dann das Interesse, dann Rechtswidrigkeit und Rechtsverletzung prüfen.'
+  'Die konkrete Wiederholungsgefahr kann Rex das Feststellungsinteresse geben.',
+  'Merke: Erledigungszeitpunkt, Interesse, Rechtswidrigkeit und Rechtsverletzung prüfen.'
 ];
 const script=lines.join(' ');
 const key=process.env.ELEVENLABS_API_KEY;
@@ -62,8 +62,8 @@ for(let i=0;i<beats.length;i++){
   const z=x.punch||1,w=Math.round(1080*z/2)*2,h=Math.round(1920*z/2)*2;
   let vf=`scale=${w}:${h}:force_original_aspect_ratio=increase,crop=1080:1920:(iw-1080)/2:(ih-1920)/2,format=yuv420p`;
   // Exact typography sits inside Form-7's already illustrated in-world holograms.
-  if(x.style==='law')vf+=`,drawtext=fontfile=${font}:text='§ 113 I 4':fontsize=56:fontcolor=white:shadowcolor=0x003f29:shadowx=2:shadowy=2:x=575:y=505,drawtext=fontfile=${font}:text='VwGO':fontsize=55:fontcolor=white:shadowcolor=0x003f29:shadowx=2:shadowy=2:x=575:y=580,drawtext=fontfile=${fontBody}:text='KLAGE → ERLEDIGUNG':fontsize=31:fontcolor=0xc6ffe4:x=555:y=675`;
-  if(x.style==='takeaway')vf+=`,drawtext=fontfile=${font}:text='MERKE':fontsize=61:fontcolor=white:shadowcolor=0x003f29:shadowx=2:shadowy=3:x=685:y=705,drawtext=fontfile=${fontBody}:text='1  ZEITPUNKT':fontsize=35:fontcolor=white:x=585:y=800,drawtext=fontfile=${fontBody}:text='2  INTERESSE':fontsize=35:fontcolor=white:x=585:y=865,drawtext=fontfile=${fontBody}:text='3  RECHTSWIDRIGKEIT':fontsize=30:fontcolor=white:x=585:y=930,drawtext=fontfile=${fontBody}:text='+ RECHTSVERLETZUNG':fontsize=27:fontcolor=white:x=585:y=990`;
+  if(x.style==='law')vf+=`,drawtext=fontfile=${font}:text='§ 113 I 4':fontsize=56:fontcolor=white:shadowcolor=0x003f29:shadowx=2:shadowy=2:x=620:y=190,drawtext=fontfile=${font}:text='VwGO':fontsize=55:fontcolor=white:shadowcolor=0x003f29:shadowx=2:shadowy=2:x=685:y=275,drawtext=fontfile=${fontBody}:text='KLAGE → ERLEDIGUNG':fontsize=29:fontcolor=0xc6ffe4:x=560:y=380`;
+  if(x.style==='takeaway')vf+=`,drawtext=fontfile=${font}:text='MERKE':fontsize=52:fontcolor=white:shadowcolor=0x003f29:shadowx=2:shadowy=3:x=690:y=600,drawtext=fontfile=${fontBody}:text='1  ZEITPUNKT':fontsize=30:fontcolor=white:x=585:y=665,drawtext=fontfile=${fontBody}:text='2  INTERESSE':fontsize=30:fontcolor=white:x=585:y=715,drawtext=fontfile=${fontBody}:text='3  RECHTSWIDRIGKEIT':fontsize=27:fontcolor=white:x=585:y=765,drawtext=fontfile=${fontBody}:text='+ RECHTSVERLETZUNG':fontsize=25:fontcolor=white:x=585:y=810`;
   run('ffmpeg',['-y','-loglevel','error','-loop','1','-framerate',String(fps),'-i',input,'-vf',vf,'-frames:v',String(Math.round((x.until-x.at)*fps)),'-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-an',output]);
   x.output=output;
 }
