@@ -88,7 +88,7 @@ def make_audio():
         if i != len(SCRIPT["segments"]) - 1:
             silence(.53 if segment["id"] in ("hook", "vorbehalt") else .43)
     speech_end = samples / RATE
-    silence(7.8)
+    silence(.65)
     with wave.open(str(WORK / "master.wav"), "wb") as wav:
         wav.setnchannels(1)
         wav.setsampwidth(2)
@@ -233,7 +233,7 @@ def draw_slide(segment, state_idx, spec):
     if kind == "diagram":
         im = Image.new("RGBA", (W, H), BLUE + (255,))
         draw_diagram(im, state_idx)
-        box = (525, 115, 1395, 315)
+        box = (525, 52, 1395, 320)
     else:
         base = Image.open(ASSETS / SCENE[kind]).convert("RGBA")
         im = base.resize((W, H), Image.Resampling.LANCZOS)
@@ -242,33 +242,46 @@ def draw_slide(segment, state_idx, spec):
         elif kind == "rex":
             box = (70, 194, 865, 565)
         else:
-            box = (615, 102, 1340, 338)
-
-    # Recurring brand strip and progress line for wayfinding.
-    im = panel(im, (48, 37, 383, 91), fill=(8, 24, 67, 228), radius=18)
-    d = ImageDraw.Draw(im)
-    put(d, (71, 50), "HERR JURIST  /  ZIVILRECHT", font(27, True))
-    number = next(i for i, s in enumerate(SCRIPT["segments"]) if s["id"] == segment) + 1
-    d.rounded_rectangle((1540, 43, 1853, 92), radius=16, fill=(8, 24, 67, 200))
-    put(d, (1565, 54), f"KAPITEL {number:02d} / 09", font(25, True))
-    d.rounded_rectangle((64, 1030, 1856, 1038), radius=4, fill=(7, 23, 64, 140))
-    d.rounded_rectangle((64, 1030, 64 + int(1792 * (number - .25) / 9), 1038), radius=4, fill=MINT)
+            box = (615, 102, 1340, 392)
 
     im = panel(im, box, fill=(8, 24, 67, 222), radius=31)
     d = ImageDraw.Draw(im)
     bx0, by0, bx1, by1 = box
     tint = PINK if segment == "vorbehalt" and state_idx in (0, 3) else MINT
     d.rounded_rectangle((bx0 + 30, by0 + 28, bx0 + 112, by0 + 38), radius=5, fill=tint)
-    ftitle = font(61 if len(title) <= 25 else 51, True)
-    lines = wrap(d, title, ftitle, bx1 - bx0 - 70)
-    y = by0 + 65
-    for line in lines[:3]:
-        put(d, (bx0 + 32, y), line, ftitle, WHITE)
-        y += (68 if ftitle.size >= 60 else 60)
-    fsub = font(31 if len(sub) > 41 else 36)
-    for line in wrap(d, sub, fsub, bx1 - bx0 - 70)[:3]:
-        put(d, (bx0 + 34, y + 9), line, fsub, tint)
-        y += 48
+    # Place actual glyph bounds, not guessed baselines. Reduce both font sizes
+    # until every complete line fits inside the card with visible padding.
+    width = bx1 - bx0 - 68
+    base_title = 61 if len(title) <= 25 else 51
+    base_sub = 31 if len(sub) > 41 else 36
+    layout = None
+    for scale in (1, .94, .88, .82, .76, .70, .64, .58):
+        ftitle = font(round(base_title * scale), True)
+        fsub = font(round(base_sub * scale))
+        title_lines = wrap(d, title, ftitle, width)
+        sub_lines = wrap(d, sub, fsub, width)
+        if len(title_lines) > 3 or len(sub_lines) > 3:
+            continue
+        placements = []
+        top = by0 + 62
+        for lines, f, fill, gap in ((title_lines, ftitle, WHITE, 9), (sub_lines, fsub, tint, 7)):
+            if placements:
+                top += 11
+            for line in lines:
+                bounds = d.textbbox((0, 0), line, font=f)
+                left = bx0 + 34
+                glyph_width, glyph_height = bounds[2] - bounds[0], bounds[3] - bounds[1]
+                placements.append((line, f, fill, left - bounds[0], top - bounds[1],
+                                   left, top, left + glyph_width, top + glyph_height))
+                top += glyph_height + gap
+        if placements and max(p[8] for p in placements) <= by1 - 27 and all(
+                p[7] <= bx1 - 28 and p[6] >= by0 + 45 for p in placements):
+            layout = placements
+            break
+    if layout is None:
+        raise ValueError(f"Text does not fit inside card: {segment} {state_idx}: {title!r}")
+    for line, f, fill, x, y, *_ in layout:
+        put(d, (x, y), line, f, fill)
 
     # Keep captions in a stable safe area; no illustrated text is masked.
     return im.convert("RGB")
@@ -305,18 +318,8 @@ def make_slides(timeline, speech_end, duration):
             img.save(path, quality=92, subsampling=0)
             events.append({"file": path, "start": boundaries[i], "end": boundaries[i + 1],
                            "segment": sid, "state": i})
-    endcard = Image.new("RGB", (W, H), NAVY)
-    d = ImageDraw.Draw(endcard)
-    put(d, (135, 105), "HERR JURIST", font(104, True), WHITE)
-    put(d, (142, 235), "Der nächste Fall wartet schon.", font(51), MINT)
-    d.rounded_rectangle((160, 445, 825, 820), radius=35, outline=(99, 147, 230), width=5)
-    d.rounded_rectangle((1095, 445, 1760, 820), radius=35, outline=(99, 147, 230), width=5)
-    put(d, (167, 880), "Weiterlernen", font(42, True), WHITE)
-    put(d, (1280, 880), "Abonnieren", font(42, True), WHITE)
-    endpath = WORK / f"slide-{len(events):03d}.jpg"
-    endcard.save(endpath, quality=92, subsampling=0)
-    events.append({"file": endpath, "start": speech_end, "end": duration,
-                   "segment": "endcard", "state": 0})
+    # Keep the final case image for a short beat after the final spoken word.
+    events[-1]["end"] = duration
     # Ensure gaps between chapters hold the preceding visual, and no empty frame.
     for i in range(len(events) - 1):
         if events[i]["end"] < events[i + 1]["start"]:
