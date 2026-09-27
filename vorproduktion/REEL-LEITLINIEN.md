@@ -2,6 +2,8 @@
 
 Stand: 27.09.2026, ergänzt nach Freigabe der 30.09.-Prüffassung V7. Maßgeblich für künftige Produktionen; bereits freigegebene Fassungen bleiben als Referenzen bestehen.
 
+**Verbindliche Detailreferenz für neue Reel-Produktionen:** REEL-REFERENZ-2026-09-30-V7.md im selben Ordner dokumentiert den freigegebenen 30.09.-Schnitt mit allen 11 Bild-Masters, 13 Bildzuständen, Haltezeiten, tatsächlichen Sprachpausen, exaktem Sprecher- und Figurentext, Voice-IDs und Einstellungen, SFX-Positionen, Mischung, Caption-Stil und technischem Export. Vor einem neuen Reel diese Referenz und die folgenden Leitlinien lesen. Ihre Zahlen sind ein nachbaubares Beispiel; die Handlung und Dauer der einzelnen Beats werden für den neuen Fall bewusst neu entschieden.
+
 ## Geschichte und juristischer Nutzen
 
 - Möglichst in den ersten drei Sekunden einen sichtbaren Fallkonflikt, eine überraschende Wendung oder die entscheidende Rechtsfrage zeigen.
@@ -48,5 +50,6 @@ Stand: 27.09.2026, ergänzt nach Freigabe der 30.09.-Prüffassung V7. Maßgeblic
 ## Freigegebene Schnittreferenz 30.09.2026
 
 - Die vom Betreiber am 27.09. freigegebene §-136a-Prüffassung V7 ist die Referenz **für Rhythmus, Bild-Ton-Kausalität, Figurendialog und Caption-Art**, nicht für die Wiederholung von Brakk, Zylla, Verhör, Tischschlag, Rückblende oder orangefarbenem Raum in jeder Folge. Produktionsdateien: GitHub-Repository Ccan-devoloper/herrjurist, Branch codex/reel-test-20260930-v7-ruhiger-schnitt, Commit 6c56e3fa2919fde6ff90437390a65636375a5e37, Verzeichnis reel-2026-09-30-v7; erfolgreicher Renderlauf 36344722242. Die Datei reel-2026-09-30-v7/PRODUKTION.md beschreibt Skript, Stimmen, Szenen, Alignment und QA.
+- Die Detailreferenz REEL-REFERENZ-2026-09-30-V7.md hält die tatsächliche Bild- und Ton-Zeitachse tabellarisch fest. Sie ist zusammen mit dem Rendercode maßgeblich, wenn die Art der Bildverwendung, die beabsichtigten Pausen, der neue Erzähler-Einsatz oder die Tonbalance in einer künftigen Produktion nachvollzogen werden sollen.
 - Konkretes Muster: sichtbares Paradox in den ersten Sekunden; die Ursache wird in wenigen klaren Beaten gespielt; der juristische Satz erklärt **genau diesen** Fall; die Pointe setzt das sichtbare Objekt fort. 1080 × 1920, 30 fps, 29,73 Sekunden. Feste Bildausschnitte ohne digitalen Zoom; lange Schlaghaltung mit eigens generierter Nachschlagpose; keine Ganzbildüberblendung verschiedener Figurenzeichnungen; eine ruhige Rückkehr zur Figur nach der Normprojektion. Erzählerstimme und Charakterstimmen bleiben unterscheidbar, Zyllas leise Antwort ist verständlich gemischt.
 - Der Erfolg dieser Fassung ersetzt keine Prüfung neuer Fälle. Bei jedem Reel neu entscheiden, welcher Konflikt, welche Figuren, welche Fachfarbe, welcher Ton, welche Szenenlänge und welcher Schluss die Rechtsregel am besten sichtbar machen. Die freigegebene Caption-Art und die technischen Synchronisationsregeln gelten dagegen als Produktionsstandard.
