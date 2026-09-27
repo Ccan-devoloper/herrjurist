@@ -1,0 +1,47 @@
+name: 30.09. StPO – animated cartoon Reel review
+on:
+  push:
+    branches: [codex/reel-test-20260930-v5-motion]
+    paths:
+      - 'reel-2026-09-30-v5/masters/**'
+      - 'reel-2026-09-30-v5/render.mjs'
+      - 'reel-2026-09-30-v5/make_frames.py'
+      - '.github/workflows/reel-cartoon-20260930-v5.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install render dependencies
+        run: |
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq ffmpeg fonts-urw-base35 >/dev/null
+          python -m pip install --disable-pip-version-check pillow
+      - name: Render narrator, character voices, effects and cartoon cels
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node reel-2026-09-30-v5/render.mjs
+      - name: Publish review artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reel-2026-09-30-136a-animiert-prueffassung
+          path: |
+            reel-2026-09-30-v5/out/herrjurist-2026-09-30-136a-animiert-prueffassung.mp4
+            reel-2026-09-30-v5/out/cover.jpg
+            reel-2026-09-30-v5/out/timing.json
+            reel-2026-09-30-v5/out/untertitel-einzelwort.ass
+            reel-2026-09-30-v5/audio/*.mp3
+            reel-2026-09-30-v5/audio/*.json
+          if-no-files-found: warn
+          retention-days: 30
