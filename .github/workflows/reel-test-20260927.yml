@@ -19,19 +19,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: ffmpeg bereitstellen
         run: sudo apt-get update -qq >/dev/null && sudo apt-get install -y -qq ffmpeg >/dev/null
-      - name: ElevenLabs sprechen, Geräusche erzeugen und statisches Reel rendern
+      - name: ElevenLabs sprechen, Schlaggeräusche schichten und V4 rendern
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
           ELEVENLABS_MODEL: ${{ vars.ELEVENLABS_MODEL }}
-        run: node reel-test-2026-09-27/render-v3.mjs
+        run: node reel-test-2026-09-27/render-v4.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: reel-test-2026-09-27-v3
+          name: reel-test-2026-09-27-v4
           path: |
-            reel-test-2026-09-27/out-v3/herrjurist-224-test-v3.mp4
-            reel-test-2026-09-27/out-v3/timing.json
-            reel-test-2026-09-27/out-v3/*-elevenlabs.mp3
+            reel-test-2026-09-27/out-v4/herrjurist-224-test-v4.mp4
+            reel-test-2026-09-27/out-v4/timing.json
+            reel-test-2026-09-27/out-v4/*-elevenlabs.mp3
           if-no-files-found: warn
           retention-days: 30
