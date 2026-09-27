@@ -1,0 +1,26 @@
+name: Testreel · Mara Stimmprobe
+on:
+  push:
+    branches: [codex/reel-test-20260927]
+    paths:
+      - 'reel-test-2026-09-27/mara-voice-generate.mjs'
+      - '.github/workflows/mara-voice-generate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ElevenLabs-Stimmproben für Mara
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node reel-test-2026-09-27/mara-voice-generate.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mara-voice-tests
+          path: reel-test-2026-09-27/mara-voice-tests/
+          if-no-files-found: warn
+          retention-days: 14
