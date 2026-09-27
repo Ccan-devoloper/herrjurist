@@ -94,3 +94,18 @@ aller ins Bild gezeichneten Wörter, Sprecher- und SFX-Timing, lesbare
 untere Captions, keine Figuren- oder Ausrüstungsdrift, Ende als
 begründete Pointe. Ein neuer TTS-Durchlauf erfordert neues Alignment
 und erneute Prüfung.
+
+## Gerenderte Prüffassung
+
+Der GitHub-Actions-Lauf 36352903907 hat die unten abgelegte Fassung
+gerendert. Sie dauert 28,900 Sekunden bei 1080 × 1920 und 30 fps
+(H.264/AAC). Bildkontaktbogen und Einzelbilder des Exports wurden
+geprüft: Golden-Reference-Merkmale, räumlich plausible Türen, korrekt
+gesetzter Bildtext, untere Captions und klare Pointe. Die Captions
+decken die Erzähler- und Marazeile gemäß Zeichenalignment ab; es gibt
+keine Caption für Geräusche. Der Ton hat im Export -17,7 dB mittlere
+Lautstärke und maximal -0,4 dB. Die fertige MP4, Cover, Timing,
+ASS-Captions und alle sieben SFX liegen unter `out/` bzw. `audio/`;
+ein weiterer Render kann dieselben ElevenLabs-Takes verwenden.
+
+Freigabestatus: **Prüffassung**, noch keine Ersetzung des 01.10.-Slots.
