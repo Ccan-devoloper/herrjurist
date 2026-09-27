@@ -11,9 +11,9 @@ fs.mkdirSync(out, { recursive: true });
 // One case: Rex's single signature is rejected, the contractual and statutory
 // representation rule explains why, Mara co-signs, then the exam takeaway.
 const lines = [
-  'Rex unterschreibt allein für die Sternwerkstatt-GbR.',
+  'Rex unterschreibt allein.',
   'Vertrag geschlossen? Stopp!',
-  'Mara ist ebenfalls Gesellschafterin.',
+  'Er und Mara betreiben die Sternwerkstatt-GbR.',
   'Der Gesellschaftsvertrag regelt die Vertretung nicht; eine Ermächtigung fehlt.',
   'Dann gilt Paragraf sieben zwanzig BGB: Beide vertreten gemeinsam.',
   'Rex allein bindet die GbR zunächst nicht.',
