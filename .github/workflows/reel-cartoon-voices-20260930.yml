@@ -1,0 +1,22 @@
+name: 30.09. cartoon Reel voice selection
+on:
+  push:
+    branches: [codex/reel-test-20260930-v4]
+    paths:
+      - 'reel-2026-09-30-v4/voice-check.mjs'
+      - '.github/workflows/reel-cartoon-voices-20260930.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: List suitable voices already in account
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node reel-2026-09-30-v4/voice-check.mjs
