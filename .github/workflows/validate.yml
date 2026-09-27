@@ -25,15 +25,6 @@ jobs:
           cache: npm
       - name: Abhängigkeiten
         run: npm ci
-      - name: Themenpool für Wochenbrief-Abgleich verschlüsseln
-        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
-        run: node bin/themenpool-newsletter-audit-temp.mjs
-      - uses: actions/upload-artifact@v4
-        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
-        with:
-          name: themenpool-audit-encrypted
-          path: ${{ runner.temp }}/themenpool-audit.enc.json
-          retention-days: 1
       - name: Linter
         run: npm run lint
       # ffmpeg und Chromium braucht die Testreihe wirklich - ohne sie fallen
