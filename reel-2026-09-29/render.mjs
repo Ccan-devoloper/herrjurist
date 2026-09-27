@@ -15,7 +15,7 @@ const lines = [
   'Vertrag geschlossen? Stopp!',
   'Er und Mara betreiben die Sternwerkstatt-GbR.',
   'Der Gesellschaftsvertrag regelt die Vertretung nicht; eine Ermächtigung fehlt.',
-  'Dann gilt Paragraf sieben zwanzig BGB: Beide vertreten gemeinsam.',
+  'Dann gilt Paragraf siebenhundertzwanzig BGB: Beide vertreten gemeinsam.',
   'Rex allein bindet die GbR zunächst nicht.',
   'Mara zeichnet mit: Das Vertragstor öffnet sich.',
   'Merke: Gesellschaftsvertrag, Vertretungsordnung, Vertreterhandeln.'
@@ -77,11 +77,18 @@ const stamp = t => {
 const header = `[Script Info]\nTitle: Herr Jurist 29.09. – Sprecher als Einzelwort-Captions\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\nScaledBorderAndShadow: yes\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: Word,Nimbus Sans,72,&H00FAFAFA&,&H00FAFAFA&,&H00191919&,&H90000000&,-1,0,0,0,100,100,0,0,1,2.5,2,2,110,170,280,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n`;
 let ass = header;
 let cueCount = 0;
-for (const m of script.matchAll(/\S+/g)) {
-  const word = m[0], from = m.index, to = from + word.length - 1;
+const spokenWords = [...script.matchAll(/\S+/g)];
+for (let i = 0; i < spokenWords.length; i++) {
+  const m = spokenWords[i];
+  const legalCitation = m[0] === 'Paragraf' && spokenWords[i + 1]?.[0] === 'siebenhundertzwanzig';
+  // The spoken legal reference is one semantic caption: its printed citation.
+  const word = legalCitation ? '§ 720' : m[0];
+  const from = m.index;
+  const last = legalCitation ? spokenWords[++i] : m;
+  const to = last.index + last[0].length - 1;
   let start = charStart(from), end = charEnd(to);
   if (end < start + .10) end = start + .10;
-  // A pause between words stays empty; exactly one narrator word per event.
+  // A pause between words stays empty; the citation alone spans two spoken words.
   const size = word.length > 28 ? 55 : word.length > 21 ? 64 : 72;
   const display = word.replaceAll('{', '').replaceAll('}', '');
   ass += `Dialogue: 0,${stamp(start)},${stamp(end)},Word,,0,0,0,,{\\fs${size}\\fad(35,40)\\fscx106\\fscy106\\t(0,110,\\fscx100\\fscy100)}${display}\n`;

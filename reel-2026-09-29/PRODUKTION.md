@@ -6,9 +6,9 @@
 
 **Sprechertext (ElevenLabs, freigegebene Voice-ID `PhufIH7nYh2Up1uej6aY`, multilingual v2):**
 
-> Rex unterschreibt allein. Vertrag geschlossen? Stopp! Er und Mara betreiben die Sternwerkstatt-GbR. Der Gesellschaftsvertrag regelt die Vertretung nicht; eine Ermächtigung fehlt. Dann gilt Paragraf sieben zwanzig BGB: Beide vertreten gemeinsam. Rex allein bindet die GbR zunächst nicht. Mara zeichnet mit: Das Vertragstor öffnet sich. Merke: Gesellschaftsvertrag, Vertretungsordnung, Vertreterhandeln.
+> Rex unterschreibt allein. Vertrag geschlossen? Stopp! Er und Mara betreiben die Sternwerkstatt-GbR. Der Gesellschaftsvertrag regelt die Vertretung nicht; eine Ermächtigung fehlt. Dann gilt Paragraf siebenhundertzwanzig BGB: Beide vertreten gemeinsam. Rex allein bindet die GbR zunächst nicht. Mara zeichnet mit: Das Vertragstor öffnet sich. Merke: Gesellschaftsvertrag, Vertretungsordnung, Vertreterhandeln.
 
-Der Gruppenlaut „sieben zwanzig“ folgt der Betreiberregel für §§ über 200. Die Zitierweise auf der Tafel lautet exakt „§ 720 BGB“. Die Tonspur und die Wort-Captions werden anhand des ElevenLabs-Zeichenalignments zeitlich aufeinander ausgerichtet.
+§ 720 wird konventionell als „Paragraf siebenhundertzwanzig“ gesprochen, weil „sieben zwanzig“ als § 27 verstanden werden könnte. Die Caption fasst die gesprochene Zitierung als eine Einheit „§ 720“ zusammen; „BGB“ folgt als eigene Caption. Im Bild steht exakt „§ 720 BGB“. Grundregel für künftige Reels: §§ bis 200 klassisch sprechen; über 200 die vereinbarte Gruppenlesart nur verwenden, wenn die Norm eindeutig verstanden wird (etwa § 224 „zwei vierundzwanzig“). Bei möglicher Verwechslung die klassische Aussprache wählen. In Captions steht stets die korrekte juristische Schreibweise der Norm. Die Tonspur und die Captions werden anhand des ElevenLabs-Zeichenalignments zeitlich aufeinander ausgerichtet.
 
 | Beat | Gezeigte Handlung | Bild | Akustischer Akzent |
 | --- | --- | --- | --- |
