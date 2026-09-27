@@ -10,10 +10,10 @@ const voice=process.env.ELEVENLABS_VOICE_ID||'PhufIH7nYh2Up1uej6aY';
 const model='eleven_multilingual_v2';
 const lines=[
   'Zylla willigt ein. Trotzdem: Aussage gesperrt. Warum?',
-  'Zurück in die Nacht. Brakk hält sie absichtlich wach.',
+  'Zurück. Brakk hält sie absichtlich die Nacht wach.',
   'Stunde um Stunde. Zylla sackt weg. Er fragt weiter.',
-  'Erst völlig erschöpft spricht sie. Die Aufnahme läuft.',
-  'Paragraf einhundertsechsunddreißig A der StPO verbietet Ermüdung als Vernehmungsmethode.',
+  'Erschöpft spricht sie. Die Aufnahme läuft.',
+  'Paragraf einhundertsechsunddreißig A verbietet Ermüdung als Vernehmungsmethode.',
   'Absatz drei: Selbst ihre Einwilligung rettet die Aussage nicht.',
   'Die Unterschrift heilt den Verstoß nicht.'
 ];
@@ -106,5 +106,5 @@ run('ffmpeg',['-y','-loglevel','error','-i',path.join(out,'silent.mp4'),'-i',voi
   '-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-r','30',
   '-c:a','aac','-b:a','192k','-ar','48000','-t',String(finalDuration),'-movflags','+faststart',dest]);
 if(fs.statSync(dest).size<1_000_000||Math.abs(dur(dest)-finalDuration)>.15)throw Error('Export unvollständig.');
-run('ffmpeg',['-y','-loglevel','error','-ss','.8','-i',dest,'-frames:v','1','-q:v','3',path.join(out,'cover.jpg')]);
+run('ffmpeg',['-y','-loglevel','error','-ss','0.8','-i',dest,'-frames:v','1','-q:v','3',path.join(out,'cover.jpg')]);
 console.log(`${dest} ${dur(dest).toFixed(2)}s; 30 fps; ${cues} narrator captions`);

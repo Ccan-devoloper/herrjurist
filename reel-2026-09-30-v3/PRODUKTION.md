@@ -10,7 +10,7 @@ Diese Fassung verwendet fünf vollflächige Bildkompositionen in 941 × 1672 Pix
 
 ## Sichtbare Kausalkette
 
-1. Am Vormittag unterschreibt Zylla ein lesbar als **Einwilligung / Aussage verwerten** gekennzeichnetes Blatt; der Scanner wechselt unmittelbar auf Rot. Hook und Rätsel in den ersten drei Sekunden.
+1. Am Vormittag unterschreibt Zylla ein lesbar als **Einwilligung / Aussage verwerten** gekennzeichnetes Blatt; der Scanner projiziert ein in derselben Einstellung erzeugtes rotes Verbotssymbol. Hook und Rätsel in den ersten drei Sekunden.
 2. Eine deutliche Uhr-Einstellung führt zurück in die nächtliche Vernehmung. Brakk bleibt im Raum und hält Zylla bewusst wach; dieselbe Uhr zeigt später eine deutlich andere Zeit.
 3. Zyllas Augen fallen zu. Brakks Faust geht in derselben Einstellung hoch und mit einem einzigen harten Geräusch auf den Tisch. Ihre Augen schnellen auf.
 4. Erst erschöpft spricht sie. Das kleine Aufnahmegerät leuchtet und zeigt die aufgezeichnete Stimme.
@@ -19,7 +19,7 @@ Diese Fassung verwendet fünf vollflächige Bildkompositionen in 941 × 1672 Pix
 
 **Sprechertext:**
 
-> Zylla willigt ein. Trotzdem: Aussage gesperrt. Warum? Zurück in die Nacht. Brakk hält sie absichtlich wach. Stunde um Stunde. Zylla sackt weg. Er fragt weiter. Erst völlig erschöpft spricht sie. Die Aufnahme läuft. Paragraf einhundertsechsunddreißig A der StPO verbietet Ermüdung als Vernehmungsmethode. Absatz drei: Selbst ihre Einwilligung rettet die Aussage nicht. Die Unterschrift heilt den Verstoß nicht.
+> Zylla willigt ein. Trotzdem: Aussage gesperrt. Warum? Zurück. Brakk hält sie absichtlich die Nacht wach. Stunde um Stunde. Zylla sackt weg. Er fragt weiter. Erschöpft spricht sie. Die Aufnahme läuft. Paragraf einhundertsechsunddreißig A verbietet Ermüdung als Vernehmungsmethode. Absatz drei: Selbst ihre Einwilligung rettet die Aussage nicht. Die Unterschrift heilt den Verstoß nicht.
 
 **Rechtliche Präzision:** Es geht um gezielt herbeigeführte Ermüdung zur Beeinträchtigung der Willensfreiheit, nicht um die Behauptung, jede lange Befragung sei verboten. § 136a Abs. 3 StPO schließt Einwilligung als Heilung aus und verbietet die Verwertung einer so gewonnenen Aussage selbst bei Zustimmung. Amtlicher Gesetzestext: `https://www.gesetze-im-internet.de/stpo/__136a.html` (27.09.2026 geprüft).
 

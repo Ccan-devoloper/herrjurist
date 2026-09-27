@@ -64,18 +64,6 @@ def paper_ink(im, final=False, signature=0):
         if total>1:d.line(pts[:total],fill=(28,24,27,220),width=3,joint='curve')
     return out.convert('RGB')
 
-def scanner_reject(im, amount):
-    if amount<=0:return im
-    overlay=Image.new('RGBA',(W,H),(0,0,0,0));d=ImageDraw.Draw(overlay)
-    # Scanner lens and energy reflected on the real tabletop.
-    a=int(160*amount)
-    d.rounded_rectangle((824,854,905,884),radius=11,fill=(255,22,37,a))
-    d.line([(818,840),(914,902)],fill=(255,55,45,int(200*amount)),width=7)
-    d.line([(914,840),(818,902)],fill=(255,55,45,int(200*amount)),width=7)
-    glow=overlay.filter(ImageFilter.GaussianBlur(24));glow.putalpha(glow.getchannel('A').point(lambda v:int(v*.65)))
-    out=im.convert('RGBA');out.alpha_composite(glow);out.alpha_composite(overlay)
-    return out.convert('RGB')
-
 def close_cut(im, scale, center):
     if scale==1:return im
     cw,ch=int(W/scale),int(H/scale)
@@ -83,13 +71,15 @@ def close_cut(im, scale, center):
     x=max(0,min(W-cw,int(cx-cw/2))); y=max(0,min(H-ch,int(cy-ch/2)))
     return im.crop((x,y,x+cw,y+ch)).resize((W,H),Image.Resampling.LANCZOS)
 
-def caption_board(im, phase):
+def caption_board(im, phase, show_sub=True):
     out=im.convert('RGBA'); layer=Image.new('RGBA',(W,H));d=ImageDraw.Draw(layer)
     main=ImageFont.truetype(FONT,83);small=ImageFont.truetype(FONT,55)
     # Appear one line at a time on the front-on plane of the drawn hologram.
     title='§ 136a StPO' if phase=='norm' else 'Abs. 3 StPO'
     sub='ERMÜDUNG' if phase=='norm' else 'EINWILLIGUNG'
-    for txt,y,font,col in [(title,268,main,(255,225,181,255)),(sub,405,small,(255,157,62,255))]:
+    items=[(title,268,main,(255,225,181,255))]
+    if show_sub:items.append((sub,405,small,(255,157,62,255)))
+    for txt,y,font,col in items:
         bb=d.textbbox((0,0),txt,font=font); x=(W-(bb[2]-bb[0]))//2
         d.text((x,y),txt,font=font,fill=col,stroke_width=2,stroke_fill=(88,35,4,240))
     glow=layer.filter(ImageFilter.GaussianBlur(9));glow.putalpha(glow.getchannel('A').point(lambda v:int(v*.30)))
@@ -117,7 +107,9 @@ def frame(t,b,assets,masks):
     if scene==0:
         im=paper_ink(assets['consent'],signature=min(1,u*3))
         if u>.48:
-            q=min(1,(u-.48)/.12);im=scanner_reject(im,q)
+            q=min(1,(u-.48)/.12)
+            lit=paper_ink(assets['reject'],signature=min(1,u*3))
+            im=local_edit(im,lit,masks['scanner'],q)
             if u>.63:im=close_cut(im,1.18,(732,945))  # a deliberate cut
         return warm_pulse(im,t,.012)
     if scene==1:
@@ -153,7 +145,8 @@ def frame(t,b,assets,masks):
         return recorder_on(im,min(1,v*3))
     if scene==4:
         im=assets['board']
-        if u>.16:im=caption_board(im,'norm')
+        if u>.16:im=caption_board(im,'norm',show_sub=u>.45)
+        if u>.57:im=close_cut(im,1.22,(470,360))
         return warm_pulse(im,t,.03)
     if scene==5:
         if u<.29:
@@ -169,8 +162,6 @@ def frame(t,b,assets,masks):
     if u>.35:
         crossed=paper_ink(assets['cross'],final=True)
         im=local_edit(im,crossed,masks['paper'],min(1,(u-.35)/.15))
-    # One clear editorial close-up of the crossed consent and shield.
-    if u>.51: im=close_cut(im,1.27,(490,890))
     return im
 
 def main():
@@ -182,13 +173,15 @@ def main():
     else:
         b=json.loads(Path(args.timing).read_text())['boundaries']
     a={
-        'consent':source('01-consent.jpg'),'wide':source('02-interrogation.jpg'),
+        'consent':source('01-consent.jpg'),'reject':source('01-scanner-reject.jpg'),
+        'wide':source('02-interrogation.jpg'),
         'later':source('02-later-clock.jpg'),'fist':source('02-fist-raised.jpg'),
         'close':source('03-zylla-exhausted.jpg'),'blink':source('03-zylla-blink.jpg'),
         'startle':source('03-zylla-startled.jpg'),'speaking':source('03-zylla-speaking.jpg'),
         'board':source('04-law-board.jpg'),'pre':source('05-before-shield.jpg'),
         'impact':source('05-shield-impact.jpg'),'cross':source('05-crossed-paper.jpg')}
     masks={
+        'scanner':feather_rect((675,550,939,1050),25),
         'clock':feather_ellipse((454,97,779,428),10),
         'fist':feather_rect((0,525,355,1013),23),
         'eyes':feather_ellipse((302,350,690,718),28),
