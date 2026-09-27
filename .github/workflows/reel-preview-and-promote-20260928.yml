@@ -1,0 +1,76 @@
+name: Freigegebenes Reel für 28.09. und neue Prüffassung
+
+on:
+  push:
+    branches: [codex/reel-test-20260927]
+    paths:
+      - 'reel-test-2026-09-28/**'
+      - '.github/workflows/reel-preview-and-promote-20260928.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote-approved:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/checkout@v4
+        with:
+          ref: instagram-assets
+          path: assets
+          filter: blob:none
+          sparse-checkout: |
+            vorproduktion/2026-09-28
+      - name: ffmpeg bereitstellen
+        run: sudo apt-get update -qq >/dev/null && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: Freigegebene V8 unverändert reproduzieren
+        working-directory: source
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL: ${{ vars.ELEVENLABS_MODEL }}
+        run: node reel-test-2026-09-27/render-v8.mjs
+      - name: MP4, Cover, Story-Teaser und Metadaten in Vorproduktion übernehmen
+        run: |
+          set -euo pipefail
+          video=source/reel-test-2026-09-27/out-v8/herrjurist-224-test-v8.mp4
+          target=assets/vorproduktion/2026-09-28/fertig/b3
+          test -s "$video"
+          cp "$video" "$target/2026-09-28-b3.mp4"
+          ffmpeg -y -loglevel error -ss 0.8 -i "$video" -frames:v 1 -q:v 3 "$target/2026-09-28-b3-cover.jpg"
+          cp "$target/2026-09-28-b3-cover.jpg" assets/vorproduktion/2026-09-28/fertig/stories/s3-teaser.jpg
+          cp source/reel-test-2026-09-28/promotion/2026-09-28.json assets/vorproduktion/2026-09-28.json
+          git -C assets config user.name 'github-actions[bot]'
+          git -C assets config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C assets add vorproduktion/2026-09-28.json vorproduktion/2026-09-28/fertig/b3/2026-09-28-b3.mp4 vorproduktion/2026-09-28/fertig/b3/2026-09-28-b3-cover.jpg vorproduktion/2026-09-28/fertig/stories/s3-teaser.jpg
+          git -C assets commit -m 'Promote approved § 224 cinematic reel to 2026-09-28'
+          git -C assets pull --rebase origin instagram-assets
+          git -C assets push origin HEAD:instagram-assets
+
+  render-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: ffmpeg bereitstellen
+        run: sudo apt-get update -qq >/dev/null && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: Separate Prüffassung zum ursprünglichen Thema rendern
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL: ${{ vars.ELEVENLABS_MODEL }}
+        run: node reel-test-2026-09-28/render.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reel-2026-09-28-vwgo-prueffassung
+          path: |
+            reel-test-2026-09-28/out/herrjurist-2026-09-28-prueffassung.mp4
+            reel-test-2026-09-28/out/timing.json
+          if-no-files-found: warn
+          retention-days: 30

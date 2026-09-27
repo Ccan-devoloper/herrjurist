@@ -1,0 +1,697 @@
+{
+  "datum": "2026-09-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": true,
+  "liveVerknuepft": true,
+  "kostenPolicy": {
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen",
+    "providerKostenUsd": 0
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "11:30",
+        "format": "pruefungsfrage",
+        "themaId": "sachen-031",
+        "themaTitel": "Diebesgut: § 935 BGB sperrt den Erwerb",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "16:30",
+        "format": "schema",
+        "themaId": "strafat-298",
+        "themaTitel": "Wie prüft man das Fahrlässigkeitsdelikt?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "21:00",
+        "format": "reel",
+        "themaId": "strafbt-074",
+        "themaTitel": "Thermobecher als gefährliches Werkzeug? § 224 StGB",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "arbeit-042"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "arbeit-042"
+      },
+      {
+        "slot": "s1",
+        "zeit": "11:30",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:45",
+        "art": "norm",
+        "themaId": "strafat-064"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:45",
+        "art": "tipp",
+        "themaId": "bgbat-006"
+      },
+      {
+        "slot": "s2",
+        "zeit": "16:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "18:15",
+        "art": "zahl",
+        "themaId": "staat-079"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:45",
+        "art": "streitstand",
+        "themaId": "strafbt-068"
+      },
+      {
+        "slot": "s3",
+        "zeit": "21:00",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      }
+    ]
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-031",
+      "slug": "2026-09-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gutgläubig gekauft – und trotzdem nicht Eigentümer",
+          "unter": "§§ 932, 935 BGB: Guter Glaube ersetzt nicht jeden Besitzverlust",
+          "icon": "schloss",
+          "titelZeilen": [
+            "Gutgläubig gekauft",
+            "– und trotzdem",
+            "nicht Eigentümer"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 935 blockiert den Erwerb",
+          "coverBildAuslassen": true,
+          "pille": "Swipen →",
+          "hinweis": "Sachenrecht"
+        },
+        {
+          "art": "text",
+          "titel": "Ausgangspunkt: § 932 BGB",
+          "text": "Bei einer Übereignung nach § 929 BGB kann der Erwerber trotz fehlender Eigentümerstellung des Veräußerers Eigentum erwerben, wenn die gesetzlichen Gutglaubensvoraussetzungen vorliegen.",
+          "icon": "hand"
+        },
+        {
+          "art": "text",
+          "titel": "Die Sperre: § 935 Abs. 1 BGB",
+          "text": "Ist die Sache dem Eigentümer gestohlen worden, verloren gegangen oder sonst abhandengekommen, scheidet der gutgläubige Erwerb grundsätzlich aus. Entscheidend ist der unfreiwillige Verlust des unmittelbaren Besitzes.",
+          "icon": "sperre"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Freiwillig oder unfreiwillig?",
+          "links": {
+            "titel": "Besitz freiwillig übertragen",
+            "punkte": [
+              "§ 935 greift grundsätzlich nicht",
+              "Gutgläubiger Erwerb kann möglich sein",
+              "Beispiel: Leihe an einen Nichtberechtigten"
+            ]
+          },
+          "rechts": {
+            "titel": "Besitz unfreiwillig verloren",
+            "punkte": [
+              "Abhandenkommen",
+              "§ 935 Abs. 1 sperrt grundsätzlich",
+              "Beispiel: Diebstahl oder Verlieren"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Ausnahme in § 935 Abs. 2 BGB",
+          "text": "Die Abhandenkommenssperre gilt nicht für Geld, Inhaberpapiere und Sachen, die im Wege öffentlicher Versteigerung veräußert werden. Diese Ausnahme ausdrücklich mitprüfen.",
+          "icon": "ausnahme"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beim gutgläubigen Erwerb immer fragen: War der Besitzverlust freiwillig? Guter Glaube heilt kein Abhandenkommen."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Prüfstationen",
+          "punkte": [
+            "§ 929 BGB: Verfügungstatbestand",
+            "§ 932 BGB: guter Glaube",
+            "§ 935 BGB: Abhandenkommen/Ausnahme"
+          ],
+          "icon": "lesezeichen"
+        }
+      ],
+      "caption": "Gutgläubig gekauft – und trotzdem nicht Eigentümer\n\nGestohlen und gutgläubig weiterverkauft? Der gute Glaube allein genügt nicht. § 935 Abs. 1 BGB sperrt den gutgläubigen Erwerb grundsätzlich, wenn die Sache dem Eigentümer gestohlen wurde, verloren ging oder sonst abhandenkam. Der Schlüssel ist der unfreiwillige Besitzverlust. § 935 Abs. 2 BGB enthält die wichtigen Ausnahmen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#gutgläubigererwerb",
+        "#935bgb",
+        "#932bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Diebesgut: § 935 BGB sperrt den Erwerb",
+      "coverText": "§ 935 blockiert den Erwerb",
+      "coverBadge": "Prüfungsfrage",
+      "quellen": [
+        "§ 929 BGB",
+        "§ 932 BGB",
+        "§ 935 BGB",
+        "Themenpool: sachen-031"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "bildregie": false,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "hookUpdate": {
+        "stand": "2026-09-25T12:19:07.945Z",
+        "quelle": "vorproduktion/hook-update.json"
+      }
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-298",
+      "slug": "2026-09-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fahrlässigkeitsdelikt: Pflichtverletzung und Schuld sauber trennen",
+          "unter": "Das Grundschema für §§ 222, 229 StGB",
+          "icon": "warnung",
+          "titelZeilen": [
+            "Fahrlässigkeitsdelikt:",
+            "Pflichtverletzung und",
+            "Schuld trennen"
+          ],
+          "coverBadge": "Klausurschema",
+          "coverText": "Objektiv zuerst, subjektiv später",
+          "coverBildAuslassen": true,
+          "pille": "Swipen →",
+          "hinweis": "Strafrecht AT"
+        },
+        {
+          "art": "schritte",
+          "titel": "I. Tatbestand – der äußere Erfolg",
+          "schritte": [
+            {
+              "titel": "1. Taterfolg und Handlung",
+              "text": "Tatbestandsspezifischen Erfolg und relevantes Verhalten feststellen."
+            },
+            {
+              "titel": "2. Kausalität",
+              "text": "Die Handlung darf nicht hinweg gedacht werden können, ohne dass der Erfolg entfiele."
+            },
+            {
+              "titel": "3. Objektive Sorgfaltspflichtverletzung",
+              "text": "Abweichung von der im Verkehr erforderlichen Sorgfalt aus Sicht eines besonnenen Menschen in der konkreten Lage."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Objektive Vorhersehbarkeit und Vermeidbarkeit",
+          "text": "Der Erfolg und der wesentliche Kausalverlauf müssen objektiv vorhersehbar sein. Bei pflichtgemäßem Verhalten müsste der Erfolg vermeidbar gewesen sein; sonst fehlt es regelmäßig an der Erfolgszurechnung.",
+          "icon": "auge"
+        },
+        {
+          "art": "text",
+          "titel": "Pflichtwidrigkeitszusammenhang",
+          "text": "Gerade die verletzte Sorgfaltspflicht muss sich im Erfolg realisiert haben. Frage also: Wäre der Erfolg bei pflichtgemäßem Alternativverhalten ausgeblieben?",
+          "icon": "verbindung"
+        },
+        {
+          "art": "text",
+          "titel": "II. Rechtswidrigkeit",
+          "text": "Wie beim Vorsatzdelikt wird die Rechtswidrigkeit grundsätzlich durch die Tatbestandsverwirklichung indiziert. Rechtfertigungsgründe bleiben gesondert zu prüfen.",
+          "icon": "waage"
+        },
+        {
+          "art": "text",
+          "titel": "III. Schuld – jetzt wird es individuell",
+          "text": "Hier geht es um die persönlichen Fähigkeiten und Kenntnisse des Täters: subjektive Sorgfaltspflichtverletzung sowie subjektive Vorhersehbarkeit und Vermeidbarkeit. Außerdem allgemeine Entschuldigungsgründe prüfen.",
+          "icon": "person"
+        },
+        {
+          "art": "cta",
+          "titel": "Die Trennung bringt die Punkte",
+          "punkte": [
+            "Objektive Pflichtverletzung im Tatbestand",
+            "Pflichtwidrigkeitszusammenhang sichtbar machen",
+            "Individuelle Fähigkeiten erst in der Schuld"
+          ],
+          "icon": "lesezeichen"
+        }
+      ],
+      "caption": "Beim Fahrlässigkeitsdelikt liegt ein häufiger Aufbaufehler darin, objektive Sorgfaltspflicht und individuelle Vorwerfbarkeit zu vermischen. Im Tatbestand prüfst du den objektiven Sorgfaltsmaßstab, Vorhersehbarkeit, Vermeidbarkeit und den Pflichtwidrigkeitszusammenhang. Die persönlichen Fähigkeiten des Täters gehören in die Schuld.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtat",
+        "#fahrlässigkeit",
+        "#229stgb",
+        "#222stgb",
+        "#klausurschema",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fahrlässigkeitsdelikt Schema",
+      "coverText": "Objektiv zuerst, subjektiv später",
+      "coverBadge": "Klausurschema",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 222 StGB",
+        "§ 229 StGB",
+        "Themenpool: strafat-298"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "aufbau",
+      "bildregie": false,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "b3": {
+      "format": "reel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-074",
+      "slug": "2026-09-28-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Becher als Waffe?",
+          "text": "Rex schlägt Mara mit einem Thermobecher.",
+          "sprecher": "Rex schlägt Mara mit einem Thermobecher.",
+          "norm": "§ 224 Abs. 1 Nr. 2 StGB"
+        },
+        {
+          "art": "frage",
+          "titel": "Ein Becher ist doch keine Waffe",
+          "text": "Entscheidend ist nicht die Bezeichnung des Gegenstands.",
+          "sprecher": "Gefährliche Körperverletzung? Ein Becher ist doch keine Waffe."
+        },
+        {
+          "art": "regel",
+          "titel": "Konkreter Einsatz",
+          "text": "Beschaffenheit und Art der Verwendung zählen.",
+          "sprecher": "Aber bei Paragraf zweihundertvierundzwanzig zählt der konkrete Einsatz."
+        },
+        {
+          "art": "treffer",
+          "titel": "Harter Becher, voller Schwung",
+          "text": "Kann der Einsatz erhebliche Verletzungen verursachen?",
+          "sprecher": "Harter Becher, voller Schwung, Treffer am Kopf: Kann das erhebliche Verletzungen verursachen?"
+        },
+        {
+          "art": "merke",
+          "titel": "§ 224 Abs. 1 Nr. 2 StGB",
+          "text": "Beschaffenheit + Verwendung prüfen.",
+          "sprecher": "Dann kann er ein gefährliches Werkzeug sein. Merke: Beschaffenheit und Verwendung prüfen."
+        }
+      ],
+      "caption": "Rex schlägt Mara mit einem harten Thermobecher auf den Kopf. Gefährliches Werkzeug nach § 224 Abs. 1 Nr. 2 StGB? Entscheidend sind Beschaffenheit und konkrete Verwendung: Kann der Gegenstand bei diesem Einsatz erhebliche Verletzungen verursachen? Die Bezeichnung „Becher“ oder „Waffe“ allein entscheidet den Fall nicht. Merke: immer am konkreten Einsatz prüfen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#körperverletzung",
+        "#224stgb",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Thermobecher als gefährliches Werkzeug?",
+      "titelZeilen": [
+        "BECHER ALS",
+        "WAFFE?"
+      ],
+      "coverText": "Beschaffenheit + Verwendung",
+      "coverBadge": "Mini-Fall",
+      "coverBildAuslassen": false,
+      "quellen": [
+        "§ 224 Abs. 1 Nr. 2 StGB",
+        "Themenpool: strafbt-074"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "widerspruch",
+      "bildregie": true,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-27",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "freigabe-chat-2026-09-27",
+      "finalisiertAm": "2026-09-27T01:50:00.000Z",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "freigegeben",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "freigegebene-illustrationen",
+      "infoVorproduktion": "FREIGEGEBENE REFERENZ · § 224 Abs. 1 Nr. 2 StGB · Reel V8 (24,03 s, 1080 × 1920, 30 fps, H.264/AAC). Quelle: GitHub Ccan-devoloper/herrjurist, Branch codex/reel-test-20260927, reel-test-2026-09-27/render-v8.mjs; erfolgreicher Renderlauf 36285669693. Fünf gesprochene Sätze in Originalreihenfolge: „Rex schlägt Mara mit einem Thermobecher. Gefährliche Körperverletzung? Ein Becher ist doch keine Waffe. Aber bei Paragraf zweihundertvierundzwanzig zählt der konkrete Einsatz. Harter Becher, voller Schwung, Treffer am Kopf: Kann das erhebliche Verletzungen verursachen? Dann kann er ein gefährliches Werkzeug sein. Merke: Beschaffenheit und Verwendung prüfen.“ Die freigegebene Altaufnahme bleibt für diesen Slot unverändert. NEUE AUSSPRACHEREGEL für künftige Reels: Paragraphennummern in Paaren sprechen: § 224 = „Paragraf zwei vierundzwanzig“, § 113 = „Paragraf eins dreizehn“, § 1923 = „Paragraf neunzehn dreiundzwanzig“; Jahreszahlen dagegen normal („neunzehnhundertdreiundzwanzig“). Im TTS-Text die gewünschte Lautung ausschreiben und vor Freigabe anhören.\n\nSTORY & BILDER: Konkreter Fall vor abstrakter Regel. Rex, Mara und Form-7 im gleichen handgezeichneten orangefarbenen Sci-Fi-Comic; 9:16, einheitliche Proportionen/Kostüme, gut erkennbare Handlung, eindeutige Ursache und Wirkung. Nicht einfach Text auf eine beliebige Szene kleben. Für dieses Reel: Schlag/Thermobecher sofort im Bild; skeptische Frage; Form-7 untersucht den Becher; heftige Trefferfolge; §-224-Projektion; eigenes Merke-Bild. 14 harte Bildbeats aus 12 Motivvarianten, darunter Erwartung 0,23 s, Kontaktbild 2 Frames bei 30 fps, Nahreaktion nach 11 Frames; Treffer im Replay bei 13,133 s. Keine permanente Ken-Burns-Bewegung/zoompan, weil das Bild sonst zittert. Nur fester Crop und einzelne harte Sprünge zwischen normaler Einstellung und 1,13-facher Nähe; jede Szene hält pro Frame exakt denselben Ausschnitt. Bildwechsel an Satz- und Handlungsgrenzen, einen lesbaren Schluss halten. Die Norm darf im letzten Drittel groß sein; „Merke“ erhält ein eigenes Schlussmotiv.\n\nTYPOGRAFIE: Wenige plakative Comicworte auf bereits dafür gestalteten Bildflächen; Anton für Hook und Norm, Space Grotesk für Merkworte, klare Kontur und Kontrast. Exakter Text per ffmpeg über illustrierte integrierte Hologrammfläche, keine generischen Untertitelkästen, keine Textwand und keine frei schwebende nachträglich wirkende Texttafel. Bei jedem Motiv Text-Safe-Area und Lesbarkeit auf dem Handy prüfen.\n\nTON: ElevenLabs deutscher Sprecher (Voice-ID PhufIH7nYh2Up1uej6aY, eleven_multilingual_v2, stability .42, similarity .80, style .36, speed 1.06), Zeitstempel-Alignment und 0,52 s Vorlauf. Originalaufnahme unter audio-v5/sprecher.mp3. Separate ElevenLabs-SFX für einen lauten, scharfen metallischen WHACK (kein sanftes Klirren oder dumpfer Bass), Visierknacken, dezenter Scanner. Drei Bildtreffer akustisch präzise auf die Kontaktframes gelegt; Replay-Mix: Schlag 1,45-fach plus Knacken 0,70; Erzähler am Replay leicht absenken, Limiter gegen Übersteuerung. Maras kurzer kräftiger Aufschrei: passende erwachsene weibliche Eleven-v3-Stimme „Selena“, Datei audio-v7/mara-close-cry.mp3; erst auf sichtbarem Replay-Kontakt (13,133 s) beginnen, anschließend im Reaktionsbild ausklingen lassen. Keine künstliche Standardschrei-Datei und kein Schrei vor dem sichtbaren Treffer. SFX immer zur Handlung passend wählen; beim nächsten Verwaltungsrecht-Reel daher z. B. Hologrammzerfall statt Schlag.\n\nQUALITÄTSGATE: Vor Freigabe komplette MP4 mit Ton ansehen/anhören; Schlag und Schrei Bild-für-Bild prüfen; keine zitternden Standbilder, keine abrupt abgeschnittenen Wörter, keine billigen Textüberlagerungen, klar lesbare Norm und Merksatz, konsistente Figuren/Physik. ffprobe auf 1080 × 1920, 30 fps, vollständige Laufzeit und Audio; Narration und Bildschnitt gegen Timing-JSON vergleichen. Fachliche Aussagen am Normtext und einschlägiger Rechtsprechung gegenprüfen. Eine neue Folge übernimmt Struktur und Rhythmus, nicht einen unpassenden Schlag- oder Schrei-Effekt. Die neue Folge bleibt Prüffassung, bis sie ausdrücklich freigegeben ist.",
+      "produktionsReferenz": {
+        "gitBranch": "codex/reel-test-20260927",
+        "source": "reel-test-2026-09-27/render-v8.mjs",
+        "timing": "reel-test-2026-09-27/out-v8/timing.json",
+        "runId": 36285669693,
+        "fassung": "v8",
+        "dauerSekunden": 24.033333,
+        "kontaktSekunden": 13.133333,
+        "sprecher": "ElevenLabs PhufIH7nYh2Up1uej6aY",
+        "maraSchrei": "Eleven v3 Selena"
+      }
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-042",
+      "ueberzeile": "Prüfungsfrage Arbeitsrecht",
+      "titel": "Welche zwei Prüfblöcke stehen im Zentrum des § 626 BGB?",
+      "optionen": [
+        "Wichtiger Grund an sich und Interessenabwägung im Einzelfall",
+        "Nur ein Verschulden des Arbeitnehmers",
+        "Nur die Einhaltung einer Kündigungsfrist"
+      ],
+      "richtig": 0,
+      "fachLabel": "Arbeitsrecht",
+      "quellen": [
+        "§ 626 BGB"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-042",
+      "ueberzeile": "Auflösung",
+      "titel": "Zweistufig prüfen",
+      "text": "Bei § 626 Abs. 1 BGB wird zunächst gefragt, ob der Sachverhalt ohne seine besonderen Umstände grundsätzlich als wichtiger Grund geeignet ist. Danach folgt die umfassende Interessenabwägung des konkreten Einzelfalls. Zusätzlich ist die Zweiwochenfrist des § 626 Abs. 2 BGB zu beachten.",
+      "norm": "§ 626 Abs. 1, 2 BGB",
+      "fachLabel": "Arbeitsrecht",
+      "quellen": [
+        "§ 626 BGB"
+      ],
+      "optionen": [
+        "Wichtiger Grund an sich und Interessenabwägung im Einzelfall",
+        "Nur ein Verschulden des Arbeitnehmers",
+        "Nur die Einhaltung einer Kündigungsfrist"
+      ],
+      "richtig": 0,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-064",
+      "ueberzeile": "Abgrenzung des Tages",
+      "titel": "Täterschaft und Teilnahme",
+      "text": "Täterschaft wird über § 25 StGB erfasst, Anstiftung über § 26 und Beihilfe über § 27 StGB. In der Klausur zuerst die Rolle der Beteiligten sauber bestimmen; erst danach die besonderen Voraussetzungen der jeweiligen Beteiligungsform prüfen.",
+      "norm": "§§ 25–27 StGB",
+      "fachLabel": "Strafrecht AT",
+      "quellen": [
+        "§ 25 StGB",
+        "§ 26 StGB",
+        "§ 27 StGB"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-006",
+      "ueberzeile": "Klausurtipp Stellvertretung",
+      "titel": "Ohne Vertretungsmacht nicht sofort § 179 BGB prüfen",
+      "text": "Zuerst klären, ob der Vertretene den Vertrag nach § 177 BGB genehmigt. Solange die Genehmigung aussteht, ist der Vertrag schwebend unwirksam. Erst wenn die Genehmigung verweigert wird oder ausbleibt, wird die Haftung des Vertreters nach § 179 BGB relevant.",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "quellen": [
+        "§ 177 BGB",
+        "§ 179 BGB"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-079",
+      "ueberzeile": "4 Rechtsstaats-Bausteine",
+      "zahl": "4",
+      "titel": "Vier Punkte, die du mit Art. 20 Abs. 3 GG verbinden solltest",
+      "text": "Die vier Punkte sind zentrale Klausuranker des Rechtsstaatsprinzips; die Aufzählung ist nicht abschließend.",
+      "fachLabel": "Staatsrecht",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 19 Abs. 4 GG",
+        "Themenpool: staat-079"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "punkte": [
+        "Gesetzesbindung staatlicher Gewalt.",
+        "Effektiver Rechtsschutz.",
+        "Verhältnismäßigkeit.",
+        "Rechtssicherheit und Vertrauensschutz."
+      ]
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-068",
+      "ueberzeile": "Klassischer Streit",
+      "titel": "§ 211 zu § 212 StGB: eigener Tatbestand oder Qualifikation?",
+      "norm": "§§ 211, 212, 28 StGB",
+      "optionen": [
+        "Rechtsprechung: § 211 StGB ist ein eigenständiger Tatbestand",
+        "Literatur: § 211 StGB ist Qualifikation zu § 212 StGB"
+      ],
+      "text": "Der Streit wird vor allem bei Beteiligung mehrerer Personen relevant, weil die Einordnung Auswirkungen auf die Behandlung täterbezogener Mordmerkmale und § 28 StGB haben kann. In der Klausur nur ausführen, wenn die Ansichten tatsächlich zu unterschiedlichen Ergebnissen führen.",
+      "fachLabel": "Strafrecht BT",
+      "quellen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 28 StGB",
+        "Themenpool: strafbt-068"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s1": {
+      "slot": "s1",
+      "art": "teaser",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "titel": "Gutgläubiger Erwerb und § 935",
+      "text": "Der vollständige Beitrag ist jetzt im Feed.",
+      "pille": "Jetzt im Feed",
+      "beitragSlot": "b1",
+      "abgeleitet": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s2": {
+      "slot": "s2",
+      "art": "teaser",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "titel": "Fahrlässigkeitsdelikt Schema",
+      "text": "Der vollständige Beitrag ist jetzt im Feed.",
+      "pille": "Jetzt im Feed",
+      "beitragSlot": "b2",
+      "abgeleitet": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s3": {
+      "slot": "s3",
+      "art": "teaser",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "titel": "Thermobecher als gefährliches Werkzeug?",
+      "text": "Rex, Mara und § 224 StGB: Jetzt im Reel ansehen.",
+      "pille": "Jetzt im Feed",
+      "beitragSlot": "b3",
+      "abgeleitet": true,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "freigegeben",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "freigegebene-illustration"
+    }
+  },
+  "hookOptimierung": {
+    "stand": "2026-09-23",
+    "grundlage": "Montagsrotation Zivilrecht → Strafrecht → Öffentliches Recht; Hooks formulieren die konkrete Klausurfrage ohne Übertreibung.",
+    "textProviderKostenUsd": 0
+  },
+  "renderVorschau": {
+    "status": "fertig",
+    "erzeugtAm": "2026-09-27T01:50:00.000Z",
+    "pfad": "vorproduktion/2026-09-28/fertig",
+    "providerKostenUsd": 0,
+    "textProviderKostenUsd": 0,
+    "faktencheckProviderKostenUsd": 0,
+    "bildgenerierungKostenUsd": 0,
+    "coverbilder": false,
+    "reelStimme": "elevenlabs-freigegeben-v8",
+    "freigabeBetreiber": true,
+    "coverbilderAngewandt": {
+      "stand": "2026-09-25T12:35:32.077Z",
+      "providerKostenUsd": 0,
+      "slots": [
+        "b1",
+        "b2",
+        "b3"
+      ]
+    }
+  },
+  "liveRegel": {
+    "aktivSeit": "2026-09-24",
+    "modus": "vorproduktion-hat-vorrang",
+    "fallback": "nur-wenn-datum-nicht-belegt",
+    "providerKostenZielUsd": 0
+  }
+}
