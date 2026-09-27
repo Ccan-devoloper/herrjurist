@@ -154,7 +154,7 @@ const phrases = [
   ['Rechtsweg erschöpft.'], ['Karlsruhe bleibt zu.'], ['Warum?'],
   ['Zurück.'], ['Mara hätte den'], ['Grundrechtsverstoß'],
   ['vor Gericht rügen können.'], ['Sie schwieg.'],
-  ['Paragraf neunzig Absatz zwei Satz eins','§ 90 Abs. 2 S. 1'],
+  ['Paragraf neunzig Absatz zwei Satz eins:','§ 90 Abs. 2 S. 1:'],
   ['Rechtsweg erschöpfen.'],
   ['Subsidiarität geht weiter:'], ['zumutbare fachgerichtliche'],
   ['Chancen nutzen.'],
