@@ -23,3 +23,7 @@ Die ausgewählten ElevenLabs-Spuren und ihre Zeichenzeiten liegen in `audio-v5/`
 ## Variante 6: integrierte Norm und passende Mara-Stimme
 
 `render-v6.mjs` hält Skript, Timing, Schläge, Scanner und die übrigen Bilder von Variante 5 bei. Das neue Bild `shots/shot-11-law-projection.jpg` zeigt eine einzige große Projektion aus Form-7s Hand; die korrekte Norm ist in dieser Projektion gesetzt. Der zuvor überlagerte Norm-Aufkleber entfällt. Der generierte Soundeffekt-Aufschrei wird nicht verwendet. `audio-v6/mara-hit.mp3` ist stattdessen ein kurzer ElevenLabs-v3-Sprechlaut („Au!“) der tieferen deutschen Frauenstimme Selena. Er beginnt rund 60 ms nach dem sichtbaren ersten Treffer und klingt vor dem Erzähler wieder ab. Die gesonderten Stimmproben sind in `mara-voice-generate.mjs` dokumentiert.
+
+## Variante 7: Aufschrei auf der Treffer-Nahaufnahme
+
+`render-v7.mjs` verwendet dieselben Bilder, den Sprechertext und die Schlussprojektion. Der kurze Laut am Reel-Anfang entfällt. `audio-v7/mara-close-cry.mp3` ist eine intensivere ElevenLabs-v3-Stimmprobe derselben Mara-Stimme; sie setzt beim Schnitt auf `shot-08-impact-close.jpg` bei rund 13,10 Sekunden ein. Ein kurzes Visierknacken betont den Bildkontakt. Der Erzähler wird während des etwa 1,5 Sekunden langen Aufschreis leicht abgesenkt. Der Video-Render prüft anschließend die vollständige MP4-Datei.
