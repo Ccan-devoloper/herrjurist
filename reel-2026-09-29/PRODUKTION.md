@@ -6,7 +6,7 @@
 
 **Sprechertext (ElevenLabs, freigegebene Voice-ID `PhufIH7nYh2Up1uej6aY`, multilingual v2):**
 
-> Rex unterschreibt allein für die GbR. Vertrag geschlossen? Stopp! Er und Mara betreiben die Sternwerkstatt gemeinsam. Ihr Gesellschaftsvertrag regelt die Vertretung nicht. Mara hat Rex auch nicht ermächtigt. Dann gilt Paragraf sieben zwanzig BGB: Beide Gesellschafter vertreten gemeinsam. Rex' Unterschrift allein bindet die GbR zunächst nicht. Mara zeichnet mit, und das Vertragstor öffnet sich. Merke: Erst Gesellschaftsvertrag, dann Vertretungsordnung, dann das konkrete Vertreterhandeln.
+> Rex unterschreibt allein für die Sternwerkstatt-GbR. Vertrag geschlossen? Stopp! Mara ist ebenfalls Gesellschafterin. Der Gesellschaftsvertrag regelt die Vertretung nicht; eine Ermächtigung fehlt. Dann gilt Paragraf sieben zwanzig BGB: Beide vertreten gemeinsam. Rex allein bindet die GbR zunächst nicht. Mara zeichnet mit: Das Vertragstor öffnet sich. Merke: Gesellschaftsvertrag, Vertretungsordnung, Vertreterhandeln.
 
 Der Gruppenlaut „sieben zwanzig“ folgt der Betreiberregel für §§ über 200. Die Zitierweise auf der Tafel lautet exakt „§ 720 BGB“. Die Tonspur und die Wort-Captions werden anhand des ElevenLabs-Zeichenalignments zeitlich aufeinander ausgerichtet.
 

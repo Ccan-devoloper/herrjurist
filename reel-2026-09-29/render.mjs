@@ -11,14 +11,14 @@ fs.mkdirSync(out, { recursive: true });
 // One case: Rex's single signature is rejected, the contractual and statutory
 // representation rule explains why, Mara co-signs, then the exam takeaway.
 const lines = [
-  'Rex unterschreibt allein für die GbR.',
+  'Rex unterschreibt allein für die Sternwerkstatt-GbR.',
   'Vertrag geschlossen? Stopp!',
-  'Er und Mara betreiben die Sternwerkstatt gemeinsam.',
-  'Ihr Gesellschaftsvertrag regelt die Vertretung nicht. Mara hat Rex auch nicht ermächtigt.',
-  'Dann gilt Paragraf sieben zwanzig BGB: Beide Gesellschafter vertreten gemeinsam.',
-  "Rex' Unterschrift allein bindet die GbR zunächst nicht.",
-  'Mara zeichnet mit, und das Vertragstor öffnet sich.',
-  'Merke: Erst Gesellschaftsvertrag, dann Vertretungsordnung, dann das konkrete Vertreterhandeln.'
+  'Mara ist ebenfalls Gesellschafterin.',
+  'Der Gesellschaftsvertrag regelt die Vertretung nicht; eine Ermächtigung fehlt.',
+  'Dann gilt Paragraf sieben zwanzig BGB: Beide vertreten gemeinsam.',
+  'Rex allein bindet die GbR zunächst nicht.',
+  'Mara zeichnet mit: Das Vertragstor öffnet sich.',
+  'Merke: Gesellschaftsvertrag, Vertretungsordnung, Vertreterhandeln.'
 ];
 const script = lines.join(' ');
 const voice = process.env.ELEVENLABS_VOICE_ID || 'PhufIH7nYh2Up1uej6aY';
@@ -91,7 +91,7 @@ const assPath = path.join(out, 'untertitel-einzelwort.ass');
 fs.writeFileSync(assPath, ass);
 
 // Cuts occur on the words and physical actions, never as a continuous zoom.
-const openIndex = script.indexOf('öffnet');
+const openIndex = script.indexOf('Das Vertragstor');
 const opening = charStart(openIndex);
 const b = boundaries;
 const beats = [
@@ -159,7 +159,7 @@ run('ffmpeg', ['-y', '-loglevel', 'error', '-i', silent, '-i', voicePath, ...eff
   '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-t', String(finalDuration), '-movflags', '+faststart', dest]);
 if (fs.statSync(dest).size < 1_000_000 || duration(dest) < finalDuration - .2) throw new Error('MP4 unvollständig.');
 const cover = path.join(out, 'cover.jpg');
-run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', '.8', '-i', dest, '-frames:v', '1', '-q:v', '3', cover]);
+run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', '0.8', '-i', dest, '-frames:v', '1', '-q:v', '3', cover]);
 fs.writeFileSync(path.join(out, 'timing.json'), JSON.stringify({ script, voice, model, lead, voiceDuration,
   finalDuration, captionCues: cueCount, boundaries, effects: effects.map(({ path: _, ...e }) => e),
   beats: beats.map(({ output: _, ...x }) => x) }, null, 2));
