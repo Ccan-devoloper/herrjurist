@@ -120,11 +120,11 @@ test('Markierte Quellen-/Themenpool-Abweichungen sperren die Terminierung', asyn
   assert.equal(calls.length, 0);
 });
 
-test('Angeglichene HTML-Größe ist zulässig, übergroße Mail wird gesperrt', async () => {
+test('Master-02-HTML-Größe ist zulässig, übergroße Mail wird gesperrt', async () => {
   const calls = [];
-  const actual = draft({ content: content + 'x'.repeat(81000) });
+  const actual = draft({ content: content + 'x'.repeat(99000) });
   assert.equal((await scheduleDue(args(actual, calls, { dryRun: true }))).action, 'dry_run');
   calls.length = 0;
-  await assert.rejects(scheduleDue(args(draft({ content: content + 'x'.repeat(91000) }), calls)), /HTML ist zu groß/);
+  await assert.rejects(scheduleDue(args(draft({ content: content + 'x'.repeat(101000) }), calls)), /HTML ist zu groß/);
   assert.equal(calls.length, 1);
 });
