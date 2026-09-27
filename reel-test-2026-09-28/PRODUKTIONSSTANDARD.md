@@ -1,6 +1,6 @@
 # Freigegebener Reel-Standard
 
-Die Referenz ist das 24,03-s-Reel zu § 224 Abs. 1 Nr. 2 StGB aus `reel-test-2026-09-27/render-v8.mjs` (GitHub Actions 36285669693). Die vollständigen, im Dashboard sichtbaren Vorproduktionsinfos stehen im Feld `inhalte.b3.infoVorproduktion` der 28.09.-Tagesdatei. Diese Datei beschreibt die Umsetzung für künftige Folgen.
+Die Referenz ist das 24,03-s-Reel zu § 224 Abs. 1 Nr. 2 StGB aus `reel-test-2026-09-27/render-v8.mjs` (GitHub Actions 36285669693). Die vollständigen, im Dashboard sichtbaren Vorproduktionsinfos stehen im Feld `inhalte.b3.infoVorproduktion` der 27.09.-Tagesdatei. Diese Datei beschreibt die Umsetzung für künftige Folgen.
 
 ## Dramaturgie und Schnitt
 
@@ -22,4 +22,4 @@ Die Referenz ist das 24,03-s-Reel zu § 224 Abs. 1 Nr. 2 StGB aus `reel-test-202
 - Fachinhalt mit geltendem Normtext und Rechtsprechung abgleichen; konkrete Voraussetzungen und Unsicherheiten sauber formulieren.
 - Das ganze Reel auf dem Handyformat mit Ton ansehen: klare Handlung, ruhige Standbilder, richtige Aussprache, sauberer SFX-Kontakt, lesbare Textflächen und eigenständiges Merke-Bild.
 - `ffprobe`: 1080 × 1920, 30 fps, H.264/AAC, vollständige Dauer. Timing-JSON und MP4 gemeinsam prüfen. Produktionsdateien und Code versionsgebunden lassen, damit die Aufnahme reproduzierbar bleibt.
-- Die VA-Fortsetzungsfeststellungsklage vom 28.09. wird als **separate Prüffassung** gerendert. Der Live-Slot 28.09. enthält ausschließlich das freigegebene §-224-V8-Reel, bis der Betreiber etwas anderes ausdrücklich freigibt.
+- Die VA-Fortsetzungsfeststellungsklage vom 28.09. wird als **separate Prüffassung** gerendert. Der Live-Slot 27.09. enthält das freigegebene §-224-V8-Reel. Der vorhandene 28.09.-Slot bleibt bis zur Prüfung der neuen Fassung auf seinem bisherigen Stand.

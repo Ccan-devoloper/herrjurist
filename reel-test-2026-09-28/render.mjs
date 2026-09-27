@@ -51,11 +51,15 @@ const beats=[
   {at:b[1],until:b[1]+2/fps,image:'02-shatter.jpg',punch:1.13},
   {at:b[1]+2/fps,until:b[1]+.73,image:'02-shatter.jpg'},
   {at:b[1]+.73,until:b[2],image:'03-after.jpg'},
-  {at:b[2],until:b[3],image:'03-after.jpg',punch:1.10},
-  {at:b[3],until:b[4]-.8,image:'04-timing.jpg',style:'norm'},
-  {at:b[4]-.8,until:b[4],image:'04-timing.jpg',punch:1.10},
-  {at:b[4],until:b[5],image:'05-court.jpg'},
-  {at:b[5],until:b[6],image:'06-merke.jpg',style:'merke'}
+  {at:b[2],until:b[2]+2.4,image:'07-stop.jpg'},
+  {at:b[2]+2.4,until:b[3],image:'04-timing.jpg'},
+  {at:b[3],until:b[3]+2.0,image:'04-timing.jpg',style:'norm'},
+  {at:b[3]+2.0,until:b[3]+6.7,image:'08-after-filing.jpg'},
+  {at:b[3]+6.7,until:b[4],image:'09-before-filing.jpg'},
+  {at:b[4],until:b[4]+2.4,image:'05-court.jpg'},
+  {at:b[4]+2.4,until:b[5],image:'10-interest.jpg'},
+  {at:b[5],until:b[5]+2.8,image:'06-merke.jpg'},
+  {at:b[5]+2.8,until:b[6],image:'11-final-panel.jpg',style:'final'}
 ];
 if (beats.some(x=>x.until-x.at<1/fps)) throw new Error('Ungültige Voice-/Szenengrenze: '+JSON.stringify(b));
 const font=path.resolve('fonts/Anton.ttf');
@@ -67,7 +71,7 @@ for (let i=0;i<beats.length;i++) {
   let filter=crop;
   if(beat.style==='hook') filter+=`,drawtext=fontfile=${font}:text='VERBOT WEG. KLAGE WEG?':fontsize=75:fontcolor=white:borderw=4:bordercolor=0x813321:shadowcolor=0x310f12:shadowx=5:shadowy=6:x=(w-text_w)/2:y=250`;
   if(beat.style==='norm') filter+=`,drawtext=fontfile=${font}:text='§ 113 I 4 VwGO':fontsize=105:fontcolor=white:borderw=4:bordercolor=0x076a78:shadowcolor=0x045267:shadowx=4:shadowy=5:x=(w-text_w)/2:y=110`;
-  if(beat.style==='merke') filter+=`,drawtext=fontfile=${font}:text='MERKE':fontsize=91:fontcolor=white:borderw=4:bordercolor=0x057284:shadowcolor=0x064354:shadowx=3:shadowy=4:x=(w-text_w)/2:y=126,drawtext=fontfile=${fontHud}:text='ZEITPUNKT':fontsize=67:fontcolor=white:borderw=2:bordercolor=0x027181:x=(w-text_w)/2:y=300,drawtext=fontfile=${fontHud}:text='INTERESSE':fontsize=67:fontcolor=white:borderw=2:bordercolor=0x027181:x=(w-text_w)/2:y=535`;
+  if(beat.style==='final') filter+=`,drawtext=fontfile=${font}:text='MERKE':fontsize=85:fontcolor=0x23d98b:borderw=2:bordercolor=white@0.7:x=(w-text_w)/2:y=150,drawtext=fontfile=${fontHud}:text='ZEITPUNKT':fontsize=75:fontcolor=white:borderw=1:bordercolor=0x23d98b:x=(w-text_w)/2:y=275,drawtext=fontfile=${fontHud}:text='INTERESSE':fontsize=75:fontcolor=white:borderw=1:bordercolor=0x23d98b:x=(w-text_w)/2:y=405`;
   run('ffmpeg',['-y','-loglevel','error','-loop','1','-framerate',String(fps),'-i',input,'-vf',filter,'-frames:v',String(Math.round((beat.until-beat.at)*fps)),'-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-an',output]);
   beat.output=output;
 }
