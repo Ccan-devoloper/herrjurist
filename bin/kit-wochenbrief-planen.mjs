@@ -72,7 +72,7 @@ function assertReady(b, e) {
     throw new Error(`Wochenbrief ${e.issue} richtet sich nicht an alle Abonnenten.`);
   }
   if (!b.content?.includes(`WOCHENBRIEF ${String(e.issue).padStart(2, '0')} ·`) ||
-      Buffer.byteLength(b.content, 'utf8') > 90000) {
+      Buffer.byteLength(b.content, 'utf8') > 100000) {
     throw new Error(`Wochenbrief ${e.issue}: Kennzeichnung fehlt oder HTML ist zu groß.`);
   }
   if (!b.preview_text || !b.email_template?.id || !b.thumbnail_url) {
