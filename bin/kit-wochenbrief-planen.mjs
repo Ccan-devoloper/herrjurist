@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const API = 'https://api.kit.com/v4/broadcasts';
+const ACCOUNT_API = 'https://api.kit.com/v4/account';
 const PLAN = new URL('../newsletter/kit-versandplan.json', import.meta.url);
 
 export function berlinParts(date) {
@@ -51,9 +52,20 @@ async function kitRequest(fetchImpl, path, apiKey, options = {}) {
   return response.json();
 }
 
-function assertReady(b, e, expectedFrom) {
+async function assertVerifiedSender(fetchImpl, apiKey, expectedFrom) {
+  const response = await fetchImpl(ACCOUNT_API, {
+    headers: { 'X-Kit-Api-Key': apiKey, 'Content-Type': 'application/json' },
+  });
+  if (!response.ok) throw new Error(`Kit API ${response.status} bei GET /account.`);
+  const { account } = await response.json();
+  const sender = account?.sending_addresses?.find(
+    address => address.email_address?.toLowerCase() === expectedFrom.toLowerCase(),
+  );
+  if (!sender?.is_verified) throw new Error('KIT_FROM_ADDRESS ist in Kit nicht als bestätigter Absender hinterlegt.');
+}
+
+function assertReady(b, e) {
   if (b.subject !== e.subject) throw new Error(`Betreff von Wochenbrief ${e.issue} weicht vom freigegebenen Plan ab.`);
-  if (b.email_address?.toLowerCase() !== expectedFrom.toLowerCase()) throw new Error(`Absender von Wochenbrief ${e.issue} ist nicht KIT_FROM_ADDRESS.`);
   if (b.subscriber_filter?.length !== 1 || b.subscriber_filter[0]?.all?.length !== 1 ||
       b.subscriber_filter[0].all[0]?.type !== 'all_subscribers') {
     throw new Error(`Wochenbrief ${e.issue} richtet sich nicht an alle Abonnenten.`);
@@ -78,11 +90,13 @@ export async function scheduleDue({ entries, now, apiKey, expectedFrom, fetchImp
     return { action: 'none' };
   }
   if (!apiKey || !expectedFrom) throw new Error('KIT_API_KEY (Secret) und KIT_FROM_ADDRESS (Variable) fehlen.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(expectedFrom)) throw new Error('KIT_FROM_ADDRESS muss eine vollständige E-Mail-Adresse sein.');
   const target = new Date(e.send_at);
   const { broadcast: b } = await kitRequest(fetchImpl, String(e.id), apiKey);
   if (!b) throw new Error(`Kit lieferte keinen Wochenbrief ${e.issue}.`);
   if (b.status === 'scheduled') {
     if (new Date(b.send_at).getTime() !== target.getTime()) throw new Error(`Wochenbrief ${e.issue} ist für einen anderen Termin geplant.`);
+    if (b.email_address?.toLowerCase() !== expectedFrom.toLowerCase()) throw new Error(`Wochenbrief ${e.issue} ist mit einem anderen Absender geplant.`);
     return { action: 'already_scheduled', issue: e.issue, date: e.date };
   }
   if (b.status === 'completed' || b.status === 'sending') return { action: 'already_sent', issue: e.issue, date: e.date };
@@ -90,12 +104,13 @@ export async function scheduleDue({ entries, now, apiKey, expectedFrom, fetchImp
   if (target.getTime() - now.getTime() < 20 * 60 * 1000) {
     throw new Error(`Wochenbrief ${e.issue}: weniger als 20 Minuten bis zum Versand; keine verspätete Terminierung.`);
   }
-  assertReady(b, e, expectedFrom);
+  assertReady(b, e);
+  await assertVerifiedSender(fetchImpl, apiKey, expectedFrom);
   if (dryRun) return { action: 'dry_run', issue: e.issue, date: e.date };
 
   const payload = {
     email_template_id: b.email_template.id,
-    email_address: b.email_address,
+    email_address: expectedFrom,
     subject: b.subject,
     preview_text: b.preview_text,
     description: b.description,
@@ -109,7 +124,8 @@ export async function scheduleDue({ entries, now, apiKey, expectedFrom, fetchImp
   const { broadcast: updated } = await kitRequest(fetchImpl, String(e.id), apiKey, {
     method: 'PUT', body: JSON.stringify(payload),
   });
-  if (updated?.status !== 'scheduled' || new Date(updated.send_at).getTime() !== target.getTime()) {
+  if (updated?.status !== 'scheduled' || new Date(updated.send_at).getTime() !== target.getTime() ||
+      updated.email_address?.toLowerCase() !== expectedFrom.toLowerCase()) {
     throw new Error(`Kit hat die Terminierung von Wochenbrief ${e.issue} nicht bestätigt.`);
   }
   return { action: 'scheduled', issue: e.issue, date: e.date };

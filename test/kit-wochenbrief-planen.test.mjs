@@ -20,10 +20,17 @@ function draft(overrides = {}) {
   };
 }
 
-function fakeKit(b, calls) {
+function fakeKit(b, calls, senderVerified = true) {
   return async (url, options) => {
     calls.push({ url, options });
-    const updated = options.method === 'PUT' ? { ...b, status: 'scheduled', send_at: issue.send_at } : b;
+    if (url.endsWith('/account')) {
+      return { ok: true, json: async () => ({ account: { sending_addresses: [
+        { email_address: 'newsletter@lexverse.de', is_verified: senderVerified },
+      ] } }) };
+    }
+    const updated = options.method === 'PUT'
+      ? { ...b, status: 'scheduled', send_at: issue.send_at, email_address: JSON.parse(options.body).email_address }
+      : b;
     return { ok: true, json: async () => ({ broadcast: updated }) };
   };
 }
@@ -47,19 +54,19 @@ test('Entwurf wird mit korrektem Termin und Inhalt genau einmal geplant', async 
   const calls = [];
   const result = await scheduleDue(args(draft(), calls));
   assert.equal(result.action, 'scheduled');
-  assert.equal(calls.length, 2);
-  const payload = JSON.parse(calls[1].options.body);
+  assert.equal(calls.length, 3);
+  const payload = JSON.parse(calls[2].options.body);
   assert.equal(payload.send_at, issue.send_at);
   assert.equal(payload.email_address, 'newsletter@lexverse.de');
   assert.equal(payload.content, content);
   assert.equal(payload.public, true);
-  assert.equal(calls[1].options.headers['X-Kit-Api-Key'], 'test-only');
+  assert.equal(calls[2].options.headers['X-Kit-Api-Key'], 'test-only');
 });
 
 test('Dry Run und bereits terminierte Ausgabe lösen keinen PUT aus', async () => {
   const calls = [];
   assert.equal((await scheduleDue(args(draft(), calls, { dryRun: true }))).action, 'dry_run');
-  assert.equal(calls.length, 1);
+  assert.equal(calls.length, 2);
   calls.length = 0;
   assert.equal((await scheduleDue(args(draft({ status: 'scheduled', send_at: issue.send_at }), calls, {
     now: new Date('2026-10-11T08:00:00Z'),
@@ -67,9 +74,13 @@ test('Dry Run und bereits terminierte Ausgabe lösen keinen PUT aus', async () =
   assert.equal(calls.length, 1);
 });
 
-test('Falscher Absender, anderes Publikum und später Lauf sperren den Versand', async () => {
+test('Unbestätigter Absender, anderes Publikum und später Lauf sperren den Versand', async () => {
+  const senderCalls = [];
+  await assert.rejects(scheduleDue(args(draft({ email_address: 'herrjurist@gmx.de' }), senderCalls, {
+    fetchImpl: fakeKit(draft(), senderCalls, false),
+  })), /nicht als bestätigter Absender/);
+  assert.equal(senderCalls.length, 2);
   for (const b of [
-    draft({ email_address: 'herrjurist@gmx.de' }),
     draft({ subscriber_filter: [{ all: [{ type: 'tag', ids: [1] }] }] }),
     draft({ subject: 'Falscher Betreff' }),
   ]) {
@@ -80,6 +91,13 @@ test('Falscher Absender, anderes Publikum und später Lauf sperren den Versand',
   const calls = [];
   await assert.rejects(scheduleDue(args(draft(), calls, { now: new Date('2026-10-11T06:45:00Z') })), /weniger als 20 Minuten/);
   assert.equal(calls.length, 1);
+});
+
+test('Ein verifizierter neuer Absender ersetzt den alten Entwurfsabsender', async () => {
+  const calls = [];
+  const result = await scheduleDue(args(draft({ email_address: 'herrjurist@gmx.de' }), calls));
+  assert.equal(result.action, 'scheduled');
+  assert.equal(JSON.parse(calls[2].options.body).email_address, 'newsletter@lexverse.de');
 });
 
 test('Ohne Secret oder ohne fälligen Eintrag wird nichts an Kit geschrieben', async () => {

@@ -19,14 +19,17 @@ kurz vor dem Versand erneut auf Änderungen geprüft werden.
    Sommerzeitumstellung.
 2. In GitHub unter **Settings → Secrets and variables → Actions** den geheimen
    Kit-V4-Schlüssel als Secret `KIT_API_KEY` und die exakte bestätigte Adresse
-   als Variable `KIT_FROM_ADDRESS` eintragen. Den Schlüssel nie in ein Issue,
+   als Variable `KIT_FROM_ADDRESS` eintragen. Der Workflow prüft die
+   Bestätigung über das Kit-Konto und setzt diese Adresse bei der Terminierung;
+   die Entwürfe müssen dafür nicht einzeln umgestellt werden.
+   Den Schlüssel nie in ein Issue,
    einen Chat, eine Datei oder die Variable kopieren.
 3. Den Pull Request mergen. Danach einmal **Run workflow** mit `dry_run=true`
    und `as_of=2026-10-11T05:20:00Z` ausführen. So wird Wochenbrief 04 schon
    vor seinem Sendetag aus Kit gelesen und geprüft, ohne ihn zu terminieren.
    Geplante Workflows laufen nur vom Standardzweig.
 
-Jeder Lauf prüft Ausgabe, Datum, Betreff, Entwurfsstatus, Absender,
+Jeder Lauf prüft Ausgabe, Datum, Betreff, Entwurfsstatus, bestätigten Absender,
 `all_subscribers`, Mailinhalt und HTML-Größe. Bei Abweichungen scheitert
 der Lauf sichtbar, statt eine andere oder unfertige Mail zu versenden.
 Ein bereits terminierter oder versendeter Brief wird nicht doppelt versendet.
