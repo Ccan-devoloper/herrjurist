@@ -1,0 +1,36 @@
+name: 28.09. zusammenhängende Geschichte – Prüffassung
+
+on:
+  push:
+    branches: [codex/reel-test-20260927]
+    paths:
+      - 'reel-test-2026-09-28-v3/**'
+      - '.github/workflows/reel-story-20260928.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: ffmpeg bereitstellen
+        run: sudo apt-get update -qq >/dev/null && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: Geschichte mit aktueller ElevenLabs-Stimme und Szenengeräuschen rendern
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL: ${{ vars.ELEVENLABS_MODEL }}
+        run: node reel-test-2026-09-28-v3/render.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reel-2026-09-28-story-prueffassung
+          path: |
+            reel-test-2026-09-28-v3/out/herrjurist-2026-09-28-story-prueffassung.mp4
+            reel-test-2026-09-28-v3/out/timing.json
+          if-no-files-found: warn
+          retention-days: 30
