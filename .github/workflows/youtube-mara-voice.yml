@@ -1,0 +1,26 @@
+name: ElevenLabs Mara Stimme
+on:
+  push:
+    branches: [codex/youtube-episodes-05-14]
+    paths: [.github/workflows/youtube-mara-voice.yml]
+jobs:
+  select:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Jule der Stimmensammlung hinzufügen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          node --input-type=module <<'JS'
+          const key=process.env.ELEVENLABS_API_KEY, target='VU8IqX1jR115XHqBQttd';
+          const h={'xi-api-key':key,'Content-Type':'application/json'};
+          const own=await (await fetch('https://api.elevenlabs.io/v2/voices?page_size=100',{headers:h})).json();
+          const existing=own.voices?.find(v=>v.name==='Mara Sternpfad - Jule');
+          if(existing){console.log('MARA_VOICE_ID='+existing.voice_id);process.exit()}
+          const s=await (await fetch('https://api.elevenlabs.io/v1/shared-voices?page_size=100&gender=female&language=de',{headers:h})).json();
+          const v=s.voices?.find(v=>v.voice_id===target);
+          if(!v)throw new Error('Jule not found');
+          const r=await fetch('https://api.elevenlabs.io/v1/voices/add/'+v.public_owner_id+'/'+target,{method:'POST',headers:h,body:JSON.stringify({new_name:'Mara Sternpfad - Jule'})});
+          const txt=await r.text();if(!r.ok)throw new Error('add '+r.status+' '+txt.slice(0,500));
+          console.log('MARA_VOICE_ID='+JSON.parse(txt).voice_id);
+          JS
