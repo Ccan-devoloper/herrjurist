@@ -1,0 +1,38 @@
+name: YouTube Folge 13 - Satzkorrektur
+on:
+  push:
+    branches: [codex/youtube-episodes-05-14]
+    paths: [.github/workflows/youtube-episode-13-line-correction.yml]
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Korrigierten Erzählsatz mit ElevenLabs sprechen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const s=JSON.parse(fs.readFileSync('youtube/episodes/13/script.json','utf8'));
+          const line=s.segments.find(x=>x.id==='genehmigung').lines[0];
+          const voiceId='PhufIH7nYh2Up1uej6aY';
+          const payload={text:line.text,model_id:'eleven_multilingual_v2',language_code:'de',voice_settings:{stability:.42,similarity_boost:.82,style:.38,use_speaker_boost:true,speed:1.08}};
+          const response=await fetch('https://api.elevenlabs.io/v1/text-to-speech/'+voiceId+'/with-timestamps?output_format=mp3_44100_128',{method:'POST',headers:{'xi-api-key':process.env.ELEVENLABS_API_KEY,'Content-Type':'application/json'},body:JSON.stringify(payload)});
+          if(!response.ok)throw new Error('ElevenLabs '+response.status+' '+(await response.text()).slice(0,300));
+          const result=await response.json();
+          if(!result.audio_base64||!result.alignment?.characters?.length)throw new Error('Missing audio/alignment');
+          const base='youtube/episodes/13/audio/04-genehmigung-01-narrator';
+          fs.mkdirSync('youtube/episodes/13/audio',{recursive:true});
+          fs.writeFileSync(base+'.mp3',Buffer.from(result.audio_base64,'base64'));
+          fs.writeFileSync(base+'.json',JSON.stringify({text:line.text,role:line.role,voiceId,model:'eleven_multilingual_v2',alignment:result.alignment},null,2));
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: herrjurist-episode-13-line-correction
+          path: youtube/episodes/13/audio/*
+          retention-days: 7
