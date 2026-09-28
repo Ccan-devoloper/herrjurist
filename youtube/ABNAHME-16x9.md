@@ -18,6 +18,8 @@ Jeden Punkt am **fertig exportierten MP4** und am Produktionsmaster belegen. `OK
 | Figuren aus Golden References; Alter/Stimme/Akzent passend; Figurenensemble nicht reflexhaft wie in letzter Folge | … |
 | Bei **jeder Figurenrede** spricht im Bild die richtige Figur sichtbar; relevante Objekte und Tafeln passen zum Satz | … |
 | Zeichenstil 02/06, reduzierte helle blau-orange Bühne, Requisiten mit Aussage; Nacht nur falls begründet | … |
+| Serienkonstante Gestaltung: Zeichenstil/Golden References, ruhige blaue Kartenfläche links sowie Position und Grundgestaltung von Prüfpfad und Rechtskarten stimmen mit dem Master überein | Vergleichsbilder/Zeitstempel: … |
+| Eigenständiges, zum Fall passendes Setting: Orte, Möbel, Architektur, Requisiten und Perspektiven aus dem Szenenplan nachvollziehbar; Schlüsselbilder/Kontaktbögen der letzten mindestens zwei Folgen nebeneinander geprüft; keine versehentlich gleiche Büro-/Tischkulisse | Szenenplan / Vergleichsfolgen / Bildstellen / ggf. begründete Rückkehr an denselben Ort: … |
 | Ziel ca. 45 **verschiedene** Quelldateien, Hashes und einmalige Einsätze im Bildmanifest; kleine Variationen je stabiler Szene, keine künstlichen Wiederholungen | Anzahl / SHA-Manifeste / … |
 | Ruhige Halte und sinnvolle Bildwechsel; Zäsur-Wischer nur sparsam, keine hektischen Sprünge oder Zoomersatz | Szenenliste / … |
 | Prüfpfad während des **gesamten Hauptfilms** an derselben Stelle sichtbar und am gesprochenen Tatbestandsmerkmal aktuell | Anfang / Merkmalwechsel / Schluss: … |
