@@ -22,5 +22,5 @@
 ## Ton und Freigabeprüfung
 
 - Erzähler natürlich und gut verständlich. ElevenLabs für benötigte Stimmen; vorhandene freigegebene Sprachaufnahmen bei Nachschnitt wiederverwenden, statt Credits unnötig neu auszugeben.
-- Geräusche gezielt und leise unter der Sprache einsetzen, z. B. ein kurzes Swish an einem sinnvollen Übergang. Synchron zum visuellen Scheitelpunkt; sparsam und ohne Dauerteppich. Eigene oder frei nutzbare Effekte bevorzugen, ElevenLabs-Effekte nur bei Bedarf.
+- Geräusche gezielt und leise unter der Sprache einsetzen, z. B. ein kurzes Swish an einem sinnvollen Übergang. Synchron zum visuellen Scheitelpunkt; sparsam und ohne Dauerteppich. Die verbindliche [Soundbibliothek](SOUNDBIBLIOTHEK.md) mit den vom Nutzer gelieferten drei Paketen vorrangig nutzen; ElevenLabs-Effekte nur bei Bedarf.
 - Vor Bereitstellung die komplette Ausspielung prüfen: korrekte Figurenrede, Bild-Text-Passung, Rechtsstand, unbeschnittene Boxen, sanfter Bild- und Tonübergang zum vollständigen Outro sowie keine abgeschnittenen Wörter. Produktionsquellen und Video auf Drive; keine Binärdateien im GitHub-Repository.
