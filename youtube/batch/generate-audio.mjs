@@ -15,7 +15,7 @@ const voices = {
   rex: ['TX3LPaxmHKxFdv7VOQHJ', 'eleven_multilingual_v2', .39, .80, .48, 1.04],
   zylla: ['xLCJR8xcZX2YjImGFyGw', 'eleven_v3', .38, .78, .58, 1.00],
   brakk: ['JiW03c2Gt43XNUQAumRP', 'eleven_v3', .32, .78, .62, 1.03],
-  mara: ['VU8IqX1jR115XHqBQttd', 'eleven_multilingual_v2', .43, .79, .48, 1.03],
+  mara: ['v3V1d2rk6528UrLKRuy8', 'eleven_multilingual_v2', .45, .82, .42, 1.00],
   prof: ['dFA3XRddYScy6ylAYTIO', 'eleven_multilingual_v2', .48, .80, .38, 1.00],
   form7: ['rKiu7lQ4c5P3az3745s3', 'eleven_multilingual_v2', .55, .80, .28, 1.00]
 };
