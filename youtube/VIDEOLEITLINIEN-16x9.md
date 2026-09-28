@@ -2,6 +2,10 @@
 
 **Verbindliche visuelle Master:** [Folge 02 – Polizeikontrolle](https://drive.google.com/file/d/1-ZKNhBHRT1cwWRkKDOA6tfzkbO22qSn1/view?usp=drivesdk) und [Folge 06 – Diebstahl/Gewahrsam, freigegebene Fassung v2](https://drive.google.com/file/d/1Xw4K7lG2lbz8CNYUep6hY0nlYbFLyqs-/view?usp=drivesdk) bestimmen ab jetzt **Zeichenstil, Charakterproportionen, reduziertes blaues Bühnenlayout und Lichtführung**. Folge 06 bestimmt außerdem die **Rechtskarten**: dunkelmarine Fläche, dünner orangefarbener Rand mit vertikaler Akzentlinie, große klare weiße Schrift, direkt in der Szene links neben den Figuren. Keine Rückkehr zu 04 als Stilmaßstab. Das jeweilige Thema erhält eine eigene, auf den Fall reduzierte Szenerie; die formalen Merkmale von 02/06 bleiben konstant.
 
+## Verbindlicher Produktionsmaster und Abnahme
+
+Die vom Nutzer vollständig freigegebene [Folge 09 v3](https://drive.google.com/file/d/1cm_Z5JCs1YNAEGUj1_6K3feIsnJBSH4t/view?usp=drivesdk) ist ab jetzt die **verbindliche Gesamtreferenz** für jedes neue fünfminütige YouTube-Video. [MASTERSTANDARD-09.md](MASTERSTANDARD-09.md) fixiert ihre bildlichen, typografischen, dramaturgischen, akustischen und technischen Details; der [Produktionsmaster in Drive](https://drive.google.com/file/d/1qcOl5rBvkxDagr5mxbP4uDQm_LwSnrrf/view?usp=drivesdk) enthält die 45 Einzelillustrationen, den Renderer, die Bild- und Audio-Timelines sowie die Quellen. [ABNAHME-16x9.md](ABNAHME-16x9.md) wird für **jede** Folge ausgefüllt und bestanden, bevor sie als freigabefähig gilt. Die folgenden allgemeinen Leitlinien bleiben ergänzend gültig.
+
 ## Format und Dramaturgie
 
 - YouTube 16:9, 1920 × 1080, ungefähr fünf Minuten; keine Reels-Bauchbinden, Untertitel, Kapitelzähler, Fortschrittsanzeige oder Schlusskarte des Hauptfilms.
