@@ -1,11 +1,5 @@
 name: YouTube Folgen 05-14 - ElevenLabs
 on:
-  push:
-    branches: [codex/youtube-episodes-05-14]
-    paths:
-      - youtube/episodes/**
-      - youtube/batch/generate-audio.mjs
-      - .github/workflows/youtube-episodes-05-14-audio.yml
   workflow_dispatch:
 jobs:
   voices:
