@@ -17,10 +17,12 @@ Jeden Punkt am **fertig exportierten MP4** und am Produktionsmaster belegen. `OK
 | Klausurschema mit römischer Gliederung und Untermerkmalen im Sprechertext und **progressiv** im Bild; Merksatz am Ende | … |
 | Figuren aus Golden References; Alter/Stimme/Akzent passend; Figurenensemble nicht reflexhaft wie in letzter Folge | … |
 | Bei **jeder Figurenrede** spricht im Bild die richtige Figur sichtbar; relevante Objekte und Tafeln passen zum Satz | … |
+| Bei sichtbarer Figurenrede bewegen sich die Münder tatsächlich tongebunden durch mehrere passende Viseme; Pausen/andere Sprecher mit geschlossenem Mund, kein Loop oder sichtbarer Patchrand; **gesamte** Redeabschnitte im finalen MP4 bei normaler Geschwindigkeit und auf Einzelbildern gesichtet | Sprecher-Zeitfenster / Visem-Assets / Cue-Provenienz / Sicht-Hörprüfung: … |
 | Zeichenstil 02/06, reduzierte helle blau-orange Bühne, Requisiten mit Aussage; Nacht nur falls begründet | … |
 | Serienkonstante Gestaltung: Zeichenstil/Golden References, ruhige blaue Kartenfläche links sowie Position und Grundgestaltung von Prüfpfad und Rechtskarten stimmen mit dem Master überein | Vergleichsbilder/Zeitstempel: … |
 | Eigenständiges, zum Fall passendes Setting: Orte, Möbel, Architektur, Requisiten und Perspektiven aus dem Szenenplan nachvollziehbar; Schlüsselbilder/Kontaktbögen der letzten mindestens zwei Folgen nebeneinander geprüft; keine versehentlich gleiche Büro-/Tischkulisse | Szenenplan / Vergleichsfolgen / Bildstellen / ggf. begründete Rückkehr an denselben Ort: … |
 | Ziel ca. 45 **verschiedene** Quelldateien, Hashes und einmalige Einsätze im Bildmanifest; kleine Variationen je stabiler Szene, keine künstlichen Wiederholungen | Anzahl / SHA-Manifeste / … |
+| Hauptillustrationen und zusätzliche Mundzustände getrennt gezählt; für jede sprechende Ansicht genügend unterscheidbare Formen, dokumentierte Platzierung und Zeitsteuerung; geschätzte Wort-/Audiozeiten nicht als exaktes Phonem-Alignment bezeichnet | Basisbilder / Mundasset-Zahl / Timeline: … |
 | Ruhige Halte und sinnvolle Bildwechsel; Zäsur-Wischer nur sparsam, keine hektischen Sprünge oder Zoomersatz | Szenenliste / … |
 | Prüfpfad während des **gesamten Hauptfilms** an derselben Stelle sichtbar und am gesprochenen Tatbestandsmerkmal aktuell | Anfang / Merkmalwechsel / Schluss: … |
 | Marineblaue/orange Rechtstafeln **innerhalb** der Szene links, ohne Gesichter zu verdecken; keine geisternden Texte in Übergängen | Stichproben mit Zeitstempel: … |
