@@ -1,0 +1,22 @@
+name: YouTube Notwehr · Stimmenauswahl
+on:
+  push:
+    branches: [codex/youtube-notwehr-audio]
+    paths:
+      - 'youtube/notwehr/list-voices.mjs'
+      - '.github/workflows/youtube-notwehr-voices.yml'
+permissions:
+  contents: read
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: verfügbare Stimmen aufführen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node youtube/notwehr/list-voices.mjs
