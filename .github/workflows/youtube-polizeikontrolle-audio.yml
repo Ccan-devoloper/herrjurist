@@ -1,0 +1,29 @@
+name: YouTube Polizeikontrolle · ElevenLabs Stimmen
+on:
+  push:
+    branches: [codex/youtube-polizeikontrolle-audio]
+    paths:
+      - 'youtube/polizeikontrolle/**'
+      - '.github/workflows/youtube-polizeikontrolle-audio.yml'
+permissions:
+  contents: read
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Sprecher und Figuren über ElevenLabs erzeugen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node youtube/polizeikontrolle/generate-audio.mjs
+      - name: Ton-Masters sichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: youtube-polizeikontrolle-audio
+          path: youtube/polizeikontrolle/audio/
+          if-no-files-found: error
+          retention-days: 7
