@@ -1,6 +1,6 @@
 # Verbindliche Leitlinien für Herrjurist-YouTube-Langvideos (ab Folge 07)
 
-**Freigegebene Stilreferenz:** [Folge 06 – Diebstahl/Gewahrsam, Fassung v2](https://drive.google.com/file/d/1Xw4K7lG2lbz8CNYUep6hY0nlYbFLyqs-/view?usp=drivesdk). Bei künftigen Folgen sind Bildsprache, Ruhe, Szenentafeln und Gliederung dieser Fassung der Maßstab. Inhaltlich wird jeder neue Fall eigenständig inszeniert.
+**Freigegebene Stilreferenzen:** [Folge 06 – Diebstahl/Gewahrsam, Fassung v2](https://drive.google.com/file/d/1Xw4K7lG2lbz8CNYUep6hY0nlYbFLyqs-/view?usp=drivesdk) und [Folge 07 – freigegebene Fassung](https://drive.google.com/file/d/18XCwFCMETpHtjD8QLq0Q1Hmn_VvgT23G/view?usp=drivesdk). Bei künftigen Folgen sind Bildsprache, Ruhe, in Szenen integrierte Rechtstafeln und Gliederung dieser Fassungen der Maßstab. Inhaltlich wird jeder neue Fall eigenständig inszeniert.
 
 ## Format und Dramaturgie
 
