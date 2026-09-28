@@ -1,0 +1,32 @@
+name: YouTube Folgen 05-14 - ElevenLabs
+on:
+  push:
+    branches: [codex/youtube-episodes-05-14]
+    paths:
+      - youtube/episodes/**
+      - youtube/batch/generate-audio.mjs
+      - .github/workflows/youtube-episodes-05-14-audio.yml
+  workflow_dispatch:
+jobs:
+  voices:
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        episode: ['05','06','07','08','09','10','11','12','13','14']
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: ElevenLabs Sprachspuren und exakte Zeitmarken
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node youtube/batch/generate-audio.mjs ${{ matrix.episode }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: herrjurist-episode-${{ matrix.episode }}-elevenlabs
+          path: youtube/episodes/${{ matrix.episode }}/audio/*
+          retention-days: 7
