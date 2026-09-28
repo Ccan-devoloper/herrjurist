@@ -1,0 +1,50 @@
+name: YouTube Mara 40-50 - korrigierte Figurenstimme
+on:
+  push:
+    branches: [codex/youtube-episodes-05-14]
+    paths: [.github/workflows/youtube-mara-mature-audio.yml]
+jobs:
+  mara:
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        episode: ['06','08','10','12','13']
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Mara mit reifer deutscher Stimme
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const ep='${{ matrix.episode }}';
+          const root='youtube/episodes/'+ep;
+          const data=JSON.parse(fs.readFileSync(root+'/script.json','utf8'));
+          fs.mkdirSync(root+'/mara-corrected',{recursive:true});
+          for(const [si,seg] of data.segments.entries())for(const [li,line] of seg.lines.entries()){
+            if(line.role!=='mara')continue;
+            const name=String(si+1).padStart(2,'0')+'-'+seg.id+'-'+String(li+1).padStart(2,'0')+'-mara';
+            const r=await fetch('https://api.elevenlabs.io/v1/text-to-speech/v3V1d2rk6528UrLKRuy8/with-timestamps?output_format=mp3_44100_128',{
+              method:'POST',headers:{'xi-api-key':process.env.ELEVENLABS_API_KEY,'Content-Type':'application/json'},
+              body:JSON.stringify({text:line.text,model_id:'eleven_multilingual_v2',language_code:'de',
+                voice_settings:{stability:.45,similarity_boost:.82,style:.42,use_speaker_boost:true,speed:1.00}})
+            });
+            if(!r.ok)throw new Error(name+' HTTP '+r.status+' '+(await r.text()).slice(0,300));
+            const j=await r.json(),out=root+'/mara-corrected/'+name;
+            fs.writeFileSync(out+'.mp3',Buffer.from(j.audio_base64,'base64'));
+            fs.writeFileSync(out+'.json',JSON.stringify({text:line.text,role:'mara',voiceId:'v3V1d2rk6528UrLKRuy8',
+              model:'eleven_multilingual_v2',alignment:j.alignment||j.normalized_alignment},null,2));
+            console.log(name+' corrected');
+          }
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: herrjurist-episode-${{ matrix.episode }}-mara-mature
+          path: youtube/episodes/${{ matrix.episode }}/mara-corrected/*
+          retention-days: 7
