@@ -1,0 +1,25 @@
+name: ElevenLabs Figurenstimmen Recherche
+on:
+  push:
+    branches: [codex/youtube-episodes-05-14]
+    paths: [.github/workflows/youtube-voice-catalog.yml]
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verfügbare Stimmen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          node --input-type=module <<'JS'
+          const key=process.env.ELEVENLABS_API_KEY;
+          if(!key)throw new Error('ELEVENLABS_API_KEY fehlt');
+          for(const path of ['/v2/voices?page_size=100','/v1/shared-voices?page_size=100&gender=female&language=de']){
+            const r=await fetch('https://api.elevenlabs.io'+path,{headers:{'xi-api-key':key}});
+            const t=await r.text();
+            console.log(path,r.status);
+            if(!r.ok){console.log(t.slice(0,300));continue}
+            const j=JSON.parse(t);
+            console.log(JSON.stringify((j.voices||[]).filter(v=>!v.labels?.gender||v.labels.gender==='female').slice(0,40).map(v=>({name:v.name,id:v.voice_id,description:v.description?.slice(0,100),labels:v.labels,category:v.category}))));
+          }
+          JS
