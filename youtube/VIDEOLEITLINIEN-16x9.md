@@ -1,6 +1,6 @@
 # Verbindliche Leitlinien für Herrjurist-YouTube-Langvideos (ab Folge 07)
 
-**Freigegebene Stilreferenzen:** [Folge 06 – Diebstahl/Gewahrsam, Fassung v2](https://drive.google.com/file/d/1Xw4K7lG2lbz8CNYUep6hY0nlYbFLyqs-/view?usp=drivesdk) und [Folge 07 – freigegebene Fassung](https://drive.google.com/file/d/18XCwFCMETpHtjD8QLq0Q1Hmn_VvgT23G/view?usp=drivesdk). Bei künftigen Folgen sind Bildsprache, Ruhe, in Szenen integrierte Rechtstafeln und Gliederung dieser Fassungen der Maßstab. Inhaltlich wird jeder neue Fall eigenständig inszeniert.
+**Freigegebene Stilreferenzen:** [Folge 04 – Angebot und Annahme](https://drive.google.com/file/d/1mE_OwVoFOTlJLo6JEbpBLlBxJyJrQ7KQ/view?usp=drivesdk) für Zeichenstil, Farbigkeit und Bildlayout; [Folge 06 – Diebstahl/Gewahrsam, Fassung v2](https://drive.google.com/file/d/1Xw4K7lG2lbz8CNYUep6hY0nlYbFLyqs-/view?usp=drivesdk) und [Folge 07 – freigegebene Fassung](https://drive.google.com/file/d/18XCwFCMETpHtjD8QLq0Q1Hmn_VvgT23G/view?usp=drivesdk). Bei künftigen Folgen sind die Figuren- und Szenensprache von 04 sowie Ruhe, in Szenen integrierte Rechtstafeln und Gliederung von 06/07 gemeinsam der Maßstab. Inhaltlich wird jeder neue Fall eigenständig inszeniert.
 
 ## Format und Dramaturgie
 
@@ -16,11 +16,12 @@
 - Bei Figurenrede zeigt genau die sprechende Figur sichtbar einen passenden offenen Mund bzw. eine erkennbare Sprechgeste. Rollen und Stimmen müssen zusammenpassen; Alter und Hochdeutsch insbesondere bei Mara (etwa 40–50) berücksichtigen.
 - Wie in Folge 06: klare, lebendige, auf den Fall reduzierte Bildkompositionen auf blauem Grund. Requisiten dienen einer konkreten Aussage. Tagszenen sind die Norm, Nacht nur wenn die Geschichte sie verlangt. Lieber mehrere **unterschiedliche** passende Bilder als dieselben ständig wiederholen.
 - Bildwechsel an inhaltlichen Wendepunkten und dann ausreichend lange halten; kein hektischer Schnittrhythmus. Der gerade gesprochene Sachverhalt muss im Bild erkennbar sein.
+- Ab Folge 09 bei passendem Stoff etwa 40–50 **Bildzustände** über fünf Minuten: wenige klar unterscheidbare Handlungsorte, pro Ort mehrere nah verwandte Cels mit kleinen Gesten, Blicken, Requisiten- oder Kameraverschiebungen (Zwiebelschalentechnik). Ein neuer Zustand ist kein neuer Schauplatz. Textfortschritt und Figurengeste folgen dem Sprechwort; Bewegungen bleiben subtil und die Lesedauer großzügig.
 - Lesbare Rechtstafeln **in der laufenden Szene** vorsehen, nicht als eigene Vollbildfolien. Dunkelmarine Fläche, heller Text, orange Akzentlinie und abgerundeter Rahmen wie in Folge 06. Kurz und groß schreiben, Textpositionen am Sprechwort ausrichten, sichtbare Reihenfolge bei Aufzählungen beibehalten und jeden Text innerhalb seiner Box prüfen.
 - Dezente Wipes/Slides oder Match Cuts nur bei echten Zeit-, Orts- oder Perspektivwechseln. Nicht jede Textzeile animieren.
 
 ## Ton und Freigabeprüfung
 
 - Erzähler natürlich und gut verständlich. ElevenLabs für benötigte Stimmen; vorhandene freigegebene Sprachaufnahmen bei Nachschnitt wiederverwenden, statt Credits unnötig neu auszugeben.
-- Geräusche gezielt und leise unter der Sprache einsetzen, z. B. ein kurzes Swish an einem sinnvollen Übergang. Synchron zum visuellen Scheitelpunkt; sparsam und ohne Dauerteppich. Die verbindliche [Soundbibliothek](SOUNDBIBLIOTHEK.md) mit den vom Nutzer gelieferten drei Paketen vorrangig nutzen; ElevenLabs-Effekte nur bei Bedarf.
+- Geräusche gezielt und leise unter der Sprache einsetzen, z. B. ein kurzes Swish an einem sinnvollen Übergang. Jeden sichtbaren Wisch mit einem passenden kurzen Wischklang auf die Mitte des visuellen Übergangs synchronisieren; innerhalb einer Szene genügen sanfte Überblendungen ohne Wischgeräusch. Synchron zum visuellen Scheitelpunkt; sparsam und ohne Dauerteppich. Die verbindliche [Soundbibliothek](SOUNDBIBLIOTHEK.md) mit den vom Nutzer gelieferten drei Paketen vorrangig nutzen; ElevenLabs-Effekte nur bei Bedarf.
 - Vor Bereitstellung die komplette Ausspielung prüfen: korrekte Figurenrede, Bild-Text-Passung, Rechtsstand, unbeschnittene Boxen, sanfter Bild- und Tonübergang zum vollständigen Outro sowie keine abgeschnittenen Wörter. Produktionsquellen und Video auf Drive; keine Binärdateien im GitHub-Repository.
