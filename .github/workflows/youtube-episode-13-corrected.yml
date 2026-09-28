@@ -1,0 +1,23 @@
+name: YouTube Folge 13 - korrigiertes Drehbuch und Ton
+on:
+  push:
+    branches: [codex/youtube-episodes-05-14]
+    paths: [.github/workflows/youtube-episode-13-corrected.yml]
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Tonproduktion mit erwachsener Mara als Mutter
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node youtube/batch/generate-audio.mjs 13
+      - uses: actions/upload-artifact@v4
+        with:
+          name: herrjurist-episode-13-corrected-audio
+          path: youtube/episodes/13/audio/*
+          retention-days: 7
