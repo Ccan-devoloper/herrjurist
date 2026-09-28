@@ -454,11 +454,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
 
 def main():
+    (ROOT / "willenserklaerung.de.srt").unlink(missing_ok=True)
+    (WORK / "captions.ass").unlink(missing_ok=True)
     timeline, speech_end, duration = make_audio()
     slides = make_slides(timeline, speech_end, duration)
-    cues = captions(timeline)
     print(json.dumps({"duration": duration, "speechEnd": speech_end,
-                      "slides": len(slides), "captions": cues}, ensure_ascii=False))
+                      "slides": len(slides), "captions": 0}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
