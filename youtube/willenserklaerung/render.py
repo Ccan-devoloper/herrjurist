@@ -2,8 +2,6 @@
 """Render the Willenserklärung pilot from locked voice takes and character art."""
 
 import json
-import math
-import re
 import subprocess
 import wave
 from pathlib import Path
@@ -288,6 +286,9 @@ def draw_slide(segment, state_idx, spec):
 
 
 def make_slides(timeline, speech_end, duration):
+    for old in WORK.glob("slide-*"):
+        if old.suffix in (".jpg", ".png"):
+            old.unlink()
     groups = {}
     for event in timeline:
         groups.setdefault(event["segment"], []).append(event)
@@ -332,125 +333,6 @@ def make_slides(timeline, speech_end, duration):
     (WORK / "slides.txt").write_text("\n".join(lines) + "\n")
     (WORK / "slides.json").write_text(json.dumps([{**e, "file": str(e["file"])} for e in events], ensure_ascii=False, indent=2))
     return events
-
-
-def words_from_alignment(alignment):
-    chars = alignment["characters"]
-    begins = alignment["character_start_times_seconds"]
-    ends = alignment["character_end_times_seconds"]
-    words, start, current = [], None, ""
-    for c, a, b in zip(chars, begins, ends):
-        if c.isspace():
-            if current:
-                words.append((current, start, last))
-                current, start = "", None
-        else:
-            if start is None:
-                start = a
-            current += c
-            last = b
-    if current:
-        words.append((current, start, last))
-    return words
-
-
-def legal_notation(words):
-    """Keep a spoken legal citation intact and render its written form."""
-    patterns = [
-        (("paragrafen", "einhundertdreiunddreißig", "und", "einhundertsiebenundfünfzig"), "§§ 133, 157"),
-        (("paragraf", "einhundertfünfzig", "absatz", "zwei"), "§ 150 Abs. 2"),
-        (("paragraf", "einhundertdreißig", "absatz", "eins"), "§ 130 Abs. 1"),
-        (("paragraf", "einhundertsechzehn"), "§ 116"),
-        (("paragraf", "vierhundertdreiunddreißig"), "§ 433"),
-    ]
-    out, i = [], 0
-    while i < len(words):
-        found = False
-        for pattern, replacement in patterns:
-            candidate = tuple(re.sub(r"[^a-zäöüß]", "", w[0].lower()) for w in words[i:i + len(pattern)])
-            if candidate == pattern:
-                out.append((replacement, words[i][1], words[i + len(pattern) - 1][2]))
-                i += len(pattern)
-                found = True
-                break
-        if not found:
-            out.append(words[i])
-            i += 1
-    return out
-
-
-def groups_of_words(words):
-    result, current = [], []
-    for word in words:
-        # Legal citations render as several visible tokens even when they
-        # replace one spoken word sequence in the alignment.
-        if current and sum(len(w[0].split()) for w in current + [word]) > 5:
-            result.append(current)
-            current = []
-        current.append(word)
-        if sum(len(w[0].split()) for w in current) >= 4 or (len(current) >= 2 and re.search(r"[,;.!?…:]$", word[0])):
-            result.append(current)
-            current = []
-    if current:
-        if result and len(current) == 1 and sum(len(w[0].split()) for w in result[-1] + current) <= 5:
-            result[-1].extend(current)
-        else:
-            result.append(current)
-    return result
-
-
-def srt_time(t):
-    ms = round(t * 1000)
-    h, ms = divmod(ms, 3600000)
-    m, ms = divmod(ms, 60000)
-    s, ms = divmod(ms, 1000)
-    return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
-
-
-def ass_time(t):
-    return srt_time(t).replace(",", ".")[:-1]
-
-
-def captions(timeline):
-    cues = []
-    for event in timeline:
-        if event["role"] == "narrator":
-            alignment = json.loads(Path(event["path"]).with_suffix(".json").read_text())["alignment"]
-            for group in groups_of_words(legal_notation(words_from_alignment(alignment))):
-                text = " ".join(w[0] for w in group)
-                cues.append((event["start"] + group[0][1],
-                             event["start"] + group[-1][2], text))
-        else:
-            chunks = [event["text"]]
-            if len(event["text"].split()) > 6:
-                w = event["text"].split()
-                chunks = [" ".join(w[:5]), " ".join(w[5:])]
-            for i, text in enumerate(chunks):
-                cues.append((event["start"] + event["duration"] * i / len(chunks),
-                             event["start"] + event["duration"] * (i + 1) / len(chunks), text))
-    cues.sort()
-    srt = []
-    for i, (a, b, s) in enumerate(cues, 1):
-        srt.append(f"{i}\n{srt_time(a)} --> {srt_time(b)}\n{s}\n")
-    (ROOT / "willenserklaerung.de.srt").write_text("\n".join(srt))
-    ass = """[Script Info]
-ScriptType: v4.00+
-PlayResX: 1920
-PlayResY: 1080
-WrapStyle: 2
-
-[V4+ Styles]
-Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Caption,Nimbus Sans,58,&H00FFFFFF,&H00FFFFFF,&H00201908,&H80000000,-1,0,0,0,100,100,0,0,1,4,1,2,120,120,78,1
-
-[Events]
-Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-"""
-    for a, b, s in cues:
-        safe = s.replace("{", "(").replace("}", ")").replace("\n", " ")
-        ass += f"Dialogue: 0,{ass_time(a)},{ass_time(max(a + .12, b))},Caption,,0,0,0,,{safe}\n"
-    (WORK / "captions.ass").write_text(ass)
-    return len(cues)
 
 
 def main():
