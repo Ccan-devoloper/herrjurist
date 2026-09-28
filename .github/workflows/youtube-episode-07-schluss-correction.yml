@@ -1,0 +1,56 @@
+name: Episode 07 Schlusszeile - ElevenLabs
+on:
+  push:
+    branches: [codex/youtube-episodes-05-14]
+    paths: [youtube/episodes/07/script.json]
+  workflow_dispatch:
+jobs:
+  narrator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Korrigierte Schlusszeile und Alignment
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = 'youtube/episodes/07';
+          const d = JSON.parse(fs.readFileSync(path + '/script.json', 'utf8'));
+          const text = d.segments.at(-1).lines[0].text;
+          if (!text.endsWith('Bis zum nächsten Thema!')) throw new Error('Schlussformel fehlt');
+          const voiceId = 'PhufIH7nYh2Up1uej6aY';
+          const model = 'eleven_multilingual_v2';
+          const payload = {
+            text, model_id: model, language_code: 'de',
+            voice_settings: {stability: .42, similarity_boost: .82, style: .38, use_speaker_boost: true, speed: 1.08}
+          };
+          (async () => {
+            let result;
+            for (let i = 0; i < 5; i++) {
+              const resp = await fetch('https://api.elevenlabs.io/v1/text-to-speech/' + voiceId + '/with-timestamps?output_format=mp3_44100_128', {
+                method: 'POST', headers: {'xi-api-key': process.env.ELEVENLABS_API_KEY, 'Content-Type': 'application/json'},
+                body: JSON.stringify(payload)
+              });
+              if (resp.ok) {result = await resp.json(); break;}
+              const detail = (await resp.text()).slice(0, 300);
+              if (i === 4 || ![429,500,502,503,504].includes(resp.status)) throw new Error(resp.status + ' ' + detail);
+              await new Promise(resolve => setTimeout(resolve, 5000 * (i + 1)));
+            }
+            const alignment = result.alignment || result.normalized_alignment;
+            if (!result.audio_base64 || !alignment?.characters?.length) throw new Error('missing audio/alignment');
+            const name = path + '/audio/08-schluss-01-narrator';
+            fs.mkdirSync(path + '/audio', {recursive: true});
+            fs.writeFileSync(name + '.mp3', Buffer.from(result.audio_base64, 'base64'));
+            fs.writeFileSync(name + '.json', JSON.stringify({text, role:'narrator', voiceId, model, alignment},null,2));
+          })().catch(e => {console.error(e);process.exitCode=1});
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: herrjurist-episode-07-schluss-correction
+          path: youtube/episodes/07/audio/08-schluss-01-narrator.*
+          retention-days: 7
