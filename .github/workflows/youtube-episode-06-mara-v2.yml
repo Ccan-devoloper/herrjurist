@@ -1,0 +1,40 @@
+name: Episode 06 Mara - mature standard German
+on:
+  push:
+    branches: [codex/youtube-episodes-05-14]
+    paths: [.github/workflows/youtube-episode-06-mara-v2.yml]
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate only Mara's unchanged sentence
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const script=JSON.parse(fs.readFileSync('youtube/episodes/06/script.json','utf8'));
+          const line=script.segments.flatMap(s=>s.lines).find(l=>l.role==='mara');
+          if(!line || line.text!=='Ich bin doch nicht mal aus dem Laden raus!') throw new Error('unexpected Mara text');
+          const voiceId='rKiu7lQ4c5P3az3745s3';
+          const response=await fetch('https://api.elevenlabs.io/v1/text-to-speech/'+voiceId+'/with-timestamps?output_format=mp3_44100_128',{
+            method:'POST',headers:{'xi-api-key':process.env.ELEVENLABS_API_KEY,'Content-Type':'application/json'},
+            body:JSON.stringify({text:line.text,model_id:'eleven_multilingual_v2',language_code:'de',
+              voice_settings:{stability:0.48,similarity_boost:0.83,style:0.48,use_speaker_boost:true,speed:1.0}})
+          });
+          if(!response.ok) throw new Error('ElevenLabs HTTP '+response.status+' '+(await response.text()).slice(0,200));
+          const j=await response.json();
+          fs.mkdirSync('out',{recursive:true});
+          fs.writeFileSync('out/01-hook-02-mara.mp3',Buffer.from(j.audio_base64,'base64'));
+          fs.writeFileSync('out/01-hook-02-mara.json',JSON.stringify({text:line.text,role:'mara',voiceId,model:'eleven_multilingual_v2',alignment:j.alignment||j.normalized_alignment},null,2));
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: episode-06-mara-v2
+          path: out/*
+          retention-days: 7
