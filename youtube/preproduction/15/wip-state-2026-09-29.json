@@ -1,7 +1,7 @@
 {
   "episode": 15,
   "date": "2026-09-29",
-  "state": "WIP_TECHNICAL_CUT_RENDERED_NOT_RELEASE_READY",
+  "state": "CANDIDATE_V2_RENDERED_NOT_RELEASE_READY",
   "release_approved": false,
   "finished_count": "0/142",
   "audio_segments_reused": 14,
@@ -12,20 +12,33 @@
   "recoverable_runway_image_tasks": 29,
   "runway_credits_observed": 3,
   "runway_credit_policy": "Do not spend automatically on large batches; no upgrade or purchase.",
-  "wip_mp4": {
-    "name": "15-Relationstechnik-WIP-technical-cut-v1.mp4",
-    "bytes": 15828841,
+  "candidate_v2": {
+    "name": "15-Relationstechnik-KANDIDAT-v2.mp4",
+    "bytes": 21117807,
     "duration_seconds": 325.57,
-    "sha256": "542c00ecb51d5b27c00dcf6b49cedf96eab55148b145d28fa837754d66695762",
-    "technical_decode": "OK"
+    "sha256": "cb7e12caecc1446dd6751a125dd0f85456160b71caedfbb7b5f89383e7c4ae12",
+    "technical_decode": "OK",
+    "video": "H.264 1920x1080 30fps yuv420p",
+    "audio": "AAC stereo 48kHz",
+    "intro_seconds": 8.0,
+    "outro_seconds": 15.084,
+    "mouth_animation": "Alignment-derived three-state mouth motion is rendered during the Mara, Rex and Zylla speech segments.",
+    "automated_visual_review": "Coherent cards, persistent exam path and case-specific visuals are present, but the locally drawn visual layer is materially simpler than the binding 02/06 masters. This candidate must not be released as final."
   },
-  "legal_recheck": ["BGB 433 II", "BGB 362 I", "ZPO 138", "ZPO 253", "ZPO 286", "BGH VIII ZR 135/04"],
-  "legal_recheck_note": "Current official statute texts rechecked 2026-09-29; official primary BGH decision link for VIII ZR 135/04 still to be captured before release.",
+  "legal_recheck": [
+    "BGB § 433 Abs. 2",
+    "BGB § 362 Abs. 1",
+    "BGB § 363",
+    "ZPO § 138",
+    "ZPO § 253",
+    "ZPO § 286",
+    "BGH, Beschluss vom 30.01.2024 - VIII ZB 43/23"
+  ],
+  "legal_recheck_note": "Official statute texts and the BGH primary decision were rechecked on 2026-09-29. VIII ZB 43/23 expressly states the general rule that the debtor bears the burden of proof for performance extinguishing a claim under § 362 Abs. 1 BGB. The older placeholder VIII ZR 135/04 is not used as a release source.",
   "open_gates": [
-    "materialize final Runway image bytes into render workspace",
-    "final 02/06 visuals plus human style gate",
-    "audio-bound mouth animation",
-    "full normal-speed sight/listen review",
-    "final Drive upload and readback"
+    "replace or materially upgrade the candidate visual layer until it matches the binding 02/06 visual standard; existing Runway 2K anchor and 29 recoverable image tasks remain available but their bytes are not yet materialized in the render workspace",
+    "human style gate against 02/06 and normal-speed full sight/listen review",
+    "human check that visible speaking gestures and alignment-derived mouth motion read naturally",
+    "final Drive upload plus readback size/checksum"
   ]
 }
