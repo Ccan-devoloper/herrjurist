@@ -9,9 +9,11 @@ import argparse
 import csv
 import html
 import json
+import os
 import sys
 from datetime import date
 from pathlib import Path
+from urllib.parse import quote
 
 
 WEIGHTS = {"figure": 30, "contour": 20, "shape": 20, "color": 15, "calm": 15}
@@ -38,7 +40,9 @@ def make_csv(path, names):
 
 def make_gallery(path, assets, names, ref02, ref06, golden):
     def shown_image(p, label):
-        src = html.escape(p.resolve().as_uri(), quote=True)
+        # Relative links remain usable when the entire production folder moves.
+        src = quote(os.path.relpath(p.resolve(), path.parent.resolve()).replace(os.sep, "/"), safe="/.")
+        src = html.escape(src, quote=True)
         return f'<a href="{src}" target="_blank"><img src="{src}" alt="{html.escape(label)}"></a>'
 
     rows = []
