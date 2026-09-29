@@ -5,6 +5,8 @@ Examples:
   python gesamtwissen_index.py build --source /path/Jura_Gesamtwissen_...html
   python gesamtwissen_index.py plan --source /path/Jura_Gesamtwissen_...html \
       --workbook /path/HerrJurist_156_YouTube_Themenplan.xlsx --out output
+  python gesamtwissen_index.py plan-query --source /path/source.html \
+      --out output --query "AGB"
   python gesamtwissen_index.py extract --source /path/source.html --anchor anfechtungsgruende
   python gesamtwissen_index.py query --source /path/source.html --out output --query frist
 
@@ -344,7 +346,7 @@ def make_plan(workbook: Path, out: Path):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("action", choices=("build", "extract", "topics", "query", "plan"))
+    p.add_argument("action", choices=("build", "extract", "topics", "query", "plan", "plan-query"))
     p.add_argument("--source", type=Path, default=find_local_input("Jura_Gesamtwissen_*UPDATE30*FULL4958*UNCERTIFIED*.html"), help="exact local UNCERTIFIED HTML input")
     p.add_argument("--workbook", type=Path, default=find_local_input("HerrJurist_156_YouTube_Themenplan*.xlsx"), help="exact local 156-topic workbook input")
     p.add_argument("--anchor")
@@ -384,6 +386,20 @@ def main():
         if args.workbook is None:
             p.error("plan requires --workbook /path/to/HerrJurist_156...xlsx")
         make_plan(args.workbook.resolve(), out)
+    elif args.action == "plan-query":
+        if not args.query:
+            p.error("plan-query requires --query")
+        target = out / "topics-001-156-source-map.json"
+        if not target.exists():
+            if args.workbook is None:
+                p.error("source map absent: provide --workbook and run plan first")
+            make_plan(args.workbook.resolve(), out)
+        payload = json.loads(target.read_text(encoding="utf-8"))
+        q = args.query.casefold()
+        for row in payload["topics"]:
+            searchable = " ".join(str(row.get(k) or "") for k in ("topic_id", "title", "field", "exam", "workbook_source", "html_anchor", "excerpt"))
+            if q in searchable.casefold():
+                print(f"{row['topic_id']:03d} {row['title']} :: #{row['html_anchor']} [{row['mapping_confidence']}] {row['excerpt'][:170]}")
     else:
         if not args.query:
             p.error("query requires --query")
