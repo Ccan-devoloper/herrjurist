@@ -38,7 +38,7 @@ def make_csv(path, names):
         writer.writerows({"asset": name} for name in names)
 
 
-def make_gallery(path, assets, names, ref02, ref06, golden):
+def make_gallery(path, assets, names, ref02, ref06, goldens):
     def shown_image(p, label):
         # Relative links remain usable when the entire production folder moves.
         src = quote(os.path.relpath(p.resolve(), path.parent.resolve()).replace(os.sep, "/"), safe="/.")
@@ -49,14 +49,14 @@ def make_gallery(path, assets, names, ref02, ref06, golden):
     for name in names:
         current = assets / name
         refs = [shown_image(ref02, "Master 02"), shown_image(ref06, "Master 06")]
-        if golden:
+        for golden in goldens:
             refs.append(shown_image(golden, "Golden Reference (falls diese Figur gezeigt wird)"))
         rows.append(
             f'<section><h2>{html.escape(name)}</h2><div class="grid">'
             + "".join(f'<figure>{image}<figcaption>{caption}</figcaption></figure>'
                       for image, caption in zip(
                           [*refs, shown_image(current, name)],
-                          ["02", "06", *(["Golden Reference"] if golden else []), "Neues Bild"],
+                          ["02", "06", *[f"Golden Reference {i+1}" for i in range(len(goldens))], "Neues Bild"],
                       ))
             + '</div><p>Jedes Bild anklicken und bei 100 % prüfen. Wertung in der CSV eintragen.</p></section>'
         )
@@ -131,11 +131,12 @@ def main():
     parser.add_argument("--assets", required=True, type=Path, help="Anchor or final image folder")
     parser.add_argument("--ref02", required=True, type=Path, help="Approved full-size frame from 02")
     parser.add_argument("--ref06", required=True, type=Path, help="Approved full-size frame from 06")
-    parser.add_argument("--golden", type=Path, help="Additional large character Golden Reference")
+    parser.add_argument("--golden", type=Path, action="append", default=[],
+                        help="Character Golden Reference; repeat for multiple figures")
     parser.add_argument("--out", required=True, type=Path, help="Output folder for gallery and CSV")
     parser.add_argument("--validate", action="store_true", help="Check completed CSV; write report JSON")
     args = parser.parse_args()
-    for p in [args.ref02, args.ref06, *([args.golden] if args.golden else [])]:
+    for p in [args.ref02, args.ref06, *args.golden]:
         if not p.is_file():
             parser.error(f"Reference missing: {p}")
     if not args.assets.is_dir():
