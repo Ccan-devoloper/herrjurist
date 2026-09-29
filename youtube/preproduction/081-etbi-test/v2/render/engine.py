@@ -19,10 +19,21 @@ ROT = (200, 57, 42, 255)
 GRUEN = (46, 140, 80, 255)
 
 _fc = {}
+FONTMAP = None  # {stil: (pfad, gewicht)} für variable Schriften, z. B. DM Sans im Humaaans-Stil
+
 def F(stil, size):
-    key = (stil, size)
+    key = (stil, size, id(FONTMAP))
     if key not in _fc:
-        _fc[key] = ImageFont.truetype(FD + f"AlegreyaSans-{stil}.ttf", size)
+        if FONTMAP:
+            pfad, gew = FONTMAP[stil]
+            f = ImageFont.truetype(pfad, size)
+            werte = []
+            for a in f.get_variation_axes():
+                werte.append(min(max(size, a["minimum"]), a["maximum"]) if a["name"] == b"Optical size" else gew)
+            f.set_variation_by_axes(werte)
+            _fc[key] = f
+        else:
+            _fc[key] = ImageFont.truetype(FD + f"AlegreyaSans-{stil}.ttf", size)
     return _fc[key]
 
 # ---------------------------------------------------------------- Hintergründe
@@ -99,7 +110,8 @@ def kreis_emoji(name, cx, cy, r, cue, d=0.0):
     im.alpha_composite(e, (r - e.width // 2, r - e.height // 2))
     return El(im, cx - r, cy - r, cue, "pop", d, name="kreis:" + name)
 
-def wolke(w, h, inhalt, cue, cx, cy, schwanz=None, d=0.0, textsize=46, emoji=None, emoji_size=90, ziel=None, bis=None):
+def wolke(w, h, inhalt, cue, cx, cy, schwanz=None, d=0.0, textsize=46, emoji=None, emoji_size=90, ziel=None, bis=None,
+          kontur=INK, textfarbe=INK, fuellung=WEISS, schatten=False):
     """Denkwolke mit dunkler Kontur (wie Referenz). schwanz = (dx, dy) Richtung zur denkenden Figur;
     ziel = (x, y) absoluter Bildpunkt (Kopf), zu dem die Gedankenblasen führen."""
     s = 2
@@ -134,8 +146,13 @@ def wolke(w, h, inhalt, cue, cx, cy, schwanz=None, d=0.0, textsize=46, emoji=Non
             md.ellipse((px - rr * s, py - rr * s, px + rr * s, py + rr * s), fill=255)
     rand = mask.filter(ImageFilter.MaxFilter(11))
     im = Image.new("RGBA", (CW, CH))
-    im.paste(Image.new("RGBA", (CW, CH), INK), (0, 0), rand)
-    im.paste(Image.new("RGBA", (CW, CH), WEISS), (0, 0), mask)
+    if schatten:
+        sh = mask.filter(ImageFilter.GaussianBlur(18 * s)).point(lambda v: int(v * 0.22))
+        schicht = Image.new("RGBA", (CW, CH), (31, 29, 91, 0)); schicht.putalpha(sh)
+        im.alpha_composite(schicht, (0, 10 * s))
+    if kontur:
+        im.paste(Image.new("RGBA", (CW, CH), kontur), (0, 0), rand)
+    im.paste(Image.new("RGBA", (CW, CH), fuellung), (0, 0), mask)
     im = im.resize((CW // s, CH // s), Image.LANCZOS)
     dr = ImageDraw.Draw(im)
     zeilen = inhalt if isinstance(inhalt, list) else [inhalt]
@@ -150,7 +167,7 @@ def wolke(w, h, inhalt, cue, cx, cy, schwanz=None, d=0.0, textsize=46, emoji=Non
     for z in zeilen:
         bb = f.getbbox(z)
         assert bb[2] - bb[0] <= w * 0.86, f"Wolkentext zu breit: {z}"
-        dr.text((pad + w / 2 - (bb[2] - bb[0]) / 2 - bb[0], y0 - bb[1] + (lh - (bb[3] - bb[1])) / 2), z, font=f, fill=INK)
+        dr.text((pad + w / 2 - (bb[2] - bb[0]) / 2 - bb[0], y0 - bb[1] + (lh - (bb[3] - bb[1])) / 2), z, font=f, fill=textfarbe)
         y0 += lh
     return El(im, cx - pad - w / 2, cy - pad - h / 2, cue, "pop", d, bis, name="wolke:" + "/".join(zeilen))
 
