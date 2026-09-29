@@ -143,6 +143,7 @@ def doc_meta(root):
         "document_title": heading_text(root.xpath("//title")[0]),
         "current_working_view": "UPDATE30, 2026-09-24, UNCERTIFIED",
         "historical_corpus_date": "2026-09-13",
+        "index_schema_version": 2,
         "audit_row_count": len(rows),
         "audit_formal_flags": dict(formal),
         "update30_row_status": dict(current),
@@ -162,7 +163,15 @@ def build():
                 continue
             title = heading_text(h)
             preview = []
+            registry_refs = []
             for n in section_nodes(h):
+                if n.tag == "p" and "vollverweis" in (n.get("class") or "").split():
+                    registry_refs.append({
+                        "data_complete_ref": n.get("data-complete-ref"),
+                        "hrefs": n.xpath(".//a/@href"),
+                        "note": norm(" ".join(n.itertext()))[:230],
+                    })
+                    continue
                 if n.tag in ("p", "h3", "h4"):
                     preview.append(norm(" ".join(n.itertext())))
                 if len(" ".join(preview)) >= 500:
@@ -174,6 +183,8 @@ def build():
                 "parent_id": h.getparent().get("id"),
                 "parent_class": h.getparent().get("class"),
                 "excerpt": " ".join(preview)[:500],
+                "registry_pointers": registry_refs,
+                "excerpt_method": "first substantive paragraph(s), excluding registry/boilerplate pointer",
                 "source_sha256": meta["source_sha256"],
                 "provenance": "historical corpus or appended working addendum; UNCERTIFIED, not current-law authority",
             }
@@ -300,7 +311,8 @@ def read_jahresplan(workbook: Path):
 
 def make_plan(workbook: Path, out: Path):
     current_hash = sha256(SOURCE)
-    if not INDEX.exists() or not META.exists() or json.loads(META.read_text(encoding="utf-8")).get("source_sha256") != current_hash:
+    old_meta = json.loads(META.read_text(encoding="utf-8")) if META.exists() else {}
+    if not INDEX.exists() or not ARTICLE_INDEX.exists() or old_meta.get("source_sha256") != current_hash or old_meta.get("index_schema_version") != 2:
         build()
     headings = {x["anchor"]: x for x in map(json.loads, INDEX.read_text(encoding="utf-8").splitlines())}
     articles = {x["anchor"]: x for x in map(json.loads, ARTICLE_INDEX.read_text(encoding="utf-8").splitlines())}
@@ -311,13 +323,24 @@ def make_plan(workbook: Path, out: Path):
         anchor = (r["workbook_html_anchor"] or "").lstrip("#")
         node = headings.get(anchor) or articles.get(anchor)
         broad = repeat_count[anchor] > 1
+        pointers = node.get("registry_pointers", []) if node else []
+        if node is None:
+            confidence = "unmatched"
+        elif pointers:
+            confidence = "exact_anchor_registry_pointer_manual_review"
+        elif broad:
+            confidence = "exact_broad_heading_review_subtopic"
+        else:
+            confidence = "exact_unique_heading"
         mapping.append({
             **r,
             "match_status": "exact_html_id" if node else "unmatched",
-            "mapping_confidence": "exact_broad_heading_review_subtopic" if node and broad else ("exact_unique_heading" if node else "unmatched"),
+            "mapping_confidence": confidence,
             "html_anchor": anchor,
             "html_heading": node.get("heading", node.get("title")) if node else None,
             "excerpt": node.get("excerpt") if node else None,
+            "excerpt_method": node.get("excerpt_method") if node else None,
+            "registry_pointers": pointers,
             "source_provenance": {
                 "html_file": SOURCE.name,
                 "html_sha256": current_hash,
@@ -336,6 +359,7 @@ def make_plan(workbook: Path, out: Path):
         "total": len(mapping),
         "unmatched_ids": [r["topic_id"] for r in mapping if r["match_status"] == "unmatched"],
         "reused_anchors": {k: v for k, v in repeat_count.items() if v > 1},
+        "registry_pointer_ids": [r["topic_id"] for r in mapping if r["registry_pointers"]],
         "topics": mapping,
     }
     target = out / "topics-001-156-source-map.json"
