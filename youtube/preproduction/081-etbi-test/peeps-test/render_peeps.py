@@ -5,7 +5,7 @@ from PIL import Image
 import imageio_ffmpeg
 sys.path.insert(0, ".")
 from engine import W, H, T, papier, PFADGRAU
-from folien import FOLIEN
+from folien_peeps import FOLIEN
 
 FPS = 30
 DUR = {"rise": 10, "pop": 12, "fade": 10, "cut": 1}
@@ -36,7 +36,7 @@ for f in FOLIEN:
         genutzt.add(e.cue if isinstance(e.cue, str) else e.cue[0])
     f["start"] = min(e.t0 for e in f["els"])
 fehl = set(cues) - genutzt
-assert not fehl, f"Marken ohne Bildelement: {fehl}"
+pass  # Testfolien decken absichtlich nur einen Teil der Marken ab
 for a, b in zip(FOLIEN, FOLIEN[1:]):
     assert b["start"] > a["start"]
     for e in a["els"]:
@@ -124,23 +124,23 @@ if nur_vorschau:
     for fi, f in enumerate(FOLIEN):
         tend = (FOLIEN[fi + 1]["start"] - (OUT + 2) / FPS) if fi + 1 < len(FOLIEN) else dauer - 0.1
         im, _ = frame(tend)
-        im.convert("RGB").save(f"../frames/folie_{fi+1:02d}.png"); bilder.append(im.convert("RGB"))
+        im.convert("RGB").save(f"../peeps_folie_{fi+1:02d}.png"); bilder.append(im.convert("RGB"))
     tw, th, cols = 640, 360, 3
     rows = (len(bilder) + cols - 1) // cols
     sheet = Image.new("RGB", (cols * tw, rows * th), (255, 255, 255))
     for i, b in enumerate(bilder):
         sheet.paste(b.resize((tw, th)), ((i % cols) * tw, (i // cols) * th))
-    sheet.save("../kontaktbogen.png")
+    sheet.save("../peeps_kontakt.png")
     print("Vorschau:", len(bilder), "Folien", [round(f["start"], 2) for f in FOLIEN])
     sys.exit()
 
 ff = imageio_ffmpeg.get_ffmpeg_exe()
 cmd = [ff, "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-       "-i", "../stimme_48k.wav", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+       "-t", "29.4", "-i", "../stimme_48k.wav", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
        "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
-       "-movflags", "+faststart", "-shortest", "../ETBI-v2.mp4"]
+       "-movflags", "+faststart", "-shortest", "../ETBI-Peeps-Fallszene.mp4"]
 p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-n = int(round(dauer * FPS))
+n = int(round(29.4 * FPS))
 letzt = None
 for fr in range(n):
     im, stat = frame(fr / FPS)

@@ -56,27 +56,32 @@ def mit_alpha(im, a):
     im.putalpha(im.getchannel("A").point(lambda v: int(v * a)))
     return im
 
+def setze(base, sp, x, y):
+    """alpha_composite, das auch links/oben über den Bildrand ragende Sprites korrekt beschneidet."""
+    x, y = int(x), int(y)
+    if x < 0 or y < 0:
+        sp = sp.crop((max(0, -x), max(0, -y), sp.width, sp.height)); x, y = max(0, x), max(0, y)
+    base.alpha_composite(sp, (x, y))
+
 def zeichne(base, e, t):
     k = (t - e.t0) * FPS
     n = DUR[e.anim]
     if k >= n:
-        base.alpha_composite(e.sprite, (max(0, e.x), max(0, e.y)))
+        setze(base, e.sprite, e.x, e.y)
         return
     x = k / n
     if e.anim == "rise":
         dy = int((1 - ease(x)) * 26)
-        base.alpha_composite(mit_alpha(e.sprite, ease(x)), (e.x, e.y + dy))
+        setze(base, mit_alpha(e.sprite, ease(x)), e.x, e.y + dy)
     elif e.anim in ("fade", "cut"):
-        base.alpha_composite(mit_alpha(e.sprite, ease(x)), (max(0, e.x), max(0, e.y)))
+        setze(base, mit_alpha(e.sprite, ease(x)), e.x, e.y)
     else:  # pop
         s = max(0.05, 0.55 + 0.45 * back(x))
         w, h = max(1, int(e.sprite.width * s)), max(1, int(e.sprite.height * s))
         sp = mit_alpha(e.sprite.resize((w, h), Image.BILINEAR), min(1, x * 2.2))
         cx, cy = e.x + e.sprite.width / 2, e.y + e.sprite.height / 2
         px, py = int(cx - w / 2), int(cy - h / 2)
-        if px < 0 or py < 0:
-            sp = sp.crop((max(0, -px), max(0, -py), w, h)); px, py = max(0, px), max(0, py)
-        base.alpha_composite(sp, (px, py))
+        setze(base, sp, px, py)
 
 cache = {}
 def folienbild(fi, t):

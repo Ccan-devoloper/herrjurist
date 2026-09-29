@@ -99,11 +99,12 @@ def kreis_emoji(name, cx, cy, r, cue, d=0.0):
     im.alpha_composite(e, (r - e.width // 2, r - e.height // 2))
     return El(im, cx - r, cy - r, cue, "pop", d, name="kreis:" + name)
 
-def wolke(w, h, inhalt, cue, cx, cy, schwanz=None, d=0.0, textsize=46, emoji=None, emoji_size=90):
-    """Denkwolke mit dunkler Kontur (wie Referenz). schwanz = (dx, dy) Richtung zur denkenden Figur."""
+def wolke(w, h, inhalt, cue, cx, cy, schwanz=None, d=0.0, textsize=46, emoji=None, emoji_size=90, ziel=None, bis=None):
+    """Denkwolke mit dunkler Kontur (wie Referenz). schwanz = (dx, dy) Richtung zur denkenden Figur;
+    ziel = (x, y) absoluter Bildpunkt (Kopf), zu dem die Gedankenblasen führen."""
     s = 2
-    pad = 60
-    CW, CH = (w + 2 * pad) * s, (h + 2 * pad + 160) * s
+    pad = 190 if ziel else 60
+    CW, CH = (w + 2 * pad) * s, (h + 2 * pad + (0 if ziel else 160)) * s
     mask = Image.new("L", (CW, CH), 0)
     md = ImageDraw.Draw(mask)
     ox, oy = pad * s, pad * s
@@ -123,6 +124,14 @@ def wolke(w, h, inhalt, cue, cx, cy, schwanz=None, d=0.0, textsize=46, emoji=Non
             cxk = bx + dx * s * (0.10 + 0.13 * j); cyk = by + (30 + 38 * j) * s
             kreise.append((cxk, cyk, rr * s))
             md.ellipse((cxk - rr * s, cyk - rr * s, cxk + rr * s, cyk + rr * s), fill=255)
+    if ziel:
+        ux, uy = ziel[0] - cx, ziel[1] - cy
+        ln = math.hypot(ux, uy); ux, uy = ux / ln, uy / ln
+        # Austrittspunkt am Wolkenrand, dann drei kleiner werdende Blasen Richtung Kopf
+        ex, ey = w / 2 + ux * w * 0.47, h / 2 + uy * h * 0.47
+        for dist, rr in ((34, 22), (78, 15), (112, 9)):
+            px, py = ox + (ex + ux * dist) * s, oy + (ey + uy * dist) * s
+            md.ellipse((px - rr * s, py - rr * s, px + rr * s, py + rr * s), fill=255)
     rand = mask.filter(ImageFilter.MaxFilter(11))
     im = Image.new("RGBA", (CW, CH))
     im.paste(Image.new("RGBA", (CW, CH), INK), (0, 0), rand)
@@ -143,7 +152,7 @@ def wolke(w, h, inhalt, cue, cx, cy, schwanz=None, d=0.0, textsize=46, emoji=Non
         assert bb[2] - bb[0] <= w * 0.86, f"Wolkentext zu breit: {z}"
         dr.text((pad + w / 2 - (bb[2] - bb[0]) / 2 - bb[0], y0 - bb[1] + (lh - (bb[3] - bb[1])) / 2), z, font=f, fill=INK)
         y0 += lh
-    return El(im, cx - pad - w / 2, cy - pad - h / 2, cue, "pop", d, name="wolke:" + "/".join(zeilen))
+    return El(im, cx - pad - w / 2, cy - pad - h / 2, cue, "pop", d, bis, name="wolke:" + "/".join(zeilen))
 
 def pfeil(x1, y1, x2, y2, cue, breite=12, kopf=34, farbe=INK, d=0.0, anim="fade", bis=None):
     s = 3
@@ -228,3 +237,17 @@ def richtext(zeilen_tokens, cx, y, size, cue, hl_cues, farbe=WEISS, hl=GELB, lh=
     for key, oim in ov.items():
         els.append(El(oim, x0, y, hl_cues[key], "fade", 0.0, name="hl:" + key))
     return els
+
+
+_bc = {}
+def bild(pfad, cx, unten, hoehe, cue, anim="pop", d=0.0, bis=None, oben=1.0):
+    """Freigestellte PNG-Figur, unten mittig auf (cx, unten) gestellt. oben < 1 = nur oberer Anteil (Brustbild)."""
+    if (pfad, oben) not in _bc:
+        im = Image.open(pfad).convert("RGBA")
+        if oben < 1:
+            im = im.crop((0, 0, im.width, int(im.height * oben)))
+            im = im.crop(im.getbbox())
+        _bc[(pfad, oben)] = im
+    im = _bc[(pfad, oben)]
+    im = im.resize((int(im.width * hoehe / im.height), hoehe), Image.LANCZOS)
+    return El(im, cx - im.width / 2, unten - hoehe, cue, anim, d, bis, name="bild:" + pfad.split("/")[-1])
