@@ -1,0 +1,105 @@
+name: YouTube 15 - Fortsetzung Audio
+
+# Isolierter Produktionslauf: keine Veröffentlichung, keine Binärdateien in Git.
+# Nutzt nur vorhandenes ElevenLabs-Kontingent; keine automatische Mehrnutzung.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/youtube-15-continuation-audio.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: youtube-15-continuation-audio
+  cancel-in-progress: false
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            youtube/preproduction/15
+            youtube/MASTERSTANDARD-09.md
+            youtube/VIDEOLEITLINIEN-16x9.md
+            youtube/ABNAHME-16x9.md
+            assets/charaktere
+            assets/referenzen
+          sparse-checkout-cone-mode: false
+      - name: Vorhandene Stimmen und Kontingent prüfen, Folge 15 sprechen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: python
+        run: |
+          import os, re, json, pathlib, hashlib, urllib.request, urllib.error, base64, shutil, datetime
+          out = pathlib.Path('youtube15-output')
+          out.mkdir(exist_ok=True)
+          audit = {'episode': 15, 'created_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'status': 'STARTED', 'release_approved': False, 'binary_destination': 'Google Drive after review', 'automatic_overage': False}
+          def save():
+              (out / 'audio-status.json').write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding='utf-8')
+          key = os.environ.get('ELEVENLABS_API_KEY', '')
+          script_path = pathlib.Path('youtube/preproduction/15/sprechertext.md')
+          text = script_path.read_text(encoding='utf-8')
+          audit['script_sha256'] = hashlib.sha256(script_path.read_bytes()).hexdigest()
+          shutil.copytree('youtube/preproduction/15', out / 'redaktion', dirs_exist_ok=True)
+          for dirname in ['assets/charaktere', 'assets/referenzen']:
+              if pathlib.Path(dirname).is_dir():
+                  shutil.copytree(dirname, out / dirname, dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.ttf','*.otf','*.woff','*.woff2','*.mp4','*.zip'))
+          if not key:
+              audit['status'] = 'BLOCKED_MISSING_TTS_CREDENTIAL'; save(); print('ElevenLabs-Ausgabepfad fehlt; keine Sprachausgabe erzeugt.'); raise SystemExit(0)
+          role_map = {'Erzähler':'narrator','Mara':'mara','Rex':'rex','Zylla':'zylla'}
+          lines = [{'role': role_map[m.group(1)], 'text': m.group(2).strip()} for m in re.finditer(r'^\*\*(Erzähler|Mara|Rex|Zylla):\*\*\s*(.*?)(?=\n\n|\Z)', text, re.M|re.S)]
+          if len(lines) < 10: raise RuntimeError('Sprechertext unvollständig eingelesen.')
+          need = sum(len(x['text']) for x in lines)
+          audit['input_characters'] = need
+          def request(route, body=None):
+              data = None if body is None else json.dumps(body, ensure_ascii=False).encode('utf-8')
+              req = urllib.request.Request('https://api.elevenlabs.io/v1/' + route, data=data, headers={'xi-api-key':key,'Content-Type':'application/json','User-Agent':'Herrjurist-production/1.0'})
+              with urllib.request.urlopen(req, timeout=180) as response: return json.load(response)
+          try:
+              sub = request('user/subscription')
+          except urllib.error.HTTPError as e:
+              audit['status'] = 'BLOCKED_QUOTA_READ_HTTP_' + str(e.code); save(); print(audit['status']); raise SystemExit(0)
+          remaining = max(0, int(sub.get('character_limit', 0)) - int(sub.get('character_count', 0)))
+          audit['included_characters_remaining_before'] = remaining
+          audit['subscription_tier'] = sub.get('tier')
+          if str(sub.get('tier','')).lower() == 'free':
+              audit['status'] = 'BLOCKED_COMMERCIAL_VOICE_RIGHTS_REVIEW'; save(); print(audit['status']); raise SystemExit(0)
+          if remaining < need + 200:
+              audit['status'] = 'BLOCKED_INCLUDED_QUOTA'; save(); print('Enthaltenes Kontingent reicht nicht; keine automatische Mehrnutzung.'); raise SystemExit(0)
+          voices = {
+            'narrator': {'id':'PhufIH7nYh2Up1uej6aY','model':'eleven_multilingual_v2','settings':{'stability':0.42,'similarity_boost':0.82,'style':0.38,'use_speaker_boost':True,'speed':1.08}},
+            'mara': {'id':'VU8IqX1jR115XHqBQttd','model':'eleven_multilingual_v2','settings':{'stability':0.45,'similarity_boost':0.82,'style':0.35,'use_speaker_boost':True,'speed':1.0}},
+            'rex': {'id':'TX3LPaxmHKxFdv7VOQHJ','model':'eleven_multilingual_v2','settings':{'stability':0.39,'similarity_boost':0.80,'style':0.48,'use_speaker_boost':True,'speed':1.04}},
+            'zylla': {'id':'xLCJR8xcZX2YjImGFyGw','model':'eleven_v3','settings':{'stability':0.5,'similarity_boost':0.78,'style':0.58,'use_speaker_boost':True,'speed':1.0}}
+          }
+          audio = out / 'audio'; audio.mkdir(exist_ok=True)
+          audit['segments'] = []
+          audit['status'] = 'GENERATING'; save()
+          for i, line in enumerate(lines, 1):
+              voice = voices[line['role']]
+              name = '%02d-%s' % (i, line['role'])
+              try:
+                  result = request('text-to-speech/' + voice['id'] + '/with-timestamps?output_format=mp3_44100_128', {'text':line['text'],'model_id':voice['model'],'language_code':'de','voice_settings':voice['settings']})
+              except urllib.error.HTTPError as e:
+                  audit['status'] = 'STOPPED_TTS_HTTP_' + str(e.code); save(); print(audit['status']); raise SystemExit(0)
+              data = base64.b64decode(result['audio_base64'])
+              (audio / (name + '.mp3')).write_bytes(data)
+              meta = {**line,'voiceId':voice['id'],'model':voice['model'],'voice_settings':voice['settings'],'alignment':result.get('alignment') or result.get('normalized_alignment'),'sha256':hashlib.sha256(data).hexdigest()}
+              (audio / (name + '.json')).write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding='utf-8')
+              audit['segments'].append({'file':name+'.mp3','role':line['role'],'characters':len(line['text']),'sha256':meta['sha256']})
+              save(); print(name + ' erzeugt')
+          audit['status'] = 'AUDIO_GENERATED_NOT_REVIEWED'; save()
+          print('Audio erzeugt. Hörprüfung, Bildproduktion und Endabnahme stehen noch aus.')
+      - name: Produktionsausgabe sichern (nicht in Git)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: youtube-15-continuation-audio
+          path: youtube15-output/
+          retention-days: 7
+          if-no-files-found: error
