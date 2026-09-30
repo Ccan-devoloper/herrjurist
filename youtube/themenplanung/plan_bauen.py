@@ -17,9 +17,14 @@ STREICHEN = {  # Dubletten über Rechtsgebiete hinweg (die breitere bzw. examens
     "Gutachtenstil statt Urteilsstil: So holst du Punkte in der Klausur",
     "Gutachtenstil vs. Urteilsstil: Wann welcher Stil?",
     "Einstweilige Anordnung § 123 VwGO: Anspruch, Grund, Vorwegnahme",
+    # beim Abgleich der Suchbegriffe gefunden (gleiches Thema im 1. Examen vorhanden)
+    "Einstellung gegen Geldauflage: So funktioniert § 153a StPO",
+    "Strafbefehl im Briefkasten: Verfahren, Einspruch, Risiko",
+    "Gestrecktes Verfahren: Androhung, Festsetzung, Anwendung",
+    "Bau-Turbo § 246e BauGB: Das neue Baurecht in der Akte",
 }
 A = [x for x in A if x["titel"] not in STREICHEN]
-assert len(STREICHEN) == 11
+assert len(STREICHEN) == 15
 
 GEBIET = {"zivil": "Zivilrecht", "oeff": "Öffentliches Recht", "straf": "Strafrecht", "examen2": "2. Examen", "methodik": "Methodik"}
 QUOTE = {"zivil": 235, "straf": 215, "oeff": 190, "examen2": 105, "methodik": 35}
@@ -96,6 +101,7 @@ GRUNDSTOCK = [
     # Strafrecht
     "Straftat prüfen in 3 Schritten: Tatbestand, Rechtswidrigkeit, Schuld",
     "Strafrecht AT im Überblick: Welches Prüfungsschema wann?",
+    "Kausalität einfach erklärt: die conditio-sine-qua-non-Formel",
     "Absicht, Wissen, Eventualvorsatz: Die drei Vorsatzformen",
     "Notwehr § 32: Das Prüfungsschema",
     "Tötungs- und Körperverletzungsdelikte im Überblick: §§ 211–229 StGB",
@@ -230,17 +236,27 @@ for q, n in QUOTE.items():
 # Lernsuche-Themen spätestens in Jahr 2: gegen das schwächste Jahr-2-Thema desselben Gebiets tauschen,
 # das keine Grundlage eines anderen Themas ist
 alle_vor = {v for x in auswahl for v in x["_vor"]}
-for t in LERNSUCHE:
+
+
+def vorziehen(t, ziel=2):
+    """Thema t (samt seinen Voraussetzungen) spätestens in Jahr ziel; Tausch mit dem schwächsten freien Thema."""
     x = titel_idx[t]
-    if x["jahr"] <= 2:
-        continue
+    for v in x["_vor"]:
+        if v in eff:
+            vorziehen(v, ziel)
+    if x["jahr"] <= ziel:
+        return
     q = x["_q"]
-    kand = [y for y in jahr_pools[2][q] if y["titel"] not in LERNSUCHE and y["titel"] not in GR and y["titel"] not in alle_vor]
+    kand = [y for y in jahr_pools[ziel][q] if y["titel"] not in PFLICHT and y["titel"] not in GR and y["titel"] not in alle_vor]
     y = min(kand, key=lambda y: y["eff"])
-    jahr_pools[x["jahr"]][q].remove(x); jahr_pools[2][q].remove(y)
-    jahr_pools[2][q].append(x); jahr_pools[x["jahr"]][q].append(y)
-    y["jahr"], x["jahr"] = x["jahr"], 2
+    jahr_pools[x["jahr"]][q].remove(x); jahr_pools[ziel][q].remove(y)
+    jahr_pools[ziel][q].append(x); jahr_pools[x["jahr"]][q].append(y)
+    y["jahr"], x["jahr"] = x["jahr"], ziel
     x["eff"], y["eff"] = max(x["eff"], y["eff"]), min(x["eff"], y["eff"])
+
+
+for t in PFLICHT:                              # Pflicht- und Lernsuche-Themen spätestens in Jahr 2
+    vorziehen(t)
 
 FALL = {"Klassiker-Fall", "Alltagsfall"}
 PRAXIS = {"Klausurfehler", "Abgrenzung", "Streitstand"}
