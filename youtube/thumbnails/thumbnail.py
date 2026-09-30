@@ -395,7 +395,7 @@ def pruefen(spec):
     if len([w for w in worte if w not in ("§", "=", "VS.", "&")]) > 4: hinweise.append(f"{k}: mehr als 4 Wörter")
     for z in text:
         if len(z.replace("*", "")) > 16: hinweise.append(f"{k}: Zeile '{z}' länger als 16 Zeichen")
-        ohne_norm = re.sub(r"(\d)[a-z]\b", r"\1", z.replace("*", ""))      # "§ 91a" ist erlaubt
+        ohne_norm = re.sub(r"(\d)[a-z]\b", r"\1", z.replace("*", "")).replace("ß", "")   # "§ 91a" und ß erlaubt
         if ohne_norm != ohne_norm.upper(): hinweise.append(f"{k}: Zeile '{z}' nicht in Großbuchstaben")
     if spec.get("typ") == "lern" and spec.get("karte") not in KARTE:
         fehler.append(f"{k}: karte muss eine von {', '.join(KARTE)} sein")

@@ -31,7 +31,8 @@ KOPF = {"w": ["Long", "Long Curly", "Bun", "Medium Straight", "Long Bangs", "Ban
               "Medium Bangs", "Medium Bangs 2", "Medium 1", "Medium 2", "Cornrows 2", "Hijab"],
         "m": ["Short 1", "Short 2", "Short 3", "Short 4", "Short 5", "Pomp", "Shaved 1", "Shaved 2", "Twists",
               "Flat Top", "Afro", "Dreads 1", "Short 4_2", "No Hair 1", "Turban"],
-        "w_alt": ["Gray Bun", "Gray Medium"], "m_alt": ["Gray Short", "No Hair 2", "No Hair 3"]}
+        "w_alt": ["Gray Bun", "Gray Medium", "Bangs"], "m_alt": ["Short 4_2", "No Hair 2", "No Hair 3"]}   # Haar grau gefärbt
+GRAU = "#C9C9C9"
 BART = ["Full", "Goatee 1", "Moustache 1", "Chin", None, None, None]
 HAUT = ["#F1C6A5", "#E9BE98", "#D9A07A", "#C58E64", "#B07552", "#8D5A3B"]
 OBERTEIL = ["#9BD88A", "#7FB2F0", "#F28C6B", "#F9D56E", "#B784D1", "#F6A5C0", "#9FD8E5", "#FFCF77"]
@@ -71,6 +72,7 @@ def figur(nr, i, r, belegt):
     else:
         pose = ["standing/shirt-1", "standing/blazer-3", "standing/easing-1"][_zahl(nr, i, "a") % 3]
     farben = {"Skin": haut, "Top": DUNKEL if anzug else farbe}
+    if r.get("alt"): farben["Hair"] = GRAU
     if pose.startswith("standing/blazer"):
         farben["Jacket"] = DUNKEL if anzug else farbe
         farben["Pants"] = DUNKEL
@@ -112,6 +114,10 @@ def spezifikation(e, z):
     nr = e["nr"]; belegt = set()
     s = {"k": f"{nr:03d}", "typ": e["typ"], "gebiet": z["Gebiet"], "titel": z["YouTube-Titel"], "text": e["text"],
          "figuren": [figur(nr, i, r, belegt) for i, r in enumerate(e["figuren"])]}
+    # Wer etwas hält, steht links außen: der Gegenstand zeigt dann in den freien Raum statt über die andere Figur
+    halter = [f for f in s["figuren"] if f.get("haelt") and f["haelt"]["hand"] == "links"]
+    if len(s["figuren"]) > 1 and len(halter) == 1:
+        s["figuren"] = [f for f in s["figuren"] if f is not halter[0]] + halter
     if e["typ"] == "lern": s["karte"] = e.get("karte")
     m = motiv(e.get("motiv"), e["typ"])
     if m: s["motiv"] = m
