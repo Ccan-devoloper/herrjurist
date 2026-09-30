@@ -23,11 +23,24 @@ for x in P:
     x["suchbegriff"], x["youtube_titel"], x["beschreibung"], x["thumbnail_text"] = s["suchbegriff"], s["youtube_titel"], s["beschreibung"], s["thumbnail_text"]
     x["tags"] = " | ".join(s["tags"])                  # Tags können Kommas enthalten (BGHSt 35, 347)
     x["playlists"] = " | ".join(([EINSTEIGER] if x.get("grundstock") else []) + s["playlists"])
+# Thumbnail-Angaben (youtube/THUMBNAILS.md): Text A ersetzt den alten Thumbnail-Text, dazu Variante B und Vorlage
+sys.path.insert(0, "../thumbnails")
+from thumbnail import verbinden
+TH = {}
+for f in sorted(glob.glob("thumbs_*.json")):
+    for t in json.load(open(f)):
+        TH[t["nr"]] = t
+lesbar = lambda zeilen: verbinden(zeilen).replace("*", "")
+for x in P:
+    t = TH.get(x["nr"])
+    if t:
+        x["thumbnail_text"], x["thumbnail_b"] = lesbar(t["text"]), lesbar(t["b"]) if t.get("b") else ""
+        x["thumbnail_vorlage"] = "Fall" if t["typ"] == "fall" else f"Lern · {t['karte']}"
 SP = ["nr", "jahr", "woche", "woche_im_jahr", "tag", "reihe", "gebiet", "teilgebiet", "youtube_titel", "suchbegriff", "titel",
-      "thumbnail_text", "beschreibung", "tags", "playlists", "hook", "kernfrage", "normen",
+      "thumbnail_text", "thumbnail_b", "thumbnail_vorlage", "beschreibung", "tags", "playlists", "hook", "kernfrage", "normen",
       "leitentscheidung", "examen", "format", "relevanz", "breite", "klassiker", "score", "voraussetzung", "fundstelle", "rechtsstand"]
 KOPF = ["Nr.", "Jahr", "Woche", "Woche im Jahr", "Tag", "Reihe", "Gebiet", "Teilgebiet", "YouTube-Titel", "Suchbegriff", "Arbeitstitel",
-        "Thumbnail-Text", "Beschreibung (Anfang)", "Tags", "Playlists", "Einstieg (Hook)", "Kernfrage",
+        "Thumbnail-Text", "Thumbnail B", "Thumbnail-Vorlage", "Beschreibung (Anfang)", "Tags", "Playlists", "Einstieg (Hook)", "Kernfrage",
         "Normen", "Leitentscheidung", "Examen", "Format", "Relevanz (1–5)", "Breite (1–5)", "Klassiker", "Punkte",
         "Voraussetzung", "Fundstelle im Repetitorium", "Rechtsstand/Länder"]
 
@@ -42,7 +55,7 @@ def csv_schreiben(pfad, zeilen, spalten):
 
 csv_schreiben(f"{ZIEL_DIR}/themenplan-780.csv", P, SP)
 RSP = [s for s in SP if s not in ("nr", "jahr", "woche", "woche_im_jahr", "tag", "reihe", "youtube_titel", "suchbegriff",
-                                  "thumbnail_text", "beschreibung", "tags", "playlists")]
+                                  "thumbnail_text", "thumbnail_b", "thumbnail_vorlage", "beschreibung", "tags", "playlists")]
 csv_schreiben(f"{ZIEL_DIR}/themenreserve.csv", R, RSP)
 
 # --- Excel ------------------------------------------------------------------------------------------------------------------
@@ -67,7 +80,7 @@ def blatt(ws, zeilen, spalten, breiten):
 
 ws = wb.active; ws.title = "Plan 780"
 BR = {"nr": 6, "jahr": 6, "woche": 7, "woche_im_jahr": 8, "tag": 5, "reihe": 14, "gebiet": 16, "teilgebiet": 18, "titel": 45,
-      "youtube_titel": 55, "suchbegriff": 24, "thumbnail_text": 18, "beschreibung": 50, "tags": 45, "playlists": 40,
+      "youtube_titel": 55, "suchbegriff": 24, "thumbnail_text": 18, "thumbnail_b": 18, "thumbnail_vorlage": 16, "beschreibung": 50, "tags": 45, "playlists": 40,
       "hook": 55, "kernfrage": 50, "normen": 22, "leitentscheidung": 26, "examen": 7, "format": 14, "relevanz": 9, "breite": 9,
       "klassiker": 9, "score": 7, "voraussetzung": 40, "fundstelle": 35, "rechtsstand": 40}
 blatt(ws, P, SP, [BR[s] for s in SP])
@@ -166,7 +179,7 @@ a("  - **Examenswissen und Klausurpraxis:** Der Suchbegriff steht vorn, dazu die
 a("  - **Der Fall:** Der Aufhänger bleibt, der Fachbegriff steht mit im Titel, etwa „Raser-Fall: Mord mit dem Auto? Vorsatz & Mordmerkmale“.")
 a("- **Beschreibung (die ersten zwei Zeilen):** Suchbegriff, Norm und die beantwortete Frage. Diese Zeilen zeigt YouTube in der Suche und Google im Snippet.")
 a("- **Tags:** Normen, Synonyme und Abkürzungen (ETBI, VU, a.l.i.c.) sowie das Rechtsgebiet.")
-a("- **Thumbnail-Text:** 2–4 Wörter in großer Schrift, bei Schemata mit Norm (z. B. „§ 224 SCHEMA“).")
+a("- **Thumbnail-Text:** 2–4 Wörter in großer Schrift; bei Lernvideos Thema oder Norm (z. B. „§ 224 STGB“), die Videoart steht als Kartenkopf („SCHEMA“) daneben. Gestaltung und Generator: [THUMBNAILS.md](THUMBNAILS.md).")
 a("- **Playlists:** Sie tragen genau die Namen, nach denen gesucht wird, etwa „Strafrecht AT“, „Strafrecht BT: Vermögensdelikte“, „Prüfungsschemata Strafrecht“, „Verwaltungsprozessrecht (VwGO)“ oder „2. Examen: Zwangsvollstreckung“. Wer „Strafrecht AT“ sucht, landet in der Playlist und beim Überblicksvideo als erster Folge.\n")
 a("Für jede fertige Folge erzeugt [`tools/youtube_metadaten.py`](../tools/youtube_metadaten.py) aus Sprachaufnahme, Renderer und Themenplan automatisch die Upload-Dateien (Beispiel: [Katzenkönig-Test](../preproduction/katzenkoenig-test/youtube/)):\n")
 a("- **Kapitelmarken** (`kapitel.txt`): Der Renderer schreibt jeden Wechsel des Prüfpfads unten links mit (`kapitel.json`). Daraus entstehen Kapitel aus den oberen zwei Pfadebenen, etwa „A. Richard: Versuchter Mord“, nach YouTube-Regeln: erstes bei 0:00, jedes mindestens 10 Sekunden, Intro eingerechnet. YouTube zeigt Kapitel in der Suche an, Google als „Wichtige Momente“; Lernende springen direkt zum Prüfungspunkt.")
@@ -197,7 +210,7 @@ for w in range(1, 13):
     a(f"| {w} | " + " | ".join(md(z[t]["youtube_titel"]) + f" <sub>{z[t]['gebiet']}</sub>" for t in ("Mo", "Mi", "Fr")) + " |")
 a("")
 a("## Alle 780 Folgen\n")
-a("Spalten: Nr., Woche (fortlaufend), Tag, Gebiet, YouTube-Titel, Suchbegriff, Leitentscheidung. Arbeitstitel, Einstieg, Kernfrage, Normen, Tags, Beschreibung, Thumbnail-Text, Playlists, Bewertung, Voraussetzung und Fundstelle stehen in der CSV bzw. Excel-Datei.\n")
+a("Spalten: Nr., Woche (fortlaufend), Tag, Gebiet, YouTube-Titel, Suchbegriff, Leitentscheidung. Arbeitstitel, Einstieg, Kernfrage, Normen, Tags, Beschreibung, Thumbnail-Text (A und B, Vorlage), Playlists, Bewertung, Voraussetzung und Fundstelle stehen in der CSV bzw. Excel-Datei.\n")
 for j in range(1, 6):
     a(f"### Jahr {j}\n")
     a("| Nr. | Wo. | Tag | Gebiet | YouTube-Titel | Suchbegriff | Leitentscheidung |")
