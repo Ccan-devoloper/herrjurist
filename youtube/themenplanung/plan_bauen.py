@@ -32,6 +32,8 @@ def score(x):
     s += 0.5 if x["_q"] == "straf" else 0          # höchstes Suchinteresse (Jurafuchs-Studie, siehe Recherche)
     if x["format"] == "Schema" and x["relevanz"] == 5:
         s += 3.0                                  # Kernschemata: dauerhafte Suchnachfrage und Grundlage der Fallvideos
+    elif x["format"] == "Schema" and x["relevanz"] == 4:
+        s += 1.5                                  # Lernsuche ("… Schema") hängt nicht am Alltagsbezug
     return round(s, 2)
 
 
@@ -93,9 +95,13 @@ GRUNDSTOCK = [
     "Prüfungsschemata lernen – aber richtig",
     # Strafrecht
     "Straftat prüfen in 3 Schritten: Tatbestand, Rechtswidrigkeit, Schuld",
+    "Strafrecht AT im Überblick: Welches Prüfungsschema wann?",
     "Absicht, Wissen, Eventualvorsatz: Die drei Vorsatzformen",
     "Notwehr § 32: Das Prüfungsschema",
+    "Tötungs- und Körperverletzungsdelikte im Überblick: §§ 211–229 StGB",
     "Körperverletzung § 223: Ohrfeige, Haare ab, Spucke",
+    "Gefährliche Körperverletzung § 224 StGB: Das Prüfungsschema",
+    "Vermögensdelikte im Überblick: Diebstahl, Betrug, Raub, Erpressung",
     "Diebstahl § 242: Das Prüfungsschema",
     "Einwilligung: Wann ist eine Körperverletzung erlaubt?",
     "Betrug § 263: Das Prüfungsschema",
@@ -107,8 +113,10 @@ GRUNDSTOCK = [
     "Rücktritt vom Versuch: Das Schema des § 24",
     "Mittäterschaft § 25 II: Gemeinsam geplant, gemeinsam verantwortlich",
     # Öffentliches Recht
+    "Grundrechte im Überblick: Freiheitsrechte, Gleichheitsrechte, Prüfung",
     "Grundrechtsprüfung: Schutzbereich, Eingriff, Rechtfertigung",
     "Verhältnismäßigkeit: Der wichtigste Prüfungspunkt im Öffentlichen Recht",
+    "Verfahren vor dem BVerfG im Überblick: Welches Verfahren wann?",
     "Verfassungsbeschwerde: Das Prüfungsschema in sechs Minuten",
     "Was ist ein Verwaltungsakt? § 35 VwVfG in sechs Minuten",
     "Welche Klage passt? Die Klagearten der VwGO im Überblick",
@@ -116,9 +124,11 @@ GRUNDSTOCK = [
     "Ermessen und Ermessensfehler: Was darf das Gericht kontrollieren?",
     "Polizeirecht-Schema: Standardmaßnahme vor Generalklausel",
     "Verpflichtungsklage: Spruchreife und Bescheidungsurteil",
+    "Gesetzgebungskompetenz: Bund oder Land? Art. 70 ff. GG",
     "Wie ein Bundesgesetz entsteht: Formelle Verfassungsmäßigkeit prüfen",
     "Eilrechtsschutz nach § 80 V VwGO: Das Grundschema",
     # Zivilrecht
+    "BGB AT im Überblick: Vom Vertragsschluss bis zur Anfechtung",
     "Trennungs- und Abstraktionsprinzip: Warum ein Kauf drei Verträge braucht",
     "Angebot und Annahme: Wann ist ein Vertrag wirklich geschlossen?",
     "Zugang unter Abwesenden: Wann ist der Brief „angekommen“?",
@@ -129,8 +139,11 @@ GRUNDSTOCK = [
     "Die Käuferrechte des § 437 BGB auf einen Blick",
     "§ 823 I BGB: Das Prüfungsschema der unerlaubten Handlung",
     "Bereicherungsrecht im Überblick: Welche Kondiktion wann?",
+    "Sachenrecht im Überblick: Eigentum an Sachen und Grundstücken",
     "Eigentum übertragen: Einigung und Übergabe nach § 929 S. 1 BGB",
     "Gutgläubiger Erwerb: Eigentum vom Nichteigentümer?",
+    # 2. Examen
+    "Der Zivilprozess im Überblick: Von der Klage bis zur Vollstreckung",
 ]
 PFLICHT = [  # Grundlagen/Alltagsthemen, die unabhängig von der Punktzahl in den Plan gehören (Jahr nach Punktzahl)
     "Kausalität einfach erklärt: die conditio-sine-qua-non-Formel",
@@ -141,6 +154,20 @@ PFLICHT = [  # Grundlagen/Alltagsthemen, die unabhängig von der Punktzahl in de
     "Nach der Anfechtung: Wer zahlt den Vertrauensschaden? (§ 122 BGB)",
     "Sperrwirkung des EBV: Warum der redliche Besitzer nicht aus § 823 haftet",
 ]
+LERNSUCHE = [  # Verfahrensarten und Kernbegriffe, die Studierende gezielt suchen: im Plan und früh (Jahr 1–2)
+    "Schwere Körperverletzung und Todesfolge: §§ 226, 227 StGB",
+    "Freiheitsberaubung im Schlaf: Muss das Opfer es merken?",
+    "Was darf die Prokuristin? Prokura und Handlungsvollmacht",
+    "Schutzgesetzverletzung: Wann hilft § 823 II BGB?",
+    "Abstrakte Normenkontrolle: Opposition gegen Regierungsgesetz",
+    "Konkrete Normenkontrolle: Wenn ein Richter ein Gesetz stoppt",
+    "Bund-Länder-Streit: Wenn Bund und Land vor Gericht ziehen",
+    "Verfahren vor dem EuGH im Überblick: Vorlage, Nichtigkeits- und Vertragsverletzungsklage",
+    "Vorabentscheidung: Wann ein Gericht den EuGH fragen muss",
+    "Nichtigkeitsklage: Können Bürger EU-Gesetze anfechten?",
+    "Vertragsverletzungsverfahren: Wenn Brüssel Deutschland verklagt",
+]
+PFLICHT += LERNSUCHE
 fehlt = [t for t in GRUNDSTOCK + PFLICHT if t not in titel_idx]
 assert not fehlt, fehlt
 for t in GRUNDSTOCK + PFLICHT:
@@ -166,13 +193,21 @@ VORHER = {
     "Explodierende Flasche: Die Produzentenhaftung nach § 823 I BGB": "§ 823 I BGB: Das Prüfungsschema der unerlaubten Handlung",
     "Anfechtung in fünf Schritten: Das Prüfungsschema §§ 119 ff. BGB": "Angebot und Annahme: Wann ist ein Vertrag wirklich geschlossen?",
     "Gutgläubiger Erwerb: Eigentum vom Nichteigentümer?": "Eigentum übertragen: Einigung und Übergabe nach § 929 S. 1 BGB",
+    "Vorabentscheidung: Wann ein Gericht den EuGH fragen muss": "Verfahren vor dem EuGH im Überblick: Vorlage, Nichtigkeits- und Vertragsverletzungsklage",
+    "Nichtigkeitsklage: Können Bürger EU-Gesetze anfechten?": "Verfahren vor dem EuGH im Überblick: Vorlage, Nichtigkeits- und Vertragsverletzungsklage",
+    "Vertragsverletzungsverfahren: Wenn Brüssel Deutschland verklagt": "Verfahren vor dem EuGH im Überblick: Vorlage, Nichtigkeits- und Vertragsverletzungsklage",
+    "Abstrakte Normenkontrolle: Opposition gegen Regierungsgesetz": "Verfahren vor dem BVerfG im Überblick: Welches Verfahren wann?",
+    "Konkrete Normenkontrolle: Wenn ein Richter ein Gesetz stoppt": "Verfahren vor dem BVerfG im Überblick: Welches Verfahren wann?",
+    "Bund-Länder-Streit: Wenn Bund und Land vor Gericht ziehen": "Verfahren vor dem BVerfG im Überblick: Welches Verfahren wann?",
+    "Gefährliche Körperverletzung § 224 StGB: Das Prüfungsschema": "Körperverletzung § 223: Ohrfeige, Haare ab, Spucke",
+    "Schwere Körperverletzung und Todesfolge: §§ 226, 227 StGB": "Gefährliche Körperverletzung § 224 StGB: Das Prüfungsschema",
 }
 for t, v in VORHER.items():
     assert t in titel_idx and (v is None or v in titel_idx), (t, v)
     if v:
         titel_idx[t]["voraussetzung"] = v; titel_idx[t]["_vor"] = [v]; titel_idx[t]["_alle_vor"] = [v]
 for x in auswahl:
-    x["eff"] = 1000 - GR[x["titel"]] if x["titel"] in GR else x["score"]
+    x["eff"] = 1000 - GR[x["titel"]] if x["titel"] in GR else x["score"] + (6 if x["titel"] in LERNSUCHE else 0)
 eff = {x["titel"]: x["eff"] for x in auswahl}
 for _ in range(20):                           # Grundlagen stets vor ihren Folgethemen
     for x in auswahl:
@@ -191,6 +226,21 @@ for q, n in QUOTE.items():
         for x in l[grenzen[j]:grenzen[j + 1]]:
             x["jahr"] = j + 1
             jahr_pools[j + 1][q].append(x)
+
+# Lernsuche-Themen spätestens in Jahr 2: gegen das schwächste Jahr-2-Thema desselben Gebiets tauschen,
+# das keine Grundlage eines anderen Themas ist
+alle_vor = {v for x in auswahl for v in x["_vor"]}
+for t in LERNSUCHE:
+    x = titel_idx[t]
+    if x["jahr"] <= 2:
+        continue
+    q = x["_q"]
+    kand = [y for y in jahr_pools[2][q] if y["titel"] not in LERNSUCHE and y["titel"] not in GR and y["titel"] not in alle_vor]
+    y = min(kand, key=lambda y: y["eff"])
+    jahr_pools[x["jahr"]][q].remove(x); jahr_pools[2][q].remove(y)
+    jahr_pools[2][q].append(x); jahr_pools[x["jahr"]][q].append(y)
+    y["jahr"], x["jahr"] = x["jahr"], 2
+    x["eff"], y["eff"] = max(x["eff"], y["eff"]), min(x["eff"], y["eff"])
 
 FALL = {"Klassiker-Fall", "Alltagsfall"}
 PRAXIS = {"Klausurfehler", "Abgrenzung", "Streitstand"}
@@ -255,7 +305,10 @@ print("aufgelöste Abhängigkeiten im Plan:", sum(v in pos for x in plan for v i
 weich = sum(1 for x in plan for v in x["_alle_vor"] if v in pos and pos[v] > x["nr"])
 hart = sum(v in pos for x in plan for v in x["_vor"])
 print("weiche Empfehlungen (Fallvideo vor Grundlage):", weich)
-json.dump({"hart": hart, "hart_verletzt": len(verletzt), "weich_vorher": weich}, open("stats.json", "w"))
+json.dump({"hart": hart, "hart_verletzt": len(verletzt), "weich_vorher": weich, "grundstock": len(GRUNDSTOCK),
+           "pflicht": len(PFLICHT) - len(LERNSUCHE), "lernsuche": len(LERNSUCHE)}, open("stats.json", "w"))
+for x in plan:
+    x["grundstock"] = x["titel"] in GR
 for x in plan + [y for y in A if y["titel"] not in pos]:
     if x["_alle_vor"]:
         x["voraussetzung"] = " + ".join(x["_alle_vor"])
