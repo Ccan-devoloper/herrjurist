@@ -19,11 +19,14 @@ def folie(pfade, els):
     FOLIEN.append(dict(bg="creme", pfade=pfade, els=els))
 
 
-def peep_voll(name, cx, unten, hoehe, cue, **k):
-    """Stehende Figur – bricht ab, wenn sie nicht vollständig mit Rand im Bild steht."""
+def peep_voll(name, cx, unten, hoehe, cue, unten_offen=False, **k):
+    """Figur einsetzen. Regel: nie links, rechts oder oben angeschnitten (auch keine Büsten am Seitenrand).
+    Unten anschneiden ist erlaubt, wenn es gewollt ist (Nahaufnahme/Büste auf der Bildunterkante): unten_offen=True."""
     e = bild(FIG + name + ".png", cx, unten, hoehe, cue, **k)
-    assert e.x >= RAND and e.y >= RAND and e.x + e.sprite.width <= engine.W - RAND and e.y + e.sprite.height <= engine.H - RAND, \
-        f"Figur {name} ragt aus dem Bild: {e.x},{e.y},{e.sprite.width}x{e.sprite.height}"
+    assert e.x >= RAND and e.y >= RAND and e.x + e.sprite.width <= engine.W - RAND, \
+        f"Figur {name} ist seitlich oder oben angeschnitten: {e.x},{e.y},{e.sprite.width}x{e.sprite.height}"
+    if not unten_offen:
+        assert e.y + e.sprite.height <= engine.H - RAND, f"Figur {name} unten angeschnitten (unten_offen=True setzen, falls gewollt)"
     return e
 
 
