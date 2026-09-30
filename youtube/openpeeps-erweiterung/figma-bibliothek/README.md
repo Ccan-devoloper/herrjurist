@@ -17,3 +17,17 @@
 | `peep-78*` | zwei Beispielfiguren aus der Datei |
 
 **Zusammensetzung:** Die Posen enthalten nur den Hals. Kopf (Frisur mit Kopfform), Gesicht und Bart werden wie in Figma übereinandergelegt, nach der Lage in `a_person/`.
+
+## Figurengenerator `lexpeeps.py`
+
+```python
+from lexpeeps import figur
+bild = figur("standing/robot_dance-1", "Long Curly", "Explaining", bart=None, brille=None,
+             farben={"Top": "#B8A9F5", "Skin": "#B07552"}, hoehe=1400, spiegeln=False)   # PIL-Bild, freigestellt
+```
+
+- **Zusammensetzung:** Pose, Kopf, Gesicht, Bart und Brille werden exakt wie in den Figma-Vorlagen „a person/…“ zusammengesetzt. Die Rahmenpositionen stehen in `rahmen.py`, die Abstände für Gesicht, Bart und Brille entsprechen react-peeps. Geprüft ist das an der Vorlage, die Abweichung liegt unter 0,05 Einheiten.
+- **Einfärben:** Umgefärbt wird über die Figma-Flächennamen: `Skin`, `Top`, `Pants`, `Jacket`, `Shoes`, `Hair`, `Clothes`, `bandana`, `hijab`, `Turban`, `Hat` usw.
+- **Farbregel bei Posen:** In Figma hat `…-1` ein farbiges Oberteil und eine schwarze Hose, `…-2` ist umgekehrt. Für ein einheitliches Outfit einer Figur deshalb Posen aus derselben Reihe kombinieren.
+- **Aliens (LexVerse):** Gesichter `Cyclops` oder `Monster` bzw. normale Gesichter, jeweils mit Hautfarbe grün, lila oder blau.
+- **Abhängigkeiten:** `cairosvg`, `svgpathtools`, `Pillow`.
