@@ -40,7 +40,10 @@ def anfrage(route, body=None):
 def main(modul, erzaehler="moritz"):
     m = importlib.import_module(modul)
     SEGMENTE, STIMMEN = m.SEGMENTE, getattr(m, "STIMMEN", {})
-    stimme_von = lambda rolle: (STIMMEN[rolle], ROLLE_SETTINGS) if rolle else (ERZAEHLER[erzaehler], SETTINGS)
+    bes = os.path.join(os.path.dirname(os.path.abspath(__file__)), "besetzung.json")
+    ens = json.load(open(bes))["ensemble"] if os.path.exists(bes) else {}
+    vid_von = lambda s: ens[s]["id"] if s in ens else s          # Ensemble-Name oder direkte Voice-ID
+    stimme_von = lambda rolle: (vid_von(STIMMEN[rolle]), ROLLE_SETTINGS) if rolle else (ERZAEHLER[erzaehler], SETTINGS)
     cache = "../el_cache"; os.makedirs(cache, exist_ok=True)
     teile = []
     for seg in SEGMENTE:
