@@ -1,6 +1,7 @@
 """Vertont ein Skript (SEGMENTE mit [marke]) mit ElevenLabs v4 und legt jede Marke auf den Beginn des folgenden Wortes.
 
-Aufruf im src-Ordner eines Videos:  python3 synth_el.py skript_xy
+Aufruf im src-Ordner eines Videos:  python3 synth_el.py skript_xy [moritz|carla]
+- Segmente: (text, pause) für den Erzähler oder (text, pause, rolle) für Figurenrede; STIMMEN = {rolle: voice_id} im Skript.
 - Sprecher, Modell und Einstellungen wie im Repo-Erzähler (Moritz Wegner), Modell eleven_v4, Normalisierung aus.
 - Sprechtext-Aufbereitung: § → Paragraf, Gesetzesabkürzungen mit Punkten (B.G.B.), Paragrafenzahlen stehen im Skript
   bereits als Wort in Hunderter-Form.
@@ -13,9 +14,11 @@ import numpy as np
 import imageio_ffmpeg
 
 API = "https://api.elevenlabs.io/v1/"
-VOICE = "PhufIH7nYh2Up1uej6aY"
+ERZAEHLER = {"moritz": "PhufIH7nYh2Up1uej6aY", "carla": "rKiu7lQ4c5P3az3745s3"}
+VOICE = ERZAEHLER["moritz"]
 MODEL = "eleven_v4"
 SETTINGS = {"stability": 0.42, "similarity_boost": 0.82, "style": 0.38, "use_speaker_boost": True, "speed": 1.08}
+ROLLE_SETTINGS = {"stability": 0.35, "similarity_boost": 0.8, "style": 0.55, "use_speaker_boost": True, "speed": 1.05}
 SR = 48000
 ABK = ["VwVfG", "VwGO", "StGB", "StPO", "EStG", "BGB", "HGB", "ZPO", "AO", "GG", "UStG", "GmbHG", "AktG", "BVerfG", "BGH", "BFH", "BMF"]
 MARKE = re.compile(r"\[(\w+)\]")
@@ -34,11 +37,14 @@ def anfrage(route, body=None):
     return json.load(urllib.request.urlopen(req, timeout=240))
 
 
-def main(modul):
-    SEGMENTE = importlib.import_module(modul).SEGMENTE
+def main(modul, erzaehler="moritz"):
+    m = importlib.import_module(modul)
+    SEGMENTE, STIMMEN = m.SEGMENTE, getattr(m, "STIMMEN", {})
+    stimme_von = lambda rolle: (STIMMEN[rolle], ROLLE_SETTINGS) if rolle else (ERZAEHLER[erzaehler], SETTINGS)
     cache = "../el_cache"; os.makedirs(cache, exist_ok=True)
     teile = []
-    for roh, pause in SEGMENTE:
+    for seg in SEGMENTE:
+        roh, pause, rolle = (seg + (None,))[:3]
         stuecke = MARKE.split(roh)            # Text, Marke, Text, Marke, …
         text, marken = "", []
         for j, s in enumerate(stuecke):
@@ -47,9 +53,9 @@ def main(modul):
             else:
                 text += sprechtext(s)
         text = re.sub(r"\s+", " ", text)
-        teile.append((text.strip(), marken, pause, len(text) - len(text.lstrip())))
-    key = lambda t: hashlib.sha256(json.dumps([t, VOICE, MODEL, SETTINGS], ensure_ascii=False).encode()).hexdigest()[:20]
-    neu = [t for t, *_ in teile if not os.path.exists(f"{cache}/{key(t)}.json")]
+        teile.append((text.strip(), marken, pause, len(text) - len(text.lstrip()), rolle))
+    key = lambda t, r: hashlib.sha256(json.dumps([t, *stimme_von(r), MODEL], ensure_ascii=False).encode()).hexdigest()[:20]
+    neu = [t for t, _, _, _, r in teile if not os.path.exists(f"{cache}/{key(t, r)}.json")]
     bedarf = sum(len(t) for t in neu)
     sub = anfrage("user/subscription")
     rest = int(sub["character_limit"]) - int(sub["character_count"])
@@ -58,21 +64,22 @@ def main(modul):
         sys.exit("Kontingent reicht nicht – keine Vertonung (keine automatische Mehrnutzung).")
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     teile_audio, cues, segs, t = [np.zeros(int(0.4 * SR), np.int16)], {}, [], 0.4
-    for i, (text, marken, pause, _) in enumerate(teile):
-        k = key(text); js = f"{cache}/{k}.json"
+    for i, (text, marken, pause, _, rolle) in enumerate(teile):
+        vid, sett = stimme_von(rolle)
+        k = key(text, rolle); js = f"{cache}/{k}.json"
         if not os.path.exists(js):
             vor = teile[i - 1][0] if i else None
             nach = teile[i + 1][0] if i + 1 < len(teile) else None
             body = {"text": text, "model_id": MODEL, "language_code": "de", "apply_text_normalization": "off",
-                    "voice_settings": SETTINGS, "previous_text": vor, "next_text": nach}
+                    "voice_settings": sett, "previous_text": vor, "next_text": nach}
             body = {a: b for a, b in body.items() if b is not None}
             try:
-                r = anfrage(f"text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_128", body)
+                r = anfrage(f"text-to-speech/{vid}/with-timestamps?output_format=mp3_44100_128", body)
             except urllib.error.HTTPError as e:
                 msg = e.read().decode(errors="replace")
                 if e.code == 400 and ("previous_text" in msg or "next_text" in msg):
                     body.pop("previous_text", None); body.pop("next_text", None)
-                    r = anfrage(f"text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_128", body)
+                    r = anfrage(f"text-to-speech/{vid}/with-timestamps?output_format=mp3_44100_128", body)
                 else:
                     sys.exit(f"HTTP {e.code}: {msg[:300]}")
             open(f"{cache}/{k}.mp3", "wb").write(base64.b64decode(r["audio_base64"]))
@@ -92,18 +99,24 @@ def main(modul):
             cues[name] = dict(t=round(t + max(0.0, starts[min(p, len(chars) - 1)] - 0.04), 3), seg=i,
                               wort=text[p:].split(" ")[0] if p < len(text) else "")
         d = len(pcm) / SR
-        segs.append(dict(i=i, start=round(t, 3), ende=round(t + d, 3), text=text))
+        ends = al["character_end_times_seconds"]
+        woerter, w0 = [], None           # (Start, Ende) je Wort, absolut – für Mundbewegungen
+        for j, ch in enumerate(chars + [" "]):
+            if ch != " " and w0 is None: w0 = j
+            if ch == " " and w0 is not None:
+                woerter.append((round(t + starts[w0], 3), round(t + ends[j - 1], 3))); w0 = None
+        segs.append(dict(i=i, start=round(t, 3), ende=round(t + d, 3), text=text, rolle=rolle, woerter=woerter))
         teile_audio += [pcm, np.zeros(int(pause * SR), np.int16)]
         t += d + pause
     alles = np.concatenate(teile_audio)
     import wave
     with wave.open("../stimme.wav", "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(alles.tobytes())
-    json.dump(dict(dauer=round(len(alles) / SR, 3), sr=SR, stimme=f"ElevenLabs {MODEL} {VOICE}", cues=cues, segmente=segs),
+    json.dump(dict(dauer=round(len(alles) / SR, 3), sr=SR, stimme=f"ElevenLabs {MODEL}, Erzähler {erzaehler}", cues=cues, segmente=segs),
               open("../cues.json", "w"), ensure_ascii=False, indent=1)
     print(f"Dauer {len(alles) / SR:.2f}s, {len(cues)} Marken, sha256 {hashlib.sha256(alles.tobytes()).hexdigest()[:16]}")
 
 
 if __name__ == "__main__":
     sys.path.insert(0, ".")
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "moritz")
