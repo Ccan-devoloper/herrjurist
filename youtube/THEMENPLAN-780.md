@@ -216,7 +216,7 @@ Für jede fertige Folge erzeugt [`tools/youtube_metadaten.py`](../tools/youtube_
 
 ## Alle 780 Folgen
 
-Spalten: Nr., Woche (fortlaufend), Tag, Gebiet, YouTube-Titel, Suchbegriff, Leitentscheidung. Arbeitstitel, Einstieg, Kernfrage, Normen, Tags, Beschreibung, Thumbnail-Text, Playlists, Bewertung, Voraussetzung und Fundstelle stehen in der CSV bzw. Excel-Datei.
+Spalten: Nr., Woche (fortlaufend), Tag, Gebiet, YouTube-Titel, Suchbegriff, Leitentscheidung. Arbeitstitel, Einstieg, Kernfrage, Normen, Tags, Beschreibung, Thumbnail-Text (A und B, Vorlage), Playlists, Bewertung, Voraussetzung und Fundstelle stehen in der CSV bzw. Excel-Datei.
 
 ### Jahr 1
 

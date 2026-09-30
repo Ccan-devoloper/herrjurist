@@ -158,7 +158,10 @@ def hook(bild, zeilen, max_b, groesse=200, min_g=110):
     zeilen = [z[:-1] + "-" if z.endswith("~") else z for z in zeilen]      # Silbentrennung als Strich zeigen
     for z in zeilen:
         x = TEXT_X
-        worte = z.split(" ")
+        worte = []
+        for w in z.split(" "):                                  # "§ 224", "Art. 8" gehören zusammen (auch farblich)
+            if worte and worte[-1].lstrip("*") in ("§", "§§", "ART."): worte[-1] += " " + w.lstrip("*")
+            else: worte.append(w)
         for i, w in enumerate(worte):
             gelb = w.startswith("*"); w = w.lstrip("*"); t = w + (" " if i < len(worte) - 1 else "")
             d.text((x + 7, y + 9), t, font=f, fill=(0, 0, 0, 120), stroke_width=15, stroke_fill=(0, 0, 0, 120))
