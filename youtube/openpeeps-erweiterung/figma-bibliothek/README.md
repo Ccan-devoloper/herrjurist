@@ -31,3 +31,18 @@ bild = figur("standing/robot_dance-1", "Long Curly", "Explaining", bart=None, br
 - **Farbregel bei Posen:** In Figma hat `…-1` ein farbiges Oberteil und eine schwarze Hose, `…-2` ist umgekehrt. Für ein einheitliches Outfit einer Figur deshalb Posen aus derselben Reihe kombinieren.
 - **Aliens (LexVerse):** Gesichter `Cyclops` oder `Monster` bzw. normale Gesichter, jeweils mit Hautfarbe grün, lila oder blau.
 - **Abhängigkeiten:** `cairosvg`, `svgpathtools`, `Pillow`.
+
+## Lexi – Moderatorin von LexVerse (festgelegt 30.09.2026)
+
+`lexi.py` legt ihr Aussehen verbindlich fest. Es ist in jedem Video identisch:
+- **Aussehen:** Dutt mit rosa Haarband, runde Brille („Glasses 5“), gelbes Oberteil, schwarze Hose, Haut `#9A6442`
+- **Stimme:** Carla Blum
+
+**Posen und Mimiken:**
+- ruhig, freut, nachdenklich, skeptisch
+- erklärt und warnt, jeweils mit offenem und geschlossenem Mund für die Mundbewegung
+- kommt ins Bild
+
+Jede Pose gibt es gespiegelt mit dem Suffix `_l`. Verwendet werden nur Posen mit einfärbbarem Oberteil und schlanker Statur.
+
+**Einsatz:** 2–3 feste Auftritte pro Video: Klausurtipp, Merksatz, optional Intro oder Outro. Nicht durchgehend im Bild.
