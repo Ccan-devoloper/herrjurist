@@ -1,7 +1,7 @@
 # Stimmen-Besetzung (ElevenLabs v4), Stand 30.09.2026
 
 **Grundsätze** (Entscheidung des Kanalinhabers):
-- **Erzähler:** eine feste Stimme für den ganzen Kanal. Zur Wahl stehen Moritz Wegner und Carla Blum.
+- **Erzähler:** eine feste Stimme für den ganzen Kanal: **Carla Blum** (festgelegt am 30.09.2026). Moritz Wegner bleibt Reserve.
 - **Fallfiguren:** Sie werden aus einem festen Ensemble besetzt, wie bei einer Theatertruppe.
   - Innerhalb eines Videos bekommt jede Figur eine eigene, klar unterscheidbare Stimme.
   - Über mehrere Videos hinweg dürfen sich Stimmen wiederholen.

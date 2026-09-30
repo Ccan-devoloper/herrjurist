@@ -1,6 +1,6 @@
 """Vertont ein Skript (SEGMENTE mit [marke]) mit ElevenLabs v4 und legt jede Marke auf den Beginn des folgenden Wortes.
 
-Aufruf im src-Ordner eines Videos:  python3 synth_el.py skript_xy [moritz|carla]
+Aufruf im src-Ordner eines Videos:  python3 synth_el.py skript_xy [carla|moritz]  (Standard: carla)
 - Segmente: (text, pause) für den Erzähler oder (text, pause, rolle) für Figurenrede; STIMMEN = {rolle: voice_id} im Skript.
 - Sprecher, Modell und Einstellungen wie im Repo-Erzähler (Moritz Wegner), Modell eleven_v4, Normalisierung aus.
 - Sprechtext-Aufbereitung: § → Paragraf, Gesetzesabkürzungen mit Punkten (B.G.B.), Paragrafenzahlen stehen im Skript
@@ -37,7 +37,7 @@ def anfrage(route, body=None):
     return json.load(urllib.request.urlopen(req, timeout=240))
 
 
-def main(modul, erzaehler="moritz"):
+def main(modul, erzaehler="carla"):
     m = importlib.import_module(modul)
     SEGMENTE, STIMMEN = m.SEGMENTE, getattr(m, "STIMMEN", {})
     bes = os.path.join(os.path.dirname(os.path.abspath(__file__)), "besetzung.json")
@@ -122,4 +122,4 @@ def main(modul, erzaehler="moritz"):
 
 if __name__ == "__main__":
     sys.path.insert(0, ".")
-    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "moritz")
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "carla")

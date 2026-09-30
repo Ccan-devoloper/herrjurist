@@ -1,6 +1,7 @@
 # Sprecherstimme über ElevenLabs (Test, Stand 30.09.2026)
 
 - **Sprecher:** Moritz Wegner (`PhufIH7nYh2Up1uej6aY`), der Erzähler aus `youtube-15-continuation-audio.yml`. Einstellungen wie dort: Stabilität 0,42, Ähnlichkeit 0,82, Stil 0,38, Tempo 1,08.
+- **Erzählerin:** Carla Blum (`rKiu7lQ4c5P3az3745s3`) ist Standard (seit 30.09.2026). Moritz Wegner ist Reserve.
 - **Modell:** `eleven_v4` mit `apply_text_normalization: "off"`. Im Hörvergleich gegen `eleven_multilingual_v2` klang v4 deutlich besser.
 - **Aussprache:**
   - Paragrafenzahlen stehen im Skript in Hunderter-Form als Wort („elfhundertachtunddreißig“). Ziffern liest v4 als „tausendeinhundert…“.
