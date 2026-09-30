@@ -271,12 +271,7 @@ for x in reserve:
 json.dump([{k: v for k, v in x.items() if not k.startswith("_") and k != "eff"} for x in reserve], open("reserve.json", "w"), ensure_ascii=False, indent=1)
 print("Reserve:", len(reserve))
 
-SP = ["nr", "jahr", "woche", "woche_im_jahr", "tag", "reihe", "gebiet", "teilgebiet", "titel", "hook", "kernfrage", "normen",
-      "leitentscheidung", "examen", "format", "relevanz", "breite", "klassiker", "score", "voraussetzung", "fundstelle", "rechtsstand"]
-with open("themenplan-780.csv", "w", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=SP, extrasaction="ignore")
-    w.writeheader()
-    for x in plan: w.writerow(x)
+# CSV, Excel und Markdown schreibt ausgabe.py
 c = collections.Counter((x["jahr"], x["gebiet"]) for x in plan)
 for j in range(1, 6): print(j, {g: c[(j, g)] for g in GEBIET.values()})
 print(collections.Counter(x["gebiet"] for x in plan))
