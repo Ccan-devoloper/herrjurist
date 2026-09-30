@@ -33,6 +33,7 @@ Jeden Punkt am **fertig exportierten MP4** und am Produktionsmaster belegen. `OK
 | Jeder hörbare Wisch stimmt zeitlich mit einem sichtbaren Wisch überein; konkrete Geräusche sind sichtbar motiviert, leise und ohne Dauersound | SFX-Cueliste / Hörprüfung: … |
 | Kein gesprochener Abschiedsgruß; letztes Sachwort vollständig; sanfter Anschluss an das vollständige Originaloutro | Zeitstempel / Hörprüfung: … |
 | MP4 H.264/yuv420p/AAC, 1920×1080/30 fps/48 kHz Stereo, sinnvolle Länge, keine Subtitle-Streams; vollständiger Audio-/Video-Decode ohne Fehler | ffprobe / ffmpeg-Protokoll: … |
+| Thumbnail nach [THUMBNAILS.md](THUMBNAILS.md): Vorlage (Fall/Lern), Gebietsfarbe, Text ≤ 4 Wörter mit einem gelben Wort, Generatorprüfung ohne Fehler, Handy-Vorschau (246 × 138 px) lesbar, Aussage durch das Video eingelöst; Variante B für Test & Compare | Spezifikation / Generatorlauf / Vorschau: … |
 | Produktionsmaster vollständig (Skript, Bild-/SHA-Timeline, Rechtsquellen, Stimmen/SFX, Renderdateien, Intro/Outro-Verweise); ZIP lesbar | ZIP-Inhaltsliste / Integritätsprüfung: … |
 | Video und Master auf Drive gespeichert; IDs, Größe, Name und Ordner per Readback bestätigt; GitHub ohne Binärpakete | … |
 

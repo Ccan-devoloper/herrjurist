@@ -128,7 +128,7 @@ Ziel ist, dass jemand, der gerade für eine Klausur lernt und „Gefährliche K�
   - **Der Fall:** Der Aufhänger bleibt, der Fachbegriff steht mit im Titel, etwa „Raser-Fall: Mord mit dem Auto? Vorsatz & Mordmerkmale“.
 - **Beschreibung (die ersten zwei Zeilen):** Suchbegriff, Norm und die beantwortete Frage. Diese Zeilen zeigt YouTube in der Suche und Google im Snippet.
 - **Tags:** Normen, Synonyme und Abkürzungen (ETBI, VU, a.l.i.c.) sowie das Rechtsgebiet.
-- **Thumbnail-Text:** 2–4 Wörter in großer Schrift, bei Schemata mit Norm (z. B. „§ 224 SCHEMA“).
+- **Thumbnail-Text:** 2–4 Wörter in großer Schrift; bei Lernvideos Thema oder Norm (z. B. „§ 224 STGB“), die Videoart steht als Kartenkopf („SCHEMA“) daneben. Gestaltung und Generator: [THUMBNAILS.md](THUMBNAILS.md).
 - **Playlists:** Sie tragen genau die Namen, nach denen gesucht wird, etwa „Strafrecht AT“, „Strafrecht BT: Vermögensdelikte“, „Prüfungsschemata Strafrecht“, „Verwaltungsprozessrecht (VwGO)“ oder „2. Examen: Zwangsvollstreckung“. Wer „Strafrecht AT“ sucht, landet in der Playlist und beim Überblicksvideo als erster Folge.
 
 Für jede fertige Folge erzeugt [`tools/youtube_metadaten.py`](../tools/youtube_metadaten.py) aus Sprachaufnahme, Renderer und Themenplan automatisch die Upload-Dateien (Beispiel: [Katzenkönig-Test](../preproduction/katzenkoenig-test/youtube/)):
