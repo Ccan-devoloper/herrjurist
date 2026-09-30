@@ -131,10 +131,11 @@ Ziel ist, dass jemand, der gerade für eine Klausur lernt und „Gefährliche K�
 - **Thumbnail-Text:** 2–4 Wörter in großer Schrift, bei Schemata mit Norm (z. B. „§ 224 SCHEMA“).
 - **Playlists:** Sie tragen genau die Namen, nach denen gesucht wird, etwa „Strafrecht AT“, „Strafrecht BT: Vermögensdelikte“, „Prüfungsschemata Strafrecht“, „Verwaltungsprozessrecht (VwGO)“ oder „2. Examen: Zwangsvollstreckung“. Wer „Strafrecht AT“ sucht, landet in der Playlist und beim Überblicksvideo als erster Folge.
 
-Dazu kommen zwei Punkte für die Produktion, die sich aus dem vorhandenen Renderer ohne Mehraufwand ergeben:
+Für jede fertige Folge erzeugt [`tools/youtube_metadaten.py`](../tools/youtube_metadaten.py) aus Sprachaufnahme, Renderer und Themenplan automatisch die Upload-Dateien (Beispiel: [Katzenkönig-Test](../preproduction/katzenkoenig-test/youtube/)):
 
-- **Kapitelmarken:** Der Prüfpfad unten links (z. B. „A. Richard › Schuld › Verbotsirrtum“) wird als Kapitelliste mit Zeitstempeln in die Beschreibung übernommen. YouTube zeigt Kapitel in der Suche an, Google als „Wichtige Momente“. Lernende springen so direkt zum Prüfungspunkt.
-- **Untertiteldatei (SRT):** Sie wird aus den Wortzeiten der ElevenLabs-Sprachaufnahme exakt erzeugt und hochgeladen, nicht ins Bild eingebrannt. So kann YouTube jedes gesprochene Fachwort durchsuchen, und Lernende können auch ohne Ton mitlesen.
+- **Kapitelmarken** (`kapitel.txt`): Der Renderer schreibt jeden Wechsel des Prüfpfads unten links mit (`kapitel.json`). Daraus entstehen Kapitel aus den oberen zwei Pfadebenen, etwa „A. Richard: Versuchter Mord“, nach YouTube-Regeln: erstes bei 0:00, jedes mindestens 10 Sekunden, Intro eingerechnet. YouTube zeigt Kapitel in der Suche an, Google als „Wichtige Momente“; Lernende springen direkt zum Prüfungspunkt.
+- **Untertitel** (`untertitel.srt`): Sie werden aus den Wortzeiten der Sprachaufnahme erzeugt und hochgeladen, nicht ins Bild eingebrannt. Der Text steht in Schriftform („§ 25 Abs. 1, Alt. 2“, „BGH“ statt „Paragraf fünfundzwanzig …“, „B.G.H.“), bei Figurenrede mit Sprechernamen. So kann YouTube jedes gesprochene Fachwort durchsuchen, und Lernende können ohne Ton mitlesen.
+- **Beschreibung und Metadaten** (`beschreibung.txt`, `metadaten.json`): YouTube-Titel, Beschreibungsanfang, Kapitelliste, Normen, Leitentscheidung und drei Hashtags; dazu Tags (höchstens 500 Zeichen), Playlists und Thumbnail-Text aus dem Themenplan.
 
 <details><summary>Playlists und Zahl der Folgen</summary>
 

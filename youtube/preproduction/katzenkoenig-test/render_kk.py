@@ -58,6 +58,9 @@ for f in FOLIEN:
     f["start"] = min(e.t0 for e in f["els"])
 # Stand 30.09.2026: nur Handlungsgeräusche (szene_*), keine UI-, Wisch- oder Blättergeräusche
 assert all(k.startswith("szene_") for _, k, _ in sfx_liste), "Nur Handlungsgeräusche erlaubt"
+# Prüfpfad-Wechsel als Kapitelquelle für YouTube (tools/youtube_metadaten.py)
+json.dump([{"t": round(zeit(c), 3), "pfad": txt} for f_ in FOLIEN for c, txt in f_["pfade"]],
+          open("../kapitel.json", "w"), ensure_ascii=False, indent=1)
 fehl = set(cues) - genutzt
 assert not fehl, f"Marken ohne Bildelement: {fehl}"
 for a, b in zip(FOLIEN, FOLIEN[1:]):
