@@ -78,6 +78,9 @@ def figur(nr, i, r, belegt):
         pose = ["standing/shirt-1", "standing/blazer-3", "standing/easing-1"][_zahl(nr, i, "a") % 3]
     farben = {"Skin": haut, "Top": DUNKEL if anzug else farbe}
     if r.get("alt"): farben["Hair"] = GRAU
+    if pose == "standing/easing-1":                            # offene Jacke über dem Oberteil: beide einfärben
+        farben["Jacket"] = farbe
+        farben["Top"] = waehle(OBERTEIL, "o2")
     if pose.startswith("standing/blazer"):
         farben["Jacket"] = DUNKEL if anzug else farbe
         farben["Pants"] = DUNKEL
