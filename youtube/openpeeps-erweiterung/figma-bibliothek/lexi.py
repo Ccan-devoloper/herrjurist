@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lexpeeps import figur
 
 AUSSEHEN = dict(kopf="Bun 2", brille="Glasses 5", bart=None,
-                farben={"Skin": "#9A6442", "Top": "#F9D56E", "bandana": "#F6A5C0"})   # Haut leicht heller als Entwurf C
+                farben={"Skin": "#C58E64", "Top": "#F9D56E", "bandana": "#F6A5C0"})   # Hautton am 30.09.2026 vom Kanalinhaber gewählt
 # Nur Posen mit einfärbbarem Oberteil und schlanker Statur -> gleiches Outfit in jeder Szene
 POSEN = {
     "ruhig":             ("standing/crossed_arms-1", "Calm"),

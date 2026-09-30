@@ -29,13 +29,14 @@ bild = figur("standing/robot_dance-1", "Long Curly", "Explaining", bart=None, br
 - **Zusammensetzung:** Pose, Kopf, Gesicht, Bart und Brille werden exakt wie in den Figma-Vorlagen „a person/…“ zusammengesetzt. Die Rahmenpositionen stehen in `rahmen.py`, die Abstände für Gesicht, Bart und Brille entsprechen react-peeps. Geprüft ist das an der Vorlage, die Abweichung liegt unter 0,05 Einheiten.
 - **Einfärben:** Umgefärbt wird über die Figma-Flächennamen: `Skin`, `Top`, `Pants`, `Jacket`, `Shoes`, `Hair`, `Clothes`, `bandana`, `hijab`, `Turban`, `Hat` usw.
 - **Farbregel bei Posen:** In Figma hat `…-1` ein farbiges Oberteil und eine schwarze Hose, `…-2` ist umgekehrt. Für ein einheitliches Outfit einer Figur deshalb Posen aus derselben Reihe kombinieren.
-- **Aliens (LexVerse):** Gesichter `Cyclops` oder `Monster` bzw. normale Gesichter, jeweils mit Hautfarbe grün, lila oder blau.
+- **Aliens (LexVerse):** Gesichter `Cyclops` oder `Monster`, immer mit normaler menschlicher Hautfarbe (Vorgabe des Kanalinhabers).
+- **Mundzustände für Figurenrede:** `gesicht="Serious|Explaining"` nimmt Augen und Nase aus `Serious` und die Mundpartie aus `Explaining`. Der Schnitt liegt quer bei 60 % der Gesichtshöhe (`MUNDSCHNITT`). Bewährt haben sich die Mundformen `Explaining` (a, weit offen), `Concerned Fear` (o, rund) und `Hectic` (e, breit mit Zähnen). Die Grundmimik ist der geschlossene Mund.
 - **Abhängigkeiten:** `cairosvg`, `svgpathtools`, `Pillow`.
 
 ## Lexi – Moderatorin von LexVerse (festgelegt 30.09.2026)
 
 `lexi.py` legt ihr Aussehen verbindlich fest. Es ist in jedem Video identisch:
-- **Aussehen:** Dutt mit rosa Haarband, runde Brille („Glasses 5“), gelbes Oberteil, schwarze Hose, Haut `#9A6442`
+- **Aussehen:** Dutt mit rosa Haarband, runde Brille („Glasses 5“), gelbes Oberteil, schwarze Hose, Haut `#C58E64`
 - **Stimme:** Carla Blum
 
 **Posen und Mimiken:**

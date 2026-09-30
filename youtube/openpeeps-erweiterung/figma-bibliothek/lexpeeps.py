@@ -2,6 +2,7 @@
 den Figma-Vorlagen „a person/standing|sitting|bust“ zusammengesetzt und über die Flächennamen eingefärbt.
 
     bild = figur("standing/blazer-1", "Medium Straight", "Smile", farben={"Skin": "#B07552", "Jacket": "#7FD6D0"})
+    offen = figur("standing/blazer-1", "Medium Straight", "Smile|Explaining", ...)   # Augen von Smile, Mund von Explaining
 """
 import io, json, os, re, xml.etree.ElementTree as ET
 import cairosvg
@@ -15,6 +16,7 @@ NS = "{http://www.w3.org/2000/svg}"
 S = 4096 / (42055 - 3224)                                   # Maßstab Figma-Einheiten -> Export
 IDX = {i["figma_name"]: i for i in json.load(open(os.path.join(BIB, "index.json")))}
 OFF = {"face": (159, 186), "facial-hair": (123, 338), "accessories": (47, 241)}   # relativ zum Kopfrahmen (react-peeps)
+MUNDSCHNITT = 0.6                                           # Anteil der Gesichtshöhe, ab dem der Mund beginnt
 VORLAGE = {"standing": ("a person/standing", "pose/standing/crossed_arms-1", "head/Bun 2"),
            "sitting": ("a person/sitting", None, "head/Bun 2"),
            "bust": ("a person/bust", None, "head/Bun 2")}
@@ -82,10 +84,24 @@ def figur_svg(pose, kopf, gesicht, bart=None, brille=None, farben=None):
     rk0, rk = R[kopf0], R[kn]
     hx, hy = (rk0[0] - rk[0]) * S + th[0], (rk0[1] - rk[1]) * S + th[1]      # Verschiebung des Kopfes
     teile += _verschoben(kn, hx, hy, farben)
-    for kat, name in (("face", gesicht), ("facial-hair", bart), ("accessories", brille)):
+    augen, mund = gesicht.split("|") if "|" in gesicht else (gesicht, None)
+    for kat, name in (("face", augen), ("facial-hair", bart), ("accessories", brille)):
         if not name: continue
         n = f"{kat}/{name}"; rt = R[n]; o = OFF[kat]
-        teile += _verschoben(n, (rk[0] - rt[0] + o[0]) * S + hx, (rk[1] - rt[1] + o[1]) * S + hy, farben)
+        dx, dy = (rk[0] - rt[0] + o[0]) * S + hx, (rk[1] - rt[1] + o[1]) * S + hy
+        if kat == "face" and mund:
+            # Mundzustand: Augen/Nase aus 'augen', Mundpartie aus 'mund' (gleicher Gesichtsrahmen, Schnitt quer)
+            y0 = min(parse_path(p.get("d")).bbox()[2] for p in _pfade(n)) + dy
+            y1 = max(parse_path(p.get("d")).bbox()[3] for p in _pfade(n)) + dy
+            cut = y0 + MUNDSCHNITT * (y1 - y0)
+            nm = "face/" + mund; rm = R[nm]
+            dxm, dym = (rk[0] - rm[0] + o[0]) * S + hx, (rk[1] - rm[1] + o[1]) * S + hy
+            teile.append(f'<clipPath id="oben"><rect x="-99999" y="-99999" width="199999" height="{cut + 99999:.3f}"/></clipPath>'
+                         f'<clipPath id="unten"><rect x="-99999" y="{cut:.3f}" width="199999" height="199999"/></clipPath>')
+            teile.append('<g clip-path="url(#oben)">' + "".join(_verschoben(n, dx, dy, farben)) + "</g>")
+            teile.append('<g clip-path="url(#unten)">' + "".join(_verschoben(nm, dxm, dym, farben)) + "</g>")
+            continue
+        teile += _verschoben(n, dx, dy, farben)
     return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096 1504" width="4096" height="1504">' + "".join(teile) + "</svg>"
 
 
