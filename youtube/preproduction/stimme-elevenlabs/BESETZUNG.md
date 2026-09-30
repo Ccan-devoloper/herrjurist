@@ -19,14 +19,16 @@
 | Mann, jung | Timo, Niklas | |
 | Mann, mittel | Stephan, Marc, Christian | Otto |
 | Mann, älter | William, Helmut, Opa Johann | |
-| Frau, jung | Lucy Fennek | |
-| Frau, mittel | Sabrina, Lea¹ | Leonie |
-| Frau, älter | Lisa | |
+| Frau, jung | Lucy Fennek, Ela (fröhlich), Ela (warm), Julia | |
+| Frau, mittel | Sabrina, Laura (klar), Laura (ruhig), Lea¹ | Leonie |
+| Frau, älter | Lisa, Hilde, Elinor² | |
 
 ¹ Bei Lea hat der Sprecher eine Inhaltsmoderation eingeschaltet. Sie ist nur für harmlose Sätze geeignet, nicht für Gewalt- oder Tatbeschreibungen.
 
+² Elinor („die ruppige Tante“) wirkt eher als Charakterfigur, gut für strenge oder schrullige Rollen.
+
 **Abgelehnt:** Johannes.
 
-**Offen:** Bei jungen und älteren Frauen ist die Auswahl dünn, dort fehlen Ersatzstimmen.
+**Stand:** 21 Ensemble-Stimmen, 11 Männer und 10 Frauen, jede Alters- und Geschlechtsgruppe hat mindestens drei.
 
 IDs und Status stehen in [`besetzung.json`](besetzung.json). `synth_el.py` akzeptiert im Skript statt einer ID auch den Ensemble-Namen, z. B. `STIMMEN = {"Frank": "christian", "Gisela": "lea"}`.
