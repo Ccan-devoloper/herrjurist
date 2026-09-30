@@ -6,7 +6,7 @@ Jedes Bild wird beim Rendern geprüft: Text berührt keine Figur, Figuren sind s
     python3 thumbnail.py beispiele.json --out AUSGABE [--nur k1,k2] [--vorschau]
 
 Voraussetzung: Emoji-Satz einmalig mit ./assets_holen.sh laden (oder LEXVERSE_EMOJI=…/icons.json setzen)."""
-import argparse, hashlib, io, json, os, sys
+import argparse, hashlib, io, json, os, re, sys
 import numpy as np
 import cairosvg
 from PIL import Image, ImageColor, ImageDraw, ImageFilter, ImageFont, ImageOps
@@ -395,7 +395,8 @@ def pruefen(spec):
     if len([w for w in worte if w not in ("§", "=", "VS.", "&")]) > 4: hinweise.append(f"{k}: mehr als 4 Wörter")
     for z in text:
         if len(z.replace("*", "")) > 16: hinweise.append(f"{k}: Zeile '{z}' länger als 16 Zeichen")
-        if z.replace("*", "") != z.replace("*", "").upper(): hinweise.append(f"{k}: Zeile '{z}' nicht in Großbuchstaben")
+        ohne_norm = re.sub(r"(\d)[a-z]\b", r"\1", z.replace("*", ""))      # "§ 91a" ist erlaubt
+        if ohne_norm != ohne_norm.upper(): hinweise.append(f"{k}: Zeile '{z}' nicht in Großbuchstaben")
     if spec.get("typ") == "lern" and spec.get("karte") not in KARTE:
         fehler.append(f"{k}: karte muss eine von {', '.join(KARTE)} sein")
     if not spec.get("figuren"): fehler.append(f"{k}: mindestens eine Figur")
