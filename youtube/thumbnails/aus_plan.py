@@ -22,7 +22,7 @@ import thumbnail as T          # noqa: E402
 
 MIMIK = {"wuetend": "Rage", "sehr_wuetend": "Very Angry", "fies": "Angry with Fang", "aengstlich": "Concerned Fear",
          "erschrocken": "Fear", "besorgt": "Concerned", "frech": "Cheeky", "ernst": "Serious", "entschlossen": "Driven",
-         "froh": "Smile Big", "lacht": "Smile LOL", "erklaert": "Explaining", "skeptisch": "Suspicious",
+         "froh": "Cute", "lacht": "Smile LOL", "erklaert": "Explaining", "skeptisch": "Suspicious",
          "staunend": "Awe", "hektisch": "Hectic", "muede": "Tired", "ruhig": "Calm", "verachtend": "Contempt",
          "verliebt": "Loving Grin 1", "stolz": "Smile", "traurig": "Solemn"}
 LEXI = {"erklaert": "erklaert_auf", "warnt": "warnt_auf", "freut": "freut", "skeptisch": "skeptisch",
@@ -56,6 +56,11 @@ def figur(nr, i, r, belegt):
         frei = [w for w in werte if w not in belegt] or werte
         w = frei[_zahl(nr, i, art, r.get("rolle")) % len(frei)]; belegt.add(w); return w
     kopf, haut, farbe = waehle(liste, "k"), waehle(HAUT, "h"), waehle(OBERTEIL, "o")
+    if r.get("kopf"):                                           # ausdrücklich gewählt, z. B. "Hijab"
+        if "head/" + r["kopf"] not in T.IDX: raise T.Fehler(f"Folge {nr}: Kopf '{r['kopf']}' unbekannt")
+        kopf = r["kopf"]
+    if r.get("haut"):                                           # "hell", "mittel", "dunkel" oder Farbwert
+        haut = {"hell": HAUT[0], "mittel": HAUT[3], "dunkel": HAUT[5]}.get(r["haut"], r["haut"])
     bart = BART[_zahl(nr, i, "b") % len(BART)] if person == "m" and not r.get("alt") else None
     anzug = r.get("kleidung") == "anzug"
     mimik = r["mimik"]

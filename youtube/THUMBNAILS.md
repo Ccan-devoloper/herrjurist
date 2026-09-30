@@ -77,6 +77,7 @@ Für die 780 Folgen steht in `themenplanung/thumbs_*.json` je Folge nur eine kur
   - `person`: `w` oder `m`; `alt: true` für ältere Menschen.
   - `mimik`: eine aus `aus_plan.MIMIK`, etwa wuetend, aengstlich, frech, ernst, entschlossen, froh, skeptisch, staunend, besorgt oder erklaert.
   - `kleidung`: `anzug` (Richterin, Anwalt, Behörde) oder `arzt`.
+  - `kopf` (Frisur, z. B. `Hijab`) und `haut` (`hell`, `mittel`, `dunkel` oder Farbwert): nur, wenn das Thema es verlangt; sonst wählt der Baukasten.
   - `haelt`: Emoji-Name oder `{"emoji", "g", "drehung", "spiegeln"}`.
   - `zur_person: true`: Die zweite Figur wendet sich der ersten zu und reicht ihr den Gegenstand.
   - `{"lexi": "erklaert"}`: die Moderatorin, sparsam und vor allem bei Methodik.

@@ -15,7 +15,7 @@ from scipy import ndimage
 HIER = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HIER, "..", ".."))
 sys.path.insert(0, os.path.join(REPO, "youtube", "openpeeps-erweiterung", "figma-bibliothek"))
-from lexpeeps import figur as peep          # noqa: E402
+from lexpeeps import figur as peep, IDX      # noqa: E402
 import lexi as LX                          # noqa: E402
 
 SCHRIFT = os.environ.get("LEXVERSE_FONT", os.path.join(REPO, "fonts", "Nunito.ttf"))
