@@ -13,6 +13,11 @@ Die vom Nutzer vollständig freigegebene [Folge 09 v3](https://drive.google.com/
 - Ein präziser Fall als Einstieg; danach die Rechtsfrage, Norm und Tatbestandsmerkmale, Subsumtion, Konsequenz und ein **systematisch gegliedertes Klausurschema**, das passend zur gesprochenen Erklärung Punkt für Punkt aufgebaut wird. Immer Examensrelevanz und praktische Formulierung in der Klausur beachten.
 - Den Sprechertext so schreiben oder schneiden, dass der letzte Sachgedanke selbstständig abschließt. **Keine gesprochene Verabschiedung wie „Bis zum nächsten Thema“** und kein zusätzliches Endbild. Danach unmittelbar das vollständige [Standardoutro](https://drive.google.com/file/d/1YFU3DVhWsWLJpgPuSOJvLp7JjcF_K3JL/view?usp=drivesdk) mit seinem Originalton einsetzen.
 - Stoff aus dem Themenpool immer anhand aktueller Normen und maßgeblicher Rechtsprechung prüfen. Fallannahmen offenlegen, keine pauschalen Regeln aus Einzelfällen behaupten.
+- **Landesrecht länderneutral** (Polizei- und Ordnungsrecht, Kommunal-, Bauordnungs-, Versammlungs- und Schulrecht; Festlegung des Kanalinhabers vom 30.09.2026: Studierende aller Länder sollen profitieren):
+  - **Grundlage:** Das Video erklärt die Struktur, die in allen Ländern gilt, anhand der Musterentwürfe (MEPolG, Musterbauordnung, Gemeindeordnungen im Vergleich). Im Bild erscheint die Norm eines großen Landes als Beispiel, mit dem Hinweis „in deinem Land ggf. andere Nummer“.
+  - **Titel und Thumbnail** bleiben ohne Landesbezug.
+  - **Beschreibung:** Sie listet die entsprechenden Normen aller 16 Länder, etwa „Generalklausel: § 8 PolG NRW, Art. 11 BayPAG, § 1, 3 PolG BW …“. Das hilft beim Lernen und bei der Suche nach landesspezifischen Begriffen.
+  - **Länderunterschiede:** Wo sich die Länder wirklich unterscheiden, benennt das Video das ausdrücklich, statt eine Landeslösung als allgemein auszugeben.
 
 ## Bild und Charaktere
 
