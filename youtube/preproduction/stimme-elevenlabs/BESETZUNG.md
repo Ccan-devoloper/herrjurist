@@ -29,6 +29,6 @@
 
 **Abgelehnt:** Johannes.
 
-**Stand:** 21 Ensemble-Stimmen, 11 Männer und 10 Frauen, jede Alters- und Geschlechtsgruppe hat mindestens drei.
+**Stand:** 21 Einträge, 9 Männer und 12 Frauen; davon 19 gut und 2 unsicher (Otto, Leonie). Mit nur zwei Stimmen am dünnsten besetzt: junge Männer (Timo, Niklas).
 
 IDs und Status stehen in [`besetzung.json`](besetzung.json). `synth_el.py` akzeptiert im Skript statt einer ID auch den Ensemble-Namen, z. B. `STIMMEN = {"Frank": "christian", "Gisela": "lea"}`.
