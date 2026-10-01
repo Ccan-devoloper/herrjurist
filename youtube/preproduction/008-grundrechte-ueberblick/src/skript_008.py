@@ -12,7 +12,7 @@ STIMMEN = {"Lina": "sabrina", "Tom": "niklas", "Kranz": "hilde", "Brenner": "chr
 
 SEGMENTE = [
     # --- A Fall: im Stadtpark -------------------------------------------------------------------------------------
-    ("[fall]Sommer im Stadtpark. [lina]Lina verkauft hier seit Jahren Eis aus ihrem Wagen. Davon lebt sie. "
+    ("[fall]Sommer im Stadtpark. [lina]Lina verkauft hier seit Jahren Eis aus ihrem Wagen. Das ist ihr Lebensunterhalt. "
      "[tom]Dann kommt Tom vom Ordnungsamt.", 0.3),
     ("[t1]Die Stadt hat eine neue Parksatzung. Ab Montag dürfen Verkaufswagen nicht mehr in den Park fahren.", 0.4, "Tom"),
     # --- B Fall: der Grund ------------------------------------------------------------------------------------------

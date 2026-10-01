@@ -56,17 +56,17 @@ WIESE = (190, 230, 170, 255)
 LX_, TX = 900, 1520                          # Lina (blickt nach rechts zu Tom), Tom (blickt nach links)
 TO = ("TO_redet", TX, BODEN, FH)
 folie([(("fall", -0.4), "Fall · Im Stadtpark")], [            # Prüfpfad ab dem ersten Bild nach dem Intro (0,0 s)
-    pille("Der Eiswagen-Fall", 70, 40, "fall", fill=GELB, size=48),
-    linienzug([(60, BODEN), (1860, BODEN)], "fall", breite=7, farbe=INK),
-    ficon("tabler", "trees", 1790, BODEN - 2, 200, "fall", fuell=GRUEN, d=0.2),
-    ficon("tabler", "tree", 130, BODEN - 2, 150, "fall", fuell=GRUEN, d=0.3),
-    pille("Stadtpark", 1790, BODEN + 22, "fall", fill=GRUEN, size=28, anker="m", d=0.4),
+    pille("Der Eiswagen-Fall", 70, 40, ("fall", -0.4), fill=GELB, size=48),
+    linienzug([(60, BODEN), (1860, BODEN)], ("fall", -0.4), breite=7, farbe=INK),
+    ficon("tabler", "trees", 1790, BODEN - 2, 200, ("fall", -0.4), fuell=GRUEN),
+    ficon("tabler", "tree", 130, BODEN - 2, 150, ("fall", -0.4), fuell=GRUEN),
+    pille("Stadtpark", 1790, BODEN + 22, "fall", fill=GRUEN, size=28, anker="m", d=0.2),
     *eiswagen(470, BODEN - 2, 420, "lina"),
     peep_voll("LI_froh_r", LX_, BODEN, FH, "lina", bis=beim("t1", "Verkaufswagen")),
     szene(ficon("tabler", "bell", LX_ + 120, BODEN - 175, 70, beim("lina", "verkauft"), fuell=GELB, bis="tom"), "008glocke*", 0.8),
     pille("Lina, Eisverkäuferin", LX_, BODEN + 22, "lina", fill=PINK, size=30, anker="m", d=0.2),
-    ficon("tabler", "coins", 470, 300, 110, beim("lina", "Davon"), fuell=GELB, bis="t1"),
-    pille("ihr Lebensunterhalt", 470, 330, beim("lina", "lebt"), fill=GELB, size=32, anker="m", bis="t1"),
+    ficon("tabler", "coins", 470, 300, 110, beim("lina", "Das"), fuell=GELB, bis="t1"),
+    pille("ihr Lebensunterhalt", 470, 330, beim("lina", "Lebensunterhalt"), fill=GELB, size=32, anker="m", bis="t1"),
     # Tom vom Ordnungsamt
     peep_voll("TO_ruhig", TX, BODEN, FH, "tom", bis="t1"),
     pille("Tom, Ordnungsamt", TX, BODEN + 22, "tom", fill=BLAU, size=30, anker="m", d=0.2),
@@ -124,7 +124,7 @@ folie([("kiosk", "Fall · Der Kiosk"), ("frage", "Fall · Die Frage")], [
     peep_voll("LI_denkt", LX2, BODEN, FH, "frage", anim="cut"),
     blase("sprech", 640, 230, "l1", 1230, 230, inhalt=["Das ist mein Beruf! Und der Kiosk", "verkauft dasselbe Eis wie ich!"],
           textsize=32, figur=LIx, bis="frage"),
-    pille("Verletzt das Verbot Lina in ihren Grundrechten?", 960, 960, "frage", fill=PINK, size=36, anker="m"),
+    pille("Verletzt das Verbot Lina in ihren Grundrechten?", 960, 40, "frage", fill=PINK, size=36, anker="m"),
     pille("Freiheitsrecht?", 1100, 250, beim("frage", "Freiheitsrechte"), fill=BLAU, size=36, anker="m"),
     pille("Gleichheitsrecht?", 1100, 350, beim("frage", "Gleichheitsrechte"), fill=GELB, size=36, anker="m"),
 ])
@@ -175,7 +175,7 @@ folie([("passt", "Welches Grundrecht passt? › Art. 12 I GG"), ("passt2", "Welc
     z("Art. 2 I GG", 225, 318, beim("passt", "spezieller"), size=34, farbe=TEXT),
     ok(140, 430, beim("passt2", "Kiosk"), gr=24), z("Kiosk anders behandelt: Art. 3 I GG", 185, 405, beim("passt2", "Kiosk"), "Bold", 40),
     fl_block(110, 560, 1040, 110, BLAU, beim("passt", "Artikel"), [("A. Freiheitsrecht: Art. 12 I GG", "ExtraBold", 38, INK)]),
-    fl_block(110, 700, 1040, 110, GELB, ("passt2", 0.0), [("B. Gleichheitsrecht: Art. 3 I GG", "ExtraBold", 38, INK)]),
+    fl_block(110, 700, 1040, 110, GELB, beim("passt2", "Artikel"), [("B. Gleichheitsrecht: Art. 3 I GG", "ExtraBold", 38, INK)]),
     peep_voll("LI_denkt", FX, BR, FR, "passt", bis="passt2"),
     peep_voll("LI_aerger", FX, BR, FR, "passt2", anim="cut"),
     ficon("tabler", "briefcase", FX, 330, 120, beim("passt", "Beruf"), fuell=GELB, bis="passt2"),
@@ -218,9 +218,9 @@ folie([("ein", f"{PA} › II. Eingriff")], [
     ok(140, 450, beim("ein", "Das"), gr=24), z("Eingriff (+)", 185, 425, beim("ein", "Das"), "ExtraBold", 40),
     peep_voll("LI_denkt", FX, BR, FR, "ein", bis=beim("ein", "verbietet")),
     peep_voll("LI_muede", FX, BR, FR, beim("ein", "verbietet"), anim="cut"),
-    ficon("tabler", "file-text", FX - 110, 330, 120, beim("ein", "Satzung"), fuell=WEISS),
-    ficon("tabler", "truck-off", FX + 90, 320, 120, beim("ein", "verbietet"), fuell=ROT),
-    pille("Parksatzung", FX - 110, 350, beim("ein", "Satzung"), fill=WEISS, size=28, anker="m"),
+    ficon("tabler", "file-text", FX - 110, 290, 120, beim("ein", "Satzung"), fuell=WEISS),
+    ficon("tabler", "truck-off", FX + 90, 290, 120, beim("ein", "verbietet"), fuell=ROT),
+    pille("Parksatzung", FX - 110, 305, beim("ein", "Satzung"), fill=WEISS, size=28, anker="m"),
 ])
 
 # I A. III. Rechtfertigung: Schranke, Zweck, Eignung ------------------------------------------------------------------------
@@ -261,6 +261,7 @@ folie([("erf", f"{PR} › 2. Verhältnismäßigkeit › erforderlich"), ("angem"
     z("Sicherheit vieler Spaziergänger überwiegt", 225, 561, beim("angem", "Dem"), size=34, farbe=TEXT),
     fl_block(110, 660, 1040, 150, GRUEN, "erg1", [("Eingriff gerechtfertigt", "ExtraBold", 42, INK),
                                                 ("Art. 12 I GG nicht verletzt", "Regular", 36, INK)]),
+    peep_voll("LI_denkt", FX, BR, FR - 60, "erf", bis=beim("erf", "Fahrverbot")),
     # erforderlich: Alternative „nur Wiese gesperrt“ – Weg bleibt gefährlich
     fl_block(1290, 700, 250, 60, WIESE, beim("erf", "Fahrverbot"), [("Wiese", "Bold", 28, INK)], rand=4, bis="angem"),
     ficon("tabler", "truck-off", 1415, 680, 110, beim("erf", "Fahrverbot"), fuell=ROT, bis="angem"),
@@ -289,7 +290,7 @@ folie([("gl", PB), ("vgl", f"{PB} › I. Ungleichbehandlung")], [
     peep_voll("BR_froh", B3, BR, FR - 40, "ungl", anim="cut"),
     pille("Lina", L3, BR + 22, "gl", fill=PINK, size=30, anker="m"),
     pille("Kiosk", B3, BR + 22, "gl", fill=TUERKIS, size=30, anker="m"),
-    pille("beide: Eis im Park", 1570, 200, beim("vgl", "Lina"), fill=GELB, size=32, anker="m"),
+    pille("beide: Eis im Park", 1570, 150, beim("vgl", "Lina"), fill=GELB, size=32, anker="m"),
     ficon("tabler", "ice-cream", 1570, 330, 90, beim("vgl", "Eis"), fuell=GELB),
     kreuz_i(L3, 320, "ungl", gr=40), haken_i(B3, 320, "ungl", gr=36),
 ])
