@@ -50,7 +50,7 @@ Ordner je Folge: `youtube/preproduction/NNN-kurzname/` mit `src/` (Skript, Figur
   - Tafelzeilen bis x ≤ 1170 (Schema ≤ 1820).
   - Figuren sind nie seitlich oder oben angeschnitten.
   - Nur `szene_*`-Geräusche.
-- Geräusche: höchstens zwei oder drei Handlungsgeräusche, aus Freesound CC0 (`https://freesound.org/apiv2/…`, Zugang über den Proxy) nach `preproduction/sfx3/szene_<name>_1.wav` (48 kHz mono), Herkunft in `geraeusche_herkunft.json`.
+- Geräusche: höchstens zwei oder drei Handlungsgeräusche, aus Freesound CC0 (`https://freesound.org/apiv2/…`, Zugang über den Proxy) nach `preproduction/sfx3/szene_NNN<name>_1.wav` (**mit Folgennummer**, z. B. `szene_007tuer_1.wav`, Aufruf `szene(…, "007tuer*")`; 48 kHz mono). Vorhandene Dateien anderer Folgen nie überschreiben. Herkunft in `geraeusche_herkunft.json`.
 - Ablauf:
   1. `--vorschau` (Kontaktbogen je Folie)
   2. `--frames` an allen Fallmomenten und Sprechfenstern

@@ -66,19 +66,34 @@ KREDIT_PRO_ZEICHEN = 0.15  # gemessen Folge 001: 533 Credits / 4.420 Zeichen ≈
 
 
 def angleichen(pcm, sr=SR, ziel=ZIEL_LUFS):
-    """Bringt ein Segment auf ziel LUFS (ITU-R BS.1770, pyloudnorm), Verstärkung auf ±10 dB begrenzt,
-    Spitze höchstens −1 dBFS. Kurze Segmente werden für die Messung wiederholt. Gibt (pcm, Messwert, Gain) zurück."""
+    """Bringt ein Segment auf ziel LUFS (ITU-R BS.1770, pyloudnorm), Verstärkung auf ±10 dB begrenzt. Spitzen über −1 dBFS
+    fängt ein Vorschau-Limiter ab (Hüllkurve: Minimum über 6 ms, 6 ms geglättet; Verfahren aus Folge 002, pegel_002.py),
+    die Verstärkung wird nachgeführt, bis die begrenzte Fassung das Ziel trifft. Länge unverändert.
+    Kurze Segmente werden für die Messung wiederholt. Gibt (pcm, Messwert, Gain) zurück."""
     import pyloudnorm as pyln
+    from scipy.ndimage import minimum_filter1d, uniform_filter1d
+    meter = pyln.Meter(sr)
+    messen = lambda y: meter.integrated_loudness(y if len(y) >= 0.5 * sr else np.tile(y, int(0.5 * sr / max(1, len(y))) + 1))
     x = pcm.astype(np.float64) / 32768
-    mess = x if len(x) >= 0.5 * sr else np.tile(x, int(0.5 * sr / max(1, len(x))) + 1)
-    l = pyln.Meter(sr).integrated_loudness(mess)
+    l = messen(x)
     if not np.isfinite(l):
         return pcm, None, 0.0
+
+    def begrenzt(g):
+        y = x * 10 ** (g / 20)
+        if np.abs(y).max() <= 0.89:
+            return y
+        r = np.minimum(1.0, 0.89 / np.maximum(np.abs(y), 1e-9))
+        r = minimum_filter1d(r, int(0.006 * sr)); r = uniform_filter1d(r, int(0.006 * sr)); r = minimum_filter1d(r, int(0.002 * sr))
+        return np.clip(y * r, -0.97, 0.97)
+
     g = float(np.clip(ziel - l, -10, 10))
-    spitze = np.abs(x).max() * 10 ** (g / 20)
-    if spitze > 0.89:
-        g -= 20 * np.log10(spitze / 0.89)
-    y = x * 10 ** (g / 20)
+    y = begrenzt(g)
+    for _ in range(8):
+        d = ziel - messen(y)
+        if abs(d) < 0.05 or abs(g) >= 10:
+            break
+        g = float(np.clip(g + d, -10, 10)); y = begrenzt(g)
     return np.clip(y * 32768, -32768, 32767).astype(np.int16), round(l, 1), round(g, 1)
 
 
