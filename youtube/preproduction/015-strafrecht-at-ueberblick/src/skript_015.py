@@ -23,7 +23,7 @@ SEGMENTE = [
      "[kette]Doch der Mäher ist angekettet. Das hat Rudolf übersehen, Werkzeug hat er keins.", 0.4),
     ("[grill]Am Grill gießt Bernd Brennspiritus in die Glut, damit es schneller geht. [flamme]Eine Stichflamme schießt "
      "hoch, [blase]Otto bekommt eine Brandblase an der Hand.", 0.4),
-    ("[hund]Dann knurrt Gerdas Hund Otto an.", 0.1),
+    ("[hund]Dann knurrt der Hund von Gerda Otto an.", 0.1),
     ("[o1]Gerda, ruf deinen Hund zurück!", 0.2, "Otto"),
     ("[g1]Geschieht dir recht.", 0.3, "Gerda"),
     ("[biss]Gerda bleibt sitzen. Der Hund beißt Otto in die Wade.", 0.5),
