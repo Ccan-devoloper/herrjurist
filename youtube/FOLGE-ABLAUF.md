@@ -28,6 +28,7 @@ Ordner je Folge: `youtube/preproduction/NNN-kurzname/` mit `src/` (Skript, Figur
 
 - `SZENENPLAN.md` wie in 001: Besetzung (Pose, Kopf, Farben, Stimme), Szenentabelle (Ort, Requisiten als Iconset:Name, Tafel/Prüfpfad, Bildhalte, Geräusch), Sachverhaltskarte, Abweichungen zu den Vorfolgen.
 - `src/figuren_NNN.py` nach `figuren_raser.py`, eigener Ausgabeordner `../../peeps/op_NNN`. Jede Ansicht gibt es links- und rechtsblickend. Die Blickrichtung im Kontaktbild prüfen: Die Figur rechts blickt zur Tafel nach links. Sprechende Ansichten bekommen Mundzustände a/o/e. Posen mit Prothesen nicht reflexhaft für Täter verwenden.
+- **Grundmimik immer mit geschlossenem Mund** (Ruheform, Pausen, fremde Stimme). Offenen Mund haben: Blank (klein), Cheeky (klein, Zunge), Concerned, Concerned Fear, Explaining, Hectic, Loving Grin 1, Loving Grin 2, Rage, Smile Big, Smile LOL, Smile Teeth Gap. Diese nur als „Augen|Mund“ mit geschlossenem Mund verwenden, z. B. `"Concerned|Serious"`, `"Smile Big|Smile"`, `"Cheeky|Smile"`, `"Rage|Serious"`. Die Mundzustände entstehen dann aus `f"{mimik.split('|')[0]}|{m}"` (siehe `004-neutralitaetspflicht/src/figuren_004.py`). Geschlossen sind: Angry with Fang, Awe, Calm, Contempt, Cute, Driven, Eating Happy, Eyes Closed, Fear, Old, Serious, Smile, Solemn, Suspicious, Tired, Very Angry.
 - Requisiten nur aus den Iconsets unter `preproduction/blasen/` (Tabler, Phosphor, Fluent Emoji, Pepicons, Streamline Freehand). Lizenzen notieren; CC BY braucht eine Namensnennung in der Beschreibung.
 
 ## 4. Vertonung
@@ -41,6 +42,7 @@ Ordner je Folge: `youtube/preproduction/NNN-kurzname/` mit `src/` (Skript, Figur
 ## 5. Folien und Render
 
 - `src/folien_NNN.py` nach `folien_raser.py` (Bausteine aus `etb2/src/bausteine.py`). `src/render_NNN.py` ist eine Kopie von `render_raser.py`; nur Import und Videoname ändern. Darin sind `--vorschau`, `--frames`, `--manifest`, das harte `cut` und der Schutz für Sprites außerhalb des Bildes schon enthalten.
+- **Rechtsstand Grundgesetz:** Seit 28.12.2024 (BGBl. 2024 I Nr. 439) stehen die Zuständigkeiten des BVerfG in Art. 94 GG (Organstreit Art. 94 I Nr. 1 usw.); Art. 93 GG regelt Status und Organisation des Gerichts.
 - Gemeinsame Dateien (`etb2/src/*`, `synth_el.py`, `tools/*`) nicht ändern. Fehlt etwas, kommt eine eigene Hilfsfunktion in den Folienordner, und der Koordinator bekommt Bescheid.
 - Pflichtregeln (per Assertion geprüft):
   - Jede Cue-Marke hat ein Bildelement.
