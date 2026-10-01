@@ -61,6 +61,27 @@ def entstoeren(pcm, sr=SR):
     return np.clip(x, -32768, 32767).astype(np.int16), entfernt
 
 
+ZIEL_LUFS = -19.0          # gemeinsame Lautheit aller Stimmen (Erzählerin und Figuren), Endmischung hebt auf ≈ −16 LUFS
+KREDIT_PRO_ZEICHEN = 0.15  # gemessen Folge 001: 533 Credits / 4.420 Zeichen ≈ 0,12 (eleven_v4); 0,15 als Sicherheitsmarge
+
+
+def angleichen(pcm, sr=SR, ziel=ZIEL_LUFS):
+    """Bringt ein Segment auf ziel LUFS (ITU-R BS.1770, pyloudnorm), Verstärkung auf ±10 dB begrenzt,
+    Spitze höchstens −1 dBFS. Kurze Segmente werden für die Messung wiederholt. Gibt (pcm, Messwert, Gain) zurück."""
+    import pyloudnorm as pyln
+    x = pcm.astype(np.float64) / 32768
+    mess = x if len(x) >= 0.5 * sr else np.tile(x, int(0.5 * sr / max(1, len(x))) + 1)
+    l = pyln.Meter(sr).integrated_loudness(mess)
+    if not np.isfinite(l):
+        return pcm, None, 0.0
+    g = float(np.clip(ziel - l, -10, 10))
+    spitze = np.abs(x).max() * 10 ** (g / 20)
+    if spitze > 0.89:
+        g -= 20 * np.log10(spitze / 0.89)
+    y = x * 10 ** (g / 20)
+    return np.clip(y * 32768, -32768, 32767).astype(np.int16), round(l, 1), round(g, 1)
+
+
 def anfrage(route, body=None):
     req = urllib.request.Request(API + route, data=None if body is None else json.dumps(body, ensure_ascii=False).encode(),
                                  headers={"Content-Type": "application/json", "User-Agent": "Herrjurist-production/1.0"})
@@ -91,10 +112,12 @@ def main(modul, erzaehler="carla"):
     neu = [t for t, _, _, _, r in teile if not os.path.exists(f"{cache}/{key(t, r)}.json")]
     bedarf = sum(len(t) for t in neu)
     sub = anfrage("user/subscription")
-    rest = int(sub["character_limit"]) - int(sub["character_count"])
-    print(f"neu zu sprechen: {len(neu)} Segmente, {bedarf} Zeichen; Kontingent frei: {rest}")
-    if bedarf and rest < bedarf + 200:
+    rest = int(sub["character_limit"]) - int(sub["character_count"])   # ElevenLabs zählt hier Credits, nicht Zeichen
+    schaetzung = int(bedarf * KREDIT_PRO_ZEICHEN) + 1
+    print(f"neu zu sprechen: {len(neu)} Segmente, {bedarf} Zeichen ≈ {schaetzung} Credits; Kontingent frei: {rest} Credits")
+    if bedarf and rest < schaetzung + 200:
         sys.exit("Kontingent reicht nicht – keine Vertonung (keine automatische Mehrnutzung).")
+    rest_vorher = rest
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     teile_audio, cues, segs, t = [np.zeros(int(0.4 * SR), np.int16)], {}, [], 0.4
     for i, (text, marken, pause, _, rolle) in enumerate(teile):
@@ -121,7 +144,10 @@ def main(modul, erzaehler="carla"):
         al = json.load(open(js))["alignment"]
         pcm = np.frombuffer(subprocess.run([ff, "-v", "error", "-i", f"{cache}/{k}.mp3", "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"],
                                            capture_output=True, check=True).stdout, np.int16)
+        pcm, l_vor, g = angleichen(pcm)
         pcm, rest = entstoeren(pcm)
+        if l_vor is not None and abs(g) >= 1.5:
+            print(f"  Segment {i + 1} ({rolle or 'Erzählerin'}): {l_vor} LUFS → {ZIEL_LUFS} LUFS ({g:+.1f} dB)")
         if rest:
             print(f"  Segment {i + 1}: Restlaut am Ende stummgeschaltet (bei {', '.join(f'{r:.2f}' for r in rest)} s im Segment)")
         chars, starts = al["characters"], al["character_start_times_seconds"]
@@ -150,9 +176,17 @@ def main(modul, erzaehler="carla"):
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(alles.tobytes())
     json.dump(dict(dauer=round(len(alles) / SR, 3), sr=SR, stimme=f"ElevenLabs {MODEL}, Erzähler {erzaehler}", cues=cues, segmente=segs),
               open("../cues.json", "w"), ensure_ascii=False, indent=1)
+    if neu:
+        nach = anfrage("user/subscription")
+        verbraucht = rest_vorher - (int(nach["character_limit"]) - int(nach["character_count"]))
+        print(f"Credits verbraucht: {verbraucht} für {bedarf} Zeichen ({verbraucht / max(1, bedarf):.3f} je Zeichen)")
     print(f"Dauer {len(alles) / SR:.2f}s, {len(cues)} Marken, sha256 {hashlib.sha256(alles.tobytes()).hexdigest()[:16]}")
 
 
 if __name__ == "__main__":
     sys.path.insert(0, ".")
+    # Sperre: Vertonungen laufen nie gleichzeitig (Kontingentprüfung und Verbrauch bleiben eindeutig)
+    import fcntl
+    sperre = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".vertonung.lock"), "w")
+    fcntl.flock(sperre, fcntl.LOCK_EX)
     main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "carla")

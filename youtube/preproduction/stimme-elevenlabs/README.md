@@ -10,7 +10,8 @@
 - **Zugang in Claude-Code-Sitzungen:**
   - `api.elevenlabs.io` muss in den erlaubten Domains der Umgebung stehen.
   - Unter API-Anmeldedaten ist ein benutzerdefinierter Header `xi-api-key` einzutragen, ohne Präfix.
-- **Kontingent:** Das Skript prüft `user/subscription` und bricht ab, wenn der enthaltene Rest nicht reicht. Eine automatische Mehrnutzung gibt es nicht.
+- **Kontingent:** Das Skript prüft `user/subscription` (Werte sind **Credits**, nicht Zeichen) und schätzt den Bedarf mit 0,15 Credits je Zeichen (gemessen: 0,12 bei `eleven_v4`). Reicht der Rest nicht, bricht es ab; eine automatische Mehrnutzung gibt es nicht. Nach jeder Vertonung wird der tatsächliche Verbrauch ausgegeben.
+- **Lautheit:** Jedes Segment wird auf −19 LUFS angeglichen (`angleichen()`, ±10 dB, Spitze ≤ −1 dBFS), damit Erzählerin und Figuren gleich laut sind. Folge 001 vorher: Carla −18,8, Jonas −21,8, Max −15,6 LUFS.
 - **Wiederverwendung:** Jedes Segment wird nach Text, Sprecher, Modell und Einstellungen gecacht (`../el_cache`, nicht im Repo). Unveränderter Text wird nicht erneut bezahlt.
 - **Zeitmarken:** Die `[marke]`-Positionen kommen aus den Zeichen-Zeitmarken von `/with-timestamps`. Ausgabe sind `stimme.wav` (48 kHz) und `cues.json` im selben Format wie bei der Piper-Vertonung.
 - **Bereinigung (seit 01.10.2026):** `entstoeren()` schaltet kurze Restlaute (≤ 0,2 s nach ≥ 0,2 s Stille) am Segmentende stumm und blendet jedes Segment 8 ms ein und 15 ms aus. Die Länge bleibt gleich, deshalb gelten die Cue-Zeiten weiter. Anlass war Folge 001, Segment 18: ein abgeschnittener Ansatz nach „…vor.“, hörbar als „Abbrechen“.
