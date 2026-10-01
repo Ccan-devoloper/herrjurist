@@ -1,5 +1,7 @@
 # Verbindliche Leitlinien für Herrjurist-YouTube-Langvideos (korrigierter Bildstandard ab Folge 09)
 
+> **Vorrang seit 01.10.2026:** Der [Serienstandard Open Peeps (Katzenkönig)](MASTERSTANDARD-09.md) ersetzt alle Bildvorgaben dieser Datei. Das betrifft 02/06/09 als Stilmaster, die blaue Bühne, die marineblauen Karten, die 45 Einzelillustrationen und Wischgeräusche. Weiter gelten von hier: Format, Dramaturgie, Landesrecht länderneutral, Rollen-Stimmen-Passung, Bildwechsel an Wendepunkten und die Freigabeprüfung.
+
 **Verbindliche visuelle Master:** [Folge 02 – Polizeikontrolle](https://drive.google.com/file/d/1-ZKNhBHRT1cwWRkKDOA6tfzkbO22qSn1/view?usp=drivesdk) und [Folge 06 – Diebstahl/Gewahrsam, freigegebene Fassung v2](https://drive.google.com/file/d/1Xw4K7lG2lbz8CNYUep6hY0nlYbFLyqs-/view?usp=drivesdk) bestimmen ab jetzt **Zeichenstil, Charakterproportionen, reduziertes blaues Bühnenlayout und Lichtführung**. Folge 06 bestimmt außerdem die **Rechtskarten**: dunkelmarine Fläche, dünner orangefarbener Rand mit vertikaler Akzentlinie, große klare weiße Schrift, direkt in der Szene links neben den Figuren. Keine Rückkehr zu 04 als Stilmaßstab. Das jeweilige Thema erhält eine eigene, auf den Fall reduzierte Szenerie; die formalen Merkmale von 02/06 bleiben konstant.
 
 ## Verbindlicher Produktionsmaster und Abnahme

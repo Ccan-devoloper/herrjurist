@@ -1,80 +1,162 @@
-# Herrjurist YouTube 16:9 – verbindlicher Produktionsmaster ab Folge 09
+# Herrjurist/LexVerse YouTube 16:9 – verbindlicher Serienstandard (Open Peeps, Referenz Katzenkönig)
 
-**Freigabestand: 28.09.2026; Setting- und Lippenanimationsregeln ergänzt am 29.09.2026.** Diese Spezifikation gilt für alle künftigen rund fünfminütigen Examensvideos. Die vom Nutzer vollständig gutgeheißene [Folge 09 v3](https://drive.google.com/file/d/1cm_Z5JCs1YNAEGUj1_6K3feIsnJBSH4t/view?usp=drivesdk) ist die Gesamtreferenz für Rhythmus, Bildsprache, Rechtskarten, Prüfpfad, Sprach-Bild-Synchronität und Ton. Der [Produktionsmaster 09 v3](https://drive.google.com/file/d/1qcOl5rBvkxDagr5mxbP4uDQm_LwSnrrf/view?usp=drivesdk) enthält alle 45 Bilder, ihren SHA-256-Nachweis und ihre Einsatzzeiten, `render.py`, Schriftdateien, SFX, Tonprovenienz, Skript und Intro/Outro-Quellen. **Vor jeder Folge Video und Master ansehen, nicht nur diese Worte lesen.**
+**Freigabestand: 01.10.2026.** Der Kanalinhaber hat am 01.10.2026 entschieden: Der Open-Peeps-Stil des Katzenkönig-Videos ist der verbindliche Serienstandard für alle 780 Folgen des [Themenplans](THEMENPLAN-780.md). Diese Datei behält aus Verlinkungsgründen ihren Namen.
 
-Die [Folge 02](https://drive.google.com/file/d/1-ZKNhBHRT1cwWRkKDOA6tfzkbO22qSn1/view?usp=drivesdk) und die [freigegebene Folge 06 v2](https://drive.google.com/file/d/1Xw4K7lG2lbz8CNYUep6hY0nlYbFLyqs-/view?usp=drivesdk) bleiben die Golden References für Zeichnung, Figurentreue, Blau/Orange-Bühne und Reduktion. 06 ist insbesondere die Vorlage der in der Szene platzierten Rechtstafeln. 09 v3 zeigt die verbindliche Umsetzung aller dieser Merkmale **zusammen**. Die [allgemeinen Leitlinien](VIDEOLEITLINIEN-16x9.md), [Intro-Regel](STANDARDINTRO.md) und [Soundbibliothek](SOUNDBIBLIOTHEK.md) gelten ergänzend. Bei Widersprüchen gilt die jüngste ausdrückliche Nutzerentscheidung; ältere, abweichende Zwischenfassungen von 09 und der frühere Stilbezug auf 04 sind keine Master.
+- **Stilreferenz:** die Produktion [`preproduction/katzenkoenig-test/`](preproduction/katzenkoenig-test/) (Skript, Folien, Bausteine, Renderer, Abnahmebogen) und ihr MP4 (3:36,9 min, SHA-256 `bc6c1e5a…d09231`).
+- **Nicht mehr Maßstab:** Folge 02, Folge 06 v2 und Folge 09 v3. Sie bleiben Archiv. Für den Zeichenstil gelten sie nicht mehr, ebenso wenig die marineblauen 09-Karten und die blaue Bühne.
+- **Entfallen:** das 80-%-Stil-Gate und `style_gate_80.py` als Freigabevoraussetzung sowie die Pflicht, Illustrationen mit einem Bildmodell aus Referenzbildern zu erzeugen.
+- **Bleiben:** der stets sichtbare Prüfpfad, synchrone Rechtstafeln, die passende Stimme je Figur mit tongebundener Mundbewegung, Intro und Outro, die Soundregeln und die Drive-Ablage.
+
+Ergänzend gelten die [allgemeinen Leitlinien](VIDEOLEITLINIEN-16x9.md), die [Intro-Regel](STANDARDINTRO.md), die [Soundbibliothek](SOUNDBIBLIOTHEK.md), [THUMBNAILS.md](THUMBNAILS.md) und die [Übergabenotiz](PRODUKTION-START.md). Bei Widersprüchen gilt die jüngste ausdrückliche Entscheidung des Kanalinhabers.
 
 ## 1. Dramaturgie und Examensnutzen
 
-1. Vollständiges achtsekündiges Originalintro; direkt danach ein **konkreter, verständlicher Fall** und eine neugierig machende Rechtsfrage. Kein abstrakter Normenvortrag als erster Satz. Der Fall trägt den ganzen Film; ein gut gewählter Gegenfall schärft die Abgrenzung.
-2. Roter Faden: Rechtsfrage → Norm und systematische Gliederung → einzelne Merkmale mit Subsumtion am Fall → Ergebnis/Gegenfall → Schritt für Schritt aufgebautes Klausurschema → prägnanter Merksatz. Die Gliederung im Bild und der gesprochene Text verwenden dieselben Bezeichnungen und dieselbe Reihenfolge.
-3. Der Anspruch ist Examenswissen für Jura-Studierende. Definition, Streitstand oder Ausnahme nur dort, wo der Fall sie trägt; typische Klausurfehler und die konkrete Stelle im Gutachten benennen. Nicht bloß Wissen erzählen, sondern dessen Einsatz in der Prüfung zeigen.
-4. Vor dem Sprechen anhand der **aktuellen amtlichen Norm** und relevanter Primärrechtsprechung validieren. Fundstellen, Abrufdatum, Fallannahmen und jede notwendige Einschränkung im Produktionsmaster dokumentieren. Themenpool ist Material, keine ungeprüfte Rechtsquelle.
-5. Natürlicher, gut artikulierter Erzähler mit sinnvoller Betonung und Pausen. Ein Schlussgedanke, der ohne Zusatzsatz trägt; **keine gesprochene Verabschiedung**. Unmittelbar danach das vollständige [Standardoutro](https://drive.google.com/file/d/1YFU3DVhWsWLJpgPuSOJvLp7JjcF_K3JL/view?usp=drivesdk) mit Originalton. Kein zusätzlicher Endscreen des Hauptfilms.
+1. **Einstieg:**
+   - Vollständiges achtsekündiges Originalintro.
+   - Direkt danach ein **konkreter, verständlicher Fall** in einer Fallszene mit Figuren und eine neugierig machende Rechtsfrage.
+   - Kein abstrakter Normenvortrag als erster Satz. Der Fall trägt den ganzen Film; ein gut gewählter Gegenfall schärft die Abgrenzung.
+2. **Sachverhaltskarte:** Nach der Frage zeigt eine Karte den Sachverhalt vollständig zum Nachlesen. Sie erscheint auf einmal, mit etwa 5 s Lesepause und dem Hinweis, das Video kurz anzuhalten.
+3. **Roter Faden:**
+   - Ablauf: Rechtsfrage → Norm und Gliederung → Merkmale mit Subsumtion am Fall → Ergebnis/Gegenfall → Klausurtipp → Schritt für Schritt aufgebautes Klausurschema → Merksatz.
+   - Prüfpfad, Tafeln und gesprochener Text verwenden dieselben Bezeichnungen in derselben Reihenfolge.
+4. **Examensnutzen:**
+   - Der Anspruch ist Examenswissen für Jura-Studierende.
+   - Definitionen, Streitstände und Ausnahmen nur, wo der Fall sie trägt.
+   - Typische Klausurfehler und die konkrete Stelle im Gutachten benennen.
+5. **Rechtsprüfung:**
+   - Vor dem Sprechen an der **aktuellen amtlichen Norm** und der maßgeblichen Primärrechtsprechung validieren.
+   - Fundstellen, Abrufdatum, Fallannahmen und notwendige Einschränkungen im Produktionsmaster dokumentieren.
+   - Themenplan und Gesamtwissen („UNCERTIFIED“) sind Material, keine geprüfte Rechtsquelle.
+6. **Schluss:**
+   - Ein Merksatz, der ohne Zusatzsatz trägt; **keine gesprochene Verabschiedung**.
+   - Unmittelbar danach das vollständige [Standardoutro](https://drive.google.com/file/d/1YFU3DVhWsWLJpgPuSOJvLp7JjcF_K3JL/view?usp=drivesdk) mit Originalton, ohne zusätzlichen Endscreen.
 
-## 2. Bildsprache: 02/06 zeichnerisch, 09 v3 im Schnitt
+## 2. Bildsprache: Open Peeps nach Katzenkönig
 
-- 16:9, Ziel 1920 × 1080 bei 30 fps. Sauberer, farbkräftiger Comic-Look mit klaren dunklen Konturen, leuchtendem Kobaltblau und sparsamen warmen Orangeakzenten. Die Bühne ist reduziert; auf einer ruhigen blauen Fläche **links** bleibt Platz für die Rechtskarten, während Handlung und Figuren rechts sichtbar sind. Requisiten illustrieren den gerade gesprochenen Gedanken. Bild nicht mit generischen Kulissen oder bloßer Dekoration füllen.
-- **Konstant über die Serie:** Zeichenstil nach 02/06, klare Konturen und Figuren nach Golden References, die ruhige blaue Fläche links als lesbarer Kartenraum sowie Position, Farbgebung und Grundgestaltung von Prüfpfad und Rechtskarten nach Abschnitt 3. Diese Konstanten lassen unterschiedliche Schauplätze zu: Die blaue Fläche kann etwa durch Wand, Himmel oder bewusst freien Bildraum entstehen. Karten bleiben am definierten Ort und im Fallbild; die jeweilige Szene wird dafür komponiert.
-- **Für jede Folge neu aus dem Fall entwickeln:** Ort, Raumaufteilung, Möbel, Architektur, Hintergrund, Gegenstände und sinnvolle Perspektiven müssen die konkrete Handlung und den gesprochenen Inhalt tragen. Ein Schreibtisch, ein Büro, dieselben Schubladen/Fenster oder derselbe geflieste Boden sind keine Stilvorgabe. Frühere Schauplätze oder Möbel nur erneut verwenden, wenn die Geschichte erkennbar an denselben Ort zurückkehrt; diesen Grund im Szenenplan festhalten. Keine unveränderte Bürobühne als Standardkulisse für thematisch andere Fälle.
-- **Szenenplan vor der Bildgenerierung:** Für jede Bildfamilie Ort, Fallhandlung, benötigte Requisiten, Kartenfreiraum und die beabsichtigte Abweichung von den letzten Folgen notieren. Danach die Schlüsselbilder oder Kontaktbögen der letzten mindestens zwei Folgen danebenlegen. Wenn Möbel, Raumaufteilung und Hintergrund nahezu gleich wirken, die neue Bühne vor der Serienproduktion überarbeiten. Die Zwiebelschalentechnik gilt **innerhalb** einer Folge und Szene; sie rechtfertigt keine Wiederholung der Kulisse zwischen Folgen.
-- **Verbindliches Stil-Gate vor der Serienproduktion:** Für jede Bildfamilie zunächst genau ein vollformatiges 16:9-Schlüsselbild erzeugen. Bei **jedem Bildanker-Aufruf** tatsächlich freigegebene, hochauflösende Szenenbilder aus 02/06 als Bildreferenzen an das Bildmodell übergeben; für wiederkehrende Figuren zusätzlich die Golden Reference und einen großen, freigegebenen Figurenframe aus 06/09. Eine bloße Stilbeschreibung im Prompt oder winzige Figuren-Crops ersetzen diese Bildreferenzen nicht. Jeden Anker in voller Auflösung direkt neben 02/06 und der Gesamtreferenz 09 prüfen: Gesichtsproportionen und Silhouette der Golden-Figur, klare gleichmäßige Konturen, vereinfachte Formen, ruhige blaue Flächen, sparsame Orangeakzente und reduzierte Umgebung. Bei Anime-Anmutung, realistisch feiner Texturierung oder abweichender Figur **stoppen und den Anker neu erzeugen**. Erst nach bestandenem Gate die weiteren Varianten aus diesen Ankern ableiten; eine falsche Bildsprache nicht in 45 Edits fortpflanzen.
-- **Mindestens 80 % Ähnlichkeit mit 02/06 – verbindliche visuelle Freigabe:** Die Zahl ist eine dokumentierte **menschliche Stilbewertung von mindestens 80/100 Punkten**, keine durch Pixelabstand, CLIP, SSIM oder eine andere Software bewiesene ästhetische Prozentidentität. Bewertet wird die **Zeichensprache und Figurentreue**, nicht die Gleichheit von Ort, Möbeln, Requisiten, Tageszeit, Perspektive oder Fallhandlung. Dafür je Anker und jeder final verwendeten Illustration vollauflösende Standbilder von 02 **und** 06 sowie bei wiederkehrenden Figuren ihre Golden Reference und einen großen freigegebenen Figurenframe danebenstellen; bei einer neuen Figur die Serien-Formensprache als Vergleich nehmen. 09 dient nur ergänzend für Schnitt, Karten und Prüfpfad; bei Zeichenstilabweichungen haben 02/06 Vorrang.
-
-  | Stilmerkmal | Gewicht | Prüffrage bei 100-%-Ansicht |
-  | --- | ---: | --- |
-  | Figurenidentität und Silhouette; bei reinem Objektbild dessen Formensprache | 30 | Stimmen bei wiederkehrenden Figuren Gesicht, Alter, Körperform, Haar, Hautfarbe, Kleidung und charakteristische Attribute mit der Golden Reference überein? Bleiben neue Figuren und Objekte in derselben vereinfachten Comic-Welt? |
-  | Kontur und Strich | 20 | Entsprechen Liniengewicht, dunkle klare Außenkontur und geringe Schraffur den Masterframes? |
-  | Formvereinfachung | 20 | Sind Anatomie, Gestik, Perspektive und Gegenstände grafisch klar statt naturalistisch modelliert oder animehaft überzeichnet? |
-  | Farbigkeit und Licht | 15 | Entsprechen Kobaltblau, sparsame warme Akzente, flächige Farbe und ruhige Beleuchtung dem Master? Helle Tagesszene ist zulässig. |
-  | Bildruhe und Detailgrad | 15 | Ist die Bühne reduziert und der linke blaue Kartenraum ruhig, ohne ornamentale/texturierte Überfrachtung? Die konkrete Architektur ist frei. |
-
-  Pro Merkmal **0–5** vergeben (`5` = sehr nahe am Master; `4` = kleine Abweichung; `3` = erkennbare Stilabweichung; `2` = erhebliche Abweichung; `1` = weit entfernt; `0` = unvereinbar). Formel: `Gesamt = Summe(Gewicht × Punkte / 5)`. **Bestehen nur bei Gesamt ≥ 80/100**, Figurenidentität/Formensprache und Kontur je **mindestens 4/5**, alle übrigen Merkmale mindestens **3/5**. Ein nicht wiedererkennbarer Golden-Charakter, animehafte/naturalistisch feine Bildsprache, fehlender Kartenraum oder unlesbar verdeckte Handlung sind unabhängig von der Summe ein **Nein**. Den Anker vor Varianten ablehnen und neu erzeugen. Danach **alle** ca. 45 verwendeten Einzelbilder bei 100 % gegen 02/06 prüfen und bewerten, im finalen MP4 jeden Bildhalt sichten; eine bestandene Ankerprüfung gilt nicht automatisch für seine Varianten. Bei Zweifeln zweite unabhängige Sichtung, Abweichungen mit Bildbeleg auflösen. Scores, Veto, Referenzdateien/Framezeiten, Prüfer, Datum und verworfene Fassungen pro Bild im Stilprotokoll festhalten. Die Zahlen machen Entscheidungen nachvollziehbar; sie ersetzen kein fachliches Urteil über die Bildwirkung.
-
-  Für die wiederholbare lokale Prüfung erzeugt [`style_gate_80.py`](style_gate_80.py) eine Vergleichsgalerie mit Links zu den nativen Auflösungen und eine leere `scores.csv`. Mit `--assets BILDORDNER --ref02 MASTER02.png --ref06 MASTER06.png --out PRUEFORDNER` getrennt für die Anker und die endgültigen Einzelbilder starten; bei wiederkehrenden Figuren ihre jeweilige Golden Reference mit `--golden FIGUR.png` ergänzen, bei mehreren Figuren den Parameter wiederholen. Die Prüferin oder der Prüfer trägt die fünf Werte, `veto=yes/no`, Namen, Datum und die passende Golden Reference ein. Danach mit denselben Argumenten plus `--validate` prüfen: Nur eine lückenlose CSV ohne Veto und mit allen Schwellwerten ergibt `PASS`; der JSON-Bericht kommt in den Produktionsmaster. Ein synthetisches `PASS` ohne echte Sichtung ist keine Freigabe. Abweichende Bildfamilien, mehrere Figuren oder neue Varianten bekommen erneut eine Prüfung.
-- **Zeichen gehören in die Illustration:** Diegetische Piktogramme, Wappen, Wegweiser und Gebäudeschilder bereits im Bildbriefing und im Szenenbild selbst anlegen. Vor einer Änderung vorhandene Zeichen und ihre tatsächliche Position in **jeder** Perspektive prüfen. Keine pauschalen, nach Bildfamilie fest koordinierten Dekorations-Overlays über Szenenbilder legen; sie können beim Wechsel zur Nahaufnahme auf Gesichtern landen oder Doppelzeichen erzeugen. Nur die inhaltlich exakten Rechtskarten und der Prüfpfad werden kontrolliert im Schnitt gesetzt.
-- Wiederkehrende Figuren nur nach ihren Golden References; Proportionen, Farbe, Kleidung und wiedererkennbare Merkmale bleiben erhalten. Die Besetzung wechselt sinnvoll zwischen Folgen. Mara ist etwa 40–50: entsprechend reife, hochdeutsche Stimme ohne auffälligen Dialekt. Jede Rolle bekommt eine passende Stimme. Runway ist für Stimmen nicht erforderlich; ElevenLabs-Aufnahmen und bestehende Sprachdateien nach den allgemeinen Leitlinien verwenden.
-- Eine sprechende Figur ist **im Bild erkennbar am Sprechen**: zur genauen Äußerungszeit passt die Mundöffnung oder Sprechgeste; keine stumme, verschlossene Miene unter ihrer Stimme. Die übrigen Bildhandlungen, Gegenstände und Rechtstafeln stimmen ebenso mit dem hörbaren Satz überein. Wenn Figuren an getrennten Orten handeln, die Trennung auch visuell klar halten.
-- **Sichtbare Figurenrede braucht echte, tongebundene Sprechbewegungen.** Eine einzelne Illustration mit offenem Mund genügt nicht. Für jede sprechende Ansicht mehrere zur Figur und Perspektive passende Mundzustände (mindestens Ruhe/geschlossen sowie deutlich unterscheidbare offene, breite, runde und Lippen-/Zahnformen) als getrennte Animationslagen anlegen. Die Wechsel anhand vorhandener Wort-/Phonemzeiten und des tatsächlichen Audios timen; Schweigepausen und andere Sprecher schließen den Mund. Keine gleichförmige Endlosschleife, kein ständig offenstehender Mund, keine sichtbar aufgeklebten Patchkanten. Alle Redeabschnitte im fertigen Film in normaler Geschwindigkeit und bildweise prüfen. Den Synchronisationsgrad ehrlich dokumentieren: geschätzte Viseme aus Wortzeiten sind nicht als nachgewiesenes Phonem-Alignment auszugeben.
-- Tageslicht/helle Beleuchtung als normale Ausgangslage. Nacht nur, wenn der konkrete Fall sie verlangt. Blau ist die ruhige Bühne, kein Zwang zu einer Nachtszene.
-- Für etwa fünf Minuten Hauptfilm **Zielwert 45 eigenständige Illustrationsdateien**. Folge 09 v3: exakt 45 unterschiedliche PNGs, exakt 45 Hauptfilm-Bildhalte, jede Quelldatei einmal; keine 45 Schnittpunkte aus wiederholten zehn Bildern. SHA-256 und Einsatzzeit je Datei im Bildmanifest nachweisen. Eine begründete leichte Abweichung vom Zielwert im Abnahmebogen festhalten; Rückgriffe auf identische Dateien dürfen den Zielwert nie künstlich erfüllen.
-- Die Mundzustände sind **zusätzliche kleine Animationsassets** und zählen nicht als neue Schauplatz-/Handlungsillustrationen zu den rund 45 Hauptbildern. Der Bedarf richtet sich nach Zahl der sichtbaren Sprecher und Kameraperspektiven; in einer Folge mit zwei sprechenden Ansichten typischerweise je fünf bis sieben Zustände, von denen die Ruheform schon im Basisbild liegen kann. Das exportierte Video bleibt 30 fps; die Mundform kann innerhalb eines mehrsekündigen Bildhalts passend zum Ton wechseln, während die Szene ruhig bleibt.
-- **Zwiebelschalentechnik:** pro Ort/Szene stabiler Bildausschnitt, gleiche Perspektive, Raumaufteilung, Figurenposition und Requisiten. Benachbarte Bilder unterscheiden sich in sinntragenden Kleinigkeiten (Blick, Kopf, Mund, Haar, Hand, Telefon, leicht verschobene Körperhaltung). So entsteht ruhige Bewegung, kein hektischer Ortswechsel. Die fünf Bildfamilien von 09 (A 13, B 9, C 14, D 6, E 3) sind ein konkretes Beispiel; die Zahl und Art der Schauplätze ergeben sich künftig aus dem Fall. Kein künstlicher Dauerzoom als Ersatz für neue Zeichnungen.
-- Bildhalte an Satz und Sinnabschnitt ausrichten. In 09 dauerte eine Bildphase im Median 5,5 Sekunden; längere Halte für komplexe Karten sind erwünscht. Bildwechsel nur bei Aussage, Geste oder Abschnitt. In 09 gab es sechs größere Wischer zwischen echten Sinnabschnitten und kurze, rund fünf Frames lange Überblendungen innerhalb einer Bildfamilie. Künftig dieselbe Zurückhaltung; Wischer nur an tatsächlichen Zäsuren, kein Effekt auf jeder Textzeile.
+- **Format:** 16:9, 1920 × 1080, 30 fps.
+- **Grundfläche:** heller Cremegrund `(255, 248, 236)`.
+  - Tageslicht ist die Normalform.
+  - Ein Nachtverlauf nur, wenn der Fall ihn verlangt; den Grund dann im Szenenplan festhalten.
+- **Figuren:**
+  - Ausschließlich Open Peeps (CC0) aus [`openpeeps-erweiterung/figma-bibliothek`](openpeeps-erweiterung/figma-bibliothek/), zusammengesetzt mit `lexpeeps.py`.
+  - Nur echte Open-Peeps-Posen, Köpfe, Gesichter und Bärte; nichts umzeichnen.
+  - Statur, Kleidung, Hautton und Frisur einer Person bleiben im ganzen Video gleich. Für ein einheitliches Outfit Posen derselben Reihe (`…-1` oder `…-2`) kombinieren.
+  - Aliens nur mit `Cyclops`/`Monster`-Gesicht und menschlichem Hautton.
+- **Bildrand:**
+  - Figuren und Requisiten nie seitlich oder oben angeschnitten (Mindestabstand 24 px, `peep_voll()`, `pruefe_im_bild()`).
+  - Unten anschneiden nur bewusst (`unten_offen=True`).
+- **Lexi** ist die feste Moderatorin. Ihr Aussehen ist in `lexi.py` festgelegt:
+  - Aussehen: Dutt mit rosa Haarband, „Glasses 5“, gelbes Oberteil.
+  - Stimme: Carla Blum.
+  - Einsatz: 2–3 Auftritte je Video: Klausurtipp, Merksatz, optional ein weiterer. Nicht durchgehend im Bild.
+- **Besetzung:** Fallfiguren aus dem Ensemble. Sie wechseln sinnvoll zwischen Folgen, kein reflexhaft gleiches Personal wie in der letzten Folge.
+- **Requisiten:**
+  - Nur Linien-Icons aus Bibliotheken: Tabler, Phosphor und Fluent Emoji (MIT), Pepicons (CC BY 4.0).
+  - Gefüllt nur mit Palettenfarben über `ficon()`, nicht umgezeichnet.
+  - Jedes Requisit illustriert den gerade gesprochenen Gedanken; keine Dekoration.
+  - Herkunft und Lizenz der verwendeten Sets im Master notieren.
+- **Palette:**
+  - Tusche `INK (21, 21, 21)`, Weiß.
+  - Flächen: Gelb `(249, 213, 110)`, Grün `(143, 214, 148)`, Blau `(141, 179, 242)`, Lila `(184, 169, 245)`, Rot `(240, 122, 106)`.
+  - (+)/(−) in Dunkelgrün `(40, 150, 85)` und Dunkelrot `(215, 60, 45)`.
+- **Schrift:** Nunito, Ersatzschrift DM Sans.
+- **Blasen:**
+  - Sprech- und Denkblasen im Pinselstil.
+  - Der Schwanz zeigt auf den Mund der sprechenden Figur bzw. die Gedankenpunkte auf ihren Kopf (`blase(…, figur=…)`).
+  - Blasentext kurz und wörtlich gleich mit dem Gesprochenen.
+- **Setting:** Für jede Folge neu aus dem Fall entwickeln.
+  - Ort, Raumaufteilung, Gegenstände und Perspektive tragen die konkrete Handlung.
+  - Frühere Schauplätze nur, wenn die Geschichte erkennbar dorthin zurückkehrt; den Grund im Szenenplan festhalten.
+- **Szenenplan vor dem Bau:** Für jede Szene festhalten:
+  - Ort, Fallhandlung, Figuren mit Posen und Mimiken, Requisiten (Iconset/Name)
+  - Tafelinhalt, Prüfpfadtext, Cue-Marken
+  - beabsichtigte Abweichung von den letzten zwei Folgen
+- **Zwiebelschalentechnik:**
+  - Innerhalb einer Szene bleiben Bildausschnitt, Figurenposition und Requisiten stabil.
+  - Benachbarte Bildhalte unterscheiden sich in sinntragenden Kleinigkeiten: Mimik, Pose, Blase, Requisit, Tafelpunkt.
+  - Kein künstlicher Dauerzoom als Ersatz für neue Bildzustände.
+- **Bildhalte:**
+  - Ziel für etwa fünf Minuten Hauptfilm: **mindestens 45 unterschiedliche Bildhalte**. Katzenkönig hatte 70 in 3:37 min, im Median etwa 3 s.
+  - Die Bilder werden programmatisch komponiert. Nachweis über ein Bildhalt-Manifest: Start/Ende, Szene, Figurenzustände und SHA-256 des gerenderten Keyframes.
+  - Wiederholte identische Zustände zählen nicht.
+- **Mundzustände:**
+  - Sie sind zusätzliche Assets und zählen nicht als Bildhalte.
+  - Je sprechender Ansicht mindestens: zu (Grundmimik), a (`Explaining`), o (`Concerned Fear`), e (`Hectic`), montiert über `gesicht="Grund|Mund"` mit Schnitt bei 60 % der Gesichtshöhe, ohne Patchkante.
+- **Übergänge:**
+  - Zwischen Szenen eine Schiebeblende (14 Frames, endet am Folienstart).
+  - Innerhalb einer Szene harte Schnitte oder kurze Pops.
+  - Keine Effekte auf jeder Textzeile.
 
 ## 3. Rechtstafeln und stets sichtbarer Prüfpfad
 
-Das Referenzbild ist **die tatsächlich gerenderte Folge 09 v3**, insbesondere die Prüfschema-Szene um Minute 4:34. Die folgenden Werte beschreiben die Umsetzung bei 1920 × 1080 und sind Startwerte für die nächste Produktion. Der Bildausschnitt darf die Figuren nie verdecken; je nach Szene die Bühne an das feste Kartenfeld anpassen.
+Referenz ist die gerenderte Katzenkönig-Folge und [`bausteine.py`](preproduction/katzenkoenig-test/bausteine.py)/[`folien_kk.py`](preproduction/katzenkoenig-test/folien_kk.py).
 
-| Element | Referenz 09 v3 | Verpflichtende Wirkung |
+| Element | Referenz Katzenkönig (1920 × 1080) | Verpflichtende Wirkung |
 | --- | --- | --- |
-| Prüfpfad oben links | x=58, y=32, Breite=740, Höhe=67 px; gerundete marineblaue Fläche, 2 px orange Kontur, 6 px Akzentlinie | Vom ersten Bild **nach dem Intro** bis zum letzten Bild **vor dem Outro** ohne Unterbrechung sichtbar; bei jedem neuen Merkmal inhaltlich aktualisiert. Kein Kapitel-/Fortschrittszähler. |
-| Größere Rechtskarte | x=58, y=124, Breite=740 px; Höhe nach Inhalt, maximal ca. 720 px; gerundete marineblaue Fläche, 3 px orange Kontur, 6 px vertikale Linie | Direkt im laufenden Fallbild links neben den Figuren. Sie erscheint genau zum gesprochenen Begriff und entfällt bei unpassender Figurenrede. Keine Vollbildfolie und keine Überlagerung von Gesichtern. |
-| Farben | Marineblau RGBA `(5,20,56,242)`; Orange `#FF8447`; Hauptweiß `#FCFDFF`, helles Blauweiß für Unterpunkte | Hoher Kontrast, keine halbtransparenten hellblauen Zeilenchips; Kontur und Akzent bleiben ruhig. |
-| Schrift | Titel: Inter, ca. 31–49 px; Tafeltext: Inter, ca. 27–37 px; Prüfpfad: Space Grotesk Bold, ca. 26–30 px | Wenige kurze Zeilen, klare römische Gliederung und dezente Einrückung. Lange Texte kürzen oder passend umbrechen; niemals über die Box hinaus. |
-| Textabstände | Linker Tafeltextbeginn ca. x=111; rechte Innenkante mindestens 20 px, unten mindestens 16 px; Prüfpfad mit Innenrand | Vor Rendern jede Text-Bounding-Box prüfen; danach Sichtprüfung bei 100 % und auf mobiler Vorschau. |
+| Prüfpfad unten links | x=40, y≈1034; Nunito Medium 30 px; Tusche mit Deckkraft 140 | Vom ersten Bild **nach dem Intro** bis zum letzten Bild **vor dem Outro** ohne Unterbrechung sichtbar. Bei jedem neuen Merkmal am gesprochenen Wort aktualisiert, z. B. `A. Richard › Schuld › Verbotsirrtum, § 17 StGB`. Kein Kapitel-/Fortschrittszähler. |
+| Rechtstafel links | `karte(60, 60, 1140, h≤840)`: weiße Fläche, 5 px Tuschekontur, Radius 26, 10 px Versatzschatten. Titel Nunito ~50 px, Zeilen ~38 px. | Steht links in der Szene; die Figuren stehen rechts (Tafeln x ≤ 1200, Figuren x ≥ 1260). Die Karte erscheint vollständig, die Punkte folgen nacheinander genau zum gesprochenen Begriff. Keine Überdeckung von Gesichtern. |
+| Klausurtipp | Tafel mit hellgelber Fläche `(255, 251, 230)`, Warnsymbol, Lexi rechts | Nur bei echtem Klausurhinweis. |
+| Bewertungen | Bleistift-Haken/-Kreuz, (+)/(−) in Dunkelgrün/Dunkelrot | Genau zur gesprochenen Bejahung oder Verneinung. |
+| Textgrenzen | `z()` begrenzt jede Tafelzeile auf x ≤ 1170; `blase()` prüft die Textbreite; `pruefe_im_bild()` prüft alle Elemente | Vor dem Rendern per Assertion, danach Sichtprüfung bei 100 % und in der mobilen Vorschau. |
 
-- Der Prüfpfad nennt immer die **aktuelle** Ebene, z. B. `I. Objektiver TB › 2. Irrtum`. Ein bloßer Videotitel, „Kapitel 01/09“ oder eine Fortschrittsleiste erfüllt das nicht. Die Fall-Einleitung und das Fazit bekommen sinnvolle eigene Pfadbezeichnungen.
-- Rechtstafel und Kommentar nennen den gerade geprüften Punkt; das Schluss-Schema wird **Gliederungspunkt für Gliederungspunkt** ergänzt und enthält die relevanten Untermerkmale. Bei § 263 StGB in 09 stehen im Endbild unter I. Täuschung, Irrtum, Verfügung und Schaden, unter II. Vorsatz sowie Absicht rechtswidriger, stoffgleicher Bereicherung, dann III. Rechtswidrigkeit, IV. Schuld. Für andere Normen das korrekte eigene Schema einsetzen.
-- Bei Überblendungen erst die **Hintergrundbilder** mischen und dann die neue, klare Karte zeichnen. Keine doppelt geisternden Buchstaben während einer Überblendung oder eines Wischs. Kleine Änderungen der Mimik genügen; der Prüfpfad bleibt an derselben Position stehen.
-- Kein Untertitelband, keine automatisch eingebrannten Captions, kein Label „Herr Juris / Zivilrecht“, keine Folgen-/Kapitelnummer, keine Fortschrittsanzeige und keine zusätzliche Hauptfilm-Schlusseinblendung. Das ausdrücklich gewünschte Standardoutro bleibt vollständig.
+- **Prüfpfad:** Er nennt immer die **aktuelle** Ebene. Fall, Sachverhalt, Klausurtipp, Schema und Merksatz bekommen eigene Pfadbezeichnungen.
+- **Klausurschema:** Es baut sich **Gliederungspunkt für Gliederungspunkt** auf, mit den relevanten Untermerkmalen und denselben Bezeichnungen wie zuvor.
+- **Übergänge:** Die Schiebeblende schiebt die leere Fläche; es gibt keine doppelt geisternden Texte.
+- **Verboten im Hauptfilm:**
+  - Untertitelband und eingebrannte Captions
+  - Folgen-/Kapitelnummer und Fortschrittsanzeige
+  - zusätzliche Schlusseinblendung
 
-## 4. Stimmen, Geräusche und Schnitt
+## 4. Stimmen, Mundbewegung, Geräusche und Schnitt
 
-- Erzähler und Figuren sprechen natürlich, zur Rolle passend und verständlich. Bestehende freigegebene ElevenLabs-Aufnahmen beim Bildnachschnitt **ohne erneute Spracherzeugung** verwenden, solange der Text gleich bleibt. Neue Credits nur, wenn tatsächlich neuer Text oder eine korrigierte Stimme nötig ist. Stimme, Geschlecht, Alter und Akzent der Rolle prüfen.
-- Das [gespeicherte SFX-Archiv](SOUNDBIBLIOTHEK.md) zuerst nutzen. In 09 sind sechs leise, unterschiedliche Wischer mit den sechs sichtbaren Orts-/Abschnittswischern synchronisiert; dazu drei diegetische Geräusche (Tastatur, Zahlungsklick, Packband) genau bei sichtbarer Handlung. Kein Dauersound, kein Geräusch nur der Effektmenge wegen.
-- Die Transientenspitze des Whooshs liegt am visuellen Wisch-Scheitel; sanft ein- und ausblenden. Die 09-Mischung begrenzt einzelne SFX-Peaks auf etwa 0,02–0,023 der digitalen Vollaussteuerung als Ausgangspunkt, **entscheidend ist die Hörprüfung** mit deutlich vordergründiger Sprache. Keine Annahme, dass derselbe Zahlenwert jedes Soundfile passend macht.
-- Introbild und -ton vollständig übernehmen und auf Ausgabeformat bringen. Nach dem letzten inhaltlichen Wort sauber auf das vollständige Outro wechseln; kein abgeschnittenes Wort, keine hörbare „Bis zum nächsten Thema!“-Floskel. Der Schnittzeitpunkt 302,167 s ist **nur für Folge 09** gültig.
+- **Stimmen:**
+  - Erzählerin ist **Carla Blum** (Kanalstimme), Reserve Moritz Wegner.
+  - Fallfiguren aus dem [Ensemble](preproduction/stimme-elevenlabs/BESETZUNG.md), innerhalb eines Videos klar unterscheidbar.
+  - Rolle, Alter, Geschlecht und Akzent passen zusammen. Lea nicht für Gewalt- oder Tatbeschreibungen.
+  - Modell `eleven_v4` über `synth_el.py` mit Zeichenzeiten.
+- **Wiederverwendung:**
+  - Bestehende Aufnahmen bei unverändertem Text aus dem Cache (Text + Stimme + Settings) wiederverwenden.
+  - Neue Credits nur für neuen Text oder eine korrigierte Stimme.
+- **Sichtbare Figurenrede:**
+  - Genau die sprechende Figur zeigt tongebundene Mundbewegung (`redet()`).
+  - Die Zeiten stammen aus den ElevenLabs-Wortgrenzen. Zwischen Wörtern, in Pausen und bei anderen Sprechern ist der Mund zu.
+  - Kein Endlosloop, kein dauernd offener Mund.
+  - Die Viseme sind aus der Schreibung geschätzt. So dokumentieren und nicht als Phonem-Alignment ausgeben.
+- **Geräusche (Stand 30.09.2026):**
+  - **Nur Handlungsgeräusche** bei sichtbarer Handlung (`szene_*`, im Renderer per Assertion erzwungen).
+  - **Keine** Wisch-, UI-, Blätter- oder Markergeräusche; Schiebeblenden bleiben stumm.
+  - Wenige Einsätze, Transient am visuellen Ereignis, sanft ein- und ausgeblendet, Sprache klar vorn.
+  - Zuerst die [Soundbibliothek](SOUNDBIBLIOTHEK.md), dann Freesound CC0; jede Datei mit Herkunft in `geraeusche_herkunft.json`.
+- **Intro und Outro:**
+  - Introbild und -ton vollständig übernehmen und auf das Ausgabeformat bringen.
+  - Nach dem letzten Sachwort sauber auf das vollständige Outro wechseln, ohne abgeschnittenes Wort.
 
 ## 5. Export, Quellen und zwingende Abnahme
 
-- MP4: H.264, yuv420p, 1920 × 1080, 30 fps; AAC Stereo mit 48 kHz. Länge etwa fünf Minuten **Inhalt** plus achtsekündiges Intro und vollständiges Outro (09 v3: 317,267 s gesamt). Keine Untertitelspur.
-- Zu jeder Folge ein Produktionsmaster in Drive: Skript, Quellen und Rechtsstand, Golden-Reference-/Figurenwahl, **alle** Illustrationdateien, SHA-256-Bildmanifest mit Einsatzzeit, Audio und Voice-Provenienz, verwendete SFX und Cue-Zeiten, Fonts, Render-/Schnittdateien und finale Videoverweise. Keine Videobinaries oder Bildpakete in GitHub.
-- **Nachweis des Stil-Gates:** Im Produktionsmaster für jede Bildfamilie die tatsächlich als Bildreferenz übergebenen Dateipfade, den geprüften Anker und ein nebeneinander gesetztes Kontaktbild mit vollformatigen 02/06/09-Referenzframes ablegen. Das Prüfergebnis für Kontur, Gesichtsform, Silhouette, Flächen, Textur und Kartenfreiraum mit gegebenenfalls verworfenem Anker im Abnahmebogen festhalten. Dateizahl, SHA-Unterschiede und korrekte Kartenposition belegen allein keinen eingehaltenen Zeichenstil.
-- **Verbindliches Ton-Bild-Gate vor jedem Render:** Die tatsächlich weiterverwendete AAC-Originalspur zunächst in eine Cue-Timeline mit **mindestens 45 Zeilen** (je geplanter Hauptfilm-Bildhaltephase eine Zeile) übertragen. Jede Zeile nennt Start/Ende, den hörbaren Sprecherkern und Wort-/Satz-Cue sowie die gleichzeitige Bildhandlung, Rechtskarte und den Prüfpfad. **Jeden Start** von Bild, Karte und Prüfpfad an den tatsächlich gehörten Wort- und Satzgrenzen der AAC-Spur gegenhören; automatische Transkription ist nur eine Suchhilfe. Keine Gegenfall-Bilder mehrere Sekunden nach der Erwähnung und kein fertiges Prüfschema vor dem gesprochenen Aufbau. Nach jeder Änderung von Bildfolge, Karte, Pfad, Audio oder Schnitt die betroffenen Cues erneut mit dem Originalton abgleichen und erst danach rendern. Die Timeline und den Prüfnachweis im Produktionsmaster ablegen.
-- **Bildzeichen-Abnahme:** Jeden Hauptfilm-Bildhalt im **finalen MP4** als Kontaktbogen und an kritischen Stellen in voller Auflösung sichten. Insbesondere nach Weit-/Nahbildwechseln auf vorhandene Zeichen, Doppelzeichen, fehlplatzierte Overlays und Überlagerungen von Gesichtern achten; Sprechfenster zusätzlich frameweise prüfen. Ein korrektes Quellbild allein genügt nicht.
-- Den [Abnahmebogen](ABNAHME-16x9.md) **für jede Folge separat ausfüllen**. Sicht- und Hörprüfung des exportierten MP4 an Anfang, allen Merkmal- und Figurenwechseln, allen großen Wischern, komplettem Prüfschema und Übergang ins Outro. Automatische technische Prüfung: Metadaten, Bilddateien und Hashes, Textbegrenzungen, fehlende Untertitelspur sowie vollständiger Fehler-Decode. Wenn ein Punkt scheitert, korrigieren und erneut prüfen, bevor die Folge „freigabefähig“ heißt.
-- Zur visuellen Abnahme auch Schlüsselbilder oder Kontaktbögen der letzten mindestens zwei Folgen **nebeneinander** vergleichen: Zeichenstil, blauer Kartenraum und Kartenposition müssen konstant sein; Schauplätze, Möbel und Requisiten müssen zum neuen Fall passen und dürfen nicht versehentlich dieselbe Ausstattung wiederholen. Ein Wiedersehen mit einem früheren Ort ist nur bei erkennbarem inhaltlichem Grund zulässig. Den Vergleich und gegebenenfalls den Grund im Abnahmebogen dokumentieren.
-- Endprodukt und vollständigen Master im vorgesehenen Drive-Ordner ablegen und per Readback kontrollieren. Eine neue Folge nie allein deshalb abnehmen, weil der Renderer ohne Fehler durchlief: Bild-Satz-Passung, Figurensprache, rechtliche Präzision und Lesbarkeit brauchen menschliche Sicht- und Hörprüfung.
+- **MP4:**
+  - H.264, yuv420p, 1920 × 1080, 30 fps; AAC Stereo 48 kHz, ohne Untertitelspur.
+  - Länge etwa fünf Minuten Inhalt plus Intro und Outro.
+  - Lautheit wie Katzenkönig, etwa −16 LUFS, True Peak unter −1 dBTP.
+- **Ton-Bild-Gate vor dem Render:**
+  - Cue-Timeline aus der tatsächlich verwendeten Sprachspur mit **mindestens 45 Zeilen**, je Bildhalt eine.
+  - Jede Zeile: Start/Ende, Sprecher, Wort-/Satz-Cue, Bildhandlung, Tafelpunkt, Prüfpfad.
+  - Jeden Start an den gehörten Wortgrenzen prüfen. Kein Gegenfallbild Sekunden nach der Erwähnung, kein fertiges Schema vor dem gesprochenen Aufbau.
+  - Nach jeder Änderung die betroffenen Cues neu abgleichen.
+- **Produktionsmaster in Drive** (`LexVerse Produktion/NNN Titel/master.zip`):
+  - Skript, Quellen und Rechtsstand, Szenenplan
+  - Figurenrezepte (`figuren_*.py`) und erzeugte Figuren-PNGs
+  - Bildhalt-Manifest mit SHA-256, Cue-Timeline, Audio und Voice-Provenienz, SFX mit Herkunft
+  - Fonts-Verweis, Render-/Schnittdateien, finale Videoverweise
+- **Upload-Texte:** Nach [PRODUKTION-START.md](PRODUKTION-START.md) liegen sie im Folgenordner: MP4, `thumb_A.jpg`, `thumb_B.jpg`, `beschreibung.txt`, `kapitel.txt`, `untertitel.srt`, `metadaten.json`. Keine Binärdateien in GitHub.
+- **Bildabnahme:**
+  - Jeden Bildhalt im **finalen MP4** als Kontaktbogen sichten, kritische Stellen in voller Auflösung, Sprechfenster frameweise.
+  - Kontaktbögen der letzten mindestens zwei Folgen danebenlegen. Stil, Tafel- und Prüfpfadposition bleiben konstant; Schauplätze und Requisiten passen zum neuen Fall.
+- **Abnahmebogen:**
+  - [Abnahmebogen](ABNAHME-16x9.md) **je Folge** ausfüllen.
+  - Sicht- und Hörprüfung an Anfang, allen Merkmal- und Figurenwechseln, Szenenwechseln, komplettem Schema und Übergang ins Outro.
+  - Technikprüfung: Metadaten, Manifest, Textgrenzen, fehlende Untertitelspur, vollständiger Fehler-Decode.
+- **Freigabe:**
+  - Endprodukt und Master in Drive ablegen und per Readback prüfen.
+  - Eine Folge nie allein deshalb abnehmen, weil der Renderer fehlerfrei durchlief. Bild-Satz-Passung, Figurensprache, rechtliche Präzision und Lesbarkeit brauchen die menschliche Sicht- und Hörprüfung des Kanalinhabers.
 
-**Nicht zu kopieren:** Fall, Wortlaut, Anzahl und Art der Schauplätze, Möbel, Hintergrundarchitektur, Brakk und Zylla sowie die exakten Zeitmarken von 09 sind themenspezifisch. Zu übernehmen sind der Zeichenstil, die ruhige blaue Kartenfläche, die Kartenposition und Prüfpfad-Logik, die Methode eigenständiger Bewegungsbilder **je Szene**, die Ton-Zurückhaltung und das belegte Abnahmeverfahren.
+**Nicht zu kopieren:** Fall, Wortlaut, Schauplätze, Figurenbesetzung und Zeitmarken des Katzenkönigs sind themenspezifisch. Zu übernehmen sind Stil, Layout, Tafel- und Prüfpfad-Logik, Mund- und Blasenlogik, die Ton-Zurückhaltung und das Abnahmeverfahren.

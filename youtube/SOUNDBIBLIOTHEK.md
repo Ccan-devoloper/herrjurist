@@ -6,6 +6,8 @@ Die vom Nutzer gelieferten Originalarchive liegen dauerhaft im [Drive-Ordner 00-
 - [Explainer_SFX_50_Vol2.zip](https://drive.google.com/file/d/1pK3m_bvZQp-qtiq1Pb08UMLH_89aG2Ev/view?usp=drivesdk): Section Changes, Card Panels, Text-/Formbewegungen.
 - [Everyday_SFX_50.zip](https://drive.google.com/file/d/1UT9Zp9rwD5WpTiazbgexYtFJB6AhrEHg/view?usp=drivesdk): konkrete Alltagsgeräusche wie Schritte, Papier, Tastatur, Tür, Fahrrad und Straßenknopf.
 
+> **Stand 30.09./01.10.2026 (Serienstandard Open Peeps):** Es gibt nur noch Handlungsgeräusche bei sichtbarer Handlung. Schiebeblenden bleiben stumm; Wisch-, UI- und Panelklänge entfallen. Die Archive bleiben die erste Quelle, Freesound CC0 die zweite, jeweils mit Herkunftsnachweis.
+
 ## Anwendung ab Folge 08
 
 1. Erst den sichtbaren Vorgang oder die inhaltliche Zäsur festlegen. Nur dann einen passenden Effekt aus dem Archiv auswählen. Schritte erfordern im Bild eine gehende Figur; ein Panelklang begleitet wirklich ein Panel.
