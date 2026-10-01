@@ -8,7 +8,7 @@ Politisch neutral: das Anliegen der Gruppe wird nicht bewertet."""
 
 P, PS = 0.4, 0.9
 
-STIMMEN = {"Hanna": "lucy", "Lukas": "timo", "Dieter": "stephan", "Sabine": "laura_ruhig"}  # Lexi = Erzählerstimme (Carla)
+STIMMEN = {"Hanna": "lucy", "Dieter": "stephan", "Sabine": "laura_ruhig"}  # Lexi = Erzählerstimme (Carla)
 
 SEGMENTE = [
     # --- A Fall: die Blockade ------------------------------------------------------------------------------------------
