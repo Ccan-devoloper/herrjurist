@@ -18,13 +18,13 @@ P = {
     "MX": ("standing/shirt-4", "Flat Top", "Goatee 1", None, {"Skin": "#C99470", "Top": "#2E2E3A", "Pants": "#8DB3F2"}, 0),
 }
 
-# (Name, Person, Grundmimik, mit Mundzuständen); jede Ansicht zusätzlich als _r (blickt nach rechts)
+# (Name, Person, Grundmimik, mit Mundzuständen); Grundmimik immer mit geschlossenem Mund ("Augen|Mund", Befund 01.10.2026); jede Ansicht zusätzlich als _r (blickt nach rechts)
 LISTE = [
-    ("JO_cool", "JO", "Cheeky", 0), ("JO_redet", "JO", "Suspicious", 1), ("JO_schock", "JO", "Fear", 0),
-    ("JO_klagt", "JO", "Concerned", 1), ("JO_denkt", "JO", "Serious", 0), ("JO_muede", "JO", "Tired", 0),
-    ("JO_stolz", "JO", "Smile Big", 0),
+    ("JO_cool", "JO", "Cheeky|Smile", 0), ("JO_redet", "JO", "Suspicious", 1), ("JO_schock", "JO", "Fear", 0),
+    ("JO_klagt", "JO", "Concerned|Serious", 1), ("JO_denkt", "JO", "Serious", 0), ("JO_muede", "JO", "Tired", 0),
+    ("JO_stolz", "JO", "Smile Big|Smile", 0),
     ("MX_cool", "MX", "Calm", 0), ("MX_redet", "MX", "Smile", 1), ("MX_ernst", "MX", "Serious", 0),
-    ("MX_denkt", "MX", "Concerned", 0),
+    ("MX_denkt", "MX", "Concerned|Serious", 0),
 ]
 
 n = 0
@@ -34,7 +34,7 @@ for name, p, mimik, mund in LISTE:
         figur(pose, kopf, mimik, bart, brille, farben, hoehe=1200, spiegeln=bool(gespiegelt)).save(f"{ZIEL}/{name}{suffix}.png"); n += 1
         if mund:
             for k, m in MUND.items():
-                figur(pose, kopf, f"{mimik}|{m}", bart, brille, farben, hoehe=1200,
+                figur(pose, kopf, f"{mimik.split('|')[0]}|{m}", bart, brille, farben, hoehe=1200,
                       spiegeln=bool(gespiegelt)).save(f"{ZIEL}/{name}{suffix}_{k}.png"); n += 1
 # Lexi (feste Moderatorin, Stimme Carla), blickt nach links zur Tafel
 for name, (pose, mimik) in {"LX_erklaert": ("standing/robot_dance-1", "Smile"), "LX_warnt": ("standing/robot_dance-1", "Serious"),

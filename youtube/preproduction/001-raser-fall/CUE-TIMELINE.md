@@ -5,9 +5,9 @@ Quelle: `bildhalt_manifest.json` (107 Bildhalte, davon 107 eigenständig), `cues
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
 | 1 | 0:00.80 | 0:04.20 | Carla (Erzählerin/Lexi) | halb eins in der Nacht, mitten in der Innenstadt. | Fall · Das Rennen | `30d93e9f8471` |
-| 2 | 0:04.70 | 0:09.10 | Carla (Erzählerin/Lexi) | und Max stehen mit starken Autos nebeneinander an einer roten Ampel. | Fall · Das Rennen | `7b626e728ce5` |
+| 2 | 0:04.70 | 0:09.10 | Carla (Erzählerin/Lexi) | und Max stehen mit starken Autos nebeneinander an einer roten Ampel. | Fall · Das Rennen | `3a2685a09943` |
 | 3 | 0:09.10 | 0:12.76 | Jonas | Bis zum Ende vom Boulevard. Wer zuerst da ist? | Fall · Das Rennen | `cad10757ff64` |
-| 4 | 0:12.76 | 0:14.28 | Max | Abgemacht! | Fall · Das Rennen | `a5922b8c60fe` |
+| 4 | 0:12.76 | 0:14.28 | Max | Abgemacht! | Fall · Das Rennen | `44000bae4c10` |
 | 5 | 0:14.28 | 0:17.08 | Carla (Erzählerin/Lexi) | Die Ampel springt auf Grün. Beide geben | Fall · Das Rennen | `3aec1ef7ced7` |
 | 6 | 0:17.08 | 0:18.08 | Carla (Erzählerin/Lexi) | Vollgas. | Fall · Das Rennen | `d75f5a444cf2` |
 | 7 | 0:18.38 | 0:21.00 | Carla (Erzählerin/Lexi) | mehrere Kreuzungen rasen sie, teils bei | Fall · Das Rennen | `7ae43ae080b8` |
@@ -20,12 +20,12 @@ Quelle: `bildhalt_manifest.json` (107 Bildhalte, davon 107 eigenständig), `cues
 | 14 | 0:34.48 | 0:35.08 | Carla (Erzählerin/Lexi) | Jonas | Fall · Die Kreuzung | `6971573d51e6` |
 | 15 | 0:35.08 | 0:38.16 | Carla (Erzählerin/Lexi) | rammt ihn mit voller Wucht. Der neunundsechzigjährige | Fall · Die Kreuzung | `eb0259ba7052` |
 | 16 | 0:38.16 | 0:41.38 | Carla (Erzählerin/Lexi) | Fahrer stirbt noch an der Unfallstelle. | Fall · Die Kreuzung | `c5cdf4ab311a` |
-| 17 | 0:41.38 | 0:44.28 | Jonas | Ich wollte doch niemanden töten! | Fall · Die Kreuzung | `161e8b58ec2e` |
-| 18 | 0:44.28 | 0:50.48 | Carla (Erzählerin/Lexi) | Ist Jonas trotzdem ein Mörder? Und was ist mit Max, der niemanden gerammt hat? | Fall · Die Frage | `82da75a353be` |
+| 17 | 0:41.38 | 0:44.28 | Jonas | Ich wollte doch niemanden töten! | Fall · Die Kreuzung | `c37719542622` |
+| 18 | 0:44.28 | 0:50.48 | Carla (Erzählerin/Lexi) | Ist Jonas trotzdem ein Mörder? Und was ist mit Max, der niemanden gerammt hat? | Fall · Die Frage | `015ec5d682dd` |
 | 19 | 0:50.48 | 1:00.68 | Carla (Erzählerin/Lexi) | Hier ist der Sachverhalt noch einmal zum Nachlesen. Halte das Video ruhig kurz an. | Sachverhalt | `51285d0604d2` |
-| 20 | 1:00.68 | 1:02.68 | Carla (Erzählerin/Lexi) | Wir beginnen mit Jonas: | A. Jonas › §§ 212, 211 StGB | `c806074e15c7` |
-| 21 | 1:02.68 | 1:09.56 | Carla (Erzählerin/Lexi) | Mord nach Paragraf zweihundertelf, aufbauend auf Totschlag nach Paragraf zweihundertzwölf. | A. Jonas › §§ 212, 211 StGB | `a187460b3f55` |
-| 22 | 1:09.56 | 1:14.06 | Carla (Erzählerin/Lexi) | Objektiv hat Jonas den Tod des Fahrers verursacht. | A. Jonas › I. 1. Objektiver Tatbestand | `0da688c90ee7` |
+| 20 | 1:00.68 | 1:02.68 | Carla (Erzählerin/Lexi) | Wir beginnen mit Jonas: | A. Jonas › §§ 212, 211 StGB | `2614c1850b6b` |
+| 21 | 1:02.68 | 1:09.56 | Carla (Erzählerin/Lexi) | Mord nach Paragraf zweihundertelf, aufbauend auf Totschlag nach Paragraf zweihundertzwölf. | A. Jonas › §§ 212, 211 StGB | `ee826141bc50` |
+| 22 | 1:09.56 | 1:14.06 | Carla (Erzählerin/Lexi) | Objektiv hat Jonas den Tod des Fahrers verursacht. | A. Jonas › I. 1. Objektiver Tatbestand | `c787f1b15937` |
 | 23 | 1:14.30 | 1:16.30 | Carla (Erzählerin/Lexi) | Problem ist der Vorsatz. | A. Jonas › I. 2. Vorsatz | `74dadfd14d73` |
 | 24 | 1:16.30 | 1:17.06 | Carla (Erzählerin/Lexi) | Absicht und | A. Jonas › I. 2. Vorsatz | `fd5b334093e4` |
 | 25 | 1:17.06 | 1:19.26 | Carla (Erzählerin/Lexi) | sicheres Wissen scheiden aus, es | A. Jonas › I. 2. Vorsatz | `512185f078e3` |
@@ -33,10 +33,10 @@ Quelle: `bildhalt_manifest.json` (107 Bildhalte, davon 107 eigenständig), `cues
 | 27 | 1:21.74 | 1:27.54 | Carla (Erzählerin/Lexi) | Bedingt vorsätzlich handelt, wer den Tod als möglich und nicht ganz fernliegend erkennt | A. Jonas › I. 2. Vorsatz › bedingter Vorsatz | `145071009da2` |
 | 28 | 1:27.54 | 1:30.14 | Carla (Erzählerin/Lexi) | und ihn billigt oder sich mit ihm abfindet, | A. Jonas › I. 2. Vorsatz › bedingter Vorsatz | `65c60f625701` |
 | 29 | 1:30.14 | 1:34.46 | Carla (Erzählerin/Lexi) | mag er ihm auch gleichgültig oder an sich unerwünscht sein. | A. Jonas › I. 2. Vorsatz › bedingter Vorsatz | `072083401755` |
-| 30 | 1:34.46 | 1:37.18 | Carla (Erzählerin/Lexi) | Bewusst fahrlässig handelt dagegen, wer | A. Jonas › I. 2. Vorsatz › Abgrenzung | `b728721e56b1` |
-| 31 | 1:37.18 | 1:39.34 | Carla (Erzählerin/Lexi) | ernsthaft und nicht nur vage darauf | A. Jonas › I. 2. Vorsatz › Abgrenzung | `e9e7e85bab61` |
-| 32 | 1:39.34 | 1:40.54 | Carla (Erzählerin/Lexi) | vertraut, dass alles | A. Jonas › I. 2. Vorsatz › Abgrenzung | `6973a6fad9e8` |
-| 33 | 1:40.54 | 1:42.88 | Carla (Erzählerin/Lexi) | gut gehen wird. | A. Jonas › I. 2. Vorsatz › Abgrenzung | `7517be4ed5b7` |
+| 30 | 1:34.46 | 1:37.18 | Carla (Erzählerin/Lexi) | Bewusst fahrlässig handelt dagegen, wer | A. Jonas › I. 2. Vorsatz › Abgrenzung | `c2ef679843b9` |
+| 31 | 1:37.18 | 1:39.34 | Carla (Erzählerin/Lexi) | ernsthaft und nicht nur vage darauf | A. Jonas › I. 2. Vorsatz › Abgrenzung | `b87ff85f96e3` |
+| 32 | 1:39.34 | 1:40.54 | Carla (Erzählerin/Lexi) | vertraut, dass alles | A. Jonas › I. 2. Vorsatz › Abgrenzung | `21ac57042c6b` |
+| 33 | 1:40.54 | 1:42.88 | Carla (Erzählerin/Lexi) | gut gehen wird. | A. Jonas › I. 2. Vorsatz › Abgrenzung | `2a7a04381fdd` |
 | 34 | 1:42.88 | 1:44.96 | Carla (Erzählerin/Lexi) | Das stärkste Gegenargument: | A. Jonas › I. 2. Vorsatz › Eigengefahr | `28bb50a60cea` |
 | 35 | 1:44.96 | 1:48.48 | Carla (Erzählerin/Lexi) | Wer so fährt, gefährdet auch sich selbst. | A. Jonas › I. 2. Vorsatz › Eigengefahr | `0e1a357e699a` |
 | 36 | 1:48.48 | 1:52.28 | Carla (Erzählerin/Lexi) | Der Bundesgerichtshof hob das erste Mordurteil auf. | A. Jonas › I. 2. Vorsatz › BGH 2018 | `6f89c090bf0f` |
@@ -45,14 +45,14 @@ Quelle: `bildhalt_manifest.json` (107 Bildhalte, davon 107 eigenständig), `cues
 | 39 | 2:04.80 | 2:07.16 | Carla (Erzählerin/Lexi) | Dass sich Raser im Auto sicher fühlen wie im | A. Jonas › I. 2. Vorsatz › BGH 2018 | `3aef52ceafd0` |
 | 40 | 2:07.16 | 2:08.40 | Carla (Erzählerin/Lexi) | Panzer, ist kein | A. Jonas › I. 2. Vorsatz › BGH 2018 | `97f8298d8fb0` |
 | 41 | 2:08.40 | 2:10.24 | Carla (Erzählerin/Lexi) | Erfahrungssatz. | A. Jonas › I. 2. Vorsatz › BGH 2018 | `cce33fec4739` |
-| 42 | 2:10.24 | 2:14.20 | Carla (Erzählerin/Lexi) | Im zweiten Durchgang hielt das neue Mordurteil gegen Jonas. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `0352366c845e` |
-| 43 | 2:14.20 | 2:17.44 | Carla (Erzählerin/Lexi) | Die Eigengefahr kann nämlich abgestuft sein. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `9d8e73bbec18` |
-| 44 | 2:17.44 | 2:19.32 | Carla (Erzählerin/Lexi) | Jonas rechnete damit, bei einem | A. Jonas › I. 2. Vorsatz › BGH 2020 | `3629ac62cfac` |
-| 45 | 2:19.47 | 2:22.56 | Carla (Erzählerin/Lexi) | Aufprall auf die Seite eines querenden Autos selbst nur | A. Jonas › I. 2. Vorsatz › BGH 2020 | `4e7cbe3b0def` |
-| 46 | 2:22.56 | 2:24.25 | Carla (Erzählerin/Lexi) | leicht verletzt zu werden. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `75eec4b59142` |
-| 47 | 2:24.25 | 2:28.32 | Carla (Erzählerin/Lexi) | werden. Er vertraute nur darauf, nicht mit Max zusammenzustoßen. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `80320963c778` |
-| 48 | 2:28.32 | 2:32.20 | Carla (Erzählerin/Lexi) | Den Unfall, der dann geschah, nahm er für den Sieg hin. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `515888b658fd` |
-| 49 | 2:32.20 | 2:35.92 | Carla (Erzählerin/Lexi) | Und er fuhr weiter, als er noch hätte bremsen können. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `6f7715377d2f` |
+| 42 | 2:10.24 | 2:14.20 | Carla (Erzählerin/Lexi) | Im zweiten Durchgang hielt das neue Mordurteil gegen Jonas. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `f1cbac279c24` |
+| 43 | 2:14.20 | 2:17.44 | Carla (Erzählerin/Lexi) | Die Eigengefahr kann nämlich abgestuft sein. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `45e3a425c3e0` |
+| 44 | 2:17.44 | 2:19.32 | Carla (Erzählerin/Lexi) | Jonas rechnete damit, bei einem | A. Jonas › I. 2. Vorsatz › BGH 2020 | `9187773e8f08` |
+| 45 | 2:19.47 | 2:22.56 | Carla (Erzählerin/Lexi) | Aufprall auf die Seite eines querenden Autos selbst nur | A. Jonas › I. 2. Vorsatz › BGH 2020 | `c0fa5070840e` |
+| 46 | 2:22.56 | 2:24.25 | Carla (Erzählerin/Lexi) | leicht verletzt zu werden. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `7761eb0dbbc7` |
+| 47 | 2:24.25 | 2:28.32 | Carla (Erzählerin/Lexi) | werden. Er vertraute nur darauf, nicht mit Max zusammenzustoßen. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `1fe99d35eb73` |
+| 48 | 2:28.32 | 2:32.20 | Carla (Erzählerin/Lexi) | Den Unfall, der dann geschah, nahm er für den Sieg hin. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `ef7f459fb942` |
+| 49 | 2:32.20 | 2:35.92 | Carla (Erzählerin/Lexi) | Und er fuhr weiter, als er noch hätte bremsen können. | A. Jonas › I. 2. Vorsatz › BGH 2020 | `d6348028a047` |
 | 50 | 2:35.92 | 2:39.94 | Carla (Erzählerin/Lexi) | Damit liegt bedingter Tötungsvorsatz vor. | A. Jonas › I. 2. Vorsatz (+) | `ce394dcdc677` |
 | 51 | 2:39.94 | 2:43.58 | Carla (Erzählerin/Lexi) | Jetzt die Mordmerkmale. Naheliegend wirkt das | A. Jonas › I. 3. Mordmerkmale | `6164bb482c16` |
 | 52 | 2:43.58 | 2:45.18 | Carla (Erzählerin/Lexi) | gemeingefährliche Mittel: | A. Jonas › I. 3. Mordmerkmale | `d474c476e84b` |
@@ -81,10 +81,10 @@ Quelle: `bildhalt_manifest.json` (107 Bildhalte, davon 107 eigenständig), `cues
 | 75 | 3:41.36 | 3:43.80 | Carla (Erzählerin/Lexi) | Er hat den Geländewagen nicht berührt. | B. Max | `3aaca8910a13` |
 | 76 | 3:43.80 | 3:46.69 | Carla (Erzählerin/Lexi) | In Betracht kommt Mord in Mittäterschaft. | B. Max › Mittäterschaft, § 25 II StGB | `f7aaf6c8822e` |
 | 77 | 3:46.69 | 3:51.52 | Carla (Erzählerin/Lexi) | Dafür braucht es einen gemeinsamen Tatentschluss, der auch die Tötung umfasst. | B. Max › Mittäterschaft, § 25 II StGB | `646e42101242` |
-| 78 | 3:51.52 | 3:58.96 | Carla (Erzählerin/Lexi) | Die Abrede zum Rennen genügt dafür nicht. Der Bundesgerichtshof hob die Mordverurteilung von Max deshalb auf. | B. Max › Mittäterschaft, § 25 II StGB | `b20cf9d34295` |
-| 79 | 3:58.96 | 4:01.60 | Carla (Erzählerin/Lexi) | Straflos ist Max trotzdem nicht. | B. Max › eigene Tat | `390212a4a266` |
-| 80 | 4:01.60 | 4:05.64 | Carla (Erzählerin/Lexi) | Auch er fuhr mit bedingtem Tötungsvorsatz bei Rot in die Kreuzung. | B. Max › eigene Tat | `503ce8aedff6` |
-| 81 | 4:05.64 | 4:09.64 | Carla (Erzählerin/Lexi) | Dass Jonas den Geländewagen traf und nicht er, war Zufall. | B. Max › eigene Tat | `8db650091170` |
+| 78 | 3:51.52 | 3:58.96 | Carla (Erzählerin/Lexi) | Die Abrede zum Rennen genügt dafür nicht. Der Bundesgerichtshof hob die Mordverurteilung von Max deshalb auf. | B. Max › Mittäterschaft, § 25 II StGB | `f2098cc9af39` |
+| 79 | 3:58.96 | 4:01.60 | Carla (Erzählerin/Lexi) | Straflos ist Max trotzdem nicht. | B. Max › eigene Tat | `a54f8ee47cac` |
+| 80 | 4:01.60 | 4:05.64 | Carla (Erzählerin/Lexi) | Auch er fuhr mit bedingtem Tötungsvorsatz bei Rot in die Kreuzung. | B. Max › eigene Tat | `896d476b39b3` |
+| 81 | 4:05.64 | 4:09.64 | Carla (Erzählerin/Lexi) | Dass Jonas den Geländewagen traf und nicht er, war Zufall. | B. Max › eigene Tat | `3b565d1515f4` |
 | 82 | 4:09.64 | 4:14.10 | Carla (Erzählerin/Lexi) | Max ist deshalb wegen versuchten Mordes strafbar. | B. Max › Ergebnis | `523deacd44d4` |
 | 83 | 4:14.30 | 4:15.54 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Vorsatz begründen | `cce8a01bcf1c` |
 | 84 | 4:15.54 | 4:19.82 | Carla (Erzählerin/Lexi) | Schließe nie allein aus der Gefährlichkeit der Fahrt auf Vorsatz. | Klausurtipp · Vorsatz begründen | `85648e95cf36` |
