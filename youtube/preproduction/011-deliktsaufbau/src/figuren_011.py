@@ -1,6 +1,6 @@
 """Figuren für Folge 011 (Deliktsaufbau, Uferweg) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0).
-Nele (Joggerin, Mitte 50): walking-1 (läuft), resting-1 (steht), pointing_finger-1 (dehnt, Arm erhoben) – alle Reihe -1
-(farbiges Laufshirt Orange, schwarze Hose), Kopf Gray Medium. Tim (Radfahrer, um 40): sitting/bike (fährt) und
+Nele (Joggerin, Mitte 50): walking-1 (läuft), resting-1 (steht) – alle Reihe -1
+(farbiges Laufshirt Orange, schwarze Hose), Kopf Gray Medium. Holger (Radfahrer, um 40): sitting/bike (fährt) und
 standing/blazer-4 (steht) mit derselben blauen Jacke und weißem Oberteil; nach dem Sturz sitting/hands_back-2 (am Boden,
 Oberteil im Jackenblau, keine Jacke in dieser Pose – Abweichung im Szenenplan vermerkt). Herr Albrecht (Angler, um 70):
 shirt-3, Kopf Gray Short, Schnurrbart Moustache 6 (verdeckt den Mund nicht), Brille Glasses 4.
@@ -19,18 +19,17 @@ os.makedirs(ZIEL, exist_ok=True)
 MUND = {"a": "Explaining", "o": "Concerned Fear", "e": "Hectic"}
 
 NE_F = {"Skin": "#E8B894", "Top": "#F9A66C", "Hair": "#C3C6CF"}
-TI_F = {"Skin": "#C68A62", "Jacket": "#8DB3F2", "Top": "#FFFFFF", "Bicycle Frame": "#8DB3F2"}
-TI_BODEN = {"Skin": "#C68A62", "Top": "#8DB3F2"}
+HO_F = {"Skin": "#C68A62", "Jacket": "#8DB3F2", "Top": "#FFFFFF", "Bicycle Frame": "#8DB3F2"}
+HO_BODEN = {"Skin": "#C68A62", "Top": "#8DB3F2"}
 AL_F = {"Skin": "#F0C8A8", "Top": "#8FD694", "Hair": "#D9D9DE"}
 
 # Ansicht: (Pose, Kopf, Bart, Brille, Farben)
 P = {
     "NE_l": ("standing/walking-1", "Gray Medium", None, None, NE_F),
     "NE_s": ("standing/resting-1", "Gray Medium", None, None, NE_F),
-    "NE_d": ("standing/pointing_finger-1", "Gray Medium", None, None, NE_F),
-    "TI_r": ("sitting/bike", "Short 2", None, None, TI_F),
-    "TI_s": ("standing/blazer-4", "Short 2", None, None, TI_F),
-    "TI_b": ("sitting/hands_back-2", "Short 2", None, None, TI_BODEN),
+    "HO_r": ("sitting/bike", "Short 2", None, None, HO_F),
+    "HO_s": ("standing/blazer-4", "Short 2", None, None, HO_F),
+    "HO_b": ("sitting/hands_back-2", "Short 2", None, None, HO_BODEN),
     "AL_s": ("standing/shirt-3", "Gray Short", "Moustache 6", "Glasses 4", AL_F),
 }
 
@@ -39,10 +38,10 @@ LISTE = [
     ("NE_laeuft", "NE_l", "Calm", 0), ("NE_schreck", "NE_l", "Fear", 0), ("NE_wut", "NE_l", "Very Angry", 0),
     ("NE_redet", "NE_s", "Very Angry", 1), ("NE_ruhig", "NE_s", "Calm", 0), ("NE_denkt", "NE_s", "Serious", 0),
     ("NE_ertappt", "NE_s", "Concerned|Serious", 0), ("NE_angst", "NE_s", "Fear", 0), ("NE_froh", "NE_s", "Smile", 0),
-    ("NE_dehnt", "NE_d", "Calm", 0), ("NE_dehnt_schreck", "NE_d", "Fear", 0),
-    ("TI_faehrt", "TI_r", "Driven", 0), ("TI_rad_redet", "TI_r", "Driven", 1), ("TI_rad_wut", "TI_r", "Very Angry", 0),
-    ("TI_steht", "TI_s", "Calm", 0), ("TI_trinkt", "TI_s", "Smile", 0), ("TI_schreck", "TI_s", "Fear", 0),
-    ("TI_boden", "TI_b", "Concerned|Serious", 0), ("TI_boden_muede", "TI_b", "Tired", 0),
+   
+    ("HO_faehrt", "HO_r", "Driven", 0), ("HO_rad_redet", "HO_r", "Driven", 1), ("HO_rad_wut", "HO_r", "Very Angry", 0),
+    ("HO_steht", "HO_s", "Calm", 0), ("HO_trinkt", "HO_s", "Smile", 0), ("HO_schreck", "HO_s", "Fear", 0),
+    ("HO_boden", "HO_b", "Concerned|Serious", 0), ("HO_boden_muede", "HO_b", "Tired", 0),
     ("AL_ruhig", "AL_s", "Calm", 0), ("AL_schaut", "AL_s", "Suspicious", 0), ("AL_redet", "AL_s", "Serious", 1),
 ]
 
