@@ -29,7 +29,7 @@ SEGMENTE = [
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
     # --- D Anspruch und Rechtsfolge § 142 I ------------------------------------------------------------------------
     ("[ansp]Herr Winkler verlangt den Kaufpreis nach Paragraf vierhundertdreiunddreißig Absatz zwei. [vertrag]Ein "
-     "Kaufvertrag über hundert Kartons ist zunächst geschlossen. [nichtig]Er fällt aber weg, wenn Ilse wirksam anficht. "
+     "Kaufvertrag über hundert Kartons ist zunächst geschlossen. [nichtig]Er fällt aber weg, wenn die Anfechtung durch Ilse wirksam ist. "
      "[p142]Paragraf hundertzweiundvierzig Absatz eins: Wird ein anfechtbares Rechtsgeschäft angefochten, so ist es als "
      "von Anfang an nichtig anzusehen.", PS),
     # --- E 1. Anfechtungsgegenstand ----------------------------------------------------------------------------------
