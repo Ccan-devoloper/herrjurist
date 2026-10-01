@@ -22,6 +22,7 @@ Ordner je Folge: `youtube/preproduction/NNN-kurzname/` mit `src/` (Skript, Figur
 - Aufbau wie `001-raser-fall/src/skript_raser.py`: `SEGMENTE` mit `[marke]`-Cues, `STIMMEN` für Figurenrede. Lexi (Klausurtipp, Merksatz) spricht mit der Erzählerstimme ohne Rolle.
 - Etwa 4.000–4.500 Zeichen, also rund fünf Minuten. Zahlen und Paragrafen als Wörter („Paragraf zweihundertelf“, „neunundsechzigjährige“). Keine Verabschiedung. Das letzte Wort beendet den Sachgedanken.
 - Jedes Format beginnt mit einem konkreten Fall. Bei Examenswissen und Methodik ist das ein Beispielfall, an dem das Schema entlangläuft.
+- **Namen einheitlich aussprechen (Vorgabe Kanalinhaber, 01.10.2026):** Jeder Figurenname klingt im ganzen Video gleich, bei Erzählerin und Figuren, nie mal deutsch, mal englisch. Deshalb Namen mit eindeutig deutscher Aussprache wählen; englisch lesbare Namen (Tom, Kim, Mike, Ryan, Jamie …) vermeiden. Nach der Vertonung jede Nennung prüfen (Spracherkennung mit Wortzeiten, Nennungen einzeln ausschneiden und vergleichen) und abweichende Segmente gezielt neu vertonen, notfalls mit lautlicher Schreibweise im Sprechtext. Ergebnis je Name in ABNAHME.md festhalten.
 - Rollen aus dem Ensemble (`stimme-elevenlabs/besetzung.json`), passend zu Alter und Geschlecht. Lea nicht bei Gewalt. Nicht dieselben Stimmen wie in der Vorfolge, wenn es sich vermeiden lässt.
 
 ## 3. Szenenplan und Figuren
