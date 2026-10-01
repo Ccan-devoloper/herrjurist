@@ -54,7 +54,7 @@ SEGMENTE = [
      "[p127]Notwehr scheidet aus. Ohm durfte Kim nach Paragraf hundertsiebenundzwanzig der Strafprozessordnung festhalten.", P),
     ("[tara3]Dann Tara. [vollendet]Vollendetes prüfst du vor Versuchtem. Bei Tara ist nichts vollendet, die Flasche hat Ohm verfehlt. "
      "[versuch]Also versuchte gefährliche Körperverletzung: [p224]die Flasche als gefährliches Werkzeug. "
-     "[quali]Die Qualifikation prüfst du zusammen mit dem Grunddelikt. [p224b]Strafbar ist der Versuch nach Paragraf zweihundertvierundzwanzig Absatz zwei.", P),
+     "[quali]Qualifikation und Grunddelikt prüfst du zusammen. [p224b]Strafbar ist der Versuch nach Paragraf zweihundertvierundzwanzig Absatz zwei.", P),
     ("[zurech]Kims Stoß wird Tara nicht zugerechnet, und umgekehrt: Für die Flucht gab es keinen gemeinsamen Plan. "
      "[bruno3]Und Bruno? Gewalt war nicht Teil seines Auftrags.", PS),
     # --- I Konkurrenzen ------------------------------------------------------------------------------------------------------
