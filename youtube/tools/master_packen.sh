@@ -13,7 +13,7 @@ for d in SZENENPLAN.md RECHTSSTAND.md ABNAHME.md CUE-TIMELINE.md bildhalt_manife
 cp "$F"/src/*.py "$M/code/src/"; cp "$P"/etb2/src/*.py "$P/etb2/einrichten.sh" "$M/code/etb2/"
 cp "$P"/stimme-elevenlabs/{synth_el.py,besetzung.json,README.md} "$M/code/stimme/"
 cp "$FIG"/*.png "$M/figuren/"; cp "$F"/out/bildhalte/*.jpg "$M/bildhalte/"
-find "$F/out" -maxdepth 1 \( -name "*.png" -o -name "*.log" -o -name "sfx_cues.json" \) -exec cp {} "$M/pruefung/" \;
+find -L "$F/out/" -maxdepth 1 \( -name "*.png" -o -name "*.log" -o -name "sfx_cues.json" \) -exec cp {} "$M/pruefung/" \;
 cp "$F/stimme.wav" "$M/audio/"; cp -r "$F/el_cache" "$M/audio/el_cache"
 if [ -f "$F/geraeusche_herkunft.json" ]; then
   python3 - "$F/geraeusche_herkunft.json" "$P/sfx3" "$M/sfx" <<'EOF'
