@@ -390,7 +390,7 @@ W52 = ["„Diese Rechte finden ihre Schranken in den", "Vorschriften der allgeme
 w52_els, w52_y = wortlaut(80, 220, 1100, W52, "Art. 5 Abs. 2 GG", "wl52", marken=[
     (0, "Schranken", beim("wl52", "Schranken")), (1, "allgemeinen Gesetze", beim("wl52", "allgemeinen")),
     (2, "Schutze der", beim("wl52", "Schutze")), (3, "Jugend", beim("wl52", "Schutze")),
-    (3, "Recht der persönlichen Ehre", beim("wl52", "Recht", nr=2))], size=38)
+    (3, "Recht der persönlichen Ehre", beim("wl52", "Recht", nr=3))], size=38)
 folie([("wl52", "Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG")], rechts_frei([
     titel(glyphen("III. Rechtfertigung"), 110, 90, "wl52", 50),
     *w52_els,

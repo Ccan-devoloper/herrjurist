@@ -92,11 +92,11 @@ Quelle: `bildhalt_manifest.json` (170 Bildhalte, davon 170 eigenständig), `cues
 | 86 | 2:59.56 | 3:00.72 | Carla (Erzählerin/Lexi) | geschützt. | Art. 5 I GG › I. Schutzbereich › hilfsweise: im Zusammenhang geschützt | `97048768092d` |
 | 87 | 3:00.72 | 3:03.84 | Carla (Erzählerin/Lexi) | Römisch zwei: Die Auflage ist dann ein | Art. 5 I GG › II. Eingriff | `9603c8cbb068` |
 | 88 | 3:03.84 | 3:05.28 | Carla (Erzählerin/Lexi) | Eingriff. | Art. 5 I GG › II. Eingriff | `50491ddf7c35` |
-| 89 | 3:05.28 | 3:10.88 | Carla (Erzählerin/Lexi) | Römisch drei: die Rechtfertigung. Artikel fünf Absatz zwei: Diese | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `a04ef49c0c7a` |
-| 90 | 3:10.88 | 3:12.00 | Carla (Erzählerin/Lexi) | Rechte finden ihre | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `494709cc5f76` |
-| 91 | 3:12.00 | 3:13.84 | Carla (Erzählerin/Lexi) | Schranken in den Vorschriften der | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `442cccd82dc2` |
-| 92 | 3:13.84 | 3:17.08 | Carla (Erzählerin/Lexi) | allgemeinen Gesetze, den gesetzlichen Bestimmungen zum | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `15e9ac4cdb45` |
-| 93 | 3:17.08 | 3:21.60 | Carla (Erzählerin/Lexi) | Schutze der Jugend und in dem Recht der persönlichen Ehre. | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `bd98abc7aac7` |
+| 89 | 3:05.28 | 3:12.00 | Carla (Erzählerin/Lexi) | Römisch drei: die Rechtfertigung. Artikel fünf Absatz zwei: Diese Rechte finden ihre | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `a04ef49c0c7a` |
+| 90 | 3:12.00 | 3:13.84 | Carla (Erzählerin/Lexi) | Schranken in den Vorschriften der | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `d4bd83dc1002` |
+| 91 | 3:13.84 | 3:17.08 | Carla (Erzählerin/Lexi) | allgemeinen Gesetze, den gesetzlichen Bestimmungen zum | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `57700fbe54a5` |
+| 92 | 3:17.08 | 3:18.96 | Carla (Erzählerin/Lexi) | Schutze der Jugend und in dem | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `5a793203c763` |
+| 93 | 3:18.96 | 3:21.60 | Carla (Erzählerin/Lexi) | Recht der persönlichen Ehre. | Art. 5 I GG › III. Rechtfertigung › Wortlaut Art. 5 II GG | `bd98abc7aac7` |
 | 94 | 3:21.60 | 3:23.28 | Carla (Erzählerin/Lexi) | Grundlage der Auflage war | Art. 5 I GG › III. Rechtfertigung › Grundlage: § 5 Nr. 4 VersG | `04b2e206109e` |
 | 95 | 3:23.28 | 3:27.00 | Carla (Erzählerin/Lexi) | Paragraf fünf Nummer vier des Versammlungsgesetzes. | Art. 5 I GG › III. Rechtfertigung › Grundlage: § 5 Nr. 4 VersG | `af4a2973dada` |
 | 96 | 3:27.00 | 3:28.00 | Carla (Erzählerin/Lexi) | Danach kann eine | Art. 5 I GG › III. Rechtfertigung › Grundlage: § 5 Nr. 4 VersG | `31f5408550e3` |

@@ -36,9 +36,13 @@ man = json.load(open("../bildhalt_manifest.json"))
 WISCH = 14 / 30
 starts = sorted({h["start"] for h in man["halte"]})
 bilder = []
-for h in ([] if NUR_LIPPEN else man["halte"]):
+HL = man["halte"]
+for i, h in enumerate([] if NUR_LIPPEN else HL):
     tk = h["ende"] - 0.04
-    bilder.append((bild(tk), f"{h['nr']} {tk:.1f}s {h['pruefpfad'][-48:]}"))
+    if i + 1 < len(HL) and HL[i + 1]["folie"] != h["folie"]:   # Halt endet an einer Schiebeblende: Keyframe vor dem Wisch
+        tk = h["ende"] - 16 / 30
+    im = bild(tk)
+    bilder.append((im, f"{h['nr']} {tk:.1f}s {h['pruefpfad'][-48:]}"))
 for k in range(0, len(bilder), 30):  # noqa
     bogen(bilder[k:k + 30], 5, 384, 216, f"../out/bildhalte_mp4_{k // 30 + 1}.png")
 print(len(bilder), "Bildhalte aus dem MP4")
