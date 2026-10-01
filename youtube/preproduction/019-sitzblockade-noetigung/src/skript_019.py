@@ -49,7 +49,7 @@ SEGMENTE = [
     ("[lukas2]Lukas klebt nicht. Er handelt aber nach einem gemeinsamen Plan und ist Mittäter, Paragraf fünfundzwanzig "
      "Absatz zwei. [erfolg]Der Nötigungserfolg liegt vor: Sabine muss warten. [vorsatz]Vorsatz haben alle vier.", PS),
     # --- I Rechtswidrigkeit ----------------------------------------------------------------------------------------
-    ("[rw]Zur Rechtswidrigkeit. [not]Einen Notstand nach Paragraf vierunddreißig lehnen die Oberlandesgerichte ab. "
+    ("[rw]Zur Rechtswidrigkeit. [not]Einen Notstand, Paragraf vierunddreißig, lehnen die Oberlandesgerichte ab. "
      "[art8]Die Sitzblockade ist zwar eine Versammlung nach Artikel acht Grundgesetz. "
      "[friedlich]Sie bleibt friedlich, auch wenn sie andere behindert. [kein]Das rechtfertigt die Tat aber "
      "nicht, sondern wirkt bei der Verwerflichkeit, Paragraf zweihundertvierzig Absatz zwei.", P),

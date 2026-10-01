@@ -1,7 +1,8 @@
 """Figuren für Folge 019 (Sitzblockade) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0). Alle Personen erfunden.
 Hanna (klebt sich fest): sitting/hands_back-1 · Lukas (sitzt nur): sitting/one_leg_up-2 · zwei weitere Sitzende ohne Rolle:
 sitting/mid-1, sitting/closed_legs-1 · Dieter (erste Reihe): standing/shirt-3 · Sabine (zweite Reihe): standing/crossed_arms-2.
-Grundansicht blickt nach links (Figur rechts neben der Tafel), Suffix _r blickt nach rechts.
+Grundansicht blickt nach links (Figur rechts neben der Tafel), Suffix _r blickt nach rechts (geprüft am Kontaktbild).
+Farbflächen je Pose laut SVG: hands_back-1/mid-1/crossed_arms-2 nur Pants, one_leg_up-2/shirt-3 nur Top, closed_legs-1 Top+Jacket.
 Alle Grundmimiken mit geschlossenem Mund (FOLGE-ABLAUF); offene Mimiken nur als „Augen|Serious/Smile“.
 Je sprechender Ansicht vier Mundzustände: zu (Grundmimik), a, o, e (lexpeeps 'Augen|Mund', Schnitt bei 60 % der Gesichtshöhe)."""
 import os, sys
@@ -16,12 +17,12 @@ MUND = {"a": "Explaining", "o": "Concerned Fear", "e": "Hectic"}
 
 # Person: (Pose, Kopf, Bart, Brille, Farben, Grundansicht gespiegelt?)  – Spiegelung so, dass die Grundansicht nach links blickt
 P = {
-    "HA": ("sitting/hands_back-1", "Long", None, None, {"Skin": "#E8B98F", "Top": "#B8A9F5", "Pants": "#3D3D58"}, 1),
-    "LU": ("sitting/one_leg_up-2", "Short 2", None, None, {"Skin": "#C99470", "Top": "#8FD694", "Pants": "#3D3D58"}, 1),
-    "E1": ("sitting/mid-1", "Afro", None, None, {"Skin": "#8D5A3B", "Top": "#F9A66C", "Pants": "#3D3D58"}, 1),
-    "E2": ("sitting/closed_legs-1", "Bangs", None, "Glasses 2", {"Skin": "#F1C7A5", "Top": "#7FD6D0", "Pants": "#3D3D58"}, 1),
-    "DI": ("standing/shirt-3", "Short 3", None, "Glasses 3", {"Skin": "#E6B48F", "Top": "#F07A6A", "Pants": "#3D3D58"}, 1),
-    "SA": ("standing/crossed_arms-2", "Medium Bangs", None, None, {"Skin": "#8D5A3B", "Top": "#8DB3F2", "Pants": "#3D3D58"}, 1),
+    "HA": ("sitting/hands_back-1", "Long", None, None, {"Skin": "#E8B98F", "Pants": "#B8A9F5"}, 1),
+    "LU": ("sitting/one_leg_up-2", "Short 2", None, None, {"Skin": "#C99470", "Top": "#8FD694"}, 1),
+    "E1": ("sitting/mid-1", "Afro", None, None, {"Skin": "#8D5A3B", "Pants": "#F9A66C"}, 1),
+    "E2": ("sitting/closed_legs-1", "Bangs", None, "Glasses 2", {"Skin": "#F1C7A5", "Top": "#FFFFFF", "Jacket": "#7FD6D0"}, 1),
+    "DI": ("standing/shirt-3", "Short 3", None, "Glasses 3", {"Skin": "#E6B48F", "Top": "#F07A6A"}, 1),
+    "SA": ("standing/crossed_arms-2", "Medium Bangs", None, None, {"Skin": "#8D5A3B", "Pants": "#8DB3F2"}, 1),
 }
 
 # (Name, Person, Grundmimik, mit Mundzuständen); jede Ansicht zusätzlich als _r (blickt nach rechts).
