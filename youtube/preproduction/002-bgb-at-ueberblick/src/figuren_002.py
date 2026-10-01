@@ -23,14 +23,16 @@ P = {
     "JG": ("standing/robot_dance-2", "Pomp", "Full", None, {"Skin": "#D9A07A", "Pants": "#8DB3F2"}, 1),   # Jens mit Geste
 }
 
-# (Name, Person, Grundmimik, mit Mundzuständen); jede Ansicht zusätzlich als _r (blickt nach rechts)
+# (Name, Person, Grundmimik, mit Mundzuständen); jede Ansicht zusätzlich als _r (blickt nach rechts).
+# Grundmimik "Augen|Mund": Mimiken mit offenem oder unklarem Mund (Concerned, Smile Big, Fear, Awe, Cheeky) bekommen einen
+# geschlossenen Mund, damit der Mund in Pausen und bei anderen Sprechern zu ist (Befund Koordinator/Folge 004, 01.10.2026).
 LISTE = [
     ("KA_ruhig", "KA", "Calm", 0), ("KA_redet", "KA", "Smile", 1), ("KA_streng", "KA", "Driven", 1),
-    ("KA_denkt", "KA", "Concerned", 0), ("KA_froh", "KA", "Smile Big", 0), ("KA_muede", "KA", "Tired", 0),
-    ("EM_ruhig", "EM", "Calm", 0), ("EM_froh", "EM", "Smile", 0), ("EM_redet", "EM", "Smile Big", 1),
-    ("EM_denkt", "EM", "Serious", 0), ("EM_staunt", "EM", "Awe", 0), ("EM_rad", "ER", "Smile", 1),
-    ("JE_ruhig", "JE", "Calm", 0), ("JE_schreck", "JE", "Fear", 0), ("JE_denkt", "JE", "Concerned", 0),
-    ("JE_froh", "JE", "Cheeky", 0),
+    ("KA_denkt", "KA", "Concerned|Serious", 0), ("KA_froh", "KA", "Smile Big|Smile", 0), ("KA_muede", "KA", "Tired", 0),
+    ("EM_ruhig", "EM", "Calm", 0), ("EM_froh", "EM", "Smile", 0), ("EM_redet", "EM", "Smile Big|Smile", 1),
+    ("EM_denkt", "EM", "Serious", 0), ("EM_staunt", "EM", "Awe|Serious", 0), ("EM_rad", "ER", "Smile", 1),
+    ("JE_ruhig", "JE", "Calm", 0), ("JE_schreck", "JE", "Fear|Serious", 0), ("JE_denkt", "JE", "Concerned|Serious", 0),
+    ("JE_froh", "JE", "Cheeky|Smile", 0),
     ("JG_redet", "JG", "Smile", 1), ("JG_ernst", "JG", "Serious", 1),
 ]
 
@@ -42,7 +44,7 @@ if __name__ == "__main__":
             figur(pose, kopf, mimik, bart, brille, farben, hoehe=1200, spiegeln=bool(gespiegelt)).save(f"{ZIEL}/{name}{suffix}.png"); n += 1
             if mund:
                 for k, m in MUND.items():
-                    figur(pose, kopf, f"{mimik}|{m}", bart, brille, farben, hoehe=1200,
+                    figur(pose, kopf, f"{mimik.split('|')[0]}|{m}", bart, brille, farben, hoehe=1200,
                           spiegeln=bool(gespiegelt)).save(f"{ZIEL}/{name}{suffix}_{k}.png"); n += 1
     # Lexi (feste Moderatorin, Stimme Carla), blickt nach links zur Tafel
     for name, (pose, mimik) in {"LX_erklaert": ("standing/robot_dance-1", "Smile"), "LX_warnt": ("standing/robot_dance-1", "Serious"),
