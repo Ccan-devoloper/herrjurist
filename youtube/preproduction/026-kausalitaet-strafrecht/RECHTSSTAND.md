@@ -71,7 +71,7 @@
 - Dass der BGH die objektive Zurechnung als eigene Prüfungsstufe anwendet (im Video „die Lehre“).
 - Die Lösung der kumulativen Konstellation auf Zurechnungs- und Vorsatzebene (Abweichung vom Kausalverlauf, Versuch) – ausdrücklich offengelassen.
 - Der Pflichtwidrigkeitszusammenhang beim Fahrlässigkeitsdelikt (BGHSt 49, 1 Rn. 15 f.; rechtmäßiges Alternativverhalten), der hypothetische Verläufe gerade berücksichtigt – deshalb Merksatz „Ersatzursachen, die nicht gewirkt haben, zählen nicht“ statt „Was sonst passiert wäre, zählt nicht“.
-- Kausalität bei Gremienentscheidungen (Lederspray, BGHSt 37, 106): Volltext nicht online in HRRS verfügbar, daher nicht im Video.
+- Kausalität bei Gremienentscheidungen (Lederspray, BGHSt 37, 106 = BGH, Urt. v. 6.7.1990 – 2 StR 549/89; Fundstelle per Suche bestätigt, Volltext bei DFR https://www.servat.unibe.ch/dfr/bs037106.html, für dieses Video nicht ausgewertet): bewusst weggelassen, weil die Gremienfrage dort über Mittäterschaft gelöst wird und knapp nicht sauber darstellbar ist.
 - Strafbarkeit Silkes, Konkurrenzen, §§ 306a ff.
 
 ## Offene Einschränkungen
@@ -84,6 +84,6 @@
 
 - **Normen** „§§ 212, 222 StGB (Erfolgsdelikte)“: zutreffend als Beispiele; der Hook-Fall (Scheune) ist eine Brandstiftung. Vorschlag: `Normen = §§ 212, 222, 306 StGB (Erfolgsdelikte)`.
 - **Leitentscheidung** leer. Vorschlag: `Leitentscheidung = BGH, Urt. v. 30.3.1993 – 5 StR 720/92 (BGHSt 39, 195) – alternative Kausalität`.
-- **Auftrag/Planhinweis „BGHSt 39, 195 – Lederspray“:** unzutreffend. BGHSt 39, 195 ist die Entscheidung zur alternativen Kausalität (zwei je tödliche Schüsse); der Lederspray-Fall ist BGHSt 37, 106 (BGH, Urt. v. 6.7.1990 – 2 StR 549/89). BGHSt 1, 332 wird in der Rechtsprechung als Fundstelle der Bedingungstheorie zitiert.
+- **Auftrag/Planhinweis „BGHSt 39, 195 – Lederspray“:** unzutreffend. BGHSt 39, 195 ist die Entscheidung zur alternativen Kausalität (zwei je tödliche Schüsse); der Lederspray-Fall ist BGHSt 37, 106 (BGH, Urt. v. 6.7.1990 – 2 StR 549/89; Zuordnung über DFR und dejure.org bestätigt). BGHSt 1, 332 wird in der Rechtsprechung als Fundstelle der Bedingungstheorie zitiert.
 - **Beschreibung (Anfang)** fachlich vertretbar („warum ist sie allein zu weit?“ wird beantwortet). Hook, Kernfrage, Thumbnail („VERKAUF KAUSAL?“) werden eingelöst.
 - **Fundstelle im Repetitorium:** ergänzen um `12.1 Alternative und kumulative Kausalität`.
