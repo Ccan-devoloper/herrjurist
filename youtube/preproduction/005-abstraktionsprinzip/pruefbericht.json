@@ -14,7 +14,7 @@
    {
     "nr": 3,
     "sprecher": "Hanne",
-    "lufs": -20.7
+    "lufs": -19.0
    },
    {
     "nr": 4,
@@ -49,7 +49,7 @@
    {
     "nr": 10,
     "sprecher": "Walter",
-    "lufs": -19.4
+    "lufs": -19.0
    },
    {
     "nr": 11,
@@ -140,15 +140,15 @@
   "mittel_je_sprecher": {
    "Erzählerin": -19.0,
    "Sandra": -19.0,
-   "Hanne": -20.7,
+   "Hanne": -19.0,
    "Ben": -19.0,
-   "Walter": -19.2
+   "Walter": -19.0
   },
-  "spanne_lu": 1.7,
+  "spanne_lu": 0.0,
   "kanten": []
  },
  "asr": {
-  "uebereinstimmung": 0.945,
+  "uebereinstimmung": 0.947,
   "abweichungen": [
    {
     "zeit": 18.88,
@@ -161,30 +161,42 @@
     "gehoert": "§  929"
    },
    {
-    "zeit": 63.6,
-    "skript": "merkt",
-    "gehoert": "nagt"
+    "zeit": 78.48,
+    "skript": "Hier sind hundertzwanzig Euro, bar.",
+    "gehoert": ""
    },
    {
-    "zeit": 81.54,
-    "skript": "dein",
-    "gehoert": "ein"
-   },
-   {
-    "zeit": 98.05,
+    "zeit": 99.09,
     "skript": "wiederhaben.",
     "gehoert": "wieder  haben."
-   },
-   {
-    "zeit": 131.78,
-    "skript": "Paragraf hundertsieben.",
-    "gehoert": "§  107."
-   },
-   {
-    "zeit": 147.3,
-    "skript": "Paragraf hundertacht.",
-    "gehoert": "§  108."
    }
   ]
+ },
+ "mp4": {
+  "datei": "005-Abstraktionsprinzip.mp4",
+  "dauer": 362.18,
+  "video": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 343 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+  "audio": "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 167 kb/s (default)",
+  "untertitelspur": false,
+  "decode_fehlerfrei": true,
+  "lautheit": {
+   "intro": {
+    "lufs": -16.7,
+    "spitze": -1.3
+   },
+   "hauptfilm": {
+    "lufs": -16.5,
+    "spitze": -1.6
+   },
+   "outro": {
+    "lufs": -17.4,
+    "spitze": -1.3
+   },
+   "gesamt": {
+    "lufs": -16.5,
+    "spitze": -1.3
+   }
+  },
+  "technik_ok": true
  }
 }
