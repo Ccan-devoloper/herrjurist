@@ -94,13 +94,13 @@ Quelle: `bildhalt_manifest.json` (124 Bildhalte, davon 123 eigenständig), `cues
 | 88 | 3:53.36 | 3:54.16 | Carla (Erzählerin/Lexi) | Mord wird mit | A. Nadine › IV. Strafe | `997121efd329` |
 | 89 | 3:54.16 | 3:56.92 | Carla (Erzählerin/Lexi) | lebenslanger Freiheitsstrafe bestraft. | A. Nadine › IV. Strafe | `8c76b79aea8c` |
 | 90 | 3:56.92 | 4:00.64 | Carla (Erzählerin/Lexi) | Im Originalfall milderte das Landgericht trotzdem, wegen | A. Nadine › IV. Strafe | `997121efd329` |
-| 91 | 4:00.64 | 4:02.64 | Carla (Erzählerin/Lexi) | außergewöhnlicher Umstände: | A. Nadine › IV. Strafe | `5f1004896dd9` |
-| 92 | 4:02.64 | 4:06.88 | Carla (Erzählerin/Lexi) | neun Jahre, nach der sogenannten Rechtsfolgenlösung. | A. Nadine › IV. Strafe | `4978177444c5` |
-| 93 | 4:06.88 | 4:12.17 | Carla (Erzählerin/Lexi) | Diese Milderung hat der Große Senat für Ausnahmefälle des Heimtückemords entwickelt. | A. Nadine › IV. Strafe | `9fb99c52c1a5` |
-| 94 | 4:12.17 | 4:17.76 | Carla (Erzählerin/Lexi) | entwickelt. Der Bundesgerichtshof stellt klar: Eine gesetzliche Milderung geht vor, hier also die nach | A. Nadine › IV. Strafe › § 35 II 2 vor Rechtsfolgenlösung | `a9f1523a4a44` |
-| 95 | 4:17.76 | 4:20.52 | Carla (Erzählerin/Lexi) | Paragraf fünfunddreißig Absatz zwei. | A. Nadine › IV. Strafe › § 35 II 2 vor Rechtsfolgenlösung | `c338d4aa2343` |
-| 96 | 4:20.52 | 4:24.84 | Carla (Erzählerin/Lexi) | Der Strafrahmen ist derselbe: drei bis fünfzehn Jahre. | A. Nadine › IV. Strafe › § 35 II 2 vor Rechtsfolgenlösung | `c02fd8cc6922` |
-| 97 | 4:24.84 | 4:31.38 | Carla (Erzählerin/Lexi) | Aber die jahrelangen Misshandlungen dürfen dann bei der Strafhöhe stärker mildernd zählen. | A. Nadine › IV. Strafe › § 35 II 2 vor Rechtsfolgenlösung | `279e2093d7d1` |
+| 91 | 4:00.64 | 4:02.64 | Carla (Erzählerin/Lexi) | außergewöhnlicher Umstände: | A. Nadine › IV. Strafe | `4d4a752d2cb5` |
+| 92 | 4:02.64 | 4:06.88 | Carla (Erzählerin/Lexi) | neun Jahre, nach der sogenannten Rechtsfolgenlösung. | A. Nadine › IV. Strafe | `c9870bd91163` |
+| 93 | 4:06.88 | 4:12.17 | Carla (Erzählerin/Lexi) | Diese Milderung hat der Große Senat für Ausnahmefälle des Heimtückemords entwickelt. | A. Nadine › IV. Strafe | `f938c47e7577` |
+| 94 | 4:12.17 | 4:17.76 | Carla (Erzählerin/Lexi) | entwickelt. Der Bundesgerichtshof stellt klar: Eine gesetzliche Milderung geht vor, hier also die nach | A. Nadine › IV. Strafe › § 35 II 2 vor Rechtsfolgenlösung | `20d75025c476` |
+| 95 | 4:17.76 | 4:20.52 | Carla (Erzählerin/Lexi) | Paragraf fünfunddreißig Absatz zwei. | A. Nadine › IV. Strafe › § 35 II 2 vor Rechtsfolgenlösung | `2b8a16361ec3` |
+| 96 | 4:20.52 | 4:24.84 | Carla (Erzählerin/Lexi) | Der Strafrahmen ist derselbe: drei bis fünfzehn Jahre. | A. Nadine › IV. Strafe › § 35 II 2 vor Rechtsfolgenlösung | `cd209bbde5b2` |
+| 97 | 4:24.84 | 4:31.38 | Carla (Erzählerin/Lexi) | Aber die jahrelangen Misshandlungen dürfen dann bei der Strafhöhe stärker mildernd zählen. | A. Nadine › IV. Strafe › § 35 II 2 vor Rechtsfolgenlösung | `23828e589269` |
 | 98 | 4:31.38 | 4:32.62 | Carla (Erzählerin/Lexi) | Der Bundesgerichtshof | A. Nadine › Ergebnis | `ac5e8bb5b49c` |
 | 99 | 4:32.62 | 4:35.10 | Carla (Erzählerin/Lexi) | hob die Verurteilung deshalb auf. | A. Nadine › Ergebnis | `5bb1d466880e` |
 | 100 | 4:35.10 | 4:37.06 | Carla (Erzählerin/Lexi) | Für deine Klausur heißt das: | A. Nadine › Ergebnis | `cb1b0cbbc8c4` |

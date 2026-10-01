@@ -45,7 +45,7 @@ RAX, NAX = 470, 1430                   # Ralf links (blickt nach rechts), Nadine
 
 # A Fall: das Haus (Tag) --------------------------------------------------------------------------------------------------
 RA = ("RA_redet_r", RAX, BODEN, FH)
-folie([("haus", "Fall · Das Haus")], [
+folie([(("haus", -0.8), "Fall · Das Haus")], [            # Prüfpfad ab 0,0 s voll sichtbar
     pille("Der Haustyrannen-Fall", 70, 40, "haus", fill=GELB, size=48),
     linienzug([(40, BODEN), (1880, BODEN)], "haus", breite=7, farbe=INK),
     ficon("tabler", "sofa", 950, BODEN - 2, 300, "haus", fuell=BLAU, d=0.2),
@@ -283,8 +283,8 @@ folie([("irrtum", "A. Nadine › III. 2. Irrtum, § 35 II StGB"), ("pruef", "A. 
 folie([("folge", "A. Nadine › IV. Strafe"), ("vorrang", "A. Nadine › IV. Strafe › § 35 II 2 vor Rechtsfolgenlösung")], [
     *tafel("folge", "IV. Strafe"),
     z("Mord: lebenslang, § 211 I StGB", 110, 200, beim("folge", "Mord"), "Bold", 36),
-    z("LG: 9 Jahre, Rechtsfolgenlösung", 150, 270, beim("lg", "neun"), size=34),
-    z("(§ 49 I Nr. 1 analog, außergewöhnliche Umstände)", 150, 320, beim("lg", "außergewöhnlicher"), size=30, farbe=TEXT),
+    z("LG mildert: außergewöhnliche Umstände", 150, 270, beim("lg", "außergewöhnlicher"), size=34),
+    z("9 Jahre, Rechtsfolgenlösung (§ 49 I Nr. 1 analog)", 150, 320, beim("lg", "neun"), size=30, farbe=TEXT),
     z("Großer Senat, BGHSt 30, 105", 150, 375, "gs", size=32, farbe=TEXT),
     ok(135, 470, "vorrang", gr=22), z("Vorrang: gesetzliche Milderung", 175, 450, "vorrang", "Bold", 34),
     z("§ 35 II 2, § 49 I StGB", 215, 500, beim("vorrang", "Paragraf"), size=34),
