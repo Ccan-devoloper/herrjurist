@@ -34,6 +34,8 @@ Neu erzeugen: `cd youtube/themenplanung && python3 plan_bauen.py && python3 ausg
 - rclone funktioniert. Upload, Auflisten und Löschen sind getestet.
 - Der Ordner `LexVerse Produktion` hat die ID `1FPgTKSlZzqQiXg4N9b5qjTdBrvYKwigV`. rclone hat ihn angelegt.
 - Das Gesamtwissen liegt in `_Quellen/`, die MD5-Summe `422ec58a376f07e72917b7acdf4ac90b` ist geprüft.
+- Standardintro (`00-LexVerse-Standardintro-16x9-ORIGINAL.mp4`, MD5 `fbd2548abb4eda173840b0dad5f7cc7f`) und Standardoutro (`00-Herrjurist-Standardoutro-16x9.mp4`, MD5 `04807a44a25363e5761690f36768ce95`) liegen ebenfalls in `_Quellen/` und sind per rclone lesbar. Endschnitt mit `001-raser-fall/src/schnitt_raser.py` (statische Pegel: Intro +1 dB, Outro +4,5 dB, je mit Limiter).
+- **ElevenLabs-Kontingent:** Nach Folge 001 sind am 01.10.2026 noch 8.332 Zeichen frei, das reicht für knapp zwei Folgen. Pro Folge werden rund 4.400–5.600 Zeichen gebraucht.
 - **Ordner und Dateien nur mit rclone anlegen, nicht über den Drive-Connector.** Wegen `drive.file` sieht rclone nur seine eigenen Dateien; Ordner, die der Connector anlegt, wären für rclone unsichtbar und entstünden doppelt. Lesen geht mit beiden Wegen.
 - **Offen:** Das Remote nutzt noch die gemeinsame rclone-Client-ID, die 2026 abgeschaltet wird. Ohne eigene Client-ID (`RCLONE_CONFIG_LEXVERSE_CLIENT_ID`/`_SECRET`) und ein damit neu erzeugtes Token fällt der Zugang dann aus.
 

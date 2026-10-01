@@ -31,6 +31,36 @@ def sprechtext(t):
     return t
 
 
+def entstoeren(pcm, sr=SR):
+    """Bereinigt ein Segment ohne Längenänderung (Cue-Zeiten bleiben gültig, Cache bleibt nutzbar):
+    - Restlaut am Segmentende: eine kurze laute Insel (≤ 0,2 s) nach ≥ 0,2 s Stille ist ein Artefakt
+      (Stimme setzt neu an und wird abgeschnitten, hörbar als „Abbrechen“) und wird stummgeschaltet.
+    - 8 ms Ein- und 15 ms Ausblendung gegen Knacken an den Segmentkanten.
+    Gibt (pcm, Liste der bereinigten Restlaute in Sekunden) zurück."""
+    x = pcm.astype(np.float32)
+    h = int(0.01 * sr); n = len(x) // h
+    if n < 3:
+        return pcm, []
+    db = 20 * np.log10(np.sqrt((x[: n * h].reshape(n, h) ** 2).mean(1)) / 32768 + 1e-9)
+    laut = np.nonzero(db > -45)[0]
+    entfernt = []
+    if len(laut):
+        inseln = np.split(laut, np.nonzero(np.diff(laut) > 1)[0] + 1)
+        while len(inseln) > 1:
+            letzte, davor = inseln[-1], inseln[-2]
+            if (letzte[0] - davor[-1]) / 100 >= 0.2 and (letzte[-1] - letzte[0] + 1) / 100 <= 0.2:
+                a0 = letzte[0] * h
+                x[a0:] = 0.0
+                entfernt.append(round(a0 / sr, 3))
+                inseln = inseln[:-1]
+            else:
+                break
+    ein, aus = int(0.008 * sr), int(0.015 * sr)
+    x[:ein] *= np.linspace(0, 1, ein)
+    x[-aus:] *= np.linspace(1, 0, aus)
+    return np.clip(x, -32768, 32767).astype(np.int16), entfernt
+
+
 def anfrage(route, body=None):
     req = urllib.request.Request(API + route, data=None if body is None else json.dumps(body, ensure_ascii=False).encode(),
                                  headers={"Content-Type": "application/json", "User-Agent": "Herrjurist-production/1.0"})
@@ -91,6 +121,9 @@ def main(modul, erzaehler="carla"):
         al = json.load(open(js))["alignment"]
         pcm = np.frombuffer(subprocess.run([ff, "-v", "error", "-i", f"{cache}/{k}.mp3", "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"],
                                            capture_output=True, check=True).stdout, np.int16)
+        pcm, rest = entstoeren(pcm)
+        if rest:
+            print(f"  Segment {i + 1}: Restlaut am Ende stummgeschaltet (bei {', '.join(f'{r:.2f}' for r in rest)} s im Segment)")
         chars, starts = al["characters"], al["character_start_times_seconds"]
         assert "".join(chars) == text, "Zeitmarken passen nicht zum Text"
         for name, pos in marken:

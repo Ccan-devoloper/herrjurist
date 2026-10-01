@@ -13,5 +13,6 @@
 - **Kontingent:** Das Skript prüft `user/subscription` und bricht ab, wenn der enthaltene Rest nicht reicht. Eine automatische Mehrnutzung gibt es nicht.
 - **Wiederverwendung:** Jedes Segment wird nach Text, Sprecher, Modell und Einstellungen gecacht (`../el_cache`, nicht im Repo). Unveränderter Text wird nicht erneut bezahlt.
 - **Zeitmarken:** Die `[marke]`-Positionen kommen aus den Zeichen-Zeitmarken von `/with-timestamps`. Ausgabe sind `stimme.wav` (48 kHz) und `cues.json` im selben Format wie bei der Piper-Vertonung.
+- **Bereinigung (seit 01.10.2026):** `entstoeren()` schaltet kurze Restlaute (≤ 0,2 s nach ≥ 0,2 s Stille) am Segmentende stumm und blendet jedes Segment 8 ms ein und 15 ms aus. Die Länge bleibt gleich, deshalb gelten die Cue-Zeiten weiter. Anlass war Folge 001, Segment 18: ein abgeschnittener Ansatz nach „…vor.“, hörbar als „Abbrechen“.
 
 **Aufruf** im `src`-Ordner eines Videos: `python3 synth_el.py skript_xy`

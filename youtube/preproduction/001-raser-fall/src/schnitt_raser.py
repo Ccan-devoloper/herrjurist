@@ -1,5 +1,5 @@
 """Endschnitt: vollständiges Standardintro (8 s) + Hauptfilm + vollständiges Standardoutro, alles 1920×1080/30 fps,
-H.264 yuv420p, AAC 48 kHz Stereo. Intro und Outro werden auf die Lautheit des Hauptfilms gebracht (EBU R128, −16 LUFS),
+H.264 yuv420p, AAC 48 kHz Stereo. Intro, Hauptfilm und Outro werden per statischer Verstärkung (Intro/Outro mit Limiter) auf ≈ −16,5 LUFS gebracht,
 an den Schnitten nur 15 ms Audio-Blende gegen Knackser, kein Bildeffekt.
 
     python3 schnitt_raser.py --intro INTRO.mp4 --outro OUTRO.mp4 --haupt ../out/001-Raser-Fall-Hauptfilm.mp4 --out ZIEL.mp4
@@ -26,7 +26,10 @@ def main():
     for i, p in enumerate(teile):
         d = dauer(p)
         v = f"[{i}:v]scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30,format=yuv420p,setsar=1[v{i}]"
-        lautheit = "volume=2.5dB," if i == 1 else "loudnorm=I=-16:TP=-1.5:LRA=11,"   # Hauptfilm −18,9 → ≈ −16,4 LUFS, TP ≈ −1,4 dBTP
+        # Statische Pegel (gemessen 01.10.2026), Limiter bei −1,5 dBFS: Intro −17,4 LUFS/−0,5 dBFS, Outro −21,8/−3,0,
+        # Hauptfilm −18,9/−3,9. Ziel ≈ −16,5 LUFS für alle Teile; einpassiges loudnorm verfehlt kurze Musik deutlich.
+        lautheit = ["volume=1dB,alimiter=limit=0.84:level=disabled,", "volume=2.5dB,",
+                    "volume=4.5dB,alimiter=limit=0.84:level=disabled,"][i]
         au = (f"[{i}:a]aresample=48000,aformat=channel_layouts=stereo,{lautheit}"
               f"afade=t=in:d=0.015,afade=t=out:st={max(0, d - 0.015):.3f}:d=0.015,aresample=48000[a{i}]")
         flt += [v, au]

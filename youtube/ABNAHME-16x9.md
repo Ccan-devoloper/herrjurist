@@ -30,6 +30,7 @@ Jeden Punkt am **fertig exportierten MP4** und am Produktionsmaster belegen. `OK
 | Sämtliche Texte innerhalb ihrer Box bzw. Blase (Assertionen `z()`/`blase()` bestanden); 100-%-Ansicht und mobile Vorschau lesbar | … |
 | Ton-Bild-Gate: Cue-Timeline mit mindestens 45 Zeilen aus der verwendeten Sprachspur; jeder Bild-, Tafel- und Pfadstart an gehörten Wortgrenzen geprüft | Timeline-Pfad / … |
 | Keine Untertitel/Untertitelspur, keine Kapitel-/Fortschrittsanzeige, keine unerwünschten Labels und keine Extra-Schlusseinblendung | … |
+| Sprachsegmente ohne abgeschnittene Satzenden oder Restlaute: `synth_el.py` (`entstoeren()`) meldet stummgeschaltete Restlaute; alle Segmentenden im fertigen MP4 auf Energie in den letzten 20 ms geprüft, Satzschlüsse angehört | Kantenprüfung / betroffene Segmente: … |
 | Vorhandene Stimmen bei unverändertem Text wiederverwendet (Cache); natürliche Sprache und saubere Pausen; Credits nur für erforderliche Neuaufnahmen | Voice-Provenienz / Zeichenzahl / Hörprüfung: … |
 | Nur Handlungsgeräusche bei sichtbarer Handlung (Renderer-Assertion `szene_*`), leise und sparsam; Schiebeblenden stumm; Herkunft je Datei in `geraeusche_herkunft.json` | SFX-Cueliste / Hörprüfung: … |
 | Kein gesprochener Abschiedsgruß; letztes Sachwort vollständig; sanfter Anschluss an das vollständige Originaloutro | Zeitstempel / Hörprüfung: … |
