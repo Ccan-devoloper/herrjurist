@@ -50,12 +50,13 @@ def lexi_bis_ende(cue):
     return (cue, round(DAUER - bausteine._t(cue) - 0.05, 3))
 
 
-def fig(name, cx, unten, hoehe, folge, d=0.0, bis=None):
-    """Mimikfolge einer Figur am selben Platz: folge = [(cue, suffix)] → harte Schnitte; erstes Bild poppt."""
+def fig(name, cx, unten, hoehe, folge, d=0.0, bis=None, erst="pop"):
+    """Mimikfolge einer Figur am selben Platz: folge = [(cue, suffix)] → harte Schnitte; erstes Bild poppt (erst="cut",
+    wenn die Figur am selben Platz schon zu sehen war)."""
     els = []
     for i, (c, s) in enumerate(folge):
         b = folge[i + 1][0] if i + 1 < len(folge) else bis
-        els.append(peep_voll(f"{name}_{s}", cx, unten, hoehe, c, anim="pop" if i == 0 else "cut", d=d if i == 0 else 0.0, bis=b))
+        els.append(peep_voll(f"{name}_{s}", cx, unten, hoehe, c, anim=erst if i == 0 else "cut", d=d if i == 0 else 0.0, bis=b))
     return els
 
 
@@ -196,7 +197,7 @@ folie([("hund", "Fall · Gerdas Hund")], [
                  spiegeln=True, anim="cut"), beim("biss", "Hund"), (beim("biss", "Hund")[0], beim("biss", "Hund")[1] + 0.5), HU1 - HU2, 0),
     *fig("OT", OTH, BODEN, FH, [("hund", "schreck")], bis="o1"),
     *redet("OT_redet", OTH, BODEN, FH, "o1", "g1"),
-    *fig("OT", OTH, BODEN, FH, [("g1", "wuetend"), (beim("biss", "beißt"), "schreck")]),
+    *fig("OT", OTH, BODEN, FH, [("g1", "wuetend"), (beim("biss", "beißt"), "schreck")], erst="cut"),
     name("OT", OTH, "hund"),
     blase("sprech", 640, 170, "o1", 1060, 200, inhalt=["Gerda, ruf deinen", "Hund zurück!"], textsize=36, figur=OTR, bis="g1"),
     blase("sprech", 520, 150, "g1", 640, 330, inhalt=["Geschieht dir recht."], textsize=36, figur=GER, bis="biss"),
