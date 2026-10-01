@@ -1,6 +1,6 @@
 # Folge 001 · Raser-Fall: Mord mit dem Auto? – Szenenplan (Entwurf zur Freigabe)
 
-**Stand:** 01.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`skript_raser.py`](skript_raser.py)
+**Stand:** 01.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_raser.py`](src/skript_raser.py)
 
 ## Besetzung
 
