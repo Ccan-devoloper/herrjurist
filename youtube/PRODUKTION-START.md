@@ -30,6 +30,13 @@ Neu erzeugen: `cd youtube/themenplanung && python3 plan_bauen.py && python3 ausg
   - Binärdateien nie ins Repository.
 - **YouTube-Upload** macht der Kanalinhaber in YouTube Studio. Nur dort gibt es Test & Compare für die Thumbnail-Varianten.
 
+**Stand 01.10.2026 (geprüft):**
+- rclone funktioniert. Upload, Auflisten und Löschen sind getestet.
+- Der Ordner `LexVerse Produktion` hat die ID `1FPgTKSlZzqQiXg4N9b5qjTdBrvYKwigV`. rclone hat ihn angelegt.
+- Das Gesamtwissen liegt in `_Quellen/`, die MD5-Summe `422ec58a376f07e72917b7acdf4ac90b` ist geprüft.
+- **Ordner und Dateien nur mit rclone anlegen, nicht über den Drive-Connector.** Wegen `drive.file` sieht rclone nur seine eigenen Dateien; Ordner, die der Connector anlegt, wären für rclone unsichtbar und entstünden doppelt. Lesen geht mit beiden Wegen.
+- **Offen:** Das Remote nutzt noch die gemeinsame rclone-Client-ID, die 2026 abgeschaltet wird. Ohne eigene Client-ID (`RCLONE_CONFIG_LEXVERSE_CLIENT_ID`/`_SECRET`) und ein damit neu erzeugtes Token fällt der Zugang dann aus.
+
 ## Wissensquelle
 
 Die Gesamtwissen-HTML (`Jura_Gesamtwissen_…UPDATE30_FULL4958_UNCERTIFIED_2026-09-24.html`, 28,8 MB) liegt nicht im Repository. Der Kanalinhaber lädt sie zu Beginn neu hoch. Danach in Drive unter `LexVerse Produktion/_Quellen/` ablegen und in späteren Sitzungen von dort holen. Sie ist ausdrücklich „UNCERTIFIED“: Jede Aussage im Video an Normtext und Primärquelle prüfen. `tools/gesamtwissen_index.py` erschließt sie nach Überschriften.
