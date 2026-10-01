@@ -74,7 +74,7 @@ SEGMENTE = [
      "kein Gesetz erlaubt ihr das. [anspr]Jürgen kann nach Paragraf achthunderteinundsechzig die Wiedereinräumung des "
      "Besitzes verlangen. [p863]Und das Eigentum von Anke? Es hilft ihr hier nicht. Ein Recht zum Besitz zählt nach "
      "Paragraf achthundertdreiundsechzig nur für die Frage, ob verbotene Eigenmacht vorliegt. [posses]Dieser Anspruch "
-     "ist possessorisch: Er schützt den Besitz als solchen.", P),
+     "ist possessorisch: Er schützt allein den Besitz.", P),
     ("[p985]Und könnte Anke das Rad dann gleich nach Paragraf neunhundertfünfundachtzig herausverlangen? Nein. Dieser "
      "petitorische Anspruch schützt zwar das Eigentum. [p986]Doch Jürgen hat aus der Leihe bis September ein Recht zum Besitz, "
      "Paragraf neunhundertsechsundachtzig.", PS),
