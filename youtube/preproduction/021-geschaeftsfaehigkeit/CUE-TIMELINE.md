@@ -22,7 +22,7 @@ Quelle: `bildhalt_manifest.json` (145 Bildhalte, davon 145 eigenständig), `cues
 | 16 | 0:26.12 | 0:27.16 | Ritter | Abgemacht. | Fall · Im Handyladen | `5e827d464a4e` |
 | 17 | 0:27.16 | 0:29.40 | Ritter | Viel Spaß mit dem Handy! | Fall · Im Handyladen | `83637ebf7df3` |
 | 18 | 0:29.40 | 0:31.40 | Carla (Erzählerin/Lexi) | Am Abend sieht Friedas Mutter das | Fall · Am Abend zu Hause | `934a98a10512` |
-| 19 | 0:31.40 | 0:32.98 | Carla (Erzählerin/Lexi) | neue Handy. | Fall · Am Abend zu Hause | `1c0448e11c3b` |
+| 19 | 0:31.40 | 0:32.98 | Carla (Erzählerin/Lexi) | neue Handy. | Fall · Am Abend zu Hause | `cb160e7fe554` |
 | 20 | 0:32.98 | 0:36.66 | Mutter | Sechshundert Euro? Das genehmigen wir nicht! | Fall · Am Abend zu Hause | `7050ce5eb0f1` |
 | 21 | 0:36.66 | 0:37.50 | Carla (Erzählerin/Lexi) | Davon erfährt | Fall · Ritters Brief | `9b11f45a71e4` |
 | 22 | 0:37.50 | 0:38.78 | Carla (Erzählerin/Lexi) | Ritter nichts. Er | Fall · Ritters Brief | `a1857f6ca445` |
@@ -34,13 +34,13 @@ Quelle: `bildhalt_manifest.json` (145 Bildhalte, davon 145 eigenständig), `cues
 | 28 | 0:45.34 | 0:49.26 | Carla (Erzählerin/Lexi) | Muss Frieda die restlichen fünfhundert Euro zahlen? | Fall · Die Frage | `123c11aecfea` |
 | 29 | 0:49.26 | 0:59.22 | Carla (Erzählerin/Lexi) | Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an. | Sachverhalt | `815332db0b3a` |
 | 30 | 0:59.52 | 1:00.26 | Carla (Erzählerin/Lexi) | Ritter verlangt den | Ritter gegen Frieda · § 433 Abs. 2 BGB | `0aeacf64ecef` |
-| 31 | 1:00.26 | 1:01.78 | Carla (Erzählerin/Lexi) | restlichen Kaufpreis nach | Ritter gegen Frieda · § 433 Abs. 2 BGB | `dde4ab3556b3` |
-| 32 | 1:01.78 | 1:05.18 | Carla (Erzählerin/Lexi) | Paragraf vierhundertdreiunddreißig Absatz zwei. | Ritter gegen Frieda · § 433 Abs. 2 BGB | `007d5e249c4b` |
-| 33 | 1:05.18 | 1:07.78 | Carla (Erzählerin/Lexi) | Römisch eins: die Einigung. | I. Einigung · Angebot und Annahme | `679906e4f97a` |
-| 34 | 1:07.78 | 1:09.14 | Carla (Erzählerin/Lexi) | Angebot und Annahme | I. Einigung · Angebot und Annahme | `79e546f87f64` |
-| 35 | 1:09.14 | 1:10.38 | Carla (Erzählerin/Lexi) | liegen vor. | I. Einigung · Angebot und Annahme | `163886527d52` |
-| 36 | 1:10.38 | 1:14.38 | Carla (Erzählerin/Lexi) | Römisch zwei: Ist der Vertrag wirksam? Das hängt an der | II. Wirksamkeit · Friedas Geschäftsfähigkeit | `8162bcf89526` |
-| 37 | 1:14.38 | 1:17.40 | Carla (Erzählerin/Lexi) | Geschäftsfähigkeit von Frieda. | II. Wirksamkeit · Friedas Geschäftsfähigkeit | `5b3f16b8684d` |
+| 31 | 1:00.26 | 1:01.78 | Carla (Erzählerin/Lexi) | restlichen Kaufpreis nach | Ritter gegen Frieda · § 433 Abs. 2 BGB | `14dec48aaefa` |
+| 32 | 1:01.78 | 1:05.18 | Carla (Erzählerin/Lexi) | Paragraf vierhundertdreiunddreißig Absatz zwei. | Ritter gegen Frieda · § 433 Abs. 2 BGB | `0796e1e4f01c` |
+| 33 | 1:05.18 | 1:07.78 | Carla (Erzählerin/Lexi) | Römisch eins: die Einigung. | I. Einigung · Angebot und Annahme | `6841bb940810` |
+| 34 | 1:07.78 | 1:09.14 | Carla (Erzählerin/Lexi) | Angebot und Annahme | I. Einigung · Angebot und Annahme | `50f6c36b9b52` |
+| 35 | 1:09.14 | 1:10.38 | Carla (Erzählerin/Lexi) | liegen vor. | I. Einigung · Angebot und Annahme | `2e2c245b3de1` |
+| 36 | 1:10.38 | 1:14.38 | Carla (Erzählerin/Lexi) | Römisch zwei: Ist der Vertrag wirksam? Das hängt an der | II. Wirksamkeit · Friedas Geschäftsfähigkeit | `83240f4aa531` |
+| 37 | 1:14.38 | 1:17.40 | Carla (Erzählerin/Lexi) | Geschäftsfähigkeit von Frieda. | II. Wirksamkeit · Friedas Geschäftsfähigkeit | `cfa761eaff68` |
 | 38 | 1:17.70 | 1:18.40 | Carla (Erzählerin/Lexi) | Erstens: | II. Wirksamkeit › 1. geschäftsunfähig? §§ 104, 105 BGB | `b790a2eb2654` |
 | 39 | 1:18.40 | 1:22.12 | Carla (Erzählerin/Lexi) | Geschäftsunfähig ist nach Paragraf hundertvier, wer noch nicht | II. Wirksamkeit › 1. geschäftsunfähig? §§ 104, 105 BGB | `13adaacbe627` |
 | 40 | 1:22.12 | 1:23.52 | Carla (Erzählerin/Lexi) | sieben Jahre alt ist | II. Wirksamkeit › 1. geschäftsunfähig? §§ 104, 105 BGB | `95e1c4d682a2` |
