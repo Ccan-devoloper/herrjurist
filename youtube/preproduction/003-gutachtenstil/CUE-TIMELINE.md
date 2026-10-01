@@ -10,24 +10,24 @@ Quelle: `bildhalt_manifest.json` (118 Bildhalte, davon 118 eigenständig), `cues
 | 4 | 0:05.36 | 0:06.68 | Carla (Erzählerin/Lexi) | Paul bleibt stehen und | Fall · Der Flohmarkt | `aa01dbf93c7c` |
 | 5 | 0:06.68 | 0:08.22 | Carla (Erzählerin/Lexi) | fragt nach dem Preis. | Fall · Der Flohmarkt | `33ca9393781b` |
 | 6 | 0:08.22 | 0:11.40 | Greta | Achtzig Euro, und es gehört Ihnen. | Fall · Der Flohmarkt | `61c449a046ac` |
-| 7 | 0:11.40 | 0:12.20 | Paul | Ich nehme es für | Fall · Der Flohmarkt | `3f2609f58c7a` |
-| 8 | 0:12.20 | 0:15.14 | Paul | siebzig. Das Geld bringe ich morgen. | Fall · Der Flohmarkt | `956c666a5be5` |
+| 7 | 0:11.40 | 0:12.20 | Paul | Ich nehme es für | Fall · Der Flohmarkt | `311db1b2dd0e` |
+| 8 | 0:12.20 | 0:15.14 | Paul | siebzig. Das Geld bringe ich morgen. | Fall · Der Flohmarkt | `6ba702670f61` |
 | 9 | 0:15.14 | 0:16.10 | Greta | Na gut, | Fall · Der Flohmarkt | `56ef40dcbde0` |
 | 10 | 0:16.10 | 0:17.70 | Greta | siebzig. | Fall · Der Flohmarkt | `f58d157d260c` |
-| 11 | 0:17.70 | 0:19.78 | Carla (Erzählerin/Lexi) | Paul fährt mit dem Rad davon. | Fall · Der Flohmarkt | `5e64be2f23d4` |
-| 12 | 0:19.98 | 0:21.30 | Carla (Erzählerin/Lexi) | am nächsten Tag kommt | Fall · Am nächsten Tag | `2bed4c08a16c` |
-| 13 | 0:21.58 | 0:22.34 | Carla (Erzählerin/Lexi) | Geld. | Fall · Am nächsten Tag | `00e470b0c495` |
+| 11 | 0:17.70 | 0:19.78 | Carla (Erzählerin/Lexi) | Paul fährt mit dem Rad davon. | Fall · Der Flohmarkt | `f96b66086c35` |
+| 12 | 0:19.98 | 0:21.30 | Carla (Erzählerin/Lexi) | am nächsten Tag kommt | Fall · Am nächsten Tag | `00cab966e47d` |
+| 13 | 0:21.58 | 0:22.34 | Carla (Erzählerin/Lexi) | Geld. | Fall · Am nächsten Tag | `1865989a1ca6` |
 | 14 | 0:22.34 | 0:23.94 | Carla (Erzählerin/Lexi) | Greta ist verärgert und | Fall · Am nächsten Tag | `d21f89615b21` |
 | 15 | 0:23.94 | 0:26.84 | Carla (Erzählerin/Lexi) | verlangt jetzt sogar achtzig Euro. | Fall · Am nächsten Tag | `8e17d2c34f1d` |
 | 16 | 0:27.14 | 0:29.76 | Carla (Erzählerin/Lexi) | Genau so beginnt deine erste Klausur: | Fall · Die Klausurfrage | `900b23054c9f` |
 | 17 | 0:29.76 | 0:32.20 | Carla (Erzählerin/Lexi) | Hat Greta gegen Paul einen Anspruch auf | Fall · Die Klausurfrage | `c19101dfd27e` |
 | 18 | 0:32.20 | 0:33.78 | Carla (Erzählerin/Lexi) | achtzig Euro? | Fall · Die Klausurfrage | `d265c5f5b556` |
-| 19 | 0:33.78 | 0:36.50 | Mia | Und wie schreibe ich das jetzt auf? | Fall · Die Klausurfrage | `2a5331a88ac9` |
-| 20 | 0:36.74 | 0:39.38 | Carla (Erzählerin/Lexi) | Gutachtenstil, in vier Schritten: | Gutachtenstil · Die vier Schritte | `c1334e55a844` |
-| 21 | 0:39.38 | 0:40.95 | Carla (Erzählerin/Lexi) | Obersatz, | Gutachtenstil · Die vier Schritte | `eca848b7e911` |
-| 22 | 0:40.95 | 0:41.46 | Carla (Erzählerin/Lexi) | Definition, | Gutachtenstil · Die vier Schritte | `b97208d29a37` |
-| 23 | 0:41.46 | 0:42.58 | Carla (Erzählerin/Lexi) | Subsumtion, | Gutachtenstil · Die vier Schritte | `c9965da743aa` |
-| 24 | 0:42.58 | 0:44.30 | Carla (Erzählerin/Lexi) | Ergebnis. | Gutachtenstil · Die vier Schritte | `f6dd1c229be2` |
+| 19 | 0:33.78 | 0:36.50 | Mia | Und wie schreibe ich das jetzt auf? | Fall · Die Klausurfrage | `0bb74f2c299a` |
+| 20 | 0:36.74 | 0:39.38 | Carla (Erzählerin/Lexi) | Gutachtenstil, in vier Schritten: | Gutachtenstil · Die vier Schritte | `acfa7c8ceeaf` |
+| 21 | 0:39.38 | 0:40.95 | Carla (Erzählerin/Lexi) | Obersatz, | Gutachtenstil · Die vier Schritte | `1db6a3b15b75` |
+| 22 | 0:40.95 | 0:41.46 | Carla (Erzählerin/Lexi) | Definition, | Gutachtenstil · Die vier Schritte | `6afa84dac276` |
+| 23 | 0:41.46 | 0:42.58 | Carla (Erzählerin/Lexi) | Subsumtion, | Gutachtenstil · Die vier Schritte | `7334d94f668c` |
+| 24 | 0:42.58 | 0:44.30 | Carla (Erzählerin/Lexi) | Ergebnis. | Gutachtenstil · Die vier Schritte | `2a06f7c9f51f` |
 | 25 | 0:44.30 | 0:54.18 | Carla (Erzählerin/Lexi) | Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an. | Sachverhalt | `e5c9203bf708` |
 | 26 | 0:54.58 | 0:59.42 | Carla (Erzählerin/Lexi) | eins, der Obersatz. Er nennt die Frage, die du gleich prüfst: | A. Greta gegen Paul, § 433 II BGB › 1. Obersatz | `e0b8b8a362bf` |
 | 27 | 0:59.46 | 1:00.10 | Carla (Erzählerin/Lexi) | Wer will | A. Greta gegen Paul, § 433 II BGB › 1. Obersatz | `56a0800235ad` |
@@ -70,16 +70,16 @@ Quelle: `bildhalt_manifest.json` (118 Bildhalte, davon 118 eigenständig), `cues
 | 64 | 2:14.62 | 2:18.06 | Carla (Erzählerin/Lexi) | Ablehnung, verbunden mit einem neuen Antrag. | A. Greta gegen Paul › 3. Subsumtion › Annahme Paul? § 150 II BGB | `3ab376819c5e` |
 | 65 | 2:18.26 | 2:21.90 | Carla (Erzählerin/Lexi) | Gretas Angebot über achtzig Euro ist damit erloschen. | A. Greta gegen Paul › 3. Subsumtion › neues Angebot Paul | `7303a29c2963` |
 | 66 | 2:21.90 | 2:24.90 | Carla (Erzählerin/Lexi) | Paul macht ein neues Angebot über siebzig. | A. Greta gegen Paul › 3. Subsumtion › neues Angebot Paul | `2120b267e85a` |
-| 67 | 2:24.90 | 2:27.06 | Carla (Erzählerin/Lexi) | Und Greta nimmt es sofort an, | A. Greta gegen Paul › 3. Subsumtion › Annahme Greta, § 147 I BGB | `6cb80819c558` |
-| 68 | 2:27.06 | 2:33.02 | Carla (Erzählerin/Lexi) | wie es unter Anwesenden nötig ist: Paragraf hundertsiebenundvierzig Absatz eins. | A. Greta gegen Paul › 3. Subsumtion › Annahme Greta, § 147 I BGB | `f75e2e05b24f` |
-| 69 | 2:33.02 | 2:39.92 | Carla (Erzählerin/Lexi) | Hier liegt das Problem des Falls. Darum schreibst du genau an dieser Stelle ausführlich. | A. Greta gegen Paul › 3. Subsumtion: das Problem | `79f89b980542` |
+| 67 | 2:24.90 | 2:27.06 | Carla (Erzählerin/Lexi) | Und Greta nimmt es sofort an, | A. Greta gegen Paul › 3. Subsumtion › Annahme Greta, § 147 I BGB | `ddc714e849a9` |
+| 68 | 2:27.06 | 2:33.02 | Carla (Erzählerin/Lexi) | wie es unter Anwesenden nötig ist: Paragraf hundertsiebenundvierzig Absatz eins. | A. Greta gegen Paul › 3. Subsumtion › Annahme Greta, § 147 I BGB | `af9335b3c166` |
+| 69 | 2:33.02 | 2:39.92 | Carla (Erzählerin/Lexi) | Hier liegt das Problem des Falls. Darum schreibst du genau an dieser Stelle ausführlich. | A. Greta gegen Paul › 3. Subsumtion: das Problem | `48ceef17699c` |
 | 70 | 2:40.12 | 2:42.64 | Carla (Erzählerin/Lexi) | Schritt vier, das Ergebnis. | A. Greta gegen Paul › 4. Ergebnis | `e9926a5d09e8` |
 | 71 | 2:42.64 | 2:46.68 | Carla (Erzählerin/Lexi) | Es beantwortet den Obersatz, jetzt ohne Konjunktiv. | A. Greta gegen Paul › 4. Ergebnis | `9854027dd323` |
 | 72 | 2:46.68 | 2:52.16 | Carla (Erzählerin/Lexi) | Also haben Greta und Paul einen Kaufvertrag über siebzig Euro geschlossen. | A. Greta gegen Paul › 4. Ergebnis | `a6166345c205` |
 | 73 | 2:52.16 | 2:55.60 | Carla (Erzählerin/Lexi) | Gezahlt hat Paul nicht, der Anspruch ist also auch nicht | A. Greta gegen Paul › Anspruch nicht erloschen | `9aa47ca549cd` |
 | 74 | 2:55.60 | 2:56.40 | Carla (Erzählerin/Lexi) | erloschen. | A. Greta gegen Paul › Anspruch nicht erloschen | `a11127c4c395` |
-| 75 | 2:56.55 | 2:58.72 | Carla (Erzählerin/Lexi) | Greta kann siebzig Euro verlangen, | A. Greta gegen Paul › Ergebnis | `4028042358e0` |
-| 76 | 2:58.72 | 3:00.98 | Carla (Erzählerin/Lexi) | nicht achtzig. | A. Greta gegen Paul › Ergebnis | `ce442597804c` |
+| 75 | 2:56.55 | 2:58.72 | Carla (Erzählerin/Lexi) | Greta kann siebzig Euro verlangen, | A. Greta gegen Paul › Ergebnis | `d8041e599d4a` |
+| 76 | 2:58.72 | 3:00.98 | Carla (Erzählerin/Lexi) | nicht achtzig. | A. Greta gegen Paul › Ergebnis | `388efc93b43d` |
 | 77 | 3:00.98 | 3:02.66 | Carla (Erzählerin/Lexi) | Und der Urteilsstil? | Gutachtenstil oder Urteilsstil | `290da87cc71e` |
 | 78 | 3:02.66 | 3:04.58 | Carla (Erzählerin/Lexi) | Er dreht die Reihenfolge um: | Gutachtenstil oder Urteilsstil | `298e7c70d05b` |
 | 79 | 3:04.58 | 3:06.30 | Carla (Erzählerin/Lexi) | erst das Ergebnis, dann die | Gutachtenstil oder Urteilsstil | `a86b6fce0a16` |

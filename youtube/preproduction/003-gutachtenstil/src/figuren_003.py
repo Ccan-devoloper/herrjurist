@@ -27,12 +27,12 @@ SPIEGEL = {k: int(os.environ.get("SP_" + k, v[5])) for k, v in P.items()}
 
 # (Name, Pose, Grundmimik, mit Mundzuständen); jede Ansicht zusätzlich als _r
 LISTE = [
-    ("GR_ruhig", "GR", "Calm", 0), ("GR_redet", "GR", "Smile", 1), ("GR_zufrieden", "GR", "Smile Big", 0),
+    ("GR_ruhig", "GR", "Calm", 0), ("GR_redet", "GR", "Smile", 1), ("GR_zufrieden", "GR", "Smile Big|Smile", 0),
     ("GR_aerger", "GR", "Contempt", 0), ("GR_fordert", "GR", "Serious", 0),
-    ("PA_ruhig", "PA", "Calm", 0), ("PA_redet", "PA", "Cheeky", 1), ("PA_ertappt", "PA", "Suspicious", 0),
-    ("PA_denkt", "PA", "Serious", 0), ("PA_geht", "PA_GEHT", "Calm", 0), ("PA_rad", "PA_RAD", "Smile Big", 0),
-    ("MI_ruhig", "MI", "Calm", 0), ("MI_fragt", "MI", "Concerned", 1), ("MI_redet", "MI", "Smile", 1),
-    ("MI_ertappt", "MI", "Fear", 0), ("MI_denkt", "MI", "Serious", 0), ("MI_froh", "MI", "Smile Big", 0),
+    ("PA_ruhig", "PA", "Calm", 0), ("PA_redet", "PA", "Cheeky|Smile", 1), ("PA_ertappt", "PA", "Suspicious", 0),
+    ("PA_denkt", "PA", "Serious", 0), ("PA_geht", "PA_GEHT", "Calm", 0), ("PA_rad", "PA_RAD", "Smile Big|Smile", 0),
+    ("MI_ruhig", "MI", "Calm", 0), ("MI_fragt", "MI", "Concerned|Serious", 1), ("MI_redet", "MI", "Smile", 1),
+    ("MI_ertappt", "MI", "Fear", 0), ("MI_denkt", "MI", "Serious", 0), ("MI_froh", "MI", "Smile Big|Smile", 0),
 ]
 
 n = 0
@@ -43,7 +43,7 @@ for name, p, mimik, mund in LISTE:
         figur(pose, kopf, mimik, bart, brille, farben, hoehe=1200, spiegeln=bool(gespiegelt)).save(f"{ZIEL}/{name}{suffix}.png"); n += 1
         if mund:
             for k, m in MUND.items():
-                figur(pose, kopf, f"{mimik}|{m}", bart, brille, farben, hoehe=1200,
+                figur(pose, kopf, f"{mimik.split('|')[0]}|{m}", bart, brille, farben, hoehe=1200,
                       spiegeln=bool(gespiegelt)).save(f"{ZIEL}/{name}{suffix}_{k}.png"); n += 1
 # Lexi (feste Moderatorin, Stimme Carla), blickt nach links zur Tafel
 for name, (pose, mimik) in {"LX_erklaert": ("standing/robot_dance-1", "Smile"), "LX_warnt": ("standing/robot_dance-1", "Serious"),
