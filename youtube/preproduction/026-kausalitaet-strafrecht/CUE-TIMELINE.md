@@ -23,7 +23,7 @@ Quelle: `bildhalt_manifest.json` (145 Bildhalte, davon 145 eigenständig), `cues
 | 17 | 0:24.02 | 0:26.10 | Maren | Meine Scheune! | Fall · Die Scheune brennt | `c429292380e9` |
 | 18 | 0:26.10 | 0:29.66 | Carla (Erzählerin/Lexi) | Ist der Verkauf des Feuerzeugs kausal für den Brand? | Fall · Die Frage | `c811b80b5222` |
 | 19 | 0:29.66 | 0:33.58 | Carla (Erzählerin/Lexi) | Und reicht das schon, um Egon zu bestrafen? | Fall · Die Frage | `fb5a857ccaf3` |
-| 20 | 0:33.58 | 0:43.30 | Carla (Erzählerin/Lexi) | Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an. | Sachverhalt | `153a08c7baa8` |
+| 20 | 0:33.58 | 0:43.30 | Carla (Erzählerin/Lexi) | Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an. | Sachverhalt | `93d7c281a33f` |
 | 21 | 0:43.50 | 0:46.62 | Carla (Erzählerin/Lexi) | Kausalität prüfst du bei jedem Erfolgsdelikt. | Erfolgsdelikte › Erfolg im Tatbestand | `bdbc20321939` |
 | 22 | 0:46.62 | 0:49.62 | Carla (Erzählerin/Lexi) | Dort gehört ein Erfolg zum Tatbestand, etwa der | Erfolgsdelikte › Erfolg im Tatbestand | `9555139fc598` |
 | 23 | 0:49.62 | 0:50.14 | Carla (Erzählerin/Lexi) | Tod beim | Erfolgsdelikte › Erfolg im Tatbestand | `8a25bd68a680` |
@@ -31,7 +31,7 @@ Quelle: `bildhalt_manifest.json` (145 Bildhalte, davon 145 eigenständig), `cues
 | 25 | 0:52.94 | 0:58.86 | Carla (Erzählerin/Lexi) | Bei der fahrlässigen Tötung steht es sogar im Gesetz: Wer durch Fahrlässigkeit den Tod eines Menschen | Erfolgsdelikte › § 222 StGB: „verursacht“ | `a9b7c29feca7` |
 | 26 | 0:58.86 | 0:59.93 | Carla (Erzählerin/Lexi) | verursacht. | Erfolgsdelikte › § 222 StGB: „verursacht“ | `9caa094a9543` |
 | 27 | 0:59.93 | 1:02.02 | Carla (Erzählerin/Lexi) | In unserem Fall ist der Erfolg der | Erfolgsdelikte › Brandstiftung, § 306 Abs. 1 Nr. 1 StGB | `54b7e4311563` |
-| 28 | 1:02.28 | 1:03.35 | Carla (Erzählerin/Lexi) | der Scheune, | Erfolgsdelikte › Brandstiftung, § 306 Abs. 1 Nr. 1 StGB | `93d8dee5c0f8` |
+| 28 | 1:02.28 | 1:03.35 | Carla (Erzählerin/Lexi) | der Scheune, | Erfolgsdelikte › Brandstiftung, § 306 Abs. 1 Nr. 1 StGB | `1cfb964dbfe0` |
 | 29 | 1:03.35 | 1:07.16 | Carla (Erzählerin/Lexi) | Brandstiftung nach Paragraf dreihundertsechs. | Erfolgsdelikte › Brandstiftung, § 306 Abs. 1 Nr. 1 StGB | `3171941c76e9` |
 | 30 | 1:07.36 | 1:10.00 | Carla (Erzählerin/Lexi) | Wann ist eine Handlung ursächlich? Der | A. Kausalität › Bedingungstheorie (BGH) | `915784789504` |
 | 31 | 1:10.00 | 1:13.52 | Carla (Erzählerin/Lexi) | Bundesgerichtshof wendet die Bedingungstheorie an. | A. Kausalität › Bedingungstheorie (BGH) | `534f9e569655` |
@@ -75,12 +75,12 @@ Quelle: `bildhalt_manifest.json` (145 Bildhalte, davon 145 eigenständig), `cues
 | 69 | 2:35.80 | 2:39.84 | Carla (Erzählerin/Lexi) | Ist Egon damit schon strafbar? So schnell geht es nicht. | A. Kausalität › nur die erste Hürde | `84a6c7f014db` |
 | 70 | 2:39.84 | 2:41.64 | Carla (Erzählerin/Lexi) | Kausalität ist nur die erste | A. Kausalität › nur die erste Hürde | `41f9befe1f0c` |
 | 71 | 2:41.64 | 2:42.44 | Carla (Erzählerin/Lexi) | Hürde. | A. Kausalität › nur die erste Hürde | `333f34b897bb` |
-| 72 | 2:42.44 | 2:45.00 | Carla (Erzählerin/Lexi) | Ob ihm der Brand zuzurechnen ist, prüft die | B. Nächster Schritt › objektive Zurechnung (Lehre) | `50059541e42f` |
-| 73 | 2:45.00 | 2:46.80 | Carla (Erzählerin/Lexi) | Lehre im nächsten Schritt, der | B. Nächster Schritt › objektive Zurechnung (Lehre) | `75c170f8f201` |
-| 74 | 2:46.80 | 2:49.76 | Carla (Erzählerin/Lexi) | objektiven Zurechnung. Dazu gibt es eine | B. Nächster Schritt › objektive Zurechnung (Lehre) | `18d4685f6165` |
-| 75 | 2:49.76 | 2:51.08 | Carla (Erzählerin/Lexi) | eigene Folge. | B. Nächster Schritt › objektive Zurechnung (Lehre) | `05ea57835434` |
-| 76 | 2:51.08 | 2:53.96 | Carla (Erzählerin/Lexi) | Und Vorsatz hatte Egon ohnehin nicht, denn er | B. Nächster Schritt › Vorsatz Egon (-) | `ba0a2dbbfb7d` |
-| 77 | 2:53.96 | 2:57.14 | Carla (Erzählerin/Lexi) | wusste nichts von Bodos Plan. | B. Nächster Schritt › Vorsatz Egon (-) | `b77a9c42d16f` |
+| 72 | 2:42.44 | 2:45.00 | Carla (Erzählerin/Lexi) | Ob ihm der Brand zuzurechnen ist, prüft die | A. Kausalität › nur die erste Hürde › danach: objektive Zurechnung (Lehre) | `5863f9cf9d84` |
+| 73 | 2:45.00 | 2:46.80 | Carla (Erzählerin/Lexi) | Lehre im nächsten Schritt, der | A. Kausalität › nur die erste Hürde › danach: objektive Zurechnung (Lehre) | `24624fa40216` |
+| 74 | 2:46.80 | 2:49.76 | Carla (Erzählerin/Lexi) | objektiven Zurechnung. Dazu gibt es eine | A. Kausalität › nur die erste Hürde › danach: objektive Zurechnung (Lehre) | `43f596b8aae0` |
+| 75 | 2:49.76 | 2:51.08 | Carla (Erzählerin/Lexi) | eigene Folge. | A. Kausalität › nur die erste Hürde › danach: objektive Zurechnung (Lehre) | `1f4e43f9d5f7` |
+| 76 | 2:51.08 | 2:53.96 | Carla (Erzählerin/Lexi) | Und Vorsatz hatte Egon ohnehin nicht, denn er | A. Kausalität › nur die erste Hürde › Vorsatz Egon (-) | `678dab792f6e` |
+| 77 | 2:53.96 | 2:57.14 | Carla (Erzählerin/Lexi) | wusste nichts von Bodos Plan. | A. Kausalität › nur die erste Hürde › Vorsatz Egon (-) | `43ab611996b1` |
 | 78 | 2:57.34 | 3:00.22 | Carla (Erzählerin/Lexi) | Abwandlung eins: Bodo stellt eine brennende | B. Abwandlung 1 · Kerze im Stroh | `fa497f1b64eb` |
 | 79 | 3:00.22 | 3:01.73 | Carla (Erzählerin/Lexi) | Kerze ins Stroh. | B. Abwandlung 1 · Kerze im Stroh | `a24f43360353` |
 | 80 | 3:01.73 | 3:02.58 | Carla (Erzählerin/Lexi) | Sie soll in einer | B. Abwandlung 1 · Kerze im Stroh | `b15172cbdbe2` |
@@ -94,32 +94,32 @@ Quelle: `bildhalt_manifest.json` (145 Bildhalte, davon 145 eigenständig), `cues
 | 88 | 3:15.06 | 3:18.14 | Carla (Erzählerin/Lexi) | Lehre nennt das überholende Kausalität. | B. Abwandlung 1 › überholende Kausalität (Lehre) | `ef465c247883` |
 | 89 | 3:18.14 | 3:21.22 | Carla (Erzählerin/Lexi) | Bodos Kerze ist für den Brand nicht kausal. | B. Abwandlung 1 › versuchte Brandstiftung, §§ 306, 22, 23 StGB | `0e2f75df4d97` |
 | 90 | 3:21.22 | 3:29.00 | Carla (Erzählerin/Lexi) | Ihm bleibt nur versuchte Brandstiftung, Paragrafen dreihundertsechs, zweiundzwanzig und dreiundzwanzig. | B. Abwandlung 1 › versuchte Brandstiftung, §§ 306, 22, 23 StGB | `ed50d495e2d3` |
-| 91 | 3:29.20 | 3:32.32 | Carla (Erzählerin/Lexi) | Abwandlung zwei: In derselben Nacht legt auch | C. Abwandlung 2 · zwei Feuer | `6aad338cdb93` |
-| 92 | 3:32.52 | 3:33.24 | Carla (Erzählerin/Lexi) | Silke Feuer, | C. Abwandlung 2 · zwei Feuer | `e5f180b745b9` |
-| 93 | 3:33.24 | 3:34.76 | Carla (Erzählerin/Lexi) | unabhängig von Bodo, am | C. Abwandlung 2 · zwei Feuer | `206e6f9f2fed` |
-| 94 | 3:34.76 | 3:36.52 | Carla (Erzählerin/Lexi) | anderen Ende der Scheune. | C. Abwandlung 2 · zwei Feuer | `202652015462` |
-| 95 | 3:36.68 | 3:38.72 | Carla (Erzählerin/Lexi) | Beide Feuer wachsen zusammen, und | C. Abwandlung 2 · zwei Feuer | `61e22f2c3304` |
-| 96 | 3:38.72 | 3:41.60 | Carla (Erzählerin/Lexi) | jedes hätte die Scheune auch allein zerstört. | C. Abwandlung 2 · zwei Feuer | `0e3b777f2532` |
-| 97 | 3:41.60 | 3:43.32 | Carla (Erzählerin/Lexi) | Streng nach der Formel könnte man | C. Abwandlung 2 › Formel streng angewandt | `7758cbf180e6` |
-| 98 | 3:43.32 | 3:47.24 | Carla (Erzählerin/Lexi) | Bodos Feuer wegdenken, und die Scheune brennt trotzdem. Bei | C. Abwandlung 2 › Formel streng angewandt | `e9e12e951037` |
-| 99 | 3:47.24 | 3:48.60 | Carla (Erzählerin/Lexi) | Silke genauso. | C. Abwandlung 2 › Formel streng angewandt | `f1607ccc6d42` |
-| 100 | 3:48.60 | 3:51.08 | Carla (Erzählerin/Lexi) | Dann wäre keiner kausal. | C. Abwandlung 2 › Formel streng angewandt | `5029503ba95b` |
-| 101 | 3:51.08 | 3:52.68 | Carla (Erzählerin/Lexi) | Das kann nicht stimmen. Der | C. Abwandlung 2 › alternative Kausalität | `cdeaf84e818e` |
-| 102 | 3:52.68 | 3:57.35 | Carla (Erzählerin/Lexi) | Bundesgerichtshof hat bei zwei Schüssen, von denen jeder allein tödlich war, | C. Abwandlung 2 › alternative Kausalität | `e917a744d749` |
-| 103 | 3:57.35 | 3:59.68 | Carla (Erzählerin/Lexi) | beide als ursächlich angesehen. | C. Abwandlung 2 › alternative Kausalität | `01ee1bb1e5fa` |
-| 104 | 3:59.68 | 4:00.60 | Carla (Erzählerin/Lexi) | Die Lehre spricht | C. Abwandlung 2 › alternative Kausalität | `206b9f5ed4bc` |
-| 105 | 4:00.60 | 4:07.64 | Carla (Erzählerin/Lexi) | von alternativer Kausalität und passt die Formel an: Von mehreren Bedingungen, die zwar alternativ, | C. Abwandlung 2 › alternative Kausalität | `6d3a386c419c` |
-| 106 | 4:07.64 | 4:09.92 | Carla (Erzählerin/Lexi) | aber nicht kumulativ hinweggedacht werden | C. Abwandlung 2 › alternative Kausalität | `1fc41bc67a3d` |
-| 107 | 4:09.92 | 4:13.66 | Carla (Erzählerin/Lexi) | können, ist jede ursächlich. | C. Abwandlung 2 › alternative Kausalität | `4e742d2ca79c` |
-| 108 | 4:13.86 | 4:17.98 | Carla (Erzählerin/Lexi) | Abwandlung drei: Bodo und Silke legen wieder Feuer, doch | D. Abwandlung 3 · feuchtes Stroh | `7b6f3d17c348` |
-| 109 | 4:17.98 | 4:18.94 | Carla (Erzählerin/Lexi) | jedes wäre im | D. Abwandlung 3 · feuchtes Stroh | `4e35b28aa197` |
-| 110 | 4:19.04 | 4:20.14 | Carla (Erzählerin/Lexi) | feuchten Stroh allein | D. Abwandlung 3 · feuchtes Stroh | `f487dc58777c` |
-| 111 | 4:20.14 | 4:21.18 | Carla (Erzählerin/Lexi) | erloschen. | D. Abwandlung 3 · feuchtes Stroh | `f45b2c512e30` |
-| 112 | 4:21.62 | 4:24.70 | Carla (Erzählerin/Lexi) | zusammen greift der Brand auf die Scheune über. | D. Abwandlung 3 · feuchtes Stroh | `26ba1d110074` |
-| 113 | 4:24.70 | 4:27.74 | Carla (Erzählerin/Lexi) | Das nennt die Lehre kumulative Kausalität. | D. Abwandlung 3 › kumulative Kausalität (Lehre) | `0aa56559c8de` |
-| 114 | 4:27.74 | 4:30.94 | Carla (Erzählerin/Lexi) | Denkt man einen Beitrag weg, entfällt der Erfolg. | D. Abwandlung 3 › kumulative Kausalität (Lehre) | `8db5766f4c73` |
-| 115 | 4:30.94 | 4:32.93 | Carla (Erzählerin/Lexi) | Also sind beide kausal. | D. Abwandlung 3 › kumulative Kausalität (Lehre) | `8911eafa64dc` |
-| 116 | 4:32.93 | 4:38.80 | Carla (Erzählerin/Lexi) | Ob ihnen der Brand auch zuzurechnen ist, klärt wieder erst der nächste Prüfungsschritt. | D. Abwandlung 3 › kumulative Kausalität (Lehre) | `ebb1a5349919` |
+| 91 | 3:29.20 | 3:32.32 | Carla (Erzählerin/Lexi) | Abwandlung zwei: In derselben Nacht legt auch | C. Abwandlung 2 · zwei Feuer | `82e85a5a887d` |
+| 92 | 3:32.52 | 3:33.24 | Carla (Erzählerin/Lexi) | Silke Feuer, | C. Abwandlung 2 · zwei Feuer | `2f6485a0c9bc` |
+| 93 | 3:33.24 | 3:34.76 | Carla (Erzählerin/Lexi) | unabhängig von Bodo, am | C. Abwandlung 2 · zwei Feuer | `c04c96c5ef78` |
+| 94 | 3:34.76 | 3:36.52 | Carla (Erzählerin/Lexi) | anderen Ende der Scheune. | C. Abwandlung 2 · zwei Feuer | `313d4d122d43` |
+| 95 | 3:36.68 | 3:38.72 | Carla (Erzählerin/Lexi) | Beide Feuer wachsen zusammen, und | C. Abwandlung 2 · zwei Feuer | `f0b7fc3bfb55` |
+| 96 | 3:38.72 | 3:41.60 | Carla (Erzählerin/Lexi) | jedes hätte die Scheune auch allein zerstört. | C. Abwandlung 2 · zwei Feuer | `9a09d35f1c93` |
+| 97 | 3:41.60 | 3:43.32 | Carla (Erzählerin/Lexi) | Streng nach der Formel könnte man | C. Abwandlung 2 › Formel streng angewandt | `db11ee221e76` |
+| 98 | 3:43.32 | 3:47.24 | Carla (Erzählerin/Lexi) | Bodos Feuer wegdenken, und die Scheune brennt trotzdem. Bei | C. Abwandlung 2 › Formel streng angewandt | `30e0fb64fc0d` |
+| 99 | 3:47.24 | 3:48.60 | Carla (Erzählerin/Lexi) | Silke genauso. | C. Abwandlung 2 › Formel streng angewandt | `8973cc6093a3` |
+| 100 | 3:48.60 | 3:51.08 | Carla (Erzählerin/Lexi) | Dann wäre keiner kausal. | C. Abwandlung 2 › Formel streng angewandt | `12873f777725` |
+| 101 | 3:51.08 | 3:52.68 | Carla (Erzählerin/Lexi) | Das kann nicht stimmen. Der | C. Abwandlung 2 › alternative Kausalität | `7c6100d79cb0` |
+| 102 | 3:52.68 | 3:57.35 | Carla (Erzählerin/Lexi) | Bundesgerichtshof hat bei zwei Schüssen, von denen jeder allein tödlich war, | C. Abwandlung 2 › alternative Kausalität | `3389c6dfae3a` |
+| 103 | 3:57.35 | 3:59.68 | Carla (Erzählerin/Lexi) | beide als ursächlich angesehen. | C. Abwandlung 2 › alternative Kausalität | `f6a4013fc2ab` |
+| 104 | 3:59.68 | 4:00.60 | Carla (Erzählerin/Lexi) | Die Lehre spricht | C. Abwandlung 2 › alternative Kausalität | `30824ccacc96` |
+| 105 | 4:00.60 | 4:07.64 | Carla (Erzählerin/Lexi) | von alternativer Kausalität und passt die Formel an: Von mehreren Bedingungen, die zwar alternativ, | C. Abwandlung 2 › alternative Kausalität | `08ffad18f3ce` |
+| 106 | 4:07.64 | 4:09.92 | Carla (Erzählerin/Lexi) | aber nicht kumulativ hinweggedacht werden | C. Abwandlung 2 › alternative Kausalität | `d26e9ddb2080` |
+| 107 | 4:09.92 | 4:13.66 | Carla (Erzählerin/Lexi) | können, ist jede ursächlich. | C. Abwandlung 2 › alternative Kausalität | `d819f3274f06` |
+| 108 | 4:13.86 | 4:17.98 | Carla (Erzählerin/Lexi) | Abwandlung drei: Bodo und Silke legen wieder Feuer, doch | D. Abwandlung 3 · feuchtes Stroh | `1003eeca252b` |
+| 109 | 4:17.98 | 4:18.94 | Carla (Erzählerin/Lexi) | jedes wäre im | D. Abwandlung 3 · feuchtes Stroh | `5caf2e53b75b` |
+| 110 | 4:19.04 | 4:20.14 | Carla (Erzählerin/Lexi) | feuchten Stroh allein | D. Abwandlung 3 · feuchtes Stroh | `429e7d9bdf3b` |
+| 111 | 4:20.14 | 4:21.18 | Carla (Erzählerin/Lexi) | erloschen. | D. Abwandlung 3 · feuchtes Stroh | `cd3aa278a156` |
+| 112 | 4:21.62 | 4:24.70 | Carla (Erzählerin/Lexi) | zusammen greift der Brand auf die Scheune über. | D. Abwandlung 3 · feuchtes Stroh | `7637d9602884` |
+| 113 | 4:24.70 | 4:27.74 | Carla (Erzählerin/Lexi) | Das nennt die Lehre kumulative Kausalität. | D. Abwandlung 3 › kumulative Kausalität (Lehre) | `e92046fffb00` |
+| 114 | 4:27.74 | 4:30.94 | Carla (Erzählerin/Lexi) | Denkt man einen Beitrag weg, entfällt der Erfolg. | D. Abwandlung 3 › kumulative Kausalität (Lehre) | `0677b432d796` |
+| 115 | 4:30.94 | 4:32.93 | Carla (Erzählerin/Lexi) | Also sind beide kausal. | D. Abwandlung 3 › kumulative Kausalität (Lehre) | `25d35bc35a10` |
+| 116 | 4:32.93 | 4:38.80 | Carla (Erzählerin/Lexi) | Ob ihnen der Brand auch zuzurechnen ist, klärt wieder erst der nächste Prüfungsschritt. | D. Abwandlung 3 › kumulative Kausalität (Lehre) | `0ede42b1ccb2` |
 | 117 | 4:38.80 | 4:41.08 | Carla (Erzählerin/Lexi) | Ein Ausblick zum Unterlassen: | Ausblick › Unterlassen: Quasi-Kausalität | `658a19ec7207` |
 | 118 | 4:41.08 | 4:41.44 | Carla (Erzählerin/Lexi) | Dort | Ausblick › Unterlassen: Quasi-Kausalität | `910035e7ef88` |
 | 119 | 4:41.44 | 4:44.20 | Carla (Erzählerin/Lexi) | fehlt eine Handlung, die man wegdenken kann. | Ausblick › Unterlassen: Quasi-Kausalität | `fbf6b7e89637` |

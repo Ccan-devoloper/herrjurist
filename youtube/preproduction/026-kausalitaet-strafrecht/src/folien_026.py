@@ -239,7 +239,7 @@ sachverhalt("sv", [
     "nieder, verletzt wird niemand.",
     "Abwandlung 1: Bodos Kerze im Stroh soll erst in einer Stunde zünden; vorher brennt die Scheune durch einen Blitz ab.",
     "Abwandlung 2: Silke legt unabhängig am anderen Ende Feuer; jedes Feuer hätte allein gereicht. "
-    "Abwandlung 3: Jedes Feuer wäre allein erloschen. (Fiktiver Fall, Personen erfunden.)",
+    "Abwandlung 3: Jedes Feuer wäre allein erloschen.",
 ], "Ist der Verkauf kausal für den Brand?")
 
 # D Erfolgsdelikte: Wortlaut §§ 212 I, 222, 306 I Nr. 1 -----------------------------------------------------------------
@@ -378,7 +378,7 @@ folie([("dritt", "A. Kausalität › Unterbrechung durch Bodos Tat?")], [
 
 # I Nur die erste Hürde ------------------------------------------------------------------------------------------------
 PH = "A. Kausalität › nur die erste Hürde"
-folie([("huerde", PH), ("zurech", "B. Nächster Schritt › objektive Zurechnung (Lehre)"), ("vors", "B. Nächster Schritt › Vorsatz Egon (-)")], [
+folie([("huerde", PH), ("zurech", f"{PH} › danach: objektive Zurechnung (Lehre)"), ("vors", f"{PH} › Vorsatz Egon (-)")], [
     *tafel("huerde", "Ist Egon damit schon strafbar?"),
     ok(135, 213, beim("huerde", "Kausalität"), gr=22), z("Kausalität: nur die erste Hürde", 175, 190, beim("huerde", "Kausalität"), "Bold", 36),
     z("Zurechnung des Brandes:", 110, 290, "zurech", "Bold", 36),

@@ -34,7 +34,7 @@
 | **F Wegdenken** `bodo_k`→`weit` | Tafel; rechts Kette Kiosk → Feuerzeug → Scheune; weggedachte Glieder werden ausgegraut, Flammen verschwinden; zuletzt Hersteller | tabler:`building-store`, `lighter`, `building-factory-2`, ph:`barn` | `A. Kausalität › Formel am Fall › Bodo: Anzünden / Egon: Verkauf / reicht sehr weit` | ≈ 15 | – |
 | **G Ersatzursache** `reserve`→`res3` | Bodo (frech) mit Sprechblase, Streichholz-Icon, Kreuz „außer Betracht“ | tabler:`matchstick` | `A. Kausalität › Ersatzursache?` | ≈ 9 | – |
 | **H Unterbrechung?** `dritt`→`knuepft` | Tafel mit BGH-Formel, rechts Kiosk – Kette – Feuerzeug – Flamme, Bodo | tabler:`building-store`, `lighter`, `flame`, ph:`link` | `A. Kausalität › Unterbrechung durch Bodos Tat?` | ≈ 10 | – |
-| **I Erste Hürde** `huerde`→`vors` | Tafel; Egon (sorgt sich, dann froh), Treppe | tabler:`stairs-up` | `A. Kausalität › nur die erste Hürde` → `B. Nächster Schritt › …` | ≈ 8 | – |
+| **I Erste Hürde** `huerde`→`vors` | Tafel; Egon (sorgt sich, dann froh), Treppe | tabler:`stairs-up` | `A. Kausalität › nur die erste Hürde` → `… › danach: objektive Zurechnung (Lehre)` → `… › Vorsatz Egon (-)` | ≈ 8 | – |
 | **J Abwandlung 1** `var1`→`versuch` | Tafel; rechts Scheune mit Kerze im Stroh, Uhr, Blitzwolke, Flammen, Bodo erschrickt | tabler:`candle`, `clock`, `flame`, ph:`cloud-lightning`, `barn` | `B. Abwandlung 1 · Kerze im Stroh` → `› überholende Kausalität (Lehre)` → `› versuchte Brandstiftung, §§ 306, 22, 23 StGB` | ≈ 12 | Donner (`szene_026donner_1`) |
 | **K Abwandlung 2** `var2`→`altlehre` | Scheune mit zwei Feuern, Bodo links, Silke rechts | tabler:`flame`, ph:`barn` | `C. Abwandlung 2 · zwei Feuer` → `› Formel streng angewandt` → `› alternative Kausalität` | ≈ 14 | – |
 | **L Abwandlung 3** `var3`→`kum2` | dieselbe Scheune (Rückkehr zum Ort der Abwandlung 2, nur das Stroh ist feucht), Tropfen, kleine Flammen, dann Brand | tabler:`droplet`, `flame` | `D. Abwandlung 3 · feuchtes Stroh` → `› kumulative Kausalität (Lehre)` | ≈ 10 | – |
@@ -54,6 +54,6 @@
 >
 > Abwandlung 1: Bodos Kerze im Stroh soll erst in einer Stunde zünden; vorher brennt die Scheune durch einen Blitz ab.
 >
-> Abwandlung 2: Silke legt unabhängig am anderen Ende Feuer; jedes Feuer hätte allein gereicht. Abwandlung 3: Jedes Feuer wäre allein erloschen. (Fiktiver Fall, Personen erfunden.)
+> Abwandlung 2: Silke legt unabhängig am anderen Ende Feuer; jedes Feuer hätte allein gereicht. Abwandlung 3: Jedes Feuer wäre allein erloschen.
 >
 > **Ist der Verkauf kausal für den Brand?**
