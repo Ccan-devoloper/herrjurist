@@ -31,13 +31,13 @@ Quelle: `bildhalt_manifest.json` (168 Bildhalte, davon 168 eigenständig), `cues
 | 25 | 0:59.32 | 1:04.12 | Carla (Erzählerin/Lexi) | Zuerst: Die Stadt ist an die Grundrechte gebunden. Sie binden auch die | Vorfrage › Grundrechtsbindung, Art. 1 III GG | `7f9685c3e1c1` |
 | 26 | 1:04.12 | 1:06.48 | Carla (Erzählerin/Lexi) | vollziehende Gewalt, Artikel eins | Vorfrage › Grundrechtsbindung, Art. 1 III GG | `20f31d0ecc9b` |
 | 27 | 1:06.48 | 1:07.84 | Carla (Erzählerin/Lexi) | Absatz drei. | Vorfrage › Grundrechtsbindung, Art. 1 III GG | `a65c10fabecf` |
-| 28 | 1:07.84 | 1:11.28 | Carla (Erzählerin/Lexi) | Welches Grundrecht passt? Gudrun skatet weder | Vorfrage › Welches Grundrecht passt? | `715e1dc86466` |
-| 29 | 1:11.28 | 1:12.64 | Carla (Erzählerin/Lexi) | beruflich, noch will sie | Vorfrage › Welches Grundrecht passt? | `7ce48edf54f3` |
-| 30 | 1:12.64 | 1:13.84 | Carla (Erzählerin/Lexi) | demonstrieren. | Vorfrage › Welches Grundrecht passt? | `9812894f6d03` |
-| 31 | 1:13.84 | 1:14.52 | Carla (Erzählerin/Lexi) | Also bleibt | Vorfrage › Art. 2 I GG, allgemeine Handlungsfreiheit | `e2cf7923d7c7` |
-| 32 | 1:14.52 | 1:19.00 | Carla (Erzählerin/Lexi) | Artikel zwei Absatz eins, die allgemeine Handlungsfreiheit. Sie | Vorfrage › Art. 2 I GG, allgemeine Handlungsfreiheit | `0a268319c4a7` |
-| 33 | 1:19.00 | 1:21.56 | Carla (Erzählerin/Lexi) | greift, wo kein spezielleres Grundrecht | Vorfrage › Art. 2 I GG, allgemeine Handlungsfreiheit | `1f55e5656741` |
-| 34 | 1:21.56 | 1:22.68 | Carla (Erzählerin/Lexi) | schützt. | Vorfrage › Art. 2 I GG, allgemeine Handlungsfreiheit | `62257402c422` |
+| 28 | 1:07.84 | 1:11.28 | Carla (Erzählerin/Lexi) | Welches Grundrecht passt? Gudrun skatet weder | Vorfrage › Welches Grundrecht passt? | `adaea7883241` |
+| 29 | 1:11.28 | 1:12.64 | Carla (Erzählerin/Lexi) | beruflich, noch will sie | Vorfrage › Welches Grundrecht passt? | `b791cc83f8f9` |
+| 30 | 1:12.64 | 1:13.84 | Carla (Erzählerin/Lexi) | demonstrieren. | Vorfrage › Welches Grundrecht passt? | `7a1aa6a832cd` |
+| 31 | 1:13.84 | 1:14.52 | Carla (Erzählerin/Lexi) | Also bleibt | Vorfrage › Art. 2 I GG, allgemeine Handlungsfreiheit | `3acdffbd0f73` |
+| 32 | 1:14.52 | 1:19.00 | Carla (Erzählerin/Lexi) | Artikel zwei Absatz eins, die allgemeine Handlungsfreiheit. Sie | Vorfrage › Art. 2 I GG, allgemeine Handlungsfreiheit | `3b108b5580ff` |
+| 33 | 1:19.00 | 1:21.56 | Carla (Erzählerin/Lexi) | greift, wo kein spezielleres Grundrecht | Vorfrage › Art. 2 I GG, allgemeine Handlungsfreiheit | `1def5ce2ca3b` |
+| 34 | 1:21.56 | 1:22.68 | Carla (Erzählerin/Lexi) | schützt. | Vorfrage › Art. 2 I GG, allgemeine Handlungsfreiheit | `bc33bfdf8675` |
 | 35 | 1:22.68 | 1:24.04 | Carla (Erzählerin/Lexi) | Der Wortlaut: | Art. 2 I GG › Wortlaut | `9b3bfc6c9eb4` |
 | 36 | 1:24.04 | 1:25.48 | Carla (Erzählerin/Lexi) | Jeder hat das Recht auf die | Art. 2 I GG › Wortlaut | `f3b8308855e7` |
 | 37 | 1:25.48 | 1:26.44 | Carla (Erzählerin/Lexi) | freie Entfaltung | Art. 2 I GG › Wortlaut | `89d6993df368` |
@@ -53,9 +53,9 @@ Quelle: `bildhalt_manifest.json` (168 Bildhalte, davon 168 eigenständig), `cues
 | 47 | 1:50.66 | 1:52.19 | Carla (Erzählerin/Lexi) | Persönlichkeit hat. | Art. 2 I GG › I. Schutzbereich › sachlich | `da763f04fb31` |
 | 48 | 1:52.21 | 1:55.38 | Carla (Erzählerin/Lexi) | Das Bundesverfassungsgericht hat das sogar für das Reiten im | Art. 2 I GG › I. Schutzbereich › sachlich | `7a77f15f1af0` |
 | 49 | 1:55.38 | 1:56.50 | Carla (Erzählerin/Lexi) | Walde entschieden. | Art. 2 I GG › I. Schutzbereich › sachlich | `ddcad9c13fe9` |
-| 50 | 1:56.50 | 1:57.34 | Carla (Erzählerin/Lexi) | Also ist auch | Art. 2 I GG › I. Schutzbereich › sachlich | `cc6c8a969653` |
-| 51 | 1:57.34 | 1:58.86 | Carla (Erzählerin/Lexi) | Skaten geschützt. Der | Art. 2 I GG › I. Schutzbereich › sachlich | `af63b237df4d` |
-| 52 | 1:58.86 | 2:02.00 | Carla (Erzählerin/Lexi) | Schutzbereich ist eröffnet. | Art. 2 I GG › I. Schutzbereich › sachlich | `c13d4d8a6e80` |
+| 50 | 1:56.50 | 1:57.34 | Carla (Erzählerin/Lexi) | Also ist auch | Art. 2 I GG › I. Schutzbereich › sachlich | `4aa05aad0d5f` |
+| 51 | 1:57.34 | 1:58.86 | Carla (Erzählerin/Lexi) | Skaten geschützt. Der | Art. 2 I GG › I. Schutzbereich › sachlich | `bc1c8d3457e9` |
+| 52 | 1:58.86 | 2:02.00 | Carla (Erzählerin/Lexi) | Schutzbereich ist eröffnet. | Art. 2 I GG › I. Schutzbereich › sachlich | `f5f369b896b6` |
 | 53 | 2:02.00 | 2:04.76 | Carla (Erzählerin/Lexi) | Römisch zwei: der Eingriff. | Art. 2 I GG › II. Eingriff | `83520333e8d0` |
 | 54 | 2:04.76 | 2:06.36 | Carla (Erzählerin/Lexi) | Der klassische Eingriff ist | Art. 2 I GG › II. Eingriff › klassischer Eingriff | `c59113524fcd` |
 | 55 | 2:06.36 | 2:07.44 | Carla (Erzählerin/Lexi) | rechtsförmig, | Art. 2 I GG › II. Eingriff › klassischer Eingriff | `c0f2deb86755` |
@@ -67,19 +67,19 @@ Quelle: `bildhalt_manifest.json` (168 Bildhalte, davon 168 eigenständig), `cues
 | 61 | 2:14.47 | 2:15.40 | Carla (Erzählerin/Lexi) | Das Verbot mit | Art. 2 I GG › II. Eingriff › klassischer Eingriff | `7e166cfb74d5` |
 | 62 | 2:15.40 | 2:16.48 | Carla (Erzählerin/Lexi) | Bußgeld erfüllt | Art. 2 I GG › II. Eingriff › klassischer Eingriff | `4f2558a59e9e` |
 | 63 | 2:16.48 | 2:18.32 | Carla (Erzählerin/Lexi) | alle vier Merkmale. | Art. 2 I GG › II. Eingriff › klassischer Eingriff | `afe752a2b75b` |
-| 64 | 2:18.32 | 2:20.36 | Carla (Erzählerin/Lexi) | Der Schutz reicht aber weiter. | Art. 2 I GG › II. Eingriff › moderner Eingriffsbegriff | `d2387d2fb837` |
-| 65 | 2:20.36 | 2:23.36 | Carla (Erzählerin/Lexi) | Im Osho-Beschluss maß das Bundesverfassungsgericht | Art. 2 I GG › II. Eingriff › moderner Eingriffsbegriff | `bce603f965dc` |
-| 66 | 2:23.36 | 2:25.52 | Carla (Erzählerin/Lexi) | Äußerungen der Bundesregierung über eine | Art. 2 I GG › II. Eingriff › moderner Eingriffsbegriff | `49232f6d4acf` |
-| 67 | 2:25.52 | 2:27.00 | Carla (Erzählerin/Lexi) | religiöse Bewegung an | Art. 2 I GG › II. Eingriff › moderner Eingriffsbegriff | `8b06e3e2a7fd` |
-| 68 | 2:27.00 | 2:28.08 | Carla (Erzählerin/Lexi) | Artikel vier, | Art. 2 I GG › II. Eingriff › moderner Eingriffsbegriff | `42b02e64763d` |
-| 69 | 2:28.08 | 2:30.04 | Carla (Erzählerin/Lexi) | obwohl sie nichts verboten. | Art. 2 I GG › II. Eingriff › moderner Eingriffsbegriff | `ea6da8828baf` |
+| 64 | 2:18.32 | 2:20.36 | Carla (Erzählerin/Lexi) | Der Schutz reicht aber weiter. | Art. 2 I GG › II. Eingriff › weiterer Schutz | `83a748a02687` |
+| 65 | 2:20.36 | 2:23.36 | Carla (Erzählerin/Lexi) | Im Osho-Beschluss maß das Bundesverfassungsgericht | Art. 2 I GG › II. Eingriff › weiterer Schutz | `ccef7473621d` |
+| 66 | 2:23.36 | 2:25.52 | Carla (Erzählerin/Lexi) | Äußerungen der Bundesregierung über eine | Art. 2 I GG › II. Eingriff › weiterer Schutz | `666d2f1ec17a` |
+| 67 | 2:25.52 | 2:27.00 | Carla (Erzählerin/Lexi) | religiöse Bewegung an | Art. 2 I GG › II. Eingriff › weiterer Schutz | `2305d9676396` |
+| 68 | 2:27.00 | 2:28.08 | Carla (Erzählerin/Lexi) | Artikel vier, | Art. 2 I GG › II. Eingriff › weiterer Schutz | `23a6b96b6986` |
+| 69 | 2:28.08 | 2:30.04 | Carla (Erzählerin/Lexi) | obwohl sie nichts verboten. | Art. 2 I GG › II. Eingriff › weiterer Schutz | `78eeabbd2ce5` |
 | 70 | 2:30.04 | 2:34.24 | Carla (Erzählerin/Lexi) | Auch faktische und mittelbare Beeinträchtigungen zählen. Das ist der | Art. 2 I GG › II. Eingriff › moderner Eingriffsbegriff | `aa5920bc7653` |
 | 71 | 2:34.24 | 2:34.76 | Carla (Erzählerin/Lexi) | moderne | Art. 2 I GG › II. Eingriff › moderner Eingriffsbegriff | `ee08452d2ca6` |
 | 72 | 2:34.76 | 2:36.28 | Carla (Erzählerin/Lexi) | Eingriffsbegriff. | Art. 2 I GG › II. Eingriff › moderner Eingriffsbegriff | `a68574c302c5` |
 | 73 | 2:36.28 | 2:38.04 | Carla (Erzählerin/Lexi) | Hier brauchst du ihn nicht: Der | Art. 2 I GG › II. Eingriff › hier: klassischer Eingriff (+) | `d8610602fe9c` |
 | 74 | 2:38.04 | 2:41.62 | Carla (Erzählerin/Lexi) | klassische Eingriff liegt klar vor. | Art. 2 I GG › II. Eingriff › hier: klassischer Eingriff (+) | `27f3dd7d8a5a` |
 | 75 | 2:41.82 | 2:45.86 | Carla (Erzählerin/Lexi) | Römisch drei: die verfassungsrechtliche Rechtfertigung. | Art. 2 I GG › III. Rechtfertigung | `65dccd9d2565` |
-| 76 | 2:45.86 | 2:50.54 | Carla (Erzählerin/Lexi) | Erstens die Schranke. Artikel zwei Absatz eins steht unter dem | Art. 2 I GG › III. Rechtfertigung › 1. Schranke: verfassungsmäßige Ordnung | `d47fbf887e1c` |
+| 76 | 2:45.86 | 2:50.54 | Carla (Erzählerin/Lexi) | Erstens die Schranke. Artikel zwei Absatz eins steht unter dem | Art. 2 I GG › III. Rechtfertigung › 1. Schranke | `3d0d729b435a` |
 | 77 | 2:50.54 | 2:53.47 | Carla (Erzählerin/Lexi) | Vorbehalt der verfassungsmäßigen Ordnung. | Art. 2 I GG › III. Rechtfertigung › 1. Schranke: verfassungsmäßige Ordnung | `8ef4519cea78` |
 | 78 | 2:53.47 | 2:56.30 | Carla (Erzählerin/Lexi) | Ordnung. Dazu zählt jede Rechtsnorm, die formell und | Art. 2 I GG › III. Rechtfertigung › 1. Schranke: verfassungsmäßige Ordnung | `3ecc699035ce` |
 | 79 | 2:56.30 | 2:58.79 | Carla (Erzählerin/Lexi) | materiell verfassungsgemäß ist. | Art. 2 I GG › III. Rechtfertigung › 1. Schranke: verfassungsmäßige Ordnung | `737a34d70a1d` |
@@ -98,8 +98,8 @@ Quelle: `bildhalt_manifest.json` (168 Bildhalte, davon 168 eigenständig), `cues
 | 92 | 3:27.04 | 3:32.00 | Carla (Erzählerin/Lexi) | Angabe des Artikels nennen. Das gilt aber nur, wo das Grundgesetz Einschränkungen | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › formell › Zitiergebot, Art. 19 I 2 GG | `898b991d4465` |
 | 93 | 3:32.00 | 3:36.72 | Carla (Erzählerin/Lexi) | durch Gesetz oder auf Grund eines Gesetzes ausdrücklich erlaubt, etwa beim | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › formell › Zitiergebot, Art. 19 I 2 GG | `483a63b059dd` |
 | 94 | 3:36.72 | 3:38.27 | Carla (Erzählerin/Lexi) | Fernmeldegeheimnis. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › formell › Zitiergebot, Art. 19 I 2 GG | `1b6c1c604cbd` |
-| 95 | 3:38.27 | 3:42.20 | Carla (Erzählerin/Lexi) | Für die allgemeine Handlungsfreiheit gilt es nach dem Bundesverfassungsgericht | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › Zitiergebot: nicht bei Art. 2 I GG | `dda564d81b5e` |
-| 96 | 3:42.20 | 3:43.98 | Carla (Erzählerin/Lexi) | nicht. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › Zitiergebot: nicht bei Art. 2 I GG | `7ab429d54dbe` |
+| 95 | 3:38.27 | 3:42.20 | Carla (Erzählerin/Lexi) | Für die allgemeine Handlungsfreiheit gilt es nach dem Bundesverfassungsgericht | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › Zitiergebot: nicht bei Art. 2 I GG | `2b1c336bf106` |
+| 96 | 3:42.20 | 3:43.98 | Carla (Erzählerin/Lexi) | nicht. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › Zitiergebot: nicht bei Art. 2 I GG | `31032c051f42` |
 | 97 | 3:43.98 | 3:49.74 | Carla (Erzählerin/Lexi) | Materiell zuerst die Bestimmtheit: Betroffene müssen die Rechtslage erkennen und ihr | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Bestimmtheit | `f50fbed2d5c0` |
 | 98 | 3:49.74 | 3:51.18 | Carla (Erzählerin/Lexi) | Verhalten danach ausrichten | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Bestimmtheit | `1b315de3014c` |
 | 99 | 3:51.18 | 3:51.98 | Carla (Erzählerin/Lexi) | können. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Bestimmtheit | `8055b40b250c` |
@@ -126,11 +126,11 @@ Quelle: `bildhalt_manifest.json` (168 Bildhalte, davon 168 eigenständig), `cues
 | 120 | 4:35.26 | 4:38.78 | Carla (Erzählerin/Lexi) | Angemessen ist es, wenn der Zweck nicht außer Verhältnis zur | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `ae6208f2b51b` |
 | 121 | 4:38.78 | 4:39.38 | Carla (Erzählerin/Lexi) | Schwere des | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `9ab9a5868070` |
 | 122 | 4:39.38 | 4:40.79 | Carla (Erzählerin/Lexi) | Eingriffs steht. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `253bcd4142ea` |
-| 123 | 4:40.79 | 4:44.30 | Carla (Erzählerin/Lexi) | steht. Gudrun muss tagsüber absteigen und ihr Brett tragen. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `523f0ebd9433` |
-| 124 | 4:44.30 | 4:47.14 | Carla (Erzählerin/Lexi) | Abends und überall sonst darf sie fahren. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `9d91d5e79cc9` |
-| 125 | 4:47.18 | 4:47.82 | Carla (Erzählerin/Lexi) | Dem steht die | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `2bdcf5fa76d6` |
-| 126 | 4:47.82 | 4:51.26 | Carla (Erzählerin/Lexi) | Gesundheit vieler Fußgänger gegenüber. Das Verbot ist | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `db0562b113ae` |
-| 127 | 4:51.26 | 4:52.86 | Carla (Erzählerin/Lexi) | angemessen. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `01fccd7b7eed` |
+| 123 | 4:40.79 | 4:44.30 | Carla (Erzählerin/Lexi) | steht. Gudrun muss tagsüber absteigen und ihr Brett tragen. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `ff55d02c2c28` |
+| 124 | 4:44.30 | 4:47.14 | Carla (Erzählerin/Lexi) | Abends und überall sonst darf sie fahren. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `4a3d985af36c` |
+| 125 | 4:47.18 | 4:47.82 | Carla (Erzählerin/Lexi) | Dem steht die | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `33f07758e17b` |
+| 126 | 4:47.82 | 4:51.26 | Carla (Erzählerin/Lexi) | Gesundheit vieler Fußgänger gegenüber. Das Verbot ist | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `6ed3bfa9513c` |
+| 127 | 4:51.26 | 4:52.86 | Carla (Erzählerin/Lexi) | angemessen. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Verhältnismäßigkeit › angemessen | `8f66723129a7` |
 | 128 | 4:52.86 | 4:58.82 | Carla (Erzählerin/Lexi) | Zuletzt Artikel neunzehn Absatz zwei: In keinem Falle darf ein Grundrecht in seinem | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Wesensgehalt, Art. 19 II GG | `93b3f8d2e4cf` |
 | 129 | 4:58.82 | 5:01.17 | Carla (Erzählerin/Lexi) | Wesensgehalt angetastet werden. | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Wesensgehalt, Art. 19 II GG | `4da6cde89cc7` |
 | 130 | 5:01.17 | 5:05.26 | Carla (Erzählerin/Lexi) | Ein Verbot nur in der Fußgängerzone und nur tagsüber lässt ihn | Art. 2 I GG › III. Rechtfertigung › 2. Schranken-Schranken › materiell › Wesensgehalt, Art. 19 II GG | `d14d4c9ee3ba` |
@@ -139,9 +139,9 @@ Quelle: `bildhalt_manifest.json` (168 Bildhalte, davon 168 eigenständig), `cues
 | 133 | 5:09.50 | 5:14.32 | Carla (Erzählerin/Lexi) | Gudrun ist nicht in Artikel zwei Absatz eins verletzt. | Ergebnis: Art. 2 I GG nicht verletzt | `5d11c6677680` |
 | 134 | 5:14.32 | 5:18.64 | Carla (Erzählerin/Lexi) | Gegenfall: Die Stadt verbietet das Skaten rund um die Uhr, auch | Gegenfall · Verbot rund um die Uhr | `932ef45fa15c` |
 | 135 | 5:18.64 | 5:21.29 | Carla (Erzählerin/Lexi) | nachts, wenn die Fußgängerzone leer ist. | Gegenfall · Verbot rund um die Uhr | `8305313f3319` |
-| 136 | 5:21.29 | 5:23.76 | Carla (Erzählerin/Lexi) | ist. Geht es ihr nur um die Fußgänger, wäre ein | Gegenfall › erforderlich? | `14646d7e007d` |
-| 137 | 5:23.76 | 5:25.88 | Carla (Erzählerin/Lexi) | Verbot am Tag gleich wirksam und | Gegenfall › erforderlich? | `c70f0abd123c` |
-| 138 | 5:25.88 | 5:26.73 | Carla (Erzählerin/Lexi) | milder. | Gegenfall › erforderlich? | `fc21063f0325` |
+| 136 | 5:21.29 | 5:23.76 | Carla (Erzählerin/Lexi) | ist. Geht es ihr nur um die Fußgänger, wäre ein | Gegenfall · Verbot rund um die Uhr | `825a91c262a4` |
+| 137 | 5:23.76 | 5:25.88 | Carla (Erzählerin/Lexi) | Verbot am Tag gleich wirksam und | Gegenfall · Verbot rund um die Uhr | `3b1e62fd7da1` |
+| 138 | 5:25.88 | 5:26.73 | Carla (Erzählerin/Lexi) | milder. | Gegenfall · Verbot rund um die Uhr | `1445e46d3c28` |
 | 139 | 5:26.73 | 5:29.04 | Carla (Erzählerin/Lexi) | milder. Dann spricht viel dafür, dass das Verbot | Gegenfall › erforderlich? | `5ada4fbeab26` |
 | 140 | 5:29.36 | 5:31.62 | Carla (Erzählerin/Lexi) | erforderlich ist. | Gegenfall › erforderlich? | `be800fcdc3fb` |
 | 141 | 5:31.82 | 5:33.02 | Carla (Erzählerin/Lexi) | Klausurtipp: Der | Klausurtipp · Aufbau | `c2fabaf73a0c` |
