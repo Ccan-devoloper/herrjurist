@@ -31,29 +31,30 @@ SEGMENTE = [
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
     # --- E Eigentum ---------------------------------------------------------------------------------------------------
     ("[eig]Zuerst die Begriffe. Eigentum ist die rechtliche Herrschaft über eine Sache. [p903]Nach Paragraf "
-     "neunhundertdrei darf die Eigentümerin mit der Sache nach Belieben verfahren und andere von jeder Einwirkung "
-     "ausschließen. [anke]Eigentümerin ist hier Anke, und zwar die ganze Zeit.", P),
+     "neunhundertdrei darf die Eigentümerin, soweit nicht Gesetz oder Rechte Dritter entgegenstehen, mit der Sache nach "
+     "Belieben verfahren und andere von jeder Einwirkung ausschließen. [anke]Eigentümerin ist hier Anke, und zwar die ganze Zeit.", P),
     # --- F Besitz, § 854 I ----------------------------------------------------------------------------------------------
     ("[besitz]Besitz ist dagegen die tatsächliche Herrschaft. [p854]Paragraf achthundertvierundfünfzig Absatz eins: "
      "Der Besitz einer Sache wird durch die Erlangung der tatsächlichen Gewalt über die Sache erworben. "
-     "[wille]Dazu kommt nach herrschender Meinung ein Besitzwille. [verkehr]Wer die Gewalt hat, bestimmt nach dem "
-     "Bundesgerichtshof die Verkehrsanschauung. [jb]Jürgen hat das Rad in seinem abgeschlossenen Kellerabteil. "
+     "[wille]Dazu kommt nach herrschender Meinung ein Besitzwille. [verkehr]Wer die Gewalt hat, richtet sich nach dem "
+     "Bundesgerichtshof maßgeblich nach der Verkehrsanschauung. [jb]Jürgen hat das Rad in seinem abgeschlossenen Kellerabteil. "
      "Er ist unmittelbarer Besitzer.", PS),
     # --- G mittelbarer Besitz, § 868; Eigen- und Fremdbesitz, § 872 ------------------------------------------------------
     ("[mittel]Und Anke? Sie hat das Rad nicht in der Hand und ist trotzdem Besitzerin. [p868]Paragraf "
      "achthundertachtundsechzig: Besitzt jemand eine Sache als Mieter, Verwahrer oder in einem ähnlichen Verhältnis, "
-     "[zeit]vermöge dessen er auf Zeit zum Besitz berechtigt ist, dann ist auch der andere Besitzer. "
-     "[leihe]Die Leihe bis September ist so ein Besitzmittlungsverhältnis. Danach muss Jürgen das Rad zurückgeben. "
+     "[zeit]vermöge dessen er dem anderen gegenüber auf Zeit zum Besitz berechtigt ist, dann ist auch der andere Besitzer. "
+     "[leihe]Die Leihe bis September ist so ein Besitzmittlungsverhältnis: Danach muss Jürgen das Rad zurückgeben, "
+     "und das erkennt er auch an. "
      "[mb]Anke ist also mittelbare Besitzerin.", P),
     ("[p872]Noch eine Unterscheidung: Anke besitzt das Rad als ihr gehörend. Sie ist Eigenbesitzerin, Paragraf "
-     "achthundertzweiundsiebzig. [fremd]Jürgen besitzt es für Anke, er ist Fremdbesitzer.", PS),
+     "achthundertzweiundsiebzig. [fremd]Jürgen besitzt es als fremde Sache, er ist Fremdbesitzer.", PS),
     # --- H Besitzdiener, § 855; Erbenbesitz, § 857 ------------------------------------------------------------------------
     ("[diener]Anders im Laden. [p855]Paragraf achthundertfünfundfünfzig: Übt jemand die tatsächliche Gewalt für einen "
      "anderen in dessen Erwerbsgeschäft aus und muss er dessen Weisungen folgen, ist nur der andere Besitzer. "
      "[kunze]Jürgen schiebt die Räder für Frau Kunze und tut, was sie sagt. Er ist nur Besitzdiener, Besitzerin ist "
      "Frau Kunze. [bgh855]So sieht es auch der Bundesgerichtshof: Arbeitnehmer sind für die Sachen, die ihnen zur Arbeit "
      "überlassen werden, grundsätzlich Besitzdiener.", P),
-    ("[kontrast]Zwischen Mitbewohnern gibt es kein solches Weisungsverhältnis. Das geliehene Rad besitzt Jürgen selbst. "
+    ("[kontrast]Zwischen Anke und Jürgen gibt es kein solches Weisungsverhältnis. Das geliehene Rad besitzt Jürgen selbst. "
      "[p857]Und ein Sonderfall: Stirbt ein Besitzer, geht sein Besitz nach Paragraf achthundertsiebenundfünfzig auf die "
      "Erben über, auch ohne tatsächliche Gewalt.", PS),
     # --- I verbotene Eigenmacht, § 858; Selbsthilfe, § 859 ----------------------------------------------------------------
@@ -74,14 +75,14 @@ SEGMENTE = [
      "Besitzes verlangen. [p863]Und das Eigentum von Anke? Es hilft ihr hier nicht. Ein Recht zum Besitz zählt nach "
      "Paragraf achthundertdreiundsechzig nur für die Frage, ob verbotene Eigenmacht vorliegt. [posses]Dieser Anspruch "
      "ist possessorisch: Er schützt den Besitz als solchen.", P),
-    ("[p985]Und könnte Anke das Rad dann gleich nach Paragraf neunhundertfünfundachtzig herausverlangen? Dieser "
-     "petitorische Anspruch schützt das Eigentum. [p986]Doch Jürgen hat aus der Leihe bis September ein Recht zum Besitz, "
+    ("[p985]Und könnte Anke das Rad dann gleich nach Paragraf neunhundertfünfundachtzig herausverlangen? Nein. Dieser "
+     "petitorische Anspruch schützt zwar das Eigentum. [p986]Doch Jürgen hat aus der Leihe bis September ein Recht zum Besitz, "
      "Paragraf neunhundertsechsundachtzig.", PS),
     # --- K Ausblick: Übereignung --------------------------------------------------------------------------------------
     ("[ausblick]Ein Ausblick: Der Besitz entscheidet auch bei der Übereignung. [p929]Paragraf neunhundertneunundzwanzig "
      "Satz eins verlangt die Übergabe, also einen Besitzwechsel. [p930]Behält der Veräußerer die Sache, genügt nach "
      "Paragraf neunhundertdreißig, dass der Erwerber mittelbaren Besitz bekommt. [p931]Und will Anke ihr Rad übereignen, "
-     "während Jürgen es hat, tritt sie ihren Herausgabeanspruch ab, Paragraf neunhunderteinunddreißig.", PS),
+     "während Jürgen es hat, kann sie stattdessen ihren Herausgabeanspruch abtreten, Paragraf neunhunderteinunddreißig.", PS),
     # --- L Klausurtipp (Lexi) -------------------------------------------------------------------------------------------
     ("[tipp]Klausurtipp: Bestimme den Besitz für jede Person einzeln: unmittelbar oder mittelbar, Besitzdiener, Eigen- "
      "oder Fremdbesitz. [tipp2]Und prüfe bei Paragraf achthunderteinundsechzig nicht, wem die Sache gehört. Der Satz, "

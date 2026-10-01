@@ -249,8 +249,8 @@ wl212, y212 = wortlaut(100, 240, 1060, P212, "§ 212 Abs. 1 StGB", beim("erfolg"
 P222 = ["„Wer durch Fahrlässigkeit den Tod eines Menschen verursacht, wird", "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe bestraft.“"]
 wl222, y222 = wortlaut(100, y212 + 18, 1060, P222, "§ 222 StGB", "p222", marken=[(0, "verursacht", beim("p222", "verursacht"))])
 P306 = ["„Wer fremde 1. Gebäude oder Hütten, … in Brand setzt …, wird", "mit Freiheitsstrafe von einem Jahr bis zu zehn Jahren bestraft.“"]
-wl306, y306 = wortlaut(100, y222 + 18, 1060, P306, "§ 306 Abs. 1 Nr. 1 StGB", beim("p306", "Brandstiftung"),
-                       marken=[(0, "in Brand setzt", beim("p306", "Brand"))])
+wl306, y306 = wortlaut(100, y222 + 18, 1060, P306, "§ 306 Abs. 1 Nr. 1 StGB", beim("p306", "Brand"),
+                       marken=[(0, "in Brand setzt", beim("p306", "Brandstiftung"))])
 folie([("erfolg", "Erfolgsdelikte › Erfolg im Tatbestand"), ("p222", "Erfolgsdelikte › § 222 StGB: „verursacht“"),
        ("p306", "Erfolgsdelikte › Brandstiftung, § 306 Abs. 1 Nr. 1 StGB")], [
     *tafel("erfolg", "Kausalität bei Erfolgsdelikten"),
@@ -446,8 +446,8 @@ folie([("var2", f"{C2} · zwei Feuer"), ("streng", f"{C2} › Formel streng ange
     z("aber nicht kumulativ hinweggedacht werden", 110, 793, beim("altlehre", "aber"), size=32),
     z("können, ist jede ursächlich", 110, 836, beim("altlehre", "können"), "Bold", 32),
     *scheune2("var2"),
-    ficon("tabler", "flame", S2X - 110, S2U - 40, 70, "var2", fuell=ORANGE),
-    ficon("tabler", "flame", S2X + 110, S2U - 40, 70, beim("var2", "anderen"), fuell=ORANGE),
+    ficon("tabler", "flame", S2X - 110, S2U - 40, 90, "var2", fuell=GELB),
+    ficon("tabler", "flame", S2X + 110, S2U - 40, 90, beim("var2", "anderen"), fuell=GELB),
     *flammen(S2X, S2U - 190, 100, "jedes"),
     *fig("BO", BOX2, BR, 380, [("var2", "zuendet_r"), ("streng", "ruhig_r"), ("alt", "ertappt_r")]),
     name("BO", BOX2, "var2", unten=BR),
@@ -470,12 +470,12 @@ folie([("var3", f"{D3} · feuchtes Stroh"), ("kum", f"{D3} › kumulative Kausal
     *scheune2("var3"),
     ficon("tabler", "droplet", S2X - 40, 690, 44, beim("var3", "feuchten"), fuell=BLAU),
     ficon("tabler", "droplet", S2X + 40, 690, 44, beim("var3", "feuchten"), fuell=BLAU, d=0.1),
-    ficon("tabler", "flame", S2X - 110, S2U - 40, 50, "var3", fuell=ORANGE, bis=beim("var3", "Erst")),
-    ficon("tabler", "flame", S2X + 110, S2U - 40, 50, "var3", fuell=ORANGE, bis=beim("var3", "Erst")),
+    ficon("tabler", "flame", S2X - 110, S2U - 40, 60, "var3", fuell=GELB, bis=beim("var3", "Erst")),
+    ficon("tabler", "flame", S2X + 110, S2U - 40, 60, "var3", fuell=GELB, bis=beim("var3", "Erst")),
     pl("allein: erloschen", S2X, 260, beim("var3", "erloschen"), fill=WEISS, size=28, anker="m", bis=beim("var3", "Erst")),
     *flammen(S2X, S2U - 190, 100, beim("var3", "zusammen")),
-    hart(ficon("tabler", "flame", S2X - 110, S2U - 40, 70, beim("var3", "Erst"), fuell=ORANGE)),
-    hart(ficon("tabler", "flame", S2X + 110, S2U - 40, 70, beim("var3", "Erst"), fuell=ORANGE)),
+    hart(ficon("tabler", "flame", S2X - 110, S2U - 40, 90, beim("var3", "Erst"), fuell=GELB)),
+    hart(ficon("tabler", "flame", S2X + 110, S2U - 40, 90, beim("var3", "Erst"), fuell=GELB)),
     pl("zusammen", S2X, 210, beim("var3", "zusammen"), fill=ORANGE, size=28, anker="m"),
     *fig("BO", BOX2, BR, 380, [("var3", "schleicht_r"), ("kum", "ertappt_r")]),
     name("BO", BOX2, "var3", unten=BR),
