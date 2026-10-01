@@ -95,8 +95,8 @@ nachtfolie([("nacht", "Fall · Die Nacht")], [
     pille("beschimpft und schlägt sie", 1040, 330, beim("streit", "beschimpft"), fill=ROT, size=36, anker="m", bis="schlaf"),
     # Ralf legt sich schlafen: nur das Bett, er selbst ist nicht zu sehen
     ficon("tabler", "bed", 900, BODEN - 2, 380, "schlaf", fuell=BLAU),
-    ficon("tabler", "zzz", 1000, 560, 110, beim("schlaf", "schlafen"), fuell=WEISS),
-    pille("Ralf schläft", 900, 470, beim("schlaf", "schlafen"), fill=WEISS, size=34, anker="m"),
+    ficon("tabler", "zzz", 1090, 630, 90, beim("schlaf", "schlafen"), fuell=WEISS),
+    pille("Ralf schläft", 880, 510, beim("schlaf", "schlafen"), fill=WEISS, size=34, anker="m"),
     pille("Nadine bleibt wach", NAX, 300, beim("schlaf", "schlafen"), fill=LILA, size=30, anker="m", d=0.6),
 ])
 
@@ -240,8 +240,8 @@ folie([("anders", "A. Nadine › III. § 35 I › nicht anders abwendbar")], [
     pille("Beraterin", BX, BODEN + 22, "hilfe", fill=GRUEN, size=30, anker="m", d=0.3),
     blase("sprech", 520, 190, "b1", 1500, 240, inhalt=["Sie und Ihre Töchter können", "noch heute zu uns kommen."],
           textsize=31, figur=("BE_redet", BX, BODEN, FH)),
-    ficon("tabler", "home-shield", 1240, 360, 120, "anders", fuell=GRUEN, d=0.2, bis="hilfe"),
-    ficon("fluent-emoji-high-contrast", "police-car", 1460, 360, 150, "anders", fuell=BLAU, d=0.3, bis="hilfe"),
+    ficon("tabler", "home-shield", 1450, 640, 190, "anders", fuell=GRUEN, d=0.2, bis="hilfe"),
+    ficon("fluent-emoji-high-contrast", "police-car", 1730, 640, 230, "anders", fuell=BLAU, d=0.3, bis="hilfe"),
 ])
 
 folie([("regel", "A. Nadine › III. § 35 I › Hilfe Dritter geht vor"),
