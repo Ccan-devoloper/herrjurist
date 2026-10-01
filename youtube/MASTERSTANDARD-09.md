@@ -76,7 +76,7 @@ Ergänzend gelten die [allgemeinen Leitlinien](VIDEOLEITLINIEN-16x9.md), die [In
   - Benachbarte Bildhalte unterscheiden sich in sinntragenden Kleinigkeiten: Mimik, Pose, Blase, Requisit, Tafelpunkt.
   - Kein künstlicher Dauerzoom als Ersatz für neue Bildzustände.
 - **Bildhalte:**
-  - Ziel für etwa fünf Minuten Hauptfilm: **mindestens 45 unterschiedliche Bildhalte**. Katzenkönig hatte 70 in 3:37 min, im Median etwa 3 s.
+  - Ziel für etwa fünf Minuten Hauptfilm: **mindestens 45 unterschiedliche Bildhalte**, bei längeren Folgen anteilig mehr (rund 9 je Minute). Katzenkönig hatte 70 in 3:37 min, im Median etwa 3 s.
   - Die Bilder werden programmatisch komponiert. Nachweis über ein Bildhalt-Manifest: Start/Ende, Szene, Figurenzustände und SHA-256 des gerenderten Keyframes.
   - Wiederholte identische Zustände zählen nicht.
 - **Mundzustände:**
@@ -135,7 +135,7 @@ Referenz ist die gerenderte Katzenkönig-Folge und [`bausteine.py`](preproductio
 
 - **MP4:**
   - H.264, yuv420p, 1920 × 1080, 30 fps; AAC Stereo 48 kHz, ohne Untertitelspur.
-  - Länge etwa fünf Minuten Inhalt plus Intro und Outro.
+  - Länge in der Regel etwa fünf Minuten Inhalt plus Intro und Outro; wo der Stoff es erfordert, bis zu sieben Minuten Hauptfilm (Vorgabe Kanalinhaber, 01.10.2026), mit Begründung im Abnahmebogen.
   - Lautheit wie Katzenkönig, etwa −16 LUFS, True Peak unter −1 dBTP.
 - **Ton-Bild-Gate vor dem Render:**
   - Cue-Timeline aus der tatsächlich verwendeten Sprachspur mit **mindestens 45 Zeilen**, je Bildhalt eine.
