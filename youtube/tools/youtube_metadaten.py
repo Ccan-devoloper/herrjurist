@@ -58,7 +58,7 @@ def zahlwort(w):
     if "hundert" in w:
         h, w = w.split("hundert", 1)
         v = 1 if h in ("", "ein") else _unter_100(h)
-        if v is None or v > 9: return None
+        if v is None or (v > 9 and (gesamt or v < 11)): return None    # 'neunzehnhundertelf' = 1911 (Jahresform)
         gesamt += v * 100
     if w:
         v = _unter_100(w)
@@ -93,10 +93,17 @@ def schriftform(text):
             if z:
                 zeichen = "§§" if wl.startswith("paragrafen") or wl.startswith("paragraphen") else "§"
                 teile = [z]
-                while j + 1 < len(worte) and worte[j] in ("und", "bis"):                     # 'Paragrafen zweihundertzwölf und …'
-                    z2, j2 = zahl_ab(j + 1)
-                    if not z2: break
-                    teile += [worte[j], z2]; j = j2
+                while j < len(worte):
+                    if j + 1 < len(worte) and worte[j] in ("und", "bis"):                     # 'Paragrafen zweihundertzwölf und …'
+                        z2, j2 = zahl_ab(j + 1)
+                        if not z2: break
+                        teile += [worte[j], z2]; j = j2
+                    elif teile[-1].endswith(","):                                              # 'Paragrafen dreihundertelf, zweihunderteinundvierzig …'
+                        z2, j2 = zahl_ab(j)
+                        if not z2: break
+                        teile.append(z2); j = j2
+                    else:
+                        break
                 out.append(f"{zeichen} " + " ".join(teile)); i = j; continue
         if wl in ("absatz", "satz", "nummer", "artikel"):
             z, j = zahl_ab(i + 1)
@@ -105,6 +112,11 @@ def schriftform(text):
         if wl in ORDINAL and i + 1 < len(worte) and worte[i + 1].lower().startswith("alternative"):
             rest = worte[i + 1][len("alternative"):]
             out.append(f"Alt. {ORDINAL[wl]}{rest}"); i += 2; continue
+        kern = w.rstrip(",.;:!?)")
+        if re.match(r"(?i)^(neunzehnhundert|zweitausend)", kern):                             # Jahreszahlen: 'zweitausendsiebzehn' -> 2017
+            z = zahlwort(kern)
+            if z is not None and 1900 <= z <= 2099:
+                out.append(str(z) + w[len(kern):]); i += 1; continue
         out.append(w); i += 1
     return " ".join(out)
 
