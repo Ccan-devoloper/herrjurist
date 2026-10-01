@@ -60,7 +60,7 @@ SEGMENTE = [
     # --- H Klausurschema --------------------------------------------------------------------------------------------------
     ("[sch]Dein Klausurschema. [k1]A, Entschluss schon vor dem Tanken. [k1a]Römisch eins: Diebstahl scheitert an der Wegnahme. "
      "[k1b]Römisch zwei: Betrug mit Täuschung, Irrtum, Verfügung, Schaden, Vorsatz und Bereicherungsabsicht. [k1c]Römisch drei: "
-     "Fehlt der Irrtum, versuchter Betrug. [k1d]Die Unterschlagung tritt zurück.", P),
+     "Fehlt der Irrtum, nur Betrugsversuch. [k1d]Die Unterschlagung tritt zurück.", P),
     ("[k2]B, Entschluss erst nach dem Tanken. [k2a]Betrug und Diebstahl scheiden aus. [k2b]Unterschlagung nur, wenn das Benzin "
      "noch der Tankstelle gehört.", PS),
     # --- I Merksatz (Lexi) ------------------------------------------------------------------------------------------------
