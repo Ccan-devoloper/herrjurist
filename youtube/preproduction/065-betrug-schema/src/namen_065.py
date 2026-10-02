@@ -4,7 +4,7 @@ Jede Nennung eines Figurennamens (Wortzeiten aus ../cues.json) wird einzeln ausg
 (2) zusätzlich isoliert erkannt (Ausschnitt ±0,25 s, ohne Vorkontext, condition_on_previous_text=False),
 (3) akustisch verglichen: MFCC (eigene Mel-Filterbank) + DTW-Abstand jeder Nennung zu allen übrigen Nennungen desselben
 Namens; Ausreißer (> Median + 2,5 · MAD) werden markiert.
-Aufruf: python3 namen_062.py <asr.json> <ausgabe.json>"""
+Aufruf: python3 namen_065.py <asr.json> <ausgabe.json>"""
 import json, re, sys, wave
 import numpy as np
 from scipy.fft import dct

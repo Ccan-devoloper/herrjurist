@@ -1,6 +1,6 @@
 """Prüfbilder aus dem fertigen MP4 (Sichtprüfung Folge 065).
-  python3 pruefbilder_062.py bildhalte MP4 VERSATZ      -> ../out/bh_mp4/NNN.jpg + ../out/bildhalte_mp4_K.png (je 30 Bildhalte)
-  python3 pruefbilder_062.py lippen MP4 VERSATZ NAME T0 T1 X Y W H [X Y W H …]
+  python3 pruefbilder_065.py bildhalte MP4 VERSATZ      -> ../out/bh_mp4/NNN.jpg + ../out/bildhalte_mp4_K.png (je 30 Bildhalte)
+  python3 pruefbilder_065.py lippen MP4 VERSATZ NAME T0 T1 X Y W H [X Y W H …]
                                                        -> ../out/lippen_NAME.png (0,1-s-Schritte, Ausschnitte nebeneinander)
 VERSATZ = Beginn des Hauptfilms im MP4 (Hauptfilm-MP4: 0, Endschnitt: 8,0). Bildhalt-Zeitpunkt = Mitte des Halts."""
 import json, os, subprocess, sys

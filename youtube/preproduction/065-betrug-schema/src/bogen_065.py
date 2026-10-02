@@ -1,4 +1,4 @@
-"""Kontaktbogen aus Einzelbildern (Folge 065) (Sichtprüfung): python3 bogen_062.py ZIEL.png BILD1.png BILD2.png … (3 Spalten)."""
+"""Kontaktbogen aus Einzelbildern (Folge 065) (Sichtprüfung): python3 bogen_065.py ZIEL.png BILD1.png BILD2.png … (3 Spalten)."""
 import sys
 from PIL import Image, ImageDraw
 ziel, bilder = sys.argv[1], sys.argv[2:]
