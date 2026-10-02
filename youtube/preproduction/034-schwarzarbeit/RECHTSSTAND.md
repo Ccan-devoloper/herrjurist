@@ -102,7 +102,7 @@
 - **Normen:** „§ 1 II Nr. 2 SchwarzArbG“ ist die alte Zählung; heute § 1 Abs. 2 Satz 1 Nr. 2 (BGH V ZR 115/22 Rn. 17). Vorschlag: `Normen = §§ 134, 812 I 1 Alt. 1, 817 S. 2, 818 II BGB; § 1 II 1 Nr. 2 SchwarzArbG`.
 - **Leitentscheidung:** zutreffend; Az. und Datum fehlen. Vorschlag: `Leitentscheidung = BGH, Urt. v. 1.8.2013 – VII ZR 6/13, BGHZ 198, 141; Urt. v. 10.4.2014 – VII ZR 241/13, BGHZ 201, 1; Urt. v. 11.6.2015 – VII ZR 216/14, BGHZ 206, 69`.
 - **Beschreibung (Anfang):** zutreffend bis auf die Zählung („§ 1 II Nr. 2“). Vorschlag: `Beschreibung (Anfang) = Schwarzarbeit (§ 1 II 1 Nr. 2 SchwarzArbG, §§ 134, 817 S. 2 BGB): Gibt es Werklohn, Wertersatz, Mängelrechte oder Geld zurück, wenn beide „ohne Rechnung“ vereinbaren?`
-- **Rechtsstand/Länder:** leer; Hinweis ergänzen: `Rechtsstand/Länder = SchwarzArbG geändert durch G v. 22.12.2025 (BGBl. 2025 I Nr. 369): § 1 II unverändert; Zählung jetzt § 1 II 1 Nr. 2`.
+- **Rechtsstand/Länder:** leer; Hinweis ergänzen: `Rechtsstand/Länder = SchwarzArbG zuletzt geändert 2025/2026 (u. a. BGBl. 2025 I Nr. 369); § 1 II unberührt; heutige Zählung § 1 II 1 Nr. 2`.
 - **Thumbnail-Figuren** (`thumbs_zivil1.json` Nr. 34): siehe ABNAHME.md.
 
 ## Offene Einschränkungen

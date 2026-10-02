@@ -39,7 +39,7 @@ SEGMENTE = [
      "[zi]Ob auch Frau Ziegler selbst Schwarzarbeit leistet, kann offenbleiben. "
      "[kennt]Nichtig ist der Vertrag jedenfalls, wenn der Besteller den Verstoß kennt und bewusst zum eigenen Vorteil "
      "ausnutzt. [spart]Genau das tut sie: Sie spart die Umsatzsteuer. [nichtig]Der Werkvertrag ist nichtig, und zwar insgesamt.", P),
-    ("[gegen]Anders, wenn Frau Ziegler von alldem nichts weiß und Herr Fuchs heimlich keine Steuern zahlt. "
+    ("[gegen]Anders, wenn Frau Ziegler von alldem nichts weiß und Herr Fuchs ohne ihr Wissen keine Steuern zahlt. "
      "[gegen2]Bei diesem einseitigen Verstoß bleibt der Vertrag nach der Rechtsprechung wirksam, "
      "[gegen3]und sie behält ihre Mängelrechte.", PS),
     # --- E Ansprüche von Herrn Fuchs -------------------------------------------------------------------------------------------

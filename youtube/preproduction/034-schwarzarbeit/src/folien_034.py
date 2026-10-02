@@ -330,7 +330,7 @@ folie([("fu", "Nichtigkeit · Verstoß von Herrn Fuchs"), ("kennt", "Nichtigkeit
 folie([("gegen", "Gegenfall · Frau Ziegler weiß von nichts"), ("gegen2", "Gegenfall · einseitiger Verstoß")], rechts_frei([
     *tafel("gegen", "Gegenfall"),
     z("Frau Ziegler weiß von nichts", 110, 190, beim("gegen", "nichts"), "Bold"),
-    z("Herr Fuchs zahlt heimlich keine Steuern", 150, 245, beim("gegen", "heimlich"), size=32),
+    z("Herr Fuchs zahlt ohne ihr Wissen keine Steuern", 150, 245, beim("gegen", "ohne"), size=32),
     ok(140, 360, "gegen2", gr=20), z("einseitiger Verstoß: Vertrag bleibt wirksam", 185, 340, "gegen2", "Bold"),
     zit("BGHZ 89, 369 (zur früheren Fassung); BGHZ 198, 141 Rn. 17", 185, 395, "gegen2"),
     ok(140, 480, "gegen3", gr=20), z("Mängelrechte bleiben, § 634 BGB", 185, 460, "gegen3", "Bold"),
