@@ -24,8 +24,8 @@ SEGMENTE = [
     ("[zahlt]Er zahlt bar. [fuss]Mitnehmen kann er das Rad aber erst morgen, er ist zu Fuß gekommen.", 0.25),
     ("[an1]Kein Problem. Das Rad bleibt bis morgen hier im Hof.", 0.3, "Annika"),
     # --- A2 Fall: die Nacht -----------------------------------------------------------------------------------------------
-    ("[nacht]Herr Brunner geht nach Hause, das Rad steht über Nacht im Hof. [frage]Wem gehört das Fahrrad heute Nacht? "
-     "[frage2]Annika oder schon Herrn Brunner?", 0.5),
+    ("[nacht]Herr Brunner geht nach Hause, das Rad steht über Nacht im Hof. [frage]Wer ist heute Nacht Eigentümer des "
+     "Fahrrads? [frage2]Annika oder schon Herr Brunner?", 0.5),
     # --- B Sachverhalt ----------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 4.6),
     # --- C Kaufvertrag und Übereignung --------------------------------------------------------------------------------------

@@ -280,9 +280,9 @@ folie([("nacht", "Fall · Die Nacht"), ("frage", "Fall · Die Frage")], [
     ns("Annika", AX2, BODEN, "nacht", AN_F),
     *fig("BR", BX2, BODEN, FH, [("nacht", "ruhig"), ("frage", "denkt")], erst="cut"),
     ns("Herr Brunner", BX2, BODEN, "nacht", BR_F),
-    pl("Wem gehört das Fahrrad heute Nacht?", 960, 70, "frage", fill=PINK, size=40, anker="m"),
+    pl("Wer ist heute Nacht Eigentümer des Fahrrads?", 960, 70, "frage", fill=PINK, size=40, anker="m"),
     pl("Annika?", AX2, 290, beim("frage2", "Annika"), fill=BLAU, size=32, anker="m"),
-    pl("Herr Brunner?", BX2, 290, beim("frage2", "Herrn"), fill=WEISS, size=32, anker="m"),
+    pl("Herr Brunner?", BX2, 290, beim("frage2", "Herr"), fill=WEISS, size=32, anker="m"),
 ])
 
 # B Sachverhalt ---------------------------------------------------------------------------------------------------------------
@@ -302,7 +302,7 @@ sachverhalt_080("sv", [
     "Er zahlt sofort bar.",
     "Weil er zu Fuß gekommen ist, will er das Rad erst am nächsten Morgen abholen. Annika ist einverstanden. Das Rad "
     "bleibt über Nacht in ihrem Hof. Weitere Vereinbarungen treffen die beiden nicht.",
-], "Wem gehört das Fahrrad in der Nacht?")
+], "Wer ist in der Nacht Eigentümer des Fahrrads?")
 
 # C Kaufvertrag und Übereignung ---------------------------------------------------------------------------------------------------
 folie([("kv", "Kaufvertrag · § 433 Abs. 1 S. 1 BGB"), ("eigen", "Kaufvertrag und Übereignung")], rechts_frei([
