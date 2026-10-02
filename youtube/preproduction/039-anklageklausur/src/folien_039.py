@@ -342,8 +342,8 @@ folie([("mat", PA), ("dieb", f"{PA} › Tat 1: Diebstahl, § 242 Abs. 1 StGB"),
 folie([("bw", f"{PA} › Tat 1: Beweiswürdigung"), ("bw3", f"{PA} › Tat 1: hinreichender Tatverdacht")], rechts_frei([
     *tafel("bw", "Tat 1: Beweiswürdigung aus der Akte", size=46),
     z("Video: Packung geöffnet, leer zurückgelegt", 110, 190, "bw1", "Bold", 36),
-    z("Cola bezahlt, Kopfhörer nicht:", 110, 280, "bw2", "Bold", 36),
-    z("spricht gegen ein Versehen", 150, 335, beim("bw2", "Versehen"), size=34, farbe=TEXT),
+    z("spricht gegen ein Versehen", 110, 280, "bw2", "Bold", 36),
+    z("zumal: Cola bezahlt", 150, 335, beim("bw2", "Cola"), size=34, farbe=TEXT),
     z("Einlassung überzeugt nicht", 110, 430, "bw3", "Bold", 36),
     nein(1110, 450, "bw3", gr=20),
     z("Verurteilung wahrscheinlich", 110, 500, beim("bw3", "Verurteilung"), "Bold", 36),
@@ -355,10 +355,10 @@ folie([("bw", f"{PA} › Tat 1: Beweiswürdigung"), ("bw3", f"{PA} › Tat 1: hi
     peep_voll("BR_denkt", X2, BR, FR, "bw2", anim="cut"),
     namensschild("Herr Rösch", X1, BR, "bw", BLAU, d=0.2),
     namensschild("Herr Brehm", X2, BR, "bw", GRUEN, d=0.3),
-    ficon("tabler", "device-cctv", MB, 380, 110, "bw1", fuell=WEISS, bis="bw2"),
-    pl("Video", MB, 160, "bw1", fill=WEISS, size=30, anker="m", bis="bw2"),
-    ficon("tabler", "bottle", MB, 380, 60, "bw2", fuell=ROT, anim="cut", bis=beim("bw3", "Verurteilung")),
-    pl("nur die Cola bezahlt", MB, 160, "bw2", fill=WEISS, size=28, anker="m", anim="cut", bis=beim("bw3", "Verurteilung")),
+    ficon("tabler", "device-cctv", MB, 380, 110, "bw1", fuell=WEISS, bis=beim("bw2", "Cola")),
+    pl("Video", MB, 160, "bw1", fill=WEISS, size=30, anker="m", bis=beim("bw2", "Cola")),
+    ficon("tabler", "bottle", MB, 380, 60, beim("bw2", "Cola"), fuell=ROT, anim="cut", bis=beim("bw3", "Verurteilung")),
+    pl("nur die Cola bezahlt", MB, 160, beim("bw2", "Cola"), fill=WEISS, size=28, anker="m", anim="cut", bis=beim("bw3", "Verurteilung")),
     ficon("tabler", "scale", MB, 380, 110, beim("bw3", "Verurteilung"), fuell=GELB, anim="cut"),
     pl("Verurteilung wahrscheinlich", MB, 160, beim("bw3", "Verurteilung"), fill=GRUEN, size=26, anker="m", anim="cut"),
 ]))
@@ -419,9 +419,9 @@ folie([("proz", PB), ("pv", f"{PB} › Prozessvoraussetzungen"), ("p194", f"{PB}
 
 # H2 B. Zuständigkeit ---------------------------------------------------------------------------------------------------------
 folie([("zust", f"{PB} › Zuständigkeit"), ("oertl", f"{PB} › örtlich: § 7 Abs. 1 StPO"),
-       ("sachl", f"{PB} › sachlich: § 24 Abs. 1 GVG"), ("strafr", f"{PB} › Strafrichter, § 25 Nr. 2 GVG")], rechts_frei([
+       ("sachl", f"{PB} › sachlich: § 24 Abs. 1 GVG"), ("strafr", f"{PB} › Vergehen, Straferwartung bis zwei Jahre"), (beim("strafr", "Strafrichter"), f"{PB} › Strafrichter, § 25 Nr. 2 GVG")], rechts_frei([
     *tafel("zust", "B. Prozessuales Gutachten: Zuständigkeit", size=44),
-    z("örtlich: Gericht des Tatorts", 110, 200, "oertl", "Bold", 38),
+    z("örtlich: nach dem Tatort", 110, 200, beim("oertl", "örtlich"), "Bold", 38),
     z("§ 7 Abs. 1 StPO", 150, 255, beim("oertl", "Paragraf"), size=32, farbe=TEXT),
     z("sachlich: Amtsgericht", 110, 350, "sachl", "Bold", 38),
     z("§ 24 Abs. 1 GVG", 150, 405, beim("sachl", "Paragraf"), size=32, farbe=TEXT),
@@ -433,12 +433,12 @@ folie([("zust", f"{PB} › Zuständigkeit"), ("oertl", f"{PB} › örtlich: § 7
     peep_voll("SA_froh", XS, BR, FR, beim("strafr", "Strafrichter"), anim="cut"),
     peep_voll("SA_denkt", XS, BR, FR, "strafr", anim="cut", bis=beim("strafr", "Strafrichter")),
     namensschild("Staatsanwältin", XS, BR, "zust", LILA, d=0.2),
-    ficon("tabler", "map-pin", XS, 380, 90, "oertl", fuell=ROT, bis="sachl"),
-    pl("Tatort", XS, 160, "oertl", fill=WEISS, size=30, anker="m", bis="sachl"),
-    ficon("tabler", "building-bank", XS, 380, 130, "sachl", fuell=GRUEN, anim="cut", bis="strafr"),
-    pl("Amtsgericht", XS, 160, "sachl", fill=GRUEN, size=30, anker="m", anim="cut", bis="strafr"),
-    ficon("tabler", "gavel", XS, 380, 110, "strafr", fuell=HOLZ, anim="cut"),
-    pl("Strafrichter", XS, 160, "strafr", fill=GELB, size=30, anker="m", anim="cut"),
+    ficon("tabler", "map-pin", XS, 380, 90, beim("oertl", "Tatort"), fuell=ROT, bis="sachl"),
+    pl("Tatort", XS, 160, beim("oertl", "Tatort"), fill=WEISS, size=30, anker="m", bis="sachl"),
+    ficon("tabler", "building-bank", XS, 380, 130, "sachl", fuell=GRUEN, anim="cut", bis=beim("strafr", "Strafrichter")),
+    pl("Amtsgericht", XS, 160, "sachl", fill=GRUEN, size=30, anker="m", anim="cut", bis=beim("strafr", "Strafrichter")),
+    ficon("tabler", "gavel", XS, 380, 110, beim("strafr", "Strafrichter"), fuell=HOLZ, anim="cut"),
+    pl("Strafrichter", XS, 160, beim("strafr", "Strafrichter"), fill=GELB, size=30, anker="m", anim="cut"),
 ]))
 
 # H3 B. Prozessuale Tat, § 264 StPO ----------------------------------------------------------------------------------------

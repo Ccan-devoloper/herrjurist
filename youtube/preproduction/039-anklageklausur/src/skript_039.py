@@ -58,8 +58,8 @@ SEGMENTE = [
      "Täter, Paragraf siebenundsiebzig b. [juni]Herr Brehm hat keinen Antrag gestellt, die Frist ist im Juni abgelaufen. "
      "[hind]Das ist ein Verfahrenshindernis. Eine Verurteilung ist ausgeschlossen. [diebst]Der Diebstahl braucht keinen "
      "Strafantrag: Kopfhörer für zweihundertneunundvierzig Euro sind nicht geringwertig.", P),
-    ("[zust]Dann die Zuständigkeit. [oertl]Örtlich das Gericht des Tatorts, Paragraf sieben StPO. [sachl]Sachlich das "
-     "Amtsgericht, Paragraf vierundzwanzig Gerichtsverfassungsgesetz. [strafr]Und weil es um ein Vergehen geht und keine höhere Strafe als zwei Jahre "
+    ("[zust]Dann prüfst du die Zuständigkeit. [oertl]Sie richtet sich örtlich nach dem Tatort, Paragraf sieben StPO. "
+     "[sachl]Sachlich ist das Amtsgericht zuständig, Paragraf vierundzwanzig Gerichtsverfassungsgesetz. [strafr]Und weil es um ein Vergehen geht und keine höhere Strafe als zwei Jahre "
      "Freiheitsstrafe zu erwarten ist, der Strafrichter, Paragraf fünfundzwanzig.", P),
     ("[tat]Wichtig ist der prozessuale Tatbegriff, Paragraf zweihundertvierundsechzig StPO. [ges]Tat ist nach dem "
      "Bundesgerichtshof der geschichtliche Vorgang, der nach natürlicher Auffassung ein einheitliches Geschehen bildet. "
