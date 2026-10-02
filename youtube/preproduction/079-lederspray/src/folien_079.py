@@ -201,7 +201,7 @@ def gf(p, folge, rede=None):
 EBa = ("EB_redet", GX["EB"], BODEN, GH)
 ALa = ("AL_redet", GX["AL"], BODEN, GH)
 HAa = ("HA_redet", GX["HA"], BODEN, GH)
-LLa = ("LL_redet", LLX, BODEN, GH)
+LLa = ("LL_redet_r", LLX, BODEN, GH)
 folie([(NULL, "Fall · Die Schuhpflege-Firma"), ("meld", "Fall · Meldungen: Atemnot"), ("sitz", "Fall · Die Sondersitzung"),
        ("abst", "Fall · Kein Rückruf"), ("weiter", "Fall · Weitere Kunden erkranken"), ("h1", "Fall · Der Einwand von Hauke"),
        ("frage", "Fall · Die Frage")], [
@@ -226,9 +226,9 @@ folie([(NULL, "Fall · Die Schuhpflege-Firma"), ("meld", "Fall · Meldungen: Ate
     ficon("tabler", "alert-triangle", 430, 670, 70, "sitz", fuell=GELB, anim="cut"),
     z("Atemnot nach dem Sprühen", 125, 720, "sitz", size=28, rechts=500),
     z("Ursache unbekannt", 125, 770, beim("l1", "Giftstoff"), "Bold", 28, rechts=500),
-    peep_voll("LL_ernst", LLX, BODEN, GH, beim("sitz", "Laborleiterin"), anim="pop", bis="l1"),
-    *redet("LL_redet", LLX, BODEN, GH, "l1", "e1"),
-    peep_voll("LL_ernst", LLX, BODEN, GH, "e1", anim="cut"),
+    peep_voll("LL_ernst_r", LLX, BODEN, GH, beim("sitz", "Laborleiterin"), anim="pop", bis="l1"),
+    *redet("LL_redet_r", LLX, BODEN, GH, "l1", "e1"),
+    peep_voll("LL_ernst_r", LLX, BODEN, GH, "e1", anim="cut"),
     namensschild("Laborleiterin", LLX, BODEN, beim("sitz", "Laborleiterin"), WEISS, d=0.2),
     blase("sprech", 700, 230, "l1", 600, 230, inhalt=["Einen Giftstoff finden wir nicht.", "Aber andere Ursachen scheiden aus."],
           textsize=30, figur=LLa, bis="e1"),
@@ -239,7 +239,7 @@ folie([(NULL, "Fall · Die Schuhpflege-Firma"), ("meld", "Fall · Meldungen: Ate
     karte(860, TISCH_Y, 1000, 46, NULL, fill=HOLZ, rund=10, schatten=0, rand=5),
     karte(900, TISCH_Y + 40, 920, BODEN - TISCH_Y - 40, NULL, fill=HOLZD, rund=6, schatten=0, rand=5),
     *[namensschild(NAME[p], GX[p], TISCH_Y + 50, NULL, FARBE[p]) for p in ("EB", "AL", "HA")],
-    pl("Geschäftsführung", 1360, 330, beim("sitz", "Geschäftsführern"), fill=WEISS, size=28, anker="m", bis="e1"),
+    pl("Geschäftsführung", 1360, 270, beim("sitz", "Geschäftsführern"), fill=WEISS, size=28, anker="m", bis="e1"),
     blase("sprech", 560, 190, "e1", 900, 250, inhalt=["Ein Rückruf kostet uns", "ein Vermögen."], textsize=32, figur=EBa,
           bis="a1"),
     ficon("tabler", "coins", 1238, TISCH_Y + 4, 56, beim("e1", "Vermögen"), fuell=GELB, bis="abst"),
@@ -287,8 +287,10 @@ folie([("bgh", "Der echte Fall · Lederspray, BGHSt 37, 106"), ("bgh4", "Der ech
     fb(110, 570, 1040, 140, GRUEN, "bgh4", [("BGH bestätigt im Kern: fahrlässige und", "ExtraBold", 32, INK),
                                                   ("gefährliche Körperverletzung", "ExtraBold", 32, INK)]),
     fund("BGHSt 37, 106, 111", 110, 725, "bgh4"),
-    ficon("tabler", "building-factory-2", 1560, 420, 200, "bgh2", fuell=WEISS),
-    pl("ein Hersteller", 1560, 160, "bgh2", fill=WEISS, size=30, anker="m", bis="bgh3"),
+    ficon("tabler", "spray", 1560, 420, 130, "bgh", fuell=BLAU, bis="bgh2"),
+    pl("Lederspray-Fall", 1560, 160, beim("bgh", "Lederspray-Fall"), fill=GELB, size=30, anker="m", bis="bgh2"),
+    ficon("tabler", "building-factory-2", 1560, 420, 200, "bgh2", fuell=WEISS, anim="cut"),
+    pl("ein Hersteller", 1560, 160, "bgh2", fill=WEISS, size=30, anker="m", anim="cut", bis="bgh3"),
     ficon("tabler", "calendar", 1400, 760, 120, "bgh3", fuell=WEISS),
     pl("über 2 Jahre später", 1560, 160, "bgh3", fill=GELB, size=30, anker="m", anim="cut", bis="bgh4"),
     ficon("tabler", "gavel", 1720, 760, 130, "bgh4", fuell=HOLZ),
@@ -347,7 +349,7 @@ folie([("erfolg", f"{PA} › 1. Erfolg, § 223 StGB"), ("kaus", f"{PA} › 1. Ur
     ok(135, 205, beim("erfolg", "Atemnot"), gr=18),
     z("Atemnot: Gesundheitsschädigung, § 223 StGB", 175, 185, beim("erfolg", "Atemnot"), "Bold", 32),
     z("Ursache, wenn niemand weiß, welcher Stoff wirkt?", 110, 285, "kaus", "Bold", 32),
-    ok(135, 365, "kaus2", gr=18),
+    ok(135, 365, beim("kaus2", "Den"), gr=18),
     z("Wirkmechanismus muss man nicht kennen", 175, 345, beim("kaus2", "Den"), size=32),
     fb(110, 430, 1040, 140, GELB, "kaus3", [("Es genügt: alle anderen in Betracht", "ExtraBold", 32, INK),
                                                   ("kommenden Ursachen ausgeschlossen", "ExtraBold", 32, INK)]),
@@ -470,7 +472,7 @@ folie([("p25", f"{PA} › 3. Mittäterschaft, § 25 Abs. 2 StGB"), ("gemein", f"
     ok(135, 675, beim("zurech", "und"), gr=18),
     z("gemeinsamer Rückruf hätte die Schäden verhindert", 175, 655, beim("zurech", "und"), size=31),
     *trio("p25", [("ernst",), ("still", "zurech")], [("ernst",), ("still", "zurech")], [("ernst",), ("still", "zurech")]),
-    pl("einstimmig", 1580, 160, "gemein", fill=ROTHELL, size=30, anker="m", bis="zurech"),
+    pl("gemeinsam beschlossen", 1580, 160, beim("gemein", "beschließen"), fill=ROTHELL, size=28, anker="m", bis="zurech"),
     pl("jeder haftet", 1580, 160, "zurech", fill=GRUEN, size=30, anker="m", anim="cut"),
 ]))
 
@@ -485,8 +487,8 @@ folie([("fahr", f"{PA} › 3. bei Fahrlässigkeit: Teilbeitrag"), ("frei", f"{PA
                                                    ("und Zumutbare getan hat", "ExtraBold", 32, INK)]),
     fund("BGHSt 37, 106, 131 f.", 110, 535, beim("frei", "getan")),
     *paar("fahr", "AL", [("ernst",), ("sorge", "frei")], "HA", [("ernst",), ("still", "frei")]),
-    pl("Teilbeitrag", MB, 160, "fahr", fill=LILAHELL, size=30, anker="m", bis="frei"),
-    ficon("tabler", "users-group", MB, 380, 120, "fahr", fuell=LILA),
+    pl("Teilbeitrag", MB, 160, beim("fahr", "Teilbeitrag"), fill=LILAHELL, size=30, anker="m", bis="frei"),
+    ficon("tabler", "users-group", MB, 380, 120, beim("fahr", "Teilbeitrag"), fuell=LILA),
     pl("voller Einsatz nötig", MB, 160, "frei", fill=WEISS, size=28, anker="m", anim="cut"),
 ]))
 

@@ -169,7 +169,7 @@ def schrank(x, y, w, h, cue):
 
 # A Fall: in der Tischlerei ---------------------------------------------------------------------------------------------------
 RX, NX = 330, 1590                      # Rademacher (blickt nach rechts), Neubauer (blickt nach links)
-SCH = beim("schrank", "Einbauschrank")
+SCH = beim("schrank", "baut")
 folie([(NULL, "Fall · Der Einbauschrank"), ("klage", "Fall · Klage und Urteil"), ("ueberw", "Fall · Die Überweisung")], [
     linienzug([(60, BODEN), (1860, BODEN)], NULL, breite=7, farbe=INK),
     pl("Tischlerei Rademacher", 70, 40, NULL, fill=GELB, size=40),
@@ -192,13 +192,13 @@ folie([(NULL, "Fall · Der Einbauschrank"), ("klage", "Fall · Klage und Urteil"
     ficon("tabler", "cash-off", 965, 500, 90, beim("zahlt", "zahlt"), fuell=ROT, bis="klage"),
     pl("zahlt nicht", 965, 245, beim("zahlt", "zahlt"), fill=WEISS, size=32, anker="m", bis="klage"),
     # Klage, Verhandlung, Urteil
-    ficon("tabler", "building-bank", 965, 525, 100, beim("klage", "Amtsgericht"), fuell=BLAU, anim="cut", bis="ueberw"),
-    pl("Klage vor dem Amtsgericht", 965, 140, beim("klage", "Amtsgericht"), fill=BLAU, size=30, anker="m", bis="ueberw"),
-    pl("mündliche Verhandlung: 4.3.2026", 965, 210, beim("mv", "vierten"), fill=WEISS, size=30, anker="m", bis="ueberw"),
-    pl("Urteil 18.3.2026: Neubauer zahlt 3.600 €", 965, 280, beim("urteil", "verurteilt"), fill=WEISS, size=30, anker="m", bis="ueberw"),
-    pl("rechtskräftig", 965, 350, beim("urteil", "rechtskräftig"), fill=GRUEN, size=30, anker="m", bis="ueberw"),
+    ficon("tabler", "building-bank", 965, 525, 100, "klage", fuell=BLAU, anim="cut", bis=beim("ueberw", "überweist")),
+    pl("Klage vor dem Amtsgericht", 965, 140, "klage", fill=BLAU, size=30, anker="m", bis=beim("ueberw", "überweist")),
+    pl("mündliche Verhandlung: 4.3.2026", 965, 210, beim("mv", "vierten"), fill=WEISS, size=30, anker="m", bis=beim("ueberw", "überweist")),
+    pl("Urteil 18.3.2026: Neubauer zahlt 3.600 €", 965, 280, beim("urteil", "verurteilt"), fill=WEISS, size=30, anker="m", bis=beim("ueberw", "überweist")),
+    pl("rechtskräftig", 965, 350, beim("urteil", "rechtskräftig"), fill=GRUEN, size=30, anker="m", bis=beim("ueberw", "überweist")),
     # die Überweisung wandert von Herrn Neubauer zu Herrn Rademacher, die Bank bestätigt sie
-    bewegt(ficon("tabler", "cash-banknote", 560, 600, 110, beim("ueberw", "überweist"), fuell=GRUEN),
+    bewegt(ficon("tabler", "cash-banknote", 560, 520, 110, beim("ueberw", "überweist"), fuell=GRUEN),
            beim("ueberw", "überweist"), beim("ueberw", "Betrag", ende=True), NX - 160 - 560, 0),
     pl("Überweisung 4.5.2026: 3.600 €", 965, 160, beim("ueberw", "überweist"), fill=GRUEN, size=32, anker="m"),
     ficon("tabler", "receipt", NX - 150, 610, 70, beim("beleg", "Bank"), fuell=WEISS),
@@ -216,7 +216,7 @@ folie([("tuer", "Fall · Die Gerichtsvollzieherin")], [
     hart(karte(TX, 370, 250, BODEN - 370, "tuer", fill=HOLZ, rund=8, schatten=5)),
     hart(karte(TX + 20, 390, 210, BODEN - 390, "tuer", fill=HOLZHELL, rund=6, schatten=0, rand=4)),
     hart(karte(TX + 190, 610, 18, 50, "tuer", fill=DUNKEL, rund=6, schatten=0, rand=3)),
-    pl("Trotzdem: Vollstreckungsauftrag", 1420, 150, beim("tuer", "beauftragt"), fill=PINK, size=30, anker="m", bis="g1"),
+    pl("Trotzdem: Vollstreckungsauftrag", 1420, 150, "tuer", fill=PINK, size=30, anker="m", bis="g1"),
     pl("Juni 2026", 1420, 225, beim("tuer", "Juni"), fill=WEISS, size=30, anker="m", bis="g1"),
     peep_voll("GV_ruhig", GX, BODEN, FH, beim("tuer", "Gerichtsvollzieherin"), anim="fade", bis="g1"),
     *redet("GV_redet", GX, BODEN, FH, "g1", "n1"),
@@ -384,7 +384,7 @@ folie([("gest", f"{PB} › Präklusion: Aufrechnung"), ("abs3", f"{PB} › § 76
     z("ausgeschlossen, wenn die Forderungen sich schon vor", 175, 245, beim("gest", "ausgeschlossen"), size=32),
     z("dem Schluss der Verhandlung aufrechenbar gegenüberstanden,", 175, 292, beim("gest", "Schluss"), size=32),
     z("auch wenn erst später aufgerechnet wird", 175, 339, beim("gest", "auch"), size=32),
-    fund("BGH, VU v. 25.6.2019 – II ZR 170/17, Rn. 11 f.", 175, 392, beim("gest", "ausgeschlossen")),
+    fund("BGH, VU v. 25.6.2019 – II ZR 170/17, Rn. 11 f.", 175, 392, beim("gest", "auch")),
     z("§ 767 Abs. 3 ZPO:", 110, 480, "abs3", "ExtraBold", 34),
     z("Alle Einwendungen, die der Schuldner bei Klageerhebung", 150, 535, beim("abs3", "Alle"), size=32),
     z("geltend machen kann, muss er in dieser Klage vorbringen.", 150, 582, beim("abs3", "geltend"), size=32),
