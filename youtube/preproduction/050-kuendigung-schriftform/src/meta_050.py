@@ -71,8 +71,8 @@ open(os.path.join(ziel, "beschreibung.txt"), "w").write(BESCHREIBUNG + "\n")
 open(os.path.join(ziel, "kapitel.txt"), "w").write(kap_txt + "\n")
 
 srt = open(os.path.join(roh, "untertitel.srt")).read()
-for a, b in [("Römisch eins", "I."), ("Römisch zwei", "II."), ("Römisch drei", "III."), ("Römisch vier", "IV."),
-             ("Römisch fünf", "V."), ("zweitausendvierundzwanzig", "2024"), ("Kuhlmann: ", "Frau Kuhlmann: "),
+for a, b in [("Römisch eins:", "I."), ("Römisch zwei:", "II."), ("Römisch drei:", "III."), ("Römisch vier:", "IV."),
+             ("Römisch fünf:", "V."), ("zweitausendvierundzwanzig", "2024"), ("Kuhlmann: ", "Frau Kuhlmann: "),
              ("Petersen: ", "Frau Petersen: "), ("Satz zwei", "S. 2"), ("Satz eins", "S. 1")]:
     srt = srt.replace(a, b)
 srt = srt.replace("Frau Frau ", "Frau ")
