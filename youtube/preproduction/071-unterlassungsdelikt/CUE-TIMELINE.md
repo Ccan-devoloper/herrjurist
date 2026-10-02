@@ -58,69 +58,69 @@ Quelle: `bildhalt_manifest.json` (120 Bildhalte, davon 120 eigenständig), `cues
 | 52 | 2:43.42 | 2:46.66 | Carla (Erzählerin/Lexi) | Lutz weiß: Zieht er seinen Sohn sofort heraus, | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 3. Quasikausalität: Rettung sicher | `c563854c6ff6` |
 | 53 | 2:46.66 | 2:48.54 | Carla (Erzählerin/Lexi) | überlebt der Junge sicher. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 3. Quasikausalität: Rettung sicher | `b30e8198c6df` |
 | 54 | 2:48.54 | 2:55.00 | Carla (Erzählerin/Lexi) | Die objektive Zurechnung, die die Lehre zusätzlich verlangt, ist hier unproblematisch. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 3. objektive Zurechnung | `409e30fa0b6d` |
-| 55 | 2:55.20 | 3:00.76 | Carla (Erzählerin/Lexi) | Viertens die Garantenstellung: Lutz muss rechtlich dafür einstehen, dass der Erfolg | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Garantenstellung | `6653c22943e0` |
-| 56 | 3:00.76 | 3:02.00 | Carla (Erzählerin/Lexi) | nicht eintritt. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Garantenstellung | `8d64db1dbea9` |
-| 57 | 3:02.00 | 3:05.68 | Carla (Erzählerin/Lexi) | Als sorgeberechtigter Vater ist er Beschützergarant. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Beschützergarant: Vater | `a5d5292a7c67` |
-| 58 | 3:05.68 | 3:09.64 | Carla (Erzählerin/Lexi) | Eltern müssen nach dem Bürgerlichen Gesetzbuch für ihr Kind sorgen und es | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Beschützergarant: Vater | `6eaa711dd5b8` |
-| 59 | 3:09.64 | 3:10.96 | Carla (Erzählerin/Lexi) | beaufsichtigen. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Beschützergarant: Vater | `746e6dcd9623` |
-| 60 | 3:10.96 | 3:14.20 | Carla (Erzählerin/Lexi) | Daneben gibt es Überwachergaranten, etwa wer eine | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Überblick: Überwachergarant | `72f16b478345` |
-| 61 | 3:14.20 | 3:15.92 | Carla (Erzählerin/Lexi) | Gefahrenquelle beherrscht. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Überblick: Überwachergarant | `05f42ec6b387` |
-| 62 | 3:15.92 | 3:22.20 | Carla (Erzählerin/Lexi) | Oder wer durch pflichtwidriges Vorverhalten eine Gefahr geschaffen hat, die Ingerenz. Dazu kommen | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Überblick: Ingerenz | `caf305c635a9` |
-| 63 | 3:22.20 | 3:24.38 | Carla (Erzählerin/Lexi) | eigene Folgen. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Überblick: Ingerenz | `b6efcc67afee` |
-| 64 | 3:24.58 | 3:27.66 | Carla (Erzählerin/Lexi) | Fünftens die Entsprechungsklausel. Bei | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechungsklausel | `c50702443c2d` |
-| 65 | 3:27.66 | 3:30.66 | Carla (Erzählerin/Lexi) | reinen Erfolgsdelikten wie dem Totschlag ist sie | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechungsklausel | `86238dcbd540` |
-| 66 | 3:30.66 | 3:32.79 | Carla (Erzählerin/Lexi) | regelmäßig unproblematisch. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechungsklausel | `5dba9644645d` |
-| 67 | 3:32.79 | 3:35.42 | Carla (Erzählerin/Lexi) | unproblematisch. Bedeutung hat sie bei Delikten, die eine bestimmte | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechung (+) | `ab24c96e99ea` |
-| 68 | 3:35.42 | 3:38.16 | Carla (Erzählerin/Lexi) | Begehungsweise verlangen. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechung (+) | `e40492e2ce6a` |
-| 69 | 3:38.80 | 3:41.36 | Carla (Erzählerin/Lexi) | angesetzt hat Lutz spätestens, als sein | A. Versuchter Totschlag durch Unterlassen › II. unmittelbares Ansetzen | `dd66e31177a8` |
-| 70 | 3:41.36 | 3:44.24 | Carla (Erzählerin/Lexi) | Sohn im Wasser liegt und er sitzen bleibt. Das | A. Versuchter Totschlag durch Unterlassen › II. unmittelbares Ansetzen | `86eccff53db0` |
-| 71 | 3:44.24 | 3:46.84 | Carla (Erzählerin/Lexi) | Leben ist da schon unmittelbar gefährdet. | A. Versuchter Totschlag durch Unterlassen › II. unmittelbares Ansetzen | `31da19ed5506` |
-| 72 | 3:46.84 | 3:49.40 | Carla (Erzählerin/Lexi) | Rechtfertigungsgründe gibt es nicht. | A. Versuchter Totschlag durch Unterlassen › III. Rechtswidrigkeit | `9f2cb33af937` |
-| 73 | 3:49.40 | 3:52.56 | Carla (Erzählerin/Lexi) | In der Schuld fragst du nach der Zumutbarkeit. Die | A. Versuchter Totschlag durch Unterlassen › IV. Schuld: Zumutbarkeit | `c8458dcb600d` |
-| 74 | 3:52.56 | 3:56.76 | Carla (Erzählerin/Lexi) | Rettung war ohne Gefahr für Lutz möglich, also zumutbar. | A. Versuchter Totschlag durch Unterlassen › IV. Schuld: Zumutbarkeit | `6b0281e5e092` |
-| 75 | 3:56.76 | 4:00.71 | Carla (Erzählerin/Lexi) | Wo die Zumutbarkeit zu prüfen ist, ist allerdings umstritten. | A. Versuchter Totschlag durch Unterlassen › IV. Schuld: Zumutbarkeit | `57db2e9193f3` |
-| 76 | 4:00.71 | 4:02.96 | Carla (Erzählerin/Lexi) | Ein Rücktritt scheidet aus. | A. Versuchter Totschlag durch Unterlassen › V. kein Rücktritt, § 24 StGB | `a15d920dff56` |
-| 77 | 4:02.96 | 4:06.98 | Carla (Erzählerin/Lexi) | Gerettet hat Gesa, Lutz hat sich nicht bemüht. | A. Versuchter Totschlag durch Unterlassen › V. kein Rücktritt, § 24 StGB | `967946f17283` |
-| 78 | 4:07.18 | 4:12.01 | Carla (Erzählerin/Lexi) | Ergebnis: Lutz ist strafbar wegen versuchten Totschlags durch Unterlassen. | Ergebnis · Lutz strafbar nach §§ 212, 13, 22, 23 StGB | `6bcae67d2fa8` |
-| 79 | 4:12.01 | 4:13.54 | Carla (Erzählerin/Lexi) | Die Strafe kann nach Paragraf | Strafmilderung · § 13 Abs. 2, § 23 Abs. 2 StGB | `3690277ca373` |
-| 80 | 4:13.54 | 4:19.42 | Carla (Erzählerin/Lexi) | dreizehn Absatz zwei gemildert werden, nach Paragraf neunundvierzig Absatz eins, wegen des | Strafmilderung · § 13 Abs. 2, § 23 Abs. 2 StGB | `6e185a1a71eb` |
-| 81 | 4:19.42 | 4:23.96 | Carla (Erzählerin/Lexi) | Versuchs auch nach Paragraf dreiundzwanzig Absatz zwei. | Strafmilderung · § 13 Abs. 2, § 23 Abs. 2 StGB | `32eaf2857895` |
-| 82 | 4:24.16 | 4:25.36 | Carla (Erzählerin/Lexi) | Abwandlung: | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `a3a79341c361` |
-| 83 | 4:25.36 | 4:28.28 | Carla (Erzählerin/Lexi) | Bemerkt Lutz den Sturz nur deshalb nicht, weil er | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `ccf93da0a758` |
-| 84 | 4:28.28 | 4:30.36 | Carla (Erzählerin/Lexi) | pflichtwidrig nicht aufpasst, und | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `efc61767fcf0` |
-| 85 | 4:30.36 | 4:32.44 | Carla (Erzählerin/Lexi) | kommt jede Hilfe zu spät, kommt | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `86236b1db47b` |
-| 86 | 4:32.44 | 4:35.32 | Carla (Erzählerin/Lexi) | fahrlässige Tötung durch Unterlassen in Betracht, | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `f178220fc0c2` |
-| 87 | 4:35.32 | 4:39.74 | Carla (Erzählerin/Lexi) | Paragrafen zweihundertzweiundzwanzig und dreizehn. | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `ab5e0cef41b3` |
-| 88 | 4:40.04 | 4:45.86 | Carla (Erzählerin/Lexi) | Davon unterscheide die unterlassene Hilfeleistung nach Paragraf dreihundertdreiundzwanzig c. | Abgrenzung › unterlassene Hilfeleistung, § 323c StGB | `d4b801d1c7b5` |
-| 89 | 4:45.86 | 4:49.90 | Carla (Erzählerin/Lexi) | Sie ist ein echtes Unterlassungsdelikt: Das Gesetz bestraft das | Abgrenzung › echtes Unterlassungsdelikt | `1a1e160f40da` |
-| 90 | 4:49.90 | 4:52.06 | Carla (Erzählerin/Lexi) | Nichthelfen selbst, und es trifft | Abgrenzung › echtes Unterlassungsdelikt | `c540d48674fb` |
-| 91 | 4:52.06 | 4:53.34 | Carla (Erzählerin/Lexi) | jeden, auch ohne | Abgrenzung › echtes Unterlassungsdelikt | `0f712e75a67e` |
-| 92 | 4:53.34 | 4:55.68 | Carla (Erzählerin/Lexi) | Garantenstellung. | Abgrenzung › echtes Unterlassungsdelikt | `b5413111a3d8` |
-| 93 | 4:55.88 | 5:00.40 | Carla (Erzählerin/Lexi) | Klausurtipp: Klär Tun oder Unterlassen nur kurz vorab, | Klausurtipp · Tun oder Unterlassen kurz vorab | `9d72340f97cf` |
-| 94 | 5:00.40 | 5:03.08 | Carla (Erzählerin/Lexi) | außer der Fall ist wirklich zweifelhaft. | Klausurtipp · Tun oder Unterlassen kurz vorab | `2e33281338d5` |
-| 95 | 5:03.08 | 5:04.40 | Carla (Erzählerin/Lexi) | Beim Versuch gehören | Klausurtipp · Versuch: Merkmale im Tatentschluss | `d995bf98dab0` |
-| 96 | 5:04.40 | 5:06.80 | Carla (Erzählerin/Lexi) | Erfolg, Handlungsmöglichkeit, | Klausurtipp · Versuch: Merkmale im Tatentschluss | `a7d5bf6c5014` |
-| 97 | 5:06.80 | 5:10.92 | Carla (Erzählerin/Lexi) | Quasikausalität und Garantenstellung in den Tatentschluss. | Klausurtipp · Versuch: Merkmale im Tatentschluss | `da4aeabf94d2` |
-| 98 | 5:10.92 | 5:15.12 | Carla (Erzählerin/Lexi) | Im vollendeten Delikt prüfst du sie im objektiven Tatbestand, den | Klausurtipp · vollendet: objektiver Tatbestand | `91cadbead6bc` |
-| 99 | 5:15.12 | 5:17.14 | Carla (Erzählerin/Lexi) | Vorsatz danach. | Klausurtipp · vollendet: objektiver Tatbestand | `b9c3f5306a65` |
-| 100 | 5:17.14 | 5:21.66 | Carla (Erzählerin/Lexi) | Dein Prüfschema für das vollendete unechte Unterlassungsdelikt. | Prüfschema | `33f34f25270d` |
-| 101 | 5:21.66 | 5:24.38 | Carla (Erzählerin/Lexi) | Vorab: Tun oder Unterlassen? | Prüfschema › Vorab: Tun oder Unterlassen | `f6fe937ae9d7` |
-| 102 | 5:24.38 | 5:27.38 | Carla (Erzählerin/Lexi) | Römisch eins, Tatbestand, zuerst | Prüfschema › I. Tatbestand | `c8c7bbb7a2ae` |
-| 103 | 5:27.38 | 5:28.65 | Carla (Erzählerin/Lexi) | objektiv: | Prüfschema › I. Tatbestand | `20c6adc594e9` |
-| 104 | 5:28.65 | 5:29.66 | Carla (Erzählerin/Lexi) | der Erfolg, | Prüfschema › I. 1. a) Erfolg | `412ab7d5f6d9` |
-| 105 | 5:29.66 | 5:34.62 | Carla (Erzählerin/Lexi) | die Nichtvornahme der gebotenen Handlung trotz physisch-realer Möglichkeit, | Prüfschema › I. 1. b) Nichtvornahme trotz Möglichkeit | `19915b4c3698` |
-| 106 | 5:34.62 | 5:38.75 | Carla (Erzählerin/Lexi) | die Quasikausalität und objektive Zurechnung, | Prüfschema › I. 1. c) Quasikausalität | `8e23cfa96075` |
-| 107 | 5:38.75 | 5:40.06 | Carla (Erzählerin/Lexi) | Zurechnung, die Garantenstellung | Prüfschema › I. 1. d) Garantenstellung | `3070c6ecf06d` |
-| 108 | 5:40.06 | 5:41.79 | Carla (Erzählerin/Lexi) | und die Entsprechung. | Prüfschema › I. 1. e) Entsprechung | `68b512497cca` |
-| 109 | 5:41.79 | 5:44.46 | Carla (Erzählerin/Lexi) | Entsprechung. Dann subjektiv der Vorsatz. | Prüfschema › I. 2. Vorsatz | `37069505ce7d` |
-| 110 | 5:44.46 | 5:47.18 | Carla (Erzählerin/Lexi) | Römisch zwei, Rechtswidrigkeit. | Prüfschema › II. Rechtswidrigkeit | `89f2178c03b7` |
-| 111 | 5:47.18 | 5:50.70 | Carla (Erzählerin/Lexi) | Römisch drei, Schuld, mit der Zumutbarkeit. | Prüfschema › III. Schuld | `c8d779fe532d` |
-| 112 | 5:50.70 | 5:55.15 | Carla (Erzählerin/Lexi) | Danach die Strafmilderung nach Paragraf dreizehn Absatz zwei. | Prüfschema › IV. Strafmilderung | `d497eb0296e8` |
-| 113 | 5:55.15 | 6:00.36 | Carla (Erzählerin/Lexi) | zwei. Beim Versuch wandern die objektiven Merkmale in den Tatentschluss. | Prüfschema › Versuch | `66e6ba70507b` |
-| 114 | 6:00.56 | 6:04.52 | Carla (Erzählerin/Lexi) | Merke: Für einen Erfolg haftet durch Unterlassen nur, wer als | Merksatz | `501d33f54698` |
-| 115 | 6:04.52 | 6:07.20 | Carla (Erzählerin/Lexi) | Garant rechtlich dafür einstehen muss. | Merksatz | `9e19cc20df64` |
-| 116 | 6:07.20 | 6:07.56 | Carla (Erzählerin/Lexi) | Und die | Merksatz | `a597579ffd64` |
-| 117 | 6:07.56 | 6:09.92 | Carla (Erzählerin/Lexi) | mögliche Rettung hätte den Erfolg mit an | Merksatz | `6b8ee186fa78` |
-| 118 | 6:09.92 | 6:13.16 | Carla (Erzählerin/Lexi) | Sicherheit grenzender Wahrscheinlichkeit verhindern müssen. | Merksatz | `153459e38904` |
-| 119 | 6:13.16 | 6:15.60 | Carla (Erzählerin/Lexi) | Tritt der Erfolg nicht ein, prüfst du den | Merksatz | `bd58095e0757` |
-| 120 | 6:15.60 | 6:17.71 | Carla (Erzählerin/Lexi) | Versuch. | Merksatz | `25f65afdbd37` |
+| 55 | 2:55.20 | 3:00.60 | Carla (Erzählerin/Lexi) | Viertens die Garantenstellung: Lutz muss rechtlich dafür einstehen, dass der Erfolg | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Garantenstellung | `6653c22943e0` |
+| 56 | 3:00.60 | 3:01.92 | Carla (Erzählerin/Lexi) | nicht eintritt. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Garantenstellung | `8d64db1dbea9` |
+| 57 | 3:01.92 | 3:05.36 | Carla (Erzählerin/Lexi) | Als sorgeberechtigter Vater ist er Beschützergarant. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Beschützergarant: Vater | `a5d5292a7c67` |
+| 58 | 3:05.36 | 3:09.24 | Carla (Erzählerin/Lexi) | Eltern müssen nach dem Bürgerlichen Gesetzbuch für ihr Kind sorgen und es | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Beschützergarant: Vater | `6eaa711dd5b8` |
+| 59 | 3:09.24 | 3:10.64 | Carla (Erzählerin/Lexi) | beaufsichtigen. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Beschützergarant: Vater | `746e6dcd9623` |
+| 60 | 3:10.64 | 3:13.60 | Carla (Erzählerin/Lexi) | Daneben gibt es Überwachergaranten, etwa wer eine | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Überblick: Überwachergarant | `72f16b478345` |
+| 61 | 3:13.60 | 3:15.36 | Carla (Erzählerin/Lexi) | Gefahrenquelle beherrscht. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Überblick: Überwachergarant | `05f42ec6b387` |
+| 62 | 3:15.36 | 3:21.64 | Carla (Erzählerin/Lexi) | Oder wer durch pflichtwidriges Vorverhalten eine Gefahr geschaffen hat, die In-gerenz. Dazu kommen | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Überblick: Ingerenz | `caf305c635a9` |
+| 63 | 3:21.64 | 3:23.98 | Carla (Erzählerin/Lexi) | eigene Folgen. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 4. Überblick: Ingerenz | `b6efcc67afee` |
+| 64 | 3:24.18 | 3:27.26 | Carla (Erzählerin/Lexi) | Fünftens die Entsprechungsklausel. Bei | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechungsklausel | `c50702443c2d` |
+| 65 | 3:27.26 | 3:30.26 | Carla (Erzählerin/Lexi) | reinen Erfolgsdelikten wie dem Totschlag ist sie | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechungsklausel | `86238dcbd540` |
+| 66 | 3:30.26 | 3:32.39 | Carla (Erzählerin/Lexi) | regelmäßig unproblematisch. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechungsklausel | `5dba9644645d` |
+| 67 | 3:32.39 | 3:35.02 | Carla (Erzählerin/Lexi) | unproblematisch. Bedeutung hat sie bei Delikten, die eine bestimmte | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechung (+) | `ab24c96e99ea` |
+| 68 | 3:35.02 | 3:37.76 | Carla (Erzählerin/Lexi) | Begehungsweise verlangen. | A. Versuchter Totschlag durch Unterlassen › I. Tatentschluss › 5. Entsprechung (+) | `e40492e2ce6a` |
+| 69 | 3:38.40 | 3:40.96 | Carla (Erzählerin/Lexi) | angesetzt hat Lutz spätestens, als sein | A. Versuchter Totschlag durch Unterlassen › II. unmittelbares Ansetzen | `dd66e31177a8` |
+| 70 | 3:40.96 | 3:43.84 | Carla (Erzählerin/Lexi) | Sohn im Wasser liegt und er sitzen bleibt. Das | A. Versuchter Totschlag durch Unterlassen › II. unmittelbares Ansetzen | `86eccff53db0` |
+| 71 | 3:43.84 | 3:46.44 | Carla (Erzählerin/Lexi) | Leben ist da schon unmittelbar gefährdet. | A. Versuchter Totschlag durch Unterlassen › II. unmittelbares Ansetzen | `31da19ed5506` |
+| 72 | 3:46.44 | 3:49.00 | Carla (Erzählerin/Lexi) | Rechtfertigungsgründe gibt es nicht. | A. Versuchter Totschlag durch Unterlassen › III. Rechtswidrigkeit | `9f2cb33af937` |
+| 73 | 3:49.00 | 3:52.16 | Carla (Erzählerin/Lexi) | In der Schuld fragst du nach der Zumutbarkeit. Die | A. Versuchter Totschlag durch Unterlassen › IV. Schuld: Zumutbarkeit | `c8458dcb600d` |
+| 74 | 3:52.16 | 3:56.36 | Carla (Erzählerin/Lexi) | Rettung war ohne Gefahr für Lutz möglich, also zumutbar. | A. Versuchter Totschlag durch Unterlassen › IV. Schuld: Zumutbarkeit | `6b0281e5e092` |
+| 75 | 3:56.36 | 4:00.31 | Carla (Erzählerin/Lexi) | Wo die Zumutbarkeit zu prüfen ist, ist allerdings umstritten. | A. Versuchter Totschlag durch Unterlassen › IV. Schuld: Zumutbarkeit | `57db2e9193f3` |
+| 76 | 4:00.31 | 4:02.56 | Carla (Erzählerin/Lexi) | Ein Rücktritt scheidet aus. | A. Versuchter Totschlag durch Unterlassen › V. kein Rücktritt, § 24 StGB | `a15d920dff56` |
+| 77 | 4:02.56 | 4:06.58 | Carla (Erzählerin/Lexi) | Gerettet hat Gesa, Lutz hat sich nicht bemüht. | A. Versuchter Totschlag durch Unterlassen › V. kein Rücktritt, § 24 StGB | `967946f17283` |
+| 78 | 4:06.78 | 4:11.61 | Carla (Erzählerin/Lexi) | Ergebnis: Lutz ist strafbar wegen versuchten Totschlags durch Unterlassen. | Ergebnis · Lutz strafbar nach §§ 212, 13, 22, 23 StGB | `6bcae67d2fa8` |
+| 79 | 4:11.61 | 4:13.14 | Carla (Erzählerin/Lexi) | Die Strafe kann nach Paragraf | Strafmilderung · § 13 Abs. 2, § 23 Abs. 2 StGB | `3690277ca373` |
+| 80 | 4:13.14 | 4:19.02 | Carla (Erzählerin/Lexi) | dreizehn Absatz zwei gemildert werden, nach Paragraf neunundvierzig Absatz eins, wegen des | Strafmilderung · § 13 Abs. 2, § 23 Abs. 2 StGB | `6e185a1a71eb` |
+| 81 | 4:19.02 | 4:23.56 | Carla (Erzählerin/Lexi) | Versuchs auch nach Paragraf dreiundzwanzig Absatz zwei. | Strafmilderung · § 13 Abs. 2, § 23 Abs. 2 StGB | `32eaf2857895` |
+| 82 | 4:23.76 | 4:24.96 | Carla (Erzählerin/Lexi) | Abwandlung: | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `a3a79341c361` |
+| 83 | 4:24.96 | 4:27.88 | Carla (Erzählerin/Lexi) | Bemerkt Lutz den Sturz nur deshalb nicht, weil er | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `ccf93da0a758` |
+| 84 | 4:27.88 | 4:29.96 | Carla (Erzählerin/Lexi) | pflichtwidrig nicht aufpasst, und | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `efc61767fcf0` |
+| 85 | 4:29.96 | 4:32.04 | Carla (Erzählerin/Lexi) | kommt jede Hilfe zu spät, kommt | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `86236b1db47b` |
+| 86 | 4:32.04 | 4:34.92 | Carla (Erzählerin/Lexi) | fahrlässige Tötung durch Unterlassen in Betracht, | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `f178220fc0c2` |
+| 87 | 4:34.92 | 4:39.34 | Carla (Erzählerin/Lexi) | Paragrafen zweihundertzweiundzwanzig und dreizehn. | Abwandlung · fahrlässige Tötung durch Unterlassen, §§ 222, 13 StGB | `ab5e0cef41b3` |
+| 88 | 4:39.64 | 4:45.46 | Carla (Erzählerin/Lexi) | Davon unterscheide die unterlassene Hilfeleistung nach Paragraf dreihundertdreiundzwanzig c. | Abgrenzung › unterlassene Hilfeleistung, § 323c StGB | `d4b801d1c7b5` |
+| 89 | 4:45.46 | 4:49.50 | Carla (Erzählerin/Lexi) | Sie ist ein echtes Unterlassungsdelikt: Das Gesetz bestraft das | Abgrenzung › echtes Unterlassungsdelikt | `1a1e160f40da` |
+| 90 | 4:49.50 | 4:51.66 | Carla (Erzählerin/Lexi) | Nichthelfen selbst, und es trifft | Abgrenzung › echtes Unterlassungsdelikt | `c540d48674fb` |
+| 91 | 4:51.66 | 4:52.94 | Carla (Erzählerin/Lexi) | jeden, auch ohne | Abgrenzung › echtes Unterlassungsdelikt | `0f712e75a67e` |
+| 92 | 4:52.94 | 4:55.28 | Carla (Erzählerin/Lexi) | Garantenstellung. | Abgrenzung › echtes Unterlassungsdelikt | `b5413111a3d8` |
+| 93 | 4:55.48 | 5:00.00 | Carla (Erzählerin/Lexi) | Klausurtipp: Klär Tun oder Unterlassen nur kurz vorab, | Klausurtipp · Tun oder Unterlassen kurz vorab | `9d72340f97cf` |
+| 94 | 5:00.00 | 5:02.68 | Carla (Erzählerin/Lexi) | außer der Fall ist wirklich zweifelhaft. | Klausurtipp · Tun oder Unterlassen kurz vorab | `2e33281338d5` |
+| 95 | 5:02.68 | 5:04.00 | Carla (Erzählerin/Lexi) | Beim Versuch gehören | Klausurtipp · Versuch: Merkmale im Tatentschluss | `d995bf98dab0` |
+| 96 | 5:04.00 | 5:06.40 | Carla (Erzählerin/Lexi) | Erfolg, Handlungsmöglichkeit, | Klausurtipp · Versuch: Merkmale im Tatentschluss | `a7d5bf6c5014` |
+| 97 | 5:06.40 | 5:10.52 | Carla (Erzählerin/Lexi) | Quasikausalität und Garantenstellung in den Tatentschluss. | Klausurtipp · Versuch: Merkmale im Tatentschluss | `da4aeabf94d2` |
+| 98 | 5:10.52 | 5:14.72 | Carla (Erzählerin/Lexi) | Im vollendeten Delikt prüfst du sie im objektiven Tatbestand, den | Klausurtipp · vollendet: objektiver Tatbestand | `91cadbead6bc` |
+| 99 | 5:14.72 | 5:16.74 | Carla (Erzählerin/Lexi) | Vorsatz danach. | Klausurtipp · vollendet: objektiver Tatbestand | `b9c3f5306a65` |
+| 100 | 5:16.74 | 5:21.26 | Carla (Erzählerin/Lexi) | Dein Prüfschema für das vollendete unechte Unterlassungsdelikt. | Prüfschema | `33f34f25270d` |
+| 101 | 5:21.26 | 5:23.98 | Carla (Erzählerin/Lexi) | Vorab: Tun oder Unterlassen? | Prüfschema › Vorab: Tun oder Unterlassen | `f6fe937ae9d7` |
+| 102 | 5:23.98 | 5:26.98 | Carla (Erzählerin/Lexi) | Römisch eins, Tatbestand, zuerst | Prüfschema › I. Tatbestand | `c8c7bbb7a2ae` |
+| 103 | 5:26.98 | 5:28.25 | Carla (Erzählerin/Lexi) | objektiv: | Prüfschema › I. Tatbestand | `20c6adc594e9` |
+| 104 | 5:28.25 | 5:29.26 | Carla (Erzählerin/Lexi) | der Erfolg, | Prüfschema › I. 1. a) Erfolg | `412ab7d5f6d9` |
+| 105 | 5:29.26 | 5:34.22 | Carla (Erzählerin/Lexi) | die Nichtvornahme der gebotenen Handlung trotz physisch-realer Möglichkeit, | Prüfschema › I. 1. b) Nichtvornahme trotz Möglichkeit | `19915b4c3698` |
+| 106 | 5:34.22 | 5:38.35 | Carla (Erzählerin/Lexi) | die Quasikausalität und objektive Zurechnung, | Prüfschema › I. 1. c) Quasikausalität | `8e23cfa96075` |
+| 107 | 5:38.35 | 5:39.66 | Carla (Erzählerin/Lexi) | Zurechnung, die Garantenstellung | Prüfschema › I. 1. d) Garantenstellung | `3070c6ecf06d` |
+| 108 | 5:39.66 | 5:41.39 | Carla (Erzählerin/Lexi) | und die Entsprechung. | Prüfschema › I. 1. e) Entsprechung | `68b512497cca` |
+| 109 | 5:41.39 | 5:44.06 | Carla (Erzählerin/Lexi) | Entsprechung. Dann subjektiv der Vorsatz. | Prüfschema › I. 2. Vorsatz | `37069505ce7d` |
+| 110 | 5:44.06 | 5:46.78 | Carla (Erzählerin/Lexi) | Römisch zwei, Rechtswidrigkeit. | Prüfschema › II. Rechtswidrigkeit | `89f2178c03b7` |
+| 111 | 5:46.78 | 5:50.30 | Carla (Erzählerin/Lexi) | Römisch drei, Schuld, mit der Zumutbarkeit. | Prüfschema › III. Schuld | `c8d779fe532d` |
+| 112 | 5:50.30 | 5:54.75 | Carla (Erzählerin/Lexi) | Danach die Strafmilderung nach Paragraf dreizehn Absatz zwei. | Prüfschema › IV. Strafmilderung | `d497eb0296e8` |
+| 113 | 5:54.75 | 5:59.96 | Carla (Erzählerin/Lexi) | zwei. Beim Versuch wandern die objektiven Merkmale in den Tatentschluss. | Prüfschema › Versuch | `66e6ba70507b` |
+| 114 | 6:00.16 | 6:04.12 | Carla (Erzählerin/Lexi) | Merke: Für einen Erfolg haftet durch Unterlassen nur, wer als | Merksatz | `501d33f54698` |
+| 115 | 6:04.12 | 6:06.80 | Carla (Erzählerin/Lexi) | Garant rechtlich dafür einstehen muss. | Merksatz | `9e19cc20df64` |
+| 116 | 6:06.80 | 6:07.16 | Carla (Erzählerin/Lexi) | Und die | Merksatz | `a597579ffd64` |
+| 117 | 6:07.16 | 6:09.52 | Carla (Erzählerin/Lexi) | mögliche Rettung hätte den Erfolg mit an | Merksatz | `6b8ee186fa78` |
+| 118 | 6:09.52 | 6:12.76 | Carla (Erzählerin/Lexi) | Sicherheit grenzender Wahrscheinlichkeit verhindern müssen. | Merksatz | `153459e38904` |
+| 119 | 6:12.76 | 6:15.20 | Carla (Erzählerin/Lexi) | Tritt der Erfolg nicht ein, prüfst du den | Merksatz | `bd58095e0757` |
+| 120 | 6:15.20 | 6:17.31 | Carla (Erzählerin/Lexi) | Versuch. | Merksatz | `25f65afdbd37` |
