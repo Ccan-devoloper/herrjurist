@@ -176,7 +176,7 @@ folie([(NULL, "Fall · Die Reparatur"), ("urteil", "Fall · Das Urteil"), ("uebe
     peep_voll("GV_ruhig", SX, BODEN, FH, beim("auftr", "Gerichtsvollzieher"), anim="fade"),
     namensschild("Gerichtsvollzieher", SX, BODEN, beim("auftr", "Gerichtsvollzieher"), TUERKIS),
     pl("Trotzdem: Vollstreckungsauftrag", 960, 300, beim("auftr", "beauftragt"), fill=PINK, size=30, anker="m"),
-    blase("sprech", 600, 190, "h1", 820, 160, inhalt=["Bitte pfänden Sie bei", "Herrn Steinbach."], textsize=34,
+    blase("sprech", 580, 180, "h1", 960, 185, inhalt=["Bitte vollstrecken Sie", "gegen Herrn Steinbach."], textsize=34,
           figur=HOa, bis="wohn"),
 ])
 
@@ -218,9 +218,9 @@ folie([("wohn", "Fall · Die Pfändung"), ("frage", "Fall · Die Frage")], [
     pl("gepfändet", TVX, 360, beim("g1", "pfände"), fill=ROT, size=30, anker="m"),
     blase("sprech", 640, 190, "g1", 1420, 200, inhalt=["Diesen Fernseher pfände ich.", "Hier ist das Siegel."],
           textsize=34, figur=GVb, bis="st1"),
-    blase("sprech", 600, 180, "st1", 560, 200, inhalt=["Aber ich habe doch", "längst bezahlt!"], textsize=36,
+    blase("sprech", 600, 170, "st1", 580, 235, inhalt=["Aber ich habe doch", "längst bezahlt!"], textsize=36,
           figur=STb, bis="w1"),
-    blase("sprech", 560, 180, "w1", 820, 200, inhalt=["Und der Fernseher", "gehört mir!"], textsize=36,
+    blase("sprech", 540, 170, "w1", 920, 235, inhalt=["Und der Fernseher", "gehört mir!"], textsize=36,
           figur=WEb, bis="g2"),
     blase("sprech", 640, 190, "g2", 1420, 200, inhalt=["Er steht in Ihrer Wohnung.", "Das genügt für die Pfändung."],
           textsize=32, figur=GVb, bis="frage"),

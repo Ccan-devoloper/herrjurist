@@ -22,7 +22,7 @@ SEGMENTE = [
      "zweitausendvierhundert Euro. [zahlt]Er zahlt nicht. [urteil]Das Amtsgericht verurteilt ihn, das Urteil wird "
      "rechtskräftig. [ueberw]Einen Monat danach überweist Herr Steinbach den vollen Betrag. [auftr]Trotzdem beauftragt "
      "Frau Hollmann den Gerichtsvollzieher.", 0.3),
-    ("[h1]Bitte pfänden Sie bei Herrn Steinbach.", 0.5, "Hollmann"),
+    ("[h1]Bitte vollstrecken Sie gegen Herrn Steinbach.", 0.5, "Hollmann"),
     # --- B Fall: in der Wohnung ------------------------------------------------------------------------------------------
     ("[wohn]In seiner Wohnung steht neben seinem alten Gerät ein zweiter, großer Fernseher. [schw]Den hat ihm seine Schwester geliehen, Frau Weidner.", 0.3),
     ("[g1]Diesen Fernseher pfände ich. Hier ist das Siegel.", 0.4, "Gerichtsvollzieher"),
