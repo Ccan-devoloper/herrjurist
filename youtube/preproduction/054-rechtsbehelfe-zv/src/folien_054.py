@@ -163,10 +163,10 @@ folie([(NULL, "Fall · Die Reparatur"), ("urteil", "Fall · Das Urteil"), ("uebe
     ficon("tabler", "cash-off", 960, 500, 100, beim("zahlt", "zahlt"), fuell=ROT, bis="urteil"),
     pl("zahlt nicht", 960, 280, beim("zahlt", "zahlt"), fill=WEISS, size=32, anker="m", bis="urteil"),
     # Klage und Urteil
-    ficon("tabler", "building-bank", 960, 520, 130, beim("urteil", "Amtsgericht"), fuell=BLAU, anim="cut", bis="ueberw"),
-    pl("Amtsgericht", 960, 150, beim("urteil", "Amtsgericht"), fill=BLAU, size=32, anker="m", bis="ueberw"),
-    pl("Urteil: Steinbach zahlt 2.400 €", 960, 225, beim("urteil", "verurteilt"), fill=WEISS, size=30, anker="m", bis="ueberw"),
-    pl("rechtskräftig", 960, 300, beim("urteil", "rechtskräftig"), fill=GRUEN, size=30, anker="m", bis="ueberw"),
+    ficon("tabler", "building-bank", 960, 520, 130, beim("urteil", "Amtsgericht"), fuell=BLAU, anim="cut", bis=beim("ueberw", "Monat")),
+    pl("Amtsgericht", 960, 150, beim("urteil", "Amtsgericht"), fill=BLAU, size=32, anker="m", bis=beim("ueberw", "Monat")),
+    pl("Urteil: Steinbach zahlt 2.400 €", 960, 225, beim("urteil", "verurteilt"), fill=WEISS, size=30, anker="m", bis=beim("ueberw", "Monat")),
+    pl("rechtskräftig", 960, 300, beim("urteil", "rechtskräftig"), fill=GRUEN, size=30, anker="m", bis=beim("ueberw", "Monat")),
     # die Überweisung wandert von Herrn Steinbach zu Frau Hollmann
     bewegt(ficon("tabler", "cash-banknote", 600, 560, 110, beim("ueberw", "überweist"), fuell=GRUEN, bis="h1"),
            beim("ueberw", "überweist"), beim("ueberw", "Betrag", ende=True), SX - 160 - 600, 0),
@@ -303,9 +303,9 @@ folie([("e766", f"{PE}, § 766 ZPO › Art und Weise"), ("vg", f"{PE} › Vollst
 folie([("p793", "Sofortige Beschwerde, § 793 ZPO"), ("frist", "Sofortige Beschwerde › Notfrist, § 569 Abs. 1 ZPO")],
       rechts_frei([
     *tafel("p793", "Sofortige Beschwerde, § 793 ZPO"),
-    fl_block(110, 190, 300, 100, WEISS, "p793", [("Erinnerung", "Bold", 32, INK)], rand=4),
-    z("›", 445, 200, beim("p793", "Entscheidet"), "ExtraBold", 60),
-    fl_block(510, 190, 310, 100, BLAU, beim("p793", "Vollstreckungsgericht"), [("Entscheidung", "Bold", 32, INK)], rand=4),
+    fl_block(110, 190, 300, 100, WEISS, beim("p793", "Erinnerung"), [("Erinnerung", "Bold", 32, INK)], rand=4),
+    z("›", 445, 200, beim("p793", "ist"), "ExtraBold", 60),
+    fl_block(510, 190, 310, 100, BLAU, beim("p793", "ist"), [("Entscheidung", "Bold", 32, INK)], rand=4),
     z("›", 855, 200, beim("p793", "sofortige"), "ExtraBold", 60),
     fl_block(930, 190, 220, 100, GELB, beim("p793", "sofortige"), [("Beschwerde", "Bold", 30, INK)], rand=4),
     *wortlaut(110, 350, 1040, 160, beim("p793", "sofortige"), [
@@ -320,7 +320,7 @@ folie([("p793", "Sofortige Beschwerde, § 793 ZPO"), ("frist", "Sofortige Beschw
     namensschild("Herr Steinbach", X1, BR, "p793", BLAU, d=0.2),
     namensschild("Gerichtsvollzieher", X2, BR, "p793", TUERKIS, d=0.3),
     ficon("tabler", "file-text", MB, 380, 100, "p793", fuell=WEISS, bis="frist"),
-    pl("Beschluss", MB, 160, beim("p793", "Vollstreckungsgericht"), fill=BLAU, size=28, anker="m", bis="frist"),
+    pl("Vollstreckungsgericht", MB, 160, beim("p793", "Vollstreckungsgericht"), fill=BLAU, size=28, anker="m", bis="frist"),
     ficon("tabler", "calendar-event", MB, 380, 100, "frist", fuell=WEISS, anim="cut"),
     pl("2 Wochen", MB, 160, beim("frist", "zwei"), fill=GELB, size=30, anker="m"),
 ]))
@@ -476,7 +476,7 @@ folie([("merke", "Merksatz")], [
     *markertext([[("Gegen das Wie der Vollstreckung:", 0)], [("Erinnerung", "a"), (".", 0)]], 750, 300, 46, "merke",
                 {"a": beim("merke", "Erinnerung")}),
     *markertext([[("Gegen den Anspruch:", 0)], [("Vollstreckungsabwehrklage", "b"), (".", 0)]], 750, 450, 46,
-                beim("merke", "gegen"), {"b": beim("merke", "Vollstreckungsabwehrklage")}),
+                beim("merke", "gegen", nr=2), {"b": beim("merke", "Vollstreckungsabwehrklage")}),
     *markertext([[("Wem die Sache gehört:", 0)], [("Drittwiderspruchsklage", "c"), (".", 0)]], 750, 600, 46, "m2",
                 {"c": beim("m2", "Drittwiderspruchsklage")}),
     *redet("LX_erklaert", 1680, 960, 690, "merke", lexi_bis_ende("merke")),
