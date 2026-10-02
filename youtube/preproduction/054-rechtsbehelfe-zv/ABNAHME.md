@@ -2,8 +2,8 @@
 
 **Folge/Titel (Nr. laut Themenplan):** 054 · „Rechtsbehelfe Zwangsvollstreckung: §§ 766, 767, 771, 805 ZPO“ (Fr · 2. Examen · ZV · Format „Schema“)
 **Datum/Rechtsstand:** 02.10.2026; Normen im Volltext gesetze-im-internet.de (Abruf 02.10.2026, ZPO-Stand inkl. BGBl. 2026 I Nr. 152 geprüft), BGH-Entscheidungen als amtliche PDF-Volltexte (bundesgerichtshof.de); Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
-**MP4 (Drive):** `LexVerse Produktion/054 Rechtsbehelfe ZV/054-Rechtsbehelfe-ZV.mp4`, 5:57,2 min (8,0 s Intro + 5:34,1 Hauptfilm + 15,1 s Outro), 24.599.457 B, SHA-256 `011e2a8ec45012c7f662f1d7925be4a0fe1b1ec0c413fb6fea2bd9c93fa07efc`
-**Hauptfilm allein (Drive):** `054-Rechtsbehelfe-ZV-Hauptfilm.mp4`, 17.320.197 B, SHA-256 `94ccfabf927fcdc716453d1a3b60947c53f6343a3bd7af45466340c514c180e5`
+**MP4 (Drive):** `LexVerse Produktion/054 Rechtsbehelfe ZV/054-Rechtsbehelfe-ZV.mp4`, 5:57,2 min (8,0 s Intro + 5:34,1 Hauptfilm + 15,1 s Outro), 24.594.270 B, SHA-256 `f056f03d2e197f47aace552194420c5b7a76a01b5e1f10261108261201e39dd4`
+**Hauptfilm allein (Drive):** `054-Rechtsbehelfe-ZV-Hauptfilm.mp4`, 17.326.815 B, SHA-256 `ee91dd5a05864304abedda532d34240442516ece71065e0139dc443a04f38e15`
 **Intro/Outro-Quellen:** unverändert aus `LexVerse Produktion/_Quellen/` (lokaler Cache `preproduction/_quellen/`), Endschnitt mit `tools/schnitt.py`
 **Produktionsmaster (Drive):** `LexVerse Produktion/054 Rechtsbehelfe ZV/master.zip`
 **Figuren und Stimmen:** Frau Hollmann (Open Peeps `polka_dots`, Stimme `hilde`), Herr Steinbach (`pointing_finger-2`, `stephan`), Frau Weidner (`resting-2`, `lucy`), Gerichtsvollzieher (`shirt-4`, `christian`), Lexi (`lexi.py`), Erzählerin Carla Blum; [`src/figuren_054.py`](src/figuren_054.py)
@@ -60,4 +60,4 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 ## Drive
 
-DRIVE
+Ordner `LexVerse Produktion/054 Rechtsbehelfe ZV/` (ID `1PktSx2uw2fzkXi-m9b-Cf5X-J5GSNYWW`), mit rclone angelegt (einziger Ordner „054 …“), 9 Dateien: `054-Rechtsbehelfe-ZV.mp4` (24.594.270 B, MD5 lokal = Drive `3cc7b581…`), `054-Rechtsbehelfe-ZV-Hauptfilm.mp4` (17.326.815 B), `master.zip` (48.265.708 B, 314 Einträge, `unzip -t` fehlerfrei, MD5 lokal = Drive `980b685e…`), `thumb_A.jpg` (171.137 B), `thumb_B.jpg` (164.400 B), `beschreibung.txt`, `kapitel.txt`, `untertitel.srt`, `metadaten.json`. `rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; Readback per `rclone lsl`/`md5sum` am 02.10.2026, 11:43. Die Kopie dieses Bogens im `master.zip` wurde vor dem Upload gepackt; dieser Abschnitt steht nur in der Repository-Fassung. `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme.wav`, `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.

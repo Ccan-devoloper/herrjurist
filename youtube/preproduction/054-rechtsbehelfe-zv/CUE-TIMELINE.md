@@ -18,18 +18,18 @@ Quelle: `bildhalt_manifest.json` (124 Bildhalte, davon 124 eigenständig), `cues
 | 12 | 0:17.24 | 0:17.92 | Carla (Erzählerin/Lexi) | Trotzdem | Fall · Der Vollstreckungsauftrag | `8435bc52e6d6` |
 | 13 | 0:17.92 | 0:19.28 | Carla (Erzählerin/Lexi) | beauftragt Frau Hollmann den | Fall · Der Vollstreckungsauftrag | `78248153caf9` |
 | 14 | 0:19.28 | 0:20.70 | Carla (Erzählerin/Lexi) | Gerichtsvollzieher. | Fall · Der Vollstreckungsauftrag | `6ef206330a31` |
-| 15 | 0:20.70 | 0:23.92 | Hollmann | Bitte vollstrecken Sie gegen Herrn Steinbach. | Fall · Der Vollstreckungsauftrag | `6cde2584c9fb` |
+| 15 | 0:20.70 | 0:23.92 | Hollmann | Bitte vollstrecken Sie gegen Herrn Steinbach. | Fall · Der Vollstreckungsauftrag | `1b9bd93f90c1` |
 | 16 | 0:23.92 | 0:25.92 | Carla (Erzählerin/Lexi) | In seiner Wohnung steht neben seinem | Fall · Die Pfändung | `96daeb953653` |
 | 17 | 0:25.92 | 0:27.04 | Carla (Erzählerin/Lexi) | alten Gerät ein | Fall · Die Pfändung | `87499f6e83a6` |
 | 18 | 0:27.04 | 0:29.88 | Carla (Erzählerin/Lexi) | zweiter, großer Fernseher. Den hat ihm seine | Fall · Die Pfändung | `cc38a0daeedf` |
 | 19 | 0:29.88 | 0:30.36 | Carla (Erzählerin/Lexi) | Schwester | Fall · Die Pfändung | `9213205384ba` |
 | 20 | 0:30.36 | 0:32.30 | Carla (Erzählerin/Lexi) | geliehen, Frau Weidner. | Fall · Die Pfändung | `2173a4ad89af` |
-| 21 | 0:32.30 | 0:33.18 | Gerichtsvollzieher | Diesen Fernseher | Fall · Die Pfändung | `4be6bec779ed` |
-| 22 | 0:33.18 | 0:34.70 | Gerichtsvollzieher | pfände ich. Hier ist das | Fall · Die Pfändung | `25c1ef911b13` |
-| 23 | 0:34.70 | 0:35.98 | Gerichtsvollzieher | Siegel. | Fall · Die Pfändung | `a26c69202117` |
-| 24 | 0:35.98 | 0:38.46 | Steinbach | Aber ich habe doch längst bezahlt! | Fall · Die Pfändung | `e39a57f5afa7` |
-| 25 | 0:38.46 | 0:40.86 | Weidner | Und der Fernseher gehört mir! | Fall · Die Pfändung | `4b509f8acbd6` |
-| 26 | 0:40.86 | 0:44.88 | Gerichtsvollzieher | Er steht in Ihrer Wohnung. Das genügt für die Pfändung. | Fall · Die Pfändung | `db5e0e11aca6` |
+| 21 | 0:32.30 | 0:33.18 | Gerichtsvollzieher | Diesen Fernseher | Fall · Die Pfändung | `d7f84f551603` |
+| 22 | 0:33.18 | 0:34.70 | Gerichtsvollzieher | pfände ich. Hier ist das | Fall · Die Pfändung | `c0179a5b89b1` |
+| 23 | 0:34.70 | 0:35.98 | Gerichtsvollzieher | Siegel. | Fall · Die Pfändung | `84e5203ab457` |
+| 24 | 0:35.98 | 0:38.46 | Steinbach | Aber ich habe doch längst bezahlt! | Fall · Die Pfändung | `7801ee9b8865` |
+| 25 | 0:38.46 | 0:40.86 | Weidner | Und der Fernseher gehört mir! | Fall · Die Pfändung | `c337f49c6cdf` |
+| 26 | 0:40.86 | 0:44.88 | Gerichtsvollzieher | Er steht in Ihrer Wohnung. Das genügt für die Pfändung. | Fall · Die Pfändung | `ba45d3e18308` |
 | 27 | 0:44.88 | 0:47.20 | Carla (Erzählerin/Lexi) | Wer kann sich jetzt wogegen wehren? | Fall · Die Frage | `e3b685098c08` |
 | 28 | 0:47.20 | 0:49.96 | Carla (Erzählerin/Lexi) | Und mit welchem Rechtsbehelf? | Fall · Die Frage | `1b731efe59aa` |
 | 29 | 0:49.96 | 0:59.68 | Carla (Erzählerin/Lexi) | Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an. | Sachverhalt | `f7bb72307374` |
@@ -62,9 +62,9 @@ Quelle: `bildhalt_manifest.json` (124 Bildhalte, davon 124 eigenständig), `cues
 | 56 | 2:22.52 | 2:23.28 | Carla (Erzählerin/Lexi) | ist dagegen die | Sofortige Beschwerde, § 793 ZPO | `10c4e121067d` |
 | 57 | 2:23.28 | 2:23.88 | Carla (Erzählerin/Lexi) | sofortige | Sofortige Beschwerde, § 793 ZPO | `2df8ac4ec97b` |
 | 58 | 2:23.88 | 2:28.00 | Carla (Erzählerin/Lexi) | Beschwerde statthaft, Paragraf siebenhundertdreiundneunzig. | Sofortige Beschwerde, § 793 ZPO | `0d8a72b72b61` |
-| 59 | 2:28.00 | 2:29.48 | Carla (Erzählerin/Lexi) | Die Notfrist beträgt | Sofortige Beschwerde › Notfrist, § 569 Abs. 1 ZPO | `dd6e8c071d31` |
-| 60 | 2:29.48 | 2:30.40 | Carla (Erzählerin/Lexi) | zwei Wochen ab | Sofortige Beschwerde › Notfrist, § 569 Abs. 1 ZPO | `4afc77a17d14` |
-| 61 | 2:30.40 | 2:32.38 | Carla (Erzählerin/Lexi) | Zustellung. | Sofortige Beschwerde › Notfrist, § 569 Abs. 1 ZPO | `31ec20e621f2` |
+| 59 | 2:28.00 | 2:29.48 | Carla (Erzählerin/Lexi) | Die Notfrist beträgt | Sofortige Beschwerde › Notfrist, § 569 Abs. 1 ZPO | `183b3a00e65d` |
+| 60 | 2:29.48 | 2:30.40 | Carla (Erzählerin/Lexi) | zwei Wochen ab | Sofortige Beschwerde › Notfrist, § 569 Abs. 1 ZPO | `31a7dd5c0c9e` |
+| 61 | 2:30.40 | 2:32.38 | Carla (Erzählerin/Lexi) | Zustellung. | Sofortige Beschwerde › Notfrist, § 569 Abs. 1 ZPO | `f165c5570f88` |
 | 62 | 2:32.68 | 2:34.38 | Carla (Erzählerin/Lexi) | Steinbach hat bezahlt. | Vollstreckungsabwehrklage, § 767 ZPO › Einwand: Zahlung | `3168f1a8768b` |
 | 63 | 2:34.38 | 2:37.22 | Carla (Erzählerin/Lexi) | Das betrifft den titulierten Anspruch selbst. | Vollstreckungsabwehrklage, § 767 ZPO › Einwand: Zahlung | `e7148facd785` |
 | 64 | 2:37.22 | 2:37.66 | Carla (Erzählerin/Lexi) | Solche | Vollstreckungsabwehrklage › Prozessgericht des ersten Rechtszuges | `09c04367e5e8` |

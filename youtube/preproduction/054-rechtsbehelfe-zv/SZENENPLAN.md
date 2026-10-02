@@ -1,7 +1,7 @@
 # Folge 054 · Rechtsbehelfe Zwangsvollstreckung: §§ 766, 767, 771, 805 ZPO – Szenenplan
 
 **Stand:** 02.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_054.py`](src/skript_054.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
-**Format:** Fr · 2. Examen · ZV, Themenplan-Format „Schema“. Ein Beispielfall nach dem Plan-Hook trägt das Schema: Frau Hollmann (Autowerkstatt) hat gegen Herrn Steinbach ein rechtskräftiges Urteil über 2.400 €; einen Monat nach dem Urteil zahlt er; trotzdem pfändet der Gerichtsvollzieher in seiner Wohnung einen Fernseher, den ihm seine Schwester Frau Weidner geliehen hat. Aufbau: Leitfrage „Wer wehrt sich wogegen?“ → Erinnerung (Wortlautkarte § 766 I 1; § 764; § 811 als typischer Fall; GV prüft nur Gewahrsam; materielle Einwendungen nicht) → sofortige Beschwerde (Wortlautkarte § 793; § 569 I) → Vollstreckungsabwehrklage (Wortlautkarte § 767 I; § 362 BGB; Präklusion § 767 II) → kurz § 768 → Drittwiderspruchsklage (Wortlautkarte § 771 I; Eigentum) → kurz § 805 (Vermieterpfandrecht) → Klausurtipp (§§ 769, 771 III) → Schema (Zulässigkeit/Begründetheit) → Merksatz. Hauptfilm 5:33,5 (Begründung für mehr als 4.600 Zeichen in ABNAHME.md).
+**Format:** Fr · 2. Examen · ZV, Themenplan-Format „Schema“. Ein Beispielfall nach dem Plan-Hook trägt das Schema: Frau Hollmann (Autowerkstatt) hat gegen Herrn Steinbach ein rechtskräftiges Urteil über 2.400 €; einen Monat nach dem Urteil zahlt er; trotzdem pfändet der Gerichtsvollzieher in seiner Wohnung einen Fernseher, den ihm seine Schwester Frau Weidner geliehen hat. Aufbau: Leitfrage „Wer wehrt sich wogegen?“ → Erinnerung (Wortlautkarte § 766 I 1; § 764; § 811 als typischer Fall; GV prüft nur Gewahrsam; materielle Einwendungen nicht) → sofortige Beschwerde (Wortlautkarte § 793; § 569 I) → Vollstreckungsabwehrklage (Wortlautkarte § 767 I; § 362 BGB; Präklusion § 767 II) → kurz § 768 → Drittwiderspruchsklage (Wortlautkarte § 771 I; Eigentum) → kurz § 805 (Vermieterpfandrecht) → Klausurtipp (§§ 769, 771 III) → Schema (Zulässigkeit/Begründetheit) → Merksatz. Hauptfilm 5:34,1 (Begründung für mehr als 4.600 Zeichen in ABNAHME.md).
 
 ## Besetzung
 
@@ -38,6 +38,7 @@ Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und 
 | **L Klausurschema** `sch`→`sb3` | breite Karte, Schema baut sich auf | – | `Klausurschema` → `› A. Zulässigkeit` → `› B. Begründetheit` | Titel · A · 1 · 2 (+ Zuständigkeiten) · 3 · B · § 766 · § 767 · § 771 | – |
 | **M Merksatz** `merke`→`m2` | Lexi erklärt (redet), drei Merkzeilen mit Marker | – | `Merksatz` | Erinnerung · Vollstreckungsabwehrklage · Drittwiderspruchsklage | – |
 
+**Blasen:** Sprechblasen Stil C (Standard seit 02.10.2026). **Zahlen** auf Blasen, Tafeln und Pillen in Ziffern.
 **Übergänge:** stumme Schiebeblenden nur zwischen den 13 Folien; innerhalb harte Schnitte und Pops; Bewegungen: Ratsche (A), Geldschein von Steinbach zu Hollmann (A), Siegel auf den Fernseher (B).
 **Geräusche:** zwei Handlungsgeräusche aus Freesound CC0 (`szene_054ratsche_1`, `szene_054siegel_1`), Herkunft in `geraeusche_herkunft.json`.
 
