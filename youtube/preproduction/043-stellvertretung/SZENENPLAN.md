@@ -2,7 +2,7 @@
 
 **Stand:** 02.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_043.py`](src/skript_043.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
 **Format:** Mo · Der Fall · Zivilrecht/BGB AT, Themenplan-Format „Schema“. Übungsfall nach dem Plan-Hook (50 Bürostühle), auf Vorgabe des Koordinators mit einer Angestellten statt einer Praktikantin: Herr Gruber (Inhaber einer Werbeagentur) bevollmächtigt Wiebke mündlich, fünfzig Bürostühle für höchstens 200 € das Stück zu kaufen; Wiebke wählt bei Frau Engel ein Modell zu 180 € und kauft „für die Agentur Gruber“; Gruber will die 9.000 € nicht zahlen. Ablauf: Fall → Frage → Sachverhalt → Anspruch § 433 II → Wortlaut § 164 I 1 → 1. eigene Willenserklärung (Bote, § 165) → 2. im fremden Namen (Offenkundigkeit, unternehmensbezogenes Geschäft, Geschäft für den, den es angeht, § 164 II) → 3. mit Vertretungsmacht (§ 166 II, Wortlaut § 167 I, Umfang) → Rechtsfolge, § 166 I mit § 442 → Gegenfall Überschreitung (Wortlaut § 177 I, Genehmigung verweigert, Ausblick § 179 I) → Gegenfall Rechtsscheinsvollmacht (Duldungs-/Anscheinsvollmacht) → § 181 in einem Satz → Klausurtipp → Schema → Merksatz.
-**Länge:** Hauptfilm 6:25,1 (5.524 Zeichen, Grenze 6.200). Begründung in [`ABNAHME.md`](ABNAHME.md).
+**Länge:** Hauptfilm 6:25,6 (5.536 Zeichen, Grenze 6.200). Begründung in [`ABNAHME.md`](ABNAHME.md).
 
 ## Besetzung
 
