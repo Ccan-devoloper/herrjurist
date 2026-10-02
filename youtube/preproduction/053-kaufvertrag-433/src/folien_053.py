@@ -7,7 +7,7 @@ C Wortlaut § 433 I, D Pflichten des Verkäufers, E Wortlaut § 433 II, F Trennu
 I II. nicht erloschen (Wortlaut § 362 I), J III. durchsetzbar (Wortlaut § 320 I 1), K Zug um Zug, § 322, Abnahme,
 L Erfüllung beim Tausch, M Ausblick Gefahrübergang, N Ausblick Verbrauchsgüterkauf, O Klausurtipp (Lexi),
 P Klausurschema, Q Merksatz (Lexi).
-Geräusche nur bei sichtbarer Handlung (Geldscheine beim Bezahlen, Freilauf beim Davonfahren; Freesound CC0, Herkunft in
+Geräusche nur bei sichtbarer Handlung (Geldscheine erscheinen in Ingas Hand, Freilauf beim Davonfahren; Freesound CC0, Herkunft in
 ../geraeusche_herkunft.json). Namensschild jeder Figur, solange sie im Bild ist. Hilfsfunktionen glyphen/z/pl/tafel/blk/
 wortlaut/redet/fig/ns als eigene Kopie aus Folge 046 (gemeinsame Dateien unverändert)."""
 import sys
