@@ -7,13 +7,15 @@ FF = imageio_ffmpeg.get_ffmpeg_exe()
 MP4 = "../out/047-Vermoegensdelikte-Ueberblick-Hauptfilm.mp4"
 # name: (start, ende, (x0, y0, x1, y1))
 F = {
-    "florian_f1": (16.8, 19.5, (1320, 450, 1520, 600)),          # Florian redet
-    "britta_bei_florian": (16.8, 19.5, (1635, 450, 1835, 600)),  # Britta hört zu: Mund zu
-    "britta_b1": (19.5, 21.8, (1635, 450, 1835, 600)),           # Britta redet
-    "florian_bei_britta": (19.5, 21.8, (1320, 450, 1520, 600)),  # Florian hört zu: Mund zu
-    "florian_f2": (123.4, 126.1, (1600, 430, 1800, 580)),
-    "lexi_tipp": (359.8, 363.5, (1450, 400, 1680, 560)),
-    "lexi_merke": (401.2, 404.9, (1560, 260, 1800, 430)),
+    "klaus_k1": (15.0, 18.0, (940, 330, 1140, 500)),            # Klaus redet (Fall)
+    "dagmar_bei_klaus": (15.0, 18.0, (1500, 330, 1700, 500)),   # Dagmar hört zu: Mund zu
+    "klaus_k3": (158.0, 160.8, (1645, 480, 1845, 620)),         # Klaus droht (Variante 3)
+    "dagmar_bei_k3": (158.0, 160.8, (1330, 480, 1530, 620)),
+    "dagmar_d1": (187.5, 190.1, (1330, 480, 1530, 620)),        # Dagmar redet (Variante 4)
+    "klaus_bei_d1": (187.5, 190.1, (1645, 480, 1845, 620)),
+    "klaus_k2": (200.9, 202.7, (1645, 480, 1845, 620)),         # Klaus bittet (Variante 5)
+    "lexi_tipp": (334.9, 338.6, (1450, 420, 1680, 580)),
+    "lexi_merke": (392.3, 396.0, (1560, 280, 1800, 450)),
 }
 os.makedirs("../out/lip", exist_ok=True)
 for name, (a, b, box) in F.items():

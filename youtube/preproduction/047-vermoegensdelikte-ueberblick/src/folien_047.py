@@ -298,7 +298,7 @@ sachverhalt_klein("sv", [
     "Variante 4: Klaus behauptet, Dagmars Bruder habe die Kamera schon bezahlt und ihn zum Abholen geschickt. Dagmar "
     "glaubt ihm und gibt sie ihm mit.",
     "Variante 5: Klaus fragt, ob er kurz durch die Kamera schauen darf. Dagmar reicht sie ihm, er rennt damit hinaus.",
-    "Variante 6: Klaus droht, Dagmars Laden im Internet mit erfundenen Vorwürfen schlechtzumachen. Dagmar verkauft "
+    "Variante 6: Klaus droht, den Laden von Dagmar im Internet mit erfundenen Vorwürfen schlechtzumachen. Dagmar verkauft "
     "ihm die Kamera deshalb für 10 Euro.",
     "Variante 7: wie Variante 3, doch Dagmar reicht Klaus die Kamera.",
 ], "Wie hat sich Klaus jeweils strafbar gemacht?")
@@ -336,7 +336,7 @@ folie([("karte", "Überblick · Landkarte der Vermögensdelikte")], [
 PA = "A. Eigentumsdelikte"
 T242 = ("„Wer eine fremde bewegliche Sache einem anderen in der Absicht wegnimmt, die Sache sich oder einem Dritten "
         "rechtswidrig zuzueignen, wird mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe bestraft.“")
-wl242, y242 = wortlaut(90, 170, 1090, T242, "§ 242 Abs. 1 StGB", "p242w",
+wl242, y242 = wortlaut(90, 170, 1090, T242, "§ 242 Abs. 1 StGB", beim("p242", "Diebstahl"),
                        marken=[("fremde bewegliche Sache", beim("p242w", "fremde")),
                                ("wegnimmt", beim("p242w", "wegnimmt")),
                                ("rechtswidrig zuzueignen", beim("p242w", "rechtswidrig"))])
@@ -361,7 +361,7 @@ folie([("p246", f"{PA} › Unterschlagung, § 246 StGB"), ("v2", f"{PA} › Unte
     z("Klaus hat die Kamera schon in der Hand?", 110, 185, beim("p246", "Klaus"), size=34),
     z("Variante 2: Dagmar leiht ihm die Kamera,", 110, 250, "v2", "Bold", 35),
     z("später beschließt er, sie zu verkaufen", 150, 302, beim("v2", "beschließt"), size=34),
-    nein(135, 393, "keinew", gr=20), z("keine Wegnahme: Gewahrsam selbst überlassen", 175, 370, "keinew", size=34),
+    nein(135, 393, "keinew", gr=20), z("keine Wegnahme: Kamera selbst überlassen", 175, 370, "keinew", size=34),
     blk(110, 440, 1040, 80, GELB, "p246b", [("§ 246: Zueignung ohne Wegnahme", "ExtraBold", 36, INK)]),
     z("Zueignung: Strafsenate sehen das unterschiedlich", 110, 548, "zueig", size=34),
     ok(135, 623, beim("zueig", "Verkauf"), gr=22), z("Verkauf genügt jedenfalls", 175, 600, beim("zueig", "Verkauf"), "Bold", 36),
@@ -486,7 +486,7 @@ folie([("trick", f"{PB} › Sachbetrug oder Trickdiebstahl? › Variante 5")], [
 folie([("p253", f"{PB} › Erpressung, § 253 StGB"), ("v7", f"{PB} › Erpressung, § 253 StGB › Variante 6"),
        ("p255", f"{PB} › räuberische Erpressung, § 255 StGB")], [
     *tafel("p253", "Erpressung, §§ 253, 255 StGB"),
-    z("Nötigung: Gewalt oder Drohung mit empfindlichem Übel", 110, 185, beim("p253", "Gewalt"), "Bold", 33),
+    z("Nötigung: Gewalt oder Drohung mit empfindlichem Übel", 110, 185, beim("p253", "nötigt"), "Bold", 33),
     z("zu einer Handlung, Duldung oder Unterlassung", 150, 237, beim("p253", "Handlung"), size=33),
     z("dadurch Vermögensnachteil", 150, 289, "nacht", size=33),
     z("Absicht, sich zu Unrecht zu bereichern", 150, 341, beim("nacht", "bereichern"), size=33),
@@ -511,7 +511,8 @@ folie([("streit", "Streit › Raub oder räuberische Erpressung? › Variante 7"
        ("rspr", "Streit › Raub oder räuberische Erpressung? › Rechtsprechung"),
        ("lehre", "Streit › Raub oder räuberische Erpressung? › Lehre")], [
     *tafel("streit", "Raub oder räuberische Erpressung?", size=42),
-    z("Variante 7: Drohung mit Schlägen, Dagmar reicht die Kamera", 110, 175, "v6", "Bold", 31),
+    z("Variante 7: Drohung mit Schlägen,", 110, 175, beim("streit", "Wieder"), "Bold", 31),
+    z("Dagmar reicht die Kamera", 110 + F("Bold", 31).getlength("Variante 7: Drohung mit Schlägen, "), 175, "v6", "Bold", 31),
     blk(SL, 235, SW, 64, BLAU, "rspr", [("Rechtsprechung (BGH)", "ExtraBold", 32, INK)]),
     z("äußeres Erscheinungsbild:", SL + 10, 315, beim("rspr", "äußeren"), "Bold", 30, rechts=SL + SW),
     z("Täter nimmt: Raub", SL + 10, 357, beim("rspr", "Nimmt"), size=30, rechts=SL + SW),
@@ -565,8 +566,8 @@ folie([("tipp", "Klausurtipp · Streit nur entscheiden, wo er sich auswirkt")], 
     z("Lehre: keine Vermögensverfügung", 110, 740, beim("tipp4", "Lehre"), "Bold", 34),
     *redet("LX_warnt", LXX, BR, FR + 60, "tipp", "sch"),
     pl("Lexi", LXX, BR + 22, "tipp", fill=GELB, size=30, anker="m", d=0.0),
-    kamera(1760, 500, 80, beim("tipp3", "Wochenende")),
-    pl("nur ein Wochenende", 1740, 520, beim("tipp3", "Wochenende"), fill=WEISS, size=26, anker="m"),
+    kamera(1790, 300, 80, beim("tipp3", "Wochenende")),
+    pl("nur ein Wochenende", 1740, 330, beim("tipp3", "Wochenende"), fill=WEISS, size=26, anker="m"),
 ])
 
 # M Entscheidungsbaum ---------------------------------------------------------------------------------------------------

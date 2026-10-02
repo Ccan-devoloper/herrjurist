@@ -36,7 +36,7 @@ SEGMENTE = [
      "[v1]In Variante eins steckt Klaus die Kamera unbemerkt ein und geht. [v1ok]Diebstahl.", PS),
     # --- E Unterschlagung ------------------------------------------------------------------------------------------------
     ("[p246]Und wenn Klaus die Kamera schon in der Hand hat? [v2]In Variante zwei leiht Dagmar sie ihm. Erst später "
-     "beschließt er, sie zu verkaufen, und tut das. [keinew]Eine Wegnahme fehlt, denn Dagmar hat ihm den Gewahrsam selbst überlassen. "
+     "beschließt er, sie zu verkaufen, und tut das. [keinew]Eine Wegnahme fehlt, denn Dagmar hat ihm die Kamera selbst überlassen. "
      "[p246b]Hier greift die Unterschlagung, Paragraf zweihundertsechsundvierzig: Zueignung ohne Wegnahme. [zueig]Wie "
      "viel dafür nötig ist, sehen die Strafsenate unterschiedlich; ein Verkauf genügt jedenfalls. "
      "[anv]Weil ihm die Kamera anvertraut war, droht nach Absatz zwei eine höhere Strafe.", PS),
@@ -56,14 +56,14 @@ SEGMENTE = [
     ("[trick]Ganz anders Variante fünf.", 0.3),
     ("[k2]Darf ich mal kurz durchschauen?", 0.3, "Klaus"),
     ("[v4]Dagmar reicht ihm die Kamera, er rennt damit hinaus. [locker]Auch hier täuscht Klaus, doch Dagmar will die "
-     "Kamera sofort zurück. [mitgew]Nach dem Bundesgerichtshof lockert sie ihren Gewahrsam nur. [v4ok]Erst beim "
+     "Kamera sofort zurück. [mitgew]Nach dem Bundesgerichtshof lockert sie den Gewahrsam nur. [v4ok]Erst beim "
      "Weglaufen bricht Klaus ihn: Trickdiebstahl. [wille]Entscheidend ist die Willensrichtung der Getäuschten: Gibt sie "
      "die Sache weg, ist es Betrug; nimmt der Täter, ist es Diebstahl.", PS),
     # --- I Erpressung ----------------------------------------------------------------------------------------------------
     ("[p253]Bei Erpressung, Paragraf zweihundertdreiundfünfzig, nötigt der Täter jemanden mit Gewalt oder durch Drohung "
      "mit einem empfindlichen Übel zu einer Handlung, Duldung oder Unterlassung. [nacht]Dadurch entsteht ein "
-     "Vermögensnachteil, und der Täter will sich zu Unrecht bereichern. [v7]In Variante sechs droht Klaus, Dagmars "
-     "Laden im Internet mit erfundenen Vorwürfen schlechtzumachen. [v7b]Dagmar verkauft ihm die Kamera deshalb für zehn "
+     "Vermögensnachteil, und der Täter will sich zu Unrecht bereichern. [v7]In Variante sechs droht Klaus, den Laden "
+     "von Dagmar im Internet mit erfundenen Vorwürfen schlechtzumachen. [v7b]Dagmar verkauft ihm die Kamera deshalb für zehn "
      "Euro. [v7ok]Der drohende Rufschaden ist ein empfindliches Übel, das Mittel verwerflich: "
      "Erpressung. [p255]Setzt der Täter dagegen Gewalt gegen eine Person ein oder droht er mit Gefahr für Leib oder Leben, wird er nach Paragraf "
      "zweihundertfünfundfünfzig gleich einem Räuber bestraft: räuberische Erpressung.", PS),
