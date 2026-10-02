@@ -85,7 +85,7 @@ SEGMENTE = [
      "Bundes fort. [bind]Die Maßstäbe aus Brokdorf folgen "
      "aus Artikel acht und binden jeden Gesetzgeber.", PS),
     # --- L Klausurtipp (Lexi) ------------------------------------------------------------------------------------------
-    ("[tipp]Klausurtipp: Prüfe bei einem Verbot immer zuerst das mildere Mittel. [tipp1]Genügen Auflagen "
+    ("[tipp]Klausurtipp: Prüfe bei einem Verbot immer zuerst das mildere Mittel. [tipp1]Reichen Auflagen "
      "oder ein räumlich begrenztes Verbot, ist das Totalverbot unverhältnismäßig.", PS),
     # --- M Klausurschema ------------------------------------------------------------------------------------------
     ("[sch]Dein Klausurschema. [k1]Römisch eins, Schutzbereich: [k1a]Versammlung, [k1b]friedlich und ohne Waffen, "

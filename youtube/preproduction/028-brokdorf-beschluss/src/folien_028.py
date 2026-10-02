@@ -538,7 +538,7 @@ folie([("tipp", "Klausurtipp · erst das mildere Mittel")], [
     warnung_i(150, 225, "tipp", gr=26),
     z("bei einem Verbot immer zuerst", 200, 200, beim("tipp", "Prüfe"), "Bold", 36),
     z("das mildere Mittel prüfen", 200, 255, beim("tipp", "mildere"), "Bold", 36),
-    z("genügen Auflagen oder ein räumlich", 200, 360, "tipp1", size=34),
+    z("reichen Auflagen oder ein räumlich", 200, 360, "tipp1", size=34),
     z("begrenztes Verbot:", 200, 410, beim("tipp1", "begrenztes"), size=34),
     z("Totalverbot unverhältnismäßig", 200, 470, beim("tipp1", "Totalverbot"), "Bold", 36),
     *redet("LX_warnt", FX, FB, FR + 40, "tipp", "sch"),
