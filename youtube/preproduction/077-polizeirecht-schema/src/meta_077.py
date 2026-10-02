@@ -57,6 +57,7 @@ srt = open(f"{U}/untertitel.srt").read()
 for alt, neu in (("\nSchröder:", "\nHerr Schröder:"), ("\nGötz:", "\nFrau Götz:"), ("\nKrämer:", "\nFrau Krämer:")):
     srt = srt.replace(alt, neu)
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
+srt = srt.replace("zweiundzwanzig", "22").replace("bis sechs Uhr", "bis 6 Uhr").replace("um sechs Uhr", "um 6 Uhr")
 assert not re.search(r"§\n", srt)
 open(f"{U}/untertitel.srt", "w").write(srt)
 
