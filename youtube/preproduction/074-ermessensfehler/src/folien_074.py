@@ -166,9 +166,16 @@ E1 = "1. Räumt die Norm Ermessen ein?"
 E2 = "2. Ermessensfehler"
 
 
-def tische(x0, cue, anim="pop", bis=None, breite=86, abstand=96):
-    """Die 4 Tische vor dem Café: Phosphor „picnic-table“ (weiß gefüllt), nebeneinander auf dem Gehweg."""
-    return [ficon("ph", "picnic-table", x0 + i * abstand, BODEN, breite, cue, fuell=WEISS, anim=anim, bis=bis) for i in range(4)]
+def tische(x0, cue, anim="pop", bis=None, breite=86, abstand=96, unten=BODEN, geplant=False):
+    """Die 4 Tische vor dem Café: Phosphor „picnic-table“ (weiß gefüllt), nebeneinander auf dem Gehweg.
+    geplant=True: halbtransparent – die Tische sind nur beantragt, noch nicht aufgestellt."""
+    els = [ficon("ph", "picnic-table", x0 + i * abstand, unten, breite, cue, fuell=WEISS, anim=anim, bis=bis) for i in range(4)]
+    if geplant:
+        for e in els:
+            sp = e.sprite.copy()
+            sp.putalpha(sp.getchannel("A").point(lambda v: int(v * 0.4)))
+            e.sprite = sp
+    return els
 
 
 # A Fall: das Café in der Altstadt, die Antwort der Stadt -------------------------------------------------------------------
@@ -188,14 +195,14 @@ folie([(NULL, "Fall · Das Café in der Altstadt"), ("hornung", "Fall · Die Ant
     hart(schild("Frau Kampmann, Café", KAX, NULL, KA_F, unten=BODEN, d=0.0)),
     ficon("tabler", "file-text", 820, 560, 80, "antrag", fuell=WEISS, bis="hornung"),
     pl("Antrag an die Stadt", 820, 600, beim("antrag", "Stadt"), fill=WEISS, size=30, anker="m", bis="hornung"),
-    *tische(570, beim("antrag", "Tische")),
+    *tische(570, beim("antrag", "Tische"), geplant=True),
     pl("4 Tische auf dem Gehweg", 715, 700, beim("antrag", "Gehweg"), fill=GELB, size=30, anker="m"),
     *fig("HO", HOX, BODEN, FH, [(KOMMT, "ruhig")], bis="ho1"),
     *redet("HO_redet", HOX, BODEN, FH, "ho1", "ka1"),
     peep_voll("HO_ruhig", HOX, BODEN, FH, "ka1", anim="cut"),
     schild("Herr Hornung, Stadt", HOX, KOMMT, HO_F, unten=BODEN, d=0.0),
     szene(ficon("tabler", "file-text", HOX - 140, 700, 90, beim("hornung", "Antwort"), fuell=WEISS), "074brief*", 0.8, -0.25),
-    nein(715, 640, beim("ho1", "abgelehnt"), gr=40),
+    nein(715, 845, beim("ho1", "abgelehnt"), gr=40),
     blase("sprech", 820, 230, "ho1", 1180, 215, inhalt=["Frau Kampmann, Tische auf dem Gehweg?",
                                                       "Das machen wir grundsätzlich nie.",
                                                       "Ihr Antrag ist abgelehnt."], textsize=30, figur=HOb, bis="ka1"),
@@ -266,9 +273,233 @@ folie([("rfs", f"{E1} › Rechtsfolgenseite")], rechts_frei([
     z("prüft das Gericht grundsätzlich voll", 150, 473, beim("bsr", "voll"), size=34),
     z("Beurteilungsspielraum: seltene Ausnahme", 150, 535, beim("bsr", "Beurteilungsspielraum"), size=34),
     zit("BVerwG, Beschl. v. 8.11.2016 – 3 B 11.16, Rn. 8", 150, 588, beim("bsr", "Ausnahme")),
-    *tische(IX - 144, "rfs", breite=70),
-    pl("ob?", IX - 60, 690, beim("ent", "ob"), fill=GELB, size=30, anker="m"),
-    pl("wie?", IX + 60, 690, beim("aus", "wie"), fill=GRUEN, size=30, anker="m"),
+    *tische(IX - 126, "rfs", breite=72, abstand=84, unten=IU),
+    pl("ob?", IX - 70, 250, beim("ent", "ob"), fill=GELB, size=30, anker="m"),
+    pl("wie?", IX + 70, 250, beim("aus", "wie"), fill=GRUEN, size=30, anker="m"),
     *fig("KA", FX, FB, FR, [("rfs", "denkt")]),
     schild("Frau Kampmann", FX, "rfs", KA_F),
 ]))
+
+# G Bindung der Behörde, Wortlaut § 40 VwVfG ---------------------------------------------------------------------------------
+W40 = ("„Ist die Behörde ermächtigt, nach ihrem Ermessen zu handeln, hat sie ihr Ermessen entsprechend dem Zweck der "
+       "Ermächtigung auszuüben und die gesetzlichen Grenzen des Ermessens einzuhalten.“")
+Z40 = ["„Ist die Behörde ermächtigt, nach ihrem Ermessen zu handeln,",
+       "hat sie ihr Ermessen entsprechend dem Zweck der Ermächtigung",
+       "auszuüben und die gesetzlichen Grenzen des Ermessens",
+       "einzuhalten.“"]
+w40, w40_y = wortlaut(80, 175, 1100, W40, "§ 40 VwVfG", "wl40", size=34, zeilen=Z40,
+                      marken=[("entsprechend dem Zweck der Ermächtigung", beim("wl40", "entsprechend")),
+                              ("die gesetzlichen Grenzen des Ermessens", beim("grenz", "gesetzlichen"))])
+folie([("wl40", f"{E1} › Bindung, § 40 VwVfG")], rechts_frei([
+    titel(glyphen("Wie die Behörde ihr Ermessen ausübt"), 110, 75, "wl40", 44),
+    *w40,
+    z("für die Stadt: § 40 VwVfG NRW, gleichlautend", 110, w40_y + 40, beim("nrw40", "Stadt"), "Bold", 34),
+    ficon("tabler", "building", IX, IU, 140, "wl40", fuell=WEISS),
+    pl("Stadt", IX, 190, beim("nrw40", "Stadt"), fill=GRUEN, size=30, anker="m"),
+    *fig("HO", FX, FB, FR, [("wl40", "ruhig")]),
+    schild("Herr Hornung, Stadt", FX, "wl40", HO_F),
+]))
+
+# H Gerichtliche Kontrolle, Wortlaut § 114 Satz 1 VwGO ------------------------------------------------------------------------
+W114 = ("„Soweit die Verwaltungsbehörde ermächtigt ist, nach ihrem Ermessen zu handeln, prüft das Gericht auch, ob der "
+        "Verwaltungsakt oder die Ablehnung oder Unterlassung des Verwaltungsakts rechtswidrig ist, weil die gesetzlichen "
+        "Grenzen des Ermessens überschritten sind oder von dem Ermessen in einer dem Zweck der Ermächtigung nicht "
+        "entsprechenden Weise Gebrauch gemacht ist.“")
+Z114 = ["„Soweit die Verwaltungsbehörde ermächtigt ist, nach ihrem",
+        "Ermessen zu handeln, prüft das Gericht auch, ob der",
+        "Verwaltungsakt oder die Ablehnung oder Unterlassung des",
+        "Verwaltungsakts rechtswidrig ist, weil die gesetzlichen",
+        "Grenzen des Ermessens überschritten sind oder von dem",
+        "Ermessen in einer dem Zweck der Ermächtigung nicht",
+        "entsprechenden Weise Gebrauch gemacht ist.“"]
+w114, w114_y = wortlaut(80, 150, 1100, W114, "§ 114 Satz 1 VwGO", "wl114", size=32, zeilen=Z114,
+                        marken=[("Grenzen des Ermessens überschritten", beim("wl114", "Grenzen")),
+                                ("dem Zweck der Ermächtigung nicht", beim("zweck", "Zweck"))])
+folie([("wl114", f"{E2} › Kontrolle, § 114 Satz 1 VwGO")], rechts_frei([
+    titel(glyphen("Was das Gericht prüft"), 110, 70, "wl114", 44),
+    *w114,
+    blk(110, w114_y + 30, 1040, 76, GELB, beim("nurrf", "Rechtsfehler"), [("Das Gericht prüft nur Rechtsfehler.", "ExtraBold", 36, INK)]),
+    z("nicht: Wäre eine andere Lösung zweckmäßiger?", 110, w114_y + 135, beim("nicht", "Lösung"), size=34),
+    z("kein eigenes Ermessen an Stelle der Behörde", 110, w114_y + 190, beim("nicht", "setzt"), "Bold", 34),
+    ficon(HC, "classical-building", IX, IU, 150, "wl114", fuell=WEISS),
+    *fig("RI", FX, FB, FR, [("wl114", "ruhig")]),
+    schild("die Richterin", FX, "wl114", RI_F),
+]))
+
+# I 1. Ermessensnichtgebrauch --------------------------------------------------------------------------------------------------
+folie([("drei", f"{E2} › a) Ermessensnichtgebrauch")], rechts_frei([
+    *tafel("drei", "Drei Ermessensfehler"),
+    blk(110, 180, 1040, 76, ROT, beim("f1", "Ermessensnichtgebrauch"), [("a) Ermessensnichtgebrauch", "ExtraBold", 36, INK)]),
+    z("auch: Ermessensausfall", 150, 280, beim("f1", "Ermessensausfall"), "Bold", 34),
+    z("Behörde übt ihr Ermessen gar nicht aus,", 150, 345, beim("f1", "übt"), size=34),
+    z("etwa weil sie sich für gebunden hält", 150, 398, beim("f1", "gebunden"), size=34),
+    zit("vgl. BVerwG, Urt. v. 5.9.2006 – 1 C 20.05, Rn. 17–19", 150, 450, beim("f1", "hält")),
+    z("„Das machen wir grundsätzlich nie.“", 110, 540, beim("f1b", "Das"), "Bold", 38),
+    z("pauschal abgelehnt: Einzelfall nicht angesehen", 150, 605, beim("f1b", "pauschal"), size=34),
+    nein(1110, 625, beim("f1b", "Einzelfall"), gr=22),
+    ficon("tabler", "eye-off", IX, IU, 130, beim("f1b", "schaut"), fuell=WEISS),
+    pl("Einzelfall", IX, 200, beim("f1b", "Einzelfall"), fill=WEISS, size=28, anker="m"),
+    *fig("HO", FX, FB, FR, [("drei", "ruhig"), ("f1b", "denkt")]),
+    schild("Herr Hornung, Stadt", FX, "drei", HO_F),
+]))
+
+# J 2. Ermessensfehlgebrauch ---------------------------------------------------------------------------------------------------
+folie([("f2", f"{E2} › b) Ermessensfehlgebrauch")], rechts_frei([
+    *tafel("f2", "Drei Ermessensfehler"),
+    blk(110, 180, 1040, 76, ROT, beim("f2", "Ermessensfehlgebrauch"), [("b) Ermessensfehlgebrauch", "ExtraBold", 36, INK)]),
+    z("sachfremde Erwägungen", 150, 280, beim("f2", "sachfremden"), "Bold", 34),
+    z("oder Wichtiges weggelassen: Ermessensdefizit", 150, 335, beim("defizit", "lässt"), size=34),
+    z("Sondernutzung: nur Gründe mit Bezug zur Straße,", 110, 420, beim("f2b", "Sondernutzung"), "Bold", 34),
+    z("etwa Sicherheit und Leichtigkeit des Verkehrs,", 150, 475, beim("f2b", "Sicherheit"), size=34),
+    z("Stadtbild", 150, 528, beim("f2b", "Stadtbild"), size=34),
+    zit("OVG NRW, Beschl. v. 1.7.2014 – 11 A 1081/12, Rn. 9, 11", 150, 580, beim("f2b", "Stadtbild")),
+    z("Konkurrenzschutz für den Wirt nebenan: sachfremd", 150, 660, beim("f2c", "Konkurrenz"), size=34),
+    nein(115, 683, beim("f2c", "sachfremd"), gr=20),
+    ficon("tabler", "building-store", IX, IU, 140, beim("f2c", "Wirt"), fuell=BLAU),
+    pl("Wirt nebenan", IX, 200, beim("f2c", "Wirt"), fill=WEISS, size=28, anker="m"),
+    *fig("KA", FX, FB, FR, [("f2", "denkt"), ("f2c", "aerger")]),
+    schild("Frau Kampmann", FX, "f2", KA_F),
+]))
+
+# K 3. Ermessensüberschreitung -------------------------------------------------------------------------------------------------
+folie([("f3", f"{E2} › c) Ermessensüberschreitung")], rechts_frei([
+    *tafel("f3", "Drei Ermessensfehler"),
+    blk(110, 180, 1040, 76, ROT, beim("f3", "Ermessensüberschreitung"), [("c) Ermessensüberschreitung", "ExtraBold", 36, INK)]),
+    z("Rechtsfolge, die das Gesetz nicht vorsieht", 150, 280, beim("f3", "Rechtsfolge"), "Bold", 34),
+    z("etwa: Erlaubnis für immer", 150, 345, beim("f3b", "Erlaubnis"), size=34),
+    z("erlaubt ist sie nur auf Zeit oder auf Widerruf", 150, 398, beim("f3b", "Zeit"), size=34),
+    zit("§ 18 Abs. 2 Satz 1 StrWG NRW", 150, 450, beim("f3b", "Widerruf")),
+    z("Verstoß gegen Grundrechte, Verhältnismäßigkeit", 150, 525, beim("f3c", "Grundrechte"), "Bold", 34),
+    z("genügt eine Auflage (Durchgang frei halten),", 150, 590, beim("f3c", "Auflage"), size=34),
+    z("kann eine Ablehnung unverhältnismäßig sein", 150, 643, beim("f3c", "Ablehnung"), size=34),
+    zit("Auflagen: § 18 Abs. 2 Satz 2 StrWG NRW", 150, 695, beim("f3c", "unverhältnismäßig")),
+    ficon("tabler", "infinity", IX, IU, 140, beim("f3b", "immer"), fuell=WEISS, bis="f3c"),
+    pl("für immer?", IX, 230, beim("f3b", "immer"), fill=WEISS, size=28, anker="m", bis="f3c"),
+    bis_(nein(IX, 340, beim("f3b", "Widerruf"), gr=34), "f3c"),
+    ficon("tabler", "walk", IX, IU, 120, beim("f3c", "Durchgang"), fuell=WEISS),
+    pl("Durchgang frei", IX, 230, beim("f3c", "Durchgang"), fill=GRUEN, size=28, anker="m"),
+    *fig("HO", FX, FB, FR, [("f3", "ruhig"), ("f3c", "denkt")]),
+    schild("Herr Hornung, Stadt", FX, "f3", HO_F),
+]))
+
+# L Ermessensreduzierung auf null --------------------------------------------------------------------------------------------
+folie([("null", "3. Ermessensreduzierung auf null")], rechts_frei([
+    *tafel("null", "Ermessensreduzierung auf null"),
+    z("nur noch eine Entscheidung rechtmäßig", 110, 190, beim("null", "eine"), "Bold", 36),
+    z("das Gericht kann die Behörde direkt verpflichten", 110, 270, beim("null2", "verpflichten"), size=34),
+    zit("BVerwG, Beschl. v. 23.1.2014 – 1 B 16.13, Rn. 4; § 113 Abs. 5 Satz 1 VwGO", 150, 323, beim("null2", "verpflichten")),
+    ficon(HC, "balance-scale", IX, IU, 150, "null", fuell=WEISS),
+    *fig("RI", FX, FB, FR, [("null", "ruhig")]),
+    schild("die Richterin", FX, "null", RI_F),
+]))
+
+# M Im Fall: Ermessensausfall, Begründung § 39 Abs. 1 Satz 3 VwVfG ------------------------------------------------------------
+folie([("zurueck", f"{E2} › im Fall: Ermessensausfall")], rechts_frei([
+    *tafel("zurueck", "Der Fall: Frau Kampmann"),
+    z("Stadt: nur „grundsätzlich nie“", 110, 190, beim("ausfall", "grundsätzlich"), "Bold", 36),
+    z("Gehweg, 4 Tische, Platz für Fußgänger:", 150, 255, beim("ausfall", "Gehweg"), size=34),
+    z("nicht befasst", 150, 308, beim("ausfall", "befasst"), size=34),
+    blk(110, 375, 1040, 76, ROT, beim("ausfall2", "Ermessensausfall"), [("Ermessensausfall: Ablehnung rechtswidrig", "ExtraBold", 34, INK)]),
+    z("Begründung, § 39 Abs. 1 Satz 3 VwVfG:", 110, 500, beim("begr", "Paragraf"), "Bold", 34),
+    z("soll die Gesichtspunkte des Ermessens", 150, 553, beim("begr", "Gesichtspunkte"), size=34),
+    z("erkennen lassen", 150, 606, beim("begr", "erkennen"), size=34),
+    zit("VwVfG NRW gleichlautend", 150, 658, beim("begr", "ausgegangen")),
+    ficon("tabler", "file-text", IX, IU, 120, "zurueck", fuell=WEISS),
+    pl("„grundsätzlich nie“", IX, 190, beim("ausfall", "grundsätzlich"), fill=ROT, size=28, anker="m"),
+    *fig("KA", FX, FB, FR, [("zurueck", "ruhig"), ("ausfall2", "hofft")]),
+    schild("Frau Kampmann", FX, "zurueck", KA_F),
+]))
+
+# N Nachschieben, Wortlaut § 114 Satz 2 VwGO ------------------------------------------------------------------------------------
+W1142 = "„Die Verwaltungsbehörde kann ihre Ermessenserwägungen hinsichtlich des Verwaltungsaktes auch noch im verwaltungsgerichtlichen Verfahren ergänzen.“"
+Z1142 = ["„Die Verwaltungsbehörde kann ihre Ermessenserwägungen",
+         "hinsichtlich des Verwaltungsaktes auch noch im",
+         "verwaltungsgerichtlichen Verfahren ergänzen.“"]
+w1142, w1142_y = wortlaut(80, 245, 1100, W1142, "§ 114 Satz 2 VwGO", "wl1142", size=34, zeilen=Z1142,
+                          marken=[("ergänzen.", beim("wl1142", "ergänzen"))])
+folie([("prozess", "4. Nachschieben, § 114 Satz 2 VwGO")], rechts_frei([
+    titel(glyphen("Nachschieben im Prozess"), 110, 70, "prozess", 44),
+    z("Stadt im Prozess: Fußgänger bräuchten dort Platz", 110, 160, beim("prozess", "erstmals"), "Bold", 34),
+    *w1142,
+    z("ergänzen: vorhandene Erwägungen vervollständigen", 110, w1142_y + 35, beim("ergaenzen", "vorhandene"), size=34),
+    blk(110, w1142_y + 105, 1040, 76, ROT, beim("heilung", "Ermessensausfall"), [("Ermessensausfall: nicht heilbar", "ExtraBold", 36, INK)]),
+    z("von Anfang an Ermessen: im Prozess", 110, w1142_y + 210, beim("heilung", "Anfang"), size=34),
+    z("nicht erstmals ausüben", 110, w1142_y + 263, beim("heilung", "erstmals"), "Bold", 34),
+    zit("BVerwG, Urt. v. 24.2.2021 – 8 C 25.19, Rn. 13; Urt. v. 13.12.2011 – 1 C 14.10, Rn. 9", 110, w1142_y + 318,
+        beim("heilung", "ausüben")),
+    ficon("tabler", "walk", IX, IU, 120, beim("prozess", "Fußgänger"), fuell=WEISS),
+    pl("Fußgänger", IX, 200, beim("prozess", "Fußgänger"), fill=WEISS, size=28, anker="m"),
+    nein(IX + 80, IU - 40, beim("heilung", "heilen"), gr=30),
+    *fig("HO", FX, FB, FR, [("prozess", "ruhig"), ("heilung", "denkt")]),
+    schild("Herr Hornung, Stadt", FX, "prozess", HO_F),
+]))
+
+# O Das Urteil: Bescheidungsurteil ------------------------------------------------------------------------------------------------
+RIX, KAX2 = 1420, 600
+RIb = ("RI_redet", RIX, BODEN, FH)
+folie([("vk", "5. Folge › Bescheidungsurteil, § 113 V 2 VwGO"), ("urteil", "Ergebnis · Das Urteil")], [
+    linienzug([(60, BODEN), (1860, BODEN)], "vk", breite=7, farbe=INK),
+    pl("Verwaltungsgericht", 70, 40, "vk", fill=GELB, size=40),
+    ficon(HC, "balance-scale", 1010, 700, 150, "vk", fuell=WEISS),
+    pl("Verpflichtungsklage, § 42 Abs. 1 Alt. 2 VwGO", 70, 140, beim("vk", "Verpflichtungsklage"), fill=WEISS, size=30, bis="ri1"),
+    pl("nicht auf null, nicht spruchreif", 70, 215, beim("spruch", "spruchreif"), fill=ROT, size=30, bis="ri1"),
+    pl("Bescheidungsurteil, § 113 Abs. 5 Satz 2 VwGO", 70, 290, beim("bu", "Bescheidungsurteil"), fill=GRUEN, size=30, bis="ri1"),
+    pl("Mehr dazu: Video Klagearten", 70, 365, beim("verweis", "Video"), fill=WEISS, size=28, bis="ri1"),
+    *fig("KA", KAX2, BODEN, FH, [("vk", "ruhig_r"), ("spruch", "denkt_r"), ("teil", "froh_r")]),
+    schild("Frau Kampmann", KAX2, "vk", KA_F, unten=BODEN),
+    *fig("RI", RIX, BODEN, FH, [("vk", "ruhig")], bis="ri1"),
+    *redet("RI_redet", RIX, BODEN, FH, "ri1", "teil"),
+    peep_voll("RI_ruhig", RIX, BODEN, FH, "teil", anim="cut"),
+    schild("die Richterin", RIX, "vk", RI_F, unten=BODEN),
+    blase("sprech", 900, 260, "ri1", 960, 215, inhalt=["Der Bescheid wird aufgehoben. Die Stadt muss",
+                                                     "unter Beachtung der Rechtsauffassung des",
+                                                     "Gerichts neu entscheiden. Im Übrigen wird",
+                                                     "die Klage abgewiesen."], textsize=30, figur=RIb, bis="teil"),
+    pl("Teilerfolg: neue, fehlerfreie Entscheidung", 70, 140, beim("teil", "Teilerfolg"), fill=GRUEN, size=30),
+    pl("dann: Platz für Fußgänger abwägen", 70, 215, beim("neu", "Platz"), fill=WEISS, size=30),
+])
+
+# P Klausurtipp (Lexi) --------------------------------------------------------------------------------------------------------
+folie([("tipp", "Klausurtipp · Ermessen bei der Rechtsfolge")], [
+    *tafel("tipp", "Klausurtipp", fill=HELL),
+    warnung_i(150, 225, "tipp", gr=26),
+    z("Ermessen in der Begründetheit prüfen:", 200, 200, beim("tipp", "Begründetheit"), "Bold", 36),
+    z("bei der Rechtsfolge, erst wenn der Tatbestand steht", 200, 255, beim("tipp", "Rechtsfolge"), size=34),
+    z("Fehler genau benennen:", 200, 350, beim("tipp1", "Benenne"), "Bold", 36),
+    z("Nichtgebrauch, Fehlgebrauch oder Überschreitung", 200, 405, beim("tipp1", "Nichtgebrauch"), size=34),
+    z("fehlt jede Ermessenserwägung:", 200, 500, beim("tipp2", "fehlt"), "Bold", 36),
+    z("kein Nachschieben", 200, 555, beim("tipp2", "Nachschieben"), "Bold", 36),
+    *redet("LX_warnt", FX, FB, FR + 40, "tipp", "sch"),
+    pl("Lexi", FX, FB + 22, "tipp", fill=GELB, size=30, anker="m", d=0.2),
+])
+
+# Q Klausurschema --------------------------------------------------------------------------------------------------------------
+SZ, LH = 36, 70
+X0 = 130
+zeilen_s = [("s1", "1. Räumt die Norm Ermessen ein? (kann, soll)", "Bold", 0),
+            ("s2", "2. Ermessensfehler, § 114 Satz 1 VwGO?", "Bold", 0),
+            ("s3", "a) Ermessensnichtgebrauch", "Regular", 1),
+            ("s4", "b) Ermessensfehlgebrauch", "Regular", 1),
+            ("s5", "c) Ermessensüberschreitung", "Regular", 1),
+            ("s6", "3. Ermessensreduzierung auf null?", "Bold", 0),
+            ("s7", "4. Erwägungen zulässig ergänzt, § 114 Satz 2 VwGO?", "Bold", 0),
+            ("s8", "5. Folge: Aufhebung, Bescheidung oder Verpflichtung", "Bold", 0)]
+els_t = [karte(60, 50, 1800, 900, "sch"), titel(glyphen("Klausurschema: Ermessensentscheidung"), 110, 85, "sch", 46)]
+for i, (c, t, s, ein) in enumerate(zeilen_s):
+    els_t.append(z(t, X0 + 60 * ein, 200 + i * LH, c, s, SZ, rechts=1820))
+folie([("sch", "Klausurschema · Ermessensentscheidung")], els_t)
+
+# R Merksatz (Lexi) ----------------------------------------------------------------------------------------------------------
+folie([("merke", "Merksatz")], [
+    karte(80, 120, 1340, 800, "merke", fill=HELL),
+    titel("Merke", 750, 180, "merke", 84, anker="m"),
+    *markertext([[("Beim Ermessen prüft das Gericht ", 0)]], 750, 320, 46, "merke", {}),
+    *markertext([[("nur ", 0), ("Rechtsfehler,", "a")]], 750, 385, 46, beim("merke", "nur"), {"a": beim("merke", "Rechtsfehler")}),
+    *markertext([[("nicht die Zweckmäßigkeit.", 0)]], 750, 450, 46, beim("merke", "nicht"), {}),
+    *markertext([[("Wer sein Ermessen ", 0), ("nie ausgeübt", "b"), (" hat,", 0)]], 750, 600, 46, beim("m2", "wer"),
+                {"b": beim("m2", "nie")}),
+    *markertext([[("kann im Prozess ", 0), ("nichts ergänzen.", "c")]], 750, 665, 46, beim("m2", "kann"),
+                {"c": beim("m2", "ergänzen")}),
+    *redet("LX_erklaert", 1680, 950, 700, "merke", lexi_bis_ende("merke")),
+    pl("Lexi", 1680, 968, "merke", fill=GELB, size=30, anker="m", d=0.2),
+])

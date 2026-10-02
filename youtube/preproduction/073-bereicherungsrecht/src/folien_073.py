@@ -219,7 +219,8 @@ folie([(NULL, "Fall · Die Fehlüberweisung"), ("rd1", "Fall · Rüdiger behält
     hart(pl("Eine Überweisung mit Folgen", 70, 40, NULL, fill=GELB, size=44)),
     hart(boden(NULL)),
     *ursula(UX, BODEN, FH, [(NULL, "ruhig_r"), ("anruf", "schreck_r")], bis="ur1", erst="cut"),
-    *redet("UR_redet_r", UX, BODEN, FH, "ur1", "frage"),
+    *redet("UR_redet_r", UX, BODEN, FH, "ur1", "rd2"),
+    peep_voll("UR_redet_r", UX, BODEN, FH, "rd2", anim="cut", bis="frage"),   # Mund zu, solange Rüdiger spricht
     hart(ns("Ursula, Überweisende", UX, BODEN, NULL, UR_F)),
     szene(hart(ficon("tabler", "device-mobile", 530, 700, 80, NULL, fuell=WEISS, bis="anruf")), "073tippen*", 0.6,
           T_("ziff") - T_("fall") + 0.2),
@@ -327,7 +328,7 @@ folie([("baum", "Entscheidungsbaum"), ("b1", "Entscheidungsbaum › Erlangt durc
     linienzug([(960, 254), (1410, 254), (1410, 280)], "bnein", breite=6),
     blk(RX0, 280, 820, 80, GELB, "bnein", [("Nein: Nichtleistungskondiktion", "ExtraBold", 34, INK)], anim="pop"),
     pl("Vorrang der Leistungskondiktion", 960, 378, "vorrang", fill=LILA, size=30, anker="m"),
-    zit("BGH, Urt. v. 18.1.2012 – I ZR 187/10, Rn. 46; VIII ZR 39/17, Rn. 16", 520, 440, beim("vorrang", "Leistungskondiktion"),
+    zit("BGH, Urt. v. 18.1.2012 – I ZR 187/10, Rn. 46; VIII ZR 39/17, Rn. 16", 520, 452, beim("vorrang", "Leistungskondiktion"),
         rechts=1820),
     # linker Ast: Leistungskondiktionen (je Kondiktion zuerst der Fall, dann Norm und Name – wie gesprochen)
     z("4 Leistungskondiktionen:", LX0, 490, "lks", "Bold", 32, rechts=930),

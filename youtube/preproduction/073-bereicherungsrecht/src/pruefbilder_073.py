@@ -32,7 +32,7 @@ if art == "halte":
         t = h["ende"] - 0.04
         if i + 1 < len(H) and H[i + 1]["folie"] != h["folie"]:
             t = h["ende"] - 16 / 30                 # vor der Schiebeblende, wie im Renderer
-        bilder.append((f'{h["nr"]:03d}  {h["start"]:.1f}s', bild(mp4, max(h["start"] + 0.02, t))))
+        bilder.append((f'{h["nr"]:03d}  {h["start"]:.1f}s', bild(mp4, min(man["dauer"] - 0.1, max(h["start"] + 0.02, t)))))
     for k in range(0, len(bilder), 30):
         bogen(bilder[k:k + 30], 5, 480, 270, f"../out/bildhalte_mp4_{k // 30 + 1}.png")
     print(len(bilder), "Bildhalte aus dem MP4")
