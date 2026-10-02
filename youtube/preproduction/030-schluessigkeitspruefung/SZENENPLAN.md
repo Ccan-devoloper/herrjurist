@@ -13,10 +13,10 @@
 | Lexi | Moderatorin: Klausurtipp und Merksatz | nach `lexi.py` (`robot_dance-1`, `Serious`/`Smile`) | Carla Blum |
 | Erzählerin | – | – | Carla Blum |
 
-Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und blickt nach links zur Tafel bzw. zum Gegenüber, `_r` blickt nach rechts (Schubert am Gartenzaun und im Sitzungssaal). Keine Prothesen-Posen (`blazer-1`, `blazer-2`, `shirt-1`, `shirt-2` verworfen). **Alle Grundmimiken mit geschlossenem Mund**; Mundzustände a/o/e nur in den sprechenden Ansichten `SC_redet`, `FR_redet`, `FR_trotz`, `RI_redet` (je links/rechts) und Lexi. Stimmen ausschließlich aus dem zugeteilten Pool (william, lea, laura_ruhig; `stephan` nicht gebraucht). **Namen mit eindeutig deutscher Aussprache**, in früheren Folgen nicht vergeben: Schubert, Franke; die Namen spricht nur die Erzählerin. Figuren-PNGs: `../peeps/op_030/` (64 Dateien, nicht im Repository, im Drive-Master).
+Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und blickt nach links zur Tafel bzw. zum Gegenüber, `_r` blickt nach rechts (Schubert im Treppenhaus und im Sitzungssaal). Keine Prothesen-Posen (`blazer-1`, `blazer-2`, `shirt-1`, `shirt-2` verworfen). **Alle Grundmimiken mit geschlossenem Mund**; Mundzustände a/o/e nur in den sprechenden Ansichten `SC_redet`, `FR_redet`, `FR_trotz`, `RI_redet` (je links/rechts) und Lexi. Stimmen ausschließlich aus dem zugeteilten Pool (william, lea, laura_ruhig; `stephan` nicht gebraucht). **Namen mit eindeutig deutscher Aussprache**, in früheren Folgen nicht vergeben: Schubert, Franke; die Namen spricht nur die Erzählerin. Figuren-PNGs: `../peeps/op_030/` (64 Dateien, nicht im Repository, im Drive-Master).
 
 **Abweichung von den letzten Folgen:**
-- 028/029 (Besitz/Eigentum, Vorsatzformen) und 018 (Relation: Arbeitszimmer, Café, Sitzungssaal). 030: Gartenzaun zwischen zwei Häusern, Schreibtisch mit Laptop neben dem Amtsgericht, Sitzungssaal der mündlichen Verhandlung. Der Sitzungssaal kehrt gegenüber 018 zurück, weil das Bestreiten in der Verhandlung fällt; Aufbau anders (Klägerin links, Beklagter rechts, Richterin hinter dem Tisch mit Text).
+- 028 (Brokdorf: Demonstration, Behörde), 029 (Vorsatzformen: Gartenzaun und Mauer) und 018 (Relation: Arbeitszimmer, Café, Sitzungssaal). 030: Treppenhaus eines Mehrfamilienhauses (zwei Wohnungstüren, Treppe; 029 spielte an einem Gartenzaun zwischen Nachbargrundstücken, deshalb bewusst kein Garten), Schreibtisch mit Laptop neben dem Amtsgericht, Sitzungssaal der mündlichen Verhandlung. Der Sitzungssaal kehrt gegenüber 018 zurück, weil das Bestreiten in der Verhandlung fällt; Aufbau anders (Klägerin links, Beklagter rechts, Richterin hinter dem Tisch mit Text).
 - Neue Posen (`resting-2`, `pointing_finger-1`, `robot_dance-2`; 029 und 028 ohne diese Posen), andere Stimmen als in 029 (timo, niklas).
 - Cremegrund durchgehend (Tageslicht).
 
@@ -24,7 +24,7 @@ Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und 
 
 | Szene | Ort / Handlung | Requisiten (Iconset:Name, Füllung) | Tafel / Prüfpfad | Bildhalte (Zwiebelschale) | Geräusch |
 |---|---|---|---|---|---|
-| **A Am Gartenzaun** `fall`→`juli` | zwei Häuser, Zaun; Schubert links (blickt rechts), Franke rechts; Geldschein wandert zu Franke | tabler:`home` (Blau/Gelb), `fence` (Holz), `device-mobile`, `cash` (Grün), `calendar-event`, `calendar-x` (Rot), `cash-off` (Rot) | `Fall · Das Darlehen` → `Fall · Herr Franke zahlt nicht` | ab 0,0 s vollständig · Franke · 6.000 € · Januar überwiesen · Geld wandert · Franke redet (Blase), Ende Juni · Juli · zahlt nicht | – |
+| **A Im Treppenhaus** `fall`→`juli` | zwei Wohnungstüren, Treppe in der Mitte; Schubert links (blickt rechts), Franke rechts; Geldschein wandert zu Franke | tabler:`door` (Blau/Gelb), `stairs` (Holz), `device-mobile`, `cash` (Grün), `calendar-event`, `calendar-x` (Rot), `cash-off` (Rot) | `Fall · Das Darlehen` → `Fall · Herr Franke zahlt nicht` | ab 0,0 s vollständig · Franke · 6.000 € · Januar überwiesen · Geld wandert · Franke redet (Blase), Ende Juni · Juli · zahlt nicht | – |
 | **B Die Klageschrift** `klage`→`frage2` | Schreibtisch mit Laptop, Schubert rechts daneben, Amtsgericht rechts | tabler:`desk`, `device-laptop`, `file-text`, `building-bank` (Grün) | `Fall · Die Klage` → `Fall · Die Frage` | Schreibtisch · Amtsgericht · Klageschrift entsteht (Tippen) · Klage 6.000 € · Schubert redet (Blase) · „Der Test …“ · „Ist sie schlüssig?“ | Tippen am Laptop (`szene_030tastatur_1`) |
 | **C Sachverhalt** `sv` | Karte vollständig, ≈ 9,6 s | – | `Sachverhalt` | 1 | – |
 | **D Der Test** `stat`→`formel` | Tafel, Schubert und Franke | tabler:`file-text` | `Klägerstation · Schlüssigkeit` → `› Ausbildungs- und Klausurkonvention` → `› Der Test: als wahr unterstellt` → `› Die Formel des BGH` | Ort · Konvention · Test · Wortlautkarte BGH (Rn. 11) mit vier Hervorhebungen | – |
@@ -40,7 +40,7 @@ Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und 
 | **N Klausurschema** `sch`→`sIVb` | Schema baut sich auf | – | `Klausurschema` | I. · II. · III. · IV. · schlüssig · unschlüssig | – |
 | **O Merksatz** `merke`, `mz` | Lexi erklärt (redet), Merksatz mit Marker | – | `Merksatz` | Satz 1 · Marker · Satz 2 · Marker | – |
 
-**Übergänge:** stumme Schiebeblenden nur zwischen den 15 Folien; innerhalb harte Schnitte und Pops; eine Bewegung (Geldschein wandert zu Franke). Das erste Bild nach dem Intro ist ab 0,0 s vollständig (Häuser, Zaun, Schubert, Titel, Prüfpfad).
+**Übergänge:** stumme Schiebeblenden nur zwischen den 15 Folien; innerhalb harte Schnitte und Pops; eine Bewegung (Geldschein wandert zu Franke). Das erste Bild nach dem Intro ist ab 0,0 s vollständig (Türen, Treppe, Schubert, Titel, Prüfpfad).
 **Geräusch:** ein Handlungsgeräusch aus Freesound CC0 (`szene_030tastatur_1`, Tippen, während die Klageschrift auf dem Laptop entsteht), Herkunft in `geraeusche_herkunft.json`.
 
 ## Sachverhaltskarte (Szene C, erscheint vollständig)
