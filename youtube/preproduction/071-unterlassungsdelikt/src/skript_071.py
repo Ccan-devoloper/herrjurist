@@ -13,7 +13,8 @@ Beschützer-/Überwachergarant, Ingerenz nur Überblick), 5. Entsprechungsklause
 Rechtswidrigkeit → Schuld/Zumutbarkeit (Standort str.) → kein Rücktritt (§ 24 I 2) → Ergebnis → § 13 II, § 49 I, § 23 II →
 Abwandlung §§ 222, 13 (ein Satz) → Abgrenzung § 323c (ein Satz) → Klausurtipp → Schema (vollendetes Delikt) → Merksatz.
 Belege: ../RECHTSSTAND.md. Namen mit eindeutig deutscher Aussprache, in früheren Folgen nicht vergeben: Lutz, Gesa.
-Namen nie im Genitiv mit -s. Segmente: (text, pause) = Erzählerin Carla (auch Lexi), (text, pause, rolle) = Figurenrede.
+Namen nie im Genitiv mit -s. „In-gerenz“ = lautliche Schreibweise für „Ingerenz“ (Nachvertonung Segment 14: beide
+Erkennungsmodelle hörten in v1 „Inherenz/Innerenz“). Segmente: (text, pause) = Erzählerin Carla (auch Lexi), (text, pause, rolle) = Figurenrede.
 [marke] = Cue; jede Marke genau einmal."""
 
 P, PS = 0.4, 0.9
@@ -63,7 +64,7 @@ SEGMENTE = [
     ("[garant]Viertens die Garantenstellung: Lutz muss rechtlich dafür einstehen, dass der Erfolg nicht eintritt. [eltern]Als "
      "sorgeberechtigter Vater ist er Beschützergarant. [bgb]Eltern müssen nach dem Bürgerlichen Gesetzbuch für ihr Kind sorgen "
      "und es beaufsichtigen. [ueberw]Daneben gibt es Überwachergaranten, etwa wer eine Gefahrenquelle beherrscht. [ing]Oder wer "
-     "durch pflichtwidriges Vorverhalten eine Gefahr geschaffen hat, die Ingerenz. Dazu kommen eigene Folgen.", PS),
+     "durch pflichtwidriges Vorverhalten eine Gefahr geschaffen hat, die In-gerenz. Dazu kommen eigene Folgen.", PS),
     # --- I 5. Entsprechungsklausel -----------------------------------------------------------------------------------------------
     ("[entspr2]Fünftens die Entsprechungsklausel. Bei reinen Erfolgsdelikten wie dem Totschlag ist sie regelmäßig "
      "unproblematisch. [verh]Bedeutung hat sie bei Delikten, die eine bestimmte Begehungsweise verlangen.", PS),
