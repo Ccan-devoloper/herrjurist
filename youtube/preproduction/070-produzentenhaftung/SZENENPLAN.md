@@ -2,7 +2,7 @@
 
 **Stand:** 02.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_070.py`](src/skript_070.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
 **Format:** Mo · Der Fall · Zivilrecht/Deliktsrecht, Themenplan-Format „Klassiker-Fall“. Erfundener Ausgangsfall nach dem Plan-Hook („Eine Mineralwasserflasche explodiert beim Öffnen und verletzt dein Auge“), danach die echten Fälle korrekt eingeordnet: Hühnerpest (BGHZ 51, 91, 1968: Beweislastumkehr beim Verschulden), Limonadenflasche (BGHZ 104, 323, 1988: Befundsicherungspflicht) und Mineralwasserflasche II (BGHZ 129, 353, 1995: Kontrolle jeder Flasche). Ablauf: Fall → Frage → Sachverhalt → § 823 I (Wortlaut) → Grundsatz der Beweislast (Anknüpfung an Folge 067) und Beweisnot → vier Herstellerpflichten → Hühnerpest (Fall, Beweisregel) → Befundsicherung (Limonadenflasche, Mineralwasserflasche II) → Ausreißer und Entlastung → Lösung → Abgrenzung § 1 ProdHaftG (Wortlaut, § 11, § 15 II, RL 2024/2853) → Klausurtipp → Schema → Merksatz.
-**Länge:** Hauptfilm 6:43,3 (6.001 Zeichen). Begründung in [`ABNAHME.md`](ABNAHME.md).
+**Länge:** Hauptfilm 6:43,4 (6.007 Zeichen). Begründung in [`ABNAHME.md`](ABNAHME.md).
 
 ## Besetzung
 
