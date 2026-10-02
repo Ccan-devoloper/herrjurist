@@ -21,8 +21,8 @@ STIMMEN = {"Ebeling": "sabrina", "Gerlach": "william", "Richterin": "laura_ruhig
 
 SEGMENTE = [
     # --- A Fall: Mittag im Gewerbegebiet, der Bescheid ------------------------------------------------------------------
-    ("[fall]Mittags im Gewerbegebiet. Frau Ebeling verkauft Suppen aus ihrem Foodtruck. [brief]Vor zwei Wochen hat ihr "
-     "die Stadt geschrieben, sie durfte sich zu ihren Steuerschulden äußern. [gerlach]Heute bringt Herr Gerlach vom "
+    ("[fall]Mittags im Gewerbegebiet. Frau Ebeling verkauft Suppen aus ihrem Foodtruck. [brief]Vor zwei Wochen hat die "
+     "Stadt sie angeschrieben: Sie durfte sich zu ihren Steuerschulden äußern. [gerlach]Heute bringt Herr Gerlach vom "
      "Gewerbeamt den Bescheid.", 0.2),
     ("[ge1]Frau Ebeling, Sie schulden dem Finanzamt seit drei Jahren dreißigtausend Euro. Wir untersagen Ihnen das "
      "Gewerbe.", 0.3, "Gerlach"),
@@ -32,10 +32,10 @@ SEGMENTE = [
     # --- B Sachverhalt --------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
     # --- C Aufbau und Rechtsweg -------------------------------------------------------------------------------------------
-    ("[aufbau]Die Anfechtungsklage prüfst du in zwei Schritten: [aufbau2]A, Zulässigkeit. B, Begründetheit. "
+    ("[aufbau]Die Anfechtungsklage prüfst du in zwei Schritten: [aufbau2]A, Zulässigkeit, B, Begründetheit. "
      "[rweg]Erstens, der Verwaltungsrechtsweg, Paragraf vierzig Absatz eins: eine öffentlich-rechtliche Streitigkeit "
-     "nichtverfassungsrechtlicher Art. [rweg2]Die Untersagung nach der Gewerbeordnung darf nur eine "
-     "Behörde aussprechen, keine Privatperson: öffentliches Recht. [rweg3]Verfassungsorgane streiten nicht, und eine "
+     "nichtverfassungsrechtlicher Art. [rweg2]Ein Gewerbe untersagen darf nur eine Behörde, keine "
+     "Privatperson: öffentliches Recht. [rweg3]Verfassungsorgane streiten nicht, und eine "
      "abdrängende Sonderzuweisung fehlt.", P),
     # --- D Statthafte Klageart, Wortlaut § 42 I ---------------------------------------------------------------------------
     ("[wl42]Zweitens, die statthafte Klageart. Paragraf zweiundvierzig Absatz eins: Durch Klage kann die Aufhebung eines "
@@ -46,16 +46,16 @@ SEGMENTE = [
     ("[wl422]Drittens, die Klagebefugnis, Absatz zwei: Soweit gesetzlich nichts anderes bestimmt ist, ist die Klage nur "
      "zulässig, wenn der Kläger geltend macht, durch den Verwaltungsakt oder seine Ablehnung oder Unterlassung in seinen "
      "Rechten verletzt zu sein. [mt]Es genügt, dass eine Verletzung möglich ist. Ausgeschlossen ist sie nur, wenn die "
-     "Rechte offensichtlich und eindeutig nach keiner Betrachtungsweise bestehen können. [adr]Als Adressatin "
+     "Rechte offensichtlich und eindeutig nach keiner Betrachtungsweise bestehen oder zustehen können. [adr]Als Adressatin "
      "eines belastenden Bescheids kann Frau Ebeling jedenfalls in ihrer allgemeinen Handlungsfreiheit verletzt sein, "
-     "Artikel zwei Absatz eins Grundgesetz. [adr2]Das ist die Adressatentheorie.", P),
+     "Artikel zwei Absatz eins Grundgesetz: [adr2]die Adressatentheorie.", P),
     # --- F Vorverfahren und Klagefrist -------------------------------------------------------------------------------------
     ("[vv]Viertens, das Vorverfahren. Nach Paragraf achtundsechzig kommt vor die Klage der Widerspruch, außer "
      "ein Gesetz bestimmt etwas anderes. [nrw]In Nordrhein-Westfalen entfällt er nach Paragraf hundertzehn "
      "Justizgesetz in der Regel, ausdrücklich auch bei der Gewerbeordnung. [land]In deinem "
      "Land kann das anders sein.", P),
-    ("[frist]Fünftens, die Klagefrist, Paragraf vierundsiebzig Absatz eins: Ohne Widerspruchsbescheid ist die Klage "
-     "innerhalb eines Monats nach Bekanntgabe des Verwaltungsakts zu erheben. [rbb]Fehlt die Rechtsbehelfsbelehrung oder "
+    ("[frist]Fünftens, die Klagefrist, Paragraf vierundsiebzig Absatz eins: Ohne Vorverfahren läuft sie einen Monat ab "
+     "Bekanntgabe des Verwaltungsakts. [rbb]Fehlt die Rechtsbehelfsbelehrung oder "
      "ist sie falsch, gilt nach Paragraf achtundfünfzig eine Jahresfrist. [frist2]Frau Ebeling klagt nach drei Wochen, "
      "rechtzeitig.", P),
     # --- G Klagegegner, Beteiligte, Rechtsschutzbedürfnis -------------------------------------------------------------------
@@ -65,12 +65,12 @@ SEGMENTE = [
      "Nordrhein-Westfalen tut das nicht.", P),
     ("[bet]Siebtens, Beteiligten- und Prozessfähigkeit, Paragrafen einundsechzig und zweiundsechzig: Frau Ebeling als "
      "natürliche, die Stadt als juristische Person. [rsb]Achtens, das "
-     "Rechtsschutzbedürfnis: Den Bescheid beseitigt nur die Klage. [zul]Die Klage ist zulässig.", PS),
+     "Rechtsschutzbedürfnis: Ohne Klage würde der Bescheid bestandskräftig. [zul]Die Klage ist zulässig.", PS),
     # --- H Begründetheit, Wortlaut § 113 I 1 -------------------------------------------------------------------------------
     ("[wl113]B, Begründetheit. Paragraf hundertdreizehn Absatz eins Satz eins: Soweit der Verwaltungsakt rechtswidrig und "
      "der Kläger dadurch in seinen Rechten verletzt ist, hebt das Gericht den Verwaltungsakt und den etwaigen "
-     "Widerspruchsbescheid auf. [zwei]Also zwei Fragen: Ist der Bescheid rechtswidrig? Und verletzt er Frau Ebeling in "
-     "ihren Rechten?", P),
+     "Widerspruchsbescheid auf. [zwei]Zwei Fragen also: Ist der Bescheid rechtswidrig? "
+     "Und ist sie dadurch in ihren Rechten verletzt?", P),
     # --- I Ermächtigungsgrundlage und formelle Rechtmäßigkeit --------------------------------------------------------------
     ("[egl]Erstens, die Ermächtigungsgrundlage. Ein belastender Bescheid braucht ein Gesetz. Hier: Paragraf fünfunddreißig "
      "Absatz eins Gewerbeordnung, die Gewerbeuntersagung. [formell]Zweitens, die formelle Rechtmäßigkeit. Zuständig ist die "
@@ -81,12 +81,11 @@ SEGMENTE = [
     ("[tb]Drittens, die materielle Rechtmäßigkeit. Tatbestand: Tatsachen müssen die Unzuverlässigkeit belegen. "
      "[unz]Unzuverlässig ist, wer nach dem Gesamteindruck seines Verhaltens nicht die Gewähr bietet, sein Gewerbe künftig "
      "ordnungsgemäß zu betreiben. [steuer]Erhebliche Steuerrückstände sind dafür ein Anhaltspunkt. Das entfällt nur, wenn "
-     "jemand zahlungswillig ist und nach einem sinnvollen Sanierungskonzept arbeitet. [steuer2]Frau Ebeling hofft nur "
+     "jemand zahlungswillig ist und nach einem sinnvollen und erfolgversprechenden Sanierungskonzept arbeitet. [steuer2]Frau Ebeling hofft nur "
      "auf einen guten Sommer. Sie ist unzuverlässig, und die Untersagung ist zum Schutz der Allgemeinheit "
      "erforderlich.", P),
-    ("[rf]Rechtsfolge: Nach Paragraf fünfunddreißig ist das Gewerbe zu untersagen. Die Stadt hat kein Ermessen. [erm]Räumt "
-     "eine Norm Ermessen ein, prüft das Gericht nach Paragraf hundertvierzehn nur Ermessensfehler: Grenzen "
-     "überschritten oder Ermessen zweckwidrig gebraucht?", P),
+    ("[rf]Rechtsfolge: Nach Paragraf fünfunddreißig ist das Gewerbe zu untersagen. Die Stadt hat kein Ermessen. [erm]Hat "
+     "die Behörde Ermessen, prüft das Gericht nach Paragraf hundertvierzehn nur Ermessensfehler.", P),
     # --- K Rechtsverletzung und Ergebnis -----------------------------------------------------------------------------------
     ("[rv]Der Bescheid ist also rechtmäßig. [rv2]Wäre er rechtswidrig, wäre Frau Ebeling als Adressatin regelmäßig auch in "
      "ihren Rechten verletzt. [urteil]Das Verwaltungsgericht entscheidet:", 0.2),
