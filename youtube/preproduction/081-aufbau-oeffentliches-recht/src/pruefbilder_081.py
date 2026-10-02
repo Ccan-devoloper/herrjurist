@@ -50,13 +50,13 @@ print(len(bilder), "Bildhalte aus dem MP4")
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"]
 # (Name, von, bis, Kopfausschnitt x0, y0, x1, y1)
-LIPPEN = [("gerlach_ge1", T("ge1"), T("eb1"), 1500, 380, 1740, 580),
-          ("ebeling_waehrend_gerlach", T("ge1"), T("eb1"), 840, 380, 1080, 580),
-          ("ebeling_eb1", T("eb1"), T("klage"), 840, 380, 1080, 580),
-          ("gerlach_waehrend_ebeling", T("eb1"), T("klage"), 1500, 380, 1740, 580),
-          ("richterin_ri1", T("ri1"), T("tipp"), 1200, 380, 1440, 580),
-          ("richterin_vor_ri1", T("urteil"), T("ri1"), 1200, 380, 1440, 580),
-          ("ebeling_waehrend_richterin", T("ri1"), T("tipp"), 500, 380, 740, 580),
+LIPPEN = [("tabea_ta1", T("ta1"), T("le1"), 640, 360, 880, 560),
+          ("lennart_waehrend_tabea", T("ta1"), T("le1"), 1320, 360, 1560, 560),
+          ("lennart_le1", T("le1"), T("ta2"), 1320, 360, 1560, 560),
+          ("tabea_waehrend_lennart", T("le1"), T("ta2"), 640, 360, 880, 560),
+          ("tabea_ta2", T("ta2"), T("frage"), 640, 360, 880, 560),
+          ("lennart_le2", T("le2"), T("zulerg"), 1300, 440, 1540, 640),
+          ("tabea_waehrend_le2", T("le2"), T("zulerg"), 1610, 440, 1850, 640),
           ("lexi_tipp", T("tipp"), T("tipp") + 6.0, 1440, 400, 1720, 640),
           ("lexi_merke", T("merke"), T("merke") + 6.0, 1500, 230, 1860, 530)]
 for name, a, b, x0, y0, x1, y1 in LIPPEN:
