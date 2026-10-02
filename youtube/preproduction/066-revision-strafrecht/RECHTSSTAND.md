@@ -112,9 +112,9 @@
 
 ## Abweichungen und Hinweise zum Themenplan (für den Koordinator)
 
-- **Titel** „Revision Strafrecht: Sachrüge vs. Verfahrensrüge in 6 Minuten“: Hauptfilm 6:53,8 (Gesamtvideo mit Intro und Outro etwa 7:17). Vorschlag: `YouTube-Titel = Revision Strafrecht: Sachrüge vs. Verfahrensrüge in 7 Minuten` oder ohne Zeitangabe `Revision Strafrecht: Sachrüge vs. Verfahrensrüge einfach erklärt`.
+- **Titel** „Revision Strafrecht: Sachrüge vs. Verfahrensrüge in 6 Minuten“: Hauptfilm 6:53,3 (Gesamtvideo mit Intro und Outro 7:16,4). Vorschlag: `YouTube-Titel = Revision Strafrecht: Sachrüge vs. Verfahrensrüge in 7 Minuten` oder ohne Zeitangabe `Revision Strafrecht: Sachrüge vs. Verfahrensrüge einfach erklärt`.
 - **Normen** `§§ 337, 344 II StPO` – zutreffend, unvollständig. Vorschlag: `Normen = §§ 337, 344 II StPO; §§ 244 III, VI, 274, 333, 338, 341, 345, 353, 354 StPO; § 46 III StGB`.
 - **Leitentscheidung** „—“. Vorschlag: `Leitentscheidung = BGH, Urt. v. 1.7.2021 – 3 StR 518/19, Rn. 94 (Beruhen); BGH, Urt. v. 20.5.2026 – 2 StR 57/25, Rn. 46 (§ 344 II 2 StPO)`.
 - **Tags** – Vorschlag: `Tags = Revisionsklausur | Sachrüge | Verfahrensrüge | § 337 StPO | § 344 StPO | Beruhen | Beweisantrag | Referendariat | 2. Staatsexamen`.
-- **Beschreibung (Anfang)**, **Kernfrage**, **Einstieg (Hook)**, **Thumbnail-Text**, **Thumbnail B** („URTEIL FALSCH?“): zutreffend, keine Korrektur. **Rechtsstand/Länder** „stabil“: bestätigt (§ 244 StPO in der Fassung seit dem Gesetz zur Modernisierung des Strafverfahrens 2019; § 345 I 2 StPO geltende Fassung).
+- **Beschreibung (Anfang)**, **Kernfrage**, **Einstieg (Hook)**, **Thumbnail-Text**, **Thumbnail B** („URTEIL FALSCH?“): zutreffend, keine Korrektur. **Rechtsstand/Länder** „stabil“: bestätigt (§ 244 III–VI und § 345 I StPO in der geltenden Fassung laut gesetze-im-internet.de, Abruf 02.10.2026; Änderungshistorie nicht gesondert geprüft).
 - **Auftragstext (nicht CSV):** „Statthaftigkeit gegen Urteile des LG und OLG im ersten Rechtszug (§ 333)“ – genauer: § 333 StPO erfasst alle Urteile der Strafkammern und Schwurgerichte (auch Berufungsurteile der Strafkammern) und nur die erstinstanzlichen Urteile der OLG; das Video formuliert entsprechend („Urteile des Landgerichts und erstinstanzliche Urteile des Oberlandesgerichts“).
