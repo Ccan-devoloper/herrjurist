@@ -59,7 +59,7 @@ SEGMENTE = [
     ("[huhn2]Das Impfstoffwerk konnte sich nicht entlasten. Es füllte große Flaschen noch von Hand ab, und zumutbare "
      "bessere Sicherungen fehlten. [huhn3]Es haftete dem Grunde nach.", PS),
     # --- F Befundsicherung -----------------------------------------------------------------------------------------------
-    ("[mehr]Bei Mehrwegflaschen bleibt eine Lücke: Ein Haarriss kann auch später entstehen, etwa zu Hause. [wann]Wer beweist, dass der Fehler schon da war, als die Flasche den Betrieb verließ?", P),
+    ("[mehr]Doch bei Mehrwegflaschen bleibt eine Lücke: Ein Haarriss kann auch später entstehen, etwa zu Hause. [wann]Wer beweist, dass der Fehler schon da war, als die Flasche den Betrieb verließ?", P),
     ("[limo]Hier hilft die Befundsicherungspflicht, so schon im Limonadenflaschen-Fall von "
      "neunzehnhundertachtundachtzig. [befund]Wer Flaschen mit Sprudelgetränken wieder befüllt, muss sie auf ihren "
      "einwandfreien Zustand prüfen und den Befund sichern. [bumk]Tut er das nicht, kann sich die Beweislast umkehren: Dann muss er beweisen, dass der "
@@ -89,7 +89,7 @@ SEGMENTE = [
      "EU muss bis zum neunten Dezember zweitausendsechsundzwanzig umgesetzt sein.", PS),
     # --- J Klausurtipp (Lexi) ---------------------------------------------------------------------------------------------------
     ("[tipp]Klausurtipp: Prüfe Paragraf eins Produkthaftungsgesetz und Paragraf achthundertdreiundzwanzig getrennt. "
-     "[tipp1]Und schreib nie, die Produzentenhaftung sei eine Haftung ohne Verschulden. [tipp2]Nur die Beweislast "
+     "[tipp1]Und schreibe nie, die Produzentenhaftung sei eine Haftung ohne Verschulden. [tipp2]Nur die Beweislast "
      "kehrt sich um; entlastet sich der Hersteller, haftet er nicht.", PS),
     # --- K Klausurschema ---------------------------------------------------------------------------------------------------------
     ("[sch]Dein Klausurschema zur Produzentenhaftung: [k1]Römisch eins, Tatbestand: Rechtsgutsverletzung, Verletzung "
