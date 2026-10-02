@@ -35,7 +35,7 @@ P = {
 LISTE = [
     ("KAL_schlaeft", "KAL", "Eyes Closed", 0), ("KAL_ruhig", "KAL", "Calm", 0), ("KAL_erschrickt", "KAL", "Fear", 0),
     ("KAL_krank", "KAL", "Concerned|Serious", 0), ("KAL_denkt", "KAL", "Serious", 0),
-    ("KA_erschrickt", "KA", "Fear", 0), ("KA_redet", "KA", "Concerned|Serious", 1), ("KA_wuetend", "KA", "Very Angry", 0),
+    ("KA_schlaeft", "KA", "Eyes Closed", 0), ("KA_erschrickt", "KA", "Fear", 0), ("KA_redet", "KA", "Concerned|Serious", 1), ("KA_wuetend", "KA", "Very Angry", 0),
     ("KA_ruhig", "KA", "Calm", 0), ("KA_denkt", "KA", "Serious", 0), ("KA_muede", "KA", "Tired", 0),
     ("KA_einv", "KA", "Smile", 1), ("KA_skeptisch", "KA", "Suspicious", 0),
     ("SI_ruhig", "SI", "Calm", 0), ("SI_schleicht", "SI", "Suspicious", 0), ("SI_entschlossen", "SI", "Driven", 0),
