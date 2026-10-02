@@ -13,3 +13,7 @@
 ## Aufruf
 
 `bausteine.blase(...)` ruft `node blase_e.js spec.json out.png` auf und cacht das Ergebnis nach Spec-Hash. Die Browser-Pipeline zeichnet nur die Blase. Den Text setzt der Renderer in Nunito.
+
+## Stil C (Serienstandard für Sprechblasen seit 02.10.2026)
+
+`blase_c.js` zeichnet den Blasenkörper aus Comical.js ohne Schwanz und setzt einen eigenen, leicht gebogenen Keil-Schwanz an (Basis `basis`, Standard 44 px, Krümmung `bogen`, Standard 0,10). paper.js (MIT) vereint beides zu **einer** Fläche, perfect-freehand zieht sie einmal nach. Dadurch entstehen am Schwanzansatz keine Schleifen und Doppelstriche mehr. `bausteine.blase` nutzt Stil C für Sprechblasen, solange `BLASEN_STIL` nicht auf `e` gesetzt ist. Liegt die Spitze innerhalb der Blase, fällt es auf `blase_e.js` zurück. Denkblasen laufen immer über `blase_e.js`. Folgen bis 058 bleiben unverändert.

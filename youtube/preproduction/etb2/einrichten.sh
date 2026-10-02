@@ -24,12 +24,12 @@ done
 
 # Pinselblasen (Comical.js + perfect-freehand), Quelle: hypothek-zweiterwerb-test/blasen
 mkdir -p bl2
-cp hypothek-zweiterwerb-test/blasen/{blase_e.js,leer.html,package.json} bl2/
+cp hypothek-zweiterwerb-test/blasen/{blase_e.js,blase_c.js,leer.html,package.json} bl2/   # blase_c.js = Sprechblasen Stil C (eine Kontur, Keil-Schwanz)
 (cd bl2 && npm i -s --no-audit --no-fund >/dev/null \
   && sed 's/const tailWidth = 18;/const tailWidth = window.TAILW || 18;/' node_modules/comicaljs/dist/index.js > comical_p.js \
   && { printf 'var PF={};(function(exports){'; cat node_modules/perfect-freehand/dist/cjs/index.js; printf '\n})(PF);\n'; } > pf.js)
 CHROME=$(ls -d /opt/pw-browsers/chromium-*/chrome-linux/chrome 2>/dev/null | head -1)
-[ -n "$CHROME" ] && sed -i "s#executablePath: '[^']*'#executablePath: '$CHROME'#" bl2/blase_e.js
+[ -n "$CHROME" ] && sed -i "s#executablePath: '[^']*'#executablePath: '$CHROME'#" bl2/blase_e.js bl2/blase_c.js
 
 mkdir -p peeps sfx3
 echo "Render-Umgebung bereit: $P (etb2/src, humaaans/fonts, blasen, bl2, peeps, sfx3)"

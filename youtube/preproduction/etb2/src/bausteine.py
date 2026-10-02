@@ -162,6 +162,9 @@ def sachverhalt(cue, absaetze, frage, pfad="Sachverhalt"):
 import hashlib, os, json, math, subprocess as _sp
 from PIL import Image, ImageDraw
 _BL2 = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../bl2"))
+# Sprechblasen-Stil: "c" = eine Kontur mit Keil-Schwanz (Serienstandard seit 02.10.2026, ohne Schleifen am Ansatz),
+# "e" = Comical-Schwanz einzeln nachgezogen (bis Folge 058). Denkblasen immer über blase_e.js.
+BLASEN_STIL = os.environ.get("BLASEN_STIL", "c")
 
 
 def kopfziel(figur, art, bx):
@@ -200,12 +203,17 @@ def blase(art, w, h, cue, cx, cy, inhalt=None, textsize=44, ziel=None, d=0.0, bi
         mid = (cx + vx * 0.62 + nx * 0.08 * ln, cy + vy * 0.62 + ny * 0.08 * ln)
     spec = dict(art=art, x=round(x0, 1), y=round(y0, 1), w=round(iw, 1), h=round(ih, 1), tip=[tx, ty],
                 mid=[round(mid[0], 1), round(mid[1], 1)], fill=fill or "#ffffff")
+    stil_c = art == "sprech" and BLASEN_STIL == "c"
+    if stil_c:
+        spec["stil"] = "c"
     key = hashlib.sha1(json.dumps(spec, sort_keys=True).encode()).hexdigest()[:16]
     cache = os.path.join(_BL2, "cache"); os.makedirs(cache, exist_ok=True)
     png = os.path.join(cache, key + ".png")
     if not os.path.exists(png):
         sj = os.path.join(cache, key + ".json"); json.dump(spec, open(sj, "w"))
-        _sp.run(["node", os.path.join(_BL2, "blase_e.js"), sj, png], check=True, cwd=_BL2)
+        ok = stil_c and _sp.run(["node", os.path.join(_BL2, "blase_c.js"), sj, png], cwd=_BL2).returncode == 0
+        if not ok:   # Stil e oder Rückfall, wenn die Spitze innerhalb der Blase liegt
+            _sp.run(["node", os.path.join(_BL2, "blase_e.js"), sj, png], check=True, cwd=_BL2)
     voll = Image.open(png).convert("RGBA")
     bb = voll.getbbox()
     im = voll.crop(bb)
