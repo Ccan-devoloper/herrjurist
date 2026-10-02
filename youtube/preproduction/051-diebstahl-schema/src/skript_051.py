@@ -13,7 +13,7 @@ Merksatz. Belege je Aussage: ../RECHTSSTAND.md.
 Segmente: (text, pause) = Erzählerin Carla (auch Lexi), (text, pause, rolle) = Figurenrede. [marke] = Cue; jede Marke genau einmal.
 Namen nie im Genitiv mit -s (Erfahrung 015/047: „Gerdas“, „Dagmars“ wurden verschluckt)."""
 
-P, PS = 0.4, 0.6
+P, PS = 0.4, 0.45                                  # PS von 0,6 auf 0,45 s gekürzt (Hauptfilm unter 7:00, ohne Neuvertonung)
 
 STIMMEN = {"Matthias": "christian", "Antje": "lucy"}  # Lexi spricht mit der Erzählerstimme (Carla)
 

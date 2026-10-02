@@ -248,8 +248,8 @@ folie([(NULL, "Fall · Der Lesesaal"), ("frage", "Fall · Die Frage")], [
     hart(ficon("tabler", "book", 1400, TM[1], 80, NULL, fuell=WEISS, anim="cut")),
     ficon("tabler", "battery-1", 1590, TM[1], 80, beim("matthias", "Akku"), fuell=ROT),
     name("MA", MAX_, beim("matthias", "Matthias"), unten=TM[1] + 70, anim="pop", bis="steckt"),
-    pl("Akku fast leer", 1530, 250, beim("matthias", "Akku"), fill=PINK, size=28, anker="m", bis="m1"),
-    pl("eigenes Kabel zu Hause", 1530, 320, beim("matthias", "eigenes"), fill=WEISS, size=28, anker="m", bis="m1"),
+    pl("Akku fast leer", 1530, 190, beim("matthias", "Akku"), fill=PINK, size=28, anker="m", bis="m1"),
+    pl("eigenes Kabel zu Hause", 1530, 262, beim("matthias", "eigenes"), fill=WEISS, size=28, anker="m", bis="m1"),
     blase("sprech", 660, 210, "m1", 1060, 250, inhalt=["Das nehme ich mir", "einfach mit."], textsize=36,
           figur=MAb, bis="steckt"),
     # Matthias zieht das Kabel heraus und steckt es in den Rucksack (Stecker, Reißverschluss)
@@ -259,9 +259,9 @@ folie([(NULL, "Fall · Der Lesesaal"), ("frage", "Fall · Die Frage")], [
     szene(bis_(ficon("tabler", "backpack", 845, BA, 100, beim("steckt", "Rucksack"), fuell=BLAU), "zurueck"),
           "051reissv*", 0.8),
     bis_(kabel(845, BA - 108, 46, beim("steckt", "Rucksack")), "zurueck"),
-    pl("in den Rucksack", 1060, 240, beim("steckt", "Rucksack"), fill=PINK, size=28, anker="m", bis="heim"),
-    ficon("tabler", "home", 1060, 250, 90, "heim", fuell=GELB, bis="zurueck"),
-    pl("will es behalten", 1060, 280, beim("heim", "behalten"), fill=PINK, size=28, anker="m", bis="zurueck"),
+    pl("in den Rucksack", 1060, 200, beim("steckt", "Rucksack"), fill=PINK, size=28, anker="m", bis="heim"),
+    ficon("tabler", "home", 1060, 190, 80, "heim", fuell=GELB, bis="zurueck"),
+    pl("will es behalten", 1060, 230, beim("heim", "behalten"), fill=PINK, size=28, anker="m", bis="zurueck"),
     pl("zehn Minuten später", 220, 262, "zurueck", fill=WEISS, size=28, bis="frage"),
     blase("sprech", 560, 200, "a1", 1000, 260, inhalt=["Wo ist denn mein", "Ladekabel?"], textsize=36,
           figur=ANb, bis="frage"),
@@ -523,7 +523,7 @@ folie([("p243", "Ausblick › besonders schwerer Fall, § 243 StGB")], [
 LXX = 1560
 folie([("tipp", "Klausurtipp · Zueignung gehört in den subjektiven Tatbestand")], [
     *tafel("tipp", "Klausurtipp", fill=HELL),
-    warnung_i(150, 225, "tipp", gr=26),
+    warnung_i(150, 225, beim("tipp", "Prüfe"), gr=26),
     z("Zueignung nie im objektiven Tatbestand prüfen", 200, 200, beim("tipp", "Prüfe"), "Bold", 34),
     z("Sie muss nicht gelingen, nur beabsichtigt sein", 110, 290, "tipp2", size=34),
     zitat("BGH, Beschl. v. 10.10.2018 – 4 StR 591/17, Rn. 17", 110, 340, beim("tipp2", "beabsichtigen")),
