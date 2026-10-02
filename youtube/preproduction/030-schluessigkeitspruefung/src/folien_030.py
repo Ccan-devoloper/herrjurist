@@ -173,21 +173,21 @@ folie([("klage", "Fall · Die Klage"), ("frage", "Fall · Die Frage")], [
     linienzug([(60, BODEN), (1860, BODEN)], "klage", breite=7, farbe=INK),
     pl("Frau Schuberts Klage", 70, 40, "klage", fill=GELB, size=40),
     ficon("tabler", "desk", 560, BODEN - 2, 560, "klage", fuell=HOLZ),
-    ficon("tabler", "device-laptop", 560, 478, 170, "klage", fuell=WEISS),
+    ficon("tabler", "device-laptop", 600, 529, 170, "klage", fuell=WEISS),
     peep_voll("SC_denkt", SB, BODEN, FH, "klage", bis="s1"),
     *redet("SC_redet", SB, BODEN, FH, "s1", "frage"),
     peep_voll("SC_ruhig", SB, BODEN, FH, "frage", anim="cut"),
     namensschild("Frau Schubert", SB, BODEN, "klage", BLAU),
     ficon("tabler", "building-bank", GX, BODEN - 2, 280, beim("klage", "Amtsgericht"), fuell=GRUEN),
     pl("Amtsgericht", GX, 520, beim("klage", "Amtsgericht"), fill=GRUEN, size=30, anker="m"),
-    szene(ficon("tabler", "file-text", 380, 470, 80, beim("klage", "klagt"), fuell=WEISS), "030tastatur*", 1.0, versatz=0.05),
+    szene(ficon("tabler", "file-text", 400, 529, 80, beim("klage", "klagt"), fuell=WEISS), "030tastatur*", 1.0, versatz=0.05),
     pl("Klage: 6.000 €", GX, 430, beim("klage", "sechstausend"), fill=GELB, size=30, anker="m"),
-    pl("Klageschrift", 380, 300, "schrift", fill=WEISS, size=30, anker="m", bis="s1"),
-    blase("sprech", 940, 270, "s1", 690, 240, inhalt=["Ich habe mit dem Beklagten vereinbart,",
+    pl("Klageschrift", 400, 400, "schrift", fill=WEISS, size=30, anker="m", bis="s1"),
+    blase("sprech", 940, 270, "s1", 720, 262, inhalt=["Ich habe mit dem Beklagten vereinbart,",
                                                     "ihm 6.000 Euro zu leihen, und sie überwiesen.",
                                                     "Das Darlehen ist fällig."], textsize=32, figur=SCb, bis="frage"),
-    pl("Der Test, den jede Klage bestehen muss", 700, 200, "frage", fill=WEISS, size=34, anker="m"),
-    pl("Ist sie schlüssig?", 700, 300, "frage2", fill=PINK, size=44, anker="m"),
+    pl("Der Test, den jede Klage bestehen muss", 700, 150, "frage", fill=WEISS, size=34, anker="m"),
+    pl("Ist sie schlüssig?", 700, 240, "frage2", fill=PINK, size=44, anker="m"),
 ])
 
 # C Sachverhalt ----------------------------------------------------------------------------------------------------------
@@ -293,7 +293,7 @@ folie([("p488", f"{PII} › Fälligkeit, § 488 Abs. 3 BGB"),
         [("oder der Darlehensnehmer ", 0), ("kündigt", "b"), (". Die Kündigungsfrist", 0)],
         [("beträgt ", 0), ("drei Monate", "c"), (".“", 0)],
     ], 30, {"a": beim("p488", "Zeit"), "b": beim("p488", "Kündigung"), "c": beim("p488", "drei")},
-        "§ 488 Abs. 3 S. 1, 2 BGB"),
+        "§ 488 Abs. 3 S. 1 und 2 BGB"),
     z("Rückzahlungstermin vorgetragen?", 150, 480, beim("fehlt", "Rückzahlungstermin"), "Bold", 36),
     nein(1110, 500, beim("fehlt", "schreibt"), gr=20),
     z("Kündigung vorgetragen?", 150, 545, beim("fehlt", "Kündigung"), "Bold", 36),
@@ -379,22 +379,29 @@ folie([("subst", "Substantiierung › Tag und Ort der Abrede?"),
 # J Abgrenzung Beweisstation (Sitzungssaal) -----------------------------------------------------------------------------------
 RIX, SCK, FRK = 960, 330, 1590
 FRb = ("FR_trotz", FRK, BODEN, FH)
-folie([("f2", "Abgrenzung › Bestreiten"), (beim("best", "Beklagtenstation"), "Abgrenzung › Bestreiten: Beklagtenstation"),
+F0 = ("f2", -0.2)
+
+
+def hart(e):
+    e.anim = "cut"
+    return e
+
+folie([(F0, "Abgrenzung › Bestreiten"), (beim("best", "Beklagtenstation"), "Abgrenzung › Bestreiten: Beklagtenstation"),
        ("bew", "Abgrenzung › Beweisstation")], [
-    linienzug([(60, BODEN), (1860, BODEN)], "f2", breite=7, farbe=INK),
-    pl("Amtsgericht · mündliche Verhandlung", 70, 40, "f2", fill=GRAU, size=36),
-    peep_voll("RI_ruhig", RIX, 640, 380, "f2", bis="bew"),
+    hart(linienzug([(60, BODEN), (1860, BODEN)], F0, breite=7, farbe=INK)),
+    pl("Amtsgericht · mündliche Verhandlung", 70, 40, F0, fill=GRAU, size=36, anim="cut"),
+    peep_voll("RI_ruhig", RIX, 640, 380, F0, bis="bew", anim="cut"),
     peep_voll("RI_denkt", RIX, 640, 380, "bew", anim="cut"),
-    fl_block(740, 560, 440, 110, DUNKEL, "f2", [("Gericht", "Bold", 32, WEISS)], rand=5),
-    pille("Richterin", RIX, 690, "f2", fill=LILA, size=28, anker="m", d=0.2),
-    peep_voll("SC_ruhig_r", SCK, BODEN, FH, "f2", bis=beim("f2", "Rede")),
+    hart(fl_block(740, 560, 440, 110, DUNKEL, F0, [("Gericht", "Bold", 32, WEISS)], rand=5)),
+    pille("Richterin", RIX, 690, F0, fill=LILA, size=28, anker="m", anim="cut"),
+    peep_voll("SC_ruhig_r", SCK, BODEN, FH, F0, bis=beim("f2", "Rede"), anim="cut"),
     peep_voll("SC_aerger_r", SCK, BODEN, FH, beim("f2", "Rede"), anim="cut", bis="bew"),
     peep_voll("SC_denkt_r", SCK, BODEN, FH, "bew", anim="cut"),
-    namensschild("Klägerin Schubert", SCK, BODEN, "f2", BLAU, d=0.2),
-    peep_voll("FR_ruhig", FRK, BODEN, FH, ("f2", -0.2), bis="f2"),
+    namensschild("Klägerin Schubert", SCK, BODEN, F0, BLAU, anim="cut"),
+    peep_voll("FR_ruhig", FRK, BODEN, FH, F0, bis="f2", anim="cut"),
     *redet("FR_trotz", FRK, BODEN, FH, "f2", "best"),
     peep_voll("FR_trotz", FRK, BODEN, FH, "best", anim="cut"),
-    namensschild("Beklagter Franke", FRK, BODEN, "f2", GRUEN, d=0.2),
+    namensschild("Beklagter Franke", FRK, BODEN, F0, GRUEN, anim="cut"),
     blase("sprech", 560, 170, "f2", 1330, 210, inhalt=["Von Juni war nie die Rede!"], textsize=36, figur=FRb, bis="best"),
     pl("Bestreiten", FRK, 320, "best", fill=WEISS, size=30, anker="m", bis="bew"),
     pl("Thema der Beklagtenstation", 960, 160, beim("best", "Beklagtenstation"), fill=WEISS, size=32, anker="m", bis="bew"),
@@ -434,7 +441,7 @@ folie([("zul", "Abgrenzung › Zulässigkeit, § 253 Abs. 2 Nr. 2 ZPO"),
 ]))
 
 # L Folge der Unschlüssigkeit, Versäumnisurteil § 331 ZPO --------------------------------------------------------------------
-folie([("folge", "IV. Ergebnis › unschlüssig: Abweisung als unbegründet"), ("vu", "Versäumnisurteil, § 331 Abs. 1 ZPO"),
+folie([("folge", "IV. Ergebnis › ohne Ergänzung"), (beim("folge", "unbegründet"), "IV. Ergebnis › unschlüssig: Abweisung als unbegründet"), ("vu", "Versäumnisurteil, § 331 Abs. 1 ZPO"),
        ("tatz", "Versäumnisurteil › nur Tatsachen gelten als zugestanden"), ("vu2", "Versäumnisurteil, § 331 Abs. 2 ZPO"),
        ("vu3", "Versäumnisurteil › ohne Ergänzung: verloren")], rechts_frei([
     *tafel("folge", "Folge der Unschlüssigkeit"),

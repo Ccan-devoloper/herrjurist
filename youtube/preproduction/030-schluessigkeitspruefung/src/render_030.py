@@ -195,7 +195,7 @@ if "--manifest" in sys.argv:                    # Bildhalt-Manifest: Zustandswec
     import hashlib, os
     OHNE_MUND = True
     os.makedirs(f"{OUT}/bildhalte", exist_ok=True)
-    zeiten = set()
+    zeiten = {0.0}                              # erster Bildhalt ab Hauptfilmbeginn (Szene A steht ab 0,0 s)
     for fi, f_ in enumerate(FOLIEN):
         zeiten.add(round(f_["start"], 3))
         for e in f_["els"]:
