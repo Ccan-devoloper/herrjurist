@@ -265,7 +265,7 @@ W20 = ["„Die Gesetzgebung ist an die verfassungsmäßige", "Ordnung, die vollz
 w20_els, w20_y = wortlaut(80, 200, 1100, W20, "Art. 20 Abs. 3 GG", "wl20", marken=[
     (0, "Gesetzgebung", beim("wl20", "Gesetzgebung")), (0, "verfassungsmäßige", beim("wl20", "verfassungsmäßige")),
     (1, "Ordnung", beim("wl20", "verfassungsmäßige")), (1, "vollziehende Gewalt", beim("wl20", "vollziehende")),
-    (2, "Rechtsprechung", beim("wl20", "Rechtsprechung")), (2, "Gesetz und Recht", beim("wl20", "Gesetz"))], size=40)
+    (2, "Rechtsprechung", beim("wl20", "Rechtsprechung")), (2, "Gesetz und Recht", beim("wl20", "Gesetz", nr=2))], size=40)
 folie([("herk", "Herleitung · Woher kommt der Grundsatz?"), ("wl20", "Herleitung › Wortlaut Art. 20 III GG")], rechts_frei([
     titel(glyphen("Woher kommt der Grundsatz?"), 110, 90, "herk", 50),
     *w20_els,
@@ -279,13 +279,14 @@ folie([("herk", "Herleitung · Woher kommt der Grundsatz?"), ("wl20", "Herleitun
 # E Herleitung durch das BVerfG -------------------------------------------------------------------------------------------------
 folie([("rsp", "Herleitung › Rechtsstaatsprinzip und Grundrechte"), ("rang", "Herleitung › Verfassungsrang")], rechts_frei([
     *tafel("rsp", "Herleitung durch das BVerfG"),
-    z("aus dem Rechtsstaatsprinzip", 110, 190, beim("rsp", "Rechtsstaatsprinzip"), "Bold", 38),
-    z("im Grunde schon aus dem Wesen der Grundrechte", 110, 255, beim("rsp", "Grunde"), size=34),
-    z("Freiheit nur so weit beschränken, wie es zum", 110, 350, "wesen", size=34),
-    z("Schutz öffentlicher Interessen unerlässlich ist", 110, 400, beim("wesen", "Schutz"), size=34),
-    blk(110, 480, 1040, 90, GELB, "rang", [("Verfassungsrang", "ExtraBold", 38, INK)]),
-    z("gilt auch beim Anwenden einfacher Gesetze", 110, 610, beim("rang", "gilt"), size=34),
-    zit("BVerfGE 19, 342 (348 f.) · BVerfGE 65, 1 Rn. 149 · BVerfG, 2 BvR 2135/09, Rn. 8", 110, 700,
+    z("leitet den Grundsatz ab", 110, 185, beim("rsp", "leitet"), size=34, farbe=TEXT),
+    z("aus dem Rechtsstaatsprinzip", 110, 240, beim("rsp", "Rechtsstaatsprinzip"), "Bold", 38),
+    z("im Grunde schon aus dem Wesen der Grundrechte", 110, 300, beim("rsp", "Grunde"), size=34),
+    z("Freiheit nur so weit beschränken, wie es zum", 110, 390, "wesen", size=34),
+    z("Schutz öffentlicher Interessen unerlässlich ist", 110, 440, beim("wesen", "Schutz"), size=34),
+    blk(110, 520, 1040, 90, GELB, "rang", [("Verfassungsrang", "ExtraBold", 38, INK)]),
+    z("gilt auch beim Anwenden einfacher Gesetze", 110, 645, beim("rang", "gilt"), size=34),
+    zit("BVerfGE 19, 342 (348 f.) · BVerfGE 65, 1 Rn. 149 · BVerfG, 2 BvR 2135/09, Rn. 8", 110, 730,
         beim("rang", "Gesetze")),
     ficon(HC, "classical-building", IX, IU, 160, "rsp", fuell=WEISS, bis="wesen"),
     ficon("tabler", "shield-check", IX, IU, 130, "wesen", fuell=GRUEN, bis="rang"),
@@ -333,7 +334,7 @@ W15 = ["„(1) Von mehreren möglichen und geeigneten Maßnahmen", "ist diejenig
        "Allgemeinheit voraussichtlich am wenigsten", "beeinträchtigt. (2) Eine Maßnahme darf nicht zu",
        "einem Nachteil führen, der zu dem erstrebten Erfolg", "erkennbar außer Verhältnis steht.“"]
 w15_els, w15_y = wortlaut(80, 170, 1100, W15, "§ 15 Abs. 1 und 2 BPolG", "wl15", marken=[
-    (2, "am wenigsten", beim("abs1", "wenigsten")), (3, "beeinträchtigt", beim("abs1", "beeinträchtigt")),
+    (0, "(1)", "abs1"), (3, "(2)", "abs2"), (2, "am wenigsten", beim("abs1", "wenigsten")), (3, "beeinträchtigt", beim("abs1", "beeinträchtigt")),
     (4, "Nachteil", beim("abs2", "Nachteil")), (5, "erkennbar außer Verhältnis", beim("abs2", "erkennbar"))], size=36)
 folie([("wl15", "Prüfungsort › ausdrücklich geregelt: § 15 BPolG")], rechts_frei([
     titel(glyphen("Ausdrücklich geregelt: § 15 BPolG"), 110, 80, "wl15", 50),
@@ -345,8 +346,8 @@ folie([("wl15", "Prüfungsort › ausdrücklich geregelt: § 15 BPolG")], rechts
 
 # I 1. legitimer Zweck ------------------------------------------------------------------------------------------------------------
 ERST = beim("s1", "Erstens")
-folie([("s1", f"{VH} · die vier Schritte"), (ERST, f"{VH} › 1. legitimer Zweck")], rechts_frei([
-    karte(60, 60, 1140, 840, "s1"),
+folie([(ERST, f"{VH} › 1. legitimer Zweck")], rechts_frei([
+    karte(60, 60, 1140, 840, ERST),
     titel(glyphen("1. legitimer Zweck"), 110, 100, ERST, 46),
     z("Behörde: Zweck der Ermächtigung", 110, 190, "zweckb", "Bold", 36),
     z("hier: Abwehr von Gefahren", 150, 250, beim("zweckb", "Abwehr"), size=36),
@@ -358,8 +359,8 @@ folie([("s1", f"{VH} · die vier Schritte"), (ERST, f"{VH} › 1. legitimer Zwec
     ficon("tabler", "shield-check", IX, IU, 130, "zweckb", fuell=GRUEN, bis="graff"),
     ficon("ph", "wall", IX, IU, 230, "graff", fuell=ORANGE),
     ficon("ph", "scribble-loop", IX - 30, IU - 30, 110, beim("graff", "besprüht"), fuell=LILA),
-    *fig("KU", FX, FB, FR, [("s1", "ruhig")]),
-    schild("Herr Kühn", FX, "s1", KU_F),
+    *fig("KU", FX, FB, FR, [(ERST, "ruhig")]),
+    schild("Herr Kühn", FX, ERST, KU_F),
 ]))
 
 # J 2. Geeignetheit --------------------------------------------------------------------------------------------------------------
