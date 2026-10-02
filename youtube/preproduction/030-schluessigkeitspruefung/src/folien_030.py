@@ -1,5 +1,5 @@
 """Folge 030 · Schlüssigkeitsprüfung: Der Test, den jede Klage bestehen muss – Serienstandard Open Peeps (Katzenkönig).
-Szenen laut ../SZENENPLAN.md: A Am Gartenzaun (Darlehen), B Die Klageschrift (Fall, Frage), C Sachverhalt, D Der Test und
+Szenen laut ../SZENENPLAN.md: A Im Treppenhaus (Darlehen), B Die Klageschrift (Fall, Frage), C Sachverhalt, D Der Test und
 die BGH-Formel, E I. Anspruchsgrundlage (Wortlautkarte § 488 I 2 BGB), F II. Tatsachenvortrag, G II. Fälligkeit
 (Wortlautkarte § 488 III BGB), H III. Hinweis (Wortlautkarte § 139 I 2 ZPO, Richterin) und IV. Ergebnis, I Substantiierung,
 J Abgrenzung Beweisstation (Sitzungssaal), K Abgrenzung Zulässigkeit (Wortlautkarte § 253 II Nr. 2 ZPO), L Folge der
@@ -132,17 +132,17 @@ BR, FR = 930, 480                       # Figuren rechts neben der Tafel
 X1, X2 = 1420, 1720                     # zwei Figuren neben der Tafel
 MB = (X1 + X2) // 2
 
-# A Fall: am Gartenzaun ------------------------------------------------------------------------------------------------
+# A Fall: im Treppenhaus (Nachbarn im Mehrfamilienhaus) ------------------------------------------------------------------------------------------------
 SX, FX = 560, 1360
 FRa = ("FR_redet", FX, BODEN, FH)
 geld = bewegt(ficon("tabler", "cash", 1180, 600, 110, beim("ueberw", "überweist"), fuell=GRUEN, bis="juli"),
               beim("ueberw", "überweist"), beim("ueberw", "Geld", ende=True), -480, 0)
 folie([(NULL, "Fall · Das Darlehen"), (beim("juli", "zahlt"), "Fall · Herr Franke zahlt nicht")], [
     linienzug([(60, BODEN), (1860, BODEN)], NULL, breite=7, farbe=INK),
-    pl("Am Gartenzaun", 70, 40, NULL, fill=GELB, size=40),
-    ficon("tabler", "home", 230, BODEN - 2, 250, NULL, fuell=BLAU),
-    ficon("tabler", "home", 1700, BODEN - 2, 250, NULL, fuell=GELB),
-    ficon("tabler", "fence", 960, BODEN - 2, 300, NULL, fuell=HOLZ),
+    pl("Im Treppenhaus", 70, 40, NULL, fill=GELB, size=40),
+    ficon("tabler", "door", 245, BODEN - 2, 480, NULL, fuell=BLAU),
+    ficon("tabler", "door", 1685, BODEN - 2, 480, NULL, fuell=GELB),
+    ficon("tabler", "stairs", 960, BODEN - 2, 280, NULL, fuell=HOLZ),
     peep_voll("SC_ruhig_r", SX, BODEN, FH, NULL, bis="f1"),
     peep_voll("SC_froh_r", SX, BODEN, FH, "f1", anim="cut", bis="juli"),
     peep_voll("SC_sorge_r", SX, BODEN, FH, "juli", anim="cut"),
@@ -163,7 +163,7 @@ folie([(NULL, "Fall · Das Darlehen"), (beim("juli", "zahlt"), "Fall · Herr Fra
     ficon("tabler", "calendar-x", 960, 560, 100, beim("juli", "Juli"), fuell=ROT, anim="cut"),
     pl("Juli", 960, 420, beim("juli", "Juli"), fill=ROT, size=30, anker="m", anim="cut"),
     ficon("tabler", "cash-off", 1180, 600, 110, beim("juli", "zahlt"), fuell=ROT),
-    pl("zahlt nicht", 1180, 640, beim("juli", "zahlt"), fill=WEISS, size=28, anker="m"),
+    pl("zahlt nicht", 1180, 420, beim("juli", "zahlt"), fill=WEISS, size=28, anker="m"),
 ])
 
 # B Fall: die Klageschrift ------------------------------------------------------------------------------------------------

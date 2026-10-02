@@ -4,16 +4,16 @@ Quelle: `bildhalt_manifest.json` (130 Bildhalte, davon 130 eigenständig), `cues
 
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
-| 1 | 0:00.00 | 0:02.52 | Carla (Erzählerin/Lexi) | Frau Schubert leiht ihrem Nachbarn, | Fall · Das Darlehen | `c4366ba6f228` |
-| 2 | 0:02.52 | 0:03.48 | Carla (Erzählerin/Lexi) | Herrn Franke, | Fall · Das Darlehen | `012468956fe7` |
-| 3 | 0:03.48 | 0:05.36 | Carla (Erzählerin/Lexi) | sechstausend Euro. Im | Fall · Das Darlehen | `b13ccf5c79be` |
-| 4 | 0:05.36 | 0:05.92 | Carla (Erzählerin/Lexi) | Januar | Fall · Das Darlehen | `79b191d9d205` |
-| 5 | 0:05.92 | 0:07.74 | Carla (Erzählerin/Lexi) | überweist sie ihm das Geld. | Fall · Das Darlehen | `2038ee1fcc21` |
-| 6 | 0:07.74 | 0:08.78 | Franke | Danke! | Fall · Das Darlehen | `d4b18cb9e1f4` |
-| 7 | 0:08.78 | 0:12.16 | Franke | Ende Juni haben Sie alles zurück. | Fall · Das Darlehen | `75cd486ed91e` |
-| 8 | 0:12.16 | 0:12.56 | Carla (Erzählerin/Lexi) | Doch der | Fall · Das Darlehen | `4473352b1468` |
-| 9 | 0:12.56 | 0:14.32 | Carla (Erzählerin/Lexi) | Juli kommt, und Herr Franke | Fall · Das Darlehen | `148be39cc27f` |
-| 10 | 0:14.32 | 0:15.48 | Carla (Erzählerin/Lexi) | zahlt nicht. | Fall · Herr Franke zahlt nicht | `0d84ddfc2d8c` |
+| 1 | 0:00.00 | 0:02.52 | Carla (Erzählerin/Lexi) | Frau Schubert leiht ihrem Nachbarn, | Fall · Das Darlehen | `c1485bf1f045` |
+| 2 | 0:02.52 | 0:03.48 | Carla (Erzählerin/Lexi) | Herrn Franke, | Fall · Das Darlehen | `7f3a3774ad87` |
+| 3 | 0:03.48 | 0:05.36 | Carla (Erzählerin/Lexi) | sechstausend Euro. Im | Fall · Das Darlehen | `7def0ad6df90` |
+| 4 | 0:05.36 | 0:05.92 | Carla (Erzählerin/Lexi) | Januar | Fall · Das Darlehen | `ef7ddd5f3b8b` |
+| 5 | 0:05.92 | 0:07.74 | Carla (Erzählerin/Lexi) | überweist sie ihm das Geld. | Fall · Das Darlehen | `e0f584d32493` |
+| 6 | 0:07.74 | 0:08.78 | Franke | Danke! | Fall · Das Darlehen | `8b1317f7b630` |
+| 7 | 0:08.78 | 0:12.16 | Franke | Ende Juni haben Sie alles zurück. | Fall · Das Darlehen | `f5f293ff6aee` |
+| 8 | 0:12.16 | 0:12.56 | Carla (Erzählerin/Lexi) | Doch der | Fall · Das Darlehen | `a015206867f5` |
+| 9 | 0:12.56 | 0:14.32 | Carla (Erzählerin/Lexi) | Juli kommt, und Herr Franke | Fall · Das Darlehen | `bf852a7901cd` |
+| 10 | 0:14.32 | 0:15.48 | Carla (Erzählerin/Lexi) | zahlt nicht. | Fall · Herr Franke zahlt nicht | `78851a2ab590` |
 | 11 | 0:15.48 | 0:16.24 | Carla (Erzählerin/Lexi) | Frau Schubert | Fall · Die Klage | `553656449117` |
 | 12 | 0:16.24 | 0:16.88 | Carla (Erzählerin/Lexi) | klagt vor dem | Fall · Die Klage | `15498d07d06c` |
 | 13 | 0:16.88 | 0:17.84 | Carla (Erzählerin/Lexi) | Amtsgericht auf | Fall · Die Klage | `9be413d046ad` |
@@ -84,7 +84,7 @@ Quelle: `bildhalt_manifest.json` (130 Bildhalte, davon 130 eigenständig), `cues
 | 78 | 3:07.60 | 3:11.92 | Carla (Erzählerin/Lexi) | Schlüssigkeit fragt, ob jedes Merkmal mit Tatsachen belegt ist. | Schlüssigkeit oder Substantiierung? | `9b14cd69e83e` |
 | 79 | 3:11.92 | 3:16.88 | Carla (Erzählerin/Lexi) | Substantiierung fragt, wie genau. Diese Anforderungen darf das Gericht nicht | Schlüssigkeit oder Substantiierung? | `f7c1d512e809` |
 | 80 | 3:16.88 | 3:17.94 | Carla (Erzählerin/Lexi) | überspannen. | Substantiierung › nicht überspannen | `9b7a0332b3cd` |
-| 81 | 3:18.34 | 3:19.82 | Franke | Von Juni war nie die | Abgrenzung › Bestreiten | `d04a4e6b1c76` |
+| 81 | 3:18.14 | 3:19.82 | Franke | Von Juni war nie die | Abgrenzung › Bestreiten | `d04a4e6b1c76` |
 | 82 | 3:19.82 | 3:21.20 | Franke | Rede! | Abgrenzung › Bestreiten | `a752c8aea1d8` |
 | 83 | 3:21.20 | 3:23.36 | Carla (Erzählerin/Lexi) | Das ist Bestreiten, ein Thema der | Abgrenzung › Bestreiten | `527cc9b1202f` |
 | 84 | 3:23.36 | 3:25.00 | Carla (Erzählerin/Lexi) | Beklagtenstation. | Abgrenzung › Bestreiten: Beklagtenstation | `cf5accd4ad16` |
