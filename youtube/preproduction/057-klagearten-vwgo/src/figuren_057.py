@@ -1,5 +1,5 @@
 """Figuren für Folge 057 (Klagearten VwGO) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0). Alle fiktiv.
-Frau Behrens (um 45, Bootsverleih am See): standing/walking-3 (schwarzes Outfit), Kopf Long (braunes Haar).
+Frau Behrens (um 45, Bootsverleih am See): standing/walking-3 (schwarzes Outfit), Kopf Long (dunkles Haar).
 Frau Thiele (um 40, Bauamt): standing/resting-2, Kopf Medium Bangs, Brille Glasses, blaue Hose.
 Bürgermeister Harms (um 62): standing/blazer-4, Kopf No Hair 2 mit grauem Haarkranz, dunkelblaues Jackett.
 Herr Lindemann (um 45, Ordnungsamt): standing/easing-1, Kopf Short 2.
