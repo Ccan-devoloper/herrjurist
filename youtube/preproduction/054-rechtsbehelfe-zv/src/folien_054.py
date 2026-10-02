@@ -313,7 +313,7 @@ folie([("p793", "Sofortige Beschwerde, § 793 ZPO"), ("frist", "Sofortige Beschw
         [("ohne mündliche Verhandlung ergehen können, findet", 0)],
         [("sofortige Beschwerde", "a"), (" statt.“", 0)],
     ], 29, {"a": beim("p793", "Beschwerde")}, "§ 793 ZPO"),
-    z("Notfrist: zwei Wochen ab Zustellung", 110, 590, "frist", "Bold", 36),
+    z("Notfrist: 2 Wochen ab Zustellung", 110, 590, "frist", "Bold", 36),
     z("§ 569 Abs. 1 S. 1, 2 ZPO", 150, 645, beim("frist", "Zustellung"), size=30, farbe=TEXT),
     peep_voll("ST_denkt", X1, BR, FR, "p793"),
     peep_voll("GV_ruhig", X2, BR, FR, "p793", d=0.2),
