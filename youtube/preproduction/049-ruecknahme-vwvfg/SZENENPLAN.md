@@ -2,7 +2,7 @@
 
 **Stand:** 02.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_049.py`](src/skript_049.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
 **Format:** Mo · Der Fall (Klassiker-Fall, Übungsfall nach dem Hook des Themenplans). Frau Hofmann erhält für ihr Café 20.000 Euro Förderung des Landes; die Förderstelle hat sich verrechnet, ihre Angaben waren richtig, das Geld ist für Miete, Löhne und Lieferanten ausgegeben. Zwei Jahre später entdeckt Prüferin Ebert den Fehler, Herr Wagner hört Frau Hofmann an und nimmt den Bescheid zurück. Ablauf: Fall → Frage → Sachverhalt → A. Rechtsgrundlage (§ 48 statt § 49, Landesrecht) → B. formell (Zuständigkeit, Anhörung § 28) → C. 1. Wortlaut § 48 I 1 (rechtswidrig) → 2. Wortlaut § 48 I 2 (begünstigend) → 3. Wortlaut § 48 II 1–2 (Vertrauen, Verbrauch) → Wortlaut § 48 II 3 (Ausschluss Nr. 1–3) → Abwägung und Ergebnis → Gegenfall (falsche Angaben, Nr. 2, Rücknahme für die Vergangenheit) → 4. Wortlaut § 48 IV 1 (Jahresfrist, BVerwG) → 5. Ermessen (kein intendiertes Ermessen) → Wortlaut § 49a I, Zinsen § 49a III → Ausblick EU-Beihilfen → Klausurtipp → Schema → Merksatz.
-**Länge:** Hauptfilm 6:34,6 (5.647 gesprochene Zeichen); Begründung in ABNAHME.md.
+**Länge:** Hauptfilm 6:35,3 (5.652 gesprochene Zeichen nach Nachvertonung von Segment 17); Begründung in ABNAHME.md.
 
 ## Besetzung
 
