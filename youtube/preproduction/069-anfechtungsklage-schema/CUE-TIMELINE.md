@@ -1,6 +1,6 @@
 # Folge 069 · Cue-Timeline (Ton-Bild-Gate)
 
-Quelle: `bildhalt_manifest.json` (164 Bildhalte, davon 164 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
+Quelle: `bildhalt_manifest.json` (166 Bildhalte, davon 166 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
 
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
@@ -98,73 +98,75 @@ Quelle: `bildhalt_manifest.json` (164 Bildhalte, davon 164 eigenständig), `cues
 | 92 | 4:15.71 | 4:17.23 | Carla (Erzählerin/Lexi) | Gesetz. Hier: | B. Begründetheit › I. 1. Ermächtigungsgrundlage | `531eaf5bc41d` |
 | 93 | 4:17.23 | 4:20.91 | Carla (Erzählerin/Lexi) | Paragraf fünfunddreißig Absatz eins Gewerbeordnung, die | B. Begründetheit › I. 1. Ermächtigungsgrundlage | `717d71f3a817` |
 | 94 | 4:20.91 | 4:22.63 | Carla (Erzählerin/Lexi) | Gewerbeuntersagung. | B. Begründetheit › I. 1. Ermächtigungsgrundlage | `8fbd81d62172` |
-| 95 | 4:22.83 | 4:25.79 | Carla (Erzählerin/Lexi) | Zweitens, die formelle Rechtmäßigkeit. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `f1d7794c6b6c` |
-| 96 | 4:25.79 | 4:28.27 | Carla (Erzählerin/Lexi) | Zuständig ist die Stadt, das regelt das | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `663a232558da` |
-| 97 | 4:28.27 | 4:29.51 | Carla (Erzählerin/Lexi) | Landesrecht. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `e38fef446b1e` |
-| 98 | 4:29.51 | 4:33.31 | Carla (Erzählerin/Lexi) | Verfahren: Vor einem belastenden Bescheid ist der Betroffene | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `93619b5c20e9` |
-| 99 | 4:33.31 | 4:34.38 | Carla (Erzählerin/Lexi) | anzuhören, | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `ddaea4c7ac34` |
-| 100 | 4:34.38 | 4:39.23 | Carla (Erzählerin/Lexi) | Paragraf achtundzwanzig Verwaltungsverfahrensgesetz. Frau Ebeling durfte sich | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `07b026bb8a03` |
-| 101 | 4:39.23 | 4:40.11 | Carla (Erzählerin/Lexi) | äußern. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `9c0f94f37f1e` |
-| 102 | 4:40.15 | 4:43.27 | Carla (Erzählerin/Lexi) | Fehlt die Anhörung, kann sie bis zum Abschluss der letzten | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `2206d258a388` |
-| 103 | 4:43.27 | 4:45.66 | Carla (Erzählerin/Lexi) | Tatsacheninstanz nachgeholt werden, | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `c526a686ad33` |
-| 104 | 4:45.66 | 4:47.59 | Carla (Erzählerin/Lexi) | Paragraf fünfundvierzig. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `02dd3ba7c294` |
-| 105 | 4:47.59 | 4:49.28 | Carla (Erzählerin/Lexi) | Form: Der Bescheid ist | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `0336360420aa` |
-| 106 | 4:49.28 | 4:53.18 | Carla (Erzählerin/Lexi) | schriftlich und begründet, Paragraf neununddreißig. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `2f99540b1c2c` |
-| 107 | 4:53.38 | 4:56.46 | Carla (Erzählerin/Lexi) | Drittens, die materielle Rechtmäßigkeit. | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `d7b22afd08d7` |
-| 108 | 4:56.46 | 5:02.98 | Carla (Erzählerin/Lexi) | Tatbestand: Tatsachen müssen die Unzuverlässigkeit belegen. Unzuverlässig ist, wer nach dem | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `6e27b2277ffb` |
-| 109 | 5:02.98 | 5:07.10 | Carla (Erzählerin/Lexi) | Gesamteindruck seines Verhaltens nicht die Gewähr bietet, sein Gewerbe | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `1a1130db06c9` |
-| 110 | 5:07.10 | 5:08.74 | Carla (Erzählerin/Lexi) | künftig ordnungsgemäß zu | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `3602116ff40d` |
-| 111 | 5:08.74 | 5:10.30 | Carla (Erzählerin/Lexi) | betreiben. Erhebliche | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `cee54c547a85` |
-| 112 | 5:10.30 | 5:15.14 | Carla (Erzählerin/Lexi) | Steuerrückstände sind dafür ein Anhaltspunkt. Das entfällt nur, wenn jemand | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `ccbf0ab43b2b` |
-| 113 | 5:15.14 | 5:19.22 | Carla (Erzählerin/Lexi) | zahlungswillig ist und nach einem sinnvollen und erfolgversprechenden | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `83426941aeeb` |
-| 114 | 5:19.22 | 5:21.22 | Carla (Erzählerin/Lexi) | Sanierungskonzept arbeitet. | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `33f5c85d513c` |
-| 115 | 5:21.22 | 5:22.10 | Carla (Erzählerin/Lexi) | Frau Ebeling | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `f5af53110385` |
-| 116 | 5:22.10 | 5:23.42 | Carla (Erzählerin/Lexi) | hofft nur auf einen guten | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `dec8914978da` |
-| 117 | 5:23.42 | 5:24.62 | Carla (Erzählerin/Lexi) | Sommer. Sie ist | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `4ae14002e144` |
-| 118 | 5:24.62 | 5:27.22 | Carla (Erzählerin/Lexi) | unzuverlässig, und die Untersagung ist zum | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `c0d1a2a649b4` |
-| 119 | 5:27.22 | 5:30.01 | Carla (Erzählerin/Lexi) | Schutz der Allgemeinheit erforderlich. | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `771543c8e1fa` |
-| 120 | 5:30.21 | 5:34.25 | Carla (Erzählerin/Lexi) | Rechtsfolge: Nach Paragraf fünfunddreißig ist das Gewerbe zu | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `14e531cb2595` |
-| 121 | 5:34.25 | 5:36.37 | Carla (Erzählerin/Lexi) | untersagen. Die Stadt hat kein | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `feced06858f8` |
-| 122 | 5:36.37 | 5:40.01 | Carla (Erzählerin/Lexi) | Ermessen. Hat die Behörde Ermessen, prüft das Gericht nach | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `52e1229fcd68` |
-| 123 | 5:40.01 | 5:41.85 | Carla (Erzählerin/Lexi) | Paragraf hundertvierzehn nur | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `198272e2325a` |
-| 124 | 5:41.85 | 5:43.40 | Carla (Erzählerin/Lexi) | Ermessensfehler. | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `998e59689490` |
-| 125 | 5:43.60 | 5:44.64 | Carla (Erzählerin/Lexi) | Bescheid ist also | B. Begründetheit › II. Rechtsverletzung | `cdac74211607` |
-| 126 | 5:44.64 | 5:46.04 | Carla (Erzählerin/Lexi) | rechtmäßig. | B. Begründetheit › II. Rechtsverletzung | `3744513b85e1` |
-| 127 | 5:46.04 | 5:51.24 | Carla (Erzählerin/Lexi) | Wäre er rechtswidrig, wäre Frau Ebeling als Adressatin regelmäßig auch in ihren | B. Begründetheit › II. Rechtsverletzung | `4970b4eaf75d` |
-| 128 | 5:51.24 | 5:51.64 | Carla (Erzählerin/Lexi) | Rechten | B. Begründetheit › II. Rechtsverletzung | `3bec75bd695d` |
-| 129 | 5:51.64 | 5:52.67 | Carla (Erzählerin/Lexi) | verletzt. | B. Begründetheit › II. Rechtsverletzung | `3a32a36652a5` |
-| 130 | 5:52.87 | 5:54.96 | Carla (Erzählerin/Lexi) | Verwaltungsgericht entscheidet: | Ergebnis · Das Urteil | `2b77bf9b3d5e` |
-| 131 | 5:54.96 | 5:57.12 | Richterin | Die Klage ist zulässig, aber | Ergebnis · Das Urteil | `1339a3eb85da` |
-| 132 | 5:57.12 | 5:58.84 | Richterin | unbegründet. Sie wird | Ergebnis · Das Urteil | `33684e24769f` |
-| 133 | 5:58.84 | 6:00.92 | Richterin | abgewiesen. | Ergebnis · Das Urteil | `2b12edef37c6` |
-| 134 | 6:01.12 | 6:02.76 | Carla (Erzählerin/Lexi) | Klausurtipp: Halte die | Klausurtipp · Schwerpunkte setzen | `56f36e1cf1bb` |
-| 135 | 6:02.76 | 6:05.92 | Carla (Erzählerin/Lexi) | Reihenfolge ein, aber schreib nicht zu jedem Punkt einen | Klausurtipp · Schwerpunkte setzen | `a8c79daa2105` |
-| 136 | 6:05.92 | 6:07.08 | Carla (Erzählerin/Lexi) | Absatz. Was | Klausurtipp · Schwerpunkte setzen | `9eda38144d27` |
-| 137 | 6:07.08 | 6:10.68 | Carla (Erzählerin/Lexi) | unproblematisch ist, stellst du in einem Satz fest, etwa das | Klausurtipp · Schwerpunkte setzen | `4cb3d8bf9125` |
-| 138 | 6:10.68 | 6:12.68 | Carla (Erzählerin/Lexi) | Rechtsschutzbedürfnis. Deine | Klausurtipp · Schwerpunkte setzen | `9cb7b0fb8c91` |
-| 139 | 6:12.68 | 6:15.32 | Carla (Erzählerin/Lexi) | Zeit gehört den echten Problemen, hier der | Klausurtipp · Schwerpunkte setzen | `817ad023a3bc` |
-| 140 | 6:15.32 | 6:17.54 | Carla (Erzählerin/Lexi) | Unzuverlässigkeit. | Klausurtipp · Schwerpunkte setzen | `c3d9c72795be` |
-| 141 | 6:17.54 | 6:19.26 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema · Anfechtungsklage | `4fded2aabd0e` |
-| 142 | 6:19.26 | 6:21.34 | Carla (Erzählerin/Lexi) | A, Zulässigkeit: | Klausurschema · Anfechtungsklage | `3f1ddf3e6e8a` |
-| 143 | 6:21.34 | 6:22.94 | Carla (Erzählerin/Lexi) | Verwaltungsrechtsweg, | Klausurschema · Anfechtungsklage | `236fbf068ea2` |
-| 144 | 6:22.94 | 6:24.62 | Carla (Erzählerin/Lexi) | statthafte Klageart, | Klausurschema · Anfechtungsklage | `96325b62a287` |
-| 145 | 6:24.62 | 6:26.06 | Carla (Erzählerin/Lexi) | Klagebefugnis, | Klausurschema · Anfechtungsklage | `a2c73e710d7a` |
-| 146 | 6:26.06 | 6:27.26 | Carla (Erzählerin/Lexi) | Vorverfahren, | Klausurschema · Anfechtungsklage | `43eb5b52114d` |
-| 147 | 6:27.26 | 6:28.46 | Carla (Erzählerin/Lexi) | Klagefrist, | Klausurschema · Anfechtungsklage | `3ed7a1cc5dba` |
-| 148 | 6:28.46 | 6:29.70 | Carla (Erzählerin/Lexi) | Klagegegner, | Klausurschema · Anfechtungsklage | `115f98a1f9c0` |
-| 149 | 6:29.70 | 6:32.30 | Carla (Erzählerin/Lexi) | Beteiligten- und Prozessfähigkeit, | Klausurschema · Anfechtungsklage | `65d438d874da` |
-| 150 | 6:32.30 | 6:34.22 | Carla (Erzählerin/Lexi) | Rechtsschutzbedürfnis. | Klausurschema · Anfechtungsklage | `ba9b8307bd5e` |
-| 151 | 6:34.22 | 6:36.26 | Carla (Erzählerin/Lexi) | B, Begründetheit: | Klausurschema · Anfechtungsklage | `0bd619ab65e5` |
-| 152 | 6:36.26 | 6:37.98 | Carla (Erzählerin/Lexi) | Ermächtigungsgrundlage, | Klausurschema · Anfechtungsklage | `c66499b82967` |
-| 153 | 6:37.98 | 6:38.78 | Carla (Erzählerin/Lexi) | formelle und | Klausurschema · Anfechtungsklage | `586cb340c640` |
-| 154 | 6:38.78 | 6:40.86 | Carla (Erzählerin/Lexi) | materielle Rechtmäßigkeit, | Klausurschema · Anfechtungsklage | `a90938d8ddf0` |
-| 155 | 6:40.86 | 6:43.84 | Carla (Erzählerin/Lexi) | Verletzung in eigenen Rechten. | Klausurschema · Anfechtungsklage | `e8d2a1161caf` |
-| 156 | 6:44.04 | 6:46.24 | Carla (Erzählerin/Lexi) | Merke: Die Anfechtungsklage ist | Merksatz | `5950d1bd8627` |
-| 157 | 6:46.24 | 6:47.12 | Carla (Erzählerin/Lexi) | begründet, | Merksatz | `ad413433aec0` |
-| 158 | 6:47.12 | 6:48.56 | Carla (Erzählerin/Lexi) | soweit der Verwaltungsakt | Merksatz | `8d26ab9cd195` |
-| 159 | 6:48.56 | 6:49.76 | Carla (Erzählerin/Lexi) | rechtswidrig ist | Merksatz | `085eedde40db` |
-| 160 | 6:49.76 | 6:51.00 | Carla (Erzählerin/Lexi) | und den Kläger in seinen | Merksatz | `79bcbac0c904` |
-| 161 | 6:51.00 | 6:52.52 | Carla (Erzählerin/Lexi) | Rechten verletzt. | Merksatz | `78b1bb6fa7de` |
-| 162 | 6:52.52 | 6:54.24 | Carla (Erzählerin/Lexi) | Unproblematisches kurz, | Merksatz | `1effe01de6f0` |
-| 163 | 6:54.24 | 6:54.96 | Carla (Erzählerin/Lexi) | Probleme | Merksatz | `c88648a10bf4` |
-| 164 | 6:54.96 | 6:57.27 | Carla (Erzählerin/Lexi) | gründlich. | Merksatz | `58c6ce9dd3b1` |
+| 95 | 4:22.83 | 4:25.79 | Carla (Erzählerin/Lexi) | Zweitens, die formelle Rechtmäßigkeit. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `2c9eb7f5017b` |
+| 96 | 4:25.79 | 4:26.83 | Carla (Erzählerin/Lexi) | Zuständig ist die | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `c81b6705dd95` |
+| 97 | 4:26.83 | 4:28.27 | Carla (Erzählerin/Lexi) | Stadt, das regelt das | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `2d3d07d28cda` |
+| 98 | 4:28.27 | 4:29.51 | Carla (Erzählerin/Lexi) | Landesrecht. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `a68789653421` |
+| 99 | 4:29.51 | 4:33.31 | Carla (Erzählerin/Lexi) | Verfahren: Vor einem belastenden Bescheid ist der Betroffene | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `93619b5c20e9` |
+| 100 | 4:33.31 | 4:34.38 | Carla (Erzählerin/Lexi) | anzuhören, | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `ddaea4c7ac34` |
+| 101 | 4:34.38 | 4:39.23 | Carla (Erzählerin/Lexi) | Paragraf achtundzwanzig Verwaltungsverfahrensgesetz. Frau Ebeling durfte sich | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `07b026bb8a03` |
+| 102 | 4:39.23 | 4:40.11 | Carla (Erzählerin/Lexi) | äußern. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `9c0f94f37f1e` |
+| 103 | 4:40.15 | 4:43.27 | Carla (Erzählerin/Lexi) | Fehlt die Anhörung, kann sie bis zum Abschluss der letzten | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `2206d258a388` |
+| 104 | 4:43.27 | 4:45.66 | Carla (Erzählerin/Lexi) | Tatsacheninstanz nachgeholt werden, | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `c526a686ad33` |
+| 105 | 4:45.66 | 4:47.59 | Carla (Erzählerin/Lexi) | Paragraf fünfundvierzig. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `02dd3ba7c294` |
+| 106 | 4:47.59 | 4:49.28 | Carla (Erzählerin/Lexi) | Form: Der Bescheid ist | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `0336360420aa` |
+| 107 | 4:49.28 | 4:53.18 | Carla (Erzählerin/Lexi) | schriftlich und begründet, Paragraf neununddreißig. | B. Begründetheit › I. 2. formelle Rechtmäßigkeit | `2f99540b1c2c` |
+| 108 | 4:53.38 | 4:56.46 | Carla (Erzählerin/Lexi) | Drittens, die materielle Rechtmäßigkeit. | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `d7b22afd08d7` |
+| 109 | 4:56.46 | 5:02.98 | Carla (Erzählerin/Lexi) | Tatbestand: Tatsachen müssen die Unzuverlässigkeit belegen. Unzuverlässig ist, wer nach dem | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `6e27b2277ffb` |
+| 110 | 5:02.98 | 5:07.10 | Carla (Erzählerin/Lexi) | Gesamteindruck seines Verhaltens nicht die Gewähr bietet, sein Gewerbe | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `1a1130db06c9` |
+| 111 | 5:07.10 | 5:08.74 | Carla (Erzählerin/Lexi) | künftig ordnungsgemäß zu | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `3602116ff40d` |
+| 112 | 5:08.74 | 5:10.30 | Carla (Erzählerin/Lexi) | betreiben. Erhebliche | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `cee54c547a85` |
+| 113 | 5:10.30 | 5:15.14 | Carla (Erzählerin/Lexi) | Steuerrückstände sind dafür ein Anhaltspunkt. Das entfällt nur, wenn jemand | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `ccbf0ab43b2b` |
+| 114 | 5:15.14 | 5:19.22 | Carla (Erzählerin/Lexi) | zahlungswillig ist und nach einem sinnvollen und erfolgversprechenden | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `83426941aeeb` |
+| 115 | 5:19.22 | 5:21.22 | Carla (Erzählerin/Lexi) | Sanierungskonzept arbeitet. | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `33f5c85d513c` |
+| 116 | 5:21.22 | 5:22.10 | Carla (Erzählerin/Lexi) | Frau Ebeling | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `f5af53110385` |
+| 117 | 5:22.10 | 5:23.42 | Carla (Erzählerin/Lexi) | hofft nur auf einen guten | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `dec8914978da` |
+| 118 | 5:23.42 | 5:24.62 | Carla (Erzählerin/Lexi) | Sommer. Sie ist | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `4ae14002e144` |
+| 119 | 5:24.62 | 5:27.22 | Carla (Erzählerin/Lexi) | unzuverlässig, und die Untersagung ist zum | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `c0d1a2a649b4` |
+| 120 | 5:27.22 | 5:30.01 | Carla (Erzählerin/Lexi) | Schutz der Allgemeinheit erforderlich. | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Tatbestand | `771543c8e1fa` |
+| 121 | 5:30.21 | 5:34.25 | Carla (Erzählerin/Lexi) | Rechtsfolge: Nach Paragraf fünfunddreißig ist das Gewerbe zu | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `14e531cb2595` |
+| 122 | 5:34.25 | 5:36.37 | Carla (Erzählerin/Lexi) | untersagen. Die Stadt hat kein | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `feced06858f8` |
+| 123 | 5:36.37 | 5:38.09 | Carla (Erzählerin/Lexi) | Ermessen. Hat die Behörde | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `52e1229fcd68` |
+| 124 | 5:38.09 | 5:40.01 | Carla (Erzählerin/Lexi) | Ermessen, prüft das Gericht nach | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `27b8b191d5fb` |
+| 125 | 5:40.01 | 5:41.85 | Carla (Erzählerin/Lexi) | Paragraf hundertvierzehn nur | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `f86b9e375453` |
+| 126 | 5:41.85 | 5:43.40 | Carla (Erzählerin/Lexi) | Ermessensfehler. | B. Begründetheit › I. 3. materielle Rechtmäßigkeit › Rechtsfolge | `620c4143e0c1` |
+| 127 | 5:43.60 | 5:44.64 | Carla (Erzählerin/Lexi) | Bescheid ist also | B. Begründetheit › II. Rechtsverletzung | `cdac74211607` |
+| 128 | 5:44.64 | 5:46.04 | Carla (Erzählerin/Lexi) | rechtmäßig. | B. Begründetheit › II. Rechtsverletzung | `3744513b85e1` |
+| 129 | 5:46.04 | 5:51.24 | Carla (Erzählerin/Lexi) | Wäre er rechtswidrig, wäre Frau Ebeling als Adressatin regelmäßig auch in ihren | B. Begründetheit › II. Rechtsverletzung | `4970b4eaf75d` |
+| 130 | 5:51.24 | 5:51.64 | Carla (Erzählerin/Lexi) | Rechten | B. Begründetheit › II. Rechtsverletzung | `3bec75bd695d` |
+| 131 | 5:51.64 | 5:52.67 | Carla (Erzählerin/Lexi) | verletzt. | B. Begründetheit › II. Rechtsverletzung | `3a32a36652a5` |
+| 132 | 5:52.87 | 5:54.96 | Carla (Erzählerin/Lexi) | Verwaltungsgericht entscheidet: | Ergebnis · Das Urteil | `2b77bf9b3d5e` |
+| 133 | 5:54.96 | 5:57.12 | Richterin | Die Klage ist zulässig, aber | Ergebnis · Das Urteil | `1339a3eb85da` |
+| 134 | 5:57.12 | 5:58.84 | Richterin | unbegründet. Sie wird | Ergebnis · Das Urteil | `33684e24769f` |
+| 135 | 5:58.84 | 6:00.92 | Richterin | abgewiesen. | Ergebnis · Das Urteil | `2b12edef37c6` |
+| 136 | 6:01.12 | 6:02.76 | Carla (Erzählerin/Lexi) | Klausurtipp: Halte die | Klausurtipp · Schwerpunkte setzen | `56f36e1cf1bb` |
+| 137 | 6:02.76 | 6:05.92 | Carla (Erzählerin/Lexi) | Reihenfolge ein, aber schreib nicht zu jedem Punkt einen | Klausurtipp · Schwerpunkte setzen | `a8c79daa2105` |
+| 138 | 6:05.92 | 6:07.08 | Carla (Erzählerin/Lexi) | Absatz. Was | Klausurtipp · Schwerpunkte setzen | `9eda38144d27` |
+| 139 | 6:07.08 | 6:10.68 | Carla (Erzählerin/Lexi) | unproblematisch ist, stellst du in einem Satz fest, etwa das | Klausurtipp · Schwerpunkte setzen | `4cb3d8bf9125` |
+| 140 | 6:10.68 | 6:12.68 | Carla (Erzählerin/Lexi) | Rechtsschutzbedürfnis. Deine | Klausurtipp · Schwerpunkte setzen | `9cb7b0fb8c91` |
+| 141 | 6:12.68 | 6:15.32 | Carla (Erzählerin/Lexi) | Zeit gehört den echten Problemen, hier der | Klausurtipp · Schwerpunkte setzen | `817ad023a3bc` |
+| 142 | 6:15.32 | 6:17.54 | Carla (Erzählerin/Lexi) | Unzuverlässigkeit. | Klausurtipp · Schwerpunkte setzen | `c3d9c72795be` |
+| 143 | 6:17.54 | 6:19.26 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema · Anfechtungsklage | `4fded2aabd0e` |
+| 144 | 6:19.26 | 6:21.34 | Carla (Erzählerin/Lexi) | A, Zulässigkeit: | Klausurschema · Anfechtungsklage | `3f1ddf3e6e8a` |
+| 145 | 6:21.34 | 6:22.94 | Carla (Erzählerin/Lexi) | Verwaltungsrechtsweg, | Klausurschema · Anfechtungsklage | `236fbf068ea2` |
+| 146 | 6:22.94 | 6:24.62 | Carla (Erzählerin/Lexi) | statthafte Klageart, | Klausurschema · Anfechtungsklage | `96325b62a287` |
+| 147 | 6:24.62 | 6:26.06 | Carla (Erzählerin/Lexi) | Klagebefugnis, | Klausurschema · Anfechtungsklage | `a2c73e710d7a` |
+| 148 | 6:26.06 | 6:27.26 | Carla (Erzählerin/Lexi) | Vorverfahren, | Klausurschema · Anfechtungsklage | `43eb5b52114d` |
+| 149 | 6:27.26 | 6:28.46 | Carla (Erzählerin/Lexi) | Klagefrist, | Klausurschema · Anfechtungsklage | `3ed7a1cc5dba` |
+| 150 | 6:28.46 | 6:29.70 | Carla (Erzählerin/Lexi) | Klagegegner, | Klausurschema · Anfechtungsklage | `115f98a1f9c0` |
+| 151 | 6:29.70 | 6:32.30 | Carla (Erzählerin/Lexi) | Beteiligten- und Prozessfähigkeit, | Klausurschema · Anfechtungsklage | `65d438d874da` |
+| 152 | 6:32.30 | 6:34.22 | Carla (Erzählerin/Lexi) | Rechtsschutzbedürfnis. | Klausurschema · Anfechtungsklage | `ba9b8307bd5e` |
+| 153 | 6:34.22 | 6:36.26 | Carla (Erzählerin/Lexi) | B, Begründetheit: | Klausurschema · Anfechtungsklage | `0bd619ab65e5` |
+| 154 | 6:36.26 | 6:37.98 | Carla (Erzählerin/Lexi) | Ermächtigungsgrundlage, | Klausurschema · Anfechtungsklage | `c66499b82967` |
+| 155 | 6:37.98 | 6:38.78 | Carla (Erzählerin/Lexi) | formelle und | Klausurschema · Anfechtungsklage | `586cb340c640` |
+| 156 | 6:38.78 | 6:40.86 | Carla (Erzählerin/Lexi) | materielle Rechtmäßigkeit, | Klausurschema · Anfechtungsklage | `a90938d8ddf0` |
+| 157 | 6:40.86 | 6:43.84 | Carla (Erzählerin/Lexi) | Verletzung in eigenen Rechten. | Klausurschema · Anfechtungsklage | `e8d2a1161caf` |
+| 158 | 6:44.04 | 6:46.24 | Carla (Erzählerin/Lexi) | Merke: Die Anfechtungsklage ist | Merksatz | `5950d1bd8627` |
+| 159 | 6:46.24 | 6:47.12 | Carla (Erzählerin/Lexi) | begründet, | Merksatz | `ad413433aec0` |
+| 160 | 6:47.12 | 6:48.56 | Carla (Erzählerin/Lexi) | soweit der Verwaltungsakt | Merksatz | `8d26ab9cd195` |
+| 161 | 6:48.56 | 6:49.76 | Carla (Erzählerin/Lexi) | rechtswidrig ist | Merksatz | `085eedde40db` |
+| 162 | 6:49.76 | 6:51.00 | Carla (Erzählerin/Lexi) | und den Kläger in seinen | Merksatz | `79bcbac0c904` |
+| 163 | 6:51.00 | 6:52.52 | Carla (Erzählerin/Lexi) | Rechten verletzt. | Merksatz | `78b1bb6fa7de` |
+| 164 | 6:52.52 | 6:54.24 | Carla (Erzählerin/Lexi) | Unproblematisches kurz, | Merksatz | `1effe01de6f0` |
+| 165 | 6:54.24 | 6:54.96 | Carla (Erzählerin/Lexi) | Probleme | Merksatz | `c88648a10bf4` |
+| 166 | 6:54.96 | 6:57.27 | Carla (Erzählerin/Lexi) | gründlich. | Merksatz | `58c6ce9dd3b1` |
