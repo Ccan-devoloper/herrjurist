@@ -90,7 +90,7 @@ SEGMENTE = [
     # --- M Klausurschema ------------------------------------------------------------------------------------------------
     ("[sch]Dein Klausurschema: Jürgen gegen Anke aus Paragraf achthunderteinundsechzig Absatz eins. [k1]Römisch eins: "
      "Jürgen war Besitzer. [k2]Römisch zwei: Besitz durch verbotene Eigenmacht entzogen. [k3]Römisch drei: Anke besitzt "
-     "ihm gegenüber fehlerhaft. [k4]Römisch vier: kein Ausschluss nach Paragraf achthunderteinundsechzig Absatz zwei und "
+     "Jürgen gegenüber fehlerhaft. [k4]Römisch vier: kein Ausschluss nach Paragraf achthunderteinundsechzig Absatz zwei und "
      "kein Erlöschen nach Paragraf achthundertvierundsechzig. [k5]Römisch fünf: Einwendungen nur nach Paragraf "
      "achthundertdreiundsechzig. [k6]Ergebnis: Anke muss Jürgen den Besitz wieder einräumen.", PS),
     # --- N Merksatz (Lexi) ----------------------------------------------------------------------------------------------

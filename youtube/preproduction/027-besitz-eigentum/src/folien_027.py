@@ -551,7 +551,7 @@ folie([("sch", "Klausurschema")], [
     titel(glyphen("Klausurschema: Jürgen gegen Anke, § 861 Abs. 1 BGB"), 110, 90, "sch", 46),
     *plusminus("I. Jürgen war Besitzer", K1, 200, "k1", True, size=38, stil="Bold"),
     *plusminus("II. Besitz durch verbotene Eigenmacht entzogen (§ 858 Abs. 1 BGB)", K1, 275, "k2", True, size=38, stil="Bold"),
-    *plusminus("III. Anke besitzt ihm gegenüber fehlerhaft (§ 858 Abs. 2 BGB)", K1, 350, "k3", True, size=38, stil="Bold"),
+    *plusminus("III. Anke besitzt Jürgen gegenüber fehlerhaft (§ 858 Abs. 2 BGB)", K1, 350, "k3", True, size=38, stil="Bold"),
     z("IV. kein Ausschluss (§ 861 Abs. 2 BGB),", K1, 425, "k4", "Bold", 38, rechts=1820),
     z("kein Erlöschen (§ 864 BGB)", K2, 480, beim("k4", "Erlöschen"), size=36, rechts=1820),
     z("V. Einwendungen nur nach § 863 BGB", K1, 555, "k5", "Bold", 38, rechts=1820),
