@@ -64,7 +64,7 @@ SEGMENTE = [
     # --- I Streitstand: Woraus folgt die Schutzwirkung? -----------------------------------------------------------------------
     ("[streit]Woraus folgt die Schutzwirkung? Das ist umstritten. "
      "[st1]Die Rechtsprechung leitet sie aus ergänzender Vertragsauslegung her, Paragraf hundertsiebenundfünfzig. "
-     "[st2]Andere sehen Gewohnheitsrecht oder Rechtsfortbildung; der Bundesgerichtshof ließ das offen. "
+     "[st2]Andere sehen Gewohnheitsrecht oder Rechtsfortbildung; der Bundesgerichtshof hat das offengelassen. "
      "[st3]Zitiert wird oft Paragraf dreihundertachtundzwanzig analog. "
      "[st4]Paragraf dreihundertelf Absatz drei kennt Schuldverhältnisse auch zu Personen, die nicht Vertragspartei "
      "werden sollen; [st5]die Gesetzesbegründung lässt die Weiterentwicklung dort offen.", PS),
