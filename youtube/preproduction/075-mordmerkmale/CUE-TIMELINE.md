@@ -8,22 +8,22 @@ Quelle: `bildhalt_manifest.json` (123 Bildhalte, davon 123 eigenständig), `cues
 | 2 | 0:03.20 | 0:05.48 | Carla (Erzählerin/Lexi) | außen sieht alles gleich aus. | Fall 1 · Streit an der Hofeinfahrt | `49e894918d8a` |
 | 3 | 0:05.68 | 0:07.84 | Carla (Erzählerin/Lexi) | Erster Fall: Norbert und sein Nachbar | Fall 1 · Streit an der Hofeinfahrt | `8ab3d7f919fd` |
 | 4 | 0:08.04 | 0:08.40 | Carla (Erzählerin/Lexi) | Horst | Fall 1 · Streit an der Hofeinfahrt | `a4b25ff86c14` |
-| 5 | 0:08.40 | 0:10.48 | Carla (Erzählerin/Lexi) | streiten seit Monaten um die gemeinsame | Fall 1 · Streit an der Hofeinfahrt | `8d379b754908` |
-| 6 | 0:10.48 | 0:11.72 | Carla (Erzählerin/Lexi) | Hofeinfahrt. | Fall 1 · Streit an der Hofeinfahrt | `8d10ac73890c` |
-| 7 | 0:11.72 | 0:14.52 | Carla (Erzählerin/Lexi) | An einem Abend geraten sie wieder aneinander. | Fall 1 · Wieder ein Streit | `30c20bf80350` |
-| 8 | 0:14.52 | 0:14.96 | Carla (Erzählerin/Lexi) | Horst | Fall 1 · Wieder ein Streit | `fca08e1399d8` |
-| 9 | 0:14.96 | 0:18.22 | Carla (Erzählerin/Lexi) | rechnet schon damit, dass Norbert gleich auf ihn losgeht. | Fall 1 · Wieder ein Streit | `1cd4a635b17c` |
-| 10 | 0:18.22 | 0:21.08 | Norbert | Jetzt reicht es mir endgültig! | Fall 1 · Wieder ein Streit | `2eaf00ea3682` |
-| 11 | 0:21.08 | 0:21.96 | Carla (Erzählerin/Lexi) | In spontaner | Fall 1 · Spontane Wut | `1158ada8ee7d` |
-| 12 | 0:21.96 | 0:23.96 | Carla (Erzählerin/Lexi) | Wut tötet Norbert Horst, | Fall 1 · Spontane Wut | `bf957e11dbc4` |
-| 13 | 0:23.96 | 0:26.40 | Carla (Erzählerin/Lexi) | mit Tötungsvorsatz. | Fall 1 · Spontane Wut | `87434e2e2a88` |
+| 5 | 0:08.40 | 0:10.48 | Carla (Erzählerin/Lexi) | streiten seit Monaten um die gemeinsame | Fall 1 · Streit an der Hofeinfahrt | `a1da164023fe` |
+| 6 | 0:10.48 | 0:11.72 | Carla (Erzählerin/Lexi) | Hofeinfahrt. | Fall 1 · Streit an der Hofeinfahrt | `ca7e5b9ee3db` |
+| 7 | 0:11.72 | 0:14.52 | Carla (Erzählerin/Lexi) | An einem Abend geraten sie wieder aneinander. | Fall 1 · Wieder ein Streit | `f7496255d147` |
+| 8 | 0:14.52 | 0:14.96 | Carla (Erzählerin/Lexi) | Horst | Fall 1 · Wieder ein Streit | `bc405711be23` |
+| 9 | 0:14.96 | 0:18.22 | Carla (Erzählerin/Lexi) | rechnet schon damit, dass Norbert gleich auf ihn losgeht. | Fall 1 · Wieder ein Streit | `5398c36cb83f` |
+| 10 | 0:18.22 | 0:21.08 | Norbert | Jetzt reicht es mir endgültig! | Fall 1 · Wieder ein Streit | `814d390d6231` |
+| 11 | 0:21.08 | 0:21.96 | Carla (Erzählerin/Lexi) | In spontaner | Fall 1 · Spontane Wut | `8e36238178b5` |
+| 12 | 0:21.96 | 0:23.96 | Carla (Erzählerin/Lexi) | Wut tötet Norbert Horst, | Fall 1 · Spontane Wut | `87f91a65f05c` |
+| 13 | 0:23.96 | 0:26.40 | Carla (Erzählerin/Lexi) | mit Tötungsvorsatz. | Fall 1 · Spontane Wut | `908c1f5caa58` |
 | 14 | 0:26.60 | 0:28.72 | Carla (Erzählerin/Lexi) | Zweiter Fall: Friederike ist die | Fall 2 · Die Erbschaft | `addf7c75f81c` |
 | 15 | 0:28.72 | 0:30.00 | Carla (Erzählerin/Lexi) | einzige Erbin ihres | Fall 2 · Die Erbschaft | `be3b43825458` |
 | 16 | 0:30.20 | 0:31.66 | Carla (Erzählerin/Lexi) | Onkels Dietmar. | Fall 2 · Die Erbschaft | `799ea4f0cf5e` |
-| 17 | 0:31.98 | 0:32.98 | Dietmar | Haus und mein | Fall 2 · Die Erbschaft | `46baba9b8344` |
-| 18 | 0:32.98 | 0:36.12 | Dietmar | Geld bekommst du einmal, Friederike. | Fall 2 · Die Erbschaft | `8e3f8a1b9d34` |
+| 17 | 0:31.98 | 0:32.98 | Dietmar | Haus und mein | Fall 2 · Die Erbschaft | `00cf9363ef0b` |
+| 18 | 0:32.98 | 0:36.12 | Dietmar | Geld bekommst du einmal, Friederike. | Fall 2 · Die Erbschaft | `daf0bbe2266d` |
 | 19 | 0:36.12 | 0:37.84 | Carla (Erzählerin/Lexi) | Später, allein: | Fall 2 · Später, allein | `b5098fc38945` |
-| 20 | 0:37.84 | 0:41.18 | Friederike | Ich will das Erbe nicht erst in zwanzig Jahren. | Fall 2 · Später, allein | `4332e2944124` |
+| 20 | 0:37.84 | 0:41.18 | Friederike | Ich will das Erbe nicht erst in zwanzig Jahren. | Fall 2 · Später, allein | `ce8f01415fcf` |
 | 21 | 0:41.18 | 0:43.50 | Carla (Erzählerin/Lexi) | Um früher an sein Vermögen zu kommen, | Fall 2 · Um früher zu erben | `153b0fc3933f` |
 | 22 | 0:43.50 | 0:45.82 | Carla (Erzählerin/Lexi) | tötet sie ihren Onkel, auf genau die | Fall 2 · Um früher zu erben | `4c599606dd2d` |
 | 23 | 0:45.82 | 0:47.86 | Carla (Erzählerin/Lexi) | gleiche Weise wie Norbert. | Fall 2 · Um früher zu erben | `bdf3f99eca52` |
