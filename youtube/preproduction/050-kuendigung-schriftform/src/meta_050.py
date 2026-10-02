@@ -76,5 +76,6 @@ for a, b in [("Römisch eins:", "I."), ("Römisch zwei:", "II."), ("Römisch dre
              ("Petersen: ", "Frau Petersen: "), ("Satz zwei", "S. 2"), ("Satz eins", "S. 1")]:
     srt = srt.replace(a, b)
 srt = srt.replace("Frau Frau ", "Frau ")
+srt = re.sub(r"\b(I|II|III|IV|V)\. (die|der)(\s)", lambda m: f"{m.group(1)}. {m.group(2).capitalize()}{m.group(3)}", srt)
 open(os.path.join(ziel, "untertitel.srt"), "w").write(srt)
 print(len(kapitel), "Kapitel,", len(m["tags"]), "Tags ->", ziel)

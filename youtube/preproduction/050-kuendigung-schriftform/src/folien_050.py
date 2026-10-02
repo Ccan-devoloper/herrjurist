@@ -371,7 +371,7 @@ folie([("subs", "II. Schriftform › Foto, Fax, E-Mail")], rechts_frei([
     z("Bastian hat nur ein Foto bekommen", 185, 200, beim("subs", "Foto"), "Bold", 36),
     z("Unterschrift nur als Abbild,", 185, 260, beim("abbild", "Abbild"), size=34),
     z("das Original liegt im Ordner", 185, 312, beim("abbild", "Original"), size=34),
-    nein(140, 410, beim("fax", "genügt"), gr=20),
+    nein(140, 410, beim("fax", "nicht"), gr=20),
     z("BAG: Fax genügt nicht, nur eine", 185, 390, beim("fax", "Fax"), "Bold", 34),
     z("Ablichtung der Unterschrift", 185, 442, beim("fax", "Ablichtung"), "Bold", 34),
     zit("BAG, Urt. v. 17.12.2015 – 6 AZR 709/14, Rn. 47", 185, 494, beim("fax", "wiedergibt"), size=28),
@@ -456,7 +456,8 @@ folie([("vertr", "IV. Vertretung › Ausblick"), ("p174", "IV. Vertretung › Zu
     schild("Frau Petersen", X1, beim("peters", "Werkstattleiterin"), PE_F),
     *fig("BA", X2, FB, FH, [("vertr", "ruhig"), ("p174", "denkt"), ("kennt", "sorge")], d=0.2),
     schild("Bastian", X2, "vertr", BA_F, d=0.3),
-    blase("sprech", 640, 220, "pe1", 1560, 150, inhalt=["Hier ist deine Kündigung,", "unterschrieben in Vertretung."],
+    ficon("tabler", "file-text", MITTE, 640, 80, beim("peters", "Original"), fuell=WEISS, bis="woche"),
+    blase("sprech", 640, 220, "pe1", 1560, 230, inhalt=["Hier ist deine Kündigung,", "unterschrieben in Vertretung."],
           textsize=32, figur=PEm, bis="p174"),
 ]))
 
