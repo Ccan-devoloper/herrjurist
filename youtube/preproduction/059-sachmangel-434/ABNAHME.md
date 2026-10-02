@@ -59,3 +59,21 @@ Render v2, alle 140 Bildhalte erneut aus dem MP4 gesichtet; keine weiteren inhal
 
 **Schlussprüfung:** Kontaktbögen aller 140 Bildhalte aus dem finalen MP4, Fallszenen als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen); Themenplan-Korrekturen durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 02.10.2026
+
+## Drive (Readback 02.10.2026, rclone)
+
+Ordner `LexVerse Produktion/059 Sachmangel § 434 BGB/`, ID `1ufFSa1j5UMD9ArUb1e484urs0gr_53e_` (nur per rclone angelegt, genau ein Ordner dieses Namens):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `059-Sachmangel-434-BGB.mp4` | 28.602.631 |
+| `059-Sachmangel-434-BGB-Hauptfilm.mp4` | 21.090.456 |
+| `master.zip` | 49.245.306 |
+| `thumb_A.jpg` | 159.589 |
+| `thumb_B.jpg` | 167.221 |
+| `beschreibung.txt` | 2.677 |
+| `kapitel.txt` | 635 |
+| `untertitel.srt` | 8.954 |
+| `metadaten.json` | 4.212 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 311 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`9abc549721a1…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
