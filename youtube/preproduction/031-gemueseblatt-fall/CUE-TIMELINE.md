@@ -74,14 +74,14 @@ Quelle: `bildhalt_manifest.json` (123 Bildhalte, davon 123 eigenständig), `cues
 | 68 | 3:36.82 | 3:38.30 | Carla (Erzählerin/Lexi) | Salatblattfall. | Schutzwirkung › schon vor dem Vertragsschluss | `a2d9b13f5929` |
 | 69 | 3:38.30 | 3:43.72 | Carla (Erzählerin/Lexi) | Danach gilt die Schutzwirkung auch im vorvertraglichen Schuldverhältnis. | Schutzwirkung › schon vor dem Vertragsschluss | `fafa262157c5` |
 | 70 | 3:43.72 | 3:47.60 | Carla (Erzählerin/Lexi) | Woraus folgt die Schutzwirkung? Das ist umstritten. | Streitstand · Woraus folgt die Schutzwirkung? | `063b4da627cb` |
-| 71 | 3:47.60 | 3:49.96 | Carla (Erzählerin/Lexi) | Die Rechtsprechung leitet sie aus ergänzender | Streitstand · Woraus folgt die Schutzwirkung? | `d695d8f47d0b` |
-| 72 | 3:49.96 | 3:54.16 | Carla (Erzählerin/Lexi) | Vertragsauslegung her, Paragraf hundertsiebenundfünfzig. | Streitstand · Woraus folgt die Schutzwirkung? | `112b16fe174d` |
-| 73 | 3:54.16 | 3:57.84 | Carla (Erzählerin/Lexi) | Andere sehen Gewohnheitsrecht oder Rechtsfortbildung; der | Streitstand · Woraus folgt die Schutzwirkung? | `2a8986d4a567` |
-| 74 | 3:57.84 | 4:00.24 | Carla (Erzählerin/Lexi) | Bundesgerichtshof ließ das offen. | Streitstand · Woraus folgt die Schutzwirkung? | `b79f49b74389` |
-| 75 | 4:00.24 | 4:04.48 | Carla (Erzählerin/Lexi) | Zitiert wird oft Paragraf dreihundertachtundzwanzig analog. | Streitstand · Woraus folgt die Schutzwirkung? | `6022952736bb` |
-| 76 | 4:04.48 | 4:08.52 | Carla (Erzählerin/Lexi) | Paragraf dreihundertelf Absatz drei kennt Schuldverhältnisse auch zu | Streitstand · Woraus folgt die Schutzwirkung? | `129050b77017` |
-| 77 | 4:08.52 | 4:11.49 | Carla (Erzählerin/Lexi) | Personen, die nicht Vertragspartei werden sollen; | Streitstand · Woraus folgt die Schutzwirkung? | `cb307e809fd9` |
-| 78 | 4:11.49 | 4:16.22 | Carla (Erzählerin/Lexi) | sollen; die Gesetzesbegründung lässt die Weiterentwicklung dort offen. | Streitstand · Woraus folgt die Schutzwirkung? | `77dbeb1c3310` |
+| 71 | 3:47.60 | 3:50.04 | Carla (Erzählerin/Lexi) | Die Rechtsprechung leitet sie aus ergänzender | Streitstand · Woraus folgt die Schutzwirkung? | `d695d8f47d0b` |
+| 72 | 3:50.04 | 3:54.00 | Carla (Erzählerin/Lexi) | Vertragsauslegung her, Paragraf hundertsiebenundfünfzig. | Streitstand · Woraus folgt die Schutzwirkung? | `112b16fe174d` |
+| 73 | 3:54.00 | 3:57.68 | Carla (Erzählerin/Lexi) | Andere sehen Gewohnheitsrecht oder Rechtsfortbildung; der | Streitstand · Woraus folgt die Schutzwirkung? | `2a8986d4a567` |
+| 74 | 3:57.68 | 4:00.32 | Carla (Erzählerin/Lexi) | Bundesgerichtshof hat das offengelassen. | Streitstand · Woraus folgt die Schutzwirkung? | `b79f49b74389` |
+| 75 | 4:00.32 | 4:04.56 | Carla (Erzählerin/Lexi) | Zitiert wird oft Paragraf dreihundertachtundzwanzig analog. | Streitstand · Woraus folgt die Schutzwirkung? | `6022952736bb` |
+| 76 | 4:04.56 | 4:08.68 | Carla (Erzählerin/Lexi) | Paragraf dreihundertelf Absatz drei kennt Schuldverhältnisse auch zu | Streitstand · Woraus folgt die Schutzwirkung? | `129050b77017` |
+| 77 | 4:08.68 | 4:11.60 | Carla (Erzählerin/Lexi) | Personen, die nicht Vertragspartei werden sollen; | Streitstand · Woraus folgt die Schutzwirkung? | `cb307e809fd9` |
+| 78 | 4:11.60 | 4:16.22 | Carla (Erzählerin/Lexi) | die Gesetzesbegründung lässt die Weiterentwicklung dort offen. | Streitstand · Woraus folgt die Schutzwirkung? | `77dbeb1c3310` |
 | 79 | 4:16.42 | 4:18.66 | Carla (Erzählerin/Lexi) | Prüfen wir den Anspruch der Tochter. | A. Tochter gegen Betreiber › §§ 280 I, 311 II, 241 II BGB mit Schutzwirkung | `78c025ffaa37` |
 | 80 | 4:18.66 | 4:21.54 | Carla (Erzählerin/Lexi) | Römisch eins: das Schuldverhältnis zwischen | A. Tochter gegen Betreiber › I. Schuldverhältnis mit Schutzwirkung | `f0f651d0c8c4` |
 | 81 | 4:21.54 | 4:25.10 | Carla (Erzählerin/Lexi) | Mutter und Betreiber, mit Schutzwirkung für die Tochter. | A. Tochter gegen Betreiber › I. Schuldverhältnis mit Schutzwirkung | `10485cc04e17` |
