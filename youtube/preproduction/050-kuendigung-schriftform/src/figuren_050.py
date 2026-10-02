@@ -1,7 +1,7 @@
 """Figuren für Folge 050 (Kündigung per WhatsApp, Schriftform § 623 BGB) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0).
 Alle Figuren fiktiv.
 Frau Kuhlmann (um 60, Inhaberin einer Fahrradwerkstatt, Arbeitgeberin): standing/crossed_arms-1, Kopf Gray Bun, Glasses 2,
-blaues Oberteil. Bastian (um 25, Mechaniker): standing/walking-2, Kopf Short 2, grünes T-Shirt, dunkelblaue Arbeitshose.
+blaues Oberteil. Bastian (um 25, Mechaniker): standing/walking-2, Kopf Short 2, schwarzes T-Shirt (Pose-Reihe -2), dunkelblaue Arbeitshose.
 Frau Petersen (um 45, Werkstattleiterin, nur im Ausblick § 174): standing/easing-1, Kopf Medium Straight, rote Jacke.
 Keine Bärte, keine Prothesen-Posen. Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und blickt
 nach links (Figur rechts neben der Tafel), Suffix _r blickt nach rechts.
@@ -20,7 +20,7 @@ MUND = {"a": "Explaining", "o": "Concerned Fear", "e": "Hectic"}
 # Person: (Pose, Kopf, Bart, Brille, Farben)
 P = {
     "KU": ("standing/crossed_arms-1", "Gray Bun", None, "Glasses 2", {"Skin": "#F0C8A8", "Top": "#8DB3F2"}),
-    "BA": ("standing/walking-2", "Short 2", None, None, {"Skin": "#E6B48F", "Top": "#8FD694", "Pants": "#3D4A7A"}),
+    "BA": ("standing/walking-2", "Short 2", None, None, {"Skin": "#E6B48F", "Pants": "#3D4A7A"}),
     "PE": ("standing/easing-1", "Medium Straight", None, None, {"Skin": "#C68E6A", "Jacket": "#F07A6A", "Top": "#FFFFFF"}),
 }
 
