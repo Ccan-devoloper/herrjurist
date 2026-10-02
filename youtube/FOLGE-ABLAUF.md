@@ -43,6 +43,7 @@ Ordner je Folge: `youtube/preproduction/NNN-kurzname/` mit `src/` (Skript, Figur
 - Die Sperre sorgt dafür, dass nie zwei Vertonungen gleichzeitig laufen. Das Kontingent wird in Credits geprüft.
 - Jedes Segment wird auf −19 LUFS angeglichen (`angleichen()`), Restlaute am Segmentende werden stummgeschaltet (`entstoeren()`). Die Ausgabe nennt Gains und den tatsächlichen Credit-Verbrauch; Verbrauch und Zeichen im Abnahmebogen notieren.
 - **Nie nur für Tests vertonen.** Erst das Skript fertigstellen, dann einmal vertonen. Nachbesserungen nur segmentweise, der Cache verhindert, dass unveränderte Segmente neu bezahlt werden.
+- **Nachvertonung nur bei echten Aussprachefehlern** (seit 02.10.2026): also wenn zwei Erkennungsmodelle (whisper small und medium) denselben Fehler hören oder ein Fehler hörbar ist. Nicht nachvertonen, wenn die Erkenner nur Fachwörter, Abkürzungen (IBAN, StPO), lateinische Begriffe, gleichklingende Formen („enthaltenden/enthaltenen“), Komposita oder ein Fugen-s anders schreiben; solche Stellen kommen in die Liste „Bitte anhören“ für den Kanalinhaber. Höchstens eine Nachvertonung je Segment; bringt sie keine Besserung, bleibt die ursprüngliche Aufnahme. Grund: In 065, 066 und 073 kosteten solche Nachvertonungen Credits, ohne die Aufnahme zu verbessern.
 - Danach `ffmpeg -i ../stimme.wav -ac 2 -ar 48000 ../stimme_48k.wav`.
 
 ## 5. Folien und Render
