@@ -13,9 +13,9 @@ Quelle: `bildhalt_manifest.json` (142 Bildhalte, davon 141 eigenständig), `cues
 | 7 | 0:10.44 | 0:12.88 | Carla (Erzählerin/Lexi) | Kurz vor dem Auszug hatte Gesine sich beim | Fall · Die Beschwerde beim Bauamt | `cb431bbc269d` |
 | 8 | 0:12.88 | 0:14.24 | Carla (Erzählerin/Lexi) | Bauamt über das lockere | Fall · Die Beschwerde beim Bauamt | `e1861e19cb63` |
 | 9 | 0:14.24 | 0:16.06 | Carla (Erzählerin/Lexi) | Balkongeländer beschwert. | Fall · Die Beschwerde beim Bauamt | `fdddfb104e46` |
-| 10 | 0:16.06 | 0:21.32 | Gernot | Ihre Kaution bekommen Sie erst, wenn Sie die Beschwerde beim Bauamt zurückziehen. | Fall · Gernots Bedingung | `d67959c4f65c` |
-| 11 | 0:21.32 | 0:23.86 | Gesine | Aber die Kaution steht mir doch zu! | Fall · Gernots Bedingung | `ccb782a2ffa6` |
-| 12 | 0:23.86 | 0:24.42 | Carla (Erzählerin/Lexi) | Gesine | Fall · Gernots Bedingung | `ccb782a2ffa6` |
+| 10 | 0:16.06 | 0:21.32 | Gernot | Ihre Kaution bekommen Sie erst, wenn Sie die Beschwerde beim Bauamt zurückziehen. | Fall · Gernots Bedingung | `5b0cea7a6ed8` |
+| 11 | 0:21.32 | 0:23.86 | Gesine | Aber die Kaution steht mir doch zu! | Fall · Gernots Bedingung | `5ad2e6d2f77a` |
+| 12 | 0:23.86 | 0:24.42 | Carla (Erzählerin/Lexi) | Gesine | Fall · Gernots Bedingung | `5ad2e6d2f77a` |
 | 13 | 0:24.62 | 0:26.18 | Carla (Erzählerin/Lexi) | ihr Geld. Sie zieht die | Fall · Gesine zieht die Beschwerde zurück | `886a03085e57` |
 | 14 | 0:26.18 | 0:26.70 | Carla (Erzählerin/Lexi) | Beschwerde | Fall · Gesine zieht die Beschwerde zurück | `b0eba5defa2e` |
 | 15 | 0:26.70 | 0:27.34 | Carla (Erzählerin/Lexi) | zurück, | Fall · Gesine zieht die Beschwerde zurück | `d5247689306d` |
