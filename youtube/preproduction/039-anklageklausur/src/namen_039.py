@@ -1,22 +1,20 @@
-"""Namensprüfung Folge 037 (Vorgabe Kanalinhaber 01.10.2026: jeder Name klingt im ganzen Video gleich).
+"""Namensprüfung Folge 039 (Vorgabe Kanalinhaber 01.10.2026: jeder Name klingt im ganzen Video gleich).
 Jede Nennung eines Figurennamens (Wortzeiten aus ../cues.json) wird einzeln ausgeschnitten und
-(1) mit der Spracherkennung im Satzzusammenhang abgeglichen (faster-whisper medium, Wortzeiten, asr.json),
+(1) mit der Spracherkennung im Satzzusammenhang abgeglichen (faster-whisper medium, Wortzeiten, asr_039.py),
 (2) zusätzlich isoliert erkannt (Ausschnitt ±0,25 s, ohne Vorkontext, condition_on_previous_text=False),
 (3) akustisch verglichen: MFCC (eigene Mel-Filterbank) + DTW-Abstand jeder Nennung zu allen übrigen Nennungen desselben
 Namens; Ausreißer (> Median + 2,5 · MAD) werden markiert.
-Namen: Imke (Erzählerin und Figuren), Schäfer (Erzählerin und Figuren). Kopie von namen_015.py.
-Aufruf: python3 namen_015.py <asr.json> <ausgabe.json>"""
+Aufruf: python3 namen_039.py <asr.json> <ausgabe.json>"""
 import json, re, sys, wave
 import numpy as np
 from scipy.fft import dct
 from scipy.signal import resample_poly
 
 cj = json.load(open("../cues.json"))
-asr = json.load(open(sys.argv[1]))
-asr = asr["woerter"] if isinstance(asr, dict) else asr   # asr_037.py schreibt {modell, woerter, segmente}
+asr = json.load(open(sys.argv[1]))["woerter"]
 w = wave.open("../stimme.wav"); sr = w.getframerate()
 x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
-NAMEN = ("Imke", "Schäfer")
+NAMEN = ("Rösch", "Brehm")
 
 
 def mel_fb(n_fft=512, n_mel=26, sr=16000):
