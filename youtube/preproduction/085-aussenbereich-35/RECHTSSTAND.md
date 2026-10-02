@@ -1,0 +1,102 @@
+# Folge 085 · Außenbereich § 35 BauGB: Warum dein Ferienhaus im Wald verboten ist – Rechtsstand und Belege
+
+**Abruf aller Quellen:** 02.10.2026. Bundesrecht im Volltext auf gesetze-im-internet.de (Einzelnormseiten unter `/bbaug/`, `/baunvo/`, `/bwaldg/`, `/vwgo/` sowie die Gesamtausgabe des BauGB), Entscheidungen im Volltext auf bverwg.de (Randnummern dort abgelesen). Die Suche auf bverwg.de ist bot-geschützt (Cloudflare) und wurde nicht umgangen; Entscheidungsseiten mit bekanntem Aktenzeichen waren direkt abrufbar. rechtsprechung-im-internet.de und die NRWE-Suche liefern ihre Treffer nur per JavaScript und wurden nicht verwendet. Keine Entscheidung ist aus dem Gedächtnis zitiert; was nicht im Volltext mit Randnummer gelesen wurde, steht unter „bewusst nicht behauptet“.
+
+**Gesetzesstand:** Baugesetzbuch in der Fassung der Bekanntmachung vom 3.11.2017 (BGBl. I S. 3634), **zuletzt geändert durch Art. 8 Abs. 2 des Gesetzes vom 23.7.2026 (BGBl. 2026 I Nr. 226)** – Standangabe der Gesamtausgabe auf gesetze-im-internet.de, Abruf 02.10.2026. Die Gesamtausgabe enthält keinen Hinweis auf noch nicht berücksichtigte Änderungen. Novellen 2023–2026 im geltenden Text sichtbar und beachtet: § 35 Abs. 1 Nr. 5 verweist für die Windenergie auf „Maßgabe des § 249“; § 35 Abs. 1 umfasst inzwischen **zwölf** Nummern (u. a. Nr. 8 und 9 Solarenergie, Nr. 10 Wärmespeicher, Nr. 11 und 12 Batteriespeicher); § 37a (Vorhaben zur Landesverteidigung, Fußnote zu § 35 Abs. 5); § 246e (befristete Sonderregelung für den Wohnungsbau bis 31.12.2030, „Bau-Turbo“). Für den Fall ist keine dieser Änderungen tragend (siehe unten). BauNVO, BWaldG und VwGO laut gesetze-im-internet.de am 02.10.2026.
+
+**Fallannahmen (Übungsfall, keine Leitentscheidung; Hook laut Themenplan „Du kaufst ein Waldgrundstück und willst dort ein kleines Wochenendhaus bauen.“):**
+- Frau Wiesner kauft ein Waldgrundstück weit draußen vor dem Dorf, mitten in einem forstlich genutzten Fichtenwald; ringsum nur Wald. Sie betreibt keine Forstwirtschaft; das Haus soll ihrer Erholung am Wochenende dienen.
+- Für die Fläche gilt **kein Bebauungsplan** (weder qualifiziert noch einfach, § 30 Abs. 1, 3 BauGB) und keine Satzung nach § 34 Abs. 4 oder § 35 Abs. 6 BauGB.
+- Der **Flächennutzungsplan der Gemeinde stellt die Fläche als Wald dar** (§ 5 Abs. 2 Nr. 9 Buchst. b BauGB).
+- Das Waldstück ist in viele Parzellen geteilt (Vorbildwirkung, Nr. 7).
+- Herr Dreher von der Bauaufsichtsbehörde lehnt den Bauantrag ab. Zuständigkeit, Verfahren, gemeindliches Einvernehmen (§ 36 BauGB) und die bauordnungsrechtliche Anspruchsnorm der jeweiligen Landesbauordnung werden nicht thematisiert (Fallannahme: formell ordnungsgemäß).
+- § 246e BauGB scheidet aus: Er setzt die Zustimmung der Gemeinde voraus und gilt im Außenbereich nur für Vorhaben „im räumlichen Zusammenhang mit Flächen, die nach § 30 Absatz 1, Absatz 2 oder § 34 zu beurteilen sind“ (§ 246e Abs. 3 Satz 1); das Grundstück liegt weit draußen mitten im Wald. Ob ein Wochenendhaus überhaupt „Wohnzwecken dienend“ ist, bleibt offen. Im Video nicht erwähnt.
+- Figurenrede (Wiesner, Dreher) ist Dramatisierung; alle Personen sind erfunden.
+
+**Gesamtwissen** (UNCERTIFIED; Fundstelle laut Themenplan „Einzelprobleme 9.9 Außenbereich, § 35 BauGB; Band 12 › 30. › § 35 Außenbereich (Fallanker 'Wochenendhäuser')“, Anker `#außenbereich-35-baugb`, `#oer-baurecht`, `#die-wochenendhäuser-im-außenbereich---wochenendhäuser-muster`, `#vollaudit-3326`): privilegierte Vorhaben nach Abs. 1 zulässig, wenn Belange nicht entgegenstehen; sonstige Vorhaben unzulässig bei Beeinträchtigung; Regelbeispiele in Abs. 3; Wochenend- und Ferienhäuser regelmäßig nicht privilegiert, Splittersiedlung als klassischer Belang; zwei Ebenen Bauplanungs-/Bauordnungsrecht. Deckt sich mit den Primärquellen; nur Wegweiser, kein Beleg. Auszüge liegen nur im Scratchpad, nicht im Repository.
+
+## Normen (Wortlaut, Abruf 02.10.2026)
+
+| Norm | Wortlaut (Auszug) | Verwendung | URL |
+|---|---|---|---|
+| § 29 Abs. 1 BauGB | „Für Vorhaben, die die Errichtung, Änderung oder Nutzungsänderung von baulichen Anlagen zum Inhalt haben, … gelten die §§ 30 bis 37.“ | I. Vorhaben; „es gelten die §§ 30 bis 37“ | https://www.gesetze-im-internet.de/bbaug/__29.html |
+| § 29 Abs. 2 BauGB | „Die Vorschriften des Bauordnungsrechts und andere öffentlich-rechtliche Vorschriften bleiben unberührt.“ | zwei Ebenen | wie oben |
+| § 30 Abs. 1, 3 BauGB | Abs. 1: qualifizierter Bebauungsplan …; Abs. 3: „Im Geltungsbereich eines Bebauungsplans, der die Voraussetzungen des Absatzes 1 nicht erfüllt (einfacher Bebauungsplan), richtet sich die Zulässigkeit von Vorhaben im Übrigen nach § 34 oder § 35.“ | II. 1. „Gilt ein Bebauungsplan?“ – hier nicht | https://www.gesetze-im-internet.de/bbaug/__30.html |
+| § 34 Abs. 1 Satz 1 BauGB | „Innerhalb der im Zusammenhang bebauten Ortsteile ist ein Vorhaben zulässig, wenn …“ | II. 2. Innenbereich – hier nicht | https://www.gesetze-im-internet.de/bbaug/__34.html |
+| **§ 35 Abs. 1 BauGB** | „Im Außenbereich ist ein Vorhaben nur zulässig, wenn öffentliche Belange nicht entgegenstehen, die ausreichende Erschließung gesichert ist und wenn es 1. einem land- oder forstwirtschaftlichen Betrieb dient und nur einen untergeordneten Teil der Betriebsfläche einnimmt, … 4. wegen seiner besonderen Anforderungen an die Umgebung, wegen seiner nachteiligen Wirkung auf die Umgebung oder wegen seiner besonderen Zweckbestimmung nur im Außenbereich ausgeführt werden soll, … 5. der Erforschung, Entwicklung oder Nutzung der Windenergie nach Maßgabe des § 249 … dient, …“ (Nr. 1–12) | III. Privilegiert? Nr. 1 und Nr. 5 genannt, Nr. 4 verneint; Tafel „zulässig, wenn öffentliche Belange nicht entgegenstehen und die ausreichende Erschließung gesichert ist“ | https://www.gesetze-im-internet.de/bbaug/__35.html |
+| **§ 35 Abs. 2 BauGB** | „Sonstige Vorhaben können im Einzelfall zugelassen werden, wenn ihre Ausführung oder Benutzung öffentliche Belange nicht beeinträchtigt und die Erschließung gesichert ist.“ | **Wortlautkarte**, vollständig vorgelesen; Marker „nicht beeinträchtigt“, „Erschließung gesichert“ | wie oben |
+| **§ 35 Abs. 3 Satz 1 BauGB** | „Eine Beeinträchtigung öffentlicher Belange liegt insbesondere vor, wenn das Vorhaben 1. den Darstellungen des Flächennutzungsplans widerspricht, … 5. Belange des Naturschutzes und der Landschaftspflege, des Bodenschutzes, des Denkmalschutzes oder die natürliche Eigenart der Landschaft und ihren Erholungswert beeinträchtigt oder das Orts- und Landschaftsbild verunstaltet, … 7. die Entstehung, Verfestigung oder Erweiterung einer Splittersiedlung befürchten lässt oder 8. …“ | **Wortlautkarte (Auszug mit „…“)**: „… 1. den Darstellungen des Flächennutzungsplans widerspricht, … 5. … die natürliche Eigenart der Landschaft und ihren Erholungswert beeinträchtigt …, … 7. die Entstehung, Verfestigung oder Erweiterung einer Splittersiedlung befürchten lässt …“; feste Zeilen per Assertion gegen diesen Text; Nr. 7 zusätzlich als Zitat auf der Folgetafel | wie oben |
+| § 35 Abs. 4 Satz 1 BauGB | „Den nachfolgend bezeichneten sonstigen Vorhaben im Sinne des Absatzes 2 kann nicht entgegengehalten werden, dass sie Darstellungen des Flächennutzungsplans oder eines Landschaftsplans widersprechen, die natürliche Eigenart der Landschaft beeinträchtigen oder die Entstehung, Verfestigung oder Erweiterung einer Splittersiedlung befürchten lassen, soweit sie im Übrigen außenbereichsverträglich im Sinne des Absatzes 3 sind: 1. die Änderung der bisherigen Nutzung eines Gebäudes, das unter den Voraussetzungen des Absatzes 1 Nummer 1 errichtet wurde, … 3. die alsbaldige Neuerrichtung eines zulässigerweise errichteten, durch Brand, Naturereignisse oder andere außergewöhnliche Ereignisse zerstörten, gleichartigen Gebäudes an gleicher Stelle, …“ (Nr. 1–6, Satz 2) | 2. Begünstigt? „Umnutzung alter Hofgebäude, Satz 1 Nr. 1“, „Wiederaufbau eines abgebrannten Gebäudes, Nr. 3“ (vereinfacht); neues Wochenendhaus nicht erfasst | wie oben |
+| § 5 Abs. 2 Nr. 9 Buchst. b BauGB | Im Flächennutzungsplan können insbesondere dargestellt werden: „9. a) die Flächen für die Landwirtschaft und b) Wald;“ | Fallannahme: FNP stellt Wald dar | https://www.gesetze-im-internet.de/bbaug/__5.html |
+| § 246e Abs. 1, 3 BauGB | Abweichung für Wohnzwecken dienende Gebäude mit Zustimmung der Gemeinde bis 31.12.2030; im Außenbereich nur „im räumlichen Zusammenhang mit Flächen, die nach § 30 Absatz 1, Absatz 2 oder § 34 zu beurteilen sind“ | nur Hintergrund (Fallannahme oben), nicht im Video | https://www.gesetze-im-internet.de/bbaug/__246e.html |
+| § 10 Abs. 1, 3 BauNVO | „Als Sondergebiete, die der Erholung dienen, kommen insbesondere in Betracht Wochenendhausgebiete, Ferienhausgebiete, Campingplatzgebiete.“ „In Wochenendhausgebieten sind Wochenendhäuser als Einzelhäuser zulässig.“ | Nr. 4 verneint: Wochenendhaus muss nicht im Außenbereich stehen, Gemeinde kann Wochenendhausgebiete planen (Fundstellenzeile) | https://www.gesetze-im-internet.de/baunvo/__10.html |
+| § 9 Abs. 1 Satz 1 BWaldG | „Wald darf nur mit Genehmigung der nach Landesrecht zuständigen Behörde gerodet und in eine andere Nutzungsart umgewandelt werden (Umwandlung).“ (Abs. 3: Länder können weitere Einschränkungen bestimmen) | Waldrecht, ein Satz, Pille mit Fundstelle | https://www.gesetze-im-internet.de/bwaldg/__9.html |
+| § 42 Abs. 1 VwGO | „… sowie die Verurteilung zum Erlaß eines abgelehnten oder unterlassenen Verwaltungsakts (Verpflichtungsklage) …“ | Rechtsschutz, ein Satz, Verweis auf das Video zu den Klagearten (Folge 057) | https://www.gesetze-im-internet.de/vwgo/__42.html |
+| § 113 Abs. 5 Satz 1 VwGO | Verpflichtung, „soweit die Ablehnung oder Unterlassung des Verwaltungsakts rechtswidrig und der Kläger dadurch in seinen Rechten verletzt ist“ | Klausurtipp „Prüfung in der Begründetheit“ | https://www.gesetze-im-internet.de/vwgo/__113.html |
+
+## Entscheidungen (Volltext, Abruf 02.10.2026)
+
+| Entscheidung | Kernaussage für das Video | Quelle |
+|---|---|---|
+| **BVerwG, Urt. v. 19.04.2012 – 4 C 10.11** (ECLI:DE:BVerwG:2012:190412U4C10.11.0) | **Rn. 11:** „Ein Vorhaben liegt im Außenbereich, wenn es nicht Bestandteil eines im Zusammenhang bebauten Ortsteils im Sinne des § 34 Abs. 1 BauGB ist.“ **Rn. 19:** „Eine Splittersiedlung ist eine Ansammlung von baulichen Anlagen, die zum – wenn auch eventuell nur gelegentlichen – Aufenthalt von Menschen bestimmt sind … Während unter einem Ortsteil jeder Bebauungszusammenhang zu verstehen ist, der nach der Zahl der vorhandenen Bauten ein gewisses Gewicht besitzt und Ausdruck einer organischen Siedlungsstruktur ist …, ist eine Splittersiedlung eine bloße Anhäufung von Gebäuden.“ **Rn. 20:** Wenn Belange privilegierten Vorhaben regelmäßig nicht entgegenstehen, „liegt das daran, dass der Gesetzgeber solche Vorhaben im Außenbereich gerade bevorrechtigt“. **Rn. 21:** „Zu befürchten ist das Entstehen einer Splittersiedlung nur dann, wenn das Vorhaben zum Bestehen einer unerwünschten Splittersiedlung führt; unerwünscht in diesem Sinne ist eine Splittersiedlung, wenn mit ihr ein Vorgang der Zersiedlung eingeleitet oder gar schon vollzogen wird. … Das anzunehmen rechtfertigt sich in aller Regel.“ **Rn. 22:** Vorbildwirkung; „Es genügt, dass die Gründe, die weiteren Vorhaben entgegengehalten werden könnten, an Überzeugungskraft einbüßen würden, …, mit der Genehmigung also ein sog. Berufungsfall geschaffen würde.“ (Fall: Parkhausnutzung einer Bootshalle im Außenbereich, Verfestigung/Erweiterung; Rn. 22 ausdrücklich zur Verfestigung – im Video auf die befürchtete Entstehung übertragen, siehe Einschränkungen.) | https://www.bverwg.de/190412U4C10.11.0 |
+| BVerwG, Beschl. v. 24.06.2004 – 4 B 23.04 | Splittersiedlung, Zersiedlung, Vorbildwirkung (wie Rn. 21 f. oben). Volltext gelesen, **ohne Randnummern** auf bverwg.de – deshalb nicht im Bild. | https://www.bverwg.de/240604B4B23.04.0 |
+
+## Aussage-Beleg-Zuordnung (Skript `src/skript_085.py`)
+
+| Cue | Aussage | Beleg |
+|---|---|---|
+| `fall`–`wi2` | Waldgrundstück, Wunsch nach Wochenendhaus, Bauantrag, kein Bebauungsplan, FNP stellt Wald dar, Ablehnung | Übungsfall nach dem Hook, Dramatisierung; Fallannahmen oben |
+| `frage` | War die Ablehnung rechtmäßig? | Rechtsfrage |
+| `ebenen`/`ordnung` | Bauplanungsrecht im BauGB regelt, ob ein Vorhaben an diesem Ort zulässig ist; Bauordnungsrecht des Landes regelt Genehmigungsverfahren und Sicherheit des Baus | §§ 29 ff. BauGB; § 29 Abs. 2 BauGB; Lehrbegriff (Gesamtwissen als Wegweiser); Landesbauordnungen nicht im Einzelnen gelesen, deshalb ohne Normnummer |
+| `vorh`/`gelten` | Wochenendhaus = Errichtung einer baulichen Anlage, Vorhaben nach § 29; es gelten §§ 30–37 | § 29 Abs. 1 BauGB; Subsumtion |
+| `reihe`–`p35` | Prüfungsreihenfolge § 30, § 34, § 35; kein Bebauungsplan; kein im Zusammenhang bebauter Ortsteil (Innenbereich); also Außenbereich | § 30 Abs. 1, 3, § 34 Abs. 1 Satz 1, § 35 Abs. 1 BauGB; BVerwG 4 C 10.11 Rn. 11; Fallannahmen |
+| `abs1`–`nr5` | Abs. 1 zählt privilegierte Vorhaben auf, etwa land-/forstwirtschaftlicher Betrieb (Nr. 1), Windenergie (Nr. 5) | § 35 Abs. 1 Nr. 1, 5 BauGB |
+| `entg` | zulässig, wenn öffentliche Belange nicht entgegenstehen und die Erschließung gesichert ist; Gesetz bevorrechtigt sie | § 35 Abs. 1 BauGB („ausreichende Erschließung“ auf der Tafel); BVerwG 4 C 10.11 Rn. 20 |
+| `kein1` | Wochenendhaus dient keinem Betrieb; keine Forstwirtschaft, Erholung | § 35 Abs. 1 Nr. 1 BauGB („einem … Betrieb dient“); Subsumtion |
+| `nr4` | Nr. 4 passt nicht: Wochenendhaus muss nicht im Außenbereich stehen; Gemeinde kann Wochenendhausgebiete planen | § 35 Abs. 1 Nr. 4 BauGB („nur im Außenbereich ausgeführt werden soll“); § 10 Abs. 1, 3 BauNVO; Subsumtion |
+| `sonst` | also sonstiges Vorhaben | § 35 Abs. 2 BauGB |
+| `wl352` | Wortlaut § 35 II | § 35 Abs. 2 BauGB |
+| `streng` | strenger als Abs. 1: Zulassung scheitert schon, wenn ein Belang beeinträchtigt ist | Wortlautvergleich „nicht entgegenstehen“ (Abs. 1) / „nicht beeinträchtigt“ (Abs. 2); BVerwG 4 C 10.11 Rn. 20 (Bevorrechtigung) |
+| `wl353` | Abs. 3 zeigt Beispiele | § 35 Abs. 3 Satz 1 BauGB („insbesondere“) |
+| `fnp` | Nr. 1: widerspricht den Darstellungen des FNP; Plan stellt Wald dar, kein Bauland für Wochenendhäuser | § 35 Abs. 3 Satz 1 Nr. 1 BauGB; § 5 Abs. 2 Nr. 9 Buchst. b BauGB; Fallannahme; Subsumtion |
+| `land` | Nr. 5: beeinträchtigt die natürliche Eigenart der Landschaft; im forstlich genutzten Fichtenwald ist ein Wochenendhaus ein Fremdkörper | § 35 Abs. 3 Satz 1 Nr. 5 BauGB; **Subsumtion** (Rechtsprechungsdefinition der „natürlichen Eigenart“ nicht im Volltext mit Rn. gelesen, deshalb ohne Fundstelle; siehe Einschränkungen) |
+| `split` | Nr. 7: lässt Entstehung einer Splittersiedlung befürchten; Splittersiedlung = bloße Anhäufung von Gebäuden, kein Ortsteil | § 35 Abs. 3 Satz 1 Nr. 7 BauGB; BVerwG 4 C 10.11 Rn. 19 |
+| `vorbild` | viele Parzellen; Nachbarn könnten sich auf ihr Haus berufen; so beginnt die Zersiedlung | BVerwG 4 C 10.11 Rn. 21 (Zersiedlung eingeleitet), Rn. 22 (Vorbildwirkung, Berufungsfall); Fallannahme Parzellen |
+| `beein` | öffentliche Belange beeinträchtigt | Ergebnis der Subsumtion |
+| `abs4` | Abs. 4 begünstigt nur bestimmte Vorhaben, z. B. Umnutzung alter Hofgebäude, Wiederaufbau eines abgebrannten Gebäudes; neues Wochenendhaus nicht | § 35 Abs. 4 Satz 1 Nr. 1, 3 BauGB (vereinfacht: Nr. 1 erfasst Gebäude, die nach Abs. 1 Nr. 1 errichtet wurden; Nr. 3 durch Brand, Naturereignisse u. a. zerstörte Gebäude) |
+| `erschl` | auf die Erschließung kommt es nicht mehr an | § 35 Abs. 2 BauGB (kumulative Voraussetzungen) |
+| `erg` | Wochenendhaus unzulässig, Ablehnung rechtmäßig | Ergebnis der Prüfung (bauplanungsrechtlich); Fallannahme formell ordnungsgemäß |
+| `wald` | Waldrecht: Wald darf nur mit Genehmigung gerodet und anders genutzt werden | § 9 Abs. 1 Satz 1 BWaldG (Länder können nach Abs. 3 weiter einschränken; Landeswaldgesetze nicht im Einzelnen gelesen) |
+| `klage` | Verpflichtungsklage möglich, Verweis Klagearten; Erfolg hätte sie nicht | § 42 Abs. 1 Alt. 2 VwGO; § 113 Abs. 5 Satz 1 VwGO; Folge 057; Ergebnis |
+| `tipp` | Prüfung in der Begründetheit, bei der Frage, ob die Baugenehmigung erteilt werden muss | § 113 Abs. 5 Satz 1 VwGO; Klausurkonvention (Anspruch aus der Landesbauordnung, nicht im Einzelnen gelesen) |
+| `tipp1` | zuerst den Bereich, dann die Gruppe | §§ 30, 34, 35; Klausurkonvention |
+| `tipp2` | Katalog in Abs. 3 nicht abschließend: „insbesondere“ | § 35 Abs. 3 Satz 1 BauGB |
+| `sch`–`s7` | Klausurschema | wie oben; Reihenfolge = Klausurkonvention |
+| `merke`/`m2` | Bei privilegierten Vorhaben: stehen Belange entgegen? Wochenendhaus = sonstiges Vorhaben, scheitert schon an einem beeinträchtigten Belang | § 35 Abs. 1, 2, 3 BauGB; für ein neues Wochenendhaus greift Abs. 4 nicht |
+
+## Bewusst nicht behauptet
+
+- Eine Definition der „natürlichen Eigenart der Landschaft“ aus der Rechtsprechung (die bekannte Formel stammt aus älteren BVerwG-Entscheidungen, die nicht im Volltext mit Randnummer verfügbar waren); im Video nur Subsumtion.
+- Dass schon ein einzelnes Gebäude für sich eine Splittersiedlung bildet; das Video stützt Nr. 7 auf die Vorbildwirkung für die Nachbarparzellen („lässt … befürchten“).
+- Die frühere BVerwG-Rechtsprechung zum Wochenendhaus im Außenbereich (1967) – nicht im Volltext gelesen.
+- Gebundene Entscheidung trotz „können“ in § 35 Abs. 2 (gängige Lehre; keine Entscheidung mit Rn. gelesen) – nicht im Video.
+- Gemeindliches Einvernehmen (§ 36 BauGB), Rücksichtnahmegebot, Nachbarschutz, Erschließung im Einzelnen, Außenbereichssatzung (§ 35 Abs. 6), Rückbauverpflichtung (§ 35 Abs. 5), § 246e BauGB, § 37a BauGB.
+- Normnummern der Landesbauordnungen (Genehmigungspflicht, Anspruch auf Baugenehmigung) und der Landeswaldgesetze; Erforderlichkeit eines Widerspruchsverfahrens je Land.
+- Der Inhalt der Windenergie-Privilegierung nach § 249 BauGB (Nr. 5 nur genannt).
+
+## Offene Einschränkungen
+
+- Rn. 22 von BVerwG 4 C 10.11 betrifft ausdrücklich die Verfestigung einer Splittersiedlung; die Übertragung des Gedankens (Vorbildwirkung, Berufungsfall) auf die befürchtete **Entstehung** stützt sich auf Rn. 21 („Vorgang der Zersiedlung eingeleitet“) und ist Subsumtion am Übungsfall.
+- „Fremdkörper“ (Nr. 5) und „kein Bauland für Wochenendhäuser“ (Nr. 1) sind Subsumtion an den Fallannahmen.
+- Die Abgrenzung zu Nr. 4 („nur im Außenbereich ausgeführt werden soll“) stützt sich auf den Wortlaut und § 10 BauNVO, nicht auf eine gelesene Entscheidung.
+- Bauordnungsrecht nur ein Satz und ohne Landesnorm; die Beschreibung verweist auf die Bauordnung des jeweiligen Landes (keine 16-Länder-Normenliste, weil das Video keine Landesnorm prüft).
+
+## Hinweise zum Themenplan (an den Koordinator)
+
+- **Voraussetzung** „Bauplanungs- und Bauordnungsrecht: Zwei Ebenen, ein Bauantrag“: Diese Folge gibt es im Themenplan nicht als eigene Zeile (nächstliegend Nr. 188 „Baugenehmigung Schema: Bauplanungs- und Bauordnungsrecht“, die erst später kommt). Im Video deshalb die zwei Ebenen in einem Satz. Vorschlag `Voraussetzung` = `Klagearten VwGO (Folge 057)`.
+- **Leitentscheidung** leer: Vorschlag `Leitentscheidung` = `BVerwG, Urt. v. 19.4.2012 – 4 C 10.11, Rn. 11, 19–22 (Außenbereich, Splittersiedlung, Vorbildwirkung)`.
+- **Normen** „§ 35 BauGB“: Vorschlag `Normen` = `§§ 29, 30, 34, 35 I–IV BauGB; § 10 BauNVO; § 9 I BWaldG`.
+- **Kernfrage** „… (§ 35 III: Splittersiedlung, Landschaftsbild) …“: Im Wortlaut heißt es „natürliche Eigenart der Landschaft“ bzw. „Orts- und Landschaftsbild verunstaltet“ (Nr. 5); das Video nutzt die natürliche Eigenart. Vorschlag `Kernfrage` = `§ 35 I privilegierte vs. § 35 II sonstige Vorhaben, öffentliche Belange (§ 35 III: Flächennutzungsplan, natürliche Eigenart der Landschaft, Splittersiedlung), begünstigte Vorhaben (§ 35 IV).`
+- **Titel** „Warum dein Ferienhaus im Wald verboten ist“: Im Video geht es um ein Wochenendhaus; Ferienhäuser (§ 10 Abs. 4 BauNVO: wechselnder Personenkreis) sind baurechtlich etwas anderes, im Außenbereich aber ebenso nicht privilegiert. Titel umgangssprachlich vertretbar; Hook und Video sprechen vom Wochenendhaus. Optional `YouTube-Titel` = `Außenbereich § 35 BauGB: Warum dein Wochenendhaus im Wald verboten ist`.
+- **Beschreibung (Anfang)** „meist unzulässig … Bundesweit erklärt.“ fachlich zutreffend.
+- **Thumbnail** „HAUS IM WALD?“ / „AUßENBEREICH“ zutreffend (Hinweis: „AUßENBEREICH“ in Versalien mit ß; der Generator rendert es fehlerfrei).
