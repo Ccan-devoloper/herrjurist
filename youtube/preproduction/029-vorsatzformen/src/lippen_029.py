@@ -7,8 +7,11 @@ FF = imageio_ffmpeg.get_ffmpeg_exe()
 MP4 = "../out/029-Vorsatzformen-Hauptfilm.mp4"
 # name: (start, ende, (x0, y0, x1, y1))
 F = {
-    "heike_volker": (12.3, 17.4, (220, 430, 1440, 600)),        # Heike redet, dann Volker; der jeweils andere hat den Mund zu
-    "heike_ruft": (26.7, 28.9, (220, 430, 1440, 600)),
+    "heike_h1": (12.3, 15.0, (230, 440, 430, 570)),             # Heike redet
+    "volker_bei_heike": (12.3, 15.0, (1230, 440, 1430, 570)),   # Volker hört zu: Mund zu
+    "volker_h1": (14.9, 17.4, (1230, 440, 1430, 570)),           # Volker redet
+    "heike_bei_volker": (14.9, 17.4, (230, 440, 430, 570)),     # Heike hört zu: Mund zu
+    "heike_ruft": (26.7, 28.9, (230, 440, 430, 570)),
     "volker_v1": (92.1, 95.0, (1690, 390, 1890, 540)),
     "volker_v2": (120.2, 123.7, (1690, 390, 1890, 540)),
     "volker_v3": (174.4, 177.4, (1690, 390, 1890, 540)),

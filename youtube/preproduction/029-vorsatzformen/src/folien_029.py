@@ -233,7 +233,7 @@ wl15, y15 = wortlaut(100, y303 + 120, 1060, P15, "§ 15 StGB", beim("p15", "Para
 folie([("p303", f"{PA} › objektiver Tatbestand"), ("p15", f"{PA} › subjektiver Tatbestand: Vorsatz, § 15 StGB")], [
     *tafel("p303", "Sachbeschädigung"),
     *wl303,
-    ok(135, y303 + 47, "objektiv", gr=22), z("Objektiv: fremde Sache, beschädigt", 175, y303 + 24, "objektiv", "Bold", 36),
+    ok(135, y303 + 47, beim("objektiv", "beschädigt"), gr=22), z("Objektiv: fremde Sache, beschädigt", 175, y303 + 24, beim("objektiv", "fremde"), "Bold", 36),
     *wl15,
     fl_block(110, y15 + 30, 1040, 100, GELB, "keinef", [("keine fahrlässige Sachbeschädigung", "ExtraBold", 38, INK)]),
     *fig("VO", 1780, BR, 430, [("p303", "denkt"), ("p15", "ertappt")]),
@@ -347,7 +347,7 @@ folie([("thomas", PT), ("th_wiss", f"{PT} › direkter Vorsatz")], [
     z("(Lehrbuchdeutung)", 110, 640, beim("th_ziel", "Lehrbuchdeutung"), size=30, farbe=TEXT),
     ok(135, 723, "th_wiss", gr=22), z("Plan aufgegangen: sicher, und er wusste es", 175, 700, "th_wiss", "Bold", 36),
     fl_block(110, 775, 1040, 90, LILA, beim("th_wiss", "direkter"), [("direkter Vorsatz", "ExtraBold", 38, INK)]),
-    ficon("tabler", "ship", 1560, 565, 300, "thomas", fuell=WEISS, nebenfarbe=BLAU),
+    ficon("tabler", "ship", 1560, 565, 300, beim("fass", "Auswandererschiff"), fuell=WEISS, nebenfarbe=BLAU),
     hart(linienzug([(1290, 600), (1380, 580), (1470, 600), (1560, 580), (1650, 600), (1740, 580), (1830, 600)], beim("plan", "Ozean"),
                    breite=8, farbe=BLAU)),
     pl("Ozean", 1560, 620, beim("plan", "Ozean"), fill=BLAU, size=28, anker="m"),
@@ -356,7 +356,7 @@ folie([("thomas", PT), ("th_wiss", f"{PT} › direkter Vorsatz")], [
     ficon("tabler", "file-certificate", 1660, 860, 90, beim("fass", "versichertes"), fuell=WEISS),
     ficon("tabler", "coins", 1790, 860, 100, beim("plan", "Versicherungssumme"), fuell=GELB),
     pl("Versicherungssumme", 1720, 900, beim("plan", "Versicherungssumme"), fill=GELB, size=26, anker="m"),
-    pl("Bremerhaven 1875", 1560, 100, "thomas", fill=WEISS, size=30, anker="m"),
+    pl("Bremerhaven 1875", 1560, 100, beim("thomas", "Bremerhaven"), fill=WEISS, size=30, anker="m"),
     pl("sicher vorausgesehen", 1560, 180, "th_wiss", fill=LILA, size=30, anker="m"),
 ])
 
@@ -460,7 +460,7 @@ folie([("irrtum", f"{PA} › Gegenstück: Tatumstandsirrtum, § 16 Abs. 1 StGB")
     fl_block(110, y16 + 175, 1040, 90, GELB, beim("p16b", "und"), [("fahrlässige Sachbeschädigung: gibt es nicht", "ExtraBold", 36, INK)]),
     ficon("tabler", "map", 1400, 420, 150, beim("irrtum", "Grenzplan"), fuell=WEISS),
     pl("alter Grenzplan", 1400, 450, beim("irrtum", "Grenzplan"), fill=GELB, size=28, anker="m"),
-    zaun(1400, 760, 180, "irrtum"),
+    zaun(1400, 760, 180, beim("irrtum", "Zaun")),
     pl("fremd", 1400, 790, "fremd", fill=ROT, size=28, anker="m"),
     *fig("VO", 1760, BR, 430, [("irrtum", "denkt"), ("fremd", "ertappt")]),
     name("VO", 1760, "irrtum", unten=BR),
