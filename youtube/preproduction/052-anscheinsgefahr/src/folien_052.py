@@ -204,11 +204,11 @@ folie([(NULL, "Fall · Sonntagabend im Mietshaus")], [
     pl("„Hilfe!“", 1560, 330, beim("schrei2", "Hilfe"), fill=ROT, size=36, anker="m", bis=STILL),
     pl("still", 1560, 330, STILL, fill=WEISS, size=32, anker="m", bis=WIEDER),
     ficon("ph", "speaker-high", 1290, 520, 120, WIEDER, fuell=ROT),
-    pl("Schreie", 1290, 560, WIEDER, fill=ROT, size=30, anker="m"),
+    pl("wieder Schreie", 1290, 560, WIEDER, fill=ROT, size=30, anker="m"),
     pl("„Hilfe!“", 1560, 330, WIEDER, fill=ROT, size=36, anker="m"),
     ficon("tabler", "device-mobile", 860, 520, 60, "ja1", fuell=WEISS),
-    blase("sprech", 820, 230, "ja1", 520, 300, inhalt=["Polizei? Bei meinem Nachbarn schreit", "eine Frau um Hilfe! Er wohnt allein.",
-                                                      "Bitte kommen Sie schnell!"], textsize=30, figur=JAb),
+    blase("sprech", 780, 210, "ja1", 640, 245, inhalt=["Polizei? Bei meinem Nachbarn schreit", "eine Frau um Hilfe! Er wohnt allein.",
+                                                      "Bitte kommen Sie schnell!"], textsize=29, figur=JAb),
 ])
 
 # B Fall: Die Polizei an der Tür ------------------------------------------------------------------------------------------
@@ -226,7 +226,7 @@ folie([("polizei", "Fall · Die Polizei an der Tür")], [
     pl("Böttcher", TX, TUER_OBEN + 70, "polizei", fill=GELB, size=26, anker="m", bis=beim("tuer", "auf")),
     ficon("ph", "door-open", TX, BODEN - 2, 300, beim("tuer", "auf"), fuell=WEISS),
     # Ahrens kommt von rechts
-    bewegt(peep_voll("AH_ruhig", AHX, BODEN, FH, "polizei", anim="cut", bis=RUF), "polizei", beim("polizei", "Ahrens"), 300),
+    peep_voll("AH_ruhig", AHX, BODEN, FH, beim("polizei", "Ahrens"), anim="pop", bis=RUF),
     *fig("AH", AHX, BODEN, FH, [(RUF, "entschl")], bis="ah1", erst="cut"),
     *redet("AH_redet", AHX, BODEN, FH, "ah1", "tuer"),
     *fig("AH", AHX, BODEN, FH, [("tuer", "ruhig")], bis="drin", erst="cut"),
@@ -237,7 +237,6 @@ folie([("polizei", "Fall · Die Polizei an der Tür")], [
     szene(ficon("ph", "hand-fist", 960, 570, 80, KLO, fuell=WEISS, bis="tuer"), "052klopfen*", 0.9, -0.15),
     pl("klopft", 1090, 520, KLO, fill=WEISS, size=28, anker="m", bis="tuer"),
     pl("ruft", 1090, 610, RUF, fill=WEISS, size=28, anker="m", bis="tuer"),
-    nein(TX + 80, TUER_OBEN + 200, NIEMAND, gr=26),
     pl("niemand öffnet", TX, TUER_OBEN - 60, NIEMAND, fill=WEISS, size=28, anker="m", bis="tuer"),
     ficon("ph", "speaker-high", 470, 600, 100, WEITER, fuell=ROT),
     pl("„Hilfe!“", 470, 400, WEITER, fill=ROT, size=34, anker="m"),
@@ -257,7 +256,7 @@ folie([("drin", "Fall · In der Wohnung")], [
     pl("Drinnen: Herr Böttcher allein vor dem Fernseher", 70, 40, "drin", fill=GELB, size=38),
     karte(220, BODEN - 140, 300, 138, "drin", fill=HOLZ, rund=10, schatten=0, rand=4),
     ficon("ph", "television", 370, BODEN - 140, 280, "drin", fuell=BLAU),
-    ficon(HC, "clapper-board", 330, BODEN - 260, 90, beim("drin", "Krimi"), fuell=WEISS),
+    ficon(HC, "clapper-board", 340, BODEN - 190, 80, beim("drin", "Krimi"), fuell=WEISS),
     pl("Krimi", 370, BODEN - 520, beim("drin", "Krimi"), fill=WEISS, size=30, anker="m"),
     ficon("ph", "speaker-high", 600, BODEN - 330, 100, beim("drin", "voller"), fuell=ROT),
     pl("volle Lautstärke", 600, BODEN - 520, beim("drin", "voller"), fill=ROT, size=28, anker="m"),
@@ -353,7 +352,7 @@ folie([("egl", f"{E1} › 1. Ermächtigungsgrundlage"), ("wl41", f"{E1} › 1. E
     zit("§ 8 Abs. 1 PolG NRW: „soweit nicht die §§ 9 bis 46 … besonders regeln“", 195, 280,
         beim("egl", "einundvierzig")),
     *w41,
-    ok(150, w41_y + 63, "nacht", gr=20),
+    ok(150, w41_y + 63, beim("nacht", "nachts"), gr=20),
     z("§ 41 Abs. 2: auch nachts zulässig (Fälle Nr. 3 und 4)", 195, w41_y + 40, beim("nacht", "nachts"), "Bold", 32),
     ficon("ph", "door-open", IX, IU, 150, "egl", fuell=WEISS, bis="nacht"),
     ficon("tabler", "moon-stars", IX, IU, 130, "nacht", fuell=GELB),
@@ -516,7 +515,7 @@ Z39 = ["„Ein Schaden, den jemand durch Maßnahmen der Ordnungsbehörden",
        "b) durch rechtswidrige Maßnahmen, gleichgültig, ob die",
        "Ordnungsbehörden ein Verschulden trifft oder nicht,",
        "entstanden ist.“"]
-w39, w39_y = wortlaut(80, 215, 1100, W39, "§ 39 Abs. 1 OBG NRW, über § 67 PolG NRW", "wl39", marken=[
+w39, w39_y = wortlaut(80, 215, 1100, W39, "§ 39 Abs. 1 OBG NRW, über § 67 PolG NRW", beim("wl39", "Danach"), marken=[
     ("ist zu ersetzen,", beim("wl39", "ersetzen")), ("infolge einer Inanspruchnahme nach § 19", beim("wl39", "Inanspruchnahme")),
     ("durch rechtswidrige Maßnahmen,", beim("wl39", "rechtswidrige"))], size=29, zeilen=Z39)
 folie([("entsch", f"{E2} · Entschädigung, § 67 PolG NRW, § 39 I OBG NRW"),
