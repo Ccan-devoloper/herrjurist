@@ -302,7 +302,7 @@ folie([("p212", "A. Totschlag, § 212 StGB"), ("p211", "A. Mord, § 211 StGB ›
     fl_block(110, 770, 1040, 90, GELB, "lebensl", [("Strafe: lebenslange Freiheitsstrafe, § 211 Abs. 1", "ExtraBold", 32, INK)]),
     *paar("p212", ("NO", "still"), ("FR", "still"), li_folge=[("ernst", "p211")], re_folge=[("ernst", "p211")]),
     pl("§ 212 StGB", MB, 160, beim("p212", "Paragraf"), fill=WEISS, size=30, anker="m", bis="p211"),
-    ficon("tabler", "users", MB, 380, 110, "beide", fuell=BLAU, bis="p211"),
+    ficon("tabler", "circle-check", MB, 380, 100, "beide", fuell=GRUEN, bis="p211"),
     pl("+ Mordmerkmal?", MB, 160, "p211", fill=GELB, size=30, anker="m", anim="cut", bis="streit"),
     ficon("tabler", "scale", MB, 380, 110, "streit", fuell=LILA, bis="lebensl"),
     pl("Streit", MB, 160, "streit", fill=LILA, size=30, anker="m", anim="cut", bis="p28"),
@@ -405,7 +405,7 @@ folie([("heim", f"{P2} › heimtückisch"), ("arglos", f"{P2} › heimtückisch:
     fund("BGH, Urt. v. 24.9.2025 – 5 StR 423/25, Rn. 13", 150, 628, beim("wehrlos", "aufgehoben")),
     *figur_kette("HO", XS, "heim", "ruhig", [("ernst", "wehrlos")]),
     pl("heimtückisch", XS, 160, "heim", fill=BLAU, size=30, anker="m", bis="arglos"),
-    ficon("tabler", "user-question", XS, 380, 100, "arglos", fuell=WEISS, bis="wehrlos"),
+    ficon("tabler", "help-circle", XS, 380, 100, "arglos", fuell=WEISS, bis="wehrlos"),
     pl("arglos?", XS, 160, "arglos", fill=WEISS, size=30, anker="m", anim="cut", bis="wehrlos"),
     ficon("tabler", "hand-stop", XS, 380, 100, "wehrlos", fuell=WEISS, anim="cut"),
     pl("wehrlos?", XS, 160, "wehrlos", fill=WEISS, size=30, anker="m", anim="cut"),
@@ -449,7 +449,7 @@ folie([("grausam", f"{P2} › grausam"), ("gemein", f"{P2} › mit gemeingefähr
     ficon("tabler", "alert-triangle", 1560, 380, 110, beim("grausam", "Schmerzen"), fuell=GELB, bis="gemein"),
     pl("über das erforderliche Maß", 1560, 430, beim("grausam", "über"), fill=WEISS, size=28, anker="m", bis="gemein"),
     pl("gemeingefährlich", 1560, 160, "gemein", fill=BLAU, size=30, anker="m", anim="cut"),
-    ficon("tabler", "users-group", 1560, 400, 150, beim("gemein", "Mehrzahl"), fuell=WEISS, anim="cut"),
+    ficon("tabler", "arrows-maximize", 1560, 400, 130, beim("gemein", "Mehrzahl"), fuell=WEISS, anim="cut"),
     pl("Gefahr nicht in seiner Gewalt", 1560, 450, beim("gemein", "weil"), fill=WEISS, size=28, anker="m", anim="cut"),
 ]))
 

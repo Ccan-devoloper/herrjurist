@@ -35,7 +35,7 @@ Quelle: `bildhalt_manifest.json` (123 Bildhalte, davon 123 eigenständig), `cues
 | 29 | 1:06.54 | 1:09.06 | Carla (Erzählerin/Lexi) | Paragraf zweihundertzwölf: Wer einen | A. Totschlag, § 212 StGB | `d1d2d78fb803` |
 | 30 | 1:09.06 | 1:10.22 | Carla (Erzählerin/Lexi) | Menschen tötet, | A. Totschlag, § 212 StGB | `0dab197e1ad5` |
 | 31 | 1:10.22 | 1:11.86 | Carla (Erzählerin/Lexi) | ohne Mörder zu sein. | A. Totschlag, § 212 StGB | `91e1e4b72921` |
-| 32 | 1:11.86 | 1:16.02 | Carla (Erzählerin/Lexi) | Vorsätzlich einen Menschen getötet haben Norbert und Friederike beide. | A. Totschlag, § 212 StGB | `4d3cd1b38cbf` |
+| 32 | 1:11.86 | 1:16.02 | Carla (Erzählerin/Lexi) | Vorsätzlich einen Menschen getötet haben Norbert und Friederike beide. | A. Totschlag, § 212 StGB | `29388fc9316d` |
 | 33 | 1:16.02 | 1:20.18 | Carla (Erzählerin/Lexi) | Mord ist es erst, wenn zusätzlich ein Mordmerkmal vorliegt. | A. Mord, § 211 StGB › zusätzlich ein Mordmerkmal | `31cda622ca4f` |
 | 34 | 1:20.38 | 1:21.78 | Carla (Erzählerin/Lexi) | Lehre sieht im Mord eine | A. Mord und Totschlag › Verhältnis: Streit | `36a383f985f4` |
 | 35 | 1:21.78 | 1:24.06 | Carla (Erzählerin/Lexi) | Qualifikation des Totschlags, der | A. Mord und Totschlag › Verhältnis: Streit | `f8eada28938e` |
@@ -72,9 +72,9 @@ Quelle: `bildhalt_manifest.json` (123 Bildhalte, davon 123 eigenständig), `cues
 | 66 | 3:02.74 | 3:03.94 | Carla (Erzählerin/Lexi) | Zweite Gruppe. | B. 2. Gruppe › heimtückisch | `5cd724210d20` |
 | 67 | 3:03.94 | 3:07.98 | Carla (Erzählerin/Lexi) | Heimtückisch handelt, wer in feindlicher Willensrichtung die Arg- und | B. 2. Gruppe › heimtückisch | `ee4f70438c0a` |
 | 68 | 3:07.98 | 3:12.10 | Carla (Erzählerin/Lexi) | Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt. | B. 2. Gruppe › heimtückisch | `4c5d835465c7` |
-| 69 | 3:12.10 | 3:14.86 | Carla (Erzählerin/Lexi) | Arglos ist, wer bei Beginn des ersten mit | B. 2. Gruppe › heimtückisch: arglos | `bdc8bd083562` |
-| 70 | 3:14.86 | 3:17.74 | Carla (Erzählerin/Lexi) | Tötungsvorsatz geführten Angriffs nicht mit einem | B. 2. Gruppe › heimtückisch: arglos | `6387aa7e3d9e` |
-| 71 | 3:17.74 | 3:19.86 | Carla (Erzählerin/Lexi) | erheblichen Angriff rechnet. | B. 2. Gruppe › heimtückisch: arglos | `c119b70efb9c` |
+| 69 | 3:12.10 | 3:14.86 | Carla (Erzählerin/Lexi) | Arglos ist, wer bei Beginn des ersten mit | B. 2. Gruppe › heimtückisch: arglos | `d7b0d757d6d4` |
+| 70 | 3:14.86 | 3:17.74 | Carla (Erzählerin/Lexi) | Tötungsvorsatz geführten Angriffs nicht mit einem | B. 2. Gruppe › heimtückisch: arglos | `08ac4d9e8fec` |
+| 71 | 3:17.74 | 3:19.86 | Carla (Erzählerin/Lexi) | erheblichen Angriff rechnet. | B. 2. Gruppe › heimtückisch: arglos | `70d66799a6c5` |
 | 72 | 3:19.86 | 3:24.38 | Carla (Erzählerin/Lexi) | Wehrlos ist, wessen Verteidigungsfähigkeit infolge der Arglosigkeit | B. 2. Gruppe › heimtückisch: wehrlos | `9da90059d5c9` |
 | 73 | 3:24.38 | 3:27.62 | Carla (Erzählerin/Lexi) | aufgehoben oder erheblich eingeschränkt ist. | B. 2. Gruppe › heimtückisch: wehrlos | `bb74d877463c` |
 | 74 | 3:27.92 | 3:31.65 | Carla (Erzählerin/Lexi) | Und der Täter muss diese Lage bewusst ausnutzen. | B. 2. Gruppe › heimtückisch: bewusst ausgenutzt | `bd81acd9601e` |
@@ -87,9 +87,9 @@ Quelle: `bildhalt_manifest.json` (123 Bildhalte, davon 123 eigenständig), `cues
 | 81 | 3:51.36 | 3:55.08 | Carla (Erzählerin/Lexi) | Schmerzen oder Qualen zufügt, die nach Stärke und Dauer | B. 2. Gruppe › grausam | `84b03194a7a1` |
 | 82 | 3:55.08 | 3:58.84 | Carla (Erzählerin/Lexi) | über das für die Tötung erforderliche Maß hinausgehen. | B. 2. Gruppe › grausam | `5c26f68e6f0f` |
 | 83 | 3:58.84 | 4:02.56 | Carla (Erzählerin/Lexi) | Gemeingefährlich ist ein Mittel, das in der konkreten Lage eine | B. 2. Gruppe › mit gemeingefährlichen Mitteln | `ea47679f01bb` |
-| 84 | 4:02.56 | 4:05.96 | Carla (Erzählerin/Lexi) | Mehrzahl von Menschen an Leib und Leben gefährden kann, | B. 2. Gruppe › mit gemeingefährlichen Mitteln | `cccd9afd1f67` |
-| 85 | 4:05.96 | 4:08.80 | Carla (Erzählerin/Lexi) | weil der Täter die Ausdehnung der Gefahr nicht in seiner | B. 2. Gruppe › mit gemeingefährlichen Mitteln | `58446d75c77a` |
-| 86 | 4:08.80 | 4:10.58 | Carla (Erzählerin/Lexi) | Gewalt hat. | B. 2. Gruppe › mit gemeingefährlichen Mitteln | `5a39ab9e2686` |
+| 84 | 4:02.56 | 4:05.96 | Carla (Erzählerin/Lexi) | Mehrzahl von Menschen an Leib und Leben gefährden kann, | B. 2. Gruppe › mit gemeingefährlichen Mitteln | `ad70ab732dc4` |
+| 85 | 4:05.96 | 4:08.80 | Carla (Erzählerin/Lexi) | weil der Täter die Ausdehnung der Gefahr nicht in seiner | B. 2. Gruppe › mit gemeingefährlichen Mitteln | `3e173eda25ce` |
+| 86 | 4:08.80 | 4:10.58 | Carla (Erzählerin/Lexi) | Gewalt hat. | B. 2. Gruppe › mit gemeingefährlichen Mitteln | `b09692286324` |
 | 87 | 4:10.88 | 4:12.18 | Carla (Erzählerin/Lexi) | Dritte Gruppe. Zur | B. 3. Gruppe › Ermöglichungsabsicht | `7bf3fa5a84c7` |
 | 88 | 4:12.18 | 4:17.42 | Carla (Erzählerin/Lexi) | Ermöglichung einer anderen Straftat tötet, wer einen Menschen tötet, um ein weiteres | B. 3. Gruppe › Ermöglichungsabsicht | `c422550ed927` |
 | 89 | 4:17.42 | 4:19.74 | Carla (Erzählerin/Lexi) | kriminelles Ziel zu erreichen. | B. 3. Gruppe › Ermöglichungsabsicht | `966cf859615a` |
