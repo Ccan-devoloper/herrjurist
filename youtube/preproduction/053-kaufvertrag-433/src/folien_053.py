@@ -180,7 +180,8 @@ def boden(cue, hart_=False):
 
 
 def rad(cx, unten, breite, cue, **k):
-    return ficon("tabler", "bike", cx, unten, breite, cue, fuell=RAD, **k)
+    """Ingas Rad: Phosphor „bicycle“ (MIT), beide Räder rosa."""
+    return ficon("ph", "bicycle", cx, unten, breite, cue, fuell=RAD, nebenfarbe=RAD, **k)
 
 
 def inga(cx, unten, hoehe, folge, **k):
@@ -210,14 +211,17 @@ folie([(NULL, "Fall · Die Anzeige"), (BESUCH, "Fall · Freitag im Vorgarten")],
     *redet("IN_redet", INX, BODEN, FH, "i1", "l1"),
     *inga(INX, BODEN, FH, [("l1", "froh")], bis="sams", erst="cut"),
     hart(ns("Inga, Käuferin", INX, BODEN, NULL, IN_F)),
+    hart(ficon("tabler", "search", 900, 560, 200, NULL, fuell=WEISS, bis=beim("anzeige", "Internet"))),
+    hart(rad(870, BODEN - 2, 280, NULL, bis=beim("anzeige", "Internet"))),
+    hart(pl("gebraucht", 870, 600, NULL, fill=WEISS, size=30, anker="m", bis=beim("anzeige", "Internet"))),
     # die Anzeige im Internet
     bis_(karte(560, 200, 640, 420, beim("anzeige", "Internet"), fill=(226, 236, 252, 255)), BESUCH),
     ficon("tabler", "device-mobile", 640, 300, 60, beim("anzeige", "Internet"), fuell=WEISS, bis=BESUCH),
     pl("Anzeige im Internet", 700, 230, beim("anzeige", "Internet"), fill=WEISS, size=30, bis=BESUCH),
-    rad(880, 500, 280, beim("anzeige", "Trekkingrad"), bis=BESUCH),
-    pl("altes Trekkingrad", 880, 520, beim("anzeige", "Trekkingrad"), fill=WEISS, size=30, anker="m", bis=BESUCH),
-    pl("250 €", 1080, 250, beim("anzeige", "zweihundertfünfzig"), fill=GELB, size=34, anker="m", bis=BESUCH),
-    pl("Herr Lüders", 880, 340, beim("anzeige", "Herr"), fill=BLAU, size=30, anker="m", bis=BESUCH),
+    rad(880, 540, 280, beim("anzeige", "Trekkingrad"), bis=BESUCH),
+    pl("altes Trekkingrad", 880, 555, beim("anzeige", "Trekkingrad"), fill=WEISS, size=30, anker="m", bis=BESUCH),
+    pl("250 €", 1110, 400, beim("anzeige", "zweihundertfünfzig"), fill=GELB, size=34, anker="m", bis=BESUCH),
+    pl("Herr Lüders", 880, 295, beim("anzeige", "Herr"), fill=BLAU, size=30, anker="m", bis=BESUCH),
     # Freitag im Vorgarten
     pl("Freitag, im Vorgarten von Herrn Lüders", 70, 40, BESUCH, fill=GELB, size=44),
     ficon("tabler", "home", *HAUS, BESUCH, fuell=GELB),
@@ -493,7 +497,7 @@ folie([("vgk", "Ausblick · Verbrauchsgüterkauf, § 474 Abs. 1 BGB"), ("p475", 
     z("keine Leistungszeit bestimmt: Übergabe", 150, 405, beim("p475", "Ist"), size=34),
     z("spätestens 30 Tage nach Vertragsschluss", 150, 455, beim("p475", "spätestens"), size=34),
     nein(140, 570, "priv", gr=22), z("Herr Lüders verkauft privat: gilt hier nicht", 185, 550, "priv", "Bold", 34),
-    ficon("tabler", "building-store", X1 + 150, 380, 140, "vgk", fuell=BLAU, bis="priv"),
+    ficon("tabler", "building-store", X1 + 150, 380, 140, beim("vgk", "Unternehmer"), fuell=BLAU, bis="priv"),
     pl("Unternehmer", X1 + 150, 160, beim("vgk", "Unternehmer"), fill=BLAU, size=28, anker="m", bis="priv"),
     ficon("tabler", "home", X1 + 150, 380, 130, "priv", fuell=GELB),
     pl("privat", X1 + 150, 160, "priv", fill=GELB, size=28, anker="m"),
