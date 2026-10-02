@@ -2,7 +2,7 @@
 
 **Stand:** 01.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_027.py`](src/skript_027.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
 **Format:** Fr · Klausurpraxis · Zivilrecht/Sachenrecht, Themenplan-Format „Abgrenzung“. Frei erfundener Fall nach dem Plan-Hook („Dein Mitbewohner hat dein Fahrrad im Keller – er besitzt es, aber es gehört dir“): Anke leiht ihrem Mitbewohner Jürgen ihr Rad bis Ende September; er schließt es in sein Kellerabteil. Jürgen jobbt im Fahrradladen von Frau Kunze (Besitzdiener). Ein Unbekannter schiebt das Rad aus dem Keller davon, Jürgen verfolgt ihn und nimmt es ihm wieder ab. Ablauf: Fall → Frage → Sachverhalt → Eigentum (§ 903) → Besitz (§ 854 I) → mittelbarer Besitz (§ 868) → Eigen-/Fremdbesitz (§ 872) → Besitzdiener (§ 855), Erbenbesitz (§ 857) → verbotene Eigenmacht (§ 858) → Selbsthilfe (§ 859 II), Ergebnis → Gegenfall: Anke nimmt ihr Rad eigenmächtig zurück (§§ 858, 861, 863; Gegenprobe §§ 985, 986) → Ausblick §§ 929 S. 1, 930, 931 → Klausurtipp → Schema § 861 → Merksatz.
-**Länge:** Hauptfilm 6:43,7 (5.695 Zeichen, Grenze 6.200). Begründung in [`ABNAHME.md`](ABNAHME.md).
+**Länge:** Hauptfilm 6:43,3 (5.693 Zeichen, Grenze 6.200). Begründung in [`ABNAHME.md`](ABNAHME.md).
 
 ## Besetzung
 

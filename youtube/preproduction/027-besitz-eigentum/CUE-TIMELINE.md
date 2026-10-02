@@ -123,16 +123,16 @@ Quelle: `bildhalt_manifest.json` (132 Bildhalte, davon 131 eigenständig), `cues
 | 117 | 5:42.94 | 5:44.98 | Carla (Erzählerin/Lexi) | Eigen- oder Fremdbesitz. | Klausurtipp · Besitz je Person | `95f156a16096` |
 | 118 | 5:44.98 | 5:50.06 | Carla (Erzählerin/Lexi) | Und prüfe bei Paragraf achthunderteinundsechzig nicht, wem die Sache gehört. | Klausurtipp · § 861 ohne Eigentum | `43bf086a54ec` |
 | 119 | 5:50.06 | 5:54.96 | Carla (Erzählerin/Lexi) | Der Satz, Anke ist doch Eigentümerin, gehört dort nicht hin. | Klausurtipp · § 861 ohne Eigentum | `cf6bd8af3e2a` |
-| 120 | 5:54.96 | 6:01.72 | Carla (Erzählerin/Lexi) | Dein Klausurschema: Jürgen gegen Anke aus Paragraf achthunderteinundsechzig Absatz eins. | Klausurschema | `593623db5555` |
-| 121 | 6:01.72 | 6:04.92 | Carla (Erzählerin/Lexi) | Römisch eins: Jürgen war Besitzer. | Klausurschema | `4b92ee8e3861` |
-| 122 | 6:04.92 | 6:09.32 | Carla (Erzählerin/Lexi) | Römisch zwei: Besitz durch verbotene Eigenmacht entzogen. | Klausurschema | `40db7f280df4` |
-| 123 | 6:09.32 | 6:13.56 | Carla (Erzählerin/Lexi) | Römisch drei: Anke besitzt ihm gegenüber fehlerhaft. | Klausurschema | `610b0fa9dbf2` |
-| 124 | 6:13.56 | 6:19.68 | Carla (Erzählerin/Lexi) | Römisch vier: kein Ausschluss nach Paragraf achthunderteinundsechzig Absatz zwei und kein | Klausurschema | `759565098f38` |
-| 125 | 6:19.68 | 6:23.04 | Carla (Erzählerin/Lexi) | Erlöschen nach Paragraf achthundertvierundsechzig. | Klausurschema | `fda0aee8856d` |
-| 126 | 6:23.04 | 6:28.28 | Carla (Erzählerin/Lexi) | Römisch fünf: Einwendungen nur nach Paragraf achthundertdreiundsechzig. | Klausurschema | `8d6866b85c26` |
-| 127 | 6:28.28 | 6:33.38 | Carla (Erzählerin/Lexi) | Ergebnis: Anke muss Jürgen den Besitz wieder einräumen. | Klausurschema | `09a8fa6a3696` |
-| 128 | 6:33.58 | 6:35.62 | Carla (Erzählerin/Lexi) | Merke: Eigentum ist das | Merksatz | `481bb1370761` |
-| 129 | 6:35.62 | 6:37.58 | Carla (Erzählerin/Lexi) | rechtliche Haben, Besitz das | Merksatz | `be00f08ff981` |
-| 130 | 6:37.58 | 6:38.73 | Carla (Erzählerin/Lexi) | tatsächliche. | Merksatz | `1e1a14c20f4b` |
-| 131 | 6:38.73 | 6:41.22 | Carla (Erzählerin/Lexi) | Der Besitz wird für sich geschützt, sogar | Merksatz | `8782c922b6f6` |
-| 132 | 6:41.22 | 6:44.09 | Carla (Erzählerin/Lexi) | gegen die Eigentümerin. | Merksatz | `35385bdb084d` |
+| 120 | 5:54.96 | 6:01.80 | Carla (Erzählerin/Lexi) | Dein Klausurschema: Jürgen gegen Anke aus Paragraf achthunderteinundsechzig Absatz eins. | Klausurschema | `593623db5555` |
+| 121 | 6:01.80 | 6:04.84 | Carla (Erzählerin/Lexi) | Römisch eins: Jürgen war Besitzer. | Klausurschema | `4b92ee8e3861` |
+| 122 | 6:04.84 | 6:09.16 | Carla (Erzählerin/Lexi) | Römisch zwei: Besitz durch verbotene Eigenmacht entzogen. | Klausurschema | `40db7f280df4` |
+| 123 | 6:09.16 | 6:13.32 | Carla (Erzählerin/Lexi) | Römisch drei: Anke besitzt Jürgen gegenüber fehlerhaft. | Klausurschema | `3a1063aeadb6` |
+| 124 | 6:13.32 | 6:19.20 | Carla (Erzählerin/Lexi) | Römisch vier: kein Ausschluss nach Paragraf achthunderteinundsechzig Absatz zwei und kein | Klausurschema | `d0e1d3ba791d` |
+| 125 | 6:19.20 | 6:22.40 | Carla (Erzählerin/Lexi) | Erlöschen nach Paragraf achthundertvierundsechzig. | Klausurschema | `16cd90c73246` |
+| 126 | 6:22.40 | 6:27.67 | Carla (Erzählerin/Lexi) | Römisch fünf: Einwendungen nur nach Paragraf achthundertdreiundsechzig. | Klausurschema | `df97e672c0e9` |
+| 127 | 6:27.67 | 6:32.58 | Carla (Erzählerin/Lexi) | Ergebnis: Anke muss Jürgen den Besitz wieder einräumen. | Klausurschema | `0c2020485bfb` |
+| 128 | 6:32.78 | 6:34.82 | Carla (Erzählerin/Lexi) | Merke: Eigentum ist das | Merksatz | `481bb1370761` |
+| 129 | 6:34.82 | 6:36.78 | Carla (Erzählerin/Lexi) | rechtliche Haben, Besitz das | Merksatz | `be00f08ff981` |
+| 130 | 6:36.78 | 6:37.93 | Carla (Erzählerin/Lexi) | tatsächliche. | Merksatz | `1e1a14c20f4b` |
+| 131 | 6:37.93 | 6:40.42 | Carla (Erzählerin/Lexi) | Der Besitz wird für sich geschützt, sogar | Merksatz | `8782c922b6f6` |
+| 132 | 6:40.42 | 6:43.29 | Carla (Erzählerin/Lexi) | gegen die Eigentümerin. | Merksatz | `35385bdb084d` |
