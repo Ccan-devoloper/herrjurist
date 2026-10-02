@@ -1,6 +1,6 @@
 # Folge 033 · Cue-Timeline (Ton-Bild-Gate)
 
-Quelle: `bildhalt_manifest.json` (141 Bildhalte, davon 141 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
+Quelle: `bildhalt_manifest.json` (142 Bildhalte, davon 142 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
 
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
@@ -67,17 +67,17 @@ Quelle: `bildhalt_manifest.json` (141 Bildhalte, davon 141 eigenständig), `cues
 | 61 | 2:41.54 | 2:43.02 | Carla (Erzählerin/Lexi) | Nur festhalten? | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `d544d62be4f1` |
 | 62 | 2:43.02 | 2:45.43 | Carla (Erzählerin/Lexi) | Torsten zerrte immer fester. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `4586b5688351` |
 | 63 | 2:45.43 | 2:46.62 | Carla (Erzählerin/Lexi) | fester. Und die Polizei wäre | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `764244a231f1` |
-| 64 | 2:46.62 | 2:48.02 | Carla (Erzählerin/Lexi) | zu spät gekommen. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `d0682174fb9b` |
-| 65 | 2:48.02 | 2:52.14 | Carla (Erzählerin/Lexi) | Auf ein milderes Mittel muss Ulrike nur zurückgreifen, wenn seine Wirkung | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `b9f2d30a321c` |
-| 66 | 2:52.14 | 2:53.78 | Carla (Erzählerin/Lexi) | unzweifelhaft ist. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `52661005f99f` |
-| 67 | 2:53.78 | 2:56.78 | Carla (Erzählerin/Lexi) | Fliehen oder die Tasche loslassen muss sie nicht, denn | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `10354ce277ae` |
-| 68 | 2:56.78 | 2:59.54 | Carla (Erzählerin/Lexi) | damit würde sie den Angriff einfach hinnehmen. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `3dafd07c2eba` |
-| 69 | 2:59.54 | 3:02.30 | Carla (Erzählerin/Lexi) | Der Tritt war erforderlich. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `fd5e6b8b1227` |
+| 64 | 2:46.62 | 2:48.02 | Carla (Erzählerin/Lexi) | zu spät gekommen. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `14ab0e2f7765` |
+| 65 | 2:48.02 | 2:52.14 | Carla (Erzählerin/Lexi) | Auf ein milderes Mittel muss Ulrike nur zurückgreifen, wenn seine Wirkung | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `2c645339bab8` |
+| 66 | 2:52.14 | 2:53.78 | Carla (Erzählerin/Lexi) | unzweifelhaft ist. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `a8084f133369` |
+| 67 | 2:53.78 | 2:56.78 | Carla (Erzählerin/Lexi) | Fliehen oder die Tasche loslassen muss sie nicht, denn | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `8667a4280ec7` |
+| 68 | 2:56.78 | 2:59.54 | Carla (Erzählerin/Lexi) | damit würde sie den Angriff einfach hinnehmen. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `25d0f4fe4c3d` |
+| 69 | 2:59.54 | 3:02.30 | Carla (Erzählerin/Lexi) | Der Tritt war erforderlich. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: milderes Mittel? | `d70843b39f53` |
 | 70 | 3:02.30 | 3:04.62 | Carla (Erzählerin/Lexi) | Übrigens: Greift jemand gegen einen | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: Androhung | `9c0c3282416b` |
-| 71 | 3:04.62 | 3:06.46 | Carla (Erzählerin/Lexi) | unbewaffneten Angreifer zu einer | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: Androhung | `46eef341c1f2` |
-| 72 | 3:06.46 | 3:11.58 | Carla (Erzählerin/Lexi) | lebensgefährlichen Waffe, verlangt der Bundesgerichtshof in der Regel, den Einsatz zuerst | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: Androhung | `14dc414bde36` |
-| 73 | 3:11.58 | 3:12.98 | Carla (Erzählerin/Lexi) | anzudrohen oder | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: Androhung | `ccb18a6d2bee` |
-| 74 | 3:12.98 | 3:15.92 | Carla (Erzählerin/Lexi) | weniger gefährlich zu versuchen. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: Androhung | `8358fe846a31` |
+| 71 | 3:04.62 | 3:06.46 | Carla (Erzählerin/Lexi) | unbewaffneten Angreifer zu einer | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: Androhung | `20c8f44fe453` |
+| 72 | 3:06.46 | 3:11.58 | Carla (Erzählerin/Lexi) | lebensgefährlichen Waffe, verlangt der Bundesgerichtshof in der Regel, den Einsatz zuerst | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: Androhung | `355cf05f4359` |
+| 73 | 3:11.58 | 3:12.98 | Carla (Erzählerin/Lexi) | anzudrohen oder | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: Androhung | `d47611bde37c` |
+| 74 | 3:12.98 | 3:15.92 | Carla (Erzählerin/Lexi) | weniger gefährlich zu versuchen. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › b) erforderlich: Androhung | `e03663724814` |
 | 75 | 3:15.92 | 3:18.16 | Carla (Erzählerin/Lexi) | Dann die Gebotenheit. Eine | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten | `50df30b00908` |
 | 76 | 3:18.16 | 3:20.72 | Carla (Erzählerin/Lexi) | Abwägung der Rechtsgüter verlangt die Notwehr | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten | `4974713ab68b` |
 | 77 | 3:20.72 | 3:22.24 | Carla (Erzählerin/Lexi) | grundsätzlich nicht. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten | `7363cfafbe9b` |
@@ -91,57 +91,58 @@ Quelle: `bildhalt_manifest.json` (141 Bildhalte, davon 141 eigenständig), `cues
 | 85 | 3:40.92 | 3:41.92 | Carla (Erzählerin/Lexi) | oder bei enger | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten | `bc4497b8b88f` |
 | 86 | 3:41.92 | 3:43.72 | Carla (Erzählerin/Lexi) | familiärer Verbundenheit. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten | `7d8dbc4e0b27` |
 | 87 | 3:43.72 | 3:48.72 | Carla (Erzählerin/Lexi) | Dann kann verlangt werden, auszuweichen oder sich schonender zu wehren. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten | `e046cb9be60f` |
-| 88 | 3:48.96 | 3:51.28 | Carla (Erzählerin/Lexi) | Ulrike passt keine Fallgruppe. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `4d7e83ae4d46` |
-| 89 | 3:51.28 | 3:51.92 | Carla (Erzählerin/Lexi) | Torsten ist | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `fd5cbe101942` |
-| 90 | 3:51.92 | 3:53.92 | Carla (Erzählerin/Lexi) | erwachsen, Ulrike hat nichts | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `8e959b51ccfd` |
-| 91 | 3:53.92 | 3:55.40 | Carla (Erzählerin/Lexi) | provoziert, und ein | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `65f3d43b7728` |
-| 92 | 3:55.40 | 3:57.76 | Carla (Erzählerin/Lexi) | Tritt gegen das Schienbein steht in keinem | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `5a4cacfd3abc` |
-| 93 | 3:57.76 | 4:00.71 | Carla (Erzählerin/Lexi) | krassen Missverhältnis zum Griff nach ihrer Tasche. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `db59759caba3` |
-| 94 | 4:00.71 | 4:03.78 | Carla (Erzählerin/Lexi) | Die Abwehr ist geboten. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `e99ff901f3b4` |
-| 95 | 4:03.98 | 4:07.18 | Carla (Erzählerin/Lexi) | Drittens der Verteidigungswille. Ulrike muss | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `69985c4069a9` |
-| 96 | 4:07.18 | 4:09.38 | Carla (Erzählerin/Lexi) | zumindest auch handeln, um den Angriff | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `39e35fa8394e` |
-| 97 | 4:09.38 | 4:10.54 | Carla (Erzählerin/Lexi) | abzuwehren. | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `7051891c4f50` |
-| 98 | 4:10.54 | 4:12.90 | Carla (Erzählerin/Lexi) | Ärger oder Wut daneben schaden nicht, | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `f219918c9b43` |
-| 99 | 4:12.90 | 4:16.33 | Carla (Erzählerin/Lexi) | solange der Abwehrzweck nicht ganz in den Hintergrund tritt. | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `a85ff69815f3` |
-| 100 | 4:16.33 | 4:17.86 | Carla (Erzählerin/Lexi) | Ulrike wollte ihre Tasche | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `80edaeb4274e` |
-| 101 | 4:17.86 | 4:19.22 | Carla (Erzählerin/Lexi) | behalten. | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `a75c0edc88cc` |
-| 102 | 4:19.42 | 4:21.38 | Carla (Erzählerin/Lexi) | Ergebnis: Ulrike handelt in | A. Ulrike › Ergebnis | `91a5940349fe` |
-| 103 | 4:21.38 | 4:24.42 | Carla (Erzählerin/Lexi) | Notwehr und damit nicht rechtswidrig. | A. Ulrike › Ergebnis | `4965f9a80bd8` |
-| 104 | 4:24.42 | 4:28.90 | Carla (Erzählerin/Lexi) | Sie hat sich nicht strafbar gemacht. Und weil ihre Abwehr rechtmäßig ist, | A. Ulrike › Ergebnis | `66c28f75fd50` |
-| 105 | 4:28.90 | 4:33.72 | Carla (Erzählerin/Lexi) | kann Torsten sich gegen sie nicht seinerseits auf Notwehr berufen. | A. Ulrike › Ergebnis | `ef2ee1379777` |
-| 106 | 4:33.72 | 4:36.44 | Carla (Erzählerin/Lexi) | Kurz zur Abgrenzung: Wehrt sich jemand | Abgrenzung · Notwehrexzess, § 33 StGB | `60db3ea614e1` |
-| 107 | 4:36.44 | 4:38.60 | Carla (Erzählerin/Lexi) | stärker als erforderlich, ist die Tat | Abgrenzung · Notwehrexzess, § 33 StGB | `4d41e34f94d5` |
-| 108 | 4:38.60 | 4:40.12 | Carla (Erzählerin/Lexi) | nicht gerechtfertigt. | Abgrenzung · Notwehrexzess, § 33 StGB | `3bf5b490d828` |
-| 109 | 4:40.12 | 4:45.80 | Carla (Erzählerin/Lexi) | Dann kann Paragraf dreiunddreißig helfen: Überschreitet der Täter die Grenzen der Notwehr aus | Abgrenzung · Notwehrexzess, § 33 StGB | `c4b04380cdb9` |
-| 110 | 4:45.80 | 4:46.60 | Carla (Erzählerin/Lexi) | Verwirrung, | Abgrenzung · Notwehrexzess, § 33 StGB | `feef067b13fd` |
-| 111 | 4:46.60 | 4:47.24 | Carla (Erzählerin/Lexi) | Furcht oder | Abgrenzung · Notwehrexzess, § 33 StGB | `4585285910f2` |
-| 112 | 4:47.24 | 4:49.76 | Carla (Erzählerin/Lexi) | Schrecken, so wird er nicht bestraft. | Abgrenzung · Notwehrexzess, § 33 StGB | `c7567c63bca0` |
-| 113 | 4:49.76 | 4:51.64 | Carla (Erzählerin/Lexi) | Die Tat bleibt rechtswidrig, | Abgrenzung · Notwehrexzess, § 33 StGB | `14f61b629274` |
-| 114 | 4:51.64 | 4:52.64 | Carla (Erzählerin/Lexi) | aber der Täter ist | Abgrenzung · Notwehrexzess, § 33 StGB | `7535d74830bb` |
-| 115 | 4:52.64 | 4:53.68 | Carla (Erzählerin/Lexi) | entschuldigt. | Abgrenzung · Notwehrexzess, § 33 StGB | `2b9abb0771da` |
-| 116 | 4:53.68 | 4:57.50 | Carla (Erzählerin/Lexi) | Voraussetzung ist eine echte Notwehrlage. | Abgrenzung · Notwehrexzess, § 33 StGB | `8343cf23056d` |
-| 117 | 4:57.70 | 4:59.14 | Carla (Erzählerin/Lexi) | Klausurtipp: Die | Klausurtipp · Schwerpunkt Erforderlichkeit | `2f18f927bf7c` |
-| 118 | 4:59.14 | 5:01.62 | Carla (Erzählerin/Lexi) | Notwehr prüfst du in der Rechtswidrigkeit, | Klausurtipp · Schwerpunkt Erforderlichkeit | `7ed00af44c76` |
-| 119 | 5:01.62 | 5:03.50 | Carla (Erzählerin/Lexi) | nach dem Tatbestand. Den | Klausurtipp · Schwerpunkt Erforderlichkeit | `e004c4dda7bf` |
-| 120 | 5:03.50 | 5:06.66 | Carla (Erzählerin/Lexi) | Schwerpunkt setzt du meist bei der Erforderlichkeit. | Klausurtipp · Schwerpunkt Erforderlichkeit | `40df00624416` |
-| 121 | 5:06.66 | 5:09.50 | Carla (Erzählerin/Lexi) | Nenne dort die milderen Mittel konkret, wie | Klausurtipp · Schwerpunkt Erforderlichkeit | `5f24a0a607ef` |
-| 122 | 5:09.50 | 5:12.42 | Carla (Erzählerin/Lexi) | Warnung, Festhalten oder Hilfe rufen, und | Klausurtipp · Schwerpunkt Erforderlichkeit | `acafd418c3ec` |
-| 123 | 5:12.42 | 5:15.89 | Carla (Erzählerin/Lexi) | begründe, warum sie nicht genauso sicher gewirkt hätten. | Klausurtipp · Schwerpunkt Erforderlichkeit | `88c8a052b729` |
-| 124 | 5:15.89 | 5:18.94 | Carla (Erzählerin/Lexi) | Die Gebotenheit sprichst du nur an, wenn der Sachverhalt | Klausurtipp · Schwerpunkt Erforderlichkeit | `2e4a5e82af3e` |
-| 125 | 5:18.94 | 5:21.92 | Carla (Erzählerin/Lexi) | eine Fallgruppe nahelegt. | Klausurtipp · Schwerpunkt Erforderlichkeit | `a91adc626f5e` |
-| 126 | 5:21.92 | 5:24.48 | Carla (Erzählerin/Lexi) | Dein Klausurschema zur Notwehr. | Klausurschema | `5ff61f7b7931` |
-| 127 | 5:24.48 | 5:26.68 | Carla (Erzählerin/Lexi) | Erstens die Notwehrlage: | Klausurschema | `b6cb6fa437a2` |
-| 128 | 5:26.68 | 5:27.64 | Carla (Erzählerin/Lexi) | ein Angriff, | Klausurschema | `4bc31f594acf` |
-| 129 | 5:27.64 | 5:28.52 | Carla (Erzählerin/Lexi) | gegenwärtig | Klausurschema | `874531f3ec44` |
-| 130 | 5:28.52 | 5:30.04 | Carla (Erzählerin/Lexi) | und rechtswidrig. | Klausurschema | `d17ffa05b388` |
-| 131 | 5:30.04 | 5:32.44 | Carla (Erzählerin/Lexi) | Zweitens die Notwehrhandlung: | Klausurschema | `f27e98677ea9` |
-| 132 | 5:32.44 | 5:34.60 | Carla (Erzählerin/Lexi) | Verteidigung gegen den Angreifer, | Klausurschema | `64da7c48fb7b` |
-| 133 | 5:34.60 | 5:39.16 | Carla (Erzählerin/Lexi) | erforderlich, also geeignet und das mildeste gleich wirksame Mittel, | Klausurschema | `5ca49146e27b` |
-| 134 | 5:39.16 | 5:40.76 | Carla (Erzählerin/Lexi) | und geboten. | Klausurschema | `4e6a1057bfd0` |
-| 135 | 5:40.76 | 5:43.24 | Carla (Erzählerin/Lexi) | Drittens der Verteidigungswille. | Klausurschema | `f8d848abbb1e` |
-| 136 | 5:43.24 | 5:47.30 | Carla (Erzählerin/Lexi) | Folge: Die Tat ist nicht rechtswidrig. | Klausurschema | `cb9ceeea730e` |
-| 137 | 5:47.50 | 5:48.34 | Carla (Erzählerin/Lexi) | Merke: | Merksatz | `0dd26dc9d6e1` |
-| 138 | 5:48.34 | 5:55.82 | Carla (Erzählerin/Lexi) | Notwehr braucht eine Notwehrlage, eine erforderliche und gebotene Verteidigung und den Verteidigungswillen. | Merksatz | `67d409c43191` |
-| 139 | 5:55.86 | 5:59.34 | Carla (Erzählerin/Lexi) | Erforderlich ist das mildeste Mittel, das sicher wirkt. | Merksatz | `0de69c964a34` |
-| 140 | 5:59.34 | 5:59.78 | Carla (Erzählerin/Lexi) | Und | Merksatz | `6f5bb405d3e2` |
-| 141 | 5:59.78 | 6:04.17 | Carla (Erzählerin/Lexi) | fliehen muss der Angegriffene grundsätzlich nicht. | Merksatz | `5d92e8c76f97` |
+| 88 | 3:48.92 | 3:51.28 | Carla (Erzählerin/Lexi) | Ulrike passt keine Fallgruppe. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `4789e4254e40` |
+| 89 | 3:51.28 | 3:51.92 | Carla (Erzählerin/Lexi) | Torsten ist | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `901e6b0768e3` |
+| 90 | 3:51.92 | 3:52.80 | Carla (Erzählerin/Lexi) | erwachsen, | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `cdf588154880` |
+| 91 | 3:52.80 | 3:53.92 | Carla (Erzählerin/Lexi) | Ulrike hat nichts | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `8e959b51ccfd` |
+| 92 | 3:53.92 | 3:55.40 | Carla (Erzählerin/Lexi) | provoziert, und ein | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `65f3d43b7728` |
+| 93 | 3:55.40 | 3:57.76 | Carla (Erzählerin/Lexi) | Tritt gegen das Schienbein steht in keinem | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `5a4cacfd3abc` |
+| 94 | 3:57.76 | 4:00.71 | Carla (Erzählerin/Lexi) | krassen Missverhältnis zum Griff nach ihrer Tasche. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `db59759caba3` |
+| 95 | 4:00.71 | 4:03.78 | Carla (Erzählerin/Lexi) | Die Abwehr ist geboten. | A. Ulrike › Notwehr, § 32 StGB › 2. Notwehrhandlung › c) geboten: bei Ulrike | `e99ff901f3b4` |
+| 96 | 4:03.98 | 4:07.18 | Carla (Erzählerin/Lexi) | Drittens der Verteidigungswille. Ulrike muss | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `69985c4069a9` |
+| 97 | 4:07.18 | 4:09.38 | Carla (Erzählerin/Lexi) | zumindest auch handeln, um den Angriff | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `39e35fa8394e` |
+| 98 | 4:09.38 | 4:10.54 | Carla (Erzählerin/Lexi) | abzuwehren. | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `7051891c4f50` |
+| 99 | 4:10.54 | 4:12.90 | Carla (Erzählerin/Lexi) | Ärger oder Wut daneben schaden nicht, | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `f219918c9b43` |
+| 100 | 4:12.90 | 4:16.33 | Carla (Erzählerin/Lexi) | solange der Abwehrzweck nicht ganz in den Hintergrund tritt. | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `a85ff69815f3` |
+| 101 | 4:16.33 | 4:17.86 | Carla (Erzählerin/Lexi) | Ulrike wollte ihre Tasche | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `c7a50fcbf71a` |
+| 102 | 4:17.86 | 4:19.22 | Carla (Erzählerin/Lexi) | behalten. | A. Ulrike › Notwehr, § 32 StGB › 3. Verteidigungswille | `f4659865a2af` |
+| 103 | 4:19.42 | 4:21.38 | Carla (Erzählerin/Lexi) | Ergebnis: Ulrike handelt in | A. Ulrike › Ergebnis | `91a5940349fe` |
+| 104 | 4:21.38 | 4:24.42 | Carla (Erzählerin/Lexi) | Notwehr und damit nicht rechtswidrig. | A. Ulrike › Ergebnis | `4965f9a80bd8` |
+| 105 | 4:24.42 | 4:28.90 | Carla (Erzählerin/Lexi) | Sie hat sich nicht strafbar gemacht. Und weil ihre Abwehr rechtmäßig ist, | A. Ulrike › Ergebnis | `66c28f75fd50` |
+| 106 | 4:28.90 | 4:33.72 | Carla (Erzählerin/Lexi) | kann Torsten sich gegen sie nicht seinerseits auf Notwehr berufen. | A. Ulrike › Ergebnis | `ef2ee1379777` |
+| 107 | 4:33.72 | 4:36.44 | Carla (Erzählerin/Lexi) | Kurz zur Abgrenzung: Wehrt sich jemand | Abgrenzung · Notwehrexzess, § 33 StGB | `60db3ea614e1` |
+| 108 | 4:36.44 | 4:38.60 | Carla (Erzählerin/Lexi) | stärker als erforderlich, ist die Tat | Abgrenzung · Notwehrexzess, § 33 StGB | `4d41e34f94d5` |
+| 109 | 4:38.60 | 4:40.12 | Carla (Erzählerin/Lexi) | nicht gerechtfertigt. | Abgrenzung · Notwehrexzess, § 33 StGB | `3bf5b490d828` |
+| 110 | 4:40.12 | 4:45.80 | Carla (Erzählerin/Lexi) | Dann kann Paragraf dreiunddreißig helfen: Überschreitet der Täter die Grenzen der Notwehr aus | Abgrenzung · Notwehrexzess, § 33 StGB | `c4b04380cdb9` |
+| 111 | 4:45.80 | 4:46.60 | Carla (Erzählerin/Lexi) | Verwirrung, | Abgrenzung · Notwehrexzess, § 33 StGB | `feef067b13fd` |
+| 112 | 4:46.60 | 4:47.24 | Carla (Erzählerin/Lexi) | Furcht oder | Abgrenzung · Notwehrexzess, § 33 StGB | `4585285910f2` |
+| 113 | 4:47.24 | 4:49.76 | Carla (Erzählerin/Lexi) | Schrecken, so wird er nicht bestraft. | Abgrenzung · Notwehrexzess, § 33 StGB | `c7567c63bca0` |
+| 114 | 4:49.76 | 4:51.64 | Carla (Erzählerin/Lexi) | Die Tat bleibt rechtswidrig, | Abgrenzung · Notwehrexzess, § 33 StGB | `14f61b629274` |
+| 115 | 4:51.64 | 4:52.64 | Carla (Erzählerin/Lexi) | aber der Täter ist | Abgrenzung · Notwehrexzess, § 33 StGB | `7535d74830bb` |
+| 116 | 4:52.64 | 4:53.68 | Carla (Erzählerin/Lexi) | entschuldigt. | Abgrenzung · Notwehrexzess, § 33 StGB | `2b9abb0771da` |
+| 117 | 4:53.68 | 4:57.50 | Carla (Erzählerin/Lexi) | Voraussetzung ist eine echte Notwehrlage. | Abgrenzung · Notwehrexzess, § 33 StGB | `8343cf23056d` |
+| 118 | 4:57.70 | 4:59.14 | Carla (Erzählerin/Lexi) | Klausurtipp: Die | Klausurtipp · Schwerpunkt Erforderlichkeit | `2f18f927bf7c` |
+| 119 | 4:59.14 | 5:01.62 | Carla (Erzählerin/Lexi) | Notwehr prüfst du in der Rechtswidrigkeit, | Klausurtipp · Schwerpunkt Erforderlichkeit | `7ed00af44c76` |
+| 120 | 5:01.62 | 5:03.50 | Carla (Erzählerin/Lexi) | nach dem Tatbestand. Den | Klausurtipp · Schwerpunkt Erforderlichkeit | `e004c4dda7bf` |
+| 121 | 5:03.50 | 5:06.66 | Carla (Erzählerin/Lexi) | Schwerpunkt setzt du meist bei der Erforderlichkeit. | Klausurtipp · Schwerpunkt Erforderlichkeit | `40df00624416` |
+| 122 | 5:06.66 | 5:09.50 | Carla (Erzählerin/Lexi) | Nenne dort die milderen Mittel konkret, wie | Klausurtipp · Schwerpunkt Erforderlichkeit | `5f24a0a607ef` |
+| 123 | 5:09.50 | 5:12.42 | Carla (Erzählerin/Lexi) | Warnung, Festhalten oder Hilfe rufen, und | Klausurtipp · Schwerpunkt Erforderlichkeit | `acafd418c3ec` |
+| 124 | 5:12.42 | 5:15.89 | Carla (Erzählerin/Lexi) | begründe, warum sie nicht genauso sicher gewirkt hätten. | Klausurtipp · Schwerpunkt Erforderlichkeit | `88c8a052b729` |
+| 125 | 5:15.89 | 5:18.94 | Carla (Erzählerin/Lexi) | Die Gebotenheit sprichst du nur an, wenn der Sachverhalt | Klausurtipp · Schwerpunkt Erforderlichkeit | `2e4a5e82af3e` |
+| 126 | 5:18.94 | 5:21.92 | Carla (Erzählerin/Lexi) | eine Fallgruppe nahelegt. | Klausurtipp · Schwerpunkt Erforderlichkeit | `a91adc626f5e` |
+| 127 | 5:21.92 | 5:24.48 | Carla (Erzählerin/Lexi) | Dein Klausurschema zur Notwehr. | Klausurschema | `5ff61f7b7931` |
+| 128 | 5:24.48 | 5:26.68 | Carla (Erzählerin/Lexi) | Erstens die Notwehrlage: | Klausurschema | `b6cb6fa437a2` |
+| 129 | 5:26.68 | 5:27.64 | Carla (Erzählerin/Lexi) | ein Angriff, | Klausurschema | `4bc31f594acf` |
+| 130 | 5:27.64 | 5:28.52 | Carla (Erzählerin/Lexi) | gegenwärtig | Klausurschema | `874531f3ec44` |
+| 131 | 5:28.52 | 5:30.04 | Carla (Erzählerin/Lexi) | und rechtswidrig. | Klausurschema | `d17ffa05b388` |
+| 132 | 5:30.04 | 5:32.44 | Carla (Erzählerin/Lexi) | Zweitens die Notwehrhandlung: | Klausurschema | `f27e98677ea9` |
+| 133 | 5:32.44 | 5:34.60 | Carla (Erzählerin/Lexi) | Verteidigung gegen den Angreifer, | Klausurschema | `64da7c48fb7b` |
+| 134 | 5:34.60 | 5:39.16 | Carla (Erzählerin/Lexi) | erforderlich, also geeignet und das mildeste gleich wirksame Mittel, | Klausurschema | `5ca49146e27b` |
+| 135 | 5:39.16 | 5:40.76 | Carla (Erzählerin/Lexi) | und geboten. | Klausurschema | `e02804eba0aa` |
+| 136 | 5:40.76 | 5:43.24 | Carla (Erzählerin/Lexi) | Drittens der Verteidigungswille. | Klausurschema | `ee1509008009` |
+| 137 | 5:43.24 | 5:47.30 | Carla (Erzählerin/Lexi) | Folge: Die Tat ist nicht rechtswidrig. | Klausurschema | `cc7da71a8f23` |
+| 138 | 5:47.50 | 5:48.34 | Carla (Erzählerin/Lexi) | Merke: | Merksatz | `0dd26dc9d6e1` |
+| 139 | 5:48.34 | 5:55.82 | Carla (Erzählerin/Lexi) | Notwehr braucht eine Notwehrlage, eine erforderliche und gebotene Verteidigung und den Verteidigungswillen. | Merksatz | `67d409c43191` |
+| 140 | 5:55.86 | 5:59.34 | Carla (Erzählerin/Lexi) | Erforderlich ist das mildeste Mittel, das sicher wirkt. | Merksatz | `0de69c964a34` |
+| 141 | 5:59.34 | 5:59.78 | Carla (Erzählerin/Lexi) | Und | Merksatz | `6f5bb405d3e2` |
+| 142 | 5:59.78 | 6:04.17 | Carla (Erzählerin/Lexi) | fliehen muss der Angegriffene grundsätzlich nicht. | Merksatz | `5d92e8c76f97` |
