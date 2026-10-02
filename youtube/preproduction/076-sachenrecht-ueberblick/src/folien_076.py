@@ -299,12 +299,12 @@ folie([("auto", "Fall · Das Auto"), ("schwager", "Fall · Das Auto gehört dem 
 ])
 
 # A3 Fall: das Haus ------------------------------------------------------------------------------------------------------
-NX3, LX, MX = 760, 1520, 1140
+NX3, LX, MX = 700, 1560, 1135
 folie([("haus", "Fall · Das Haus"), ("notar", "Fall · Beim Notar"), ("falsch", "Fall · Das Grundbuch ist falsch")], [
     pl("Zuletzt das Haus", 70, 40, "haus", fill=GELB, size=44),
     boden("haus"),
-    ficon("ph", "house", 300, BODEN, 330, "haus", fuell=GELB),
-    pl("kleines Haus", 300, 420, beim("haus", "kleines"), fill=WEISS, size=30, anker="m"),
+    ficon("ph", "house", 270, BODEN, 330, "haus", fuell=GELB),
+    pl("kleines Haus", 270, 420, beim("haus", "kleines"), fill=WEISS, size=30, anker="m"),
     *fig("NI", NX3, BODEN, FH, [("haus", "ruhig_r")]),
     ns("Nina", NX3, BODEN, "haus", NI_F),
     *fig("LO", LX, BODEN, FH, [(beim("haus", "Lohse"), "ruhig")], bis="lo1"),
@@ -319,9 +319,9 @@ folie([("haus", "Fall · Das Haus"), ("notar", "Fall · Beim Notar"), ("falsch",
     # das Grundbuch
     ficon("tabler", "book-2", MX, 520, 110, beim("lo1", "Grundbuch"), fuell=WEISS),
     pl("Grundbuch: Frau Lohse", MX, 540, beim("lo1", "Grundbuch"), fill=WEISS, size=30, anker="m"),
-    nein(MX - 200, 572, beim("falsch", "falsch"), gr=22),
-    pl("Das Haus gehört noch ihrem Bruder", MX - 50, 640, beim("falsch", "Bruder"), fill=PINK, size=30, anker="m"),
-    pl("Nina weiß davon nichts", MX - 50, 730, beim("falsch", "Nina"), fill=WEISS, size=30, anker="m"),
+    nein(MX - 215, 572, beim("falsch", "falsch"), gr=22),
+    pl("Das Haus gehört noch ihrem Bruder", MX, 640, beim("falsch", "Bruder"), fill=PINK, size=28, anker="m"),
+    pl("Nina weiß davon nichts", MX, 730, beim("falsch", "Nina"), fill=WEISS, size=28, anker="m"),
     blase("sprech", 700, 190, "lo1", 1150, 230, inhalt=["Ich stehe im Grundbuch.", "Das Haus gehört mir."], textsize=36,
           figur=("LO_redet", LX, BODEN, FH), bis="falsch"),
 ])
@@ -387,7 +387,7 @@ folie([("grund", "Grundsätze des Sachenrechts"), ("publ", "Grundsätze › Publ
 W929 = ["„Zur Übertragung des Eigentums an einer beweglichen Sache ist",
         "erforderlich, dass der Eigentümer die Sache dem Erwerber übergibt",
         "und beide darüber einig sind, dass das Eigentum übergehen soll.“"]
-w929, w929_y = wortlaut(80, 180, 1100, W929, "§ 929 Satz 1 BGB", "w929", marken=[
+w929, w929_y = wortlaut(80, 180, 1100, W929, "§ 929 Satz 1 BGB", "p929", marken=[
     (1, "der Eigentümer", beim("w929", "Eigentümer")), (1, "übergibt", beim("w929", "übergibt")),
     (2, "einig sind", beim("w929", "einig"))], size=32)
 folie([("p929", "Bewegliche Sachen · § 929 S. 1 BGB"), ("einig", "§ 929 S. 1 BGB › Einigung"),
@@ -520,16 +520,18 @@ folie([("p873", "Grundstücke · § 873 Abs. 1 BGB"), ("p925", "Grundstücke ›
 folie([("p892", "Grundstücke › öffentlicher Glaube, § 892 BGB"), ("kennt", "§ 892 BGB › nur Kenntnis schadet"),
        ("nina3", "Ergebnis · Haus"), ("wid", "§ 892 BGB › Widerspruch"), ("vorm", "Ausblick · Vormerkung, § 883 BGB")], rechts_frei([
     *tafel("p892", "Frau Lohse ist nicht berechtigt"),
-    z("§ 892 Abs. 1 Satz 1 BGB: Für den Erwerber gilt", 110, 185, "w892", "Bold", 34),
-    z("der Inhalt des Grundbuchs als richtig, es sei denn,", 160, 235, beim("w892", "Inhalt"), size=32),
-    z("ein Widerspruch ist eingetragen oder", 160, 280, beim("w892", "Widerspruch"), size=32),
-    z("ihm ist die Unrichtigkeit bekannt", 160, 325, beim("w892", "Unrichtigkeit"), size=32),
-    z("Es schadet nur Kenntnis, nicht grobe Fahrlässigkeit", 110, 395, "kennt", "Bold", 34),
-    *okz("Nina weiß nichts, und ein Widerspruch fehlt", 460, "nina3", size=34),
-    blk(110, 530, 1040, 90, GRUEN, beim("nina3", "Mit"), [("Mit der Eintragung: Nina ist Eigentümerin", "ExtraBold", 36, INK)]),
-    *neinz("Widerspruch vorher eingetragen: Erwerb gescheitert", 655, "wid", size=32),
-    z("Vormerkung, § 883 BGB: schützt den Anspruch eines", 110, 735, "vorm", "Bold", 32),
-    z("Käufers bis zur Eintragung gegen spätere Verfügungen", 160, 780, beim("vorm", "Käufers"), size=32),
+    z("öffentlicher Glaube des Grundbuchs, § 892 BGB", 110, 180, beim("p892", "öffentliche"), "Bold", 34),
+    z("Für den Erwerber gilt der Inhalt des Grundbuchs", 160, 235, "w892", size=32),
+    z("als richtig, es sei denn,", 160, 278, beim("w892", "richtig"), size=32),
+    z("ein Widerspruch ist eingetragen oder", 160, 321, beim("w892", "Widerspruch"), size=32),
+    z("ihm ist die Unrichtigkeit bekannt", 160, 364, beim("w892", "Unrichtigkeit"), size=32),
+    zit("§ 892 Abs. 1 Satz 1 BGB", 160, 410, beim("w892", "Unrichtigkeit")),
+    z("Es schadet nur Kenntnis, nicht grobe Fahrlässigkeit", 110, 460, "kennt", "Bold", 34),
+    *okz("Nina weiß nichts, und ein Widerspruch fehlt", 520, "nina3", size=34),
+    blk(110, 585, 1040, 85, GRUEN, beim("nina3", "Mit"), [("Mit der Eintragung: Nina ist Eigentümerin", "ExtraBold", 36, INK)]),
+    *neinz("Widerspruch vorher eingetragen: Erwerb gescheitert", 695, "wid", size=32),
+    z("Vormerkung, § 883 BGB: schützt den Anspruch eines", 110, 765, "vorm", "Bold", 32),
+    z("Käufers bis zur Eintragung gegen spätere Verfügungen", 160, 810, beim("vorm", "Käufers"), size=32),
     *requisit([("p892", BUCH, "öffentlicher Glaube", BLAU), ("kennt", ("tabler", "eye", 120, WEISS), "nur Kenntnis", ROT),
                (beim("nina3", "Mit"), HAUS, "gehört Nina", GRUEN), ("wid", ("tabler", "ban", 110, ROT), "Widerspruch", ROT),
                ("vorm", ("tabler", "bookmark", 100, GELB), "Vormerkung", GELB)]),
