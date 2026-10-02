@@ -59,8 +59,8 @@ SEGMENTE = [
      "Nein. [aus2]Zweitens: wesentlich unrichtige oder unvollständige Angaben. Nein, ihre Zahlen "
      "stimmten. [aus3]Drittens: Sie kannte die Rechtswidrigkeit oder kannte sie grob fahrlässig nicht. Auch nein: Der "
      "Rechenfehler steckte in der Akte, der Bescheid nennt nur den Betrag.", P),
-    ("[abw]Und die Abwägung? Steuergeld zurückholen will die Behörde bei jeder Rücknahme. [abw2]Besondere Umstände "
-     "gegen den Regelfall gibt es nicht.", P),
+    ("[abw]Und die Abwägung? Steuergeld zurückholen will die Behörde bei jeder Rücknahme. [abw2]Aber besondere "
+     "Umstände gegen den Regelfall gibt es nicht.", P),
     ("[erg]Ergebnis: Die Rücknahme ist rechtswidrig. [erg2]Ficht Frau Hofmann sie an, muss das Café die Förderung nicht "
      "zurückzahlen.", PS),
     # --- I Gegenfall: falsche Angaben, Jahresfrist ---------------------------------------------------------------------------

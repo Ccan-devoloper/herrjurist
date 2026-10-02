@@ -86,76 +86,76 @@ Quelle: `bildhalt_manifest.json` (155 Bildhalte, davon 155 eigenständig), `cues
 | 80 | 3:16.35 | 3:17.39 | Carla (Erzählerin/Lexi) | Auch nein: Der | Rücknahme › C. materiell › 3. Vertrauensschutz › Ausschluss, § 48 II 3 | `c011c6fc9bca` |
 | 81 | 3:17.39 | 3:19.47 | Carla (Erzählerin/Lexi) | Rechenfehler steckte in der Akte, der | Rücknahme › C. materiell › 3. Vertrauensschutz › Ausschluss, § 48 II 3 | `1987bd1d86f4` |
 | 82 | 3:19.47 | 3:21.98 | Carla (Erzählerin/Lexi) | Bescheid nennt nur den Betrag. | Rücknahme › C. materiell › 3. Vertrauensschutz › Ausschluss, § 48 II 3 | `db306b7a189b` |
-| 83 | 3:22.18 | 3:23.50 | Carla (Erzählerin/Lexi) | die Abwägung? | Rücknahme › C. materiell › 3. Vertrauensschutz › Abwägung | `b844a0b89db3` |
-| 84 | 3:23.50 | 3:25.90 | Carla (Erzählerin/Lexi) | Steuergeld zurückholen will die Behörde bei | Rücknahme › C. materiell › 3. Vertrauensschutz › Abwägung | `29756b250d62` |
-| 85 | 3:25.90 | 3:27.18 | Carla (Erzählerin/Lexi) | jeder Rücknahme. | Rücknahme › C. materiell › 3. Vertrauensschutz › Abwägung | `b8634a27a372` |
-| 86 | 3:27.18 | 3:31.05 | Carla (Erzählerin/Lexi) | Besondere Umstände gegen den Regelfall gibt es nicht. | Rücknahme › C. materiell › 3. Vertrauensschutz › Abwägung | `24e7d51c7c98` |
-| 87 | 3:31.05 | 3:33.21 | Carla (Erzählerin/Lexi) | Ergebnis: Die Rücknahme ist | Ergebnis | `cd12e39ed4d9` |
-| 88 | 3:33.21 | 3:34.33 | Carla (Erzählerin/Lexi) | rechtswidrig. | Ergebnis | `5f805c0cb3b7` |
-| 89 | 3:34.33 | 3:35.93 | Carla (Erzählerin/Lexi) | Ficht Frau Hofmann sie an, | Ergebnis | `0e0fa04e7a20` |
-| 90 | 3:35.93 | 3:39.75 | Carla (Erzählerin/Lexi) | muss das Café die Förderung nicht zurückzahlen. | Ergebnis | `49ec64e35478` |
-| 91 | 3:39.95 | 3:41.59 | Carla (Erzählerin/Lexi) | Jetzt der Gegenfall: | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `508e5bd2cc57` |
-| 92 | 3:41.59 | 3:43.91 | Carla (Erzählerin/Lexi) | Frau Hofmann hat ihren Umsatzrückgang zu | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `b7bfdb7c1f64` |
-| 93 | 3:43.91 | 3:45.28 | Carla (Erzählerin/Lexi) | hoch angegeben. | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `176a1e402d8f` |
-| 94 | 3:45.28 | 3:45.67 | Carla (Erzählerin/Lexi) | angegeben. Dann | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `7cf7e33e66c5` |
-| 95 | 3:45.67 | 3:47.35 | Carla (Erzählerin/Lexi) | greift Nummer zwei, auf | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `0c390f2fcf81` |
-| 96 | 3:47.35 | 3:49.71 | Carla (Erzählerin/Lexi) | Vertrauen kann sie sich nicht berufen. | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `2b5a11fb9b0e` |
-| 97 | 3:49.71 | 3:52.07 | Carla (Erzählerin/Lexi) | Nach Satz vier wird dann in der Regel für die | Gegenfall › Rücknahme für die Vergangenheit, § 48 II 4 | `3261bcdecf53` |
-| 98 | 3:52.07 | 3:54.34 | Carla (Erzählerin/Lexi) | Vergangenheit zurückgenommen. | Gegenfall › Rücknahme für die Vergangenheit, § 48 II 4 | `c06d60b06297` |
-| 99 | 3:54.54 | 3:59.30 | Carla (Erzählerin/Lexi) | Jetzt zählt die Frist, Absatz vier: Erhält die Behörde von Tatsachen | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `2974d7e21308` |
-| 100 | 3:59.30 | 4:05.46 | Carla (Erzählerin/Lexi) | Kenntnis, welche die Rücknahme eines rechtswidrigen Verwaltungsaktes rechtfertigen, so ist die Rücknahme nur | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `c5e15f5c1b2d` |
-| 101 | 4:05.46 | 4:06.42 | Carla (Erzählerin/Lexi) | innerhalb eines | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `e77928111e6a` |
-| 102 | 4:06.42 | 4:08.18 | Carla (Erzählerin/Lexi) | Jahres seit dem Zeitpunkt der | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `3739b817aa62` |
-| 103 | 4:08.18 | 4:10.50 | Carla (Erzählerin/Lexi) | Kenntnisnahme zulässig. Die | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `384c6d61ca48` |
-| 104 | 4:10.50 | 4:13.98 | Carla (Erzählerin/Lexi) | zwei Jahre seit dem Bescheid spielen also keine Rolle. | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `a617bda9bb8d` |
-| 105 | 4:13.98 | 4:17.26 | Carla (Erzählerin/Lexi) | Nach ständiger Rechtsprechung des Bundesverwaltungsgerichts | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `c49a61b0d1ef` |
-| 106 | 4:17.26 | 4:24.18 | Carla (Erzählerin/Lexi) | beginnt die Frist erst, wenn die Behörde die Rechtswidrigkeit erkannt hat und alle für die Entscheidung erh … | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `bb96b09b3c90` |
-| 107 | 4:24.18 | 4:24.90 | Carla (Erzählerin/Lexi) | vollständig | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `cf327e667a8d` |
-| 108 | 4:24.90 | 4:25.74 | Carla (Erzählerin/Lexi) | kennt. | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `2d19a76fe172` |
-| 109 | 4:25.74 | 4:28.26 | Carla (Erzählerin/Lexi) | Das ist regelmäßig erst nach Anhörung und | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `df2228ff93ef` |
-| 110 | 4:28.26 | 4:30.50 | Carla (Erzählerin/Lexi) | Stellungnahme der Fall. Hier ist sie | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `ca8056043a27` |
-| 111 | 4:30.50 | 4:31.89 | Carla (Erzählerin/Lexi) | gewahrt. | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `f2dfee182d9c` |
-| 112 | 4:32.09 | 4:33.65 | Carla (Erzählerin/Lexi) | Bleibt das Ermessen: Die | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `b88d2dc98957` |
-| 113 | 4:33.65 | 4:35.65 | Carla (Erzählerin/Lexi) | Behörde kann zurücknehmen, sie | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `4b159a026621` |
-| 114 | 4:35.65 | 4:37.17 | Carla (Erzählerin/Lexi) | muss nicht. Ein | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `e6a18e292208` |
-| 115 | 4:37.17 | 4:43.61 | Carla (Erzählerin/Lexi) | intendiertes Ermessen gibt es bei der Rücknahme nach dem Bundesverwaltungsgericht grundsätzlich nicht, auch … | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `ed06691b06bb` |
-| 116 | 4:43.61 | 4:44.73 | Carla (Erzählerin/Lexi) | Fördergeld. | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `c67632dd2151` |
-| 117 | 4:45.01 | 4:49.29 | Carla (Erzählerin/Lexi) | formelhafter Hinweis auf Sparsamkeit reicht nicht. Die Behörde muss | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `43e8560ff23c` |
-| 118 | 4:49.29 | 4:50.93 | Carla (Erzählerin/Lexi) | abwägen, auch, in wessen | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `95ad85af5486` |
-| 119 | 4:50.93 | 4:52.96 | Carla (Erzählerin/Lexi) | Sphäre der Fehler lag. | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `51704e70ba0b` |
-| 120 | 4:53.16 | 4:59.12 | Carla (Erzählerin/Lexi) | Nimmt sie zurück, folgt Paragraf neunundvierzig a. Ist ein Verwaltungsakt mit Wirkung für die | Gegenfall › Erstattung, § 49a I | `d535b6f41510` |
-| 121 | 4:59.12 | 5:02.72 | Carla (Erzählerin/Lexi) | Vergangenheit zurückgenommen, sind bereits erbrachte Leistungen zu | Gegenfall › Erstattung, § 49a I | `b0ca42f5f869` |
-| 122 | 5:02.72 | 5:05.48 | Carla (Erzählerin/Lexi) | erstatten. Den Betrag setzt die Behörde durch | Gegenfall › Erstattung, § 49a I | `2ea40d8e03de` |
-| 123 | 5:05.48 | 5:07.96 | Carla (Erzählerin/Lexi) | schriftlichen Verwaltungsakt fest. | Gegenfall › Erstattung, § 49a I | `5af82473c0a1` |
-| 124 | 5:07.96 | 5:10.64 | Carla (Erzählerin/Lexi) | Und nach Absatz drei wird verzinst, mit | Gegenfall › Zinsen, § 49a III | `eaf8536522e5` |
-| 125 | 5:10.64 | 5:14.35 | Carla (Erzählerin/Lexi) | fünf Prozentpunkten über dem Basiszinssatz. | Gegenfall › Zinsen, § 49a III | `286121da568f` |
-| 126 | 5:14.55 | 5:17.51 | Carla (Erzählerin/Lexi) | Ausblick: Bei EU-Beihilfen, deren | Ausblick · EU-Beihilfen | `5385c5456724` |
-| 127 | 5:17.51 | 5:20.75 | Carla (Erzählerin/Lexi) | Rückforderung die Kommission bestandskräftig verlangt hat, | Ausblick · EU-Beihilfen | `79f77ee9b1e2` |
-| 128 | 5:20.75 | 5:23.54 | Carla (Erzählerin/Lexi) | überlagert das Unionsrecht diesen Schutz. | Ausblick · EU-Beihilfen | `14d4cb5768c6` |
-| 129 | 5:23.54 | 5:26.39 | Carla (Erzählerin/Lexi) | Nach dem Europäischen Gerichtshof muss die Behörde dann | Ausblick · EU-Beihilfen | `4b96c3220f1a` |
-| 130 | 5:26.39 | 5:27.71 | Carla (Erzählerin/Lexi) | sogar nach Ablauf der | Ausblick · EU-Beihilfen | `d3f52a5d04ef` |
-| 131 | 5:27.71 | 5:30.25 | Carla (Erzählerin/Lexi) | Jahresfrist zurücknehmen. | Ausblick · EU-Beihilfen | `b37673e9307f` |
-| 132 | 5:30.45 | 5:31.65 | Carla (Erzählerin/Lexi) | Klausurtipp: Die | Klausurtipp · Rücknahme prüfen | `8f58b5625297` |
-| 133 | 5:31.65 | 5:34.49 | Carla (Erzählerin/Lexi) | Rücknahme prüfst du meist in der Begründetheit einer | Klausurtipp · Rücknahme prüfen | `bf1cfc01565a` |
-| 134 | 5:34.49 | 5:36.17 | Carla (Erzählerin/Lexi) | Anfechtungsklage gegen den | Klausurtipp · Rücknahme prüfen | `20579c296252` |
-| 135 | 5:36.17 | 5:37.60 | Carla (Erzählerin/Lexi) | Rücknahmebescheid. | Klausurtipp · Rücknahme prüfen | `617691e8ec83` |
-| 136 | 5:37.60 | 5:40.41 | Carla (Erzählerin/Lexi) | Den Vertrauensschutz prüfst du bei Absatz zwei, | Klausurtipp · Rücknahme prüfen | `79d7b86cce59` |
-| 137 | 5:40.41 | 5:42.13 | Carla (Erzählerin/Lexi) | nicht erst im Ermessen. | Klausurtipp · Rücknahme prüfen | `e6680132022b` |
-| 138 | 5:42.13 | 5:45.77 | Carla (Erzählerin/Lexi) | Und rechne die Jahresfrist ab der vollständigen Kenntnis, | Klausurtipp · Rücknahme prüfen | `1054e1bde259` |
-| 139 | 5:45.77 | 5:48.79 | Carla (Erzählerin/Lexi) | nicht ab dem Erlass des Bescheids. | Klausurtipp · Rücknahme prüfen | `b64c7fd2b5ba` |
-| 140 | 5:48.79 | 5:50.51 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `2b69becf672d` |
-| 141 | 5:50.51 | 5:53.55 | Carla (Erzählerin/Lexi) | Rücknahme nach Paragraf achtundvierzig. | Klausurschema | `3aa574cb4343` |
-| 142 | 5:53.55 | 5:57.63 | Carla (Erzählerin/Lexi) | A, Rechtsgrundlage, Abgrenzung zum Widerruf. | Klausurschema | `b5d970f9c7a1` |
-| 143 | 5:57.63 | 6:01.71 | Carla (Erzählerin/Lexi) | B, formell: Zuständigkeit und Anhörung. | Klausurschema | `f4d2163e1171` |
-| 144 | 6:01.71 | 6:03.51 | Carla (Erzählerin/Lexi) | C, materiell: | Klausurschema | `1a295ead1d94` |
-| 145 | 6:03.51 | 6:06.47 | Carla (Erzählerin/Lexi) | Eins, rechtswidriger Verwaltungsakt. | Klausurschema | `d16d0ec3ea04` |
-| 146 | 6:06.47 | 6:08.40 | Carla (Erzählerin/Lexi) | Zwei, begünstigend. | Klausurschema | `a98776895148` |
-| 147 | 6:08.40 | 6:12.75 | Carla (Erzählerin/Lexi) | begünstigend. Drei, bei Geldleistungen Vertrauensschutz nach Absatz zwei. | Klausurschema | `4d6b1190a073` |
-| 148 | 6:12.75 | 6:14.83 | Carla (Erzählerin/Lexi) | Vier, Jahresfrist. | Klausurschema | `1d67783cf687` |
-| 149 | 6:14.83 | 6:16.59 | Carla (Erzählerin/Lexi) | Fünf, Ermessen. | Klausurschema | `089da0afe2cb` |
-| 150 | 6:16.59 | 6:21.81 | Carla (Erzählerin/Lexi) | Danach: Erstattung und Zinsen nach Paragraf neunundvierzig a. | Klausurschema | `6667c5cbbfc5` |
-| 151 | 6:22.01 | 6:26.37 | Carla (Erzählerin/Lexi) | Merke: Wer auf einen rechtswidrigen Förderbescheid vertraut und das Geld | Merksatz | `6f64e3c9ccc8` |
-| 152 | 6:26.37 | 6:28.33 | Carla (Erzählerin/Lexi) | verbraucht hat, ist in der Regel | Merksatz | `e109231a7a3c` |
-| 153 | 6:28.33 | 6:29.37 | Carla (Erzählerin/Lexi) | geschützt. | Merksatz | `29d776736b77` |
-| 154 | 6:29.37 | 6:31.57 | Carla (Erzählerin/Lexi) | Wer wesentlich falsche Angaben macht, | Merksatz | `4021326526a5` |
-| 155 | 6:31.57 | 6:34.52 | Carla (Erzählerin/Lexi) | verliert diesen Schutz. | Merksatz | `33950aa5f96c` |
+| 83 | 3:22.18 | 3:23.58 | Carla (Erzählerin/Lexi) | die Abwägung? | Rücknahme › C. materiell › 3. Vertrauensschutz › Abwägung | `b844a0b89db3` |
+| 84 | 3:23.58 | 3:25.98 | Carla (Erzählerin/Lexi) | Steuergeld zurückholen will die Behörde bei | Rücknahme › C. materiell › 3. Vertrauensschutz › Abwägung | `29756b250d62` |
+| 85 | 3:25.98 | 3:27.86 | Carla (Erzählerin/Lexi) | jeder Rücknahme. Aber | Rücknahme › C. materiell › 3. Vertrauensschutz › Abwägung | `b8634a27a372` |
+| 86 | 3:27.86 | 3:31.77 | Carla (Erzählerin/Lexi) | besondere Umstände gegen den Regelfall gibt es nicht. | Rücknahme › C. materiell › 3. Vertrauensschutz › Abwägung | `24e7d51c7c98` |
+| 87 | 3:31.77 | 3:33.93 | Carla (Erzählerin/Lexi) | Ergebnis: Die Rücknahme ist | Ergebnis | `cd12e39ed4d9` |
+| 88 | 3:33.93 | 3:35.05 | Carla (Erzählerin/Lexi) | rechtswidrig. | Ergebnis | `5f805c0cb3b7` |
+| 89 | 3:35.05 | 3:36.65 | Carla (Erzählerin/Lexi) | Ficht Frau Hofmann sie an, | Ergebnis | `0e0fa04e7a20` |
+| 90 | 3:36.65 | 3:40.47 | Carla (Erzählerin/Lexi) | muss das Café die Förderung nicht zurückzahlen. | Ergebnis | `49ec64e35478` |
+| 91 | 3:40.67 | 3:42.31 | Carla (Erzählerin/Lexi) | Jetzt der Gegenfall: | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `508e5bd2cc57` |
+| 92 | 3:42.31 | 3:44.63 | Carla (Erzählerin/Lexi) | Frau Hofmann hat ihren Umsatzrückgang zu | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `b7bfdb7c1f64` |
+| 93 | 3:44.63 | 3:46.00 | Carla (Erzählerin/Lexi) | hoch angegeben. | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `176a1e402d8f` |
+| 94 | 3:46.00 | 3:46.39 | Carla (Erzählerin/Lexi) | angegeben. Dann | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `7cf7e33e66c5` |
+| 95 | 3:46.39 | 3:48.07 | Carla (Erzählerin/Lexi) | greift Nummer zwei, auf | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `0c390f2fcf81` |
+| 96 | 3:48.07 | 3:50.43 | Carla (Erzählerin/Lexi) | Vertrauen kann sie sich nicht berufen. | Gegenfall › falsche Angaben, § 48 II 3 Nr. 2 | `2b5a11fb9b0e` |
+| 97 | 3:50.43 | 3:52.79 | Carla (Erzählerin/Lexi) | Nach Satz vier wird dann in der Regel für die | Gegenfall › Rücknahme für die Vergangenheit, § 48 II 4 | `3261bcdecf53` |
+| 98 | 3:52.79 | 3:55.06 | Carla (Erzählerin/Lexi) | Vergangenheit zurückgenommen. | Gegenfall › Rücknahme für die Vergangenheit, § 48 II 4 | `c06d60b06297` |
+| 99 | 3:55.26 | 4:00.02 | Carla (Erzählerin/Lexi) | Jetzt zählt die Frist, Absatz vier: Erhält die Behörde von Tatsachen | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `2974d7e21308` |
+| 100 | 4:00.02 | 4:06.18 | Carla (Erzählerin/Lexi) | Kenntnis, welche die Rücknahme eines rechtswidrigen Verwaltungsaktes rechtfertigen, so ist die Rücknahme nur | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `c5e15f5c1b2d` |
+| 101 | 4:06.18 | 4:07.14 | Carla (Erzählerin/Lexi) | innerhalb eines | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `e77928111e6a` |
+| 102 | 4:07.14 | 4:08.90 | Carla (Erzählerin/Lexi) | Jahres seit dem Zeitpunkt der | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `3739b817aa62` |
+| 103 | 4:08.90 | 4:11.22 | Carla (Erzählerin/Lexi) | Kenntnisnahme zulässig. Die | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `384c6d61ca48` |
+| 104 | 4:11.22 | 4:14.70 | Carla (Erzählerin/Lexi) | zwei Jahre seit dem Bescheid spielen also keine Rolle. | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `a617bda9bb8d` |
+| 105 | 4:14.70 | 4:17.98 | Carla (Erzählerin/Lexi) | Nach ständiger Rechtsprechung des Bundesverwaltungsgerichts | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `c49a61b0d1ef` |
+| 106 | 4:17.98 | 4:24.90 | Carla (Erzählerin/Lexi) | beginnt die Frist erst, wenn die Behörde die Rechtswidrigkeit erkannt hat und alle für die Entscheidung erh … | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `bb96b09b3c90` |
+| 107 | 4:24.90 | 4:25.62 | Carla (Erzählerin/Lexi) | vollständig | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `cf327e667a8d` |
+| 108 | 4:25.62 | 4:26.46 | Carla (Erzählerin/Lexi) | kennt. | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `2d19a76fe172` |
+| 109 | 4:26.46 | 4:28.98 | Carla (Erzählerin/Lexi) | Das ist regelmäßig erst nach Anhörung und | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `df2228ff93ef` |
+| 110 | 4:28.98 | 4:31.22 | Carla (Erzählerin/Lexi) | Stellungnahme der Fall. Hier ist sie | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `ca8056043a27` |
+| 111 | 4:31.22 | 4:32.61 | Carla (Erzählerin/Lexi) | gewahrt. | Gegenfall › C. materiell › 4. Jahresfrist, § 48 IV | `f2dfee182d9c` |
+| 112 | 4:32.81 | 4:34.37 | Carla (Erzählerin/Lexi) | Bleibt das Ermessen: Die | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `b88d2dc98957` |
+| 113 | 4:34.37 | 4:36.37 | Carla (Erzählerin/Lexi) | Behörde kann zurücknehmen, sie | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `4b159a026621` |
+| 114 | 4:36.37 | 4:37.89 | Carla (Erzählerin/Lexi) | muss nicht. Ein | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `e6a18e292208` |
+| 115 | 4:37.89 | 4:44.33 | Carla (Erzählerin/Lexi) | intendiertes Ermessen gibt es bei der Rücknahme nach dem Bundesverwaltungsgericht grundsätzlich nicht, auch … | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `ed06691b06bb` |
+| 116 | 4:44.33 | 4:45.45 | Carla (Erzählerin/Lexi) | Fördergeld. | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `c67632dd2151` |
+| 117 | 4:45.73 | 4:50.01 | Carla (Erzählerin/Lexi) | formelhafter Hinweis auf Sparsamkeit reicht nicht. Die Behörde muss | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `43e8560ff23c` |
+| 118 | 4:50.01 | 4:51.65 | Carla (Erzählerin/Lexi) | abwägen, auch, in wessen | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `95ad85af5486` |
+| 119 | 4:51.65 | 4:53.68 | Carla (Erzählerin/Lexi) | Sphäre der Fehler lag. | Gegenfall › C. materiell › 5. Ermessen, § 48 I 1 | `51704e70ba0b` |
+| 120 | 4:53.88 | 4:59.84 | Carla (Erzählerin/Lexi) | Nimmt sie zurück, folgt Paragraf neunundvierzig a. Ist ein Verwaltungsakt mit Wirkung für die | Gegenfall › Erstattung, § 49a I | `d535b6f41510` |
+| 121 | 4:59.84 | 5:03.44 | Carla (Erzählerin/Lexi) | Vergangenheit zurückgenommen, sind bereits erbrachte Leistungen zu | Gegenfall › Erstattung, § 49a I | `b0ca42f5f869` |
+| 122 | 5:03.44 | 5:06.20 | Carla (Erzählerin/Lexi) | erstatten. Den Betrag setzt die Behörde durch | Gegenfall › Erstattung, § 49a I | `2ea40d8e03de` |
+| 123 | 5:06.20 | 5:08.68 | Carla (Erzählerin/Lexi) | schriftlichen Verwaltungsakt fest. | Gegenfall › Erstattung, § 49a I | `5af82473c0a1` |
+| 124 | 5:08.68 | 5:11.36 | Carla (Erzählerin/Lexi) | Und nach Absatz drei wird verzinst, mit | Gegenfall › Zinsen, § 49a III | `eaf8536522e5` |
+| 125 | 5:11.36 | 5:15.07 | Carla (Erzählerin/Lexi) | fünf Prozentpunkten über dem Basiszinssatz. | Gegenfall › Zinsen, § 49a III | `286121da568f` |
+| 126 | 5:15.27 | 5:18.23 | Carla (Erzählerin/Lexi) | Ausblick: Bei EU-Beihilfen, deren | Ausblick · EU-Beihilfen | `5385c5456724` |
+| 127 | 5:18.23 | 5:21.47 | Carla (Erzählerin/Lexi) | Rückforderung die Kommission bestandskräftig verlangt hat, | Ausblick · EU-Beihilfen | `79f77ee9b1e2` |
+| 128 | 5:21.47 | 5:24.26 | Carla (Erzählerin/Lexi) | überlagert das Unionsrecht diesen Schutz. | Ausblick · EU-Beihilfen | `14d4cb5768c6` |
+| 129 | 5:24.26 | 5:27.11 | Carla (Erzählerin/Lexi) | Nach dem Europäischen Gerichtshof muss die Behörde dann | Ausblick · EU-Beihilfen | `4b96c3220f1a` |
+| 130 | 5:27.11 | 5:28.43 | Carla (Erzählerin/Lexi) | sogar nach Ablauf der | Ausblick · EU-Beihilfen | `d3f52a5d04ef` |
+| 131 | 5:28.43 | 5:30.97 | Carla (Erzählerin/Lexi) | Jahresfrist zurücknehmen. | Ausblick · EU-Beihilfen | `b37673e9307f` |
+| 132 | 5:31.17 | 5:32.37 | Carla (Erzählerin/Lexi) | Klausurtipp: Die | Klausurtipp · Rücknahme prüfen | `8f58b5625297` |
+| 133 | 5:32.37 | 5:35.21 | Carla (Erzählerin/Lexi) | Rücknahme prüfst du meist in der Begründetheit einer | Klausurtipp · Rücknahme prüfen | `bf1cfc01565a` |
+| 134 | 5:35.21 | 5:36.89 | Carla (Erzählerin/Lexi) | Anfechtungsklage gegen den | Klausurtipp · Rücknahme prüfen | `20579c296252` |
+| 135 | 5:36.89 | 5:38.32 | Carla (Erzählerin/Lexi) | Rücknahmebescheid. | Klausurtipp · Rücknahme prüfen | `617691e8ec83` |
+| 136 | 5:38.32 | 5:41.13 | Carla (Erzählerin/Lexi) | Den Vertrauensschutz prüfst du bei Absatz zwei, | Klausurtipp · Rücknahme prüfen | `79d7b86cce59` |
+| 137 | 5:41.13 | 5:42.85 | Carla (Erzählerin/Lexi) | nicht erst im Ermessen. | Klausurtipp · Rücknahme prüfen | `e6680132022b` |
+| 138 | 5:42.85 | 5:46.49 | Carla (Erzählerin/Lexi) | Und rechne die Jahresfrist ab der vollständigen Kenntnis, | Klausurtipp · Rücknahme prüfen | `1054e1bde259` |
+| 139 | 5:46.49 | 5:49.51 | Carla (Erzählerin/Lexi) | nicht ab dem Erlass des Bescheids. | Klausurtipp · Rücknahme prüfen | `b64c7fd2b5ba` |
+| 140 | 5:49.51 | 5:51.23 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `2b69becf672d` |
+| 141 | 5:51.23 | 5:54.27 | Carla (Erzählerin/Lexi) | Rücknahme nach Paragraf achtundvierzig. | Klausurschema | `3aa574cb4343` |
+| 142 | 5:54.27 | 5:58.35 | Carla (Erzählerin/Lexi) | A, Rechtsgrundlage, Abgrenzung zum Widerruf. | Klausurschema | `b5d970f9c7a1` |
+| 143 | 5:58.35 | 6:02.43 | Carla (Erzählerin/Lexi) | B, formell: Zuständigkeit und Anhörung. | Klausurschema | `f4d2163e1171` |
+| 144 | 6:02.43 | 6:04.23 | Carla (Erzählerin/Lexi) | C, materiell: | Klausurschema | `1a295ead1d94` |
+| 145 | 6:04.23 | 6:07.19 | Carla (Erzählerin/Lexi) | Eins, rechtswidriger Verwaltungsakt. | Klausurschema | `d16d0ec3ea04` |
+| 146 | 6:07.19 | 6:09.12 | Carla (Erzählerin/Lexi) | Zwei, begünstigend. | Klausurschema | `a98776895148` |
+| 147 | 6:09.12 | 6:13.47 | Carla (Erzählerin/Lexi) | begünstigend. Drei, bei Geldleistungen Vertrauensschutz nach Absatz zwei. | Klausurschema | `4d6b1190a073` |
+| 148 | 6:13.47 | 6:15.55 | Carla (Erzählerin/Lexi) | Vier, Jahresfrist. | Klausurschema | `1d67783cf687` |
+| 149 | 6:15.55 | 6:17.31 | Carla (Erzählerin/Lexi) | Fünf, Ermessen. | Klausurschema | `089da0afe2cb` |
+| 150 | 6:17.31 | 6:22.53 | Carla (Erzählerin/Lexi) | Danach: Erstattung und Zinsen nach Paragraf neunundvierzig a. | Klausurschema | `6667c5cbbfc5` |
+| 151 | 6:22.73 | 6:27.09 | Carla (Erzählerin/Lexi) | Merke: Wer auf einen rechtswidrigen Förderbescheid vertraut und das Geld | Merksatz | `6f64e3c9ccc8` |
+| 152 | 6:27.09 | 6:29.05 | Carla (Erzählerin/Lexi) | verbraucht hat, ist in der Regel | Merksatz | `e109231a7a3c` |
+| 153 | 6:29.05 | 6:30.09 | Carla (Erzählerin/Lexi) | geschützt. | Merksatz | `29d776736b77` |
+| 154 | 6:30.09 | 6:32.29 | Carla (Erzählerin/Lexi) | Wer wesentlich falsche Angaben macht, | Merksatz | `4021326526a5` |
+| 155 | 6:32.29 | 6:35.24 | Carla (Erzählerin/Lexi) | verliert diesen Schutz. | Merksatz | `33950aa5f96c` |
