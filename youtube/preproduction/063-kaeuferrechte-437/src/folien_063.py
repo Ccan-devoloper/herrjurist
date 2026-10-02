@@ -75,7 +75,7 @@ def hart(e):
 
 
 def lexi_bis_ende(cue):
-    return (cue, round(DAUER - T_(cue) - 0.05, 3))
+    return (cue, round(DAUER - T_(cue) + 0.5, 3))       # Lexi bleibt bis zum letzten Frame (Befund Folge 063)
 
 
 def zit(text, x, y, cue, size=26):
@@ -298,7 +298,7 @@ sachverhalt("sv", [
     "Manfred kauft im Elektrogeschäft von Frau Kemper einen neuen Kühlschrank für 600 Euro. Am nächsten Tag liefert sie "
     "ihn in seine Küche. Am Abend ist er innen noch warm: Der Kompressor ist von Anfang an defekt.",
     "Manfred ruft an: „Der Kühlschrank kühlt nicht! Bringen Sie mir bitte innerhalb von 2 Wochen einen neuen.“ Frau Kemper "
-    "sagt: „Ja, ich kümmere mich darum.“ Doch sie vergisst den Auftrag, und die zwei Wochen vergehen. Manfred kauft "
+    "sagt: „Ja, ich kümmere mich darum.“ Doch sie vergisst den Auftrag, und die 2 Wochen vergehen. Manfred kauft "
     "woanders einen gleichen Kühlschrank für 700 Euro. Er will sein Geld zurück und die 100 Euro mehr.",
 ], "Was kann Manfred verlangen, und in welcher Reihenfolge?")
 
@@ -419,9 +419,9 @@ folie([("entb", "III. Frist zur Nacherfüllung › entbehrlich, §§ 323 Abs. 2,
     z("Nachbesserung in der Regel nach 2. erfolglosem Versuch", 150, 352, beim("fehl", "Nachbesserung"), size=32),
     z("3. Nacherfüllung unmöglich", 110, 440, "unm", "Bold", 34),
     zit("§ 326 Abs. 5, §§ 283, 311a Abs. 2 BGB", 150, 490, "unm"),
-    blk(110, 560, 1040, 170, GELB, "p475d", [("Verbrauchsgüterkauf, § 475d BGB:", "ExtraBold", 34, INK),
-                                            ("Mitteilung des Mangels + angemessene Zeit", "Regular", 32, INK),
-                                            ("verstrichen genügt", "Regular", 32, INK)]),
+    blk(110, 560, 1040, 90, GELB, "p475d", [("Verbrauchsgüterkauf, § 475d BGB:", "ExtraBold", 34, INK)]),
+    z("Mitteilung des Mangels und angemessene Zeit", 150, 675, beim("p475d", "Mitteilung"), size=32),
+    z("verstrichen: genügt", 150, 722, beim("p475d", "verstreichen"), size=32),
     pl("Unternehmerin", X1, 230, beim("p475d", "Unternehmer"), fill=GRUEN, size=28, anker="m"),
     pl("Verbraucher", X2, 300, beim("p475d", "Verbrauchsgüterkauf"), fill=BLAU, size=28, anker="m"),
     *requisit([("entb", ("tabler", "hand-stop", 120, WEISS), "Verweigerung", ROT),
