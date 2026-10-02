@@ -11,7 +11,8 @@ Verwendungskondiktion genannt; Fall: Leistung der Überweisenden bei versehentli
 818 IV (XII ZR 102/09 Rn. 55), § 822 ein Satz; Klausurtipp, Schema, Merksatz.
 Figuren: Ursula (hilde), Rüdiger (stephan); Lexi/Erzählerin Carla. Belege je Aussage: ../RECHTSSTAND.md.
 Segmente: (text, pause) = Erzählerin Carla (auch Lexi), (text, pause, rolle) = Figurenrede. [marke] = Cue für Bild/Tafel/
-Prüfpfad; jede Marke kommt genau einmal vor."""
+Prüfpfad; jede Marke kommt genau einmal vor. „Kondiktio“ ist die lautliche Schreibweise für „condictio“ (Nachvertonung
+der Segmente 12 und 17: beide Erkennungsmodelle hörten „Konditio/Kondizio“ ohne k); Tafeln und Untertitel schreiben „condictio“."""
 
 P, PS = 0.4, 0.6
 
@@ -46,9 +47,9 @@ SEGMENTE = [
      "Leistungskondiktion hat Vorrang.", PS),
     # --- E Leistungskondiktionen --------------------------------------------------------------------------------------------
     ("[lks]Auf dem Leistungsast gibt es vier Kondiktionen. [ci]Fehlt der Rechtsgrund von Anfang an, greift Paragraf "
-     "achthundertzwölf Absatz eins Satz eins, erste Alternative, die condictio indebiti. [ocf]Fällt er später weg, etwa "
-     "durch eine auflösende Bedingung, die condictio ob causam finitam aus Satz zwei, erste Alternative. [orem]Bleibt ein "
-     "vereinbarter Zweck der Leistung aus, die condictio ob rem aus Satz zwei, zweite Alternative. [p817]Und verstößt der "
+     "achthundertzwölf Absatz eins Satz eins, erste Alternative, die Kondiktio indebiti. [ocf]Fällt er später weg, etwa "
+     "durch eine auflösende Bedingung, die Kondiktio ob causam finitam aus Satz zwei, erste Alternative. [orem]Bleibt ein "
+     "vereinbarter Zweck der Leistung aus, die Kondiktio ob rem aus Satz zwei, zweite Alternative. [p817]Und verstößt der "
      "Empfänger gerade durch die Annahme gegen ein gesetzliches Verbot oder die guten Sitten, greift Paragraf "
      "achthundertsiebzehn Satz eins.", P),
     ("[aus]Ausgeschlossen ist die Rückforderung nach Paragraf achthundertvierzehn, wenn der Leistende wusste, dass er "
@@ -68,7 +69,7 @@ SEGMENTE = [
      "Paragraf sechshundertfünfundsiebzig r an die IBAN halten. [bgh]Eine solche versehentliche Überweisung an den falschen "
      "Empfänger hat der Bundesgerichtshof als Leistung des Überweisenden behandelt.", P),
     ("[org]Einen Rechtsgrund gibt es nicht, denn Ursula schuldet Rüdiger nichts. [k814]Und sie wusste das nicht: Sie "
-     "wollte ja ihren Maler bezahlen. [ci2]Also greift die condictio indebiti.", PS),
+     "wollte ja ihren Maler bezahlen. [ci2]Also greift die Kondiktio indebiti.", PS),
     # --- G2 Ausblick Bankdreieck ---------------------------------------------------------------------------------------------
     ("[dreieck]Ein Ausblick auf das Bankdreieck: [ohne]Zahlt die Bank ohne wirksamen Auftrag, etwa auf eine gefälschte "
      "Überweisung, hat der Kontoinhaber nichts geleistet. [direkt]Dann kann die Bank den Betrag direkt beim Empfänger "

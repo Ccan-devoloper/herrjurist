@@ -1,6 +1,6 @@
 # Folge 073 · Cue-Timeline (Ton-Bild-Gate)
 
-Quelle: `bildhalt_manifest.json` (124 Bildhalte, davon 124 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
+Quelle: `bildhalt_manifest.json` (125 Bildhalte, davon 125 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
 
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
@@ -44,87 +44,88 @@ Quelle: `bildhalt_manifest.json` (124 Bildhalte, davon 124 eigenständig), `cues
 | 38 | 1:50.40 | 1:53.36 | Carla (Erzählerin/Lexi) | Wenn nein, die Nichtleistungskondiktion. | Entscheidungsbaum › Erlangt durch Leistung? | `a5e39b358997` |
 | 39 | 1:53.36 | 1:58.92 | Carla (Erzählerin/Lexi) | Denn sie kommt nur in Betracht, wenn der Gegenstand dem Empfänger nicht geleistet worden ist: Die | Entscheidungsbaum › Vorrang der Leistungskondiktion | `ef23432dc4fe` |
 | 40 | 1:58.92 | 2:01.68 | Carla (Erzählerin/Lexi) | Leistungskondiktion hat Vorrang. | Entscheidungsbaum › Vorrang der Leistungskondiktion | `94ebddd25fef` |
-| 41 | 2:01.68 | 2:05.16 | Carla (Erzählerin/Lexi) | Auf dem Leistungsast gibt es vier Kondiktionen. | Leistungskondiktionen | `0a533c561e9b` |
-| 42 | 2:05.16 | 2:05.68 | Carla (Erzählerin/Lexi) | Fehlt der | Leistungskondiktionen › condictio indebiti, § 812 I 1 Alt. 1 BGB | `6eb4fd4f08cc` |
-| 43 | 2:05.68 | 2:07.84 | Carla (Erzählerin/Lexi) | Rechtsgrund von Anfang an, greift | Leistungskondiktionen › condictio indebiti, § 812 I 1 Alt. 1 BGB | `3630508d0b39` |
-| 44 | 2:07.84 | 2:14.92 | Carla (Erzählerin/Lexi) | Paragraf achthundertzwölf Absatz eins Satz eins, erste Alternative, die condictio indebiti. | Leistungskondiktionen › condictio indebiti, § 812 I 1 Alt. 1 BGB | `9670654400f3` |
-| 45 | 2:14.92 | 2:18.64 | Carla (Erzählerin/Lexi) | Fällt er später weg, etwa durch eine auflösende Bedingung, die | Leistungskondiktionen › condictio ob causam finitam, § 812 I 2 Alt. 1 BGB | `37e3c22dbead` |
-| 46 | 2:18.64 | 2:23.72 | Carla (Erzählerin/Lexi) | condictio ob causam finitam aus Satz zwei, erste Alternative. | Leistungskondiktionen › condictio ob causam finitam, § 812 I 2 Alt. 1 BGB | `8b900e16bec6` |
-| 47 | 2:23.72 | 2:26.84 | Carla (Erzählerin/Lexi) | Bleibt ein vereinbarter Zweck der Leistung aus, die | Leistungskondiktionen › condictio ob rem, § 812 I 2 Alt. 2 BGB | `4164592ee5fa` |
-| 48 | 2:26.84 | 2:31.24 | Carla (Erzählerin/Lexi) | condictio ob rem aus Satz zwei, zweite Alternative. | Leistungskondiktionen › condictio ob rem, § 812 I 2 Alt. 2 BGB | `01357939aa31` |
-| 49 | 2:31.52 | 2:37.68 | Carla (Erzählerin/Lexi) | verstößt der Empfänger gerade durch die Annahme gegen ein gesetzliches Verbot oder die guten Sitten, greift | Leistungskondiktionen › § 817 Satz 1 BGB | `f34655a70bf0` |
-| 50 | 2:37.68 | 2:40.80 | Carla (Erzählerin/Lexi) | Paragraf achthundertsiebzehn Satz eins. | Leistungskondiktionen › § 817 Satz 1 BGB | `38d3d5f084b5` |
-| 51 | 2:40.80 | 2:48.12 | Carla (Erzählerin/Lexi) | Ausgeschlossen ist die Rückforderung nach Paragraf achthundertvierzehn, wenn der Leistende wusste, dass er  … | Leistungskondiktionen › Ausschluss: §§ 814, 817 Satz 2 BGB | `e38b97f897d3` |
-| 52 | 2:48.12 | 2:55.40 | Carla (Erzählerin/Lexi) | und nach Paragraf achthundertsiebzehn Satz zwei, wenn ihm selbst ein solcher Verstoß zur Last fällt. | Leistungskondiktionen › Ausschluss: §§ 814, 817 Satz 2 BGB | `a3004c4fa886` |
-| 53 | 2:55.40 | 2:57.76 | Carla (Erzählerin/Lexi) | Auf dem anderen Ast ist der Hauptfall die | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `e5f3b520ae3c` |
-| 54 | 2:57.76 | 2:59.43 | Carla (Erzählerin/Lexi) | Eingriffskondiktion, | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `32fd45961edf` |
-| 55 | 2:59.43 | 3:04.48 | Carla (Erzählerin/Lexi) | Paragraf achthundertzwölf Absatz eins Satz eins, zweite Alternative. | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `4b0b2696394b` |
-| 56 | 3:04.48 | 3:09.08 | Carla (Erzählerin/Lexi) | Jemand greift in ein Recht ein, das einem anderen zur ausschließlichen Verwertung | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `2d25b479f640` |
-| 57 | 3:09.08 | 3:11.64 | Carla (Erzählerin/Lexi) | zugewiesen ist. Beispiel: Ein | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `be67ec71c36a` |
-| 58 | 3:11.64 | 3:17.08 | Carla (Erzählerin/Lexi) | Unternehmen wirbt ohne Erlaubnis mit deinem Bild. Es schuldet grundsätzlich die übliche | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `2d5bd4783e16` |
-| 59 | 3:17.08 | 3:19.00 | Carla (Erzählerin/Lexi) | Lizenzgebühr. | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `f1f56099e98c` |
-| 60 | 3:19.00 | 3:22.52 | Carla (Erzählerin/Lexi) | Ein Sonderfall ist Paragraf achthundertsechzehn: | Nichtleistungskondiktionen › § 816 BGB | `00ce98f78652` |
-| 61 | 3:22.52 | 3:27.96 | Carla (Erzählerin/Lexi) | Verfügt ein Nichtberechtigter wirksam über einen fremden Gegenstand, muss er dem Berechtigten | Nichtleistungskondiktionen › § 816 BGB | `11a2e4a73247` |
-| 62 | 3:27.96 | 3:31.36 | Carla (Erzählerin/Lexi) | herausgeben, was er durch die Verfügung erlangt hat. | Nichtleistungskondiktionen › § 816 BGB | `1a1932f30ce5` |
-| 63 | 3:31.36 | 3:37.04 | Carla (Erzählerin/Lexi) | Daneben gibt es noch die Rückgriffskondiktion und die Verwendungskondiktion. | Nichtleistungskondiktionen › Rückgriff, Verwendung | `ea1177e9be3c` |
-| 64 | 3:37.24 | 3:38.68 | Carla (Erzählerin/Lexi) | Zurück zu Ursula. | Fall · § 812 I 1 Alt. 1 BGB | `1060120994b6` |
-| 65 | 3:38.68 | 3:40.88 | Carla (Erzählerin/Lexi) | Rüdiger hat etwas erlangt: die | Fall › 1. etwas erlangt | `79bfc8049c41` |
-| 66 | 3:40.88 | 3:43.96 | Carla (Erzählerin/Lexi) | Gutschrift über fünfhundert Euro, also einen | Fall › 1. etwas erlangt | `680932a4c365` |
-| 67 | 3:43.96 | 3:45.04 | Carla (Erzählerin/Lexi) | Anspruch gegen seine | Fall › 1. etwas erlangt | `1d1119e947ff` |
-| 68 | 3:45.04 | 3:45.80 | Carla (Erzählerin/Lexi) | Bank. | Fall › 1. etwas erlangt | `46a208eb1ab0` |
-| 69 | 3:45.80 | 3:47.40 | Carla (Erzählerin/Lexi) | Ursula hat die Überweisung | Fall › 2. durch Leistung von Ursula | `1b264ff8a6b3` |
-| 70 | 3:47.40 | 3:53.28 | Carla (Erzählerin/Lexi) | selbst in Auftrag gegeben, und die Banken durften sich nach Paragraf sechshundertfünfundsiebzig r an die | Fall › 2. durch Leistung von Ursula | `ca1c7b93291e` |
-| 71 | 3:53.28 | 3:58.60 | Carla (Erzählerin/Lexi) | IBAN halten. Eine solche versehentliche Überweisung an den falschen Empfänger hat der | Fall › 2. durch Leistung von Ursula | `82aa9cf140a1` |
-| 72 | 3:58.60 | 4:00.00 | Carla (Erzählerin/Lexi) | Bundesgerichtshof als | Fall › 2. durch Leistung von Ursula | `1a8fd62cb237` |
-| 73 | 4:00.00 | 4:02.64 | Carla (Erzählerin/Lexi) | Leistung des Überweisenden behandelt. | Fall › 2. durch Leistung von Ursula | `0a01fa697c64` |
-| 74 | 4:02.64 | 4:05.44 | Carla (Erzählerin/Lexi) | Einen Rechtsgrund gibt es nicht, denn Ursula | Fall › 3. ohne rechtlichen Grund | `09abab027163` |
-| 75 | 4:05.44 | 4:06.28 | Carla (Erzählerin/Lexi) | schuldet Rüdiger | Fall › 3. ohne rechtlichen Grund | `c7b695418cb7` |
-| 76 | 4:06.28 | 4:07.08 | Carla (Erzählerin/Lexi) | nichts. | Fall › 3. ohne rechtlichen Grund | `7a731b350bdd` |
-| 77 | 4:07.08 | 4:08.68 | Carla (Erzählerin/Lexi) | Und sie wusste das nicht: Sie | Fall › 4. kein Ausschluss, § 814 BGB | `2e16c3c36b30` |
-| 78 | 4:08.68 | 4:10.68 | Carla (Erzählerin/Lexi) | wollte ja ihren Maler bezahlen. | Fall › 4. kein Ausschluss, § 814 BGB | `7ff242d7daaf` |
-| 79 | 4:10.68 | 4:14.28 | Carla (Erzählerin/Lexi) | Also greift die condictio indebiti. | Fall › condictio indebiti | `439546d62c75` |
-| 80 | 4:14.28 | 4:16.96 | Carla (Erzählerin/Lexi) | Ein Ausblick auf das Bankdreieck: | Ausblick · Bankdreieck | `243eddb5050e` |
-| 81 | 4:16.96 | 4:17.88 | Carla (Erzählerin/Lexi) | Zahlt die Bank | Ausblick › ohne wirksamen Auftrag: keine Leistung | `59294fc5e047` |
-| 82 | 4:17.88 | 4:20.36 | Carla (Erzählerin/Lexi) | ohne wirksamen Auftrag, etwa auf eine | Ausblick › ohne wirksamen Auftrag: keine Leistung | `9958f381f329` |
-| 83 | 4:20.36 | 4:22.16 | Carla (Erzählerin/Lexi) | gefälschte Überweisung, hat der | Ausblick › ohne wirksamen Auftrag: keine Leistung | `ca4629e55b8e` |
-| 84 | 4:22.16 | 4:24.64 | Carla (Erzählerin/Lexi) | Kontoinhaber nichts geleistet. | Ausblick › ohne wirksamen Auftrag: keine Leistung | `9e0f0e36521e` |
-| 85 | 4:24.64 | 4:26.36 | Carla (Erzählerin/Lexi) | Dann kann die Bank den Betrag | Ausblick › Nichtleistungskondiktion der Bank | `5d329a34abf7` |
-| 86 | 4:26.36 | 4:29.04 | Carla (Erzählerin/Lexi) | direkt beim Empfänger herausverlangen, mit der | Ausblick › Nichtleistungskondiktion der Bank | `36ed9244ed23` |
-| 87 | 4:29.04 | 4:31.76 | Carla (Erzählerin/Lexi) | Nichtleistungskondiktion. | Ausblick › Nichtleistungskondiktion der Bank | `fc6939809a77` |
-| 88 | 4:31.96 | 4:33.72 | Carla (Erzählerin/Lexi) | Bleibt die Rechtsfolge. | Rechtsfolge · §§ 818 ff. BGB | `2bc156ebcf90` |
-| 89 | 4:33.72 | 4:39.12 | Carla (Erzählerin/Lexi) | Herauszugeben ist das Erlangte, nach Paragraf achthundertachtzehn Absatz eins auch | Rechtsfolge › Herausgabe, § 818 Abs. 1 BGB | `c574ab593f1a` |
-| 90 | 4:39.12 | 4:40.92 | Carla (Erzählerin/Lexi) | gezogene Nutzungen. | Rechtsfolge › Herausgabe, § 818 Abs. 1 BGB | `292cf1d95789` |
-| 91 | 4:40.92 | 4:45.28 | Carla (Erzählerin/Lexi) | Ist die Herausgabe nicht möglich, schuldet der Empfänger nach Absatz zwei den | Rechtsfolge › Wert, § 818 Abs. 2 BGB | `83a7c58412ee` |
-| 92 | 4:45.28 | 4:46.52 | Carla (Erzählerin/Lexi) | Wert, so wie die | Rechtsfolge › Wert, § 818 Abs. 2 BGB | `93d146ed3887` |
-| 93 | 4:46.52 | 4:49.04 | Carla (Erzählerin/Lexi) | Lizenzgebühr für das Bild. | Rechtsfolge › Wert, § 818 Abs. 2 BGB | `1c66c3783ce5` |
-| 94 | 4:49.24 | 4:51.84 | Carla (Erzählerin/Lexi) | Rüdiger beruft sich auf Absatz drei: | Rechtsfolge › nicht mehr bereichert, § 818 Abs. 3 BGB | `ffaf96761b72` |
-| 95 | 4:51.84 | 4:53.44 | Carla (Erzählerin/Lexi) | Wer nicht mehr bereichert ist, | Rechtsfolge › nicht mehr bereichert, § 818 Abs. 3 BGB | `5888c74a166d` |
-| 96 | 4:53.44 | 4:56.92 | Carla (Erzählerin/Lexi) | muss nichts herausgeben und keinen Wert ersetzen. | Rechtsfolge › nicht mehr bereichert, § 818 Abs. 3 BGB | `8241b2befeda` |
-| 97 | 4:56.92 | 5:00.60 | Carla (Erzählerin/Lexi) | Doch er wusste von Anfang an, dass ihm das Geld nicht zusteht. | Rechtsfolge › nicht mehr bereichert, § 818 Abs. 3 BGB | `e81720317ffd` |
-| 98 | 5:00.60 | 5:08.36 | Carla (Erzählerin/Lexi) | Wer den fehlenden Rechtsgrund kennt, haftet nach Paragraf achthundertneunzehn Absatz eins so, als wäre der  … | Rechtsfolge › Kenntnis, §§ 819 Abs. 1, 818 Abs. 4 BGB | `d126f64f729c` |
-| 99 | 5:08.36 | 5:12.12 | Carla (Erzählerin/Lexi) | und nach Paragraf achthundertachtzehn Absatz vier kann er sich dann | Rechtsfolge › Kenntnis, §§ 819 Abs. 1, 818 Abs. 4 BGB | `c9a7f0ff9226` |
-| 100 | 5:12.12 | 5:15.52 | Carla (Erzählerin/Lexi) | nicht mehr auf den Wegfall der Bereicherung berufen. | Rechtsfolge › Kenntnis, §§ 819 Abs. 1, 818 Abs. 4 BGB | `ec2f0782234b` |
-| 101 | 5:15.52 | 5:21.52 | Carla (Erzählerin/Lexi) | Übrigens: Wendet ein Empfänger das Erlangte unentgeltlich einem Dritten zu und wird er dadurch | Rechtsfolge › Dritter, § 822 BGB | `6b7179f2f52d` |
-| 102 | 5:21.52 | 5:26.52 | Carla (Erzählerin/Lexi) | frei, muss nach Paragraf achthundertzweiundzwanzig der Dritte herausgeben. | Rechtsfolge › Dritter, § 822 BGB | `e0e316f95cf9` |
-| 103 | 5:26.52 | 5:31.28 | Carla (Erzählerin/Lexi) | Ergebnis: Rüdiger muss Ursula die fünfhundert Euro zurückzahlen, das | Ergebnis | `e5c39d75972a` |
-| 104 | 5:31.28 | 5:34.36 | Carla (Erzählerin/Lexi) | Wochenende am See hilft ihm nicht. | Ergebnis | `fea7dca7e74f` |
-| 105 | 5:34.56 | 5:35.72 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Leistungskondiktion zuerst | `d04c716907f0` |
-| 106 | 5:35.72 | 5:38.88 | Carla (Erzählerin/Lexi) | Prüfe immer zuerst die Leistungskondiktion. | Klausurtipp · Leistungskondiktion zuerst | `e0c355333e3e` |
-| 107 | 5:38.88 | 5:40.84 | Carla (Erzählerin/Lexi) | Frage dafür ausdrücklich: | Klausurtipp · Leistungskondiktion zuerst | `1a80fc6e5b47` |
-| 108 | 5:40.84 | 5:42.72 | Carla (Erzählerin/Lexi) | Wer hat aus Sicht des Empfängers | Klausurtipp · Leistungskondiktion zuerst | `54cedca7086e` |
-| 109 | 5:42.72 | 5:44.32 | Carla (Erzählerin/Lexi) | an wen geleistet? | Klausurtipp · Leistungskondiktion zuerst | `ef26be02bcb3` |
-| 110 | 5:44.32 | 5:47.04 | Carla (Erzählerin/Lexi) | Erst wenn keine Leistung vorliegt, gehst du zur | Klausurtipp · Leistungskondiktion zuerst | `b82bfb4920ae` |
-| 111 | 5:47.04 | 5:49.68 | Carla (Erzählerin/Lexi) | Nichtleistungskondiktion. | Klausurtipp · Leistungskondiktion zuerst | `10abb3d0761a` |
-| 112 | 5:49.68 | 5:51.40 | Carla (Erzählerin/Lexi) | Dein Klausurschema: | Klausurschema | `cedabd6c773c` |
-| 113 | 5:51.40 | 5:54.56 | Carla (Erzählerin/Lexi) | Römisch eins, Leistungskondiktion: | Klausurschema | `00670736c283` |
-| 114 | 5:54.56 | 5:58.72 | Carla (Erzählerin/Lexi) | etwas erlangt, durch Leistung, ohne rechtlichen Grund, | Klausurschema | `7da4eb44439d` |
-| 115 | 5:58.72 | 6:04.36 | Carla (Erzählerin/Lexi) | kein Ausschluss nach den Paragrafen achthundertvierzehn und achthundertsiebzehn Satz zwei. | Klausurschema | `1e364fb8e550` |
-| 116 | 6:04.36 | 6:09.31 | Carla (Erzählerin/Lexi) | Römisch zwei, nur ohne Leistung: Nichtleistungskondiktion, | Klausurschema › Nichtleistungskondiktion | `3e4f9479ed65` |
-| 117 | 6:09.31 | 6:13.20 | Carla (Erzählerin/Lexi) | etwas in sonstiger Weise auf Kosten des Anspruchstellers erlangt, | Klausurschema › Nichtleistungskondiktion | `b8e26f44fba8` |
-| 118 | 6:13.20 | 6:15.36 | Carla (Erzählerin/Lexi) | ohne rechtlichen Grund. | Klausurschema › Nichtleistungskondiktion | `3b7e79ec356b` |
-| 119 | 6:15.36 | 6:20.68 | Carla (Erzählerin/Lexi) | Römisch drei: Rechtsfolge nach den Paragrafen achthundertachtzehn folgende: | Klausurschema › Rechtsfolge | `1f1b14ff22f3` |
-| 120 | 6:20.68 | 6:26.20 | Carla (Erzählerin/Lexi) | Herausgabe oder Wertersatz, Entreicherung und verschärfte Haftung. | Klausurschema › Rechtsfolge | `9364721fb991` |
-| 121 | 6:26.40 | 6:27.96 | Carla (Erzählerin/Lexi) | Merke: Erst fragen, | Merksatz | `c687b44691e4` |
-| 122 | 6:27.96 | 6:31.68 | Carla (Erzählerin/Lexi) | ob geleistet wurde, dann die passende Kondiktion wählen. | Merksatz | `0d1c8be7203e` |
-| 123 | 6:31.68 | 6:34.32 | Carla (Erzählerin/Lexi) | Und wer den fehlenden Rechtsgrund kennt, kann sich | Merksatz | `982d337be2b1` |
-| 124 | 6:34.32 | 6:37.76 | Carla (Erzählerin/Lexi) | nicht auf Entreicherung berufen. | Merksatz | `5dd3a6820f24` |
+| 41 | 2:01.68 | 2:05.28 | Carla (Erzählerin/Lexi) | Auf dem Leistungsast gibt es vier Kondiktionen. | Leistungskondiktionen | `0a533c561e9b` |
+| 42 | 2:05.28 | 2:05.72 | Carla (Erzählerin/Lexi) | Fehlt der | Leistungskondiktionen › condictio indebiti, § 812 I 1 Alt. 1 BGB | `6eb4fd4f08cc` |
+| 43 | 2:05.72 | 2:07.92 | Carla (Erzählerin/Lexi) | Rechtsgrund von Anfang an, greift | Leistungskondiktionen › condictio indebiti, § 812 I 1 Alt. 1 BGB | `3630508d0b39` |
+| 44 | 2:07.92 | 2:15.16 | Carla (Erzählerin/Lexi) | Paragraf achthundertzwölf Absatz eins Satz eins, erste Alternative, die Kondiktio indebiti. | Leistungskondiktionen › condictio indebiti, § 812 I 1 Alt. 1 BGB | `9670654400f3` |
+| 45 | 2:15.16 | 2:18.84 | Carla (Erzählerin/Lexi) | Fällt er später weg, etwa durch eine auflösende Bedingung, die | Leistungskondiktionen › condictio ob causam finitam, § 812 I 2 Alt. 1 BGB | `37e3c22dbead` |
+| 46 | 2:18.84 | 2:24.00 | Carla (Erzählerin/Lexi) | Kondiktio ob causam finitam aus Satz zwei, erste Alternative. | Leistungskondiktionen › condictio ob causam finitam, § 812 I 2 Alt. 1 BGB | `8b900e16bec6` |
+| 47 | 2:24.00 | 2:27.12 | Carla (Erzählerin/Lexi) | Bleibt ein vereinbarter Zweck der Leistung aus, die | Leistungskondiktionen › condictio ob rem, § 812 I 2 Alt. 2 BGB | `4164592ee5fa` |
+| 48 | 2:27.12 | 2:31.56 | Carla (Erzählerin/Lexi) | Kondiktio ob rem aus Satz zwei, zweite Alternative. | Leistungskondiktionen › condictio ob rem, § 812 I 2 Alt. 2 BGB | `01357939aa31` |
+| 49 | 2:31.56 | 2:31.92 | Carla (Erzählerin/Lexi) | Und | Leistungskondiktionen › § 817 Satz 1 BGB | `9626125a9c3c` |
+| 50 | 2:31.92 | 2:38.00 | Carla (Erzählerin/Lexi) | verstößt der Empfänger gerade durch die Annahme gegen ein gesetzliches Verbot oder die guten Sitten, greift | Leistungskondiktionen › § 817 Satz 1 BGB | `f34655a70bf0` |
+| 51 | 2:38.00 | 2:41.20 | Carla (Erzählerin/Lexi) | Paragraf achthundertsiebzehn Satz eins. | Leistungskondiktionen › § 817 Satz 1 BGB | `38d3d5f084b5` |
+| 52 | 2:41.20 | 2:48.52 | Carla (Erzählerin/Lexi) | Ausgeschlossen ist die Rückforderung nach Paragraf achthundertvierzehn, wenn der Leistende wusste, dass er  … | Leistungskondiktionen › Ausschluss: §§ 814, 817 Satz 2 BGB | `e38b97f897d3` |
+| 53 | 2:48.52 | 2:55.80 | Carla (Erzählerin/Lexi) | und nach Paragraf achthundertsiebzehn Satz zwei, wenn ihm selbst ein solcher Verstoß zur Last fällt. | Leistungskondiktionen › Ausschluss: §§ 814, 817 Satz 2 BGB | `a3004c4fa886` |
+| 54 | 2:55.80 | 2:58.16 | Carla (Erzählerin/Lexi) | Auf dem anderen Ast ist der Hauptfall die | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `e5f3b520ae3c` |
+| 55 | 2:58.16 | 2:59.83 | Carla (Erzählerin/Lexi) | Eingriffskondiktion, | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `32fd45961edf` |
+| 56 | 2:59.83 | 3:04.88 | Carla (Erzählerin/Lexi) | Paragraf achthundertzwölf Absatz eins Satz eins, zweite Alternative. | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `4b0b2696394b` |
+| 57 | 3:04.88 | 3:09.48 | Carla (Erzählerin/Lexi) | Jemand greift in ein Recht ein, das einem anderen zur ausschließlichen Verwertung | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `2d25b479f640` |
+| 58 | 3:09.48 | 3:12.04 | Carla (Erzählerin/Lexi) | zugewiesen ist. Beispiel: Ein | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `be67ec71c36a` |
+| 59 | 3:12.04 | 3:17.48 | Carla (Erzählerin/Lexi) | Unternehmen wirbt ohne Erlaubnis mit deinem Bild. Es schuldet grundsätzlich die übliche | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `2d5bd4783e16` |
+| 60 | 3:17.48 | 3:19.40 | Carla (Erzählerin/Lexi) | Lizenzgebühr. | Nichtleistungskondiktionen › Eingriffskondiktion, § 812 I 1 Alt. 2 BGB | `f1f56099e98c` |
+| 61 | 3:19.40 | 3:22.92 | Carla (Erzählerin/Lexi) | Ein Sonderfall ist Paragraf achthundertsechzehn: | Nichtleistungskondiktionen › § 816 BGB | `00ce98f78652` |
+| 62 | 3:22.92 | 3:28.36 | Carla (Erzählerin/Lexi) | Verfügt ein Nichtberechtigter wirksam über einen fremden Gegenstand, muss er dem Berechtigten | Nichtleistungskondiktionen › § 816 BGB | `11a2e4a73247` |
+| 63 | 3:28.36 | 3:31.76 | Carla (Erzählerin/Lexi) | herausgeben, was er durch die Verfügung erlangt hat. | Nichtleistungskondiktionen › § 816 BGB | `1a1932f30ce5` |
+| 64 | 3:31.76 | 3:37.44 | Carla (Erzählerin/Lexi) | Daneben gibt es noch die Rückgriffskondiktion und die Verwendungskondiktion. | Nichtleistungskondiktionen › Rückgriff, Verwendung | `ea1177e9be3c` |
+| 65 | 3:37.64 | 3:39.08 | Carla (Erzählerin/Lexi) | Zurück zu Ursula. | Fall · § 812 I 1 Alt. 1 BGB | `1060120994b6` |
+| 66 | 3:39.08 | 3:41.28 | Carla (Erzählerin/Lexi) | Rüdiger hat etwas erlangt: die | Fall › 1. etwas erlangt | `79bfc8049c41` |
+| 67 | 3:41.28 | 3:44.36 | Carla (Erzählerin/Lexi) | Gutschrift über fünfhundert Euro, also einen | Fall › 1. etwas erlangt | `680932a4c365` |
+| 68 | 3:44.36 | 3:45.44 | Carla (Erzählerin/Lexi) | Anspruch gegen seine | Fall › 1. etwas erlangt | `1d1119e947ff` |
+| 69 | 3:45.44 | 3:46.20 | Carla (Erzählerin/Lexi) | Bank. | Fall › 1. etwas erlangt | `46a208eb1ab0` |
+| 70 | 3:46.20 | 3:47.80 | Carla (Erzählerin/Lexi) | Ursula hat die Überweisung | Fall › 2. durch Leistung von Ursula | `1b264ff8a6b3` |
+| 71 | 3:47.80 | 3:53.68 | Carla (Erzählerin/Lexi) | selbst in Auftrag gegeben, und die Banken durften sich nach Paragraf sechshundertfünfundsiebzig r an die | Fall › 2. durch Leistung von Ursula | `ca1c7b93291e` |
+| 72 | 3:53.68 | 3:59.00 | Carla (Erzählerin/Lexi) | IBAN halten. Eine solche versehentliche Überweisung an den falschen Empfänger hat der | Fall › 2. durch Leistung von Ursula | `82aa9cf140a1` |
+| 73 | 3:59.00 | 4:00.40 | Carla (Erzählerin/Lexi) | Bundesgerichtshof als | Fall › 2. durch Leistung von Ursula | `1a8fd62cb237` |
+| 74 | 4:00.40 | 4:03.04 | Carla (Erzählerin/Lexi) | Leistung des Überweisenden behandelt. | Fall › 2. durch Leistung von Ursula | `0a01fa697c64` |
+| 75 | 4:03.04 | 4:05.84 | Carla (Erzählerin/Lexi) | Einen Rechtsgrund gibt es nicht, denn Ursula | Fall › 3. ohne rechtlichen Grund | `09abab027163` |
+| 76 | 4:05.84 | 4:06.64 | Carla (Erzählerin/Lexi) | schuldet Rüdiger | Fall › 3. ohne rechtlichen Grund | `c7b695418cb7` |
+| 77 | 4:06.64 | 4:07.40 | Carla (Erzählerin/Lexi) | nichts. | Fall › 3. ohne rechtlichen Grund | `7a731b350bdd` |
+| 78 | 4:07.40 | 4:09.04 | Carla (Erzählerin/Lexi) | Und sie wusste das nicht: Sie | Fall › 4. kein Ausschluss, § 814 BGB | `2e16c3c36b30` |
+| 79 | 4:09.04 | 4:11.00 | Carla (Erzählerin/Lexi) | wollte ja ihren Maler bezahlen. | Fall › 4. kein Ausschluss, § 814 BGB | `7ff242d7daaf` |
+| 80 | 4:11.00 | 4:14.84 | Carla (Erzählerin/Lexi) | Also greift die Kondiktio indebiti. | Fall › condictio indebiti | `439546d62c75` |
+| 81 | 4:14.84 | 4:17.52 | Carla (Erzählerin/Lexi) | Ein Ausblick auf das Bankdreieck: | Ausblick · Bankdreieck | `243eddb5050e` |
+| 82 | 4:17.52 | 4:18.44 | Carla (Erzählerin/Lexi) | Zahlt die Bank | Ausblick › ohne wirksamen Auftrag: keine Leistung | `59294fc5e047` |
+| 83 | 4:18.44 | 4:20.92 | Carla (Erzählerin/Lexi) | ohne wirksamen Auftrag, etwa auf eine | Ausblick › ohne wirksamen Auftrag: keine Leistung | `9958f381f329` |
+| 84 | 4:20.92 | 4:22.72 | Carla (Erzählerin/Lexi) | gefälschte Überweisung, hat der | Ausblick › ohne wirksamen Auftrag: keine Leistung | `ca4629e55b8e` |
+| 85 | 4:22.72 | 4:25.20 | Carla (Erzählerin/Lexi) | Kontoinhaber nichts geleistet. | Ausblick › ohne wirksamen Auftrag: keine Leistung | `9e0f0e36521e` |
+| 86 | 4:25.20 | 4:26.92 | Carla (Erzählerin/Lexi) | Dann kann die Bank den Betrag | Ausblick › Nichtleistungskondiktion der Bank | `5d329a34abf7` |
+| 87 | 4:26.92 | 4:29.60 | Carla (Erzählerin/Lexi) | direkt beim Empfänger herausverlangen, mit der | Ausblick › Nichtleistungskondiktion der Bank | `36ed9244ed23` |
+| 88 | 4:29.60 | 4:32.32 | Carla (Erzählerin/Lexi) | Nichtleistungskondiktion. | Ausblick › Nichtleistungskondiktion der Bank | `fc6939809a77` |
+| 89 | 4:32.52 | 4:34.28 | Carla (Erzählerin/Lexi) | Bleibt die Rechtsfolge. | Rechtsfolge · §§ 818 ff. BGB | `2bc156ebcf90` |
+| 90 | 4:34.28 | 4:39.68 | Carla (Erzählerin/Lexi) | Herauszugeben ist das Erlangte, nach Paragraf achthundertachtzehn Absatz eins auch | Rechtsfolge › Herausgabe, § 818 Abs. 1 BGB | `c574ab593f1a` |
+| 91 | 4:39.68 | 4:41.48 | Carla (Erzählerin/Lexi) | gezogene Nutzungen. | Rechtsfolge › Herausgabe, § 818 Abs. 1 BGB | `292cf1d95789` |
+| 92 | 4:41.48 | 4:45.84 | Carla (Erzählerin/Lexi) | Ist die Herausgabe nicht möglich, schuldet der Empfänger nach Absatz zwei den | Rechtsfolge › Wert, § 818 Abs. 2 BGB | `83a7c58412ee` |
+| 93 | 4:45.84 | 4:47.08 | Carla (Erzählerin/Lexi) | Wert, so wie die | Rechtsfolge › Wert, § 818 Abs. 2 BGB | `93d146ed3887` |
+| 94 | 4:47.08 | 4:49.60 | Carla (Erzählerin/Lexi) | Lizenzgebühr für das Bild. | Rechtsfolge › Wert, § 818 Abs. 2 BGB | `1c66c3783ce5` |
+| 95 | 4:49.80 | 4:52.40 | Carla (Erzählerin/Lexi) | Rüdiger beruft sich auf Absatz drei: | Rechtsfolge › nicht mehr bereichert, § 818 Abs. 3 BGB | `ffaf96761b72` |
+| 96 | 4:52.40 | 4:54.00 | Carla (Erzählerin/Lexi) | Wer nicht mehr bereichert ist, | Rechtsfolge › nicht mehr bereichert, § 818 Abs. 3 BGB | `5888c74a166d` |
+| 97 | 4:54.00 | 4:57.48 | Carla (Erzählerin/Lexi) | muss nichts herausgeben und keinen Wert ersetzen. | Rechtsfolge › nicht mehr bereichert, § 818 Abs. 3 BGB | `8241b2befeda` |
+| 98 | 4:57.48 | 5:01.16 | Carla (Erzählerin/Lexi) | Doch er wusste von Anfang an, dass ihm das Geld nicht zusteht. | Rechtsfolge › nicht mehr bereichert, § 818 Abs. 3 BGB | `e81720317ffd` |
+| 99 | 5:01.16 | 5:08.92 | Carla (Erzählerin/Lexi) | Wer den fehlenden Rechtsgrund kennt, haftet nach Paragraf achthundertneunzehn Absatz eins so, als wäre der  … | Rechtsfolge › Kenntnis, §§ 819 Abs. 1, 818 Abs. 4 BGB | `d126f64f729c` |
+| 100 | 5:08.92 | 5:12.68 | Carla (Erzählerin/Lexi) | und nach Paragraf achthundertachtzehn Absatz vier kann er sich dann | Rechtsfolge › Kenntnis, §§ 819 Abs. 1, 818 Abs. 4 BGB | `c9a7f0ff9226` |
+| 101 | 5:12.68 | 5:16.08 | Carla (Erzählerin/Lexi) | nicht mehr auf den Wegfall der Bereicherung berufen. | Rechtsfolge › Kenntnis, §§ 819 Abs. 1, 818 Abs. 4 BGB | `ec2f0782234b` |
+| 102 | 5:16.08 | 5:22.08 | Carla (Erzählerin/Lexi) | Übrigens: Wendet ein Empfänger das Erlangte unentgeltlich einem Dritten zu und wird er dadurch | Rechtsfolge › Dritter, § 822 BGB | `6b7179f2f52d` |
+| 103 | 5:22.08 | 5:27.08 | Carla (Erzählerin/Lexi) | frei, muss nach Paragraf achthundertzweiundzwanzig der Dritte herausgeben. | Rechtsfolge › Dritter, § 822 BGB | `e0e316f95cf9` |
+| 104 | 5:27.08 | 5:31.84 | Carla (Erzählerin/Lexi) | Ergebnis: Rüdiger muss Ursula die fünfhundert Euro zurückzahlen, das | Ergebnis | `e5c39d75972a` |
+| 105 | 5:31.84 | 5:34.92 | Carla (Erzählerin/Lexi) | Wochenende am See hilft ihm nicht. | Ergebnis | `fea7dca7e74f` |
+| 106 | 5:35.12 | 5:36.28 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Leistungskondiktion zuerst | `d04c716907f0` |
+| 107 | 5:36.28 | 5:39.44 | Carla (Erzählerin/Lexi) | Prüfe immer zuerst die Leistungskondiktion. | Klausurtipp · Leistungskondiktion zuerst | `e0c355333e3e` |
+| 108 | 5:39.44 | 5:41.40 | Carla (Erzählerin/Lexi) | Frage dafür ausdrücklich: | Klausurtipp · Leistungskondiktion zuerst | `1a80fc6e5b47` |
+| 109 | 5:41.40 | 5:43.28 | Carla (Erzählerin/Lexi) | Wer hat aus Sicht des Empfängers | Klausurtipp · Leistungskondiktion zuerst | `54cedca7086e` |
+| 110 | 5:43.28 | 5:44.88 | Carla (Erzählerin/Lexi) | an wen geleistet? | Klausurtipp · Leistungskondiktion zuerst | `ef26be02bcb3` |
+| 111 | 5:44.88 | 5:47.60 | Carla (Erzählerin/Lexi) | Erst wenn keine Leistung vorliegt, gehst du zur | Klausurtipp · Leistungskondiktion zuerst | `b82bfb4920ae` |
+| 112 | 5:47.60 | 5:50.24 | Carla (Erzählerin/Lexi) | Nichtleistungskondiktion. | Klausurtipp · Leistungskondiktion zuerst | `10abb3d0761a` |
+| 113 | 5:50.24 | 5:51.96 | Carla (Erzählerin/Lexi) | Dein Klausurschema: | Klausurschema | `cedabd6c773c` |
+| 114 | 5:51.96 | 5:55.12 | Carla (Erzählerin/Lexi) | Römisch eins, Leistungskondiktion: | Klausurschema | `00670736c283` |
+| 115 | 5:55.12 | 5:59.28 | Carla (Erzählerin/Lexi) | etwas erlangt, durch Leistung, ohne rechtlichen Grund, | Klausurschema | `7da4eb44439d` |
+| 116 | 5:59.28 | 6:04.92 | Carla (Erzählerin/Lexi) | kein Ausschluss nach den Paragrafen achthundertvierzehn und achthundertsiebzehn Satz zwei. | Klausurschema | `1e364fb8e550` |
+| 117 | 6:04.92 | 6:09.87 | Carla (Erzählerin/Lexi) | Römisch zwei, nur ohne Leistung: Nichtleistungskondiktion, | Klausurschema › Nichtleistungskondiktion | `3e4f9479ed65` |
+| 118 | 6:09.87 | 6:13.76 | Carla (Erzählerin/Lexi) | etwas in sonstiger Weise auf Kosten des Anspruchstellers erlangt, | Klausurschema › Nichtleistungskondiktion | `b8e26f44fba8` |
+| 119 | 6:13.76 | 6:15.92 | Carla (Erzählerin/Lexi) | ohne rechtlichen Grund. | Klausurschema › Nichtleistungskondiktion | `3b7e79ec356b` |
+| 120 | 6:15.92 | 6:21.24 | Carla (Erzählerin/Lexi) | Römisch drei: Rechtsfolge nach den Paragrafen achthundertachtzehn folgende: | Klausurschema › Rechtsfolge | `1f1b14ff22f3` |
+| 121 | 6:21.24 | 6:26.76 | Carla (Erzählerin/Lexi) | Herausgabe oder Wertersatz, Entreicherung und verschärfte Haftung. | Klausurschema › Rechtsfolge | `9364721fb991` |
+| 122 | 6:26.96 | 6:28.52 | Carla (Erzählerin/Lexi) | Merke: Erst fragen, | Merksatz | `c687b44691e4` |
+| 123 | 6:28.52 | 6:32.24 | Carla (Erzählerin/Lexi) | ob geleistet wurde, dann die passende Kondiktion wählen. | Merksatz | `0d1c8be7203e` |
+| 124 | 6:32.24 | 6:34.88 | Carla (Erzählerin/Lexi) | Und wer den fehlenden Rechtsgrund kennt, kann sich | Merksatz | `982d337be2b1` |
+| 125 | 6:34.88 | 6:38.32 | Carla (Erzählerin/Lexi) | nicht auf Entreicherung berufen. | Merksatz | `5dd3a6820f24` |
