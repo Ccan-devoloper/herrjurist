@@ -351,7 +351,7 @@ folie([("beob", f"{PO} › b) Wegnahme › Beobachtung"), ("subj", "Grundfall �
     ficon("fluent-emoji-high-contrast", "mirror", 1580, 250, 100, "beob", fuell=BLAU),
     ficon("tabler", "eye", 1720, 220, 70, "beob", fuell=WEISS),
     tasche_ring(MX, BR, FR, beim("subj", "Lippenstift")),
-    pl("Lippenstift zurückholen", 1580, 140, "chance", fill=WEISS, size=28, anker="m", bis="subj"),
+    pl("Lippenstift zurückholen", 1580, 300, "chance", fill=WEISS, size=28, anker="m", bis="subj"),
 ])
 
 # G Variante 1: zurück ins Regal ------------------------------------------------------------------------------------------
@@ -369,7 +369,7 @@ folie([("v1", "Variante 1 › zurück ins Regal"), ("v1b", "Variante 1 › Rück
     hart(linienzug([(RG1[0] + 8, 680), (RG1[0] + RG1[2] - 8, 680)], "v1", breite=5, farbe=INK)),
     *[hart(lippenstift(x, 672, 34, "v1", anim="cut")) for x in (1350, 1410, 1470)],
     lippenstift(1530, 672, 34, beim("v1", "zurück")),
-    ficon("tabler", "arrow-back-up", 1560, 470, 70, beim("v1", "zurück"), fuell=None),
+    ficon("tabler", "arrow-back-up", 1450, 505, 64, beim("v1", "zurück"), fuell=None),
     *fig("MO", 1740, BR, FR, [("v1", "reuig"), ("v1d", "erschrickt"), ("v1e", "denkt")], erst="cut"),
     name("MO", 1740, "v1"),
     pl("schlechtes Gewissen", 1650, 400, beim("v1", "schlechtes"), fill=WEISS, size=28, anker="m", bis="v1d"),
@@ -397,8 +397,8 @@ folie([("v2", "Variante 2 › Kiste im Einkaufswagen"), ("v2f", "Variante 2 › 
     name("MO", 1770, "v2"),
     ficon("tabler", "shopping-cart", WX, BR, 230, "v2", fuell=WEISS),
     *[szene(e, "055kiste*", 0.8, 0.05) if i == 2 else e for i, e in enumerate(kiste(WX + 20, BR - 120, 110, beim("v2", "Kiste")))],
-    pl("schwer", WX + 10, 560, beim("v2c", "schweren"), fill=WEISS, size=28, anker="m", bis="v2e"),
-    pl("Wagen des Ladens", WX + 10, 560, "v2d", fill=BLAU, size=28, anker="m", bis="v2f"),
+    pl("schwer", WX + 10, 440, beim("v2c", "schweren"), fill=WEISS, size=28, anker="m", bis="v2d"),
+    pl("Wagen des Ladens", WX + 10, 440, "v2d", fill=BLAU, size=28, anker="m", bis="v2f"),
     pl("noch Gewahrsam des Ladens", 1560, 120, "v2f", fill=LILA, size=28, anker="m"),
 ])
 
@@ -483,7 +483,7 @@ folie([("tipp", "Klausurtipp · Vollendung an der Wegnahme prüfen")], [
     z("dann Versuch und Rücktritt prüfen", 110, 625, beim("tipp4", "Dann"), "Bold", 34),
     *redet("LX_warnt", LXX, BR, FR + 60, "tipp", "sch"),
     pl("Lexi", LXX, BR + 22, "tipp", fill=GELB, size=30, anker="m"),
-    lippenstift(1790, 330, 50, "tipp3"),
+    lippenstift(1790, 360, 90, "tipp3"),
 ])
 
 # M Klausurschema ------------------------------------------------------------------------------------------------------

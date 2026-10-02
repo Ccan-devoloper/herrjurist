@@ -3,16 +3,17 @@ Ausschnitt um die Köpfe (sprechende Figur und ggf. Gegenüber). Ausgabe ../out/
 import os, subprocess, sys
 import imageio_ffmpeg
 from PIL import Image, ImageDraw
+import json
+CT = {k: v["t"] for k, v in json.load(open("../cues.json"))["cues"].items()}
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 MP4 = "../out/055-Gewahrsamsenklave-Hauptfilm.mp4"
 # name: (start, ende, (x0, y0, x1, y1))
 F = {
-    "matthias_m1": (25.8, 28.0, (1420, 320, 1640, 480)),        # Matthias redet (Fall, Nachbartisch)
-    "antje_a1": (37.4, 39.6, (420, 320, 640, 480)),              # Antje redet (Fall)
-    "matthias_m2": (239.4, 241.7, (1630, 480, 1850, 620)),       # Matthias redet (Variante 2)
-    "antje_bei_m2": (239.4, 241.7, (1310, 480, 1530, 620)),      # Antje hört zu: Mund zu
-    "lexi_tipp": (337.8, 341.5, (1450, 420, 1680, 580)),
-    "lexi_merke": (396.4, 400.1, (1560, 280, 1800, 450)),
+    "monika_mo1": (13.3, 15.6, (600, 320, 840, 480)),            # Monika redet (Fall, am Regal)
+    "rainer_ra1": (27.3, 31.8, (1300, 320, 1540, 480)),          # Rainer redet (Fall)
+    "monika_bei_ra1": (27.3, 31.8, (940, 320, 1180, 480)),       # Monika hört zu: Mund zu
+    "lexi_tipp": (CT["tipp"], CT["tipp"] + 3.7, (1450, 420, 1680, 580)),
+    "lexi_merke": (CT["merke"], CT["merke"] + 3.7, (1560, 280, 1800, 450)),
 }
 os.makedirs("../out/lip", exist_ok=True)
 for name, (a, b, box) in F.items():
