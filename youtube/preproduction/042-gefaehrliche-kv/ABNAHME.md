@@ -48,3 +48,25 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 147 Bildhalte aus dem finalen MP4, Fallmomente als Einzelbilder in voller Auflösung (`fallmomente_mp4.png`), Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung und Segmentkanten-Prüfung aller 24 Segmente. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen oben); Themenplan-Korrekturen durch den Koordinator; Credit-Verbrauch der Nachvertonung nicht exakt zuordenbar.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 02.10.2026
+
+## Drive (Readback 02.10.2026, rclone)
+
+Ordner `LexVerse Produktion/042 Gefährliche Körperverletzung/`, ID `1eVGMGi5IVWr8-OmBXNuM1Ls_0Dpj-Ghk` (nur per rclone angelegt, genau ein Ordner dieses Namens):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `042-Gefaehrliche-Koerperverletzung.mp4` | 27.477.682 |
+| `042-Gefaehrliche-Koerperverletzung-Hauptfilm.mp4` | 20.131.157 |
+| `master.zip` | 59.486.690 |
+| `thumb_A.jpg` | 156.360 |
+| `thumb_B.jpg` | 179.745 |
+| `beschreibung.txt` | 2.264 |
+| `kapitel.txt` | 568 |
+| `untertitel.srt` | 9.025 |
+| `metadaten.json` | 3.516 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; MD5 `master.zip` lokal = Drive (`68b6abe42cc4900379e071107ee07a11`), 369 Einträge, `unzip -t` fehlerfrei. `out/ton_mix.wav` nach dem Upload gelöscht; MP4s, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung. Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). Im Repository nur Text und Code.
+
+## Nachtrag Koordinator (02.10.2026): Thumbnail B
+
+Text „SCHUH = WAFFE?“ in „SCHUH = WERKZEUG?“ geändert (ein Schuh ist allenfalls gefährliches Werkzeug, § 224 I Nr. 2 Alt. 2); Plan-Eintrag 42 in `thumbs_straf.json` und CSV-Feld „Thumbnail B“ angepasst, `thumb_B.jpg` in Drive per `rclone copyto` ersetzt (MD5 lokal = Drive). Im `master.zip` liegt noch die alte Fassung.
