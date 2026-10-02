@@ -1,7 +1,7 @@
 """Figuren für Folge 069 (Anfechtungsklage Schema) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0). Alle fiktiv.
 Frau Ebeling (um 38, betreibt einen Foodtruck): standing/easing-2 (hellblaues Hemd über schwarzem Shirt, gelbe Hose),
 Kopf Long Bangs (dunkelbraunes Haar).
-Herr Gerlach (um 58, Gewerbeamt der Stadt): standing/blazer-3, Kopf Gray Short, dunkelblaues Jackett, graue Hose.
+Herr Gerlach (um 58, Gewerbeamt der Stadt): standing/blazer-3, Kopf No Hair 3 (Glatze mit grauem Haarkranz), dunkelblaues Jackett, graue Hose.
 Die Richterin (um 50, Verwaltungsgericht): standing/resting-1, Kopf Medium Bangs 3, Brille Glasses 2, dunkles Oberteil.
 Keine Bärte, keine Prothesen-Posen. Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und
 blickt nach links (Figur rechts neben der Tafel), Suffix _r blickt nach rechts.
@@ -20,7 +20,7 @@ MUND = {"a": "Explaining", "o": "Concerned Fear", "e": "Hectic"}
 # Person: (Pose, Kopf, Bart, Brille, Farben)
 P = {
     "EB": ("standing/easing-2", "Long Bangs", None, None, {"Skin": "#F1C6A5", "Hair": "#4A3428", "Jacket": "#8DB3F2"}),
-    "GE": ("standing/blazer-3", "Gray Short", None, None, {"Skin": "#E6B48F", "Jacket": "#3D4A7A", "Pants": "#7A7A86"}),
+    "GE": ("standing/blazer-3", "No Hair 3", None, None, {"Skin": "#E6B48F", "Jacket": "#3D4A7A", "Pants": "#7A7A86"}),
     "RI": ("standing/resting-1", "Medium Bangs 3", None, "Glasses 2", {"Skin": "#D9A07A", "Top": "#34343C", "Hair": "#5A3A2A"}),
 }
 
