@@ -10,7 +10,7 @@ Quelle: `bildhalt_manifest.json` (128 Bildhalte, davon 128 eigenständig), `cues
 | 4 | 0:04.96 | 0:07.04 | Carla (Erzählerin/Lexi) | zehn Stunden Nachhilfe, zu je | Fall · Die Nachhilfe | `138e88dcd69c` |
 | 5 | 0:07.04 | 0:08.38 | Carla (Erzählerin/Lexi) | dreißig Euro. | Fall · Die Nachhilfe | `0f6fdef395da` |
 | 6 | 0:08.38 | 0:12.30 | Henrik | Ich erkläre dir den Stoff. Bestehen musst du selbst. | Fall · Die Nachhilfe | `da7fdb1e0882` |
-| 7 | 0:12.30 | 0:14.22 | Carla (Erzählerin/Lexi) | Außerdem lässt Mareike ihr Zimmer | Fall · Die Malerin | `a6f298d0f5c7` |
+| 7 | 0:12.30 | 0:14.22 | Carla (Erzählerin/Lexi) | Außerdem lässt Mareike ihr Zimmer | Fall · Die Malerin | `8d1543669b49` |
 | 8 | 0:14.22 | 0:17.56 | Carla (Erzählerin/Lexi) | streichen, von der Malerin Frau Ostertag. | Fall · Die Malerin | `86e0db23a98c` |
 | 9 | 0:17.56 | 0:20.20 | Ostertag | Bis Freitag ist die Wand weiß. Das macht | Fall · Die Malerin | `7dcd0ac7079c` |
 | 10 | 0:20.20 | 0:22.12 | Ostertag | vierhundert Euro. | Fall · Die Malerin | `3cebf424938a` |
