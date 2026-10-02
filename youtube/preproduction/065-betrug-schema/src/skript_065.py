@@ -45,8 +45,8 @@ SEGMENTE = [
      "Zustände, die dem Beweis zugänglich sind. [neu]Ob ein Gerät neu und unbeschädigt ist, lässt sich prüfen. "
      "[ausdr]Detlef behauptet es ausdrücklich, in der Anzeige und am Telefon. [konkl]Konkludent täuscht, wer die "
      "Unwahrheit nicht ausspricht, sie aber nach der Verkehrsanschauung durch sein Verhalten miterklärt. [konkl2]So "
-     "erklärt das Foto schlüssig: So sieht das Gerät aus. [anpreis]Anders Top-Handy, ein echtes Schnäppchen: Das ist eine "
-     "reklamehafte Anpreisung, ein Werturteil ohne greifbaren Tatsachenkern. [tok]Die Täuschung liegt also in der "
+     "erklärt das Foto schlüssig: So sieht das Gerät aus. [anpreis]Anders liegt es bei dem Zusatz Top-Handy, ein echtes Schnäppchen: Das "
+     "ist eine reklamehafte Anpreisung, ein Werturteil ohne greifbaren Tatsachenkern. [tok]Die Täuschung liegt also in der "
      "Angabe neu und im Foto.", PS),
     # --- E 2. Irrtum -------------------------------------------------------------------------------------------------------
     ("[irr]Zweites Glied: der Irrtum. Das ist jeder Widerspruch zwischen der Vorstellung des Getäuschten und der "
