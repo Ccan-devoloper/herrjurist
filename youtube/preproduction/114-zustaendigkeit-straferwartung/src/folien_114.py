@@ -301,10 +301,10 @@ folie([("nie", "Fall · Gebaut wird nie"), ("elf", "Fall · Elf weitere Kunden")
     ficon("tabler", "home", HAUSX, BODEN, 300, "nie", fuell=GELB),
     ficon("tabler", "fence", 560, BODEN, 200, "nie", fuell=WEISS),
     ficon("tabler", "plant-2", 700, BODEN, 110, "nie", fuell=GRUEN),
-    pl("Gebaut wird nie.", 70, 30, "nie", fill=ROT, size=44, bis="elf"),
+    pl("Gebaut wird nie.", 70, 30, "nie", fill=ROT, size=44, bis=beim("elf", "elf")),
     ficon("tabler", "phone-off", 1180, 600, 100, TEL, fuell=WEISS, bis="elf"),
     pl("Telefon abgeschaltet", 1180, 620, TEL, fill=WEISS, size=30, anker="m", bis="elf"),
-    blase("sprech", 860, 230, "g1", 980, 200, inhalt=["Seit April warte ich. Niemand kommt,", "und sein Telefon ist abgeschaltet."],
+    blase("sprech", 800, 230, "g1", 860, 190, inhalt=["Seit April warte ich. Niemand kommt,", "und sein Telefon ist abgeschaltet."],
           textsize=36, figur=("GR_redet", GRX2, BODEN, FH), bis="elf"),
     # elf weitere Kunden: elf Häuser in Erlenstadt
     pl("11 weitere Kunden in Erlenstadt", 70, 30, beim("elf", "elf"), fill=GELB, size=44),
@@ -332,7 +332,8 @@ folie([("akte", "Fall · Bei der Staatsanwaltschaft"), ("frage", "Fall · Die Fr
     pl("zusammen 40.000 €", 420, 120, beim("zwoelf", "vierzigtausend"), fill=GELB, size=36),
     pl("Material nie bestellt – er lebte vom Geld", 70, 205, beim("lebte", "Material"), fill=WEISS, size=34),
     pl("2 Vorstrafen wegen Betrugs", 70, 290, beim("vor", "zweimal"), fill=ROT, size=36),
-    *fig("EG", EGX, BODEN, FH, [("akte", "ruhig"), (beim("lebte", "Material"), "denkt"), ("vor", "ernst")], bis="e_1"),
+    *fig("EG", EGX, BODEN, FH, [(beim("akte", "Staatsanwältin"), "ruhig"), (beim("lebte", "Material"), "denkt"), ("vor", "ernst")],
+        bis="e_1"),
     ns("Staatsanwältin Eggert", EGX, BODEN, beim("akte", "Staatsanwältin"), EG_N),
     *redet("EG_redet", EGX, BODEN, FH, "e_1", "frage"),
     blase("sprech", 700, 220, "e_1", 1250, 200, inhalt=["12 Betrugstaten. Zu welchem", "Gericht klage ich an?"],
@@ -400,7 +401,7 @@ STUFEN = [("Strafrichter", "bis 2 Jahre", BLAU, beim("st1a", "Strafrichter")),
 treppe = []
 for k, (n, u, farbe, c) in enumerate(STUFEN):
     top = 790 - k * 80
-    treppe.append(blk(110 + k * 262, top, 250, 880 - top, farbe, c, [(n, "ExtraBold", 30, INK), (u, "Bold", 28, INK)],
+    treppe.append(blk(110 + k * 262, top, 255, 880 - top, farbe, c, [(n, "ExtraBold", 28, INK), (u, "Bold", 28, INK)],
                       anim="pop"))
 
 W25 = ["„Der Richter beim Amtsgericht entscheidet als Strafrichter",
@@ -521,7 +522,7 @@ folie([("e9", "Straferwartung › Vorstrafen, § 46 Abs. 2 StGB"), ("e10", "Stra
 # ===========================================================================================================================
 # I Prognose und Ergebnis der sachlichen Zuständigkeit
 # ===========================================================================================================================
-AX0, AX1, AY = 150, 1130, 420
+AX0, AX1, AY = 150, 1040, 420
 jahr = lambda j: AX0 + j / 5 * (AX1 - AX0)
 achse = [linienzug([(AX0 - 10, AY), (AX1 + 10, AY)], "e12", breite=5)]
 for j in range(6):
@@ -545,7 +546,8 @@ folie([("e12", "Straferwartung › Prognose der Staatsanwältin"), ("f1", "I. Sa
     *neinz("nicht über 4 Jahre: kein Landgericht nach Nr. 2", 600, beim("f3", "Nicht"), "Bold", 34, x=160),
     *neinz("besonderer Umfang, besondere Bedeutung: nicht ersichtlich", 660, beim("f4", "nichts"), "Bold", 34, x=160),
     blk(110, 735, 1040, 90, GRUEN, "f5", [("Sachlich: Amtsgericht – Schöffengericht", "ExtraBold", 38, INK)]),
-    *requisit([("e12", ("tabler", "hourglass", 90, LILA), "Prognose: 2,5–3,5 Jahre", LILA),
+    *requisit([("e12", ("tabler", "hourglass", 90, WEISS), "Prognose", WEISS),
+               (GES, ("tabler", "hourglass", 90, LILA), "2,5–3,5 Jahre", LILA),
                ("f1", ("tabler", "stairs-up", 110, WEISS), "Welche Stufe?", WEISS),
                ("f5", ("tabler", "gavel", 110, GRUEN), "Schöffengericht", GRUEN)]),
     *paar("e12", "HA", [("e12", "schreck"), ("f5", "denkt")], "EG", [("e12", "denkt"), ("f5", "froh")]),
@@ -559,15 +561,15 @@ folie([("o1", "II. Örtlich › §§ 7 ff. StPO"), ("o2", "II. Örtlich › Tato
        ("o3", "II. Örtlich › Wohnsitz, § 8 Abs. 1 StPO"), ("o4", "II. Örtlich › Zusammenhang, §§ 3, 13 StPO")],
       rechts_frei([
     *tafel("o1", "II. Örtliche Zuständigkeit"),
-    *okz("Tatort: alle 12 Taten in Erlenstadt", 190, beim("o2", "Alle"), "Bold", 36, x=160),
-    zit("§ 7 Abs. 1 StPO", 160, 245, beim("o2", "Paragraf")),
-    *okz("Wohnsitz bei Klageerhebung: Erlenstadt", 310, beim("o3", "Auch"), "Bold", 36, x=160),
-    zit("§ 8 Abs. 1 StPO", 160, 365, beim("o3", "Paragraf")),
+    z("Tatort, § 7 Abs. 1 StPO", 110, 185, beim("o2", "Tatort"), "Bold", 36),
+    *okz("alle 12 Taten in Erlenstadt", 238, beim("o2", "Alle"), size=34, x=160),
+    z("Wohnsitz bei Klageerhebung, § 8 Abs. 1 StPO", 110, 305, beim("o3", "Wohnsitz"), "Bold", 36),
+    *okz("Herr Hartung wohnt in Erlenstadt", 358, beim("o3", "Auch"), size=34, x=160),
     z("Tatorte in verschiedenen Bezirken? Zusammenhang:", 110, 430, "o4", "Bold", 34),
     z("jedes Gericht, das für eine der Taten zuständig wäre", 110, 480, beim("o4", "ist"), size=34),
     zit("§§ 3, 13 Abs. 1 StPO", 110, 530, beim("o4", "Paragrafen")),
-    karte(BZ[0], BZ[1], BZ[2], BZ[3], "o2", fill=HELLGRUEN, rund=30, schatten=6, rand=4),
-    pl("Bezirk Erlenstadt", BZ[0] + 30, BZ[1] + 20, "o2", fill=WEISS, size=30),
+    karte(BZ[0], BZ[1], BZ[2], BZ[3], beim("o2", "Alle"), fill=HELLGRUEN, rund=30, schatten=6, rand=4),
+    pl("Bezirk Erlenstadt", BZ[0] + 30, BZ[1] + 20, beim("o2", "Alle"), fill=WEISS, size=30),
     *[dicon("tabler", "map-pin", 180 + (i % 6) * 120 + (i // 6) * 60, 790 + (i // 6) * 70, 50, beim("o2", "zwölf"),
             fuell=ROT) for i in range(12)],
     dicon("tabler", "home", 1060, 840, 110, beim("o3", "Wohnsitz"), fuell=GELB),
@@ -625,7 +627,7 @@ folie([("tipp", "Klausurtipp · Straferwartung begründen"), ("tipp3", "Klausurt
 # M Klausurschema (Treppe)
 # ===========================================================================================================================
 REIHEN = [("k1", "I.", "Sachlich", "GVG, § 1 StPO", BLAU, 0),
-          ("k11", "1.", "Sonderzuweisungen", "§ 24 Abs. 1 Satz 1 Nr. 1, §§ 74 Abs. 2, 120 GVG", None, 1),
+          ("k11", "1.", "Sonderzuweisungen", "§ 24 Abs. 1 Satz 1 Nr. 1 GVG", None, 1),
           ("k12", "2.", "Straferwartung: Strafrahmen, Vorstrafen, Gesamtstrafe", "§§ 263, 46, 53, 54 StGB", None, 1),
           ("k13", "3.", "die Stufe", "§§ 25, 28, 24, 74 GVG", None, 2),
           ("k14", "4.", "besondere Bedeutung, Umfang, Schutzbedürftigkeit", "§ 24 Abs. 1 Satz 1 Nr. 3 GVG", None, 1),
@@ -646,12 +648,13 @@ for c, r, kopf, norm, farbe, ebene in REIHEN:
         for k, (n, u, fa, w_) in enumerate([("Strafrichter", "bis 2 Jahre", BLAU, "Strafrichter"),
                                             ("Schöffengericht", "bis 4 Jahre", GRUEN, "Schöffengericht"),
                                             ("Landgericht", "darüber", GELB, "Landgericht")]):
-            top = y + 60 - k * 0 + (2 - k) * 34
-            els_sch.append(blk(520 + k * 300, top, 290, y + 160 - top, fa, beim("k13", w_), [(n, "ExtraBold", 28, INK),
+            top = y + 95 - k * 40
+            els_sch.append(blk(520 + k * 300, top, 290, y + 175 - top, fa, beim("k13", w_), [(n, "ExtraBold", 28, INK),
                                                                                          (u, "Bold", 26, INK)], anim="pop"))
         hh = 182
     if norm:
-        els_sch.append(zit(norm, 1300 if ebene != 2 else 1480, y + (18 if ebene == 0 else 12), c, size=28, rechts=1830))
+        ende_ = (245 + F("ExtraBold", 40).getlength(kopf)) if ebene == 0 else (320 + F("Bold", 36).getlength(kopf))
+        els_sch.append(zit(norm, max(1260, int(ende_) + 40) if ebene != 2 else int(ende_) + 40, y + (18 if ebene == 0 else 12), c, size=28, rechts=1830))
     y += hh
 assert y <= 975, y
 folie([("sch", "Klausurschema"), ("k1", "Klausurschema › I. Sachlich"), ("k2", "Klausurschema › II. Örtlich"),
