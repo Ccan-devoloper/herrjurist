@@ -204,18 +204,18 @@ MA_S, PU_S = "Frau Mahnke", "Herr Pütz, Bauherr"
 
 # Wohnstraße (Szene A und H): Haus Mahnke links, Grenze, Anbau und Haus Pütz rechts ---------------------------------------------
 BODEN, GH = 860, 380
-HMX, GRX, ANX, HPX = 250, 770, 1040, 1390   # Haus Mahnke, Grenze, Anbau (Mitte), Haus Pütz
+HMX, GRX, ANX, HPX = 230, 815, 1085, 1390   # Haus Mahnke, Grenze, Anbau (Mitte), Haus Pütz
 AN_W = 280                                  # Breite des Anbaus (Tabler „wall“, flach gedeckt)
 AN_L = ANX - AN_W / 2                        # linke Wand des Anbaus (zur Grenze), 130 px = 1,50 m
-M15 = GRX - AN_L                             # 1,50 m in Pixeln
-MAX, PUX = 500, 1745                         # Frau Mahnke, Herr Pütz
+M15 = AN_L - GRX                             # 1,50 m in Pixeln
+MAX, PUX = 470, 1745                         # Frau Mahnke, Herr Pütz
 
 
 def strasse(cue, anim="pop", mit_anbau=True, anbau_cue=None, bis=None):
     els = [hart(linienzug([(60, BODEN), (1860, BODEN)], cue, breite=7, farbe=INK)) if anim == "cut"
            else linienzug([(60, BODEN), (1860, BODEN)], cue, breite=7, farbe=INK),
            ficon("ph", "house-line", HMX, BODEN + 4, 330, cue, fuell=GELB, anim=anim, bis=bis),
-           strichlinie(GRX, 430, BODEN + 40, cue, bis=bis, anim="cut" if anim == "cut" else "fade"),
+           strichlinie(GRX, 600, BODEN + 40, cue, bis=bis, anim="cut" if anim == "cut" else "fade"),
            ficon("ph", "house-line", HPX, BODEN + 4, 330, cue, fuell=BLAU, anim=anim, bis=bis)]
     if mit_anbau:
         els.append(ficon("tabler", "wall", ANX, BODEN, AN_W, anbau_cue or cue, fuell=ROT,
@@ -236,7 +236,7 @@ folie([(NULL, "Fall · Der Anbau nebenan"), ("genehm", "Fall · Die Baugenehmigu
     pl("Wohngebiet in Nordrhein-Westfalen", 70, 40, beim("fall", "Wohngebiet"), fill=WEISS, size=30, bis="ma1"),
     pl("Bebauungsplan: Geschossflächenzahl 0,4", 70, 110, beim("plan", "Geschossflächenzahl"), fill=GELB, size=30, bis="ma1"),
     pl("Gestaltungssatzung: Satteldächer", 70, 180, beim("plan", "Gestaltungssatzung"), fill=GELB, size=30, bis="ma1"),
-    pl("Grenze", GRX, 380, beim("pu1", "Grenze"), fill=WEISS, size=26, anker="m"),
+    pl("Grenze", GRX, 548, beim("pu1", "Grenze"), fill=WEISS, size=26, anker="m"),
     *fig("PU", PUX, BODEN, GH, [(beim("puetz", "Herr"), "ruhig")], bis="pu1"),
     *redet("PU_redet", PUX, BODEN, GH, "pu1", "genehm"),
     *fig("PU", PUX, BODEN, GH, [("genehm", "ruhig"), ("ma1", "ernst"), ("frage", "denkt")]),
@@ -250,16 +250,15 @@ folie([(NULL, "Fall · Der Anbau nebenan"), ("genehm", "Fall · Die Baugenehmigu
     pl("Baugenehmigung erteilt", 1640, 345, beim("genehm", "Baugenehmigung"), fill=GRUEN, size=28, anker="m", bis="ma1"),
     pl("Wand 6 m hoch", ANX, 510, beim("anbau", "sechs"), fill=ROT, size=28, anker="m", bis="frage"),
     masspfeil(GRX, AN_L, BODEN - 40, beim("anbau", "eineinhalb")),
-    pl("1,50 m bis zur Grenze", AN_L - 10, BODEN - 160, beim("anbau", "eineinhalb"), fill=WEISS, size=28,
-       anker="r", bis="ma1"),
-    pl("Geschossflächenzahl jetzt 0,55", HPX + 80, 440, beim("gfz", "Geschossflächenzahl"), fill=GELB, size=28, anker="m",
+    pl("1,50 m", (GRX + AN_L) / 2, BODEN - 118, beim("anbau", "eineinhalb"), fill=WEISS, size=26, anker="m", pad=(10, 8), bis="ma1"),
+    pl("Geschossflächenzahl jetzt 0,55", HPX, 440, beim("gfz", "Geschossflächenzahl"), fill=GELB, size=28, anker="m",
        bis="ma1"),
     blase("sprech", 900, 200, "ma1", 640, 220, inhalt=["Viel zu groß, ein Flachdach, und dann noch",
                                                      "direkt an meiner Grenze! Dagegen klage ich."], textsize=29,
           figur=MAa, bis="frage"),
-    pl("1 Geschossflächenzahl", HPX + 80, 440, beim("frage", "Drei"), fill=GELB, size=28, anker="m"),
+    pl("1 Geschossflächenzahl", HPX, 440, beim("frage", "Drei"), fill=GELB, size=28, anker="m"),
     pl("2 Flachdach", ANX, 510, beim("frage", "Drei"), fill=ROT, size=28, anker="m"),
-    pl("3 Abstand zur Grenze", AN_L - 10, BODEN - 160, beim("frage", "Drei"), fill=WEISS, size=28, anker="r"),
+    pl("3 Abstand zur Grenze", GRX + 30, 430, beim("frage", "Drei"), fill=WEISS, size=28, anker="m"),
     pl("3 Verstöße: Mit welchem gewinnt sie ihre Klage?", 960, 110, "frage2", fill=PINK, size=36, anker="m"),
 ])
 
@@ -320,21 +319,19 @@ folie([("p113", f"{BG}, § 113 I 1 VwGO"), ("zwei", f"{BG} › rechtswidrig und 
 
 # E 3. Ampel-Tabelle: Welche Bauvorschriften schützen dich? -----------------------------------------------------------------------
 DS = "3. Drittschützende Normen"
-AY = [165, 300, 435, 570, 705]                # Zeilenanfänge
-AMP = 905                                      # Ampel-Pillen (Mitte)
+AY = [170, 305, 440, 575, 710]                # Zeilenanfänge
+AMP = 805                                      # linker Rand der Ampel-Pillen
 
 
 def ampel(i, cue, norm, text, fill, haken, sub, sub_cue, quelle, q_cue):
     y = AY[i]
-    els = [z(norm, 110, y, cue, "Bold", 32, rechts=AMP - 150),
-           pl(text, AMP, y - 6, beim(cue, haken[0]) if haken else cue, fill=fill, size=28, anker="m")]
-    if haken:
-        p = els[-1]
-        mk = ok if haken[1] else nein
-        els.append(mk(p.x + p.sprite.width + 34, y + 22, beim(cue, haken[0]), gr=22))
-    els.append(z(sub, 150, y + 46, sub_cue, size=30))
+    els = [z(norm, 110, y, cue, "Bold", 32, rechts=AMP - 20),
+           pl(text, AMP, y - 8, beim(cue, haken[0]), fill=fill, size=28)]
+    p = els[-1]
+    els.append((ok if haken[1] else nein)(p.x + p.sprite.width + 30, y + 16, beim(cue, haken[0]), gr=22))
+    els.append(z(sub, 150, y + 46, sub_cue, size=30, rechts=AMP - 20))
     if quelle:
-        els.append(zit(quelle, 150, y + 88, q_cue))
+        els.append(zit(quelle, 150, y + 88, q_cue, rechts=AMP + 330))
     return els
 
 
@@ -343,22 +340,22 @@ folie([("tab", DS), ("t1", f"{DS} › Abstandsflächen"), ("t2", f"{DS} › Gebi
        ("t5", f"{DS} › Gestaltungsvorschriften: nein")], rechts_frei([
     *tafel("tab", "Welche Bauvorschriften schützen dich?", size=44),
     *ampel(0, "t1", "1. Abstandsflächen (Landesbauordnung)", "schützt mich", GRUEN, ("Abstandsflächen", 1),
-           "Licht, Luft und Sozialabstand, auch für den Nachbarn", beim("t1", "Licht"),
+           "Licht, Luft und Sozialabstand", beim("t1", "Licht"),
            "OVG NRW, Urt. v. 22.1.2025 – 7 A 1367/22, Rn. 53, 80", beim("t1", "Nachbarn")),
-    *ampel(1, "t2", "2. Art der baulichen Nutzung", "schützt mich", GRUEN, ("Gebietserhaltungsanspruch", 1),
-           "Gebietserhaltungsanspruch, auch ohne konkrete Beeinträchtigung", beim("t2", "Gebietserhaltungsanspruch"),
+    *ampel(1, "t2", "2. Art der Nutzung: Gebietserhaltung", "schützt mich", GRUEN, ("Gebietserhaltungsanspruch", 1),
+           "auch ohne konkrete Beeinträchtigung", beim("t2", "konkrete"),
            "BVerwG, Urt. v. 29.3.2022 – 4 C 6.20, Rn. 8", beim("t2", "konkrete")),
-    *ampel(2, "t3", "3. Rücksichtnahmegebot", "nur vor Unzumutbarem", GELB, ("Unzumutbarem", 1),
-           "§ 15 Abs. 1 Satz 2 BauNVO, §§ 34 Abs. 1, 35 Abs. 3 BauGB", beim("t3", "fünfzehn"),
+    *ampel(2, "t3", "3. Rücksichtnahmegebot", "vor Unzumutbarem", GELB, ("Unzumutbarem", 1),
+           "§ 15 I 2 BauNVO, §§ 34 I, 35 III BauGB", beim("t3", "fünfzehn"),
            None, None),
-    pl("eigenes Video", AMP, AY[2] + 82, beim("t3", "eigenes"), fill=GELB, size=26, anker="m"),
+    pl("eigenes Video", AMP, AY[2] + 50, beim("t3", "eigenes"), fill=GELB, size=26),
     *ampel(3, "t4", "4. Maß der baulichen Nutzung", "schützt mich nicht", ROT, ("schützt", 0),
-           "nur, wenn die Gemeinde als Plangeber das will", beim("t4", "nur"),
+           "nur, wenn die Gemeinde das will", beim("t4", "nur"),
            "BVerwG, 4 C 7.17, Rn. 14, 21; OVG NRW, 10 B 645/23, Rn. 48", beim("t4", "Plangeber")),
     *ampel(4, "t5", "5. Gestaltungsvorschriften", "schützt mich nicht", ROT, ("schützen", 0),
            "sie dienen dem Ortsbild", beim("t5", "Ortsbild"),
            "OVG NRW, Urt. v. 6.11.2024 – 7 A 75/23, Rn. 41", beim("t5", "Ortsbild")),
-    ficon("tabler", "traffic-lights", IX, IU, 90, "tab", fuell=GELB),
+    ficon("tabler", "traffic-lights", IX, IU, 120, "tab", fuell=GELB),
     *fig("MA", FX, FB, FR, [("tab", "denkt"), ("t1", "froh"), ("t4", "sorge")]),
     schild(MA_S, FX, "tab", MA_F),
 ]))
@@ -421,8 +418,7 @@ folie([("luecke", f"{RG} › 3. Abstandsfläche: 1,50 m statt 3 m"), ("verl", f"
     *redet("PU_neu", PUX, BODEN, GH, "pu2", "tipp"),
     schild(PU_S, PUX, "luecke", PU_F, unten=BODEN),
     masspfeil(GRX, AN_L, BODEN - 40, "luecke"),
-    pl("1,50 m bis zur Grenze", AN_L - 10, BODEN - 160, beim("luecke", "eineinhalb"), fill=WEISS, size=28,
-       anker="r", bis="erg"),
+    pl("1,50 m", (GRX + AN_L) / 2, BODEN - 118, beim("luecke", "eineinhalb"), fill=WEISS, size=26, anker="m", pad=(10, 8), bis="erg"),
     flaeche(GRX, AN_L, BODEN + 6, BODEN + 40, GELB, beim("luecke", "Eineinhalb")),
     flaeche(AN_L - 2 * M15, GRX, BODEN + 6, BODEN + 40, ROT, beim("luecke", "Grundstück"), name="auf_ihrem_grund"),
     pl("Abstandsfläche 3 m: 1,50 m auf ihrem Grundstück", 720, 950 - 2, beim("luecke", "Grundstück"), fill=ROT, size=28,
@@ -431,9 +427,9 @@ folie([("luecke", f"{RG} › 3. Abstandsfläche: 1,50 m statt 3 m"), ("verl", f"
     pl("Norm schützt auch Frau Mahnke: Rechtsverletzung", 960, 130, beim("verl", "Weil"), fill=GRUEN, size=30, anker="m",
        bis="erg"),
     pl("keine konkrete Beeinträchtigung nötig", 960, 200, beim("verl", "konkrete"), fill=WEISS, size=28, anker="m", bis="erg"),
-    bis_(zit("OVG NRW, Urt. v. 22.1.2025 – 7 A 1367/22, Rn. 53, 57", 640, 250, beim("verl", "konkrete"), rechts=1500), "erg"),
-    pl("in deinem Land ggf. andere Regel", 960, 320, "land", fill=GELB, size=28, anker="m", bis="erg"),
-    ficon(HC, "classical-building", 960, 330, 110, "erg", fuell=WEISS, bis="pu2"),
+    bis_(zit("OVG NRW, Urt. v. 22.1.2025 – 7 A 1367/22, Rn. 53, 57", 640, 262, beim("verl", "konkrete"), rechts=1500), "erg"),
+    pl("in deinem Land ggf. andere Regel", 960, 330, "land", fill=GELB, size=28, anker="m", bis="erg"),
+    ficon(HC, "classical-building", 960, 420, 110, "erg", fuell=WEISS, bis="pu2"),
     pl("Klage begründet: nur wegen der Abstandsfläche", 960, 60, beim("erg", "Klage"), fill=GRUEN, size=30, anker="m",
        bis="pu2"),
     pl("Gericht hebt die Baugenehmigung auf", 960, 130, beim("erg", "Gericht"), fill=WEISS, size=30, anker="m", bis="pu2"),
