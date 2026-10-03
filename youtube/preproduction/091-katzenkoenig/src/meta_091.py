@@ -53,7 +53,8 @@ open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 
 srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"fünfzehnten September\s+neunzehnhundertachtundachtzig", "15. September 1988", srt)
-srt = re.sub(r"15\. September\s+1988", "15. September 1988", srt)
+srt = srt.replace("vom fünfzehnten September", "vom 15. September").replace("§ 25 Abs. 1, Alt. 2", "§ 25 Abs. 1 Alt. 2")
+assert "fünfzehnten" not in srt and "neunzehnhundert" not in srt
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
 assert not re.search(r"§\n", srt)
 open(f"{U}/untertitel.srt", "w").write(srt)

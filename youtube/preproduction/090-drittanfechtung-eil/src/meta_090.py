@@ -57,6 +57,11 @@ srt = open(f"{U}/untertitel.srt").read()
 for alt, neu in (("\nDorn:", "\nFrau Dorn:"), ("\nWeber:", "\nHerr Weber:"), ("\nFalk:", "\nRechtsanwalt Falk:")):
     srt = srt.replace(alt, neu)
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
+for alt, neu in (("§ 212 a", "§ 212a"), ("§ 212\na", "§ 212a\n"), ("bis acht gilt", "bis 8 gilt"),
+                 ("Absätzen eins und zwei", "Absätzen 1 und 2"), ("Absätzen eins\nund zwei", "Absätzen 1\nund 2")):
+    srt = srt.replace(alt, neu)
+srt = re.sub(r"§ 212\n\n(\d+\n[^\n]+\n)a([.,]) ", r"§ 212a\2\n\n\1", srt)   # „a“ hinter § 212 in die vorige Zeile holen
+assert "212 a" not in srt and "bis acht" not in srt and not re.search(r"§ 212\n", srt)
 assert not re.search(r"§\n", srt)
 open(f"{U}/untertitel.srt", "w").write(srt)
 
