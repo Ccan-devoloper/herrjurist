@@ -21,7 +21,7 @@ STIMMEN = {"Ricarda": "hilde", "Kortmann": "christian"}  # Lexi = Erzählerstimm
 
 SEGMENTE = [
     # --- A1 Fall: die Bestellung ------------------------------------------------------------------------------------
-    ("[fall]Die Anwältin Ricarda kauft einen Laptop: für ihre Kanzlei und abends für Netflix. [shop]Im Mai bestellt sie "
+    ("[fall]Ricarda ist Anwältin. Sie kauft einen Laptop: für ihre Kanzlei und abends für Netflix. [shop]Im Mai bestellt sie "
      "ihn online bei Herrn Kortmann, der einen Elektronikhandel im Internet betreibt, für zwölfhundert Euro. "
      "[konto]Sie bestellt über ihr privates Kundenkonto, die Rechnung geht an ihre Wohnung. [liefer]Liefern lässt sie "
      "an die Kanzlei, weil sie tagsüber dort ist.", 0.3),

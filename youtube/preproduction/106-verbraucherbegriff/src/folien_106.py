@@ -410,6 +410,8 @@ W14 = ["„Unternehmer ist eine natürliche oder juristische Person oder eine",
        "geschäfts in Ausübung ihrer gewerblichen oder selbständigen",
        "beruflichen Tätigkeit handelt.“"]
 w14, w14_y = wortlaut(80, 165, 1100, W14, "§ 14 Abs. 1 BGB", "w14", marken=[
+    (0, "natürliche oder juristische Person", beim("w14", "natürliche")),
+    (1, "rechtsfähige Personengesellschaft", beim("w14", "rechtsfähige")),
     (2, "in Ausübung", beim("w14", "Ausübung")), (2, "gewerblichen", beim("w14", "gewerblichen")),
     (2, "selbständigen", beim("w14", "selbständigen"))], size=32)
 folie([("w14", "Abgrenzung › Unternehmer, § 14 Abs. 1 BGB"), ("frei", "Unternehmer › Anwältin: freier Beruf")], rechts_frei([
