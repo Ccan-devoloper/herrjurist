@@ -19,7 +19,7 @@ STIMMEN = {"Landesministerin": "julia", "Dahlke": "ela_froh", "Henke": "helmut"}
 SEGMENTE = [
     # --- A Fall: das neue Landesgesetz -------------------------------------------------------------------------------------
     ("[fall]Der Landtag eines Landes hat ein neues Gesetz beschlossen. [lm]Die Landesministerin stellt es vor.", 0.3),
-    ("[lm1]Ab sofort darf die Miete für frei finanzierte Wohnungen höchstens neun Euro pro Quadratmeter betragen.", 0.4,
+    ("[lm1]Ab sofort gilt eine Mietobergrenze: Für frei finanzierte Wohnungen höchstens neun Euro pro Quadratmeter.", 0.4,
      "Landesministerin"),
     # --- B Fall: die Mieterhöhung ------------------------------------------------------------------------------------------
     ("[brief]Eine Woche später bekommt Frau Dahlke Post von ihrem Vermieter, Herrn Henke. [bisher]Sie zahlt bisher neun Euro "

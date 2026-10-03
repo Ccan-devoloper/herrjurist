@@ -220,9 +220,9 @@ folie([(NULL, "Fall · Das neue Landesgesetz")], [
     *fig("LM", LMX, BODEN, FH, [("lm", "ruhig")], bis="lm1"),
     *redet("LM_redet", LMX, BODEN, FH, "lm1", "brief"),
     schild("Die Landesministerin", LMX, "lm", LM_F, unten=BODEN),
-    blase("sprech", 820, 200, "lm1", 800, 210, inhalt=["Ab sofort darf die Miete für frei finanzierte",
-                                                      "Wohnungen höchstens 9 € pro Quadratmeter",
-                                                      "betragen."], textsize=30, figur=LMa),
+    blase("sprech", 820, 200, "lm1", 800, 210, inhalt=["Ab sofort gilt eine Mietobergrenze:",
+                                                      "Für frei finanzierte Wohnungen höchstens",
+                                                      "9 € pro Quadratmeter."], textsize=30, figur=LMa),
 ])
 
 # B Fall: der Brief des Vermieters ----------------------------------------------------------------------------------------------
