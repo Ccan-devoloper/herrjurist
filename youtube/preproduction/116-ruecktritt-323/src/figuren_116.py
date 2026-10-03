@@ -1,6 +1,6 @@
 """Figuren für Folge 116 (Rücktritt § 323 BGB, Online-Shop) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0).
 Alle Figuren fiktiv.
-Leni (um 35, Verbraucherin, Käuferin, Gläubigerin): standing/easing-1 (offene Jacke Grün #8FD694, Oberteil Weiß,
+Leni (um 35, Verbraucherin, Käuferin, Gläubigerin): standing/easing-1 (offene Jacke Orange #F9A66C (nicht Grün: 115 Karsten trägt ein grünes Hemd), Oberteil Weiß,
 schwarze Hose, Turnschuhe), Kopf Long Curly (schwarzes Haar), keine Brille.
 Ottmar (um 60, Inhaber des Online-Shops, Verkäufer, Schuldner): standing/robot_dance-2 (schwarzes Oberteil, Hose Blau
 #8DB3F2; die geöffnete Hand passt zur Bitte um Geduld), Kopf No Hair 2 (Halbglatze), Brille Glasses 3, kein Bart.
@@ -21,7 +21,7 @@ import lexi as LX
 ZIEL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../peeps/op_116")
 MUND = {"a": "Explaining", "o": "Concerned Fear", "e": "Hectic"}
 
-LE_F = {"Skin": "#D9A47E", "Jacket": "#8FD694", "Top": "#FFFFFF"}
+LE_F = {"Skin": "#D9A47E", "Jacket": "#F9A66C", "Top": "#FFFFFF"}
 OT_F = {"Skin": "#F0CDB0", "Pants": "#8DB3F2"}
 # Person/Pose: (Pose, Kopf, Bart, Brille, Farben)
 P = {

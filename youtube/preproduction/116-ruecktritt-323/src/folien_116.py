@@ -239,7 +239,7 @@ X1, X2 = 1420, 1720                         # zwei Figuren neben der Tafel
 FB, FR = 930, 480                           # Figuren neben der Tafel: Unterkante, Höhe
 FX = 1560                                   # eine Figur neben der Tafel
 NULL = ("fall", -round(T_("fall"), 3))      # = 0,0 s: erstes Bild nach dem Intro vollständig
-LE_N, OT_N = GRUEN, BLAU                    # Farben der Namensschilder
+LE_N, OT_N = ORANGE, BLAU                   # Farben der Namensschilder
 PX, PY, PU = 1570, 160, 380                 # Requisit über den Figuren: Mitte, Pillenhöhe, Unterkante
 NAME = {"LE": "Leni", "OT": "Ottmar"}
 NFARBE = {"LE": LE_N, "OT": OT_N}
@@ -351,7 +351,7 @@ folie([("still", "Fall · Der Rücktritt"), ("frage", "Fall · Die Frage")], [
     ficon("tabler", "package-off", 330, 520, 130, beim("still", "nichts"), fuell=WEISS),
     szene(ficon("tabler", "mail", TIX - 20, 440, 100, SCHREIBT, fuell=WEISS), "116tippen*", 0.6, 0.0),
     pl("Rücktritt", TIX - 20, 300, beim("le3", "trete"), fill=ROT, size=32, anker="m"),
-    pl("499 € zurück", TIX - 20, 210, beim("le3", "vierhundertneunundneunzig"), fill=GELB, size=32, anker="m", bis="frage"),
+    pl("499 € zurück", 70, 205, beim("le3", "vierhundertneunundneunzig"), fill=GELB, size=36, bis="frage"),
     pl("Kann Leni wirksam zurücktreten?", 70, 120, "frage", fill=PINK, size=36),
     pl("War ihre Frist bis morgen nicht viel zu kurz?", 70, 205, "frage2", fill=WEISS, size=34),
     *fig("LE", LEX, BODEN, FH, [("still", "muede"), (SCHREIBT, "denkt")], bis="le3"),
@@ -571,7 +571,7 @@ folie([("vm1", "I. Rücktrittsrecht › kein Vertretenmüssen")], rechts_frei([
     *okz("Wer schuld ist, spielt keine Rolle", 730, beim("vm5", "spielt"), "Bold", 36, x=160),
     *requisit([("vm1", ("tabler", "alert-triangle", 100, ROT), "Klausurfehler", ROT),
                ("vm3", ("tabler", "scale", 100, WEISS), "nur Schadensersatz", WEISS),
-               ("vm5", ("tabler", "truck-delivery", 100, WEISS), "Lieferant egal", WEISS)]),
+               ("vm5", ("tabler", "user-question", 100, WEISS), "Schuld: keine Rolle", WEISS)]),
     *paar("vm1", "LE", [("vm1", "ruhig"), ("vm5", "froh")], "OT", [("vm1", "ruhig"), ("vm2", "staunt"), ("vm5", "sorge")]),
 ]))
 
@@ -613,7 +613,7 @@ folie([("rf1", "III. Rechtsfolge › § 346 Abs. 1 BGB")], rechts_frei([
 folie([("ab1", "Abgrenzung › Unmöglichkeit, § 326 Abs. 5 BGB"), ("ab2", "Abgrenzung › Mangel, § 437 Nr. 2 BGB")],
       rechts_frei([
     *tafel("ab1", "Abgrenzung"),
-    z("Leistung unmöglich: § 326 Abs. 5 BGB", 110, 190, beim("ab1", "Paragraf"), "Bold", 36),
+    z("Leistung unmöglich: § 326 Abs. 5 BGB", 110, 190, beim("ab1", "unmöglich"), "Bold", 36),
     z("etwa: bestimmte gebrauchte Konsole verbrannt", 150, 245, beim("ab1", "etwa"), size=34),
     *okz("Rücktritt nach § 323 BGB, ohne Fristsetzung", 305, "ab1b", "Bold", 34, x=195),
     linienzug([(110, 400), (1150, 400)], "ab2", breite=3),
@@ -635,7 +635,7 @@ folie([("erg", "Ergebnis")], rechts_frei([
     *okz("Ottmar muss die 499 € zurückzahlen", 280, beim("erg2", "zurückzahlen"), "Bold", 38, x=160),
     zit("§§ 323 Abs. 1, 349, 346 Abs. 1 BGB", 160, 340, beim("erg2", "zurückzahlen")),
     *requisit([("erg", ("tabler", "scale", 100, GRUEN), "wirksam", GRUEN),
-               ("erg2", ("tabler", "coin-euro", 100, GELB), "499 € zurück", GELB)]),
+               (beim("erg2", "zurückzahlen"), ("tabler", "coin-euro", 100, GELB), "499 € zurück", GELB)]),
     *paar("erg", "LE", [("erg", "froh")], "OT", [("erg", "sorge")]),
 ]))
 
