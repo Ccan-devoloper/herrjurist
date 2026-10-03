@@ -73,78 +73,78 @@ Quelle: `bildhalt_manifest.json` (144 Bildhalte, davon 144 eigenständig), `cues
 | 67 | 3:05.12 | 3:05.48 | Carla (Erzählerin/Lexi) | nicht | 3. Zulässigkeit › Klagefrist | `47301f1834ff` |
 | 68 | 3:05.48 | 3:06.24 | Carla (Erzählerin/Lexi) | neu. | 3. Zulässigkeit › Klagefrist | `a4f1bd65b34a` |
 | 69 | 3:06.24 | 3:08.26 | Carla (Erzählerin/Lexi) | Verklagt wird die Stadt. | 3. Zulässigkeit › Klagegegner | `b40cbe699846` |
-| 70 | 3:08.58 | 3:09.54 | Carla (Erzählerin/Lexi) | Achtung: Die | 3. Zulässigkeit › keine aufschiebende Wirkung | `2f8911aec151` |
-| 71 | 3:09.54 | 3:13.34 | Carla (Erzählerin/Lexi) | Klage hat keine aufschiebende Wirkung. Das Haltverbot ist | 3. Zulässigkeit › keine aufschiebende Wirkung | `e9ae764824d7` |
-| 72 | 3:13.34 | 3:14.66 | Carla (Erzählerin/Lexi) | sofort vollziehbar, | 3. Zulässigkeit › keine aufschiebende Wirkung | `71c4fdf1b91c` |
-| 73 | 3:14.66 | 3:18.74 | Carla (Erzählerin/Lexi) | entsprechend Paragraf achtzig Absatz zwei Satz eins Nummer zwei | 3. Zulässigkeit › keine aufschiebende Wirkung | `2a4159febd95` |
-| 74 | 3:18.74 | 3:20.46 | Carla (Erzählerin/Lexi) | Verwaltungsgerichtsordnung. | 3. Zulässigkeit › keine aufschiebende Wirkung | `9b6d188550e9` |
-| 75 | 3:20.46 | 3:22.66 | Carla (Erzählerin/Lexi) | Wer schnell Schutz braucht, stellt einen | 3. Zulässigkeit › keine aufschiebende Wirkung | `16d416df4b0e` |
-| 76 | 3:22.66 | 3:26.08 | Carla (Erzählerin/Lexi) | Eilantrag nach Paragraf achtzig Absatz fünf. | 3. Zulässigkeit › keine aufschiebende Wirkung | `95cb0daf01df` |
-| 77 | 3:26.28 | 3:30.24 | Carla (Erzählerin/Lexi) | Begründet ist die Klage, soweit das Haltverbot rechtswidrig ist und | 4. Begründetheit: § 113 I 1 VwGO | `5b13dd320b67` |
-| 78 | 3:30.24 | 3:35.96 | Carla (Erzählerin/Lexi) | Frau Wittmann dadurch in ihren Rechten verletzt, Paragraf hundertdreizehn Absatz eins. | 4. Begründetheit: § 113 I 1 VwGO | `800e2951461a` |
-| 79 | 3:35.96 | 3:44.16 | Carla (Erzählerin/Lexi) | Rechtsgrundlage ist Paragraf fünfundvierzig Absatz eins Satz eins der Straßenverkehrs-Ordnung: Die Straßenv … | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `b14e1cf627a1` |
-| 80 | 3:44.16 | 3:46.72 | Carla (Erzählerin/Lexi) | Benutzung bestimmter Straßen aus Gründen der | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `65b661ed216f` |
-| 81 | 3:46.72 | 3:48.24 | Carla (Erzählerin/Lexi) | Sicherheit oder Ordnung des | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `40c2031f7937` |
-| 82 | 3:48.24 | 3:48.72 | Carla (Erzählerin/Lexi) | Verkehrs | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `6421052a97d5` |
-| 83 | 3:48.72 | 3:49.96 | Carla (Erzählerin/Lexi) | beschränken. | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `ac8db54a113c` |
-| 84 | 3:49.96 | 3:51.12 | Carla (Erzählerin/Lexi) | Formell ist die Stadt | 4. Begründetheit › formell | `764cc5e73df9` |
-| 85 | 3:51.12 | 3:54.76 | Carla (Erzählerin/Lexi) | zuständig, und vor einer Allgemeinverfügung darf sie von der | 4. Begründetheit › formell | `0486a23ae713` |
-| 86 | 3:54.76 | 3:56.54 | Carla (Erzählerin/Lexi) | Anhörung absehen. | 4. Begründetheit › formell | `0e071baa5200` |
-| 87 | 3:56.74 | 4:05.42 | Carla (Erzählerin/Lexi) | Entscheidend ist Absatz neun. Satz eins: Verkehrszeichen sind nur dort anzuordnen, wo dies auf Grund der be … | 4. Begründetheit › § 45 IX StVO | `06b0a3cdd8fe` |
-| 88 | 4:05.42 | 4:07.42 | Carla (Erzählerin/Lexi) | zwingend erforderlich ist. | 4. Begründetheit › § 45 IX StVO | `69cf334fdec8` |
-| 89 | 4:07.42 | 4:09.74 | Carla (Erzählerin/Lexi) | Satz drei verlangt mehr: eine | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `c53546b861bb` |
-| 90 | 4:09.74 | 4:11.06 | Carla (Erzählerin/Lexi) | Gefahrenlage aus den | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `0ec93854d85b` |
-| 91 | 4:11.06 | 4:14.62 | Carla (Erzählerin/Lexi) | besonderen örtlichen Verhältnissen, die das allgemeine Risiko | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `9170b32f453b` |
-| 92 | 4:14.62 | 4:16.46 | Carla (Erzählerin/Lexi) | erheblich übersteigt. | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `2daf2c748a68` |
-| 93 | 4:16.46 | 4:18.58 | Carla (Erzählerin/Lexi) | Das gilt aber nur für Beschränkungen des | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `6b51a1acdb11` |
-| 94 | 4:18.58 | 4:20.50 | Carla (Erzählerin/Lexi) | fließenden Verkehrs, etwa ein | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `086621edb062` |
-| 95 | 4:20.50 | 4:21.94 | Carla (Erzählerin/Lexi) | Überholverbot. | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `62d0e55044aa` |
-| 96 | 4:21.94 | 4:26.58 | Carla (Erzählerin/Lexi) | Ein Haltverbot betrifft den ruhenden Verkehr. Darauf ist Satz drei nach dem | 4. Begründetheit › Haltverbot: ruhender Verkehr, § 45 IX 1 StVO | `b395d90a97bb` |
-| 97 | 4:26.58 | 4:31.48 | Carla (Erzählerin/Lexi) | Bundesverwaltungsgericht nicht anzuwenden. Es bleibt bei Satz eins. | 4. Begründetheit › Haltverbot: ruhender Verkehr, § 45 IX 1 StVO | `744e7c2c5828` |
-| 98 | 4:31.68 | 4:34.55 | Carla (Erzählerin/Lexi) | Behörde muss dabei zurückhaltend sein: Ein | 4. Begründetheit › zwingend erforderlich, § 45 IX 1 StVO | `fa8e9cb92ba0` |
-| 99 | 4:34.55 | 4:38.16 | Carla (Erzählerin/Lexi) | Schild braucht es nur, wenn die allgemeinen Verkehrsregeln für einen | 4. Begründetheit › zwingend erforderlich, § 45 IX 1 StVO | `a2d3a17ac94b` |
-| 100 | 4:38.16 | 4:40.36 | Carla (Erzählerin/Lexi) | sicheren und geordneten Verkehr nicht | 4. Begründetheit › zwingend erforderlich, § 45 IX 1 StVO | `15af95f96b8e` |
-| 101 | 4:40.36 | 4:41.52 | Carla (Erzählerin/Lexi) | ausreichen. | 4. Begründetheit › zwingend erforderlich, § 45 IX 1 StVO | `8871ee1d9f03` |
-| 102 | 4:41.52 | 4:42.68 | Carla (Erzählerin/Lexi) | Erst dann hat die Stadt | 4. Begründetheit › Ermessen | `1c6068e29ac5` |
-| 103 | 4:42.68 | 4:44.08 | Carla (Erzählerin/Lexi) | Ermessen, und bei der | 4. Begründetheit › Ermessen | `b1266fdaead5` |
-| 104 | 4:44.08 | 4:45.56 | Carla (Erzählerin/Lexi) | Wahl des Mittels gilt die | 4. Begründetheit › Ermessen | `3b7d98844014` |
-| 105 | 4:45.56 | 4:47.54 | Carla (Erzählerin/Lexi) | Verhältnismäßigkeit. | 4. Begründetheit › Ermessen | `0d3d43cfe01a` |
-| 106 | 4:47.74 | 4:48.82 | Carla (Erzählerin/Lexi) | hier? Die | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `f272f852283f` |
-| 107 | 4:48.82 | 4:54.18 | Carla (Erzählerin/Lexi) | Stadt nennt nur Sicherheit und Ordnung des Verkehrs, also die Worte des Gesetzes. | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `81ff3f3f0c19` |
-| 108 | 4:54.18 | 4:57.47 | Carla (Erzählerin/Lexi) | Besondere Umstände an dieser Stelle nennt sie nicht. | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `e5dce92ae95c` |
-| 109 | 4:57.47 | 5:00.66 | Carla (Erzählerin/Lexi) | Diese Voraussetzungen für den Eingriff muss aber die Behörde | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `708c37380ddb` |
-| 110 | 5:00.66 | 5:01.74 | Carla (Erzählerin/Lexi) | darlegen. | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `6e61ff31f877` |
-| 111 | 5:01.74 | 5:06.02 | Carla (Erzählerin/Lexi) | Weil das Schild ein Dauerverwaltungsakt ist, zählt die Lage bei der letzten | 4. Begründetheit › maßgeblicher Zeitpunkt | `a772820fd687` |
-| 112 | 5:06.02 | 5:12.02 | Carla (Erzählerin/Lexi) | mündlichen Verhandlung. Bis dahin kann die Stadt noch neue Tatsachen vortragen, etwa eine nötige | 4. Begründetheit › maßgeblicher Zeitpunkt | `9f5ae5dcce49` |
-| 113 | 5:12.02 | 5:13.50 | Carla (Erzählerin/Lexi) | Feuerwehrzufahrt. | 4. Begründetheit › maßgeblicher Zeitpunkt | `d46cadd7aa54` |
-| 114 | 5:13.50 | 5:20.54 | Carla (Erzählerin/Lexi) | Bleibt es beim pauschalen Grund, ist das Haltverbot rechtswidrig und verletzt Frau Wittmann in ihrer Handlu … | Ergebnis: Klage begründet | `2b726b51279e` |
-| 115 | 5:20.54 | 5:24.70 | Carla (Erzählerin/Lexi) | Die Klage ist begründet, das Gericht hebt das Haltverbot auf. | Ergebnis: Klage begründet | `3dda66b88615` |
-| 116 | 5:24.70 | 5:28.10 | Carla (Erzählerin/Lexi) | Ein Bescheidungsurteil gibt es hier nicht, das kennt nur die | Ergebnis: Klage begründet | `380a52cd68b9` |
-| 117 | 5:28.10 | 5:30.12 | Carla (Erzählerin/Lexi) | Verpflichtungsklage. | Ergebnis: Klage begründet | `994636f20ff7` |
-| 118 | 5:30.32 | 5:31.48 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Das Schild gilt bis zur Aufhebung | `ba3c4fbbb4f1` |
-| 119 | 5:31.48 | 5:33.96 | Carla (Erzählerin/Lexi) | Bis zur Aufhebung gilt das Schild. | Klausurtipp · Das Schild gilt bis zur Aufhebung | `3689bdb83056` |
-| 120 | 5:33.96 | 5:36.04 | Carla (Erzählerin/Lexi) | Wer es einfach ignoriert, riskiert ein | Klausurtipp · Das Schild gilt bis zur Aufhebung | `2237737c52d2` |
-| 121 | 5:36.04 | 5:37.32 | Carla (Erzählerin/Lexi) | Bußgeld und das | Klausurtipp · Das Schild gilt bis zur Aufhebung | `f908655a75ab` |
-| 122 | 5:37.32 | 5:39.76 | Carla (Erzählerin/Lexi) | Abschleppen, wie im Abschleppfall. | Klausurtipp · Das Schild gilt bis zur Aufhebung | `b73923e32994` |
-| 123 | 5:39.76 | 5:43.68 | Carla (Erzählerin/Lexi) | Und prüfe beim Haltverbot nicht die besondere Gefahrenlage aus | Klausurtipp · Das Schild gilt bis zur Aufhebung | `aefa89741123` |
-| 124 | 5:43.68 | 5:45.08 | Carla (Erzählerin/Lexi) | Satz drei. Die | Klausurtipp · Das Schild gilt bis zur Aufhebung | `eb5eb42dc5da` |
-| 125 | 5:45.08 | 5:47.74 | Carla (Erzählerin/Lexi) | gilt nur für den fließenden Verkehr. | Klausurtipp · Das Schild gilt bis zur Aufhebung | `3d4dc90b9df7` |
-| 126 | 5:47.74 | 5:49.66 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `c3d3b26a432a` |
-| 127 | 5:49.66 | 5:51.78 | Carla (Erzählerin/Lexi) | Eins, Zulässigkeit: | Klausurschema | `d24cead6db47` |
-| 128 | 5:51.78 | 5:55.62 | Carla (Erzählerin/Lexi) | Rechtsweg und Anfechtungsklage gegen die Allgemeinverfügung, | Klausurschema | `c081b8e0c655` |
-| 129 | 5:55.62 | 5:57.06 | Carla (Erzählerin/Lexi) | Klagebefugnis, | Klausurschema | `0792377e971d` |
-| 130 | 5:57.06 | 5:58.66 | Carla (Erzählerin/Lexi) | Vorverfahren je nach Land | Klausurschema | `94194bd158ae` |
-| 131 | 5:58.66 | 6:01.70 | Carla (Erzählerin/Lexi) | und Jahresfrist ab der ersten Begegnung. | Klausurschema | `bda3442ca619` |
-| 132 | 6:01.70 | 6:03.70 | Carla (Erzählerin/Lexi) | Zwei, Begründetheit: | Klausurschema | `8c17c86b18af` |
-| 133 | 6:03.70 | 6:07.42 | Carla (Erzählerin/Lexi) | Rechtsgrundlage Paragraf fünfundvierzig Absatz eins, | Klausurschema | `9fdf2431496f` |
-| 134 | 6:07.42 | 6:10.22 | Carla (Erzählerin/Lexi) | zwingend erforderlich nach Absatz neun, beim | Klausurschema | `da23a2315bc2` |
-| 135 | 6:10.22 | 6:13.02 | Carla (Erzählerin/Lexi) | fließenden Verkehr zusätzlich Satz drei, | Klausurschema | `ecfb39a32f0b` |
-| 136 | 6:13.02 | 6:13.62 | Carla (Erzählerin/Lexi) | Ermessen | Klausurschema | `e9af85898f4b` |
-| 137 | 6:13.62 | 6:15.44 | Carla (Erzählerin/Lexi) | und Rechtsverletzung. | Klausurschema | `e1504f432d1c` |
-| 138 | 6:15.64 | 6:18.00 | Carla (Erzählerin/Lexi) | Merke: Ein Verkehrsschild ist eine | Merksatz | `6c85ea795dc7` |
-| 139 | 6:18.00 | 6:19.52 | Carla (Erzählerin/Lexi) | Allgemeinverfügung. | Merksatz | `e22459a8bce4` |
-| 140 | 6:19.52 | 6:22.56 | Carla (Erzählerin/Lexi) | Du kannst es anfechten, binnen eines Jahres ab der | Merksatz | `d2c283778e3c` |
-| 141 | 6:22.56 | 6:24.08 | Carla (Erzählerin/Lexi) | ersten Begegnung. | Merksatz | `c07de9977b2a` |
-| 142 | 6:24.08 | 6:26.80 | Carla (Erzählerin/Lexi) | Ein Haltverbot ist nur rechtmäßig, wenn es | Merksatz | `3323618a4cba` |
-| 143 | 6:26.80 | 6:28.68 | Carla (Erzählerin/Lexi) | auf Grund besonderer Umstände | Merksatz | `ed93c181f819` |
-| 144 | 6:28.68 | 6:31.83 | Carla (Erzählerin/Lexi) | zwingend erforderlich ist. | Merksatz | `589972d679ce` |
+| 70 | 3:08.50 | 3:09.42 | Carla (Erzählerin/Lexi) | Achtung: Die | 3. Zulässigkeit › keine aufschiebende Wirkung | `2f8911aec151` |
+| 71 | 3:09.42 | 3:13.06 | Carla (Erzählerin/Lexi) | Klage hat keine aufschiebende Wirkung. Das Haltverbot ist | 3. Zulässigkeit › keine aufschiebende Wirkung | `e9ae764824d7` |
+| 72 | 3:13.06 | 3:14.50 | Carla (Erzählerin/Lexi) | sofort vollziehbar, | 3. Zulässigkeit › keine aufschiebende Wirkung | `71c4fdf1b91c` |
+| 73 | 3:14.50 | 3:18.42 | Carla (Erzählerin/Lexi) | entsprechend Paragraf achtzig Absatz zwei Satz eins Nummer zwei | 3. Zulässigkeit › keine aufschiebende Wirkung | `2a4159febd95` |
+| 74 | 3:18.42 | 3:20.46 | Carla (Erzählerin/Lexi) | Verwaltungsgerichtsordnung. | 3. Zulässigkeit › keine aufschiebende Wirkung | `9b6d188550e9` |
+| 75 | 3:20.46 | 3:22.58 | Carla (Erzählerin/Lexi) | Wer schnell Schutz braucht, stellt einen | 3. Zulässigkeit › keine aufschiebende Wirkung | `16d416df4b0e` |
+| 76 | 3:22.58 | 3:26.24 | Carla (Erzählerin/Lexi) | Eilantrag nach Paragraf achtzig Absatz fünf. | 3. Zulässigkeit › keine aufschiebende Wirkung | `95cb0daf01df` |
+| 77 | 3:26.44 | 3:30.40 | Carla (Erzählerin/Lexi) | Begründet ist die Klage, soweit das Haltverbot rechtswidrig ist und | 4. Begründetheit: § 113 I 1 VwGO | `5b13dd320b67` |
+| 78 | 3:30.40 | 3:36.12 | Carla (Erzählerin/Lexi) | Frau Wittmann dadurch in ihren Rechten verletzt, Paragraf hundertdreizehn Absatz eins. | 4. Begründetheit: § 113 I 1 VwGO | `800e2951461a` |
+| 79 | 3:36.12 | 3:44.32 | Carla (Erzählerin/Lexi) | Rechtsgrundlage ist Paragraf fünfundvierzig Absatz eins Satz eins der Straßenverkehrs-Ordnung: Die Straßenv … | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `b14e1cf627a1` |
+| 80 | 3:44.32 | 3:46.88 | Carla (Erzählerin/Lexi) | Benutzung bestimmter Straßen aus Gründen der | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `65b661ed216f` |
+| 81 | 3:46.88 | 3:48.40 | Carla (Erzählerin/Lexi) | Sicherheit oder Ordnung des | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `40c2031f7937` |
+| 82 | 3:48.40 | 3:48.88 | Carla (Erzählerin/Lexi) | Verkehrs | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `6421052a97d5` |
+| 83 | 3:48.88 | 3:50.12 | Carla (Erzählerin/Lexi) | beschränken. | 4. Begründetheit › Rechtsgrundlage: § 45 I 1 StVO | `ac8db54a113c` |
+| 84 | 3:50.12 | 3:51.28 | Carla (Erzählerin/Lexi) | Formell ist die Stadt | 4. Begründetheit › formell | `764cc5e73df9` |
+| 85 | 3:51.28 | 3:54.92 | Carla (Erzählerin/Lexi) | zuständig, und vor einer Allgemeinverfügung darf sie von der | 4. Begründetheit › formell | `0486a23ae713` |
+| 86 | 3:54.92 | 3:56.70 | Carla (Erzählerin/Lexi) | Anhörung absehen. | 4. Begründetheit › formell | `0e071baa5200` |
+| 87 | 3:56.90 | 4:05.58 | Carla (Erzählerin/Lexi) | Entscheidend ist Absatz neun. Satz eins: Verkehrszeichen sind nur dort anzuordnen, wo dies auf Grund der be … | 4. Begründetheit › § 45 IX StVO | `06b0a3cdd8fe` |
+| 88 | 4:05.58 | 4:07.58 | Carla (Erzählerin/Lexi) | zwingend erforderlich ist. | 4. Begründetheit › § 45 IX StVO | `69cf334fdec8` |
+| 89 | 4:07.58 | 4:09.90 | Carla (Erzählerin/Lexi) | Satz drei verlangt mehr: eine | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `c53546b861bb` |
+| 90 | 4:09.90 | 4:11.22 | Carla (Erzählerin/Lexi) | Gefahrenlage aus den | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `0ec93854d85b` |
+| 91 | 4:11.22 | 4:14.78 | Carla (Erzählerin/Lexi) | besonderen örtlichen Verhältnissen, die das allgemeine Risiko | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `9170b32f453b` |
+| 92 | 4:14.78 | 4:16.62 | Carla (Erzählerin/Lexi) | erheblich übersteigt. | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `2daf2c748a68` |
+| 93 | 4:16.62 | 4:18.74 | Carla (Erzählerin/Lexi) | Das gilt aber nur für Beschränkungen des | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `6b51a1acdb11` |
+| 94 | 4:18.74 | 4:20.66 | Carla (Erzählerin/Lexi) | fließenden Verkehrs, etwa ein | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `086621edb062` |
+| 95 | 4:20.66 | 4:22.10 | Carla (Erzählerin/Lexi) | Überholverbot. | 4. Begründetheit › § 45 IX 3 StVO: qualifizierte Gefahrenlage | `62d0e55044aa` |
+| 96 | 4:22.10 | 4:26.74 | Carla (Erzählerin/Lexi) | Ein Haltverbot betrifft den ruhenden Verkehr. Darauf ist Satz drei nach dem | 4. Begründetheit › Haltverbot: ruhender Verkehr, § 45 IX 1 StVO | `b395d90a97bb` |
+| 97 | 4:26.74 | 4:31.64 | Carla (Erzählerin/Lexi) | Bundesverwaltungsgericht nicht anzuwenden. Es bleibt bei Satz eins. | 4. Begründetheit › Haltverbot: ruhender Verkehr, § 45 IX 1 StVO | `744e7c2c5828` |
+| 98 | 4:31.84 | 4:34.71 | Carla (Erzählerin/Lexi) | Behörde muss dabei zurückhaltend sein: Ein | 4. Begründetheit › zwingend erforderlich, § 45 IX 1 StVO | `fa8e9cb92ba0` |
+| 99 | 4:34.71 | 4:38.32 | Carla (Erzählerin/Lexi) | Schild braucht es nur, wenn die allgemeinen Verkehrsregeln für einen | 4. Begründetheit › zwingend erforderlich, § 45 IX 1 StVO | `a2d3a17ac94b` |
+| 100 | 4:38.32 | 4:40.52 | Carla (Erzählerin/Lexi) | sicheren und geordneten Verkehr nicht | 4. Begründetheit › zwingend erforderlich, § 45 IX 1 StVO | `15af95f96b8e` |
+| 101 | 4:40.52 | 4:41.68 | Carla (Erzählerin/Lexi) | ausreichen. | 4. Begründetheit › zwingend erforderlich, § 45 IX 1 StVO | `8871ee1d9f03` |
+| 102 | 4:41.68 | 4:42.84 | Carla (Erzählerin/Lexi) | Erst dann hat die Stadt | 4. Begründetheit › Ermessen | `1c6068e29ac5` |
+| 103 | 4:42.84 | 4:44.24 | Carla (Erzählerin/Lexi) | Ermessen, und bei der | 4. Begründetheit › Ermessen | `b1266fdaead5` |
+| 104 | 4:44.24 | 4:45.72 | Carla (Erzählerin/Lexi) | Wahl des Mittels gilt die | 4. Begründetheit › Ermessen | `3b7d98844014` |
+| 105 | 4:45.72 | 4:47.70 | Carla (Erzählerin/Lexi) | Verhältnismäßigkeit. | 4. Begründetheit › Ermessen | `0d3d43cfe01a` |
+| 106 | 4:47.90 | 4:48.98 | Carla (Erzählerin/Lexi) | hier? Die | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `f272f852283f` |
+| 107 | 4:48.98 | 4:54.34 | Carla (Erzählerin/Lexi) | Stadt nennt nur Sicherheit und Ordnung des Verkehrs, also die Worte des Gesetzes. | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `81ff3f3f0c19` |
+| 108 | 4:54.34 | 4:57.63 | Carla (Erzählerin/Lexi) | Besondere Umstände an dieser Stelle nennt sie nicht. | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `e5dce92ae95c` |
+| 109 | 4:57.63 | 5:00.82 | Carla (Erzählerin/Lexi) | Diese Voraussetzungen für den Eingriff muss aber die Behörde | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `708c37380ddb` |
+| 110 | 5:00.82 | 5:01.90 | Carla (Erzählerin/Lexi) | darlegen. | 4. Begründetheit › Subsumtion: nur ein pauschaler Grund | `6e61ff31f877` |
+| 111 | 5:01.90 | 5:06.18 | Carla (Erzählerin/Lexi) | Weil das Schild ein Dauerverwaltungsakt ist, zählt die Lage bei der letzten | 4. Begründetheit › maßgeblicher Zeitpunkt | `a772820fd687` |
+| 112 | 5:06.18 | 5:12.18 | Carla (Erzählerin/Lexi) | mündlichen Verhandlung. Bis dahin kann die Stadt noch neue Tatsachen vortragen, etwa eine nötige | 4. Begründetheit › maßgeblicher Zeitpunkt | `9f5ae5dcce49` |
+| 113 | 5:12.18 | 5:13.66 | Carla (Erzählerin/Lexi) | Feuerwehrzufahrt. | 4. Begründetheit › maßgeblicher Zeitpunkt | `d46cadd7aa54` |
+| 114 | 5:13.66 | 5:20.70 | Carla (Erzählerin/Lexi) | Bleibt es beim pauschalen Grund, ist das Haltverbot rechtswidrig und verletzt Frau Wittmann in ihrer Handlu … | Ergebnis: Klage begründet | `2b726b51279e` |
+| 115 | 5:20.70 | 5:24.86 | Carla (Erzählerin/Lexi) | Die Klage ist begründet, das Gericht hebt das Haltverbot auf. | Ergebnis: Klage begründet | `3dda66b88615` |
+| 116 | 5:24.86 | 5:28.26 | Carla (Erzählerin/Lexi) | Ein Bescheidungsurteil gibt es hier nicht, das kennt nur die | Ergebnis: Klage begründet | `380a52cd68b9` |
+| 117 | 5:28.26 | 5:30.28 | Carla (Erzählerin/Lexi) | Verpflichtungsklage. | Ergebnis: Klage begründet | `994636f20ff7` |
+| 118 | 5:30.48 | 5:31.64 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Das Schild gilt bis zur Aufhebung | `ba3c4fbbb4f1` |
+| 119 | 5:31.64 | 5:34.12 | Carla (Erzählerin/Lexi) | Bis zur Aufhebung gilt das Schild. | Klausurtipp · Das Schild gilt bis zur Aufhebung | `3689bdb83056` |
+| 120 | 5:34.12 | 5:36.20 | Carla (Erzählerin/Lexi) | Wer es einfach ignoriert, riskiert ein | Klausurtipp · Das Schild gilt bis zur Aufhebung | `2237737c52d2` |
+| 121 | 5:36.20 | 5:37.48 | Carla (Erzählerin/Lexi) | Bußgeld und das | Klausurtipp · Das Schild gilt bis zur Aufhebung | `f908655a75ab` |
+| 122 | 5:37.48 | 5:39.92 | Carla (Erzählerin/Lexi) | Abschleppen, wie im Abschleppfall. | Klausurtipp · Das Schild gilt bis zur Aufhebung | `b73923e32994` |
+| 123 | 5:39.92 | 5:43.84 | Carla (Erzählerin/Lexi) | Und prüfe beim Haltverbot nicht die besondere Gefahrenlage aus | Klausurtipp · Das Schild gilt bis zur Aufhebung | `aefa89741123` |
+| 124 | 5:43.84 | 5:45.24 | Carla (Erzählerin/Lexi) | Satz drei. Die | Klausurtipp · Das Schild gilt bis zur Aufhebung | `eb5eb42dc5da` |
+| 125 | 5:45.24 | 5:47.90 | Carla (Erzählerin/Lexi) | gilt nur für den fließenden Verkehr. | Klausurtipp · Das Schild gilt bis zur Aufhebung | `3d4dc90b9df7` |
+| 126 | 5:47.90 | 5:49.82 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `c3d3b26a432a` |
+| 127 | 5:49.82 | 5:51.94 | Carla (Erzählerin/Lexi) | Eins, Zulässigkeit: | Klausurschema | `d24cead6db47` |
+| 128 | 5:51.94 | 5:55.78 | Carla (Erzählerin/Lexi) | Rechtsweg und Anfechtungsklage gegen die Allgemeinverfügung, | Klausurschema | `c081b8e0c655` |
+| 129 | 5:55.78 | 5:57.22 | Carla (Erzählerin/Lexi) | Klagebefugnis, | Klausurschema | `0792377e971d` |
+| 130 | 5:57.22 | 5:58.82 | Carla (Erzählerin/Lexi) | Vorverfahren je nach Land | Klausurschema | `94194bd158ae` |
+| 131 | 5:58.82 | 6:01.86 | Carla (Erzählerin/Lexi) | und Jahresfrist ab der ersten Begegnung. | Klausurschema | `bda3442ca619` |
+| 132 | 6:01.86 | 6:03.86 | Carla (Erzählerin/Lexi) | Zwei, Begründetheit: | Klausurschema | `8c17c86b18af` |
+| 133 | 6:03.86 | 6:07.58 | Carla (Erzählerin/Lexi) | Rechtsgrundlage Paragraf fünfundvierzig Absatz eins, | Klausurschema | `9fdf2431496f` |
+| 134 | 6:07.58 | 6:10.38 | Carla (Erzählerin/Lexi) | zwingend erforderlich nach Absatz neun, beim | Klausurschema | `da23a2315bc2` |
+| 135 | 6:10.38 | 6:13.18 | Carla (Erzählerin/Lexi) | fließenden Verkehr zusätzlich Satz drei, | Klausurschema | `ecfb39a32f0b` |
+| 136 | 6:13.18 | 6:13.78 | Carla (Erzählerin/Lexi) | Ermessen | Klausurschema | `e9af85898f4b` |
+| 137 | 6:13.78 | 6:15.60 | Carla (Erzählerin/Lexi) | und Rechtsverletzung. | Klausurschema | `e1504f432d1c` |
+| 138 | 6:15.80 | 6:18.16 | Carla (Erzählerin/Lexi) | Merke: Ein Verkehrsschild ist eine | Merksatz | `6c85ea795dc7` |
+| 139 | 6:18.16 | 6:19.68 | Carla (Erzählerin/Lexi) | Allgemeinverfügung. | Merksatz | `e22459a8bce4` |
+| 140 | 6:19.68 | 6:22.72 | Carla (Erzählerin/Lexi) | Du kannst es anfechten, binnen eines Jahres ab der | Merksatz | `d2c283778e3c` |
+| 141 | 6:22.72 | 6:24.24 | Carla (Erzählerin/Lexi) | ersten Begegnung. | Merksatz | `c07de9977b2a` |
+| 142 | 6:24.24 | 6:26.96 | Carla (Erzählerin/Lexi) | Ein Haltverbot ist nur rechtmäßig, wenn es | Merksatz | `3323618a4cba` |
+| 143 | 6:26.96 | 6:28.84 | Carla (Erzählerin/Lexi) | auf Grund besonderer Umstände | Merksatz | `ed93c181f819` |
+| 144 | 6:28.84 | 6:31.99 | Carla (Erzählerin/Lexi) | zwingend erforderlich ist. | Merksatz | `589972d679ce` |
