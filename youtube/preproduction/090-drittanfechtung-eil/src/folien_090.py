@@ -166,6 +166,12 @@ def rechteck(x, y, w, h, fill, cue, bis=None, rand=4, rund=6, anim="pop", d=0.0,
     return El(im, x, y, cue, anim, d, bis, name=name)
 
 
+def skizze(e):
+    """Icon als Teil der Tafelskizze (darf in der Tafel stehen; rechts_frei() prüft nur freie Requisiten)."""
+    e.name = "skizze:" + e.name.split(":", 1)[1]
+    return e
+
+
 def strichlinie(x, y0, y1, cue, bis=None, breite=5, strich=22, luecke=14):
     """Senkrechte gestrichelte Linie (Grundstücksgrenze)."""
     im = Image.new("RGBA", (breite + 2, int(y1 - y0) + 2))
@@ -230,12 +236,12 @@ folie([(NULL, "Fall · Das Haus mit Garten"), ("bau", "Fall · Der Rohbau nebena
     pl("Grenze", GRX, BODEN - 385, beim("do1", "Grenze"), fill=WEISS, size=28, anker="m"),
     blase("sprech", 700, 160, "do1", 520, 255, inhalt=["Das steht doch viel zu nah", "an meiner Grenze!"], textsize=30,
           figur=DOa, bis="we1"),
-    *fig("WE", WEX, BODEN, FH, [(NULL, "ruhig")], bis="we1", erst="cut"),
+    *fig("WE", WEX, BODEN, FH, [(beim("bau", "Herrn"), "ruhig")], bis="we1"),
     *redet("WE_redet", WEX, BODEN, FH, "we1", "klage"),
     *fig("WE", WEX, BODEN, FH, [("klage", "ruhig")], bis="kanzlei"),
-    hart(schild("Herr Weber, Bauherr", WEX, NULL, WE_F, unten=BODEN, d=0.0)),
+    schild("Herr Weber, Bauherr", WEX, beim("bau", "Herrn"), WE_F, unten=BODEN, d=0.0),
     ficon("tabler", "file-certificate", WEX - 175, 640, 80, beim("we1", "Baugenehmigung"), fuell=WEISS, bis="kanzlei"),
-    blase("sprech", 720, 160, "we1", 1430, 250, inhalt=["Ich habe eine Baugenehmigung der Stadt.", "Ich baue weiter."],
+    blase("sprech", 640, 160, "we1", 1560, 320, inhalt=["Ich habe eine Baugenehmigung", "der Stadt. Ich baue weiter."],
           textsize=30, figur=WEa, bis="klage"),
     ficon(HC, "classical-building", 760, 420, 120, beim("klage", "Verwaltungsgericht"), fuell=WEISS, bis="kanzlei"),
     pl("Klage beim Verwaltungsgericht", 70, 120, beim("klage", "Klage"), fill=GRUEN, size=32, bis="kanzlei"),
@@ -347,7 +353,7 @@ folie([("zul", f"{ZU} › I. Statthaftigkeit"), ("befugt", f"{ZU} › II. Antrag
 ]))
 
 # G A. III. Rechtsschutzbedürfnis, § 80 VI, Beiladung ------------------------------------------------------------------------------
-DX2, WX2, FH2 = 1420, 1730, 400
+DX2, WX2, FH2 = 1360, 1720, 400
 folie([("rsb", f"{ZU} › III. Rechtsschutzbedürfnis"), ("abs6", f"{ZU} › III. Rechtsschutzbedürfnis › § 80 VI VwGO?"),
        ("beil", "Beteiligte › Beiladung des Bauherrn, § 65 II VwGO")], rechts_frei([
     *tafel("rsb", "A. Zulässigkeit"),
@@ -366,7 +372,7 @@ folie([("rsb", f"{ZU} › III. Rechtsschutzbedürfnis"), ("abs6", f"{ZU} › III
     *fig("DO", DX2, FB, FH2, [("rsb", "ruhig"), ("abs6", "denkt")]),
     schild("Frau Dorn", DX2, "rsb", DO_F),
     *fig("WE", WX2, FB, FH2, [(beim("beil", "Herrn"), "denkt")]),
-    schild("Herr Weber, Beigeladener", WX2 - 20, beim("beil", "Herrn"), WE_F, d=0.0),
+    schild("Herr Weber, Beigeladener", WX2 - 30, beim("beil", "Herrn"), WE_F, d=0.0, size=26),
     ficon("tabler", "user-plus", WX2, 430, 110, beim("beil", "lädt"), fuell=ORANGE),
 ]))
 
@@ -378,13 +384,13 @@ folie([("begr", IA), ("wert", f"{IA} › Wertung des § 212a I BauGB"), ("eaus",
     z("eigene Abwägung des Gerichts, im Dreieck:", 110, 170, beim("begr", "Gericht"), "Bold", 34),
     z("Aussetzungsinteresse von Frau Dorn", 150, 225, beim("pole", "Aussetzungsinteresse"), size=32),
     z("gegen Vollzugsinteresse von Herrn Weber", 150, 272, beim("pole", "Vollzugsinteresse"), size=32),
-    blk(110, 335, 1040, 126, GELB, "wert", [("Wertung des § 212a Abs. 1 BauGB:", "ExtraBold", 32, INK),
+    blk(110, 335, 1040, 160, GELB, "wert", [("Wertung des § 212a Abs. 1 BauGB:", "ExtraBold", 32, INK),
                                             ("Genehmigung grundsätzlich vollziehbar", "ExtraBold", 32, INK)]),
-    zit("OVG NRW, Beschl. v. 29.12.2025 – 7 B 359/25, Rn. 12", 150, 470, beim("wert", "Prozesses")),
-    z("wesentlich: Erfolgsaussichten der Klage, summarisch", 110, 530, "eaus", "Bold", 32),
-    zit("BVerwG, Beschl. v. 19.12.2019 – 7 VR 7.19, Rn. 8", 150, 578, beim("eaus", "summarisch")),
-    z("offen: Folgenabwägung, die Wertung wiegt schwer", 110, 640, "offen", "Bold", 32),
-    zit("OVG NRW, Beschl. v. 15.12.2023 – 10 B 645/23, Rn. 90", 150, 688, beim("offen", "Wertung")),
+    zit("OVG NRW, Beschl. v. 29.12.2025 – 7 B 359/25, Rn. 12", 150, 508, beim("wert", "Prozesses")),
+    z("wesentlich: Erfolgsaussichten der Klage, summarisch", 110, 565, "eaus", "Bold", 32),
+    zit("BVerwG, Beschl. v. 19.12.2019 – 7 VR 7.19, Rn. 8", 150, 612, beim("eaus", "summarisch")),
+    z("offen: Folgenabwägung, die Wertung wiegt schwer", 110, 672, "offen", "Bold", 32),
+    zit("OVG NRW, Beschl. v. 15.12.2023 – 10 B 645/23, Rn. 90", 150, 720, beim("offen", "Wertung")),
     ficon(HC, "balance-scale", IX, 360, 160, "begr", fuell=WEISS),
     pl("Aussetzung", 1395, 150, beim("pole", "Aussetzungsinteresse"), fill=GRUEN, size=28, anker="m"),
     pl("Vollzug", 1725, 150, beim("pole", "Vollzugsinteresse"), fill=ORANGE, size=28, anker="m"),
@@ -417,33 +423,127 @@ folie([("nurdritt", f"{BG} › Maßstab: nur drittschützende Normen"), ("mass",
 
 # J Abstandsflächen: Skizze ---------------------------------------------------------------------------------------------------------
 AF = f"{BG} › Erfolgsaussichten › Abstandsflächen"
-M = 26                                       # Maßstab der Skizze: 1 m = 26 px
-SB, GX = 860, 640                            # Boden der Skizze, Grenze
+M = 24                                       # Maßstab der Skizze: 1 m = 24 px
+SB, GX = 740, 660                            # Boden der Skizze, Grenze
 WAND = GX - 3 * M                            # Hauswand 3 m vor der Grenze
 folie([("abf", AF), ("nrw", f"{AF} › Beispiel NRW"), ("fall2", f"{AF} › im Fall"), ("rw", f"{AF} › Ergebnis")], rechts_frei([
     *tafel("abf", "Die Abstandsflächen", h=860),
-    z("schützen auch den Nachbarn, gerade bei Sonne", 110, 165, "schutz", "Bold", 32),
-    zit("BVerwG, 4 B 52.15, Rn. 9; OVG NRW, 10 B 603/20, Rn. 16", 150, 212, beim("schutz", "Sonne")),
-    z("z. B. NRW: auf dem eigenen Grundstück,", 110, 265, "nrw", size=32),
-    z("Tiefe 0,4 H, mindestens 3 m", 110, 310, beim("nrw", "Tiefe"), "Bold", 32),
-    zit("§ 6 Abs. 2 Satz 1, Abs. 5 Satz 1 BauO NRW 2018", 150, 355, beim("nrw", "Tiefe")),
-    zit("in deinem Land ggf. andere Regel", 150, 393, beim("nrw", "deinem")),
+    z("schützen auch den Nachbarn, gerade bei Sonne", 110, 160, "schutz", "Bold", 32),
+    zit("BVerwG, 4 B 52.15, Rn. 9; OVG NRW, 10 B 603/20, Rn. 16", 150, 205, beim("schutz", "Sonne")),
+    z("z. B. NRW: auf dem eigenen Grundstück,", 110, 255, "nrw", size=32),
+    z("Tiefe 0,4 H, mindestens 3 m", 110, 298, beim("nrw", "Tiefe"), "Bold", 32),
+    zit("§ 6 Abs. 2 Satz 1, Abs. 5 Satz 1 BauO NRW 2018", 150, 340, beim("nrw", "Tiefe")),
+    zit("in deinem Land ggf. andere Regel", 150, 376, beim("nrw", "deinem")),
     # Skizze im Schnitt: Wand von Herrn Weber links, Grenze, Haus von Frau Dorn rechts
     hart(linienzug([(110, SB), (1150, SB)], "fall2", breite=5, farbe=INK)),
-    rechteck(WAND - 210, SB - int(12.5 * M), 210, int(12.5 * M), BLAU, beim("fall2", "Hauswand"), anim="cut", name="wand"),
-    pl("H = 12,5 m", WAND - 105, SB - int(12.5 * M) + 30, beim("fall2", "zwölfeinhalb"), fill=WEISS, size=28, anker="m"),
-    strichlinie(GX, SB - 360, SB, beim("fall2", "Hauswand")),
-    pl("Grenze", GX, SB - 410, beim("fall2", "Hauswand"), fill=WEISS, size=26, anker="m"),
-    ficon(HC, "house-with-garden", 960, SB - 2, 200, beim("fall2", "Hauswand"), fuell=GELB, anim="cut"),
-    rechteck(WAND, SB - 16, 5 * M, 26, GRUEN, beim("fall2", "fünf"), name="abstandsflaeche"),
-    pl("nötig: 5 m", WAND + 65, SB - 190, beim("fall2", "fünf"), fill=GRUEN, size=28, anker="m"),
-    pl("Abstand nur 3 m", WAND - 105, SB - 82, beim("fall2", "drei"), fill=WEISS, size=26, anker="m"),
-    rechteck(GX, SB - 16, 2 * M, 26, ROT, beim("verst", "Zwei"), anim="cut", name="auf_ihrem_grundstueck"),
-    pl("2 m auf ihrem Grundstück", 900, SB - 300, beim("verst", "Zwei"), fill=ROT, size=28, anker="m"),
-    pl("keine Abweichung zugelassen", 900, SB - 238, beim("verst", "Abweichung"), fill=WEISS, size=26, anker="m"),
-    blk(110, 420, 1040, 76, GRUEN, beim("rw", "offensichtlich"), [("offensichtlich in ihren Rechten verletzt", "ExtraBold", 32, INK)]),
-    ok(1100, 458, beim("rw", "Rechten"), gr=24),
-    pl("Rücksichtnahmegebot: kann offenbleiben", 900, SB - 360, "rueck", fill=WEISS, size=26, anker="m"),
+    rechteck(WAND - 230, SB - int(12.5 * M), 230, int(12.5 * M), BLAU, beim("fall2", "Hauswand"), anim="cut", name="wand"),
+    pl("H = 12,5 m", WAND - 115, SB - int(12.5 * M) + 25, beim("fall2", "zwölfeinhalb"), fill=WEISS, size=28, anker="m"),
+    strichlinie(GX, SB - 240, SB, beim("fall2", "Hauswand")),
+    pl("Grenze", GX + 70, SB - 240, beim("fall2", "Hauswand"), fill=WEISS, size=26, anker="m"),
+    skizze(ficon(HC, "house-with-garden", 1050, SB - 2, 170, beim("fall2", "Hauswand"), fuell=GELB, anim="cut")),
+    rechteck(WAND, SB - 15, 5 * M, 28, GRUEN, beim("fall2", "fünf"), name="abstandsflaeche"),
+    pl("nötig: 5 m", IX, 130, beim("fall2", "fünf"), fill=GRUEN, size=28, anker="m"),
+    pl("steht nur 3 m vor der Grenze", IX, 200, beim("fall2", "drei"), fill=WEISS, size=26, anker="m"),
+    rechteck(GX, SB - 15, 2 * M, 28, ROT, beim("verst", "Zwei"), anim="cut", name="auf_ihrem_grundstueck"),
+    pl("2 m auf ihrem Grundstück", IX, 270, beim("verst", "Zwei"), fill=ROT, size=28, anker="m"),
+    pl("keine Abweichung zugelassen", IX, 340, beim("verst", "Abweichung"), fill=WEISS, size=26, anker="m"),
+    blk(110, 770, 1040, 76, GRUEN, beim("rw", "offensichtlich"), [("offensichtlich in ihren Rechten verletzt", "ExtraBold", 32, INK)]),
+    ok(1100, 808, beim("rw", "Rechten"), gr=24),
+    z("Rücksichtnahmegebot: kann offenbleiben", 150, 862, "rueck", size=28),
     *fig("DO", FX, FB, FR, [("abf", "denkt"), ("verst", "aerger"), ("rw", "froh")]),
     schild("Frau Dorn", FX, "abf", DO_F),
 ]))
+
+# K Ergebnis und Tenor ---------------------------------------------------------------------------------------------------------------
+folie([("ergeb", "Ergebnis · Aussetzungsinteresse überwiegt"), ("tenor", "Ergebnis · Tenor (Klausurkonvention)")], rechts_frei([
+    *tafel("ergeb", "Das Ergebnis"),
+    z("Aussetzungsinteresse von Frau Dorn überwiegt,", 110, 175, beim("ergeb", "Aussetzungsinteresse"), "Bold", 34),
+    z("trotz § 212a Abs. 1 BauGB", 150, 225, beim("ergeb", "trotz"), size=32),
+    zit("OVG NRW, Beschl. v. 16.6.2020 – 10 B 603/20, Rn. 16", 150, 272, beim("ergeb", "zweihundertzwölf")),
+    z("Tenor (Klausurkonvention):", 110, 345, "tenor", "Bold", 34),
+    blk(110, 400, 1040, 310, GRUEN, beim("tenor", "Die"),
+        [("„Die aufschiebende Wirkung der Klage", "ExtraBold", 34, INK), ("der Antragstellerin gegen die dem", "ExtraBold", 34, INK),
+         ("Beigeladenen erteilte Baugenehmigung", "ExtraBold", 34, INK), ("wird angeordnet.“", "ExtraBold", 34, INK)]),
+    z("dazu Kosten und Streitwert", 150, 735, beim("tenor", "Kosten"), size=32),
+    zit("Tenorform wie OVG NRW, 10 B 603/20", 150, 782, beim("tenor", "Streitwert")),
+    ficon(HC, "classical-building", IX, IU, 150, "ergeb", fuell=WEISS),
+    pl("Beschluss", IX, 190, "tenor", fill=GRUEN, size=28, anker="m"),
+    *fig("DO", FX, FB, FR, [("ergeb", "froh")]),
+    schild("Frau Dorn", FX, "ergeb", DO_F),
+]))
+
+# L Baustelle: Baustopp, Sicherungsmaßnahmen --------------------------------------------------------------------------------------
+WEb = ("WE_redet", WEX, BODEN, FH)
+folie([("stopp", "Ergebnis · Die Baustelle ruht"), ("sich", "Ergebnis · Sicherungsmaßnahmen, § 80a III 1, I Nr. 2 VwGO")], [
+    linienzug([(60, BODEN), (1860, BODEN)], "stopp", breite=7, farbe=INK),
+    ficon("tabler", "sun", 1480, 175, 120, "stopp", fuell=GELB),
+    haus("stopp"),
+    *[e for n in (1, 2, 3, 4) for e in geschoss(n, "stopp")],
+    ficon("tabler", "barrier-block", ROX + 260, BODEN - 2, 150, beim("stopp", "nicht"), fuell=ROT),
+    pl("Genehmigung darf nicht ausgenutzt werden", 70, 40, beim("stopp", "nicht"), fill=GELB, size=32),
+    pl("baut er trotzdem weiter:", 70, 120, "sich", fill=WEISS, size=30),
+    pl("Sicherungsmaßnahmen, § 80a Abs. 3 Satz 1, Abs. 1 Nr. 2 VwGO", 70, 190, beim("sich", "Sicherungsmaßnahmen"), fill=ORANGE, size=30),
+    pl("etwa Stilllegung der Baustelle", 70, 260, beim("sich", "Stilllegung"), fill=ROT, size=30),
+    *fig("DO", DOX, BODEN, FH, [("stopp", "froh_r")]),
+    schild("Frau Dorn, Nachbarin", DOX, "stopp", DO_F, unten=BODEN),
+    *fig("WE", WEX, BODEN, FH, [("stopp", "denkt"), ("sich", "muede")], bis="we2"),
+    *redet("WE_redet", WEX, BODEN, FH, "we2", "tipp"),
+    schild("Herr Weber, Bauherr", WEX, "stopp", WE_F, unten=BODEN),
+    blase("sprech", 590, 140, "we2", 1540, 300, inhalt=["Dann muss ich wohl umplanen."], textsize=30, figur=WEb),
+])
+
+# M Klausurtipp (Lexi) --------------------------------------------------------------------------------------------------------
+folie([("tipp", "Klausurtipp · Rechtswidrig ist nicht genug"), ("tipp2", "Klausurtipp · Prüfprogramm der Genehmigung")], [
+    *tafel("tipp", "Klausurtipp", fill=HELL),
+    warnung_i(150, 225, "tipp", gr=26),
+    z("nie: „rechtswidrig, also Antrag begründet“", 200, 200, beim("tipp", "Schreib"), "Bold", 34),
+    nein(1110, 222, beim("tipp", "Erfolg"), gr=22),
+    z("immer: Verletzt sie eine Norm, die gerade", 200, 290, "tipp1", size=34),
+    z("die Antragstellerin schützt?", 200, 342, beim("tipp1", "gerade"), size=34),
+    z("Bauordnungsrecht: Prüft die Behörde die Norm", 200, 440, "tipp2", "Bold", 34),
+    z("im Genehmigungsverfahren deines Landes überhaupt?", 200, 492, beim("tipp2", "Genehmigungsverfahren"), size=32),
+    z("NRW: Abstandsflächen gehören dazu", 200, 560, beim("tipp2", "Nordrhein-Westfalen"), size=34),
+    zit("§ 64 Abs. 1 Satz 1 Nr. 1 Buchst. b BauO NRW 2018", 200, 610, beim("tipp2", "Abstandsflächen")),
+    *redet("LX_warnt", FX, FB, FR + 40, "tipp", "sch"),
+    pl("Lexi", FX, FB + 22, "tipp", fill=GELB, size=30, anker="m", d=0.2),
+])
+
+# N Klausurschema ---------------------------------------------------------------------------------------------------------------
+SZ, LH = 32, 60
+LX0, RX0 = 110, 960
+links = [("s1", "I. Statthaftigkeit: § 80a III 2,", "Regular"), ("s1", "§ 80 V 1 Alt. 1 (Anordnung)", "Regular"),
+         ("s2", "II. Antragsbefugnis: drittschützende", "Regular"), ("s2", "Norm, § 42 II analog", "Regular"),
+         ("s3", "III. Rechtsschutzbedürfnis:", "Regular"), ("s3", "Rechtsbehelf erhoben", "Regular"),
+         ("s4", "Beiladung des Bauherrn, § 65 II", "Bold")]
+rechts_ = [("s5", "I. Interessenabwägung im Dreieck,", "Regular"), ("s5", "Wertung des § 212a I BauGB", "Regular"),
+           ("s6", "II. summarisch: nur", "Regular"), ("s6", "drittschützende Normen", "Regular"),
+           ("s7", "III. hier: Abstandsflächen", "Regular"), ("s8", "C. Tenor: Anordnung", "ExtraBold")]
+els_t = [karte(60, 50, 1800, 900, "sch"),
+         titel(glyphen("Klausurschema: Eilantrag der Nachbarin"), 110, 85, "sch", 44),
+         z("A. Zulässigkeit", LX0, 190, "sa", "ExtraBold", 38, rechts=940),
+         z("B. Begründetheit", RX0, 190, "sb", "ExtraBold", 38, rechts=1820)]
+for i, (c, t, st) in enumerate(links):
+    einzug = 30 if t.startswith(("I", "B")) else 70
+    els_t.append(z(t, LX0 + einzug, 262 + i * LH + (20 if c == "s4" else 0), c, st, SZ, rechts=940))
+for i, (c, t, st) in enumerate(rechts_):
+    einzug = 0 if c == "s8" else (30 if t.startswith(("I", "II", "III")) else 70)
+    els_t.append(z(t, RX0 + einzug, 262 + i * LH + (40 if c == "s8" else 0), c, st, SZ if c != "s8" else 38, rechts=1820))
+folie([("sch", "Klausurschema · Eilantrag nach §§ 80a III, 80 V VwGO")], els_t)
+
+# O Merksatz (Lexi) ----------------------------------------------------------------------------------------------------------------
+folie([("merke", "Merksatz")], [
+    karte(80, 120, 1340, 800, "merke", fill=HELL),
+    titel("Merke", 750, 180, "merke", 84, anker="m"),
+    *markertext([[("Gegen eine ", 0), ("Baugenehmigung", "a"), (" hat der", 0)]], 750, 320, 42, "merke",
+                {"a": beim("merke", "Baugenehmigung")}),
+    *markertext([[("Rechtsbehelf des Nachbarn ", 0), ("keine", "b")]], 750, 385, 42, beim("merke", "Rechtsbehelf"),
+                {"b": beim("merke", "keine")}),
+    *markertext([[("aufschiebende Wirkung.", 0)]], 750, 450, 42, beim("merke", "aufschiebende"), {}),
+    *markertext([[("Das Gericht ", 0), ("ordnet", "c"), (" sie auf Antrag an, wenn", 0)]], 750, 580, 40, "m2",
+                {"c": beim("m2", "ordnet")}),
+    *markertext([[("die Genehmigung voraussichtlich eine Norm", 0)]], 750, 642, 40, beim("m2", "Genehmigung"), {}),
+    *markertext([[("verletzt, die ", 0), ("gerade den Nachbarn", "d"), (" schützt.", 0)]], 750, 704, 40, beim("m2", "verletzt"),
+                {"d": beim("m2", "gerade")}),
+    *redet("LX_erklaert", 1680, 950, 700, "merke", lexi_bis_ende("merke")),
+    pl("Lexi", 1680, 968, "merke", fill=GELB, size=30, anker="m", d=0.2),
+])
