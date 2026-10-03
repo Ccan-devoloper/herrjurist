@@ -73,3 +73,6 @@ Namen mit eindeutig deutscher Aussprache, nicht auf der Koordinatorliste und in 
 ## Drive
 
 Ordner `LexVerse Produktion/094 Sirius-Fall/` (ID `1koBxgx0Gbg3LiOGk-hGmi82Gn2Ssh9Ny`), mit rclone angelegt (einziger Ordner „094 …“, vorher per `rclone lsf` geprüft), 9 Dateien: `094-Sirius-Fall.mp4` (24.826.934 B, MD5 lokal = Drive `32801cdd…`), `094-Sirius-Fall-Hauptfilm.mp4` (17.497.738 B, MD5 lokal = Drive `be4b26a5…`), `master.zip` (45.220.489 B, 287 Einträge, `unzip -t` fehlerfrei, MD5 lokal = Drive `e2f84dad…`), `thumb_A.jpg` (143.427 B), `thumb_B.jpg` (152.781 B), `beschreibung.txt`, `kapitel.txt`, `untertitel.srt`, `metadaten.json`. `rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; Readback per `rclone lsl`/`rclone md5sum` am 03.10.2026, 04:53. Die Kopie dieses Bogens im `master.zip` wurde vor dem Upload gepackt; dieser Abschnitt steht nur in der Repository-Fassung. `out/ton_mix.wav` und `stimme_48k.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme.wav`, `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
+
+## Nachtrag Koordination (03.10.2026)
+- Titelkorrektur übernommen: „Sirius-Fall: In den Tod getäuscht – mittelbare Täterschaft?“ (Themenplan, `seo_straf.json`, `metadaten.json` in Drive ersetzt). Thumbnail-Text „TÖTEN DURCH TÄUSCHUNG?“, Hook ohne Methode.
