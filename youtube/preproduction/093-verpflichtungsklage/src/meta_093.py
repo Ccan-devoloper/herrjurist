@@ -58,7 +58,9 @@ srt = open(f"{U}/untertitel.srt").read()
 for alt, neu in (("\nFeldmann:", "\nHerr Feldmann:"), ("\nSiebert:", "\nFrau Siebert:"), ("\nRichterin:", "\nDie Richterin:")):
     srt = srt.replace(alt, neu)
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
+srt = srt.replace("nach S. 1.", "nach Satz 1.").replace("nach S. 2.", "nach Satz 2.")
 assert not re.search(r"§\n", srt)
+assert "S. 1" not in srt and "S. 2" not in srt
 open(f"{U}/untertitel.srt", "w").write(srt)
 
 m = json.load(open(f"{U}/metadaten.json"))
