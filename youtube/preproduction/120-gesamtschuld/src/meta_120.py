@@ -67,6 +67,7 @@ for alt, neu in (("eins", "I."), ("zwei", "II.")):
     srt = re.sub(r"Römisch(\s)" + alt, r"\g<1>" + neu, srt)
 srt = re.sub(r"(^|\n) (I|II)\.", r"\1\2.", srt)
 srt = re.sub(r"\b(I|II)\.:", r"\1.", srt).replace(".  ", ". ")
+srt = re.sub(r"(?<=\S)  +(?=\S)", " ", srt)
 assert "Römisch" not in srt
 assert not re.search(r"§\n", srt)
 assert "hundert" not in srt, re.findall(r".{20}hundert.{20}", srt)
