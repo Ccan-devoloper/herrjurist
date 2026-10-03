@@ -95,3 +95,12 @@
 - RGSt 74, 84 und BGHSt 18, 87 sowie BGHSt 8, 393 **nicht im Volltext gelesen** (siehe oben); Inhalt über ein Universitäts-Vorlesungsskript und den BGH 1992 belegt.
 - BGH-Volltexte in HRRS gelesen; amtliche Fassungen auf bundesgerichtshof.de nicht zusätzlich abgeglichen (3 StR 35/92 von 1992 ist dort nicht verfügbar).
 - Literatur nur über Hefendehl/Jurcoach und das Gesamtwissen (UNCERTIFIED).
+
+## Hinweise zum Themenplan (an den Koordinator, CSV nicht geändert)
+
+1. **Leitentscheidung** „RGSt 74, 84 (Badewannen-Fall); BGHSt 18, 87 (Staschynskij)“: Fundstellen zutreffend, Volltexte aber nicht frei abrufbar. Vorschlag: `Leitentscheidung = RG, Urt. v. 19.2.1940 – 3 D 69/40, RGSt 74, 84 (Badewannen-Fall); BGH, Urt. v. 19.10.1962 – 9 StE 4/62, BGHSt 18, 87 (Staschinski-Fall); BGH, Urt. v. 22.7.1992 – 3 StR 35/92, BGHSt 38, 315, Rn. 4–6 (eigenhändige Verwirklichung: grundsätzlich Täter); BGH, Urt. v. 23.3.2023 – 3 StR 363/22, Rn. 8 (wertende Gesamtbetrachtung)`
+2. **Normen** „§§ 25, 26, 27 StGB“: im Video zusätzlich § 49 Abs. 1. Vorschlag: `Normen = §§ 25, 26, 27 StGB; § 49 Abs. 1 StGB`
+3. **Schreibweise** „Staschynskij“ (Tags, Leitentscheidung, Beschreibung): im Video einheitlich „Staschinski“ (Hefendehl-Skript, deutsche Wikipedia), in der Beschreibung beide Schreibungen. Vorschlag: `Tags = Tatherrschaftslehre | subjektive Theorie | Badewannen-Fall | Staschinski-Fall | Staschynskij-Fall | §§ 25, 26, 27 StGB | Strafrecht AT`
+4. **Einstieg (Hook)** „auf Bitten ihrer Schwester“: nach Hefendehl „auf Drängen der Kindsmutter“; im Video „Auf Drängen der Mutter“. Vorschlag: `Einstieg (Hook) = Eine Frau tötet auf Drängen ihrer Schwester deren Neugeborenes – das Reichsgericht sah in ihr nur eine Gehilfin.`
+5. **Beschreibung (Anfang)**, **Kernfrage**, **Voraussetzung**: zutreffend und eingelöst.
+6. **Thumbnail-Angaben** (Eintrag 119 in `thumbs_straf.json`): Motiv `bathtub` und Figuren „Mutter“/„Schwester“ (Darstellung der Beteiligten eines echten Tötungsfalls, Badewanne) für diese Folge ersetzt (siehe ABNAHME.md). Texte „TÄTER ODER TEILNEHMER?“ und „BADEWANNENFALL“ rechtlich zutreffend, unverändert.
