@@ -9,7 +9,7 @@ U = sys.argv[1]
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"] + 8.0
 KAP = [(0.0, "Fall: Wilma und Hartwig"), (T("abend"), "Der verabredete Abend – und die Frage"),
-       (T("sv"), "Sachverhalt zum Nachlesen"), (T("echt"), "Der echte Fall: BGHSt 32, 38"),
+       (T("sv"), "Sachverhalt und der echte Fall: BGHSt 32, 38"),
        (T("aus"), "Ausgangspunkt: Selbsttötung und Teilnahme straflos"), (T("hand"), "§ 25 Abs. 1 StGB: Werkzeug gegen sich selbst"),
        (T("streit"), "Streit: Exkulpations- oder Einwilligungslösung"), (T("art"), "Täuschung über den Tod: Täter kraft überlegenen Wissens"),
        (T("subs"), "Subsumtion"), (T("versuch"), "Versuch"), (T("erg"), "Ergebnis"),
@@ -56,6 +56,10 @@ open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 
 srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"fünften\s+Juli\s+neunzehnhundertdreiundachtzig", "5. Juli 1983", srt)
+srt = srt.replace("vom fünften Juli\n", "vom 5. Juli\n")
+srt = srt.replace("Mitte dreißig", "Mitte 30").replace("Folge achtundfünfzig", "Folge 58").replace("Folge einundneunzig", "Folge 91")
+srt = srt.replace("Abs. 1, Alt. 2", "Abs. 1 Alt. 2")
+assert "fünften" not in srt and "dreißig" not in srt
 srt = srt.replace("§ 25 Abs. 1, Alt. 2", "§ 25 Abs. 1 Alt. 2")
 assert "neunzehnhundert" not in srt
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)

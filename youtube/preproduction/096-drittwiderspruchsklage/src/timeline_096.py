@@ -12,7 +12,7 @@ def mmss(t):
     return f"{int(t // 60)}:{t % 60:05.2f}"
 
 
-zeilen = ["# Folge 039 · Cue-Timeline (Ton-Bild-Gate)", "",
+zeilen = ["# Folge 096 · Cue-Timeline (Ton-Bild-Gate)", "",
           f"Quelle: `bildhalt_manifest.json` ({man['bildhalte']} Bildhalte, davon {man['eigenstaendig']} eigenständig), "
           "`cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). "
           "Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind "
@@ -21,7 +21,7 @@ zeilen = ["# Folge 039 · Cue-Timeline (Ton-Bild-Gate)", "",
 for h in man["halte"]:
     ws = [(w, r) for a, b, w, r in woerter if a < h["ende"] and b > h["start"]]
     sprecher = " / ".join(dict.fromkeys(r for _, r in ws)) or "– (Pause)"
-    text = " ".join(w for w, _ in ws).replace("Weck-nahme", "Wegnahme")  # Aussprachehilfe nur für die Vertonung
+    text = " ".join(w for w, _ in ws)
     if len(text) > 110:
         text = text[:107] + " …"
     zeilen.append(f"| {h['nr']} | {mmss(h['start'])} | {mmss(h['ende'])} | {sprecher} | {text.replace('|', '/')} | "

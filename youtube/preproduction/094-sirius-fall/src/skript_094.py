@@ -87,7 +87,7 @@ SEGMENTE = [
      "täuscht, tötet durch das Opfer, als mittelbarer Täter.", 1.0),
     # --- M Hilfsangebot ----------------------------------------------------------------------------------------------------------
     ("[hilfe]Wenn dich das Thema selbst betrifft: Die Telefonseelsorge ist rund um die Uhr und kostenlos für dich da. "
-     "[nummern]Die Nummern siehst du hier.", 1.6),
+     "[nummern]Die Nummern siehst du hier.", 4.5),
 ]
 
 if __name__ == "__main__":

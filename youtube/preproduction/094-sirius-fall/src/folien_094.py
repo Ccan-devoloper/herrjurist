@@ -197,7 +197,7 @@ folie([(NULL, "Fall · Wilma und Hartwig"), ("stern", "Fall · Der ferne Stern")
             WIX, BODEN, GH, rede={"WI_redet": 1}),
     namensschild("Hartwig", HWX, BODEN, NULL, FARBE["HW"]),
     namensschild("Wilma", WIX, BODEN, NULL, FARBE["WI"]),
-    pl("Mitte 30", WIX, 300, beim("fall", "Mitte"), fill=WEISS, size=30, anker="m", bis="stern"),
+    pl("Mitte 30", WIX, 300, beim("fall", "Mitte"), fill=WEISS, size=30, anker="m", bis=beim("lehrer", "vertraut")),
     pl("Gesprächsabende", 930, 560, beim("fall", "Gesprächsabende"), fill=WEISS, size=30, anker="m", bis="h1"),
     pl("„spiritueller Lehrer“", HWX, 300, beim("lehrer", "spiritueller"), fill=LILA, size=30, anker="m", bis="h1"),
     pl("vertraut ihm blind", WIX, 220, beim("lehrer", "vertraut"), fill=WEISS, size=30, anker="m", bis="h1"),

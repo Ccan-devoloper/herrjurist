@@ -104,19 +104,19 @@ Quelle: `bildhalt_manifest.json` (116 Bildhalte, davon 116 eigenständig), `cues
 | 98 | 4:16.66 | 4:20.74 | Carla (Erzählerin/Lexi) | Bleibt das offen, gilt zugunsten des Täters nur der Versuch. | Klausurtipp · Zeitpunkt des Entschlusses | `55d755fd2a90` |
 | 99 | 4:20.74 | 4:23.54 | Carla (Erzählerin/Lexi) | Erst danach: Prüfe Unterschlagung und | Klausurtipp · Zeitpunkt des Entschlusses | `b2485cf6fd85` |
 | 100 | 4:23.54 | 4:26.48 | Carla (Erzählerin/Lexi) | entscheide den Streit ums Eigentum. | Klausurtipp · Zeitpunkt des Entschlusses | `0ac70da116b0` |
-| 101 | 4:26.48 | 4:28.44 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `ce98f97f0956` |
-| 102 | 4:28.44 | 4:31.40 | Carla (Erzählerin/Lexi) | A, Entschluss schon vor dem Tanken. | Klausurschema | `ea5a65bfa1ca` |
-| 103 | 4:31.40 | 4:35.32 | Carla (Erzählerin/Lexi) | Römisch eins: Diebstahl scheitert an der Wegnahme. | Klausurschema | `6d931394e4db` |
-| 104 | 4:35.32 | 4:43.40 | Carla (Erzählerin/Lexi) | Römisch zwei: Betrug mit Täuschung, Irrtum, Verfügung, Schaden, Vorsatz und Bereicherungsabsicht. | Klausurschema | `9a96e35cead1` |
-| 105 | 4:43.40 | 4:47.48 | Carla (Erzählerin/Lexi) | Römisch drei: Fehlt der Irrtum, nur Betrugsversuch. | Klausurschema | `a4a272a5e2e8` |
-| 106 | 4:47.48 | 4:50.00 | Carla (Erzählerin/Lexi) | Die Unterschlagung tritt zurück. | Klausurschema | `d3fe905f2f34` |
-| 107 | 4:50.00 | 4:53.28 | Carla (Erzählerin/Lexi) | B, Entschluss erst nach dem Tanken. | Klausurschema | `754801c0802e` |
-| 108 | 4:53.28 | 4:55.80 | Carla (Erzählerin/Lexi) | Betrug und Diebstahl scheiden aus. | Klausurschema | `fb41c8c1b540` |
-| 109 | 4:55.80 | 5:00.58 | Carla (Erzählerin/Lexi) | Unterschlagung nur, wenn das Benzin noch der Tankstelle gehört. | Klausurschema | `461a9591cee5` |
-| 110 | 5:00.58 | 5:03.98 | Carla (Erzählerin/Lexi) | Merke: Wer schon zahlungsunwillig tankt, begeht | Merksatz | `99257717ee28` |
-| 111 | 5:03.98 | 5:04.98 | Carla (Erzählerin/Lexi) | Betrug. | Merksatz | `8acd9ade6c40` |
-| 112 | 5:04.98 | 5:07.06 | Carla (Erzählerin/Lexi) | Bemerkt ihn niemand, bleibt es beim | Merksatz | `14ef2b9c63b9` |
-| 113 | 5:07.06 | 5:07.90 | Carla (Erzählerin/Lexi) | Versuch. | Merksatz | `5ee18e9a7efe` |
-| 114 | 5:07.90 | 5:10.98 | Carla (Erzählerin/Lexi) | Wer sich erst danach entschließt, begeht höchstens eine | Merksatz | `e4cc62e7919b` |
-| 115 | 5:10.98 | 5:13.90 | Carla (Erzählerin/Lexi) | Unterschlagung, und das nur, wenn das Benzin noch | Merksatz | `cc51a965d0af` |
-| 116 | 5:13.90 | 5:16.33 | Carla (Erzählerin/Lexi) | fremd ist. | Merksatz | `b24621f46e8f` |
+| 101 | 4:26.48 | 4:28.28 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `ce98f97f0956` |
+| 102 | 4:28.28 | 4:31.32 | Carla (Erzählerin/Lexi) | A, Entschluss schon vor dem Tanken. | Klausurschema | `ea5a65bfa1ca` |
+| 103 | 4:31.32 | 4:35.40 | Carla (Erzählerin/Lexi) | Römisch eins: Diebstahl scheitert an der Wegnahme. | Klausurschema | `6d931394e4db` |
+| 104 | 4:35.40 | 4:43.24 | Carla (Erzählerin/Lexi) | Römisch zwei: Betrug mit Täuschung, Irrtum, Verfügung, Schaden, Vorsatz und Bereicherungsabsicht. | Klausurschema | `9a96e35cead1` |
+| 105 | 4:43.24 | 4:47.24 | Carla (Erzählerin/Lexi) | Römisch drei: Fehlt der Irrtum, nur Betrugsversuch. | Klausurschema | `a4a272a5e2e8` |
+| 106 | 4:47.24 | 4:49.68 | Carla (Erzählerin/Lexi) | Die Unterschlagung tritt zurück. | Klausurschema | `d3fe905f2f34` |
+| 107 | 4:49.68 | 4:52.96 | Carla (Erzählerin/Lexi) | B, Entschluss erst nach dem Tanken. | Klausurschema | `754801c0802e` |
+| 108 | 4:52.96 | 4:55.48 | Carla (Erzählerin/Lexi) | Betrug und Diebstahl scheiden aus. | Klausurschema | `fb41c8c1b540` |
+| 109 | 4:55.48 | 5:00.26 | Carla (Erzählerin/Lexi) | Unterschlagung nur, wenn das Benzin noch der Tankstelle gehört. | Klausurschema | `461a9591cee5` |
+| 110 | 5:00.26 | 5:03.66 | Carla (Erzählerin/Lexi) | Merke: Wer schon zahlungsunwillig tankt, begeht | Merksatz | `99257717ee28` |
+| 111 | 5:03.66 | 5:04.66 | Carla (Erzählerin/Lexi) | Betrug. | Merksatz | `8acd9ade6c40` |
+| 112 | 5:04.66 | 5:06.74 | Carla (Erzählerin/Lexi) | Bemerkt ihn niemand, bleibt es beim | Merksatz | `14ef2b9c63b9` |
+| 113 | 5:06.74 | 5:07.58 | Carla (Erzählerin/Lexi) | Versuch. | Merksatz | `5ee18e9a7efe` |
+| 114 | 5:07.58 | 5:10.66 | Carla (Erzählerin/Lexi) | Wer sich erst danach entschließt, begeht höchstens eine | Merksatz | `e4cc62e7919b` |
+| 115 | 5:10.66 | 5:13.58 | Carla (Erzählerin/Lexi) | Unterschlagung, und das nur, wenn das Benzin noch | Merksatz | `cc51a965d0af` |
+| 116 | 5:13.58 | 5:16.01 | Carla (Erzählerin/Lexi) | fremd ist. | Merksatz | `b24621f46e8f` |
