@@ -473,7 +473,7 @@ folie([("tab", "Abgrenzung › Überblick")], [
     *zelle("Haftung", 0, 2, "t2", "Bold", 32),
     *zelle("–", 1, 2, "t2", size=32),
     *zelle("eigene Schuld:", 2, 2, beim("t2", "schuldet"), size=32, zeile2="Gesamtschuld, § 421"),
-    *zelle("Einstehen für", 3, 2, beim("t2", "Bürge"), size=32, zeile2="fremde Schuld"),
+    *zelle("Einstehen für", 3, 2, beim("t2", "wer"), size=32, zeile2="fremde Schuld"),
     *zelle("akzessorisch", 0, 3, "t3", "Bold", 32),
     *zelle("–", 1, 3, "t3", size=32),
     *zelle("ja, § 767", 3, 3, beim("t3", "Bürgschaft"), "Bold", 32),

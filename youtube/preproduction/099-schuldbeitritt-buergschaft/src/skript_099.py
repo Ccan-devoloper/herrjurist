@@ -59,7 +59,7 @@ SEGMENTE = [
     # --- D3 Bürgschaft, § 765 Abs. 1 (Wortlaut), §§ 767, 768, 770, 771 ----------------------------------------------------
     ("[w765]Drittens: die Bürgschaft. Paragraf siebenhundertfünfundsechzig Absatz eins: Durch den Bürgschaftsvertrag "
      "verpflichtet sich der Bürge gegenüber dem Gläubiger eines Dritten, für die Erfüllung der Verbindlichkeit des "
-     "Dritten einzustehen. [fremd]Der Bürge steht also für eine fremde Schuld ein. [akz]Seine Haftung ist akzessorisch: "
+     "Dritten einzustehen. [fremd]Wer bürgt, steht also für eine fremde Schuld ein. [akz]Seine Haftung ist akzessorisch: "
      "Nach Paragraf siebenhundertsiebenundsechzig ist der jeweilige Bestand der Hauptschuld maßgebend. [einr]Er kann "
      "die Einreden des Hauptschuldners erheben, Paragraf siebenhundertachtundsechzig, und nach Paragraf "
      "siebenhundertsiebzig die Zahlung verweigern, solange der Hauptschuldner anfechten oder der Gläubiger aufrechnen "
@@ -72,7 +72,7 @@ SEGMENTE = [
      "ausgeschlossen.", PS),
     # --- E Abgrenzung (Dreispalter) ----------------------------------------------------------------------------------------
     ("[tab]Bei der Schuldübernahme wird der Altschuldner frei, bei Beitritt und Bürgschaft bleibt er "
-     "verpflichtet. [t2]Der Beitretende schuldet selbst als Gesamtschuldner, der Bürge steht für eine fremde Schuld ein. "
+     "verpflichtet. [t2]Der Beitretende schuldet selbst als Gesamtschuldner, wer bürgt, steht für eine fremde Schuld ein. "
      "[t3]Nur die Bürgschaft ist akzessorisch, [t4]und für sie schreibt das Gesetz eigens die Schriftform vor.", PS),
     ("[k1q]Abgrenzen musst du in zwei Schritten. Erstens: Soll der Altschuldner frei werden? Nur dann ist es "
      "eine Schuldübernahme. [k2q]Zweitens: Will der Dritte eine eigene Schuld begründen, ist es ein Beitritt. Will er nur "
