@@ -50,14 +50,17 @@ print(len(bilder), "Bildhalte aus dem MP4")
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"]
 # (Name, von, bis, Kopfausschnitt x0, y0, x1, y1)
-LIPPEN = [("ministerin_lm1", T("lm1"), T("brief"), 1180, 380, 1420, 580),
-          ("ministerin_vor_lm1", T("lm"), T("lm1"), 1180, 380, 1420, 580),
-          ("dahlke_da1", T("da1"), T("he1"), 440, 380, 680, 580),
-          ("henke_waehrend_dahlke", T("da1"), T("he1"), 1380, 380, 1620, 580),
-          ("henke_he1", T("he1"), T("frage"), 1380, 380, 1620, 580),
-          ("dahlke_waehrend_henke", T("he1"), T("frage"), 440, 380, 680, 580),
-          ("dahlke_da2", T("erg3"), T("tipp"), 1270, 450, 1510, 650),
-          ("henke_waehrend_da2", T("da2"), T("tipp"), 1610, 450, 1850, 650),
+LIPPEN = [("praesident_p1", T("p1"), T("hen1"), 300, 380, 540, 580),
+          ("praesident_waehrend_hensel_rieger", T("hen1"), T("p2"), 300, 380, 540, 580),
+          ("praesident_p2", T("p2"), T("knapp"), 300, 380, 540, 580),
+          ("hensel_vor_hen1", T("p1"), T("hen1"), 1060, 380, 1300, 580),
+          ("hensel_hen1", T("hen1"), T("rie1"), 1060, 380, 1300, 580),
+          ("hensel_waehrend_rieger", T("rie1"), T("p2"), 1060, 380, 1300, 580),
+          ("rieger_waehrend_hensel", T("hen1"), T("rie1"), 1440, 380, 1680, 580),
+          ("rieger_rie1", T("rie1"), T("p2"), 1440, 380, 1680, 580),
+          ("rieger_waehrend_p2", T("p2"), T("knapp"), 1440, 380, 1680, 580),
+          ("kaehler_ka1", T("ka1"), T("frage"), 1340, 380, 1580, 580),
+          ("kaehler_ka2", T("ka2"), T("tipp"), 1440, 450, 1680, 650),
           ("lexi_tipp", T("tipp"), T("tipp") + 6.0, 1440, 400, 1720, 640),
           ("lexi_merke", T("merke"), T("merke") + 6.0, 1500, 230, 1860, 530)]
 for name, a, b, x0, y0, x1, y1 in LIPPEN:

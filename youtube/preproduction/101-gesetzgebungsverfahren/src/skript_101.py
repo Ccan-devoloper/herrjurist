@@ -29,7 +29,7 @@ SEGMENTE = [
     # --- B Fall: Bundesrat --------------------------------------------------------------------------------------------------
     ("[br]Einige Wochen später stimmt der Bundesrat ab. [land]Für ein Land sind Ministerin Hensel und Minister Rieger im "
      "Saal.", 0.3),
-    ("[p1]Ich rufe das Land auf. Wie stimmt es ab?", 0.3, "Praesident"),
+    ("[p1]Ich rufe das Land auf. Wie stimmt das Land ab?", 0.3, "Praesident"),
     ("[hen1]Für das Land: Ja.", 0.2, "Hensel"),
     ("[rie1]Und ich sage: Nein.", 0.3, "Rieger"),
     ("[p2]Das werte ich als Ja. Damit hat der Bundesrat zugestimmt.", 0.4, "Praesident"),

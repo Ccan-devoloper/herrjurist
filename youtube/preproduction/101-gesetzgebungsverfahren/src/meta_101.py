@@ -55,11 +55,9 @@ srt = open(f"{U}/untertitel.srt").read()
 for alt, neu in (("\nPraesident:", "\nDer Bundesratspräsident:"), ("\nHensel:", "\nFrau Hensel:"), ("\nRieger:", "\nHerr Rieger:"),
                  ("\nKaehler:", "\nFrau Kähler:")):
     srt = srt.replace(alt, neu)
-for alt, neu in ((r"ersten(\s+)März", r"1.\1März"), (r"ersten(\s+)Januar", r"1.\1Januar"),
-                 (r"vierzehnten(\s+)Tag", r"14.\1Tag"), (r"vier(\s+)Stimmen", r"4\1Stimmen"),
-                 (r"binnen(\s+)drei(\s+)Wochen", r"binnen\g<1>3\g<2>Wochen"), (r"binnen(\s+)zwei(\s+)Wochen", r"binnen\g<1>2\g<2>Wochen"),
-                 (r"sechs(\s+)Wochen", r"6\1Wochen"), (r"Römisch(\s+)eins", r"I."), (r"Römisch(\s+)zwei", r"II."),
-                 (r"Römisch(\s+)drei", r"III.")):
+for alt, neu in ((r"ersten\s+März", "1. März"), (r"ersten\s+Januar", "1. Januar"), (r"vierzehnten\s+Tag", "14. Tag"),
+                 (r"vier\s+Stimmen", "4 Stimmen"), (r"binnen\s+drei\s+Wochen", "binnen 3 Wochen"),
+                 (r"binnen\s+zwei\s+Wochen", "binnen 2 Wochen"), (r"sechs\s+Wochen", "6 Wochen")):
     srt = re.sub(alt, neu, srt)
 assert not re.search(r"\n(Praesident|Kaehler|Hensel|Rieger):", srt)
 open(f"{U}/untertitel.srt", "w").write(srt)

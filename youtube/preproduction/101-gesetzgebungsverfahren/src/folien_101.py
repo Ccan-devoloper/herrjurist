@@ -260,7 +260,7 @@ folie([("br", "Fall · Abstimmung im Bundesrat")], [
     *redet("RI_redet", RIX, BODEN, FH, "rie1", "p2"),
     *fig("RI", RIX, BODEN, FH, [("p2", "aerger")], erst="cut"),
     schild("Minister Rieger", RIX, RIN, RI_F, unten=BODEN),
-    blase("sprech", 620, 200, "p1", 820, 230, inhalt=["Ich rufe das Land auf.", "Wie stimmt es ab?"], textsize=32,
+    blase("sprech", 620, 200, "p1", 820, 230, inhalt=["Ich rufe das Land auf.", "Wie stimmt das Land ab?"], textsize=32,
           figur=PRa, bis="hen1"),
     blase("sprech", 440, 160, "hen1", 1100, 230, inhalt=["Für das Land: Ja."], textsize=32, figur=HSa, bis="rie1"),
     blase("sprech", 460, 160, "rie1", 1560, 230, inhalt=["Und ich sage: Nein."], textsize=32, figur=RIa, bis="p2"),
@@ -319,8 +319,9 @@ folie([("einord", f"{FV} des Bundesgesetzes"), ("komp", f"{FV} › I. Zuständig
 ]))
 
 # F II. 1. Gesetzesinitiative ------------------------------------------------------------------------------------------------------
-folie([("ini", f"{VF} › 1. Gesetzesinitiative, Art. 76 GG")], rechts_frei([
-    *tafel("ini", "1. Gesetzesinitiative, Art. 76 GG", size=44, tc=beim("ini", "Gesetzesinitiative")),
+folie([("ini", f"{VF} · der Weg des Gesetzes"), (beim("ini", "Erstens"), f"{VF} › 1. Gesetzesinitiative, Art. 76 GG")], rechts_frei([
+    pl("II. Verfahren: der Weg des Gesetzes", 110, 300, beim("ini", "Verfahren"), fill=GELB, size=36, bis=beim("ini", "Erstens")),
+    *tafel(beim("ini", "Erstens"), "1. Gesetzesinitiative, Art. 76 GG", size=44, tc=beim("ini", "Gesetzesinitiative")),
     z("Vorlagen bringen ein, Art. 76 Abs. 1 GG:", 110, 175, "ini2", "Bold", 34),
     z("die Bundesregierung", 150, 235, beim("ini2", "Bundesregierung"), size=34),
     z("der Bundesrat", 150, 290, beim("ini2", "Bundesrat"), size=34),
@@ -376,7 +377,7 @@ folie([("brt", f"{BR3} › Einspruchs- oder Zustimmungsgesetz")], rechts_frei([
 
 # I Vermittlungsausschuss, Einspruch, Zurückweisung ---------------------------------------------------------------------------------
 folie([("vma", f"{BR3} › Vermittlungsausschuss, Einspruch, Art. 77 II–IV GG")], rechts_frei([
-    *tafel("vma", "Vermittlungsausschuss und Einspruch", size=42, tc=beim("vma", "Vermittlungsausschuss")),
+    *tafel("vma", "Ablauf im Bundesrat", size=44),
     z("Vermittlungsausschuss: binnen 3 Wochen", 110, 175, beim("vma", "Vermittlungsausschuss"), "Bold", 34),
     zit("Art. 77 Abs. 2 Satz 1 GG", 150, 225, beim("vma", "Artikel")),
     z("bei Zustimmungsgesetzen auch Bundestag und Bundesregierung", 110, 275, beim("vma", "Zustimmungsgesetzen"), size=31),

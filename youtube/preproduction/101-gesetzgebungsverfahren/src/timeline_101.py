@@ -5,7 +5,8 @@ import json
 
 cj = json.load(open("../cues.json"))
 man = json.load(open("../bildhalt_manifest.json"))
-woerter = [(a, b, w, s["rolle"] or "Carla (Erzählerin/Lexi)") for s in cj["segmente"] for w, (a, b) in zip(s["text"].split(), s["woerter"])]
+NAME = {"Praesident": "Bundesratspräsident", "Hensel": "Frau Hensel", "Rieger": "Herr Rieger", "Kaehler": "Frau Kähler"}
+woerter = [(a, b, w, NAME.get(s["rolle"], s["rolle"]) or "Carla (Erzählerin/Lexi)") for s in cj["segmente"] for w, (a, b) in zip(s["text"].split(), s["woerter"])]
 
 
 def mmss(t):
