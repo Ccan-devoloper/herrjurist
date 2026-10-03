@@ -98,7 +98,8 @@ def schriftform(text):
                         z2, j2 = zahl_ab(j + 1)
                         if not z2: break
                         teile += [worte[j], z2]; j = j2
-                    elif teile[-1].endswith(","):                                              # 'Paragrafen dreihundertelf, zweihunderteinundvierzig …'
+                    elif zeichen == "§§" and teile[-1].endswith(",") \
+                            and worte[j].lower().rstrip(",.;:!?)") not in ("ein", "eine", "eins"):  # 'Paragrafen dreihundertelf, zweihunderteinundvierzig …', nicht '…, ein eigener'
                         z2, j2 = zahl_ab(j)
                         if not z2: break
                         teile.append(z2); j = j2
