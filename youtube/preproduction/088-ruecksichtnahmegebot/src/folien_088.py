@@ -330,16 +330,16 @@ Z152 = ["„Sie sind auch unzulässig, wenn von ihnen Belästigungen oder",
         "werden.“"]
 w152, w152_y = wortlaut(80, 170, 1100, W152, "§ 15 Abs. 1 Satz 2 BauNVO", "wl15", size=32, zeilen=Z152,
                         marken=[("unzumutbar", beim("wl15", "unzumutbar"))])
-folie([("wl15", f"{HK} › Plangebiet, § 15 I 2 BauNVO"), ("befr", f"{HK} › Befreiung, § 31 II BauGB")], rechts_frei([
-    titel(glyphen("Im Plangebiet: § 15 BauNVO"), 110, 75, "wl15", 46),
+folie([("wl15", f"{HK} › Bebauungsplan, § 15 I 2 BauNVO"), ("befr", f"{HK} › Befreiung, § 31 II BauGB")], rechts_frei([
+    titel(glyphen("Gilt ein Bebauungsplan: § 15 BauNVO"), 110, 75, "wl15", 46),
     *w152,
     zit("Ausprägung des Rücksichtnahmegebots: BVerwG, 4 C 8.11, Rn. 16", 110, w152_y + 18,
         beim("wl15", "Anlagen")),
-    z("Befreiung vom Bebauungsplan, § 31 Abs. 2 BauGB:", 110, w152_y + 95, "befr", "Bold", 34),
+    z("Befreiung von seinen Festsetzungen, § 31 Abs. 2:", 110, w152_y + 95, "befr", "Bold", 34),
     z("„… auch unter Würdigung nachbarlicher Interessen …“", 150, w152_y + 150, beim("befr", "Würdigung"), size=32),
     zit("BVerwG, Urt. v. 9.8.2018 – 4 C 7.17, Rn. 12", 150, w152_y + 200, beim("befr", "Würdigung")),
     ficon("tabler", "map", IX, IU, 120, "wl15", fuell=GRUEN),
-    pl("Plangebiet", IX, 200, beim("wl15", "Plangebiet"), fill=GRUEN, size=28, anker="m"),
+    pl("Bebauungsplan", IX, 200, beim("wl15", "Bebauungsplan"), fill=GRUEN, size=28, anker="m"),
     *fig("KO", FX, FB, FR, [("wl15", "denkt")]),
     schild("Frau Kolbe", FX, "wl15", KO_F),
 ]))

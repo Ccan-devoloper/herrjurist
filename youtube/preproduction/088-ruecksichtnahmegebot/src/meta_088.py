@@ -26,7 +26,7 @@ Der Fall: Frau Kolbe wohnt seit 40 Jahren in ihrem kleinen Einfamilienhaus am St
 Inhalt:
 – Nachbarklage: Anfechtungsklage eines Dritten, Klagebefugnis nach § 42 II VwGO, Schutznormtheorie, § 113 I 1 VwGO
 – Drittschützende Normen im Überblick: Abstandsflächen, Gebietserhaltungsanspruch, Maß der baulichen Nutzung
-– Herkunft des Rücksichtnahmegebots: § 35 III BauGB (Außenbereich), Einfügen nach § 34 I 1 BauGB (Innenbereich), § 15 I 2 BauNVO (Plangebiet), § 31 II BauGB (Befreiung)
+– Herkunft des Rücksichtnahmegebots: § 35 III BauGB (Außenbereich), Einfügen nach § 34 I 1 BauGB (Innenbereich), § 15 I 2 BauNVO (mit Bebauungsplan), § 31 II BauGB (Befreiung)
 – Maßstab: Abwägung der Zumutbarkeit (BVerwGE 52, 122)
 – Verschattung, Abstandsflächen als Indiz, erdrückende und abriegelnde Wirkung
 – Ergebnis und Eilrechtsschutz (§ 212a BauGB, §§ 80a III, 80 V VwGO – eigenes Video)

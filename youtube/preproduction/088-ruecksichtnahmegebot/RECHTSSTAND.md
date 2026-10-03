@@ -61,8 +61,8 @@
 | `herkunft` | kein eigener Paragraf | Wortlaut BauGB/BauNVO (Begriff kommt nicht vor); BVerwG 4 B 72.06 Rn. 8 („unbenannter … Belang“) |
 | `aussen` | Außenbereich: unbenannter öffentlicher Belang nach § 35 Abs. 3 | BVerwG 4 B 72.06 Rn. 8 |
 | `wl34`/`einf` | Innenbereich: steckt in § 34 Abs. 1 Satz 1, im Einfügen; wer keine Rücksicht nimmt, fügt sich nicht ein | § 34 Abs. 1 Satz 1 BauGB (Wortlautkarte); BVerwG 4 B 50.17 Rn. 4; 4 B 16.15 Rn. 8 |
-| `wl15` | Plangebiet: § 15 Abs. 1 Satz 2 BauNVO, unzumutbare Belästigungen oder Störungen | § 15 Abs. 1 Satz 2 BauNVO (Wortlautkarte); BVerwG 4 C 8.11 Rn. 16 (besondere Ausprägung) |
-| `befr` | Befreiung: § 31 Abs. 2 verlangt Vereinbarkeit „auch unter Würdigung nachbarlicher Interessen“ | § 31 Abs. 2 BauGB (Wortlaut); BVerwG 4 C 7.17 Rn. 12 |
+| `wl15` | gilt ein Bebauungsplan: § 15 Abs. 1 Satz 2 BauNVO, unzumutbare Belästigungen oder Störungen | § 15 Abs. 1 Satz 2 BauNVO (Wortlautkarte); BVerwG 4 C 8.11 Rn. 16 (besondere Ausprägung) |
+| `befr` | Befreiung von seinen Festsetzungen: § 31 Abs. 2 verlangt Vereinbarkeit „auch unter Würdigung nachbarlicher Interessen“ | § 31 Abs. 2 BauGB (Wortlaut); BVerwG 4 C 7.17 Rn. 12 |
 | `mst`–`zumut` | grundlegend Urteil von 1977; Je-desto-Formel; Abwägung, was beiden nach Lage der Dinge zuzumuten ist | BVerwGE 52, 122 <126> **in der Wiedergabe** von BVerwG 4 B 52.15 Rn. 12; ebenso 4 C 8.11 Rn. 16 |
 | `schat` | Verschattung im bebauten Viertel in der Regel hinzunehmen | OVG NRW 7 A 1791/19 Rn. 42; 10 B 1713/08 Rn. 33 |
 | `indiz` | eingehaltene Abstandsflächen: starkes Indiz für Licht und Sonne | BVerwG 4 B 52.15 Rn. 9; 4 B 50.17 Rn. 3 f.; „Indiz“: OVG NRW 10 B 1713/08 Rn. 20 |

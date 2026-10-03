@@ -50,10 +50,10 @@ SEGMENTE = [
      "nach Paragraf fünfunddreißig Absatz drei. [wl34]Im Innenbereich steckt es in Paragraf vierunddreißig Absatz eins Satz "
      "eins: Das Vorhaben muss sich in die Eigenart der näheren Umgebung einfügen. [einf]Wer auf die Nachbarn keine "
      "Rücksicht nimmt, fügt sich nicht ein.", P),
-    ("[wl15]Im Plangebiet nennt es Paragraf fünfzehn Absatz eins Satz zwei der Baunutzungsverordnung: Anlagen sind auch "
-     "unzulässig, wenn von ihnen Belästigungen oder Störungen ausgehen können, die unzumutbar sind. [befr]Und bei einer "
-     "Befreiung vom Bebauungsplan verlangt Paragraf einunddreißig Absatz zwei, dass die Abweichung auch unter Würdigung "
-     "nachbarlicher Interessen mit den öffentlichen Belangen vereinbar ist.", P),
+    ("[wl15]Gilt ein Bebauungsplan, nennt es Paragraf fünfzehn Absatz eins Satz zwei der Baunutzungsverordnung: Anlagen sind "
+     "auch unzulässig, wenn von ihnen Belästigungen oder Störungen ausgehen können, die unzumutbar sind. [befr]Und bei einer "
+     "Befreiung von seinen Festsetzungen verlangt Paragraf einunddreißig Absatz zwei, dass die Abweichung auch unter "
+     "Würdigung nachbarlicher Interessen mit den öffentlichen Belangen vereinbar ist.", P),
     # --- F Maßstab -------------------------------------------------------------------------------------------------------------
     ("[mst]Wann ist ein Vorhaben rücksichtslos? Grundlegend ist ein Urteil des Bundesverwaltungsgerichts von "
      "neunzehnhundertsiebenundsiebzig. [je1]Je empfindlicher und schutzwürdiger die Stellung des Nachbarn ist, desto mehr "
