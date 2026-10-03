@@ -438,7 +438,7 @@ W312G = ["„Dem Verbraucher steht bei außerhalb von Geschäftsräumen geschlos
          "Verträgen und bei Fernabsatzverträgen ein Widerrufsrecht gemäß § 355 zu.“"]
 w312g, w312g_y = wortlaut(110, 200, 1040, W312G, "§ 312g Abs. 1 BGB", beim("wr1", "Paragraf"), marken=[
     (1, "bei Fernabsatzverträgen", beim("wr1", "Fernabsatzverträgen")),
-    (1, "ein Widerrufsrecht gemäß § 355", beim("wr1", "Widerrufsrecht", nr=2))], size=30)
+    (1, "ein Widerrufsrecht gemäß § 355", beim("wr1", "Widerrufsrecht", nr=2))], size=28)
 folie([("wr1", "I. 3. Widerrufsrecht, § 312g Abs. 1 BGB")], rechts_frei([
     *tafel("wr1", "I. 3. Widerrufsrecht"),
     *w312g,
