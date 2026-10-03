@@ -61,13 +61,14 @@ Figuren: Open Peeps (Pablo Stanley, CC0). Icons: Tabler Icons, Fluent Emoji (MIT
 open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 
 srt = open(f"{U}/untertitel.srt").read()
+srt = srt.replace("Weck-nahme", "Wegnahme")      # Aussprachehilfe aus synth_el.AUSSPRACHE nur für die Vertonung
 for alt, neu in (("eins", "I."), ("zwei", "II."), ("drei", "III.")):
     srt = re.sub(r"Römisch\s+" + alt + r"\b:?", neu, srt)
 srt = re.sub(r"\bachtzig Euro", "80 €", srt).replace("80 Euro", "80 €")
 srt = re.sub(r"mit achtzig\n\n(\d+\n[^\n]+\n)Euro\. ", r"mit 80 €.\n\n\1", srt)      # Betrag über zwei Untertitel
 srt = srt.replace("§ 249, Abs. 1", "§ 249 Abs. 1")
 assert "achtzig" not in srt and "Abs. 1:" in srt
-assert "Römisch" not in srt
+assert "Römisch" not in srt and "Weck-" not in srt
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
 assert not re.search(r"§\n", srt)
 open(f"{U}/untertitel.srt", "w").write(srt)
