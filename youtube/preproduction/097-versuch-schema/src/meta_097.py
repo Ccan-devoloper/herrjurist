@@ -58,6 +58,11 @@ open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 
 srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
+for a, b in [("§ 24, 1 eigener", "§ 24, ein eigener"), ("§ 23, Abs. 1", "§ 23 Abs. 1"), ("§ 12, Abs. 1", "§ 12 Abs. 1"),
+             ("23, Abs. 1.", "23 Abs. 1."), ("§ 23,\nAbs. 2,", "§ 23\nAbs. 2,"), ("§ 49, Abs. 1", "§ 49 Abs. 1"),
+             ("zum Jetzt geht es los.", "zum „Jetzt geht es los“.")]:
+    assert a in srt, a
+    srt = srt.replace(a, b)
 assert not re.search(r"§\n", srt)
 open(f"{U}/untertitel.srt", "w").write(srt)
 
