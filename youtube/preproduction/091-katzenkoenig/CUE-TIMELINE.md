@@ -1,6 +1,6 @@
 # Folge 091 · Cue-Timeline (Ton-Bild-Gate)
 
-Quelle: `bildhalt_manifest.json` (137 Bildhalte, davon 137 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
+Quelle: `bildhalt_manifest.json` (138 Bildhalte, davon 138 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
 
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
@@ -11,10 +11,10 @@ Quelle: `bildhalt_manifest.json` (137 Bildhalte, davon 137 eigenständig), `cues
 | 5 | 0:09.48 | 0:12.48 | Carla (Erzählerin/Lexi) | Ritualen bringen die beiden anderen ihn dazu, an den | Fall · Der Katzenkönig | `9bec931d8d2b` |
 | 6 | 0:12.48 | 0:15.36 | Carla (Erzählerin/Lexi) | Katzenkönig zu glauben, eine Macht, die seit | Fall · Der Katzenkönig | `a0c4ce582c16` |
 | 7 | 0:15.36 | 0:18.04 | Carla (Erzählerin/Lexi) | Jahrtausenden das Böse verkörpern soll. | Fall · Der Katzenkönig | `84d3ad2c9102` |
-| 8 | 0:18.04 | 0:21.88 | Carla (Erzählerin/Lexi) | Irmgard will die Frau ihres früheren Freundes töten lassen, aus | Fall · Das Motiv | `e7e463a96a58` |
-| 9 | 0:21.88 | 0:23.60 | Carla (Erzählerin/Lexi) | Hass und Eifersucht. | Fall · Das Motiv | `2cbfd7a06c5e` |
-| 10 | 0:23.60 | 0:24.32 | Carla (Erzählerin/Lexi) | Wolfram ist | Fall · Das Motiv | `6d0e275696d1` |
-| 11 | 0:24.32 | 0:25.58 | Carla (Erzählerin/Lexi) | einverstanden. | Fall · Das Motiv | `9b1a128d9d37` |
+| 8 | 0:18.04 | 0:21.88 | Carla (Erzählerin/Lexi) | Irmgard will die Frau ihres früheren Freundes töten lassen, aus | Fall · Das Motiv | `613e1c965f1b` |
+| 9 | 0:21.88 | 0:23.60 | Carla (Erzählerin/Lexi) | Hass und Eifersucht. | Fall · Das Motiv | `f0d42f9caaec` |
+| 10 | 0:23.60 | 0:24.32 | Carla (Erzählerin/Lexi) | Wolfram ist | Fall · Das Motiv | `d80bf4be6f79` |
+| 11 | 0:24.32 | 0:25.58 | Carla (Erzählerin/Lexi) | einverstanden. | Fall · Das Motiv | `84ffcb98e3d4` |
 | 12 | 0:25.58 | 0:32.06 | Irmgard | Der Katzenkönig verlangt ein Menschenopfer: die Frau aus dem Blumenladen. Sonst vernichtet er | Fall · Das Menschenopfer | `0e20c54ec46b` |
 | 13 | 0:32.06 | 0:33.96 | Irmgard | Millionen Menschen. | Fall · Das Menschenopfer | `209d047cc6b1` |
 | 14 | 0:33.96 | 0:36.10 | Ulrich | Aber das wäre Mord. | Fall · Das Menschenopfer | `76b864ff17d0` |
@@ -38,8 +38,8 @@ Quelle: `bildhalt_manifest.json` (137 Bildhalte, davon 137 eigenständig), `cues
 | 32 | 1:33.46 | 1:36.46 | Carla (Erzählerin/Lexi) | Die Schuldsprüche blieben beim B.G.H. bestehen. | Der echte Fall › Schuldsprüche bestätigt | `eff396637b6b` |
 | 33 | 1:36.46 | 1:40.10 | Carla (Erzählerin/Lexi) | Aufgehoben wurden nur die Strafen: Das Landgericht hatte die | Der echte Fall › Schuldsprüche bestätigt | `4503be40f3d2` |
 | 34 | 1:40.10 | 1:44.24 | Carla (Erzählerin/Lexi) | Milderung beim Versuch nicht ausreichend geprüft. | Der echte Fall › Schuldsprüche bestätigt | `dbc8e70742b2` |
-| 35 | 1:44.44 | 1:46.96 | Carla (Erzählerin/Lexi) | Beginne mit dem Tatnächsten, Ulrich. Die | A. Ulrich › Versuchter Mord | `9a4f23620fea` |
-| 36 | 1:46.96 | 1:48.96 | Carla (Erzählerin/Lexi) | Frau lebt, in Betracht kommt | A. Ulrich › Versuchter Mord | `23018f176c00` |
+| 35 | 1:44.44 | 1:46.96 | Carla (Erzählerin/Lexi) | Beginne mit dem Tatnächsten, Ulrich. Die | A. Ulrich › Versuchter Mord | `e1a6c288a571` |
+| 36 | 1:46.96 | 1:48.96 | Carla (Erzählerin/Lexi) | Frau lebt, in Betracht kommt | A. Ulrich › Versuchter Mord | `82a853f024c5` |
 | 37 | 1:48.96 | 1:50.36 | Carla (Erzählerin/Lexi) | versuchter Mord. | A. Ulrich › Versuchter Mord | `52b379bf3c4f` |
 | 38 | 1:50.36 | 1:52.32 | Carla (Erzählerin/Lexi) | Ulrich wollte sie töten und hat | A. Ulrich › Versuchter Mord | `8abba1afb4ab` |
 | 39 | 1:52.32 | 1:54.04 | Carla (Erzählerin/Lexi) | unmittelbar angesetzt. | A. Ulrich › Versuchter Mord | `9d4c3cd0787d` |
@@ -47,14 +47,14 @@ Quelle: `bildhalt_manifest.json` (137 Bildhalte, davon 137 eigenständig), `cues
 | 41 | 1:55.36 | 1:56.76 | Carla (Erzählerin/Lexi) | Arg- und Wehrlosigkeit | A. Ulrich › Versuchter Mord › Heimtücke | `54013757d22f` |
 | 42 | 1:56.76 | 1:58.92 | Carla (Erzählerin/Lexi) | bewusst aus: Heimtücke. | A. Ulrich › Versuchter Mord › Heimtücke | `55fadec41ee5` |
 | 43 | 1:58.92 | 2:04.66 | Carla (Erzählerin/Lexi) | Zurückgetreten ist er nicht, er floh, ohne etwas zu ihrer Rettung zu tun. | A. Ulrich › Rücktritt | `0265a9455706` |
-| 44 | 2:04.86 | 2:05.86 | Carla (Erzählerin/Lexi) | Gerechtfertigt nach | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `159dc2a0adcf` |
-| 45 | 2:05.86 | 2:07.78 | Carla (Erzählerin/Lexi) | Paragraf vierunddreißig? | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `c43ffab0f710` |
-| 46 | 2:07.78 | 2:09.82 | Carla (Erzählerin/Lexi) | Eine echte Gefahr gab es nicht. | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `e0a237f0b5cd` |
-| 47 | 2:09.82 | 2:12.02 | Carla (Erzählerin/Lexi) | Ulrich glaubte zwar an sie. Doch | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `39d45bffd7b8` |
-| 48 | 2:12.02 | 2:14.42 | Carla (Erzählerin/Lexi) | selbst dann darf man Leben nicht gegen Leben | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `12740903d1bc` |
-| 49 | 2:14.42 | 2:15.34 | Carla (Erzählerin/Lexi) | abwägen. | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `108b17f1eaa7` |
-| 50 | 2:15.34 | 2:20.82 | Carla (Erzählerin/Lexi) | Seine falsche Abwägung ist ein Bewertungsirrtum. Der Vorsatz bleibt, es geht um einen | A. Ulrich › Rechtswidrigkeit › Bewertungsirrtum | `ea0412acdb22` |
-| 51 | 2:20.82 | 2:23.08 | Carla (Erzählerin/Lexi) | Verbotsirrtum. | A. Ulrich › Rechtswidrigkeit › Bewertungsirrtum | `9ee35dc9ab3e` |
+| 44 | 2:04.86 | 2:05.86 | Carla (Erzählerin/Lexi) | Gerechtfertigt nach | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `f88b6cfbe3ab` |
+| 45 | 2:05.86 | 2:07.78 | Carla (Erzählerin/Lexi) | Paragraf vierunddreißig? | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `6702eb27a4d6` |
+| 46 | 2:07.78 | 2:09.82 | Carla (Erzählerin/Lexi) | Eine echte Gefahr gab es nicht. | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `be3dc5837933` |
+| 47 | 2:09.82 | 2:12.02 | Carla (Erzählerin/Lexi) | Ulrich glaubte zwar an sie. Doch | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `34fa566cc108` |
+| 48 | 2:12.02 | 2:14.42 | Carla (Erzählerin/Lexi) | selbst dann darf man Leben nicht gegen Leben | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `79260690661f` |
+| 49 | 2:14.42 | 2:15.34 | Carla (Erzählerin/Lexi) | abwägen. | A. Ulrich › Rechtswidrigkeit, § 34 StGB | `8c48c9e959ea` |
+| 50 | 2:15.34 | 2:20.82 | Carla (Erzählerin/Lexi) | Seine falsche Abwägung ist ein Bewertungsirrtum. Der Vorsatz bleibt, es geht um einen | A. Ulrich › Rechtswidrigkeit › Bewertungsirrtum | `b46f12971d59` |
+| 51 | 2:20.82 | 2:23.08 | Carla (Erzählerin/Lexi) | Verbotsirrtum. | A. Ulrich › Rechtswidrigkeit › Bewertungsirrtum | `ecd17e3fde1b` |
 | 52 | 2:23.28 | 2:26.64 | Carla (Erzählerin/Lexi) | der Schuld denkst du an den entschuldigenden Notstand. | A. Ulrich › Schuld › § 35 StGB | `43a5814f54e4` |
 | 53 | 2:26.64 | 2:30.44 | Carla (Erzählerin/Lexi) | Paragraf fünfunddreißig hilft aber nur dem, der die Gefahr von | A. Ulrich › Schuld › § 35 StGB | `1b8ad903055b` |
 | 54 | 2:30.44 | 2:31.32 | Carla (Erzählerin/Lexi) | sich, einem | A. Ulrich › Schuld › § 35 StGB | `f1ff7f8a21be` |
@@ -84,7 +84,7 @@ Quelle: `bildhalt_manifest.json` (137 Bildhalte, davon 137 eigenständig), `cues
 | 78 | 3:50.96 | 3:54.90 | Carla (Erzählerin/Lexi) | dem Verantwortungsprinzip endet die mittelbare Täterschaft dort, | B. Irmgard und Wolfram › Streit › Verantwortungsprinzip | `7c53d98daf72` |
 | 79 | 3:54.90 | 3:58.03 | Carla (Erzählerin/Lexi) | wo der Vordermann selbst voll verantwortlich ist. | B. Irmgard und Wolfram › Streit › Verantwortungsprinzip | `cf3f87d36d56` |
 | 80 | 3:58.03 | 4:03.50 | Carla (Erzählerin/Lexi) | ist. Dann wären Irmgard und Wolfram nur Anstifter, Paragraf sechsundzwanzig. | B. Irmgard und Wolfram › Streit › Verantwortungsprinzip | `a40a5214724e` |
-| 81 | 4:03.50 | 4:05.94 | Carla (Erzählerin/Lexi) | Der B.G.H. folgt dem nicht: | B. Irmgard und Wolfram › Streit › BGH | `c10036fd45ac` |
+| 81 | 4:03.50 | 4:05.94 | Carla (Erzählerin/Lexi) | Der B.G.H. folgt dem nicht: | B. Irmgard und Wolfram › Streit › BGH | `79cc92f501fa` |
 | 82 | 4:05.94 | 4:09.30 | Carla (Erzählerin/Lexi) | Allein die Vermeidbarkeit des Irrtums sei kein taugliches | B. Irmgard und Wolfram › Streit › BGH | `192bd378a62b` |
 | 83 | 4:09.30 | 4:12.50 | Carla (Erzählerin/Lexi) | Abgrenzungskriterium, denn auch Ulrich fehlte die | B. Irmgard und Wolfram › Streit › BGH | `7f2bb6d902bd` |
 | 84 | 4:12.50 | 4:14.14 | Carla (Erzählerin/Lexi) | Unrechtseinsicht. | B. Irmgard und Wolfram › Streit › BGH | `b1ff9d35b8a9` |
@@ -97,47 +97,48 @@ Quelle: `bildhalt_manifest.json` (137 Bildhalte, davon 137 eigenständig), `cues
 | 91 | 4:35.92 | 4:39.44 | Carla (Erzählerin/Lexi) | schuldhaft handelndes, Werkzeug anzusehen ist. | B. Irmgard und Wolfram › Die Formel des BGH | `4e645efb65df` |
 | 92 | 4:39.44 | 4:40.36 | Carla (Erzählerin/Lexi) | Man spricht vom | B. Irmgard und Wolfram › Täter hinter dem Täter | `b5b05fba2df7` |
 | 93 | 4:40.36 | 4:43.42 | Carla (Erzählerin/Lexi) | Täter hinter dem Täter. | B. Irmgard und Wolfram › Täter hinter dem Täter | `e6f1fbae5c24` |
-| 94 | 4:43.72 | 4:46.94 | Carla (Erzählerin/Lexi) | liegt es hier. Irmgard und Wolfram haben den Wahn | B. Irmgard und Wolfram › Subsumtion | `d0f0ccdc431b` |
-| 95 | 4:46.94 | 4:48.22 | Carla (Erzählerin/Lexi) | hervorgerufen und | B. Irmgard und Wolfram › Subsumtion | `35e956e36b21` |
-| 96 | 4:48.22 | 4:51.78 | Carla (Erzählerin/Lexi) | bewusst ausgenutzt, um seine Bedenken auszuschalten. | B. Irmgard und Wolfram › Subsumtion | `865d8a2a648c` |
-| 97 | 4:51.78 | 4:54.86 | Carla (Erzählerin/Lexi) | Sie bestimmten auch wesentliche Teile der Ausführung, | B. Irmgard und Wolfram › Subsumtion | `944a2217334e` |
-| 98 | 4:54.86 | 4:56.22 | Carla (Erzählerin/Lexi) | Ulrich hielt sich an ihre | B. Irmgard und Wolfram › Subsumtion | `53bfedd4c817` |
-| 99 | 4:56.22 | 4:57.30 | Carla (Erzählerin/Lexi) | Anweisungen. | B. Irmgard und Wolfram › Subsumtion | `55c1c2bad226` |
-| 100 | 4:57.30 | 5:01.74 | Carla (Erzählerin/Lexi) | Damit beherrschten sie die Tat kraft ihrer Einwirkung und ihres überlegenen | B. Irmgard und Wolfram › Tatherrschaft kraft überlegenen Wissens | `8b72d6a5b3e5` |
-| 101 | 5:01.74 | 5:02.69 | Carla (Erzählerin/Lexi) | Wissens. | B. Irmgard und Wolfram › Tatherrschaft kraft überlegenen Wissens | `8b0e9e770b44` |
-| 102 | 5:02.69 | 5:06.40 | Carla (Erzählerin/Lexi) | Untereinander handelten sie gemeinschaftlich. | B. Irmgard und Wolfram › Tatherrschaft kraft überlegenen Wissens | `d25beb6a8cf0` |
-| 103 | 5:06.70 | 5:08.48 | Carla (Erzählerin/Lexi) | Streit zählt hier: | B. Irmgard und Wolfram › Warum der Streit zählt | `2cb4848d2055` |
-| 104 | 5:08.48 | 5:10.56 | Carla (Erzählerin/Lexi) | Als Anstifter zum Mord hätten sie die | B. Irmgard und Wolfram › Warum der Streit zählt | `66157081f325` |
-| 105 | 5:10.56 | 5:12.32 | Carla (Erzählerin/Lexi) | Heimtücke kennen müssen. | B. Irmgard und Wolfram › Warum der Streit zählt | `16f4b533f8c4` |
-| 106 | 5:12.32 | 5:16.12 | Carla (Erzählerin/Lexi) | Das ließ sich nach Überzeugung des Landgerichts nicht nachweisen. | B. Irmgard und Wolfram › Warum der Streit zählt | `c5cbd51a4910` |
-| 107 | 5:16.12 | 5:18.08 | Carla (Erzählerin/Lexi) | Als Täter haften sie wegen ihrer | B. Irmgard und Wolfram › niedrige Beweggründe | `5f30c26e29c8` |
-| 108 | 5:18.08 | 5:19.09 | Carla (Erzählerin/Lexi) | eigenen niedrigen | B. Irmgard und Wolfram › niedrige Beweggründe | `9d8a0727c6a6` |
-| 109 | 5:19.09 | 5:21.22 | Carla (Erzählerin/Lexi) | Beweggründe. | B. Irmgard und Wolfram › niedrige Beweggründe | `21637f591682` |
-| 110 | 5:21.72 | 5:27.82 | Carla (Erzählerin/Lexi) | Ergebnis: Irmgard und Wolfram sind strafbar wegen versuchten Mordes in mittelbarer Täterschaft, | Ergebnis · Irmgard und Wolfram: mittelbare Täter | `a4797a45fc48` |
-| 111 | 5:27.82 | 5:31.90 | Carla (Erzählerin/Lexi) | Paragraf fünfundzwanzig Absatz eins, zweite Alternative. | Ergebnis · Irmgard und Wolfram: mittelbare Täter | `2cc302157f05` |
-| 112 | 5:31.90 | 5:38.20 | Carla (Erzählerin/Lexi) | Ulrich: versuchter Mord, mit möglicher Milderung nach Paragraf siebzehn. | Ergebnis › Ulrich: versuchter Mord | `975c74d484c5` |
-| 113 | 5:38.40 | 5:42.24 | Carla (Erzählerin/Lexi) | Klausurtipp: Prüfe zuerst den Vordermann vollständig, | Klausurtipp · zuerst der Vordermann | `55b81d0b779c` |
-| 114 | 5:42.24 | 5:43.48 | Carla (Erzählerin/Lexi) | bis zur Schuld. | Klausurtipp · zuerst der Vordermann | `c55896480ecd` |
-| 115 | 5:43.48 | 5:47.04 | Carla (Erzählerin/Lexi) | Erst dort zeigt sich, dass er voll verantwortlich handelt. | Klausurtipp · zuerst der Vordermann | `e49866fad45f` |
-| 116 | 5:47.04 | 5:48.88 | Carla (Erzählerin/Lexi) | Den Streit entscheidest du nur, | Klausurtipp · Streit nur, wenn es darauf ankommt | `2ec2bfc1bf87` |
-| 117 | 5:48.88 | 5:50.64 | Carla (Erzählerin/Lexi) | wenn es darauf ankommt. | Klausurtipp · Streit nur, wenn es darauf ankommt | `c994df963432` |
-| 118 | 5:50.64 | 5:54.28 | Carla (Erzählerin/Lexi) | Hier kommt es darauf an, weil eine Anstiftung zum Mord am | Klausurtipp · Streit nur, wenn es darauf ankommt | `95efe66377ae` |
-| 119 | 5:54.28 | 5:57.58 | Carla (Erzählerin/Lexi) | Vorsatz zur Heimtücke scheitern würde. | Klausurtipp · Streit nur, wenn es darauf ankommt | `7bb17091ec31` |
-| 120 | 5:57.58 | 5:59.46 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `4318340d8363` |
-| 121 | 5:59.46 | 6:03.62 | Carla (Erzählerin/Lexi) | A. Strafbarkeit von Ulrich: versuchter Mord. | Klausurschema › A. Ulrich: versuchter Mord | `a3eed1c76b61` |
-| 122 | 6:03.62 | 6:08.58 | Carla (Erzählerin/Lexi) | Vorprüfung, Tatentschluss mit Heimtücke, unmittelbares Ansetzen. | Klausurschema › A. Ulrich: versuchter Mord | `a19abe728655` |
-| 123 | 6:08.58 | 6:12.82 | Carla (Erzählerin/Lexi) | Rechtswidrigkeit: Paragraf vierunddreißig scheitert. | Klausurschema › A. Rechtswidrigkeit | `3a1bf83b46a8` |
-| 124 | 6:12.82 | 6:16.90 | Carla (Erzählerin/Lexi) | Schuld: kein Notstand, Verbotsirrtum vermeidbar. | Klausurschema › A. Schuld | `cecdf3bb26dc` |
-| 125 | 6:16.90 | 6:18.34 | Carla (Erzählerin/Lexi) | Kein Rücktritt. | Klausurschema › A. Rücktritt | `162acde8fe60` |
-| 126 | 6:18.34 | 6:21.94 | Carla (Erzählerin/Lexi) | B. Strafbarkeit von Irmgard und Wolfram: | Klausurschema › B. Irmgard und Wolfram | `36b937e5994a` |
-| 127 | 6:21.94 | 6:24.66 | Carla (Erzählerin/Lexi) | versuchter Mord in mittelbarer Täterschaft. | Klausurschema › B. Irmgard und Wolfram | `a3a80c6623bd` |
-| 128 | 6:24.66 | 6:29.90 | Carla (Erzählerin/Lexi) | Im Tatentschluss: Tatherrschaft trotz voll verantwortlichen Vordermanns, mit dem | Klausurschema › B. Tatentschluss | `e068a204f130` |
-| 129 | 6:29.90 | 6:31.06 | Carla (Erzählerin/Lexi) | Streit, und | Klausurschema › B. Tatentschluss | `870733f59f54` |
-| 130 | 6:31.06 | 6:32.66 | Carla (Erzählerin/Lexi) | niedrige Beweggründe. | Klausurschema › B. Tatentschluss | `a659da247103` |
-| 131 | 6:32.66 | 6:37.06 | Carla (Erzählerin/Lexi) | Unmittelbares Ansetzen, spätestens mit dem Ansetzen von Ulrich. | Klausurschema › B. unmittelbares Ansetzen | `e26a19230723` |
-| 132 | 6:37.06 | 6:40.56 | Carla (Erzählerin/Lexi) | Dann Rechtswidrigkeit und Schuld. | Klausurschema › B. Rechtswidrigkeit und Schuld | `dc1fe2dace20` |
-| 133 | 6:40.76 | 6:44.56 | Carla (Erzählerin/Lexi) | Merke: Auch hinter einem voll verantwortlichen Täter kann ein | Merksatz | `2ed1f19851ef` |
-| 134 | 6:44.56 | 6:46.20 | Carla (Erzählerin/Lexi) | mittelbarer Täter stehen. | Merksatz | `61ba151ff384` |
-| 135 | 6:46.20 | 6:48.00 | Carla (Erzählerin/Lexi) | Entscheidend ist, ob er mit einem | Merksatz | `a791a21a5fa8` |
-| 136 | 6:48.00 | 6:51.52 | Carla (Erzählerin/Lexi) | bewusst hervorgerufenen Irrtum das Geschehen auslöst und | Merksatz | `69e32e840cdf` |
-| 137 | 6:51.52 | 6:53.83 | Carla (Erzählerin/Lexi) | steuert. | Merksatz | `26bbad3693e0` |
+| 94 | 4:43.72 | 4:44.94 | Carla (Erzählerin/Lexi) | liegt es hier. | B. Irmgard und Wolfram › Subsumtion | `d0f0ccdc431b` |
+| 95 | 4:44.94 | 4:46.94 | Carla (Erzählerin/Lexi) | Irmgard und Wolfram haben den Wahn | B. Irmgard und Wolfram › Subsumtion | `9926e8d1b6f0` |
+| 96 | 4:46.94 | 4:48.22 | Carla (Erzählerin/Lexi) | hervorgerufen und | B. Irmgard und Wolfram › Subsumtion | `4e7d6274231e` |
+| 97 | 4:48.22 | 4:51.78 | Carla (Erzählerin/Lexi) | bewusst ausgenutzt, um seine Bedenken auszuschalten. | B. Irmgard und Wolfram › Subsumtion | `ffdf819f9dc4` |
+| 98 | 4:51.78 | 4:54.86 | Carla (Erzählerin/Lexi) | Sie bestimmten auch wesentliche Teile der Ausführung, | B. Irmgard und Wolfram › Subsumtion | `0ecab5839338` |
+| 99 | 4:54.86 | 4:56.22 | Carla (Erzählerin/Lexi) | Ulrich hielt sich an ihre | B. Irmgard und Wolfram › Subsumtion | `ab2ff8cb2825` |
+| 100 | 4:56.22 | 4:57.30 | Carla (Erzählerin/Lexi) | Anweisungen. | B. Irmgard und Wolfram › Subsumtion | `ea1c46276bee` |
+| 101 | 4:57.30 | 5:01.74 | Carla (Erzählerin/Lexi) | Damit beherrschten sie die Tat kraft ihrer Einwirkung und ihres überlegenen | B. Irmgard und Wolfram › Tatherrschaft kraft überlegenen Wissens | `5a0a3415c707` |
+| 102 | 5:01.74 | 5:02.69 | Carla (Erzählerin/Lexi) | Wissens. | B. Irmgard und Wolfram › Tatherrschaft kraft überlegenen Wissens | `9b45905ca8b8` |
+| 103 | 5:02.69 | 5:06.40 | Carla (Erzählerin/Lexi) | Untereinander handelten sie gemeinschaftlich. | B. Irmgard und Wolfram › Tatherrschaft kraft überlegenen Wissens | `9ac29f8fd1f5` |
+| 104 | 5:06.70 | 5:08.48 | Carla (Erzählerin/Lexi) | Streit zählt hier: | B. Irmgard und Wolfram › Warum der Streit zählt | `9df1cd709e1d` |
+| 105 | 5:08.48 | 5:10.56 | Carla (Erzählerin/Lexi) | Als Anstifter zum Mord hätten sie die | B. Irmgard und Wolfram › Warum der Streit zählt | `66157081f325` |
+| 106 | 5:10.56 | 5:12.32 | Carla (Erzählerin/Lexi) | Heimtücke kennen müssen. | B. Irmgard und Wolfram › Warum der Streit zählt | `16f4b533f8c4` |
+| 107 | 5:12.32 | 5:16.12 | Carla (Erzählerin/Lexi) | Das ließ sich nach Überzeugung des Landgerichts nicht nachweisen. | B. Irmgard und Wolfram › Warum der Streit zählt | `c5cbd51a4910` |
+| 108 | 5:16.12 | 5:18.08 | Carla (Erzählerin/Lexi) | Als Täter haften sie wegen ihrer | B. Irmgard und Wolfram › niedrige Beweggründe | `05f85d777e6a` |
+| 109 | 5:18.08 | 5:19.09 | Carla (Erzählerin/Lexi) | eigenen niedrigen | B. Irmgard und Wolfram › niedrige Beweggründe | `9d8a0727c6a6` |
+| 110 | 5:19.09 | 5:21.22 | Carla (Erzählerin/Lexi) | Beweggründe. | B. Irmgard und Wolfram › niedrige Beweggründe | `21637f591682` |
+| 111 | 5:21.72 | 5:27.82 | Carla (Erzählerin/Lexi) | Ergebnis: Irmgard und Wolfram sind strafbar wegen versuchten Mordes in mittelbarer Täterschaft, | Ergebnis · Irmgard und Wolfram: mittelbare Täter | `a4797a45fc48` |
+| 112 | 5:27.82 | 5:31.90 | Carla (Erzählerin/Lexi) | Paragraf fünfundzwanzig Absatz eins, zweite Alternative. | Ergebnis · Irmgard und Wolfram: mittelbare Täter | `2cc302157f05` |
+| 113 | 5:31.90 | 5:38.20 | Carla (Erzählerin/Lexi) | Ulrich: versuchter Mord, mit möglicher Milderung nach Paragraf siebzehn. | Ergebnis › Ulrich: versuchter Mord | `975c74d484c5` |
+| 114 | 5:38.40 | 5:42.24 | Carla (Erzählerin/Lexi) | Klausurtipp: Prüfe zuerst den Vordermann vollständig, | Klausurtipp · zuerst der Vordermann | `55b81d0b779c` |
+| 115 | 5:42.24 | 5:43.48 | Carla (Erzählerin/Lexi) | bis zur Schuld. | Klausurtipp · zuerst der Vordermann | `c55896480ecd` |
+| 116 | 5:43.48 | 5:47.04 | Carla (Erzählerin/Lexi) | Erst dort zeigt sich, dass er voll verantwortlich handelt. | Klausurtipp · zuerst der Vordermann | `e49866fad45f` |
+| 117 | 5:47.04 | 5:48.88 | Carla (Erzählerin/Lexi) | Den Streit entscheidest du nur, | Klausurtipp · Streit nur, wenn es darauf ankommt | `2ec2bfc1bf87` |
+| 118 | 5:48.88 | 5:50.64 | Carla (Erzählerin/Lexi) | wenn es darauf ankommt. | Klausurtipp · Streit nur, wenn es darauf ankommt | `c994df963432` |
+| 119 | 5:50.64 | 5:54.28 | Carla (Erzählerin/Lexi) | Hier kommt es darauf an, weil eine Anstiftung zum Mord am | Klausurtipp · Streit nur, wenn es darauf ankommt | `95efe66377ae` |
+| 120 | 5:54.28 | 5:57.58 | Carla (Erzählerin/Lexi) | Vorsatz zur Heimtücke scheitern würde. | Klausurtipp · Streit nur, wenn es darauf ankommt | `7bb17091ec31` |
+| 121 | 5:57.58 | 5:59.46 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `4318340d8363` |
+| 122 | 5:59.46 | 6:03.62 | Carla (Erzählerin/Lexi) | A. Strafbarkeit von Ulrich: versuchter Mord. | Klausurschema › A. Ulrich: versuchter Mord | `a3eed1c76b61` |
+| 123 | 6:03.62 | 6:08.58 | Carla (Erzählerin/Lexi) | Vorprüfung, Tatentschluss mit Heimtücke, unmittelbares Ansetzen. | Klausurschema › A. Ulrich: versuchter Mord | `a19abe728655` |
+| 124 | 6:08.58 | 6:12.82 | Carla (Erzählerin/Lexi) | Rechtswidrigkeit: Paragraf vierunddreißig scheitert. | Klausurschema › A. Rechtswidrigkeit | `3a1bf83b46a8` |
+| 125 | 6:12.82 | 6:16.90 | Carla (Erzählerin/Lexi) | Schuld: kein Notstand, Verbotsirrtum vermeidbar. | Klausurschema › A. Schuld | `cecdf3bb26dc` |
+| 126 | 6:16.90 | 6:18.34 | Carla (Erzählerin/Lexi) | Kein Rücktritt. | Klausurschema › A. Rücktritt | `162acde8fe60` |
+| 127 | 6:18.34 | 6:21.94 | Carla (Erzählerin/Lexi) | B. Strafbarkeit von Irmgard und Wolfram: | Klausurschema › B. Irmgard und Wolfram | `36b937e5994a` |
+| 128 | 6:21.94 | 6:24.66 | Carla (Erzählerin/Lexi) | versuchter Mord in mittelbarer Täterschaft. | Klausurschema › B. Irmgard und Wolfram | `a3a80c6623bd` |
+| 129 | 6:24.66 | 6:29.90 | Carla (Erzählerin/Lexi) | Im Tatentschluss: Tatherrschaft trotz voll verantwortlichen Vordermanns, mit dem | Klausurschema › B. Tatentschluss | `e068a204f130` |
+| 130 | 6:29.90 | 6:31.06 | Carla (Erzählerin/Lexi) | Streit, und | Klausurschema › B. Tatentschluss | `870733f59f54` |
+| 131 | 6:31.06 | 6:32.66 | Carla (Erzählerin/Lexi) | niedrige Beweggründe. | Klausurschema › B. Tatentschluss | `a659da247103` |
+| 132 | 6:32.66 | 6:37.06 | Carla (Erzählerin/Lexi) | Unmittelbares Ansetzen, spätestens mit dem Ansetzen von Ulrich. | Klausurschema › B. unmittelbares Ansetzen | `e26a19230723` |
+| 133 | 6:37.06 | 6:40.56 | Carla (Erzählerin/Lexi) | Dann Rechtswidrigkeit und Schuld. | Klausurschema › B. Rechtswidrigkeit und Schuld | `dc1fe2dace20` |
+| 134 | 6:40.76 | 6:44.56 | Carla (Erzählerin/Lexi) | Merke: Auch hinter einem voll verantwortlichen Täter kann ein | Merksatz | `2ed1f19851ef` |
+| 135 | 6:44.56 | 6:46.20 | Carla (Erzählerin/Lexi) | mittelbarer Täter stehen. | Merksatz | `61ba151ff384` |
+| 136 | 6:46.20 | 6:48.00 | Carla (Erzählerin/Lexi) | Entscheidend ist, ob er mit einem | Merksatz | `a791a21a5fa8` |
+| 137 | 6:48.00 | 6:51.52 | Carla (Erzählerin/Lexi) | bewusst hervorgerufenen Irrtum das Geschehen auslöst und | Merksatz | `69e32e840cdf` |
+| 138 | 6:51.52 | 6:53.83 | Carla (Erzählerin/Lexi) | steuert. | Merksatz | `26bbad3693e0` |
