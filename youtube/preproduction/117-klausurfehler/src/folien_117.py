@@ -267,8 +267,8 @@ def blatt(y, h, cue, zeilen, rand=None, label="Ronja schreibt:", bis=None):
     assert yy <= y + h, f"Blatt zu kurz: {zeilen[0][0]}"
     if rand:
         t, c = rand
-        assert RAND_X + 14 + F("Bold", 28).getlength(t) + 68 <= 1170, f"Randbemerkung zu breit: {t}"
-        els.append(bis_(pl(t, RAND_X + 14, y + 50, c, fill=ROT, size=28), bis))
+        assert RAND_X + 12 + F("Bold", 26).getlength(t) + 68 <= 1145, f"Randbemerkung zu breit: {t}"
+        els.append(bis_(pl(t, RAND_X + 12, y + 50, c, fill=ROT, size=26), bis))
     return els
 
 
