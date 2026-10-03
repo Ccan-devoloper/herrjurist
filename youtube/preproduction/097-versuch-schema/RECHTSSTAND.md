@@ -81,3 +81,11 @@
 - BGH-Volltexte in HRRS gelesen; amtliche Fassungen auf bundesgerichtshof.de nicht zusätzlich abgeglichen.
 - Die Zuordnung „besondere subjektive Merkmale gehören zum Tatentschluss“ und die Gliederung „0. Vorprüfung“ sind Lehrbuch- und Klausurstandard; ein BGH-Beleg mit Randnummer dafür wurde nicht gesucht und wird nicht behauptet.
 - Die Subsumtion „fehlgeschlagen, weil nur eine Patrone“ stützt sich auf die allgemeine BGH-Definition; eine Entscheidung genau zu dieser Konstellation wurde nicht zitiert (**nicht online verifiziert**).
+
+## Hinweise zum Themenplan (an den Koordinator)
+
+- **Leitentscheidung** leer. Vorschlag: `Leitentscheidung = BGH, Beschl. v. 28.4.2020 – 5 StR 15/20 (BGHSt 65, 15), Rn. 4 f. (unmittelbares Ansetzen); BGH, Urt. v. 26.3.2025 – 2 StR 598/24, Rn. 11 (fehlgeschlagener Versuch)`.
+- **Normen** „§§ 22, 23 StGB“: im Video zusätzlich § 12 Abs. 1 (Verbrechen), § 24 (Rücktritt) und § 212 als Beispieldelikt. Vorschlag: `Normen = §§ 22, 23, 24, 12, 212 StGB`.
+- **Beschreibung (Anfang)**, **Kernfrage**, **Einstieg (Hook)**, **Voraussetzung**: fachlich zutreffend und eingelöst.
+- **Thumbnail-Figuren** („Nachbar“ m, „Täterin“ w): widersprachen dem Hook („Ein Mann schießt auf seinen Nachbarn“); für die Folge in `thumbs_straf.json` an Herbert und Gregor angeglichen (siehe ABNAHME.md). Texte „VERSUCH § 22“ und „VERFEHLT = STRAFBAR?“ zutreffend, unverändert.
+- **Gesamtwissen** 12./31.: deckt sich mit den Primärquellen.
