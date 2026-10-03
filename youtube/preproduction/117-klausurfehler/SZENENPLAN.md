@@ -1,0 +1,53 @@
+# Folge 117 · Jura Klausur Fehler: Die 10 häufigsten und wie du sie vermeidest – Szenenplan
+
+**Stand:** 03.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_117.py`](src/skript_117.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
+**Format:** Fr · Methodik · Klausurtechnik, Themenplan-Format „Methodik“. Rahmen: Rückgabe einer Übungsklausur im Zivilrecht. Die Studentin Ronja bekommt ihre Arbeit mit fünf Punkten zurück; die Randbemerkungen der Korrektorin Frau Brinkmann (rote Pillen am Blatt) führen durch zehn typische Fehler. Übungsfall der Klausur: Widerruf eines Online-Kaufs (Frau Kröger, Jacke für 80 €, Kauf 1. März, Erhalt 6. März, Widerruf 18. März). Je Fehler eine Tafel: Ausschnitt aus Ronjas Klausur (weißes Blatt mit roter Randlinie) → Randbemerkung → bessere Fassung (grüner Kasten). Danach Klausurtipp (Lexi), Checkliste vor der Abgabe als Klausurschema (I.–IV.), Merksatz (Lexi). Hauptfilm 6:19,9 (5.119 vertonte Zeichen).
+
+**Reihenfolge der Fehler (begründete Anpassung des Plans):** Die Fehler folgen dem Arbeitsablauf einer Klausur – lesen (1. Sachverhalt/Bearbeitervermerk, 2. Fallfrage), gliedern (3. Aufbau), schreiben (4. Norm, 5. Definition/Subsumtion, 6. Gutachtenstil, 7. Schwerpunkt, 8. Meinungsstreit), abschließen (9. Zeit, 10. Ergebnis). Gegenüber dem Plan rücken Aufbau (Plan 8 → 3), Norm (5 → 4), Definition (6 → 5), Gutachtenstil (3 → 6), Schwerpunkt (4 → 7) und Meinungsstreit (7 → 8). Die Reihenfolge ist ausdrücklich **keine Häufigkeitsrangfolge** (keine Statistik vorhanden, siehe RECHTSSTAND). So lässt sich der Übungsfall Schritt für Schritt auflösen: Die Frist taucht in 1 (zwei Daten), 4 (§ 356 Abs. 2 Nr. 1 Buchst. a), 6 (Urteilsstil am Problem), 7 (Lösung am Zeitstrahl) und 10 (Ergebnis) auf.
+
+## Besetzung
+
+| Figur | Rolle | Open Peeps | Stimme |
+|---|---|---|---|
+| Ronja (RO), Anfang 20 | Jurastudentin, schrieb die Übungsklausur | Pose `standing/shirt-4` (schwarze Bluse, Hose Rot `#F07A6A`, weiße Schuhe), Kopf `Medium Bangs 2` (blond), keine Brille, Haut `#E8B98F`; Mimiken `Calm`, `Smile` (redet), `Smile Big\|Smile` (froh), `Concerned\|Serious` (Sorge), `Suspicious` (denkt), `Fear` (ertappt bei der Randbemerkung), `Serious` | `ela_froh` (Frau, jung; freundlich, nicht albern) |
+| Frau Brinkmann (BR), um 55 | Korrektorin; zeigt auf die Randbemerkungen, **spricht nicht** | Pose `standing/pointing_finger-2` (schwarzes Oberteil, Hose Blau `#8DB3F2`), Kopf `Gray Medium` (Haar `#9A9A9A`), Brille `Glasses 2`, Haut `#F0CDB0`; Mimiken `Calm`, `Serious` (bei der Randbemerkung), `Smile` (bei der besseren Fassung), `Suspicious` | – (die Erzählerin liest ihre Randbemerkungen vor) |
+| Lexi | Moderatorin: Klausurtipp und Merksatz | nach `lexi.py` (`robot_dance-1`, `Serious`/`Smile`) | Carla Blum |
+| Erzählerin | – | – | Carla Blum |
+
+Frau Kröger und der Händler kommen nur im Text der Übungsklausur vor (Sachverhaltskarte, Tafeln), nicht als Figuren; kein Mensch erscheint als Icon-Gesicht. Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und blickt nach links (zur Tafel), `_r` blickt nach rechts (A1: Ronja zu Frau Brinkmann). Keine Prothesen-Posen, keine Bärte, keine Polka Dots, keine Karikatur. **Alle Grundmimiken mit geschlossenem Mund**; Mundzustände a/o/e nur in `RO_redet` (links/rechts) und Lexi. **Stimmen:** nur Pool; `ela_froh` für Ronja wie vorgesehen. Die Korrektorin bleibt stumm, weil die einzige passende Frauenstimme `julia` in 109, 112 und 114 besetzt war; `niklas` und `helmut` werden nicht gebraucht (keine weitere Rolle). **Namen** mit eindeutig deutscher Aussprache, nicht in der Liste vergebener Namen und in keiner früheren Folge (Repo-Suche): Ronja, Brinkmann, Kröger („Merle“ verworfen, weil in fünf früheren Dateien vergeben; „Ruth“/„Edith“ wegen „th“ verworfen). Genitiv vermieden („in der Klausur von Ronja“). Figuren-PNGs: `../peeps/op_117/` (36 Dateien, nicht im Repository, im Drive-Master); Kontaktbild `out/besetzung_117.png`.
+
+**Abweichung von den letzten Folgen** (Figurenrezepte und Kontaktbögen von 114, 115 und 116 verglichen): 114 Garten/Staatsanwaltschaft (`crossed_arms-1`, `walking-2`, `blazer-4`; Hartung schwarzes T-Shirt mit grüner Hose), 115 Winternacht/Kneipe (`shirt-3`, `crossed_legs`, `resting-2`, `blazer-3`; Wirtin grauhaarig, schwarzes Oberteil, lila Hose), 116 (`easing-1`, `robot_dance-2`). 117: Prüfungsraum mit Tisch und Klausurstapel, danach Tafelszenen mit Klausurblatt und Randspalte. Erster Entwurf mit `robot_dance-3` für Ronja verworfen (Geste fast wie Lexis `robot_dance-1`); Hosenfarben geändert (Ronja nicht Grün wie Hartung 114, Frau Brinkmann nicht Lila wie die Wirtin 115). Cremegrund durchgehend (Tageslicht).
+
+## Szenen
+
+| Szene | Ort / Handlung | Requisiten (Iconset:Name, Füllung) | Tafel / Prüfpfad | Bildhalte (Zwiebelschale) | Geräusch |
+|---|---|---|---|---|---|
+| **A1 Rückgabe** `fall`→`r1` | Bodenlinie, Tisch in der Mitte; Ronja links blickt nach rechts, Frau Brinkmann rechts mit dem Stapel | tabler:`desk` (Holz), `files` (Weiß), `file-text` (Weiß) | `Fall · Rückgabe der Übungsklausur` → `Fall · Fünf Punkte` | ab 0,0 s Raum, beide Figuren mit Schild, Pille „Rückgabe der Übungsklausur · Zivilrecht“, Stapel in der Hand · Stapel landet auf dem Tisch · Arbeit wandert zu Ronja · großes Klausurblatt · fünf rote „?“ am Rand · „5 Punkte“ · Blase Ronja | Stapel auf dem Tisch (`szene_117stapel_1`) |
+| **A2 Punkte** `hook`→`r2` | Tafel, Ronja und Frau Brinkmann rechts | tabler:`target`, `alert-triangle`, `building-bank`, `school` | `Fall · Wo gehen die Punkte verloren?` → `Fall · Zehn Fehler` | nicht durch Nichtwissen (Kreuz) · Aufbau/Stil/Schwerpunkt · Prüfungsämter · Universitäten · Hinweise · „10 Fehler in der Klausur von Ronja“ · Blase Ronja | – |
+| **B Sachverhalt** `sv` | Karte der Übungsklausur vollständig, ≈ 10 s | – | `Sachverhalt` | 1 | – |
+| **C 1. Sachverhalt/Vermerk** `f1`→`f1e` | Tafel; Blatt mit Randbemerkung | tabler:`calendar` ×2, `file-search`, `file-alert`, `eye` | `1. Sachverhalt und Bearbeitervermerk` → `… › besser` | nicht ausgewertet · 1. März · 6. März · Blatt (Frist ab Kauf) · Vermerk-Zitat · „Belehrung? … (1 Seite)“ · Randbemerkung „Bearbeitervermerk?“ · besser · „2 Daten: oft eine Frist“ | – |
+| **D 2. Fallfrage** `f2`→`f2c` | wie C | tabler:`file-text`, `coin-euro`, `message-question` | `2. Die falsche Frage` → `… › Wer will was von wem woraus?` | Blatt „Ist der Kaufvertrag wirksam?“ · Gefragt-Pille · „Frage?“ · Merkformel · Obersatz in drei Zeilen zum Wort | – |
+| **E 3. Aufbau** `f3`→`f3d` | Tafel mit zwei Spalten (Zivil-/Strafrecht) | tabler:`list-numbers`, `home`, `scale` | `3. Der Aufbau` → `› Zivilrecht: Vertrag vor Eigentum` → `› Strafrecht: objektiv vor Vorsatz` | Ronja richtig (Haken) · Zivil: 1. Vertrag § 546, 2. Eigentum § 985, Recht zum Besitz § 986 · Straf: 1. objektiver Tatbestand, 2. Vorsatz, § 16 Abs. 1 | – |
+| **F 4. Norm** `f4`→`f4b` | Tafel, sechs Absatzkästen | tabler:`book` | `4. Die Norm ungenau zitiert` → `› § 356 Abs. 2 Nr. 1 Buchst. a BGB` | Blatt „§ 356 BGB“ · „Norm?“ · 6 Absätze · Abs. 2 · Nr. 1 · Buchst. a · besser | – |
+| **G 5. Definition** `f5`→`f5c` | Tafel mit **Wortlautkarte § 312c Abs. 1 BGB** (wörtlich, Auslassungen „…“, zwei Marker zum Wort) | tabler:`zoom-question`, `book`, `shirt` | `5. Definition und Subsumtion` → `› Fernabsatzvertrag, § 312c Abs. 1 BGB` → `5. Subsumtion › Fernabsatzvertrag` | Behauptung · „Definition?“ · Wortlaut · Marker · Subsumtion · Ergebnis | – |
+| **H 6. Gutachtenstil** `f6`→`f6d` | Tafel, zwei Blattausschnitte | tabler:`writing`, `alert-triangle` | `6. Gutachtenstil am falschen Ort` → `› richtig: umgekehrt` | Kaufvertrag im Konjunktiv · „klar“ · Urteilsstil am Problem · „Ergebnis vorweg?“ · umgekehrt (drei Zeilen) | – |
+| **I 7. Schwerpunkt** `f7`→`f7c` | Tafel mit Seitenbalken und Zeitstrahl 1.–20. März | tabler:`target`, `calendar-due`, `mail` | `7. Der Schwerpunkt verfehlt` → `› die Frist, § 356 Abs. 2 Nr. 1 Buchst. a BGB` | 1 Seite / 2 Zeilen · „Schwerpunkt?“ · 14 Tage ab Erhalt · Zeitstrahl · Fristende 20. März · Absendung 18. März · kein Grund | – |
+| **J 8. Meinungsstreit** `f8`→`f8c` | Tafel mit Entscheidungsbaum | tabler:`arrows-split`, `scale`, `gavel` | `8. Der Meinungsstreit` → `› Ändert er das Ergebnis?` | Ansicht 1/2, „umstritten“ · „Ihre Lösung?“ · Frage · dahinstehen · entscheiden · nicht nur „herrschende Meinung“ (Kreuz) | – |
+| **K 9. Zeit** `f9`→`f9b` | Tafel, Ronjas Gliederung | tabler:`hourglass`, `clock-hour-4`, `list-check` | `9. Die Zeit` → `› Zeitplan` → `› wenn es knapp wird` | Gliederung I.–III. · „fehlt ganz“ · „Rückzahlung?“ · Zeitplan (Folge 045) · Zeitnot | – |
+| **L 10. Ergebnis** `f10`→`r3` | Tafel, Blatt mit Widerspruch | tabler:`alert-triangle`, `coin-euro` | `10. Das Ergebnis widerspricht der Prüfung` → `› folgt aus der Prüfung` | oben/unten · „Widerspruch?“ · folgt aus der Prüfung · rechtzeitig (Haken) · Ergebnis zweizeilig · Blase Ronja | – |
+| **M Klausurtipp** `tipp`→`tipp3` | hellgelbe Tafel, Lexi warnt (redet) | Warnsymbol (Streamline Freehand) | `Klausurtipp · Frage und Ergebnis hintereinander lesen` | Zeile für Zeile | – |
+| **N Checkliste** `sch`→`k41` | breite Karte, Klausurschema I.–IV. mit 1.–5. | – | `Checkliste vor der Abgabe` → `› I. Vor dem Schreiben` → `› II. Gliederung` → `› III. Beim Schreiben` → `› IV. Am Ende` | zehn Aufbaustufen | – |
+| **O Merksatz** `merke`→`m3` | Lexi erklärt (redet), drei Marker | – | `Merksatz` | Satz 1 · Satz 2 · Satz 3 | – |
+
+**Übergänge:** stumme Schiebeblenden nur zwischen den 16 Folien; innerhalb harte Schnitte und Pops; zwei Bewegungen (Stapel auf den Tisch 0,4 s, Arbeit zu Ronja 0,9 s). Das erste Bild nach dem Intro zeigt ab 0,0 s den Raum mit Tisch, beiden Figuren mit Namensschild, Pille und Prüfpfad.
+**Geräusche:** ein Handlungsgeräusch (Stapel landet auf dem Tisch), Freesound CC0 über die API ohne Schlüssel, unter eigenem Namen in `sfx3/`, Herkunft in `geraeusche_herkunft.json`. Keine Papier-/Blättergeräusche beim Blatt und bei den Randbemerkungen.
+
+## Sachverhaltskarte (Szene B, erscheint vollständig)
+
+> Frau Kröger kauft am 1. März im Onlineshop eines Modehändlers eine Jacke für 80 Euro und zahlt sofort. Am 6. März erhält sie die Jacke.
+>
+> Am 18. März schickt sie die Jacke zurück und schreibt dem Händler per E-Mail: „Ich widerrufe den Kauf.“ Einen Grund nennt sie nicht. Der Händler erhält die Jacke am 20. März, verweigert aber die Rückzahlung: Die Frist sei abgelaufen, und ohne Grund gebe es kein Geld zurück.
+>
+> Bearbeitervermerk: Frau Kröger ist Verbraucherin, der Händler Unternehmer. Gehen Sie davon aus, dass der Händler ordnungsgemäß über das Widerrufsrecht belehrt hat.
+>
+> **Kann Frau Kröger vom Händler die 80 Euro zurückverlangen?**
