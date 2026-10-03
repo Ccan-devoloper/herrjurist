@@ -285,7 +285,7 @@ folie([("trennung", "Fall · Nach der Trennung"), ("frage", "Fall · Die Frage")
     ficon("ph", "house", HX3, BODEN, 170, "trennung", fuell=WEISS),
     szene(ficon("tabler", "package", TH3H[0] + 120, BODEN, 150, beim("trennung", "aus"), fuell=GELB), "092karton*", 0.8, 0.0),
     pl("Theresa zieht aus", TX3, 300, beim("trennung", "aus"), fill=WEISS, size=30, anker="m", bis="th3"),
-    platte(PL3, "bleibt", breite=170),
+    platte(PL3, "trennung", breite=170),
     pl("bleibt bei Clemens", PL3, 580, beim("bleibt", "bei"), fill=WEISS, size=30, anker="m", bis="th3"),
     *fig("TH", TX3, BODEN, FH, [("trennung", "ruhig_r")], bis="th3"),
     *redet("TH_bittet_r", TX3, BODEN, FH, "th3", "cl2"),
@@ -352,7 +352,7 @@ folie([("eig", "I. Eigentum › historisch prüfen"), ("verlust", "I. Eigentum �
     zit("Mehr dazu in den Videos zur Übereignung und zum gutgläubigen Erwerb", 160, 590, beim("dritte", "Videos"), size=28),
     *requisit([("eig", ("tabler", "list-numbers", 100, WEISS), "Schritt für Schritt", WEISS),
                ("urspr", ("ph", "receipt", 90, WEISS), "gekauft", GRUEN),
-               ("zus2", ("ph", "couch", 140, GRUEN), "nur zusammengezogen", WEISS),
+               ("zus2", ("ph", "couch", 140, GRUEN), "Zusammenziehen", WEISS),
                ("dritte", ("ph", "handshake", 120, WEISS), "kein Erwerb Dritter", WEISS)]),
     *paar("eig", "TH", [("eig", "ruhig"), ("zus2", "froh")], "CL", [("eig", "ruhig"), ("verlust", "denkt"), ("zus2", "ruhig")]),
 ]))
@@ -399,7 +399,7 @@ w986, w986_y = wortlaut(80, 190, 1100, W986, "§ 986 Abs. 1 Satz 1 BGB", "w986",
 folie([("rzb", "III. kein Recht zum Besitz › § 986 Abs. 1 S. 1 BGB")], rechts_frei([
     *tafel("rzb", "III. Kein Recht zum Besitz"),
     *w986,
-    *requisit([("rzb", PLATTE, "darf er ihn behalten?", WEISS),
+    *requisit([("rzb", PLATTE, "Recht zum Besitz?", WEISS),
                (beim("w986", "berechtigt"), ("tabler", "shield-check", 110, GRUEN), "zum Besitz berechtigt?", WEISS)]),
     *paar("rzb", "TH", [("rzb", "ruhig")], "CL", [("rzb", "ruhig"), (beim("w986", "berechtigt"), "denkt")]),
 ]))
@@ -444,16 +444,15 @@ folie([("einw", "III. › Einwendung, keine Einrede"), ("beweis", "III. › Bewe
 ]))
 
 # I Ergebnis und Rechtsfolge: Theresa holt den Plattenspieler ab ---------------------------------------------------------------
-TX4, TU4, CX4, PL4 = 680, 1000, 1480, 1240
-TH4H = hand("TH_froh_r", TX4, BODEN, FH, +1)
+TX4, TU4, CX4, PL4 = 680, 1060, 1480, 1270
 HOLT = (beim("ort", "holt"), beim("ort", "ab", ende=True))
 folie([("erg", "Ergebnis · § 985 BGB"), ("ort", "Rechtsfolge › Herausgabe am Ort der Sache")], [
     pl("Ergebnis", 70, 40, "erg", fill=GELB, size=44),
     boden("erg"),
     szene(ficon("tabler", "door", TU4, BODEN, 190, "erg", fuell=GELB), "092klopfen*", 0.7, 0.4),
     ficon("ph", "house", 1790, BODEN, 170, "erg", fuell=WEISS),
-    platte(PL4, "erg", breite=170, bis=HOLT[0]),
-    bewegt(platte(TH4H[0] + 140, HOLT[0], breite=170, anim="cut"), *HOLT, PL4 - (TH4H[0] + 140), 0),
+    platte(PL4, "erg", breite=140, bis=HOLT[0]),
+    bewegt(platte(TX4 + 170, HOLT[0], breite=140, anim="cut"), *HOLT, PL4 - (TX4 + 170), 0),
     pl("Herausgabe nach § 985 BGB", 960, 140, beim("erg", "Theresa"), fill=GRUEN, size=36, anker="m"),
     pl("dort, wo er steht: in seiner Wohnung", 960, 230, "ort", fill=WEISS, size=32, anker="m"),
     pl("Theresa holt ihn ab: Holschuld", 960, 310, beim("ort", "Holschuld"), fill=GELB, size=32, anker="m"),
