@@ -24,8 +24,15 @@ ABK = ["VwVfG", "VwGO", "StGB", "StPO", "EStG", "BGB", "HGB", "ZPO", "AO", "GG",
 MARKE = re.compile(r"\[(\w+)\]")
 
 
+# Aussprachehilfen: Schreibung nur für die Vertonung, Skript und Tafeln bleiben unverändert.
+# „Wegnahme“ rutschte im Fließtext in ein langes e („Wehgnahme“, Hinweis Kanalinhaber 03.10.2026, Folge 087).
+AUSSPRACHE = [(r"\bWegnahme", "Weck-nahme")]
+
+
 def sprechtext(t):
     t = t.replace("§§", "Paragrafen").replace("§", "Paragraf")
+    for muster, ersatz in AUSSPRACHE:
+        t = re.sub(muster, ersatz, t)
     for a in sorted(ABK, key=len, reverse=True):
         t = re.sub(rf"\b{a}\b", ".".join(a.upper()) + ".", t)
     return t
