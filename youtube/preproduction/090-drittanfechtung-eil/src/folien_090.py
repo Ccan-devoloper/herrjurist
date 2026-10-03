@@ -511,19 +511,19 @@ folie([("tipp", "Klausurtipp · Rechtswidrig ist nicht genug"), ("tipp2", "Klaus
 # N Klausurschema ---------------------------------------------------------------------------------------------------------------
 SZ, LH = 32, 60
 LX0, RX0 = 110, 960
-links = [("s1", "I. Statthaftigkeit: § 80a III 2,", "Regular"), ("s1", "§ 80 V 1 Alt. 1 (Anordnung)", "Regular"),
+links = [("s1", "I. Statthaftigkeit: § 80a III", "Regular"), ("s1", "i. V. m. § 80 V", "Regular"),
          ("s2", "II. Antragsbefugnis: drittschützende", "Regular"), ("s2", "Norm, § 42 II analog", "Regular"),
          ("s3", "III. Rechtsschutzbedürfnis:", "Regular"), ("s3", "Rechtsbehelf erhoben", "Regular"),
          ("s4", "Beiladung des Bauherrn, § 65 II", "Bold")]
 rechts_ = [("s5", "I. Interessenabwägung im Dreieck,", "Regular"), ("s5", "Wertung des § 212a I BauGB", "Regular"),
            ("s6", "II. summarisch: nur", "Regular"), ("s6", "drittschützende Normen", "Regular"),
-           ("s7", "III. hier: Abstandsflächen", "Regular"), ("s8", "C. Tenor: Anordnung", "ExtraBold")]
+           ("s7", "III. hier: Abstandsflächen", "Regular"), ("s8", "Am Ende: der Tenor", "ExtraBold")]
 els_t = [karte(60, 50, 1800, 900, "sch"),
          titel(glyphen("Klausurschema: Eilantrag der Nachbarin"), 110, 85, "sch", 44),
          z("A. Zulässigkeit", LX0, 190, "sa", "ExtraBold", 38, rechts=940),
          z("B. Begründetheit", RX0, 190, "sb", "ExtraBold", 38, rechts=1820)]
 for i, (c, t, st) in enumerate(links):
-    einzug = 30 if t.startswith(("I", "B")) else 70
+    einzug = 30 if t.startswith(("I.", "II.", "III.", "B")) else 70
     els_t.append(z(t, LX0 + einzug, 262 + i * LH + (20 if c == "s4" else 0), c, st, SZ, rechts=940))
 for i, (c, t, st) in enumerate(rechts_):
     einzug = 0 if c == "s8" else (30 if t.startswith(("I", "II", "III")) else 70)

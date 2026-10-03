@@ -202,7 +202,7 @@ ULa = ("UL_redet", ULX, BODEN, GH)
 folie([(NULL, "Fall · Irmgard, Wolfram und Ulrich"), ("kk", "Fall · Der Katzenkönig"), ("motiv", "Fall · Das Motiv"),
        ("i1", "Fall · Das Menschenopfer"), ("glaubt", "Fall · Ein Leben gegen Millionen")], [
     linienzug([(60, BODEN), (1860, BODEN)], NULL, breite=7, farbe=INK),
-    pl("Irmgard, Wolfram und Ulrich", 70, 40, NULL, fill=GELB, size=36),
+    pl("Irmgard, Wolfram und Ulrich", 70, 40, NULL, fill=GELB, size=36, bis="motiv"),
     # kleiner Tisch mit Kerze (Rituale)
     karte(890, 742, 320, 34, NULL, fill=HOLZ, rund=10, schatten=0, rand=5),
     karte(1028, 776, 44, BODEN - 776, NULL, fill=HOLZD, rund=6, schatten=0, rand=5),
@@ -221,26 +221,26 @@ folie([(NULL, "Fall · Irmgard, Wolfram und Ulrich"), ("kk", "Fall · Der Katzen
     ficon("tabler", "id-badge-2", 1330, 600, 90, beim("ulrich", "Polizeibeamter"), fuell=WEISS, bis="kk"),
     pl("leicht zu beeinflussen", ULX, 200, beim("ulrich", "leicht"), fill=WEISS, size=30, anker="m", bis="kk"),
     # der Katzenkönig nur als Krone in Ulrichs Gedankenblase
-    blase("denk", 400, 300, "kk", 1180, 250, figur=("UL_staunt", ULX, BODEN, GH), bis="i1"),
+    blase("denk", 400, 300, beim("kk", "Katzenkönig"), 1180, 250, figur=("UL_staunt", ULX, BODEN, GH), bis="i1"),
     ficon("tabler", "crown", 1180, 260, 120, beim("kk", "Katzenkönig"), fuell=GELB, bis="i1"),
     pl("der Katzenkönig", 1180, 455, beim("kk", "Katzenkönig"), fill=GELB, size=30, anker="m", bis="i1"),
     pl("seit Jahrtausenden das Böse?", 1180, 535, beim("kk", "Jahrtausenden"), fill=WEISS, size=28, anker="m", bis="i1"),
     # Motiv: Irmgard will die Frau ihres früheren Freundes töten lassen; Wolfram einverstanden
-    blase("denk", 400, 300, "motiv", 640, 220, figur=("IR_kuehl_r", IRX, BODEN, GH), bis="i1"),
-    ficon("tabler", "flower", 640, 220, 90, "motiv", fuell=ROT, bis="i1"),
-    pl("Hass und Eifersucht", 640, 250, beim("motiv", "Hass"), fill=ROTHELL, size=28, anker="m", bis="i1"),
+    blase("denk", 400, 280, "motiv", 680, 230, figur=("IR_kuehl_r", IRX, BODEN, GH), bis="i1"),
+    ficon("tabler", "flower", 680, 230, 90, "motiv", fuell=ROT, bis="i1"),
+    pl("Hass und Eifersucht", 680, 255, beim("motiv", "Hass"), fill=ROTHELL, size=28, anker="m", bis="i1"),
     ficon("tabler", "thumb-up", 830, 640, 70, beim("motiv", "einverstanden"), fuell=GELB, bis="i1"),
     pl("einverstanden", 830, 660, beim("motiv", "einverstanden"), fill=WEISS, size=28, anker="m", bis="i1"),
     # Figurenrede
     blase("sprech", 900, 260, "i1", 720, 200, inhalt=["Der Katzenkönig verlangt ein Menschenopfer:",
           "die Frau aus dem Blumenladen.", "Sonst vernichtet er Millionen Menschen."], textsize=30, figur=IRa, bis="u1"),
-    ficon("tabler", "world", 1180, 600, 100, beim("i1", "Millionen"), fuell=BLAU, bis="tat"),
-    pl("Millionen Menschen?", 1180, 620, beim("i1", "Millionen"), fill=WEISS, size=28, anker="m", bis="glaubt"),
+    ficon("tabler", "world", 1180, 540, 100, beim("i1", "Millionen"), fuell=BLAU, bis="tat"),
+    pl("Millionen Menschen?", 1180, 560, beim("i1", "Millionen"), fill=WEISS, size=28, anker="m", bis="glaubt"),
     blase("sprech", 460, 180, "u1", 1420, 220, inhalt=["Aber das wäre Mord."], textsize=34, figur=ULa, bis="w1"),
     blase("sprech", 720, 220, "w1", 900, 220, inhalt=["Das Tötungsverbot gilt für uns nicht.", "Wir retten die Menschheit."],
           textsize=30, figur=WOa, bis="glaubt"),
     # Ulrich wägt ab
-    ficon("tabler", "scale", 1350, 600, 100, "glaubt", fuell=GELB),
+    ficon("tabler", "scale", 1350, 540, 100, "glaubt", fuell=GELB),
     pl("ein Leben gegen Millionen", 1180, 250, "glaubt", fill=GELB, size=32, anker="m"),
 ])
 
@@ -250,9 +250,8 @@ folie([("tat", "Fall · Im Blumenladen"), ("lebt", "Fall · Sie überlebt"), ("f
     linienzug([(60, BODEN), (1860, BODEN)], "tat", breite=7, farbe=INK),
     ficon("tabler", "moon", 1720, 210, 90, "tat", fuell=GELB, bis="frage"),
     pl("später Abend", 1720, 230, "tat", fill=WEISS, size=28, anker="m", bis="frage"),
-    ficon("tabler", "building-store", LX0, BODEN, 340, beim("tat", "Blumenladen"), fuell=WEISS, bis="frage"),
-    szene(ficon("tabler", "bell", LX0 - 210, 620, 56, beim("tat", "Blumenladen"), fuell=GELB, bis="frage"), "091glocke*", 1.0,
-          versatz=0.05),
+    szene(ficon("tabler", "building-store", LX0, BODEN, 340, beim("tat", "Blumenladen"), fuell=WEISS, bis="frage"), "091glocke*",
+          1.0, versatz=0.05),
     ficon("tabler", "flower", 1640, BODEN, 100, beim("tat", "Blumenladen"), fuell=ROT, bis="frage"),
     ficon("tabler", "plant-2", 1760, BODEN, 90, beim("tat", "Blumenladen"), fuell=GRUEN, bis="frage"),
     pl("Blumenladen", LX0, 480, beim("tat", "Blumenladen"), fill=GELB, size=30, anker="m", bis="frage"),
@@ -375,19 +374,18 @@ folie([("n35", f"{PA} › Schuld › § 35 StGB"), ("abs2", f"{PA} › Schuld �
 # G Wortlautkarte § 17 -----------------------------------------------------------------------------------------------------
 W17 = [[("„Fehlt dem Täter bei Begehung der Tat ", 0), ("die Einsicht,", "a")],
        [("Unrecht zu tun", "a"), (", so handelt er ohne Schuld, wenn er", 0)],
-       [("diesen Irrtum ", 0), ("nicht vermeiden konnte", "b"), (". Konnte der", 0)],
+       [("diesen Irrtum ", 0), ("nicht vermeiden konnte.", "b"), (" Konnte der", 0)],
        [("Täter den Irrtum vermeiden, so ", 0), ("kann die Strafe", "c")],
-       [("nach § 49 Abs. 1 ", 0), ("gemildert werden", "c"), (".“", 0)]]
+       [("nach § 49 Abs. 1 ", 0), ("gemildert werden.", "c"), ("“", 0)]]
 folie([("p17", f"{PA} › Schuld › Verbotsirrtum, § 17 StGB"), ("verm", f"{PA} › Schuld › Verbotsirrtum vermeidbar"),
        ("uerg", f"{PA} › Ergebnis: schuldhaft")], rechts_frei([
     *tafel("p17", "Verbotsirrtum: § 17 StGB"),
     *wortlaut(110, 180, 1040, 250, "p17", W17, 31,
               {"a": beim("p17", "Einsicht"), "b": beim("p17", "nicht"), "c": beim("satz2", "kann")}, "§ 17 StGB"),
     z("Ulrich hielt die Tötung für erlaubt", 110, 500, "irrt", "Bold", 32),
-    nein(135, 575, "verm", gr=18),
-    z("vermeidbar: als Polizeibeamter bei gebührender", 175, 555, beim("verm", "Gerade"), size=31),
-    z("Gewissensanspannung, Rat etwa eines Geistlichen", 175, 600, beim("verm", "Befragung"), size=31),
-    fund("BGHSt 35, 347, 350", 175, 645, beim("verm", "Geistlichen")),
+    z("vermeidbar: als Polizeibeamter bei gebührender", 110, 555, beim("verm", "Gerade"), size=31),
+    z("Gewissensanspannung, Befragung etwa eines Geistlichen", 110, 600, beim("verm", "Befragung"), size=31),
+    fund("BGHSt 35, 347, 350", 110, 645, beim("verm", "Geistlichen")),
     fb(110, 710, 1040, 90, GRUEN, "uerg", [("Ulrich handelt schuldhaft", "ExtraBold", 34, INK)]),
     *allein("UL", "p17", [("denkt",), ("glaubt", "irrt"), ("schuld", "verm")]),
     pl("§ 17 StGB", IX + 40, 160, beim("p17", "Paragraf"), fill=GELB, size=30, anker="m", bis="irrt"),
@@ -548,7 +546,7 @@ folie([("sch", PS_), ("sa", f"{PS_} › A. Ulrich: versuchter Mord"), ("sa2", f"
     z("versuchter Mord in mittelbarer Täterschaft, § 25 Abs. 1 Alt. 2", K1, 515, beim("sb", "versuchter"), "Bold", 34,
       rechts=1820),
     z("Tatentschluss: Tatherrschaft trotz voll verantwortlichen Vordermanns", K2, 575, "sb1", size=32, rechts=1820),
-    z("(Streit: Verantwortungsprinzip / BGH)", K2 + 40, 622, beim("sb1", "Streit"), size=30, farbe=TEXT, rechts=1820),
+    z("mit dem Streit", K2 + 40, 622, beim("sb1", "Streit"), size=30, farbe=TEXT, rechts=1820),
     z("und niedrige Beweggründe", K2, 670, beim("sb1", "niedrige"), size=32, rechts=1820),
     z("unmittelbares Ansetzen: spätestens mit dem Ansetzen von Ulrich", K2, 725, "sb2", size=32, rechts=1820),
     z("Rechtswidrigkeit und Schuld", K2, 780, "sb3", size=32, rechts=1820),
