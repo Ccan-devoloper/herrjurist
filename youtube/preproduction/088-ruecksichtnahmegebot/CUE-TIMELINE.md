@@ -55,77 +55,77 @@ Quelle: `bildhalt_manifest.json` (125 Bildhalte, davon 125 eigenständig), `cues
 | 49 | 2:19.57 | 2:20.73 | Carla (Erzählerin/Lexi) | einfügen. | Rücksichtnahmegebot › Herkunft › Innenbereich, § 34 I 1 BauGB | `4d02f4f2c209` |
 | 50 | 2:20.73 | 2:22.98 | Carla (Erzählerin/Lexi) | Wer auf die Nachbarn keine Rücksicht nimmt, | Rücksichtnahmegebot › Herkunft › Innenbereich, § 34 I 1 BauGB | `d51004d41607` |
 | 51 | 2:22.98 | 2:24.93 | Carla (Erzählerin/Lexi) | fügt sich nicht ein. | Rücksichtnahmegebot › Herkunft › Innenbereich, § 34 I 1 BauGB | `c80b08ef00cb` |
-| 52 | 2:25.13 | 2:31.09 | Carla (Erzählerin/Lexi) | Plangebiet nennt es Paragraf fünfzehn Absatz eins Satz zwei der Baunutzungsverordnung: | Rücksichtnahmegebot › Herkunft › Plangebiet, § 15 I 2 BauNVO | `3878c394f2ac` |
-| 53 | 2:31.09 | 2:36.93 | Carla (Erzählerin/Lexi) | Anlagen sind auch unzulässig, wenn von ihnen Belästigungen oder Störungen ausgehen können, die | Rücksichtnahmegebot › Herkunft › Plangebiet, § 15 I 2 BauNVO | `ac32fe0b3890` |
-| 54 | 2:36.93 | 2:38.73 | Carla (Erzählerin/Lexi) | unzumutbar sind. | Rücksichtnahmegebot › Herkunft › Plangebiet, § 15 I 2 BauNVO | `d2116bd10cef` |
-| 55 | 2:38.73 | 2:46.01 | Carla (Erzählerin/Lexi) | Und bei einer Befreiung vom Bebauungsplan verlangt Paragraf einunddreißig Absatz zwei, dass die Abweichung  … | Rücksichtnahmegebot › Herkunft › Befreiung, § 31 II BauGB | `0d357044307a` |
-| 56 | 2:46.01 | 2:51.20 | Carla (Erzählerin/Lexi) | Würdigung nachbarlicher Interessen mit den öffentlichen Belangen vereinbar ist. | Rücksichtnahmegebot › Herkunft › Befreiung, § 31 II BauGB | `ad80f3169428` |
-| 57 | 2:51.40 | 2:54.08 | Carla (Erzählerin/Lexi) | Wann ist ein Vorhaben rücksichtslos? | Rücksichtnahmegebot › Maßstab | `8421eaff9f80` |
-| 58 | 2:54.08 | 2:59.48 | Carla (Erzählerin/Lexi) | Grundlegend ist ein Urteil des Bundesverwaltungsgerichts von neunzehnhundertsiebenundsiebzig. | Rücksichtnahmegebot › Maßstab | `136af9ef34e0` |
-| 59 | 2:59.48 | 3:03.28 | Carla (Erzählerin/Lexi) | Je empfindlicher und schutzwürdiger die Stellung des Nachbarn ist, | Rücksichtnahmegebot › Maßstab | `e72f20bc29ef` |
-| 60 | 3:03.28 | 3:05.75 | Carla (Erzählerin/Lexi) | desto mehr Rücksicht kann er verlangen. | Rücksichtnahmegebot › Maßstab | `9141421899b9` |
-| 61 | 3:05.95 | 3:10.00 | Carla (Erzählerin/Lexi) | verständlicher und unabweisbarer die Interessen des Bauherrn sind, | Rücksichtnahmegebot › Maßstab | `d4a4c42e2157` |
-| 62 | 3:10.00 | 3:12.44 | Carla (Erzählerin/Lexi) | desto weniger Rücksicht muss er nehmen. | Rücksichtnahmegebot › Maßstab | `a432e960b9a1` |
-| 63 | 3:12.44 | 3:15.36 | Carla (Erzählerin/Lexi) | Abzuwägen ist, was beiden nach Lage der Dinge | Rücksichtnahmegebot › Maßstab: Abwägung der Zumutbarkeit | `582240b30fb0` |
-| 64 | 3:15.36 | 3:17.31 | Carla (Erzählerin/Lexi) | zuzumuten ist. | Rücksichtnahmegebot › Maßstab: Abwägung der Zumutbarkeit | `d881fefd56ab` |
-| 65 | 3:17.51 | 3:19.67 | Carla (Erzählerin/Lexi) | Zuerst der Schatten. In einem | Rücksichtnahmegebot › Im Fall › Verschattung | `946b60386ce1` |
-| 66 | 3:19.67 | 3:21.47 | Carla (Erzählerin/Lexi) | bebauten Viertel musst du in der Regel | Rücksichtnahmegebot › Im Fall › Verschattung | `529b2c081dc7` |
-| 67 | 3:21.47 | 3:22.63 | Carla (Erzählerin/Lexi) | hinnehmen, dass das | Rücksichtnahmegebot › Im Fall › Verschattung | `092a518261f5` |
-| 68 | 3:22.63 | 3:26.07 | Carla (Erzählerin/Lexi) | Nachbargrundstück bebaut wird und dein Grundstück zeitweise | Rücksichtnahmegebot › Im Fall › Verschattung | `79594b12cd66` |
-| 69 | 3:26.07 | 3:27.03 | Carla (Erzählerin/Lexi) | verschattet. | Rücksichtnahmegebot › Im Fall › Verschattung | `d9f294480216` |
-| 70 | 3:27.03 | 3:32.99 | Carla (Erzählerin/Lexi) | Auch die eingehaltenen Abstandsflächen sprechen gegen Frau Kolbe: Für Licht und Sonne sind sie ein starkes | Rücksichtnahmegebot › Im Fall › Abstandsflächen als Indiz | `0bd71b8b6e0a` |
-| 71 | 3:32.99 | 3:34.07 | Carla (Erzählerin/Lexi) | Indiz. | Rücksichtnahmegebot › Im Fall › Abstandsflächen als Indiz | `c203db2d70f9` |
-| 72 | 3:34.07 | 3:40.11 | Carla (Erzählerin/Lexi) | Die Regel, dass dann keine Rücksichtslosigkeit vorliegt, setzt aber voraus, dass sich der Bau auch sonst | Rücksichtnahmegebot › Im Fall › fügt sich nicht ein | `c50a589fe03e` |
-| 73 | 3:40.11 | 3:41.23 | Carla (Erzählerin/Lexi) | einfügt. | Rücksichtnahmegebot › Im Fall › fügt sich nicht ein | `36883ce22aa2` |
-| 74 | 3:41.23 | 3:45.26 | Carla (Erzählerin/Lexi) | Acht Geschosse zwischen Einfamilienhäusern tun das nicht. | Rücksichtnahmegebot › Im Fall › fügt sich nicht ein | `4c57f48a50b2` |
-| 75 | 3:45.46 | 3:50.30 | Carla (Erzählerin/Lexi) | Entscheidend ist die erdrückende Wirkung. Sie liegt vor, wenn ein Bau wegen seiner | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `f70ffd4a713d` |
-| 76 | 3:50.30 | 3:52.78 | Carla (Erzählerin/Lexi) | Ausmaße dem Nachbargrundstück förmlich die | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `2854e88cbf09` |
-| 77 | 3:52.78 | 3:54.06 | Carla (Erzählerin/Lexi) | Luft nimmt, wenn ein | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `08992a3a7835` |
-| 78 | 3:54.06 | 3:56.50 | Carla (Erzählerin/Lexi) | Gefühl des Eingemauertseins entsteht | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `02c55d78a288` |
-| 79 | 3:56.50 | 3:58.66 | Carla (Erzählerin/Lexi) | oder wenn er das Grundstück regelrecht | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `1ad993ed755f` |
-| 80 | 3:58.66 | 3:59.78 | Carla (Erzählerin/Lexi) | abriegelt. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `029b503a2e72` |
-| 81 | 3:59.78 | 4:02.42 | Carla (Erzählerin/Lexi) | Bei gleicher Höhe kommt das grundsätzlich nicht in | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `54c0a82ab299` |
-| 82 | 4:02.42 | 4:03.34 | Carla (Erzählerin/Lexi) | Betracht. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `2cf9cea83d75` |
-| 83 | 4:03.34 | 4:05.90 | Carla (Erzählerin/Lexi) | Hier hat der Block acht Geschosse, ihr Haus | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `ec9ee899674b` |
-| 84 | 4:05.90 | 4:06.74 | Carla (Erzählerin/Lexi) | eines. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `c90a40dd5368` |
-| 85 | 4:06.94 | 4:08.54 | Carla (Erzählerin/Lexi) | Fünfundzwanzig Meter hoch, | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `68737586a1e6` |
-| 86 | 4:08.54 | 4:09.90 | Carla (Erzählerin/Lexi) | fünfzig Meter lang, | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `3f5d5dcdeb26` |
-| 87 | 4:09.90 | 4:15.18 | Carla (Erzählerin/Lexi) | vierzehn Meter vor dem Haus: Ihr Grundstück wirkt daneben nur noch wie eine Fläche, die der Block | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `bc1e7615c649` |
-| 88 | 4:15.18 | 4:16.29 | Carla (Erzählerin/Lexi) | beherrscht. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `899e4791e38c` |
-| 89 | 4:16.29 | 4:20.98 | Carla (Erzählerin/Lexi) | Neue Wohnungen sind ein verständliches Interesse, rechtfertigen das aber nicht. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `62a4fdaa59e2` |
-| 90 | 4:20.98 | 4:22.26 | Carla (Erzählerin/Lexi) | Das Vorhaben ist | Rücksichtnahmegebot › Im Fall: rücksichtslos | `ef946b46f58f` |
-| 91 | 4:22.26 | 4:23.77 | Carla (Erzählerin/Lexi) | rücksichtslos. | Rücksichtnahmegebot › Im Fall: rücksichtslos | `b10b0e880f8a` |
-| 92 | 4:23.77 | 4:30.09 | Carla (Erzählerin/Lexi) | Die Baugenehmigung verstößt gegen das Rücksichtnahmegebot und verletzt Frau Kolbe in ihren Rechten. Ihre | Ergebnis · Die Klage ist begründet | `5d660aef0cbc` |
-| 93 | 4:30.09 | 4:34.37 | Carla (Erzählerin/Lexi) | Klage ist begründet, das Gericht hebt die Genehmigung auf. | Ergebnis · Die Klage ist begründet | `5c30023fde64` |
-| 94 | 4:34.37 | 4:35.93 | Carla (Erzählerin/Lexi) | Weil die Klage den Bau nach | Ergebnis · Eilrechtsschutz | `9c5209c39320` |
-| 95 | 4:35.93 | 4:41.21 | Carla (Erzählerin/Lexi) | Paragraf zweihundertzwölf a des Baugesetzbuchs nicht aufhält, braucht sie zusätzlich | Ergebnis · Eilrechtsschutz | `5577b5439389` |
-| 96 | 4:41.21 | 4:46.73 | Carla (Erzählerin/Lexi) | Eilrechtsschutz nach Paragraf achtzig a und achtzig Absatz fünf. Dazu gibt es ein | Ergebnis · Eilrechtsschutz | `25314a109229` |
-| 97 | 4:46.73 | 4:48.39 | Carla (Erzählerin/Lexi) | eigenes Video. | Ergebnis · Eilrechtsschutz | `1cd788ee7d0e` |
-| 98 | 4:48.39 | 4:52.69 | Kolbe | Dann muss Herr Reimers eben rücksichtsvoller planen. | Ergebnis · Eilrechtsschutz | `d9710d2ae10e` |
-| 99 | 4:52.89 | 4:53.93 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Klagebefugnis und Begründetheit trennen | `0d79a98223f3` |
-| 100 | 4:53.93 | 4:55.33 | Carla (Erzählerin/Lexi) | Trenne sauber. | Klausurtipp · Klagebefugnis und Begründetheit trennen | `9fb18f6f373d` |
-| 101 | 4:55.33 | 4:59.57 | Carla (Erzählerin/Lexi) | In der Klagebefugnis genügt, dass eine Verletzung des Rücksichtnahmegebots | Klausurtipp · Klagebefugnis und Begründetheit trennen | `2990d3c3541e` |
-| 102 | 4:59.57 | 5:00.73 | Carla (Erzählerin/Lexi) | möglich ist. | Klausurtipp · Klagebefugnis und Begründetheit trennen | `1e1328aa88fe` |
-| 103 | 5:00.73 | 5:05.33 | Carla (Erzählerin/Lexi) | Erst in der Begründetheit prüfst du, ob die Genehmigung rechtswidrig ist und die | Klausurtipp · Klagebefugnis und Begründetheit trennen | `966420cb0cad` |
-| 104 | 5:05.33 | 5:08.86 | Carla (Erzählerin/Lexi) | Nachbarin gerade dadurch in ihren Rechten verletzt. | Klausurtipp · Klagebefugnis und Begründetheit trennen | `f8c796750d4b` |
-| 105 | 5:08.86 | 5:11.73 | Carla (Erzählerin/Lexi) | Und nenne die Herkunft: im Innenbereich das | Klausurtipp · Klagebefugnis und Begründetheit trennen | `4e0362945a76` |
-| 106 | 5:11.73 | 5:15.31 | Carla (Erzählerin/Lexi) | Einfügen nach Paragraf vierunddreißig. | Klausurtipp · Klagebefugnis und Begründetheit trennen | `0dfba3628f06` |
-| 107 | 5:15.31 | 5:17.35 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `a02655139c5b` |
-| 108 | 5:17.35 | 5:19.47 | Carla (Erzählerin/Lexi) | A, Zulässigkeit: | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `1caaff8108cd` |
-| 109 | 5:19.47 | 5:22.11 | Carla (Erzählerin/Lexi) | Anfechtungsklage gegen die Baugenehmigung, | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `f44aaaadcf15` |
-| 110 | 5:22.11 | 5:25.51 | Carla (Erzählerin/Lexi) | Klagebefugnis über eine drittschützende Norm. | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `be88be747b6a` |
-| 111 | 5:25.51 | 5:27.51 | Carla (Erzählerin/Lexi) | B, Begründetheit: | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `336cc816a859` |
-| 112 | 5:27.51 | 5:29.99 | Carla (Erzählerin/Lexi) | Verstoß gegen eine drittschützende Norm, | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `a24efa3adec2` |
-| 113 | 5:29.99 | 5:33.59 | Carla (Erzählerin/Lexi) | etwa Abstandsflächen oder Gebietserhaltungsanspruch, | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `90689a88609f` |
-| 114 | 5:33.59 | 5:39.27 | Carla (Erzählerin/Lexi) | sonst das Rücksichtnahmegebot mit Abwägung der Zumutbarkeit und erdrückender Wirkung, | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `404c0d7b3596` |
-| 115 | 5:39.27 | 5:42.97 | Carla (Erzählerin/Lexi) | und dadurch die Verletzung eigener Rechte. | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `d544469a5b73` |
-| 116 | 5:43.17 | 5:44.01 | Carla (Erzählerin/Lexi) | Merke: | Merksatz | `c4a3a7b72f05` |
-| 117 | 5:44.01 | 5:45.57 | Carla (Erzählerin/Lexi) | Als Nachbar kannst du nur | Merksatz | `3648156dd61f` |
-| 118 | 5:45.57 | 5:47.65 | Carla (Erzählerin/Lexi) | drittschützende Normen rügen. | Merksatz | `3710d119bacd` |
-| 119 | 5:47.89 | 5:49.57 | Carla (Erzählerin/Lexi) | Rücksichtnahmegebot schützt dich | Merksatz | `2b3426d8c3be` |
-| 120 | 5:49.57 | 5:50.73 | Carla (Erzählerin/Lexi) | vor einem Bau, der dir | Merksatz | `030b6731f16e` |
-| 121 | 5:50.73 | 5:52.09 | Carla (Erzählerin/Lexi) | unzumutbar ist, | Merksatz | `b8e52c5da537` |
-| 122 | 5:52.09 | 5:53.53 | Carla (Erzählerin/Lexi) | etwa weil er dein Grundstück | Merksatz | `9007e124a611` |
-| 123 | 5:53.53 | 5:54.53 | Carla (Erzählerin/Lexi) | erdrückt. | Merksatz | `e88452b72932` |
-| 124 | 5:54.53 | 5:55.85 | Carla (Erzählerin/Lexi) | Schatten allein genügt | Merksatz | `51e40fb895ca` |
-| 125 | 5:55.85 | 5:58.00 | Carla (Erzählerin/Lexi) | selten. | Merksatz | `5a6e5c75afab` |
+| 52 | 2:25.41 | 2:31.65 | Carla (Erzählerin/Lexi) | Bebauungsplan, nennt es Paragraf fünfzehn Absatz eins Satz zwei der Baunutzungsverordnung: | Rücksichtnahmegebot › Herkunft › Bebauungsplan, § 15 I 2 BauNVO | `6e27be3caf74` |
+| 53 | 2:31.65 | 2:37.21 | Carla (Erzählerin/Lexi) | Anlagen sind auch unzulässig, wenn von ihnen Belästigungen oder Störungen ausgehen können, die | Rücksichtnahmegebot › Herkunft › Bebauungsplan, § 15 I 2 BauNVO | `72c19facfa86` |
+| 54 | 2:37.21 | 2:38.89 | Carla (Erzählerin/Lexi) | unzumutbar sind. | Rücksichtnahmegebot › Herkunft › Bebauungsplan, § 15 I 2 BauNVO | `c78d7090b1ec` |
+| 55 | 2:38.89 | 2:46.21 | Carla (Erzählerin/Lexi) | Und bei einer Befreiung von seinen Festsetzungen verlangt Paragraf einunddreißig Absatz zwei, dass die Abwe … | Rücksichtnahmegebot › Herkunft › Befreiung, § 31 II BauGB | `4904fa3d6df6` |
+| 56 | 2:46.21 | 2:51.12 | Carla (Erzählerin/Lexi) | Würdigung nachbarlicher Interessen mit den öffentlichen Belangen vereinbar ist. | Rücksichtnahmegebot › Herkunft › Befreiung, § 31 II BauGB | `d230e6f2cf25` |
+| 57 | 2:51.32 | 2:54.00 | Carla (Erzählerin/Lexi) | Wann ist ein Vorhaben rücksichtslos? | Rücksichtnahmegebot › Maßstab | `8421eaff9f80` |
+| 58 | 2:54.00 | 2:59.40 | Carla (Erzählerin/Lexi) | Grundlegend ist ein Urteil des Bundesverwaltungsgerichts von neunzehnhundertsiebenundsiebzig. | Rücksichtnahmegebot › Maßstab | `136af9ef34e0` |
+| 59 | 2:59.40 | 3:03.20 | Carla (Erzählerin/Lexi) | Je empfindlicher und schutzwürdiger die Stellung des Nachbarn ist, | Rücksichtnahmegebot › Maßstab | `e72f20bc29ef` |
+| 60 | 3:03.20 | 3:05.67 | Carla (Erzählerin/Lexi) | desto mehr Rücksicht kann er verlangen. | Rücksichtnahmegebot › Maßstab | `9141421899b9` |
+| 61 | 3:05.87 | 3:09.92 | Carla (Erzählerin/Lexi) | verständlicher und unabweisbarer die Interessen des Bauherrn sind, | Rücksichtnahmegebot › Maßstab | `d4a4c42e2157` |
+| 62 | 3:09.92 | 3:12.36 | Carla (Erzählerin/Lexi) | desto weniger Rücksicht muss er nehmen. | Rücksichtnahmegebot › Maßstab | `a432e960b9a1` |
+| 63 | 3:12.36 | 3:15.28 | Carla (Erzählerin/Lexi) | Abzuwägen ist, was beiden nach Lage der Dinge | Rücksichtnahmegebot › Maßstab: Abwägung der Zumutbarkeit | `582240b30fb0` |
+| 64 | 3:15.28 | 3:17.23 | Carla (Erzählerin/Lexi) | zuzumuten ist. | Rücksichtnahmegebot › Maßstab: Abwägung der Zumutbarkeit | `d881fefd56ab` |
+| 65 | 3:17.43 | 3:19.59 | Carla (Erzählerin/Lexi) | Zuerst der Schatten. In einem | Rücksichtnahmegebot › Im Fall › Verschattung | `946b60386ce1` |
+| 66 | 3:19.59 | 3:21.39 | Carla (Erzählerin/Lexi) | bebauten Viertel musst du in der Regel | Rücksichtnahmegebot › Im Fall › Verschattung | `529b2c081dc7` |
+| 67 | 3:21.39 | 3:22.55 | Carla (Erzählerin/Lexi) | hinnehmen, dass das | Rücksichtnahmegebot › Im Fall › Verschattung | `092a518261f5` |
+| 68 | 3:22.55 | 3:25.99 | Carla (Erzählerin/Lexi) | Nachbargrundstück bebaut wird und dein Grundstück zeitweise | Rücksichtnahmegebot › Im Fall › Verschattung | `79594b12cd66` |
+| 69 | 3:25.99 | 3:26.95 | Carla (Erzählerin/Lexi) | verschattet. | Rücksichtnahmegebot › Im Fall › Verschattung | `d9f294480216` |
+| 70 | 3:26.95 | 3:32.91 | Carla (Erzählerin/Lexi) | Auch die eingehaltenen Abstandsflächen sprechen gegen Frau Kolbe: Für Licht und Sonne sind sie ein starkes | Rücksichtnahmegebot › Im Fall › Abstandsflächen als Indiz | `0bd71b8b6e0a` |
+| 71 | 3:32.91 | 3:33.99 | Carla (Erzählerin/Lexi) | Indiz. | Rücksichtnahmegebot › Im Fall › Abstandsflächen als Indiz | `c203db2d70f9` |
+| 72 | 3:33.99 | 3:40.03 | Carla (Erzählerin/Lexi) | Die Regel, dass dann keine Rücksichtslosigkeit vorliegt, setzt aber voraus, dass sich der Bau auch sonst | Rücksichtnahmegebot › Im Fall › fügt sich nicht ein | `c50a589fe03e` |
+| 73 | 3:40.03 | 3:41.15 | Carla (Erzählerin/Lexi) | einfügt. | Rücksichtnahmegebot › Im Fall › fügt sich nicht ein | `36883ce22aa2` |
+| 74 | 3:41.15 | 3:45.18 | Carla (Erzählerin/Lexi) | Acht Geschosse zwischen Einfamilienhäusern tun das nicht. | Rücksichtnahmegebot › Im Fall › fügt sich nicht ein | `4c57f48a50b2` |
+| 75 | 3:45.38 | 3:50.22 | Carla (Erzählerin/Lexi) | Entscheidend ist die erdrückende Wirkung. Sie liegt vor, wenn ein Bau wegen seiner | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `f70ffd4a713d` |
+| 76 | 3:50.22 | 3:52.70 | Carla (Erzählerin/Lexi) | Ausmaße dem Nachbargrundstück förmlich die | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `2854e88cbf09` |
+| 77 | 3:52.70 | 3:53.98 | Carla (Erzählerin/Lexi) | Luft nimmt, wenn ein | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `08992a3a7835` |
+| 78 | 3:53.98 | 3:56.42 | Carla (Erzählerin/Lexi) | Gefühl des Eingemauertseins entsteht | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `02c55d78a288` |
+| 79 | 3:56.42 | 3:58.58 | Carla (Erzählerin/Lexi) | oder wenn er das Grundstück regelrecht | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `1ad993ed755f` |
+| 80 | 3:58.58 | 3:59.70 | Carla (Erzählerin/Lexi) | abriegelt. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `029b503a2e72` |
+| 81 | 3:59.70 | 4:02.34 | Carla (Erzählerin/Lexi) | Bei gleicher Höhe kommt das grundsätzlich nicht in | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `54c0a82ab299` |
+| 82 | 4:02.34 | 4:03.26 | Carla (Erzählerin/Lexi) | Betracht. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `2cf9cea83d75` |
+| 83 | 4:03.26 | 4:05.82 | Carla (Erzählerin/Lexi) | Hier hat der Block acht Geschosse, ihr Haus | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `ec9ee899674b` |
+| 84 | 4:05.82 | 4:06.66 | Carla (Erzählerin/Lexi) | eines. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung? | `c90a40dd5368` |
+| 85 | 4:06.86 | 4:08.46 | Carla (Erzählerin/Lexi) | Fünfundzwanzig Meter hoch, | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `68737586a1e6` |
+| 86 | 4:08.46 | 4:09.82 | Carla (Erzählerin/Lexi) | fünfzig Meter lang, | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `3f5d5dcdeb26` |
+| 87 | 4:09.82 | 4:15.10 | Carla (Erzählerin/Lexi) | vierzehn Meter vor dem Haus: Ihr Grundstück wirkt daneben nur noch wie eine Fläche, die der Block | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `bc1e7615c649` |
+| 88 | 4:15.10 | 4:16.21 | Carla (Erzählerin/Lexi) | beherrscht. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `899e4791e38c` |
+| 89 | 4:16.21 | 4:20.90 | Carla (Erzählerin/Lexi) | Neue Wohnungen sind ein verständliches Interesse, rechtfertigen das aber nicht. | Rücksichtnahmegebot › Im Fall › erdrückende Wirkung | `62a4fdaa59e2` |
+| 90 | 4:20.90 | 4:22.18 | Carla (Erzählerin/Lexi) | Das Vorhaben ist | Rücksichtnahmegebot › Im Fall: rücksichtslos | `ef946b46f58f` |
+| 91 | 4:22.18 | 4:23.69 | Carla (Erzählerin/Lexi) | rücksichtslos. | Rücksichtnahmegebot › Im Fall: rücksichtslos | `b10b0e880f8a` |
+| 92 | 4:23.69 | 4:30.01 | Carla (Erzählerin/Lexi) | Die Baugenehmigung verstößt gegen das Rücksichtnahmegebot und verletzt Frau Kolbe in ihren Rechten. Ihre | Ergebnis · Die Klage ist begründet | `5d660aef0cbc` |
+| 93 | 4:30.01 | 4:34.29 | Carla (Erzählerin/Lexi) | Klage ist begründet, das Gericht hebt die Genehmigung auf. | Ergebnis · Die Klage ist begründet | `5c30023fde64` |
+| 94 | 4:34.29 | 4:35.85 | Carla (Erzählerin/Lexi) | Weil die Klage den Bau nach | Ergebnis · Eilrechtsschutz | `9c5209c39320` |
+| 95 | 4:35.85 | 4:41.13 | Carla (Erzählerin/Lexi) | Paragraf zweihundertzwölf a des Baugesetzbuchs nicht aufhält, braucht sie zusätzlich | Ergebnis · Eilrechtsschutz | `5577b5439389` |
+| 96 | 4:41.13 | 4:46.65 | Carla (Erzählerin/Lexi) | Eilrechtsschutz nach Paragraf achtzig a und achtzig Absatz fünf. Dazu gibt es ein | Ergebnis · Eilrechtsschutz | `25314a109229` |
+| 97 | 4:46.65 | 4:48.31 | Carla (Erzählerin/Lexi) | eigenes Video. | Ergebnis · Eilrechtsschutz | `1cd788ee7d0e` |
+| 98 | 4:48.31 | 4:52.61 | Kolbe | Dann muss Herr Reimers eben rücksichtsvoller planen. | Ergebnis · Eilrechtsschutz | `d9710d2ae10e` |
+| 99 | 4:52.81 | 4:53.85 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Klagebefugnis und Begründetheit trennen | `0d79a98223f3` |
+| 100 | 4:53.85 | 4:55.25 | Carla (Erzählerin/Lexi) | Trenne sauber. | Klausurtipp · Klagebefugnis und Begründetheit trennen | `9fb18f6f373d` |
+| 101 | 4:55.25 | 4:59.49 | Carla (Erzählerin/Lexi) | In der Klagebefugnis genügt, dass eine Verletzung des Rücksichtnahmegebots | Klausurtipp · Klagebefugnis und Begründetheit trennen | `2990d3c3541e` |
+| 102 | 4:59.49 | 5:00.65 | Carla (Erzählerin/Lexi) | möglich ist. | Klausurtipp · Klagebefugnis und Begründetheit trennen | `1e1328aa88fe` |
+| 103 | 5:00.65 | 5:05.25 | Carla (Erzählerin/Lexi) | Erst in der Begründetheit prüfst du, ob die Genehmigung rechtswidrig ist und die | Klausurtipp · Klagebefugnis und Begründetheit trennen | `966420cb0cad` |
+| 104 | 5:05.25 | 5:08.78 | Carla (Erzählerin/Lexi) | Nachbarin gerade dadurch in ihren Rechten verletzt. | Klausurtipp · Klagebefugnis und Begründetheit trennen | `f8c796750d4b` |
+| 105 | 5:08.78 | 5:11.65 | Carla (Erzählerin/Lexi) | Und nenne die Herkunft: im Innenbereich das | Klausurtipp · Klagebefugnis und Begründetheit trennen | `4e0362945a76` |
+| 106 | 5:11.65 | 5:15.23 | Carla (Erzählerin/Lexi) | Einfügen nach Paragraf vierunddreißig. | Klausurtipp · Klagebefugnis und Begründetheit trennen | `0dfba3628f06` |
+| 107 | 5:15.23 | 5:17.27 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `a02655139c5b` |
+| 108 | 5:17.27 | 5:19.39 | Carla (Erzählerin/Lexi) | A, Zulässigkeit: | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `1caaff8108cd` |
+| 109 | 5:19.39 | 5:22.03 | Carla (Erzählerin/Lexi) | Anfechtungsklage gegen die Baugenehmigung, | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `f44aaaadcf15` |
+| 110 | 5:22.03 | 5:25.43 | Carla (Erzählerin/Lexi) | Klagebefugnis über eine drittschützende Norm. | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `be88be747b6a` |
+| 111 | 5:25.43 | 5:27.43 | Carla (Erzählerin/Lexi) | B, Begründetheit: | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `336cc816a859` |
+| 112 | 5:27.43 | 5:29.91 | Carla (Erzählerin/Lexi) | Verstoß gegen eine drittschützende Norm, | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `a24efa3adec2` |
+| 113 | 5:29.91 | 5:33.51 | Carla (Erzählerin/Lexi) | etwa Abstandsflächen oder Gebietserhaltungsanspruch, | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `90689a88609f` |
+| 114 | 5:33.51 | 5:39.19 | Carla (Erzählerin/Lexi) | sonst das Rücksichtnahmegebot mit Abwägung der Zumutbarkeit und erdrückender Wirkung, | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `404c0d7b3596` |
+| 115 | 5:39.19 | 5:42.89 | Carla (Erzählerin/Lexi) | und dadurch die Verletzung eigener Rechte. | Klausurschema · Nachbarklage, Rücksichtnahmegebot | `d544469a5b73` |
+| 116 | 5:43.09 | 5:43.93 | Carla (Erzählerin/Lexi) | Merke: | Merksatz | `c4a3a7b72f05` |
+| 117 | 5:43.93 | 5:45.49 | Carla (Erzählerin/Lexi) | Als Nachbar kannst du nur | Merksatz | `3648156dd61f` |
+| 118 | 5:45.49 | 5:47.57 | Carla (Erzählerin/Lexi) | drittschützende Normen rügen. | Merksatz | `3710d119bacd` |
+| 119 | 5:47.81 | 5:49.49 | Carla (Erzählerin/Lexi) | Rücksichtnahmegebot schützt dich | Merksatz | `2b3426d8c3be` |
+| 120 | 5:49.49 | 5:50.65 | Carla (Erzählerin/Lexi) | vor einem Bau, der dir | Merksatz | `030b6731f16e` |
+| 121 | 5:50.65 | 5:52.01 | Carla (Erzählerin/Lexi) | unzumutbar ist, | Merksatz | `b8e52c5da537` |
+| 122 | 5:52.01 | 5:53.45 | Carla (Erzählerin/Lexi) | etwa weil er dein Grundstück | Merksatz | `9007e124a611` |
+| 123 | 5:53.45 | 5:54.45 | Carla (Erzählerin/Lexi) | erdrückt. | Merksatz | `e88452b72932` |
+| 124 | 5:54.45 | 5:55.77 | Carla (Erzählerin/Lexi) | Schatten allein genügt | Merksatz | `51e40fb895ca` |
+| 125 | 5:55.77 | 5:57.92 | Carla (Erzählerin/Lexi) | selten. | Merksatz | `5a6e5c75afab` |

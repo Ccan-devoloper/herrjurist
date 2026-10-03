@@ -7,7 +7,7 @@ import json, re, sys
 U = sys.argv[1]
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"] + 8.0
-KAP = [(0.0, "Fall: Der Riesenbau neben dem Einfamilienhaus"), (T("sv"), "Sachverhalt"),
+KAP = [(0.0, "Fall: Der Riesenbau neben dem Einfamilienhaus"),
        (T("klage"), "Drittanfechtung und Schutznormtheorie"), (T("ueber"), "Drittschützende Normen im Überblick"),
        (T("herkunft"), "Herkunft: §§ 35 III, 34 I BauGB"), (T("wl15"), "§ 15 I 2 BauNVO und § 31 II BauGB"),
        (T("mst"), "Maßstab: Abwägung der Zumutbarkeit"), (T("schat"), "Schatten und Abstandsflächen als Indiz"),
