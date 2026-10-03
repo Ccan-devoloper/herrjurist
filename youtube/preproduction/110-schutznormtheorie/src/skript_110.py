@@ -33,8 +33,8 @@ SEGMENTE = [
     # --- B Sachverhalt --------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
     # --- C 1. Ausgangspunkt § 42 II -----------------------------------------------------------------------------------------
-    ("[p42]Erstens, der Ausgangspunkt: Paragraf zweiundvierzig Absatz zwei. Klagebefugt ist nur, wer geltend macht, in "
-     "seinen Rechten verletzt zu sein. [adr]Die Adressatentheorie hilft Frau Brüning nicht: Adressatin ist Frau Hoppe, "
+    ("[p42]Erstens, der Ausgangspunkt: Paragraf zweiundvierzig Absatz zwei. Die Klagebefugnis hat nur, wer geltend macht, "
+     "in seinen Rechten verletzt zu sein. [adr]Die Adressatentheorie hilft Frau Brüning nicht: Adressatin ist Frau Hoppe, "
      "und die Erlaubnis begünstigt sie. [v105]Die Grundlagen zeigt unser Video zur Klagebefugnis.", P),
     # --- D 2. Schutznormtheorie ---------------------------------------------------------------------------------------------
     ("[snt]Zweitens, die Schutznormtheorie. Ein Dritter braucht eine Norm, die zumindest auch ihn schützt. [kreis]Das "

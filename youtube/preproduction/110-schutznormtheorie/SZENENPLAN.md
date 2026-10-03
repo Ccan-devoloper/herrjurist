@@ -2,7 +2,7 @@
 
 **Stand:** 03.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_110.py`](src/skript_110.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
 **Format:** Mi · Examenswissen · Verwaltungsprozessrecht, Themenplan-Format „Schema“; Voraussetzungsfolge 105 (Klagebefugnis, Möglichkeits- und Adressatentheorie; hier ein Verweissatz), Abgrenzung zu 088/090 (Baugenehmigung, Rücksichtnahmegebot, Drittanfechtung; nur ein Verweissatz). Übungsfall nach dem Hook („Neben deinem Haus soll eine Shisha-Bar mit Außenbereich öffnen – du willst die Erlaubnis angreifen“), **Beispielland Nordrhein-Westfalen** (GastG des Bundes gilt fort): Frau Hoppe eröffnet im Nachbarhaus eine Shisha-Bar mit Terrasse unter dem Schlafzimmerfenster von Frau Brüning; die Stadt erteilt die Gaststättenerlaubnis für Bar und Terrasse bis 24 Uhr; Frau Brüning klagt. Ablauf: Fall → Frage → Sachverhalt → 1. Ausgangspunkt (Wortlautkarte § 42 II, Adressatentheorie hilft nicht, Verweis 105) → 2. Schutznormtheorie (Kriterien BVerwG) → Frage 1: Welche Norm? (NRW, Wortlautkarte § 4 I 1 Nr. 3 GastG) → Frage 2: Schützt sie auch Einzelne? (Wortlaut § 3 I BImSchG als Karte, Systematik § 5 I Nr. 3 GastG, Zweck; BVerwG 8 C 3.19) → Frage 3: geschützter Kreis, Möglichkeit, Gegenfall → 3. Tabelle typischer Normen ja/nein → 4. Grundrechte nur hilfsweise → Ergebnis (Verwaltungsgericht, Begründetheit offen) → Klausurtipp (Lexi) → Schema → Merksatz (Lexi).
-**Länge:** Hauptfilm 5:23,0 (4.733 gesprochene Zeichen); Begründung für die leichte Überschreitung des Regelrahmens in ABNAHME.md.
+**Länge:** Hauptfilm 5:24,0 (4.730 gesprochene Zeichen); Begründung für die leichte Überschreitung des Regelrahmens in ABNAHME.md.
 
 ## Besetzung
 
