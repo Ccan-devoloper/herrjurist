@@ -1,7 +1,7 @@
 """Figuren für Folge 098 (Gesetzgebungskompetenz) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0). Alle fiktiv.
 Die Landesministerin (um 45, ohne Namen, Funktionsrolle): standing/blazer-3 (lila Blazer, dunkle Hose), Kopf Long.
 Frau Dahlke (um 30, Mieterin): standing/shirt-4 (schwarze Bluse, blaue Hose), Kopf Long Curly.
-Herr Henke (um 65, Vermieter): standing/resting-2 (schwarzer Pullover, graublaue Hose, Hand an der Hüfte), Kopf Gray Short (graues Haar),
+Herr Henke (um 65, Vermieter): standing/resting-2 (schwarzer Pullover, khakifarbene Hose, Hand an der Hüfte), Kopf Gray Short (graues Haar),
 Brille Glasses 2; sachlich, keine „fiese“ Darstellung.
 Posen bewusst anders als in 095–097 (easing-1/-2, shirt-3, resting-1, blazer-4, crossed_arms-1, pointing_finger-2,
 walking-1). Keine Bärte, keine Prothesen-Posen, keine Muster. Alle Posen blicken im Original nach rechts; die Grundansicht
@@ -22,7 +22,7 @@ MUND = {"a": "Explaining", "o": "Concerned Fear", "e": "Hectic"}
 P = {
     "LM": ("standing/blazer-3", "Long", None, None, {"Skin": "#D9A47E", "Jacket": "#B8A9F5", "Pants": "#3A3A48"}),
     "DA": ("standing/shirt-4", "Long Curly", None, None, {"Skin": "#E8B894", "Pants": "#8DB3F2"}),
-    "HE": ("standing/resting-2", "Gray Short", None, "Glasses 2", {"Skin": "#EBC2A0", "Pants": "#7A8BA8", "Hair": "#C4C4CC"}),
+    "HE": ("standing/resting-2", "Gray Short", None, "Glasses 2", {"Skin": "#EBC2A0", "Pants": "#C9A06E", "Hair": "#C4C4CC"}),
 }
 
 # (Name, Person, Grundmimik, mit Mundzuständen); jede Ansicht zusätzlich als _r (blickt nach rechts)

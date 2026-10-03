@@ -55,9 +55,11 @@ srt = open(f"{U}/untertitel.srt").read()
 for alt, neu in (("\nDahlke:", "\nFrau Dahlke:"), ("\nHenke:", "\nHerr Henke:"), ("\nLandesministerin:", "\nDie Landesministerin:")):
     srt = srt.replace(alt, neu)
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
-for alt, neu in (("neun Euro", "9 Euro"), ("zehn Euro", "10 Euro"), ("zweitausendeinundzwanzig", "2021"),
-                 ("zweitausendsechs", "2006")):
-    srt = srt.replace(alt, neu)
+for alt, neu in ((r"neun(\s+)Euro", r"9\1Euro"), (r"zehn(\s+)Euro", r"10\1Euro"), ("zweitausendeinundzwanzig", "2021"),
+                 ("zweitausendsechs", "2006"), (r"und(\s+)dreiundsiebzig", r"und\g<1>73"),
+                 (r"und(\s+)vierundsiebzig", r"und\g<1>74"), (r"des(\s+)Artikels(\s+)vierundsiebzig", r"des\1Art. 74")):
+    srt = re.sub(alt, neu, srt)
+assert not re.search(r"neun\s+Euro|zehn\s+Euro", srt)
 assert not re.search(r"§\n", srt)
 open(f"{U}/untertitel.srt", "w").write(srt)
 

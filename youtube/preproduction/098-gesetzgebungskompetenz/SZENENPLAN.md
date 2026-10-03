@@ -10,7 +10,7 @@
 |---|---|---|---|
 | Die Landesministerin (ohne Namen, um 45) | stellt das Landesgesetz vor; Funktionsrolle | Pose `standing/blazer-3` (Blazer Lila `#B8A9F5`, schwarzes Oberteil, Hose `#3A3A48`), Kopf `Long`, Haut `#D9A47E`; Mimiken `Calm`, `Smile` (redet), `Driven` (entschlossen) | `julia` (Frau, jung; ruhig) |
 | Frau Dahlke (um 30) | Mieterin | Pose `standing/shirt-4` (schwarze Bluse, Hose Blau `#8DB3F2`), Kopf `Long Curly`, Haut `#E8B894`; Mimiken `Calm`, `Smile`, `Serious` (liest), `Driven` (redet), `Concerned|Serious` (Sorge), `Suspicious` (denkt), `Smile` (redet froh) | `ela_froh` (Frau, jung; heitere, nicht ernste Rolle) |
-| Herr Henke (um 65) | Vermieter | Pose `standing/resting-2` (schwarzer Pullover, Hand an der Hüfte, Hose `#7A8BA8`), Kopf `Gray Short` (Haar grau `#C4C4CC`), Brille `Glasses 2`, Haut `#EBC2A0`; Mimiken `Calm`, `Serious` (redet), `Suspicious`, `Smile` | `helmut` (Mann, älter) |
+| Herr Henke (um 65) | Vermieter | Pose `standing/resting-2` (schwarzer Pullover, Hand an der Hüfte, Hose Khaki `#C9A06E` – zuerst graublau, wegen der Ähnlichkeit zu Herbert in Folge 097 geändert), Kopf `Gray Short` (Haar grau `#C4C4CC`), Brille `Glasses 2`, Haut `#EBC2A0`; Mimiken `Calm`, `Serious` (redet), `Suspicious`, `Smile` | `helmut` (Mann, älter) |
 | Lexi | Klausurtipp und Merksatz | nach `lexi.py` (`robot_dance-1`, `Serious`/`Smile`) | Carla Blum |
 | Erzählerin | – | – | Carla Blum |
 
