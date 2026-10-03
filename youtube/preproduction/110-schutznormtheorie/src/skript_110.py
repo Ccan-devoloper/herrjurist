@@ -48,7 +48,7 @@ SEGMENTE = [
      "seine örtliche Lage schädliche Umwelteinwirkungen im Sinne des Bundes-Immissionsschutzgesetzes befürchten lässt.", P),
     # --- F Frage b: Schützt sie auch Einzelne? Wortlaut, Systematik, Zweck ---------------------------------------------------
     ("[fb]Zweitens: Schützt diese Norm auch Einzelne? Das klärst du durch Auslegung. [wort]Zum Wortlaut: Schädliche "
-     "Umwelteinwirkungen sind nach dem Bundes-Immissionsschutzgesetz Immissionen, die erhebliche Belästigungen für die "
+     "Umwelteinwirkungen sind nach dem Bundes-Immissionsschutzgesetz Einwirkungen wie Geräusche, die erhebliche Belästigungen für die "
      "Allgemeinheit oder die Nachbarschaft herbeiführen können. [sys]Zur Systematik: Paragraf fünf des Gaststättengesetzes erlaubt Auflagen zum "
      "Schutz der Bewohner der Nachbargrundstücke. [zweck]Zum Zweck: Die Norm soll den Konflikt zwischen Gaststätte und "
      "Wohnen lösen. [ja]Insoweit ist sie drittschützend, so sieht es auch das Bundesverwaltungsgericht.", P),
