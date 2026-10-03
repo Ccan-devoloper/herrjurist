@@ -1,0 +1,62 @@
+# Folge 122 · Widerrufsrecht Fernabsatz §§ 312g, 355 BGB: 14 Tage und Ausnahmen – Szenenplan
+
+**Stand:** 03.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_122.py`](src/skript_122.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
+**Format:** Mi · Examenswissen · Zivilrecht/Schuldrecht AT, Themenplan-Format „Schema“. Beispielfall nach dem Plan-Hook („Du bestellst Sneaker online, trägst sie einmal draußen und schickst sie zurück.“): Ilka bestellt am 4.9.2026 im Onlineshop von Herrn Riemann Sneaker für 120 €, erhält sie am 8.9., trägt sie am 12.9. einen Nachmittag im Park, widerruft am 15.9. per E-Mail und schickt sie zurück. Herr Riemann: „Getragene Schuhe nehme ich nicht zurück.“ Wert mit Spuren 80 €.
+
+Ablauf: Fall (Bestellung → Park → Widerruf → Retourenannahme) → Fragen → Sachverhalt → Aufbau (I.–III.) → I. 1. Verbrauchervertrag (§ 310 Abs. 3, Verweis 106) → I. 2. Fernabsatzvertrag (Wortlautkarte § 312c Abs. 1) → I. 3. Widerrufsrecht (Wortlautkarte § 312g Abs. 1) → Ausnahmen (Wortlautkarten § 312g Abs. 2 Nr. 1–3, EuGH C-681/17) → Subsumtion → II. 1. Erklärung (§ 355 Abs. 1, kommentarlose Rücksendung, § 356a) → II. 2. Frist (Zeitstrahl September 2026, Höchstfrist § 356 Abs. 4, Verweis 117) → III. 1. Rückgewähr → III. 2. Wertersatz (Wortlautkarte § 357a Abs. 1, ErwG 47) → Ergebnis (Aufrechnung) → Klausurtipp (Lexi) → Schema (progressiv) → Merksatz (Lexi).
+**Länge:** Hauptfilm 6:37,1 (5.592 vertonte Zeichen); Begründung in [`ABNAHME.md`](ABNAHME.md).
+
+## Besetzung
+
+| Figur | Rolle | Open Peeps | Stimme |
+|---|---|---|---|
+| Ilka, um 30 | Käuferin, Verbraucherin | `standing/walking-1` (Shirt Lila `#B8A9F5`, schwarze Hose, weiße Turnschuhe; gehende Pose passt zum Park), Kopf `Long` (schwarz, glatt), Haut `#E0AC86`, keine Brille; Mimiken `Calm`, `Smile Big|Smile` (froh), `Smile` (redet), `Serious` (bestimmt, redet), `Suspicious`, `Concerned|Serious`, `Tired` | `sabrina` (Frau, mittel) |
+| Herr Riemann, um 55 | Inhaber des Onlineshops, Unternehmer | `standing/resting-2` (schwarzer Pullover, Hose Grau `#5B5F66`, schwarze Schuhe), Kopf `Short 2`, Brille `Glasses`, Haut `#C98F6B`, kein Bart; Mimiken `Calm`, `Serious` (redet/ernst), `Suspicious`, `Awe` (sieht die Spuren), `Smile` | `william` (Mann, älter) |
+| Lexi | Klausurtipp (warnt), Merksatz (erklärt) | nach `lexi.py` (`robot_dance-1`, `Serious`/`Smile`) | Carla Blum |
+| Erzählerin | – | – | Carla Blum |
+
+- **Namen** mit eindeutig deutscher Aussprache, nicht in der Koordinatorliste und in keiner früheren Folge (Repo-Suche `grep -rlw` über `.py/.md/.json` in `preproduction` und `themenplanung`: 0 Treffer): Ilka, Riemann. Verworfen: Marlene (englische Lesart „Marleen“ möglich), Jule, Carolin (englische Lesart). Kein Genitiv eines Namens im Sprechtext („Die E-Mail von Ilka“).
+- **Stimmen nur aus dem Pool** william, sabrina, marc, laura_ruhig: `sabrina` (Ilka) und `william` (Herr Riemann). Die Kombination `laura_ruhig`/`william` aus 116 (Online-Shop-Fall) wurde vermieden; 120 und 121 nutzten keine Poolstimmen.
+- Präfixe `IL_`/`RI_` (nie `ER_`). Grundansicht gespiegelt (blickt nach links), `_r` blickt nach rechts (Park: Ilka geht nach rechts). Tafelszenen: beide rechts, Blick zur Tafel.
+- **Alle Grundmimiken mit geschlossenem Mund**; Mundzustände a/o/e nur bei `IL_redet`, `IL_bestimmt`, `RI_redet` und Lexi. Keine Bärte, keine Prothesen-Posen, keine Polka Dots, keine Karikatur. **Keine weiteren Menschen im Bild.**
+- **Abwechslung** (Rezepte 116–121 verglichen): Posen nicht aus 118 (`robot_dance-3`, `resting-1`, `crossed_arms-2`), 119 (`easing-2`, `blazer-3`), 120 (`pointing_finger-1`, `crossed_arms-1`, `walking-2`, `blazer-4`), 121 (`polka_dots`, `shirt-3`, `walking-3`); anders als das Online-Shop-Personal von 116 (`easing-1`, `robot_dance-2`, Ottmar mit Halbglatze, Brille, blauer Hose) und 117 (`shirt-4`, `pointing_finger-2`). `walking-1` zuletzt 112, `resting-2` zuletzt 115 (andere Figur, andere Farben).
+- Figuren-PNGs: `../peeps/op_122/` (52 Dateien, nicht im Repository, im Drive-Master); Kontaktbild `out/besetzung_122.png`.
+
+**Abweichung von den letzten Folgen:** 116 (Wohnzimmer mit Schreibtisch und Laptop, Lager mit Lagerhaus-Icon), 117 (Prüfungsraum), 120/121 (Wohnung/Straße). Hier neu: Wohnung mit Tür und Sofa (Paket an der Tür, Smartphone in der Hand statt Laptop), **Park** mit Bäumen und Sonne (gehende Ilka, Fußspuren, verschmutzte Sneaker), **Retourenannahme** mit Tisch, geöffnetem Paket, Sneaker und Lupe (kein Lagerhaus). Die Rückkehr in die Wohnung in A3 ist erzählerisch begründet (Ilka schickt von zu Hause zurück). Leitmotiv: brauner (verschmutzter) Sneaker als Requisit. Cremegrund durchgehend, Tageslicht.
+
+## Szenen
+
+| Szene | Ort / Handlung | Requisiten (Iconset:Name, Füllung) | Tafel / Prüfpfad | Geräusch |
+|---|---|---|---|---|
+| **A1 Bestellung** `fall`–`il1` | ab 0,0 s Wohnung (Tür, Sofa), Ilka mit Namensschild, Pille „4.9.2026: Ilka bestellt“; Smartphone in der Hand und „Onlineshop von Herrn Riemann“ bei „Onlineshop“, Sneaker und „Sneaker: 120 €“ zum Wort; Paket an der Tür und „8.9.2026: Paket kommt“; Blase „Die passen perfekt.“ | tabler:`door`, `sofa` (Blau), `device-mobile`, `package` (Holz); ph:`sneaker` (Weiß) | `Fall · Die Bestellung` → `Fall · Das Paket kommt` | – |
+| **A2 Park** `park`–`gef` | Bäume, Sonne; Ilka geht bei „trägt“ 2,6 s nach rechts; Fußspuren, brauner Sneaker, „Sohlen verschmutzt“; „gefallen ihr doch nicht“ (Ilka nachdenklich) | tabler:`trees`, `tree` (Grün), `sun` (Gelb); ph:`footprints`, `sneaker` (Braun) | `Fall · Ein Nachmittag im Park` → `Fall · Die Sohlen` | `szene_122schritte_1` bei „trägt“ |
+| **A3 Widerruf** `zurueck`–`il2` | Wohnung; Paket mit Pfeil an der Tür bei „schickt“, Brief und Smartphone bei „E-Mail“; Blase „Ich widerrufe den Kauf. / Bitte erstatten Sie mir / die 120 €.“ | tabler:`package-export`, `mail`, `device-mobile` | `Fall · Der Widerruf` | – |
+| **A4 Retourenannahme** `ri`–`frage2` | Tisch; Paket bei „packt“, brauner Sneaker bei „aus“, Lupe und „Spuren an den Sohlen“; Blase Herr Riemann „Die sind ja getragen! / Getragene Schuhe / nehme ich nicht zurück.“; „mit den Spuren: nur noch 80 € wert“, Euro-Münze; Fragen (pink) | tabler:`desk` (Holz), `package`, `zoom`, `coin-euro`; ph:`sneaker` | `Fall · Herr Riemann packt aus` → `Fall · Getragen zurück?` → `Fall · Die Frage` | `szene_122karton_1` bei „packt“ |
+| **B Sachverhalt** `sv` | Karte vollständig (40 px), ≈ 9,6 s, ohne Fiktiv-Hinweis | – | `Sachverhalt` | – |
+| **C Aufbau** `plan`–`p3` | Tafel „Der Widerruf in drei Schritten“: I./II./III. als Farbblöcke zum Wort | ph:`sneaker`, tabler:`coin-euro` | `Widerruf › Aufbau in drei Schritten` | – |
+| **D I. 1.** `v1`–`v106` | Definition § 310 Abs. 3; Haken „Ilka kauft privat“ (§ 13), „Herr Riemann betreibt den Shop gewerblich“ (§ 14 Abs. 1); Block „Mehr dazu: Video zum Verbraucherbegriff“ | tabler:`building-store` | `I. Widerrufsrecht › 1. Verbrauchervertrag, § 310 Abs. 3 BGB` | – |
+| **E I. 2.** `fa1`–`fa4` | **Wortlautkarte § 312c Abs. 1** vollständig, Marker „ausschließlich / Fernkommunikationsmittel“ und „für den Fernabsatz organisierten Vertriebs- oder / Dienstleistungssystems“ zum Wort; Haken „Onlineshop: ein solches System“, „Ilka hat nur über die Website bestellt“ | tabler:`device-mobile`, `browser` | `I. 2. Fernabsatzvertrag, § 312c Abs. 1 BGB` → `› Onlineshop` | – |
+| **F I. 3.** `wr1` | **Wortlautkarte § 312g Abs. 1** (vorgelesen), Marker „bei Fernabsatzverträgen“, „ein Widerrufsrecht gemäß § 355“; „Fernabsatzvertrag → Widerrufsrecht“ | tabler:`arrow-back-up` | `I. 3. Widerrufsrecht, § 312g Abs. 1 BGB` | – |
+| **G1 Ausnahmen** `au1`–`eugh` | drei **Wortlautkarten § 312g Abs. 2 Nr. 1, 2, 3** nacheinander mit Markern; Beispiele rechts („z. B. Schuhe nach Maß“, „z. B. frischer Fisch“, „versiegelt“), EuGH: „eng auslegen“, „Matratze ohne Schutzfolie: / keine Ausnahme“, Fundstelle C-681/17 | tabler:`list-numbers`, `ruler-measure`, `fish`, `bed`; ph:`seal-check` | `› Ausnahmen, § 312g Abs. 2 BGB` → `› Nr. 1` → `› Nr. 2` → `› Nr. 3` | – |
+| **G2 Subsumtion** `au5`, `au6` | drei Kreuze (Serienware, verderben nicht, nicht versiegelt), „Keine Ausnahme greift.“, Block „Ilka hat ein Widerrufsrecht.“ | ph:`sneaker` (Braun), tabler:`arrow-back-up` | `Ausnahmen › Subsumtion` → `I. 3. Widerrufsrecht › keine Ausnahme` | – |
+| **H II. 1.** `e1`–`e7` | Erklärung gegenüber dem Unternehmer (S. 2), eindeutig (S. 3), keine Begründung (S. 4); Kreuz „kommentarlos zurückschicken“ (BT-Drs. 17/12637, S. 60), Haken „Zettel mit eindeutiger Erklärung im Paket“; „Onlineshops: Widerrufsfunktion anbieten“ (§ 356a Abs. 1); Block „E-Mail von Ilka: „Ich widerrufe den Kauf.“ eindeutig“ | tabler:`mail`, `package-export`, `file-text`, `click`, `mail-check` | `II. Ausübung › 1. Erklärung, § 355 Abs. 1 BGB` → `› Rücksendung allein?` → `› Widerrufsfunktion, § 356a BGB` | – |
+| **I II. 2. Frist** `fr1`–`fr7` | 14 Tage; Beginn mit Erhalt; nicht vor Belehrung; **Zeitstrahl 7.–23. September 2026**: 8.9. Erhalt, Balken „14 Tage“, 22.9. Fristende, 15.9. E-Mail; Haken „rechtzeitig, die Absendung genügt“; „Ohne Belehrung … 12 Monate und 14 Tage“ (§ 356 Abs. 4 S. 1), „hier: 22.9.2027“; Pille „Video: Klausurfehler“ | tabler:`calendar-due`, `hourglass` | `II. 2. Frist, § 355 Abs. 2 BGB` → `› Beginn, § 356 Abs. 2, 3 BGB` → `› ohne Belehrung, § 356 Abs. 4 BGB` | – |
+| **J III. 1.** `rf1`, `rf2` | Rückgewähr (§ 355 Abs. 3 S. 1, § 357 Abs. 1); Diagramm Ilka → Sneaker → Herr Riemann, 120 € zurück; Haken „Herr Riemann muss die 120 € erstatten.“ | ph:`sneaker`, tabler:`arrow-back-up`, `coin-euro` | `III. Rechtsfolgen › 1. Rückgewähr, §§ 355 Abs. 3, 357 BGB` | – |
+| **K III. 2.** `we1`–`we7` | **Wortlautkarte § 357a Abs. 1** vollständig, Marker „Wertersatz für einen Wertverlust“, „zur Prüfung der Beschaffenheit“, „nicht notwendig war“, später „Widerrufsrecht unterrichtet hat“; darunter „Prüfen wie in einem Geschäft“, Zitat ErwG 47 „… ein Kleidungsstück nur anprobieren, nicht jedoch tragen …“, Haken „anprobieren in der Wohnung“, Kreuz „Nachmittag draußen im Park“; ab `we6` ersetzt durch Haken „Nr. 2: ordnungsgemäß belehrt“ und Block „Das Widerrufsrecht bleibt. / Ilka haftet nur für den Wertverlust.“ (EuGH C-681/17 Rn. 47) | tabler:`coin-euro`, `building-store`, `file-check`, `scale`; ph:`sneaker` | `III. 2. Wertersatz, § 357a Abs. 1 BGB` → `› Nr. 1: nicht zur Prüfung notwendig` → `› Nr. 2: Belehrung` | – |
+| **L Ergebnis** `erg`–`erg4` | Haken „Ilka hat wirksam widerrufen.“, „Herr Riemann muss die 120 € zurückzahlen.“; „Wertersatz … 40 €“; Block „Rechnet Herr Riemann auf: 120 € − 40 € = 80 € an Ilka“ (§§ 387, 389) | tabler:`arrow-back-up`, `coin-euro` | `Ergebnis` | – |
+| **M Klausurtipp** `tipp`, `tipp2` | hellgelbe Tafel, Lexi warnt (redet); Kreuz „nicht beim Widerrufsrecht prüfen“, Haken „sondern bei den Rechtsfolgen: Wertersatz“; Diagramm Sneaker → Euro | Warnsymbol (Streamline Freehand), ph:`sneaker`, tabler:`arrow-right`, `coin-euro` | `Klausurtipp · Gebrauch erst beim Wertersatz` | – |
+| **N Schema** `sch`–`k32` | breite Karte, I.–III. mit Untermerkmalen, zeilenweise zum Wort | – | `Schema: Widerruf im Fernabsatz` → `› I.` → `› II.` → `› III.` | – |
+| **O Merksatz** `merke`–`mk3` | Lexi erklärt (redet), drei Marker | – | `Merksatz` | – |
+
+**Übergänge:** stumme Schiebeblenden nur zwischen den 19 Folien; innerhalb harte Schnitte und Pops; Bewegung nur beim Gang durch den Park (2,6 s, Namensschild läuft mit).
+**Geräusche:** zwei Handlungsgeräusche (Schritte auf Kies im Park, Karton wird geöffnet), Freesound CC0 über die API ohne Schlüssel, unter eigenem Namen in `sfx3/`, Herkunft in `geraeusche_herkunft.json`. Paket an der Tür, E-Mail und Tafeln stumm.
+
+## Sachverhaltskarte (Szene B, erscheint vollständig)
+
+> Ilka bestellt am 4.9.2026 privat im Onlineshop von Herrn Riemann, der den Shop gewerblich betreibt, ein Paar Sneaker für 120 Euro und zahlt sofort. Versand und Rückversand sind kostenlos. Herr Riemann hat ordnungsgemäß über das Widerrufsrecht belehrt.
+>
+> Am 8.9.2026 erhält Ilka die Sneaker. Am 12.9.2026 trägt sie sie einen ganzen Nachmittag draußen im Park; danach sind die Sohlen verschmutzt.
+>
+> Am 15.9.2026 schickt sie die Sneaker zurück und schreibt Herrn Riemann per E-Mail: „Ich widerrufe den Kauf. Bitte erstatten Sie mir die 120 Euro.“ Herr Riemann meint: „Getragene Schuhe nehme ich nicht zurück.“ Mit den Spuren sind die Sneaker nur noch 80 Euro wert.
+>
+> **Kann Ilka widerrufen? Und muss sie für das Tragen zahlen?**

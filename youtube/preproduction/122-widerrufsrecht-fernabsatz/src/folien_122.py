@@ -267,14 +267,14 @@ folie([(NULL, "Fall · Die Bestellung"), ("liefer", "Fall · Das Paket kommt")],
     hart(pl("4.9.2026: Ilka bestellt", 70, 30, NULL, fill=GELB, size=40)),
     ficon("tabler", "device-mobile", ih[0] - 10, ih[1] + 20, 70, BEST, fuell=WEISS),
     pl("Onlineshop von Herrn Riemann", 700, 150, BEST, fill=WEISS, size=34),
-    ficon("ph", "sneaker", 1020, 430, 200, beim("fall", "Sneaker"), fuell=WEISS),
+    ficon("ph", "sneaker", 1020, 490, 200, beim("fall", "Sneaker"), fuell=WEISS),
     pl("Sneaker: 120 €", 900, 250, beim("fall", "hundertzwanzig"), fill=GELB, size=34),
     ficon("tabler", "package", TUERX + 200, BODEN, 150, "liefer", fuell=HOLZ),
     pl("8.9.2026: Paket kommt", 110, 520, beim("liefer", "Paket"), fill=WEISS, size=34),
     *fig("IL", IX, BODEN, FH, [(NULL, "ruhig"), (beim("fall", "Sneaker"), "froh")], erst="cut", bis="il1"),
     hart(ns("Ilka", IX, BODEN, NULL, IL_N)),
     *redet("IL_redet", IX, BODEN, FH, "il1", "park"),
-    blase("sprech", 560, 170, "il1", 1020, 640, inhalt=["Die passen perfekt."], textsize=40,
+    blase("sprech", 560, 170, "il1", 1040, 560, inhalt=["Die passen perfekt."], textsize=40,
           figur=("IL_redet", IX, BODEN, FH)),
 ])
 
@@ -294,9 +294,9 @@ folie([("park", "Fall · Ein Nachmittag im Park"), ("sohle", "Fall · Die Sohlen
           "122schritte*", 0.55),
     bewegt(ns("Ilka", PW1, BODEN, "park", IL_N), GEHT, GEHT_DA, PW0 - PW1, 0),
     *fig("IL", PW1, BODEN, FH, [("sohle", "sorge_r"), ("gef", "denkt_r")], erst="cut"),
-    ficon("ph", "footprints", 760, BODEN - 4, 130, "sohle", fuell=ERDE),
-    ficon("ph", "sneaker", 1360, BODEN - 2, 170, beim("sohle", "Sohlen"), fuell=ERDE),
-    pl("Sohlen verschmutzt", 1230, 620, beim("sohle", "verschmutzt"), fill=ROT, size=34),
+    ficon("ph", "footprints", 560, BODEN - 4, 130, "sohle", fuell=ERDE),
+    ficon("ph", "sneaker", 790, BODEN - 2, 170, beim("sohle", "Sohlen"), fuell=ERDE),
+    pl("Sohlen verschmutzt", 600, 640, beim("sohle", "verschmutzt"), fill=ROT, size=34),
     pl("gefallen ihr doch nicht", 1180, 300 + 60, "gef", fill=WEISS, size=34),
 ])
 
@@ -356,7 +356,7 @@ def sachverhalt_122(cue, absaetze, frage):
     els = [karte(140, 60, 1640, 900, cue, fill=HELL), titel("Sachverhalt", 210, 100, cue, 56)]
     y = 205
     for a in absaetze:
-        e, y = absatz(glyphen(a), 210, y, 1500, cue, size=35, zeilenabstand=1.30)
+        e, y = absatz(glyphen(a), 210, y, 1500, cue, size=40, zeilenabstand=1.30)
         els += e; y += 14
     assert y + 70 <= 950, f"Sachverhalt zu lang ({y})"
     els.append(pille(glyphen(frage), 210, y + 6, cue, fill=PINK, size=36))
@@ -484,9 +484,10 @@ folie([("au1", "I. 3. Widerrufsrecht › Ausnahmen, § 312g Abs. 2 BGB"), ("au2"
                ("au2", ("tabler", "ruler-measure", 110, GELB), "z. B. Schuhe nach Maß", GELB),
                ("au3", ("tabler", "fish", 110, BLAU), "z. B. frischer Fisch", BLAU),
                ("au4", ("ph", "seal-check", 110, GRUEN), "versiegelt", GRUEN),
-               (EUGH, ("tabler", "bed", 120, LILA), "EuGH: eng auslegen", LILA)]),
-    pl("Matratze ohne Schutzfolie:", PX, 360, beim(EUGH, "Matratze"), fill=WEISS, size=30, anker="m"),
-    pl("keine Ausnahme", PX, 430, beim(EUGH, "nicht"), fill=ROT, size=30, anker="m"),
+               (EUGH, None, "EuGH: eng auslegen", LILA)]),
+    pl("Matratze ohne Schutzfolie:", PX, 190, beim(EUGH, "Matratze"), fill=WEISS, size=30, anker="m"),
+    pl("keine Ausnahme", PX, 255, beim(EUGH, "nicht"), fill=ROT, size=30, anker="m"),
+    ficon("tabler", "bed", PX, 425, 100, beim(EUGH, "Matratze"), fuell=LILA),
     *paar("au1", [("au1", "ruhig"), ("au2", "denkt"), (EUGH, "froh")], [("au1", "denkt"), (EUGH, "staunt")]),
 ]))
 
@@ -557,7 +558,7 @@ folie([("fr1", "II. 2. Frist, § 355 Abs. 2 BGB"), ("fr2", "II. 2. Frist › Beg
     z("Beginn: wenn der Verbraucher die Ware erhalten hat", 110, 240, beim("fr2", "beginnt"), "Bold", 34),
     zit("§ 356 Abs. 2 Nr. 1 Buchst. a BGB", 110, 290, beim("fr2", "Paragraf")),
     z("nicht vor ordnungsgemäßer Belehrung", 110, 340, "fr3", "Bold", 34),
-    zit("§ 356 Abs. 3 Satz 1 BGB", 740, 350, beim("fr3", "Absatz")),
+    zit("§ 356 Abs. 3 Satz 1 BGB", 790, 350, beim("fr3", "Absatz")),
     *strahl,
     blk(int(tag(8)), TY - 62, int(tag(22) - tag(8)), 46, GELB, ENDE, [("14 Tage", "ExtraBold", 28, INK)], anim="pop"),
     pl("Erhalt", tag(8) - 50, TY + 66, ERH, fill=GELB, size=28),
@@ -664,6 +665,9 @@ folie([("tipp", "Klausurtipp · Gebrauch erst beim Wertersatz")], [
     *neinz("nicht beim Widerrufsrecht prüfen", 330, beim("tipp2", "nicht"), "Bold", 36, x=200),
     *okz("sondern bei den Rechtsfolgen: Wertersatz", 410, beim("tipp2", "sondern"), "Bold", 36, x=200),
     zit("§ 357a Abs. 1 BGB", 200, 465, beim("tipp2", "Wertersatz")),
+    dicon("ph", "sneaker", 640, 760, 240, beim("tipp", "Getragene"), fuell=ERDE),
+    dicon("tabler", "arrow-right", 860, 720, 90, beim("tipp2", "sondern")),
+    dicon("tabler", "coin-euro", 1010, 740, 110, beim("tipp2", "Wertersatz"), fuell=GELB),
     *redet("LX_warnt", FX, FB, FR + 40, "tipp", "sch"),
     ns("Lexi", FX, FB, "tipp", GELB, d=0.2),
 ])
