@@ -41,19 +41,19 @@ Quelle: `bildhalt_manifest.json` (115 Bildhalte, davon 115 eigenständig), `cues
 | 35 | 1:24.04 | 1:25.14 | Carla (Erzählerin/Lexi) | Schuld. | Werkzeug 1 · § 242 › aus dem Allgemeinen Teil | `c1d3a9025ecb` |
 | 36 | 1:25.44 | 1:26.98 | Carla (Erzählerin/Lexi) | Jetzt der Fall. Das | Werkzeug 1 · am Fall: § 242 StGB | `1e74e41427c4` |
 | 37 | 1:26.98 | 1:29.90 | Carla (Erzählerin/Lexi) | Handy ist eine fremde bewegliche Sache. | Werkzeug 1 · am Fall: § 242 StGB | `2a5b632d9b99` |
-| 38 | 1:29.90 | 1:33.70 | Carla (Erzählerin/Lexi) | Aber Weck-nahme heißt: fremden Gewahrsam brechen und | Werkzeug 1 · § 242 › b) Wegnahme | `5b0ade4d75f3` |
+| 38 | 1:29.90 | 1:33.70 | Carla (Erzählerin/Lexi) | Aber Wegnahme heißt: fremden Gewahrsam brechen und | Werkzeug 1 · § 242 › b) Wegnahme | `5b0ade4d75f3` |
 | 39 | 1:33.70 | 1:35.18 | Carla (Erzählerin/Lexi) | neuen begründen. | Werkzeug 1 · § 242 › b) Wegnahme | `40509f7a7fd5` |
 | 40 | 1:35.18 | 1:39.22 | Carla (Erzählerin/Lexi) | Die Eigentümerin ist fort und kann auf das Handy auf dem Gehweg nicht mehr | Werkzeug 1 · § 242 › b) Wegnahme | `68bccd6dd07a` |
 | 41 | 1:39.22 | 1:40.74 | Carla (Erzählerin/Lexi) | einwirken. Sie hat | Werkzeug 1 · § 242 › b) Wegnahme | `04dfdf7154ef` |
 | 42 | 1:40.74 | 1:42.38 | Carla (Erzählerin/Lexi) | keinen Gewahrsam mehr. | Werkzeug 1 · § 242 › b) Wegnahme | `e32f5cef1d39` |
-| 43 | 1:42.38 | 1:45.54 | Carla (Erzählerin/Lexi) | Keine Weck-nahme, also kein Diebstahl. | Werkzeug 1 · § 242 › Ergebnis: kein Diebstahl | `028e52c2e3de` |
+| 43 | 1:42.38 | 1:45.54 | Carla (Erzählerin/Lexi) | Keine Wegnahme, also kein Diebstahl. | Werkzeug 1 · § 242 › Ergebnis: kein Diebstahl | `028e52c2e3de` |
 | 44 | 1:45.54 | 1:48.00 | Carla (Erzählerin/Lexi) | Bis hierhin trägt das Schema. | Werkzeug 1 · § 242 › Ergebnis: kein Diebstahl | `733bdc5555a0` |
 | 45 | 1:48.30 | 1:53.00 | Carla (Erzählerin/Lexi) | Werkzeug zwei: Frag bei jedem Punkt, warum er dort steht. | Werkzeug 2 · Warum steht der Punkt hier? | `f024a3121839` |
 | 46 | 1:53.04 | 1:57.60 | Carla (Erzählerin/Lexi) | Warum prüfst du die Zueignung beim Diebstahl im subjektiven Tatbestand? | Werkzeug 2 · Warum ist die Zueignung subjektiv? | `7da242bca5c4` |
 | 47 | 1:57.60 | 1:58.96 | Carla (Erzählerin/Lexi) | Weil das Gesetz nur die | Werkzeug 2 · Warum ist die Zueignung subjektiv? | `293df3e1a115` |
 | 48 | 1:58.96 | 2:00.36 | Carla (Erzählerin/Lexi) | Absicht verlangt. | Werkzeug 2 · Warum ist die Zueignung subjektiv? | `8ff5af489198` |
 | 49 | 2:00.36 | 2:01.64 | Carla (Erzählerin/Lexi) | Der Diebstahl ist mit der | Werkzeug 2 · Vollendet mit der Wegnahme | `0089437de167` |
-| 50 | 2:01.64 | 2:02.20 | Carla (Erzählerin/Lexi) | Weck-nahme | Werkzeug 2 · Vollendet mit der Wegnahme | `9c353cab9750` |
+| 50 | 2:01.64 | 2:02.20 | Carla (Erzählerin/Lexi) | Wegnahme | Werkzeug 2 · Vollendet mit der Wegnahme | `9c353cab9750` |
 | 51 | 2:02.20 | 2:05.20 | Carla (Erzählerin/Lexi) | vollendet. Ob der Täter die Sache danach wirklich | Werkzeug 2 · Vollendet mit der Wegnahme | `8f316670806f` |
 | 52 | 2:05.20 | 2:07.32 | Carla (Erzählerin/Lexi) | behält, ist für den Tatbestand | Werkzeug 2 · Vollendet mit der Wegnahme | `2369e0726594` |
 | 53 | 2:07.32 | 2:08.04 | Carla (Erzählerin/Lexi) | egal, sagt der | Werkzeug 2 · Vollendet mit der Wegnahme | `894a8e575c9d` |
