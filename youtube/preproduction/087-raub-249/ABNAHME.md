@@ -2,12 +2,12 @@
 
 **Folge/Titel (Nr. laut Themenplan):** 087 · „Raub § 249 StGB: Prüfungsschema mit Gewalt, Wegnahme & Finalität“ (Fr · Klausurpraxis · Strafrecht/StGB BT · Format Schema)
 **Datum/Rechtsstand:** 02./03.10.2026; StGB laut gesetze-im-internet.de (zuletzt geändert durch Art. 1 G v. 20.3.2026 I Nr. 95); Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
-**MP4 (Drive):** `LexVerse Produktion/087 Raub § 249 StGB/087-Raub-249-StGB.mp4`, 6:43,4 min (8,0 s Intro + 6:20,3 Hauptfilm + 15,1 s Outro), 26.322.911 Byte, SHA-256 `a492da8e9680b8905f39df785af1f18c3bde966cf1810eea00d80143fe951f2f`
-**Hauptfilm allein (Drive):** `087-Raub-249-StGB-Hauptfilm.mp4`, 18.990.788 Byte, SHA-256 `1e69cfc7cfd953a85782edcce439255fd5b96f974afb2897420b76416fc3d55e`
+**MP4 (Drive):** `LexVerse Produktion/087 Raub § 249 StGB/087-Raub-249-StGB.mp4`, **Fassung v2 (Nachvertonung „Wegnahme“, 03.10.2026):** 6:44,9 min (8,0 s Intro + 6:21,8 Hauptfilm + 15,1 s Outro), 26.443.718 Byte, SHA-256 `84c45224a282d4d91b03c338642165bdafccbcd4a2ed9ae098ca070e34ba8274` (v1: 6:43,4 min, SHA-256 `a492da8e…fe951f2f`, ersetzt)
+**Hauptfilm allein (Drive):** `087-Raub-249-StGB-Hauptfilm.mp4`, v2: 19.229.633 Byte, SHA-256 `b82fdb5873ba9e32d9da13d4e4ed76697b84523c9acde2c13948be23a5a3882b` (v1 `1e69cfc7…fc3d55e`, ersetzt)
 **Intro/Outro-Quellen:** unverändert aus `LexVerse Produktion/_Quellen/` (lokaler Cache `preproduction/_quellen/`), Endschnitt mit `tools/schnitt.py`
 **Produktionsmaster (Drive):** `LexVerse Produktion/087 Raub § 249 StGB/master.zip`
 **Figuren und Stimmen:** Margit (Open Peeps `standing/polka_dots`, Stimme `laura_ruhig`), Hagen (`standing/robot_dance-2`, `marc`), Lexi (`lexi.py`), Erzählerin Carla Blum; [`src/figuren_087.py`](src/figuren_087.py)
-**Skript-/Schnittrevision:** Skript v1, einmal vertont (18 Segmente), keine Nachvertonung. Render v1 (Korrekturen aus Vorschau und Vorab-Bildhaltbögen vor dem Vollrender eingearbeitet, siehe Befunde); der erste Vollrender wurde durch einen Container-Neustart abgebrochen und unverändert neu gestartet.
+**Skript-/Schnittrevision:** Skript v1 unverändert; Erstvertonung 18 Segmente; **Nachvertonung v2 (03.10.2026)** der 9 Segmente mit „Wegnahme“ über die zentrale Aussprachehilfe in `synth_el.py` (siehe Abschnitt „Nachvertonung“ unten). Die Zeitangaben in der Tabelle beziehen sich auf v1 und verschieben sich in v2 ab 1:24 um bis zu +1,4 s. Render v1 (Korrekturen aus Vorschau und Vorab-Bildhaltbögen vor dem Vollrender eingearbeitet, siehe Befunde); der erste Vollrender wurde durch einen Container-Neustart abgebrochen und unverändert neu gestartet.
 **Prüfer und Datum:** Claude (automatische Prüfungen, Sichtung aller 142 Bildhalte aus dem finalen MP4, Lippenbilder aus dem MP4, Spracherkennung small und medium, Namensprüfung je Nennung), 03.10.2026. **Hör- und Sichtprüfung des Kanalinhabers steht aus.**
 
 Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katzenkönig; Ablauf nach [`FOLGE-ABLAUF.md`](../../FOLGE-ABLAUF.md), Vorlagen 051, 084, 075, 015. Zeiten als Videozeit (Hauptfilmzeit + 8,0 s), sofern nicht anders angegeben.
@@ -49,15 +49,36 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 **Schlussprüfung:** Kontaktbögen aller 142 Bildhalte aus dem finalen MP4, Fallmomente als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung und Segmentkanten-Prüfung aller 18 Segmente. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen oben); Themenplan-Korrekturen durch den Koordinator; Lehrmeinung zur Vermögensverfügung nicht an Literatur verifiziert.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 03.10.2026
 
-## Drive (Readback 03.10.2026, rclone)
+## Nachvertonung Aussprache „Wegnahme“ (03.10.2026)
+
+**Anlass:** Hinweis des Kanalinhabers: „Wegnahme“ klang an mehreren Stellen wie „Wehgnahme“ mit langem e. Umsetzung über die zentrale Aussprachehilfe in `stimme-elevenlabs/synth_el.py` (Commit 4fc894d4, `AUSSPRACHE`: „Wegnahme“ → „Weck-nahme“, nur im Sprechtext); `src/skript_087.py` unverändert. Die Zeichenzahl (3.683, über der Vorgabe von rund 3.000) wurde vor der Vertonung gemeldet und vom Koordinator freigegeben.
+
+**Neu vertont:** 9 Segmente (7, 8, 9, 10, 11, 12, 16, 17, 18), **3.683 Zeichen**; die übrigen 9 Segmente kamen aus `el_cache` (0 Credits). `synth_el.py` meldete „Credits verbraucht: 0“, weil der Zähler der Abo-Abfrage verzögert aktualisiert (Kontingent vor dem Lauf 55.767 frei; parallel vertonen weitere Folgen, daher keine exakte Differenz). Nach dem in dieser Folge gemessenen Satz (0,121 Credits je Zeichen) sind es **≈ 446 Credits** (Ankündigung des Skripts: ≈ 553). Neue Dauer der Sprachspur 381,78 s (v1: 380,34 s).
+
+**Neue Videozeiten aller 13 Nennungen „Wegnahme“ (für die Hörprüfung):** 1:24,5 · 1:32,7 · 1:49,3 · 2:03,6 · 2:34,3 · 2:50,8 · 3:19,5 · 3:32,8 · 5:24,4 · 5:44,5 · 6:12,4 · 6:20,8 · 6:24,0.
+
+**Anpassungen (vom Koordinator gebilligt):** In `cues.json` steht jetzt der Sprechtext „Weck-nahme“. Deshalb wurden in `src/folien_087.py` die vier Wortanker `beim("fdef", "Wegnahme")` auf `beim("fdef", "Weck")` umgestellt. `src/meta_087.py` (Untertitel) und `src/timeline_087.py` (Cue-Timeline) setzen „Weck-nahme“ für die Schriftform auf „Wegnahme“ zurück. Neue Hilfsdatei `src/asr_seg_087.py`: Spracherkennung segmentweise mit Zwischenspeicher, weil der Lauf am Stück unter Speicherdruck (OOM im Container) zweimal abbrach.
+
+**Neu erzeugt:** `stimme.wav`, `stimme_48k.wav`, `cues.json`, `kapitel.json`, `bildhalt_manifest.json` (142 Bildhalte, alle eigenständig), `CUE-TIMELINE.md`, Hauptfilm und Endschnitt, `pruefbericht.json`, Upload-Texte (13 Kapitel, neue Zeiten 0:00 · 0:59 · 1:42 · 2:05 · 2:44 · 3:05 · 3:30 · 4:03 · 4:25 · 4:45 · 5:17 · 5:36 · 6:10), `master.zip`. Die Thumbnails sind unverändert (bytegleich neu erzeugt).
+
+**Prüfung v2:**
+- `pruefe_folge.py --asr`: **Exit 0**. Sprecherspanne 0,0 LU, keine auffälligen Segmentkanten, Spracherkennung 95,6 %; Lautheit gesamt −16,5 LUFS, Spitze −1,3 dBFS. MP4: H.264 High/yuv420p/1920×1080/30 fps, AAC 48 kHz Stereo, 6:44,9, keine Untertitelspur, vollständiger Decode fehlerfrei.
+- Spracherkennung zu „Wegnahme“: small hört jetzt „Wegname“ (Segmente 10, 18 und im Gesamtlauf von `pruefe_folge`) bzw. „Wecknahme“ (Segmente 7, 8), medium „Wecknahme“ (Segmente 10, 11, 16, 17). Beide Schreibungen stehen für ein kurzes e; ein langes „Weh-“ hat keines der Modelle mehr notiert. **Hörprüfung durch den Kanalinhaber an allen 13 Stellen offen.**
+- Weitere Abweichungen in den neu vertonten Segmenten: small „Margit“ → „Marge“ (2:39,8, medium im Satz korrekt), small „Frag“ → „Fragt“ (5:21,2, Klausurtipp), small „Gewahrsams“ → „Gewahrsaums“ (1:53,1). Medium lässt in Segment 9 die Wortgruppe „Kraft des Täters wesentlicher Bestandteil der Wegnahme ist und vom Opfer“ (ab 2:31,6) aus, small erkennt sie vollständig (Erkennungslücke). Jeweils nur ein Modell weicht ab → keine weitere Nachvertonung (höchstens eine je Segment). **Bitte anhören:** 1:53,1 · 2:31,6 · 2:39,8 · 5:21,2.
+- `entstoeren()`: Restlaut am Ende der neuen Segmente 9, 10 und 16 stummgeschaltet (Satzschlüsse „… Gewalt gegen eine Person.“ 2:43,6, „… Die Finalität liegt vor.“ 3:05,4, „… beim Diebstahl.“ 5:36,3) – **bitte anhören**.
+- Namensprüfung erneut (medium im Satz, isoliert, DTW): alle 10 Nennungen „Margit“ und alle 11 „Hagen“ im Satz korrekt erkannt, jetzt auch die erste Nennung 0:12,9. Isolierte Kurzausschnitt-Fehltreffer wie in v1; DTW-Ausreißer ohne Erkennungsabweichung (Margit 1:47,1 und 2:59,4; Hagen 0:18,4, 0:40,9 und 4:05,3). **Bitte anhören** wie bisher.
+- Bildhalt-Kontaktbögen aller 142 Bildhalte aus dem finalen MP4 v2 gesichtet: Inhalte unverändert, nur die Zeiten sind verschoben; die Wortanker der Szene F (Block „Wegnahme“, Pfeil) erscheinen zum Wort. Lippenbilder von Lexi (Klausurtipp und Merksatz, beide neu vertont) aus dem MP4 v2: Mund nur bei Wörtern offen. Schnittstellen 0:07,9 / 0:08,05 / 6:27,0 / 6:29,6 / 6:30,0 gesichtet: Das letzte Wort endet 6:28,6, das Outro beginnt 6:29,8.
+- Geräusch unverändert (Laufschritte bei 0:29,8, Pegel 0,088; die Fall-Segmente wurden nicht neu vertont).
+
+## Drive (Readback 03.10.2026, rclone; Fassung v2 05:05 Uhr)
 
 Ordner `LexVerse Produktion/087 Raub § 249 StGB/`, ID `1-aP6pGPd6NjZhmBC86rKJEIjo3YRSEvA` (nur per rclone angelegt, genau ein Ordner dieses Namens):
 
 | Datei | Größe (Byte) |
 |---|---:|
-| `087-Raub-249-StGB.mp4` | 26.322.911 |
-| `087-Raub-249-StGB-Hauptfilm.mp4` | 18.990.788 |
-| `master.zip` | 49.429.430 |
+| `087-Raub-249-StGB.mp4` | 26.443.718 |
+| `087-Raub-249-StGB-Hauptfilm.mp4` | 19.229.633 |
+| `master.zip` | 53.566.752 |
 | `thumb_A.jpg` | 162.690 |
 | `thumb_B.jpg` | 154.814 |
 | `beschreibung.txt` | 3.377 |
@@ -66,3 +87,5 @@ Ordner `LexVerse Produktion/087 Raub § 249 StGB/`, ID `1-aP6pGPd6NjZhmBC86rKJEI
 | `metadaten.json` | 4.797 |
 
 `rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; MD5 `master.zip` lokal = Drive (`7df296bb3e12c81af398623e27cddce4`), 305 Einträge, `unzip -t` fehlerfrei. `out/ton_mix.wav` nach dem Upload gelöscht; MP4s, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung. Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). Im Repository nur Text und Code.
+
+**Fassung v2 (Nachvertonung „Wegnahme“, 03.10.2026, 05:05 Uhr):** Im bestehenden Ordner (ID unverändert `1-aP6pGPd6NjZhmBC86rKJEIjo3YRSEvA`, kein neuer Ordner) per `rclone copy` ersetzt: beide MP4s, `master.zip`, `beschreibung.txt`, `kapitel.txt`, `untertitel.srt`, `metadaten.json`; Thumbnails bytegleich. `rclone check` (beidseitig): 0 Abweichungen, 9 übereinstimmende Dateien, keine zusätzlichen Dateien. MD5 aller 9 Dateien lokal = Drive; `master.zip` MD5 `cf975357fd6c794f3f7aad192ec50fae`, 325 Einträge, `unzip -t` fehlerfrei. Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (mit Abschnitt „Nachvertonung“, ohne diesen Absatz). `out/ton_mix.wav` nach dem Upload gelöscht; MP4s, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung.
