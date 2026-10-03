@@ -49,11 +49,11 @@ SEGMENTE = [
      "vierhundertfünfzehn von der Genehmigung des Gläubigers ab. [frei]Folge: Der Altschuldner wird frei. [p417]Der "
      "Übernehmer kann nach Paragraf vierhundertsiebzehn die Einwendungen aus dem Verhältnis von Gläubiger und "
      "Altschuldner erheben.", P),
-    ("[streng]Weil der Gläubiger dabei seinen Schuldner verliert, muss er das nach dem Bundesgerichtshof "
-     "deutlich zum Ausdruck bringen.", PS),
+    ("[streng]Weil der Gläubiger dabei seinen Schuldner verliert, muss sein Wille, ihn zu entlassen, "
+     "nach dem Bundesgerichtshof deutlich erkennbar sein.", PS),
     # --- D2 Schuldbeitritt ----------------------------------------------------------------------------------------------
-    ("[beit]Zweitens: der Schuldbeitritt, auch kumulative Schuldübernahme. [beit2]Er ist gesetzlich nicht allgemein geregelt; "
-     "möglich ist er als Vertrag nach Paragraf dreihundertelf Absatz eins. [ges]Der Beitretende wird neben dem Altschuldner "
+    ("[beit]Zweitens: der Schuldbeitritt, auch kumulative Schuldübernahme. [beit2]Er ist nicht allgemein geregelt, aber "
+     "nach Paragraf dreihundertelf Absatz eins als Vertrag möglich. [ges]Der Beitretende wird neben dem Altschuldner "
      "Gesamtschuldner nach Paragraf vierhunderteinundzwanzig. [nakz]Seine Schuld ist nicht "
      "akzessorisch, sie kann eigene Wege gehen. [formfr]Und der Beitritt ist grundsätzlich formfrei.", PS),
     # --- D3 Bürgschaft, § 765 Abs. 1 (Wortlaut), §§ 767, 768, 770, 771 ----------------------------------------------------
@@ -63,8 +63,8 @@ SEGMENTE = [
      "Nach Paragraf siebenhundertsiebenundsechzig ist der jeweilige Bestand der Hauptschuld maßgebend. [einr]Er kann "
      "die Einreden des Hauptschuldners erheben, Paragraf siebenhundertachtundsechzig, und nach Paragraf "
      "siebenhundertsiebzig die Zahlung verweigern, solange der Hauptschuldner anfechten oder der Gläubiger aufrechnen "
-     "kann. [p771]Außerdem hat er grundsätzlich die Einrede der Vorausklage nach Paragraf "
-     "siebenhunderteinundsiebzig: Zuerst muss der Gläubiger erfolglos beim Hauptschuldner vollstrecken.", P),
+     "kann. [p771]Außerdem hat er grundsätzlich die Einrede der Vorausklage, Paragraf "
+     "siebenhunderteinundsiebzig.", P),
     # --- D4 § 766 (Wortlaut) ------------------------------------------------------------------------------------------------
     ("[w766]Für die Bürgschaft gilt Paragraf "
      "siebenhundertsechsundsechzig: Zur Gültigkeit des Bürgschaftsvertrags ist schriftliche Erteilung der "
@@ -87,8 +87,8 @@ SEGMENTE = [
      "des Wortes übernehmen. [s4]Und die Form ist gewahrt: Katja hat schriftlich erklärt und eigenhändig unterschrieben.", PS),
     # --- G Ergebnis -----------------------------------------------------------------------------------------------------------
     ("[erg]Ergebnis: Katja haftet als Bürgin für die offenen zwölftausend Euro. [erg2]Ihre Haftung hängt an der "
-     "Kreditschuld von Jochen. [erg3]Erhebt sie die Einrede der Vorausklage, muss die Bank grundsätzlich zuerst bei "
-     "Jochen vollstrecken.", PS),
+     "Kreditschuld von Jochen. [erg3]Erhebt sie die Einrede der Vorausklage, muss die Bank aber grundsätzlich zuerst "
+     "erfolglos versuchen, bei Jochen zu vollstrecken.", PS),
     # --- H Klausurtipp (Lexi) -------------------------------------------------------------------------------------------------
     ("[tipp]Klausurtipp: Bestimme zuerst durch Auslegung, was die Erklärung ist."
      " [tipp2]Tritt ein Verbraucher einem Kreditvertrag bei, wendet der Bundesgerichtshof die Regeln über "
