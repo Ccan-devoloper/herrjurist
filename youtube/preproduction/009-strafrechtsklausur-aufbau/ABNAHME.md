@@ -2,12 +2,12 @@
 
 **Folge/Titel (Nr. laut Themenplan):** 009 · „Strafrechtsklausur Aufbau: Tatkomplexe, Beteiligte, Reihenfolge“ (Fr · Methodik)
 **Datum/Rechtsstand:** 01.10.2026; StGB laut gesetze-im-internet.de, zuletzt geändert durch Art. 1 G v. 20.3.2026 I Nr. 95; StPO (§ 127) Abruf 01.10.2026; Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
-**MP4 (Drive):** `LexVerse Produktion/009 Strafrechtsklausur Aufbau/009-Strafrechtsklausur-Aufbau.mp4`, 5:44,4 min (8,0 s Intro + 5:21,3 Hauptfilm + 15,1 s Outro), 24.565.913 Byte, SHA-256 `e9df3d49a3b14e81a1e0e37602e4f7a12f9a8c604f72dc6fd465c025e2eef2be`
-**Hauptfilm allein (Drive):** `009-Strafrechtsklausur-Aufbau-Hauptfilm.mp4`, 17.463.547 Byte, SHA-256 `ce1da1074ec3fc88a431ab4087309890ac5469658e2f34902ae7887e083447ed`
+**MP4 (Drive):** `LexVerse Produktion/009 Strafrechtsklausur Aufbau/009-Strafrechtsklausur-Aufbau.mp4`, 5:44,5 min (8,0 s Intro + 5:21,4 Hauptfilm + 15,1 s Outro), 24.745.412 Byte, SHA-256 `64f7bf22e8107530b50bce4ff755cdb206b3953f40f42bc2c30ab7bffc1d5ac7` (Nachvertonung „Wegnahme“ vom 03.10.2026, siehe unten)
+**Hauptfilm allein (Drive):** `009-Strafrechtsklausur-Aufbau-Hauptfilm.mp4`, 17.453.785 Byte, SHA-256 `32e1573283edeec3570292cdec1172e3365b3d08e188410877bb3ff5efee0db3`
 **Intro/Outro-Quellen:** unverändert aus `LexVerse Produktion/_Quellen/` (lokal `preproduction/_quellen/`), Endschnitt mit `tools/schnitt.py`
 **Produktionsmaster (Drive):** `LexVerse Produktion/009 Strafrechtsklausur Aufbau/master.zip`
 **Figuren und Stimmen:** Bruno (Open Peeps `shirt-4`, Stimme `helmut`), Kim (`robot_dance-3`, `lucy`), Tara (`blazer-3`, ohne Sprechrolle), Herr Ohm (`walking-1`/`sitting/hands_back-2`, `johann`), Lexi (`lexi.py`), Erzählerin Carla Blum; [`src/figuren_009.py`](src/figuren_009.py)
-**Skript-/Schnittrevision:** Skript v1 (vertont 01.10.2026), Segment 18 nach Spracherkennungsbefund einmal neu vertont (v1.1), Render v4 nach Korrekturen aus Vorschau-, Einzelbild-, Lippen- und Bildhaltsichtung (siehe Befunde)
+**Skript-/Schnittrevision:** Skript v1 (vertont 01.10.2026), Segment 18 nach Spracherkennungsbefund einmal neu vertont (v1.1), Segment 13 am 03.10.2026 wegen der Aussprache „Wegnahme“ nachvertont (Abschnitt unten), Render v4 nach Korrekturen aus Vorschau-, Einzelbild-, Lippen- und Bildhaltsichtung (siehe Befunde)
 **Prüfer und Datum:** Claude (automatische Prüfungen, Einzelbild-, Mund- und Kontaktbogensichtung aus dem finalen MP4, Spracherkennungs-Gegenprobe), 01.10.2026. **Hör- und Sichtprüfung des Kanalinhabers steht aus.**
 
 Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katzenkönig, Folgen 001/003/006. Zeiten als Videozeit (Hauptfilmzeit + 8,0 s), sofern nicht anders angegeben.
@@ -66,3 +66,20 @@ Ordner `LexVerse Produktion/009 Strafrechtsklausur Aufbau/`, ID `1Lp_GcdHAGiI8BA
 | `metadaten.json` | 3.453 |
 
 `rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; MD5 `master.zip` lokal = Drive (`e2c4c0bc34f1bd122e4c79a7c57401a7`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt).
+
+## Nachvertonung Aussprache Wegnahme (03.10.2026)
+
+Anlass: Der Kanalinhaber hörte „Wegnahme“ (Folge 087) mit langem e („Wehgnahme“). Seit Commit 4fc894d4 schreibt `synth_el.py` (`AUSSPRACHE`) für die Vertonung „Weck-nahme“; Skript, Tafeln und Untertitel behalten „Wegnahme“.
+
+- **Neu vertont:** nur Segment 13 (Erzählerin Carla, „Dann Tara. … Über Paragraf fünfundzwanzig Absatz zwei wird ihr Kims Wegnahme zugerechnet: Mittäterin.“), **203 Zeichen**; Trockenlauf gegen `el_cache` vorher ohne API-Aufruf: 1 Segment, 203 Zeichen, wie erwartet. Die übrigen 23 Segmente (auch Segment 18 in Fassung v1.1) kamen aus dem Cache; die bekannten Restlaut-Stummschaltungen in Segment 7 und 23 wie bisher. Lautheit −19,0 LUFS je Sprecher (Spanne 0,0 LU).
+- **Credits:** `synth_el` meldete „0 verbraucht“ (bekannte Zählerverzögerung); Kontingent vorher 53.357 Credits. Schätzung nach dem in dieser Folge gemessenen Satz (0,107 je Zeichen): ≈ 22 Credits.
+- **Dauer:** Sprachspur 321,32 s → **321,40 s**; Hauptfilm **5:21,4**, Gesamtvideo **5:44,5** (344,51 s). Ab dem Ende von Segment 13 liegen alle Zeiten 0,08 s später.
+- **Gesprochene Form:** ElevenLabs-Zeichenzeiten: das e in „Weck-“ 0,02 s (vorher „Weg-“ 0,08 s). whisper small hört „Wegname“; die Erkenner unterscheiden die Vokallänge nicht – **bitte anhören**.
+- **Videozeit der Nennung (Hörprüfung):** **2:16,7** „… wird ihr Kims Wegnahme zugerechnet: Mittäterin.“ (Hauptfilm 2:08,7 = 128,68 s; einzige gesprochene Nennung).
+- **Folien/Code:** Kein `beim()`-Anker auf „Wegnahme“ (die Zeile „Kims Wegnahme wird zugerechnet: Mittäterin“ hängt an „zugerechnet“) – `folien_009.py` unverändert. `timeline_009.py` setzt in `CUE-TIMELINE.md` „Weck-nahme“ auf „Wegnahme“ zurück. Sonst keine Änderungen.
+- **Sprechblasen Stil E:** Vorab geprüft: `--manifest` mit der alten `cues.json` gibt mit `BLASEN_STIL=e` alle 129 Keyframe-Hashes des bisherigen Manifests wieder (mit Stil C nur 123). Manifest und Vollrender deshalb mit `BLASEN_STIL=e`.
+- **Bild unverändert:** neues `bildhalt_manifest.json`: 129 Bildhalte, alle 129 SHA-256 in gleicher Reihenfolge identisch; Zeiten ab Halt 54 um bis zu 0,13 s verschoben. Bildhalt-Bögen aus dem finalen MP4 neu erzeugt (`bildhalte_bogen_1…5.png`, je 32 Halte), Bogen 2 (Halte 33–64) gesichtet: die Zeile „Kims Wegnahme wird zugerechnet“ erscheint mit Halt 58 bei „zugerechnet“ (2:17,3), nach dem Wort; nichts vor seinem Wort.
+- **Prüfung:** `pruefe_folge.py .. --mp4 … --asr`: **Exit 0** (Rückgabewert direkt geprüft), Technik OK, 344,51 s, Lautheit Intro −16,7 / Hauptfilm −16,5 / Outro −17,4 / gesamt −16,5 LUFS, Spitze −1,3 dBFS, Wortgleichheit small 94,3 % (wie bisher); übrige Abweichungen wie bisher (`out/pruefe.log`).
+- **Upload-Texte:** `youtube_metadaten.py` neu aus der neuen `cues.json`; Untertitel mit den neuen Zeiten und dem Text der bisherigen Drive-Fassung (91 Untertitel, Text zeichengleich). Kapitel, `beschreibung.txt` und `metadaten.json` bleiben unverändert (keine Kapitelzeit verschiebt sich um eine volle Sekunde) und wurden nicht neu hochgeladen. Thumbnails nicht angefasst.
+- **Alte Fassung:** MP4 24.565.913 Byte, SHA-256 `e9df3d49a3b14e81a1e0e37602e4f7a12f9a8c604f72dc6fd465c025e2eef2be`; Hauptfilm 17.463.547 Byte, SHA-256 `ce1da1074ec3fc88a431ab4087309890ac5469658e2f34902ae7887e083447ed`.
+- **Freigabe** bleibt `noch nicht bestanden` (Hörprüfung der Stelle 2:16,7 durch den Kanalinhaber offen).

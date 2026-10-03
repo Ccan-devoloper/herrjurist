@@ -11,8 +11,8 @@ KAP = [(0.0, "Fall: Omas Gemälde wird beim Enkel gepfändet"), (T("frage"), "Fr
        (T("zul"), "Statthaftigkeit, § 771 Abs. 1 ZPO"), (T("a766"), "Abgrenzung zu § 766 und § 805 ZPO"),
        (T("zust"), "Zuständigkeit, Streitwert und Parteien"), (T("rsb"), "Rechtsschutzbedürfnis"),
        (T("begr"), "Begründetheit: Eigentum als die Veräußerung hinderndes Recht"),
-       (T("beweis"), "Beweislast und Eigentumsvermutung, § 1006 BGB"), (T("einw"), "Einwendungen und Ergebnis"),
-       (T("tenor"), "Tenor"), (T("tipp"), "Klausurtipp: der Eilantrag"),
+       (T("beweis"), "Beweislast und Eigentumsvermutung, § 1006 BGB"), (T("einw"), "Einwendungen, Ergebnis und Tenor"),
+       (T("tipp"), "Klausurtipp: der Eilantrag"),
        (T("wl769"), "Einstweilige Einstellung, §§ 771 III, 769, 770 ZPO"), (T("sch"), "Klausurschema"),
        (T("merke"), "Merksatz")]
 mmss = lambda t: f"{int(t // 60)}:{int(t % 60):02d}"
@@ -57,7 +57,9 @@ for alt, neu in (("\nWendland:", "\nFrau Wendland:"), ("\nVollmer:", "\nHerr Vol
                  ("\nGerichtsvollzieherin:", "\nDie Gerichtsvollzieherin:")):
     srt = srt.replace(alt, neu)
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
+srt = srt.replace("tausendachthundert Euro", "1.800 Euro").replace("drei Wochen", "3 Wochen")
 assert not re.search(r"§\n", srt)
+assert "tausend" not in srt
 open(f"{U}/untertitel.srt", "w").write(srt)
 
 m = json.load(open(f"{U}/metadaten.json"))

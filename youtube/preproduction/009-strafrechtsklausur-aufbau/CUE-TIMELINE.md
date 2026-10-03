@@ -56,80 +56,80 @@ Quelle: `bildhalt_manifest.json` (129 Bildhalte, davon 129 eigenständig), `cues
 | 50 | 1:51.00 | 1:54.16 | Carla (Erzählerin/Lexi) | Dass die Akkus für Bruno sind, schadet nicht: Die | 1. TK Diebstahl im Laden › A. Kim › § 242 I StGB | `181783cc69fc` |
 | 51 | 1:54.16 | 1:56.40 | Carla (Erzählerin/Lexi) | Absicht, sie einem Dritten zuzueignen, | 1. TK Diebstahl im Laden › A. Kim › § 242 I StGB | `4f7c2cc5649d` |
 | 52 | 1:56.40 | 1:57.68 | Carla (Erzählerin/Lexi) | genügt. | 1. TK Diebstahl im Laden › A. Kim › § 242 I StGB | `a45ef1e83612` |
-| 53 | 1:58.08 | 1:58.96 | Carla (Erzählerin/Lexi) | Tara. | 1. TK Diebstahl im Laden › B. Tara | `17698da7fda9` |
-| 54 | 1:58.96 | 2:02.72 | Carla (Erzählerin/Lexi) | Sie hat nichts eingepackt, aber nach dem gemeinsamen Plan Ohm | 1. TK Diebstahl im Laden › B. Tara | `0a8d7de18d5a` |
-| 55 | 2:02.72 | 2:03.96 | Carla (Erzählerin/Lexi) | abgelenkt und soll die | 1. TK Diebstahl im Laden › B. Tara | `1065c395d81e` |
-| 56 | 2:03.96 | 2:05.16 | Carla (Erzählerin/Lexi) | Hälfte bekommen. | 1. TK Diebstahl im Laden › B. Tara | `d1a5dc3a98b1` |
-| 57 | 2:05.16 | 2:09.16 | Carla (Erzählerin/Lexi) | Über Paragraf fünfundzwanzig Absatz zwei wird ihr Kims Wegnahme | 1. TK Diebstahl im Laden › B. Tara › §§ 242 I, 25 II StGB | `e8596ea92c36` |
-| 58 | 2:09.16 | 2:10.24 | Carla (Erzählerin/Lexi) | zugerechnet: | 1. TK Diebstahl im Laden › B. Tara › §§ 242 I, 25 II StGB | `094df5b5a526` |
-| 59 | 2:10.24 | 2:11.84 | Carla (Erzählerin/Lexi) | Mittäterin. | 1. TK Diebstahl im Laden › B. Tara › §§ 242 I, 25 II StGB | `cfe0bb37cb63` |
-| 60 | 2:11.84 | 2:17.12 | Carla (Erzählerin/Lexi) | Weil beide Unterschiedliches getan haben, prüfst du sie getrennt, Kim zuerst. | 1. TK Diebstahl im Laden › Mittäter getrennt prüfen | `97fffc7f5560` |
-| 61 | 2:17.12 | 2:21.44 | Carla (Erzählerin/Lexi) | Hätten beide dasselbe getan, dürftest du sie zusammen prüfen. | 1. TK Diebstahl im Laden › Mittäter getrennt prüfen | `9471429a2220` |
-| 62 | 2:21.84 | 2:23.12 | Carla (Erzählerin/Lexi) | kommt zuletzt. | 1. TK Diebstahl im Laden › C. Bruno | `71e9410d21bb` |
-| 63 | 2:23.12 | 2:25.24 | Carla (Erzählerin/Lexi) | Er war gar nicht im Laden. | 1. TK Diebstahl im Laden › C. Bruno | `36b122056d32` |
-| 64 | 2:25.24 | 2:30.56 | Carla (Erzählerin/Lexi) | Anstifter ist nach Paragraf sechsundzwanzig, wer vorsätzlich einen anderen zu dessen | 1. TK Diebstahl im Laden › C. Bruno › §§ 242 I, 26 StGB | `3f457cd23b62` |
-| 65 | 2:30.56 | 2:33.88 | Carla (Erzählerin/Lexi) | vorsätzlich begangener rechtswidriger Tat bestimmt. | 1. TK Diebstahl im Laden › C. Bruno › §§ 242 I, 26 StGB | `3dd51d1e8f11` |
-| 66 | 2:33.88 | 2:37.16 | Carla (Erzählerin/Lexi) | Ohne geprüfte Haupttat also keine Anstiftung. | 1. TK Diebstahl im Laden › C. Bruno › §§ 242 I, 26 StGB | `2ea1bb7c7a4e` |
-| 67 | 2:37.16 | 2:41.06 | Carla (Erzählerin/Lexi) | Darum gilt: Täter vor Teilnehmer. | Aufbau › Täter vor Teilnehmer | `61bc4a53e601` |
-| 68 | 2:41.36 | 2:45.82 | Carla (Erzählerin/Lexi) | Tatkomplex zwei, die Flucht. Wieder zuerst Kim. | 2. TK Flucht an der Ecke › A. Kim | `5c9225b2aaac` |
-| 69 | 2:45.82 | 2:46.78 | Carla (Erzählerin/Lexi) | Du beginnst mit dem | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `e6e6221f8ca0` |
-| 70 | 2:46.78 | 2:49.14 | Carla (Erzählerin/Lexi) | schwersten Delikt, das in Betracht kommt: | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `279468950bf3` |
-| 71 | 2:49.14 | 2:53.26 | Carla (Erzählerin/Lexi) | räuberischer Diebstahl, Paragraf zweihundertzweiundfünfzig. | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `5068448828a3` |
-| 72 | 2:53.26 | 2:55.78 | Carla (Erzählerin/Lexi) | Er verlangt Gewalt oder Drohung, um sich im | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `00b88991989b` |
-| 73 | 2:55.78 | 2:57.77 | Carla (Erzählerin/Lexi) | Besitz der Beute zu erhalten. | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `54a5387214a1` |
-| 74 | 2:57.94 | 3:00.02 | Carla (Erzählerin/Lexi) | Akkus hatte Ohm aber schon zurück. | 2. TK Flucht an der Ecke › A. Kim › § 252 StGB: Beute schon weg | `08600d79ff2b` |
-| 75 | 3:00.02 | 3:01.06 | Carla (Erzählerin/Lexi) | Kim wollte nur | 2. TK Flucht an der Ecke › A. Kim › § 252 StGB: Beute schon weg | `1ff8ea067757` |
-| 76 | 3:01.06 | 3:02.18 | Carla (Erzählerin/Lexi) | fliehen. | 2. TK Flucht an der Ecke › A. Kim › § 252 StGB: Beute schon weg | `383cef403a25` |
-| 77 | 3:02.48 | 3:04.38 | Carla (Erzählerin/Lexi) | Danach die leichteren Delikte. | 2. TK Flucht an der Ecke › A. Kim › leichtere Delikte | `4ab64aa934f7` |
-| 78 | 3:04.38 | 3:05.50 | Carla (Erzählerin/Lexi) | Der Stoß ist eine | 2. TK Flucht an der Ecke › A. Kim › II. § 223 I StGB | `b28ec871bcf2` |
-| 79 | 3:05.50 | 3:08.94 | Carla (Erzählerin/Lexi) | Körperverletzung, Paragraf zweihundertdreiundzwanzig, | 2. TK Flucht an der Ecke › A. Kim › II. § 223 I StGB | `d668a886d1f6` |
-| 80 | 3:08.94 | 3:09.94 | Carla (Erzählerin/Lexi) | und zugleich eine | 2. TK Flucht an der Ecke › A. Kim › III. § 240 I StGB | `73a2bdd72426` |
-| 81 | 3:09.94 | 3:13.62 | Carla (Erzählerin/Lexi) | Nötigung, Paragraf zweihundertvierzig: Ohm sollte | 2. TK Flucht an der Ecke › A. Kim › III. § 240 I StGB | `eee7b7477941` |
-| 82 | 3:13.62 | 3:14.70 | Carla (Erzählerin/Lexi) | loslassen. | 2. TK Flucht an der Ecke › A. Kim › III. § 240 I StGB | `9cde75ba01d5` |
-| 83 | 3:14.70 | 3:16.58 | Carla (Erzählerin/Lexi) | Notwehr scheidet aus. | 2. TK Flucht an der Ecke › A. Kim › RW: § 127 I StPO | `ff4199968531` |
-| 84 | 3:16.58 | 3:17.78 | Carla (Erzählerin/Lexi) | Ohm durfte Kim nach | 2. TK Flucht an der Ecke › A. Kim › RW: § 127 I StPO | `7ad5a0d2a220` |
-| 85 | 3:17.78 | 3:22.34 | Carla (Erzählerin/Lexi) | Paragraf hundertsiebenundzwanzig der Strafprozessordnung festhalten. | 2. TK Flucht an der Ecke › A. Kim › RW: § 127 I StPO | `d7e416fc9dcd` |
-| 86 | 3:22.74 | 3:23.74 | Carla (Erzählerin/Lexi) | Tara. | 2. TK Flucht an der Ecke › B. Tara | `e0a69243eb61` |
-| 87 | 3:23.78 | 3:27.46 | Carla (Erzählerin/Lexi) | Vollendetes prüfst du vor Versuchtem. Bei Tara ist | 2. TK Flucht an der Ecke › B. Tara | `54cc9fbe5fe5` |
-| 88 | 3:27.46 | 3:29.62 | Carla (Erzählerin/Lexi) | nichts vollendet, die Flasche hat Ohm | 2. TK Flucht an der Ecke › B. Tara | `a892c69e0880` |
-| 89 | 3:29.62 | 3:30.54 | Carla (Erzählerin/Lexi) | verfehlt. | 2. TK Flucht an der Ecke › B. Tara | `ab81fa32c7e8` |
-| 90 | 3:30.54 | 3:33.69 | Carla (Erzählerin/Lexi) | Also versuchte gefährliche Körperverletzung: | 2. TK Flucht an der Ecke › B. Tara › §§ 223 I, 224 I Nr. 2, 22, 23 I StGB | `aa35cb491ca3` |
-| 91 | 3:33.69 | 3:36.30 | Carla (Erzählerin/Lexi) | die Flasche als gefährliches Werkzeug. | 2. TK Flucht an der Ecke › B. Tara › §§ 223 I, 224 I Nr. 2, 22, 23 I StGB | `979f3171c6e8` |
-| 92 | 3:36.30 | 3:39.66 | Carla (Erzählerin/Lexi) | Qualifikation und Grunddelikt prüfst du zusammen. | 2. TK Flucht an der Ecke › B. Tara › §§ 223 I, 224 I Nr. 2, 22, 23 I StGB | `a1c5bee0ebe1` |
-| 93 | 3:39.66 | 3:44.98 | Carla (Erzählerin/Lexi) | Strafbar ist der Versuch nach Paragraf zweihundertvierundzwanzig Absatz zwei. | 2. TK Flucht an der Ecke › B. Tara › Strafbarkeit des Versuchs, § 224 II | `f0c2bae5476a` |
-| 94 | 3:45.38 | 3:47.94 | Carla (Erzählerin/Lexi) | Stoß wird Tara nicht zugerechnet, und | 2. TK Flucht an der Ecke › keine wechselseitige Zurechnung | `0ed5e989357e` |
-| 95 | 3:47.94 | 3:50.02 | Carla (Erzählerin/Lexi) | umgekehrt: Für die Flucht gab es | 2. TK Flucht an der Ecke › keine wechselseitige Zurechnung | `793873494914` |
-| 96 | 3:50.02 | 3:51.82 | Carla (Erzählerin/Lexi) | keinen gemeinsamen Plan. | 2. TK Flucht an der Ecke › keine wechselseitige Zurechnung | `93326dbd49bd` |
-| 97 | 3:51.82 | 3:52.90 | Carla (Erzählerin/Lexi) | Und Bruno? | 2. TK Flucht an der Ecke › Bruno: kein Auftrag zur Gewalt | `f23f80c7dfc3` |
-| 98 | 3:52.90 | 3:56.20 | Carla (Erzählerin/Lexi) | Gewalt war nicht Teil seines Auftrags. | 2. TK Flucht an der Ecke › Bruno: kein Auftrag zur Gewalt | `bc3f2b7a16d5` |
-| 99 | 3:56.50 | 3:58.08 | Carla (Erzählerin/Lexi) | Bleiben die Konkurrenzen. | Konkurrenzen | `5bcbcdef7c18` |
-| 100 | 3:58.08 | 4:03.00 | Carla (Erzählerin/Lexi) | Im Tatkomplex: Kims Stoß verletzt mit einer Handlung zwei Gesetze, | Konkurrenzen › Tateinheit, § 52 StGB | `2acc6de295b6` |
-| 101 | 4:03.00 | 4:06.04 | Carla (Erzählerin/Lexi) | Tateinheit, Paragraf zweiundfünfzig. | Konkurrenzen › Tateinheit, § 52 StGB | `e78b45c9c10f` |
-| 102 | 4:06.04 | 4:11.00 | Carla (Erzählerin/Lexi) | Über die Tatkomplexe hinweg: Diebstahl und Stoß sind zwei Handlungen, | Konkurrenzen › Tatmehrheit, § 53 StGB | `99ae89d4011c` |
-| 103 | 4:11.00 | 4:14.00 | Carla (Erzählerin/Lexi) | Tatmehrheit, Paragraf dreiundfünfzig. | Konkurrenzen › Tatmehrheit, § 53 StGB | `5f61b00f2349` |
-| 104 | 4:14.20 | 4:15.56 | Carla (Erzählerin/Lexi) | Ebenso bei Tara: | Konkurrenzen › Tatmehrheit, § 53 StGB | `04d80a83ea05` |
-| 105 | 4:15.56 | 4:18.62 | Carla (Erzählerin/Lexi) | Diebstahl und Flaschenwurf. | Konkurrenzen › Tatmehrheit, § 53 StGB | `ad634ccf8b5c` |
-| 106 | 4:18.82 | 4:19.82 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Aufbau zeigen, nicht erklären | `af7333a65e2c` |
-| 107 | 4:19.82 | 4:22.82 | Carla (Erzählerin/Lexi) | Erkläre deinen Aufbau nicht, zeig ihn. | Klausurtipp · Aufbau zeigen, nicht erklären | `6381db904f7e` |
-| 108 | 4:22.82 | 4:25.54 | Carla (Erzählerin/Lexi) | Jede Überschrift nennt Tatkomplex, | Klausurtipp · Aufbau zeigen, nicht erklären | `3ee9743b418c` |
-| 109 | 4:25.54 | 4:26.22 | Carla (Erzählerin/Lexi) | Person und | Klausurtipp · Aufbau zeigen, nicht erklären | `3f296c288f9a` |
-| 110 | 4:26.22 | 4:28.10 | Carla (Erzählerin/Lexi) | Delikt mit Paragraf. | Klausurtipp · Aufbau zeigen, nicht erklären | `b8998f8cd408` |
-| 111 | 4:28.10 | 4:29.82 | Carla (Erzählerin/Lexi) | Und bei Bruno verweist du nach | Klausurtipp · Aufbau zeigen, nicht erklären | `2c17a30ad860` |
-| 112 | 4:29.82 | 4:32.86 | Carla (Erzählerin/Lexi) | oben: Die Haupttat steht schon fest. | Klausurtipp · Aufbau zeigen, nicht erklären | `df10a3420c9f` |
-| 113 | 4:32.86 | 4:34.66 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `ff4d111f6199` |
-| 114 | 4:34.66 | 4:37.94 | Carla (Erzählerin/Lexi) | Erster Tatkomplex, der Diebstahl im Laden. | Klausurschema | `4bbe42eec7bc` |
-| 115 | 4:37.94 | 4:40.34 | Carla (Erzählerin/Lexi) | A: Kim, Diebstahl. | Klausurschema | `832ea4ec6f5c` |
-| 116 | 4:40.34 | 4:44.26 | Carla (Erzählerin/Lexi) | B: Tara, Diebstahl in Mittäterschaft. | Klausurschema | `925bfd557334` |
-| 117 | 4:44.26 | 4:47.82 | Carla (Erzählerin/Lexi) | C: Bruno, Anstiftung zum Diebstahl. | Klausurschema | `029beecc9553` |
-| 118 | 4:47.82 | 4:50.74 | Carla (Erzählerin/Lexi) | Zweiter Tatkomplex, die Flucht. | Klausurschema | `7d8d97695b77` |
-| 119 | 4:50.74 | 4:58.34 | Carla (Erzählerin/Lexi) | A: Kim, räuberischer Diebstahl abgelehnt, dann Körperverletzung und Nötigung in Tateinheit. | Klausurschema | `2f894eefd581` |
-| 120 | 4:58.34 | 5:02.74 | Carla (Erzählerin/Lexi) | B: Tara, versuchte gefährliche Körperverletzung. | Klausurschema | `b3bd07900154` |
-| 121 | 5:02.74 | 5:07.52 | Carla (Erzählerin/Lexi) | Zum Schluss das Gesamtergebnis: Tatmehrheit. | Klausurschema | `79ff21e2373a` |
-| 122 | 5:07.52 | 5:09.68 | Carla (Erzählerin/Lexi) | Merke: Ordne erst nach der | Merksatz | `490af42201dd` |
-| 123 | 5:09.68 | 5:11.04 | Carla (Erzählerin/Lexi) | Zeit, dann nach der | Merksatz | `8ab1fec8ea81` |
-| 124 | 5:11.04 | 5:12.24 | Carla (Erzählerin/Lexi) | Nähe zur Tat. | Merksatz | `3d80b42e92e4` |
-| 125 | 5:12.28 | 5:14.16 | Carla (Erzählerin/Lexi) | Täter vor Teilnehmer, | Merksatz | `104ebdd2741c` |
-| 126 | 5:14.16 | 5:16.16 | Carla (Erzählerin/Lexi) | Vollendung vor Versuch, | Merksatz | `915e608b3a31` |
-| 127 | 5:16.16 | 5:18.08 | Carla (Erzählerin/Lexi) | Schweres vor Leichtem. | Merksatz | `2f1ccc3ee51e` |
-| 128 | 5:18.08 | 5:18.48 | Carla (Erzählerin/Lexi) | Und die | Merksatz | `54ebc216f85b` |
-| 129 | 5:18.48 | 5:21.27 | Carla (Erzählerin/Lexi) | Konkurrenzen zum Schluss. | Merksatz | `ce4f26c1f485` |
+| 53 | 1:58.08 | 1:59.04 | Carla (Erzählerin/Lexi) | Tara. | 1. TK Diebstahl im Laden › B. Tara | `17698da7fda9` |
+| 54 | 1:59.04 | 2:02.80 | Carla (Erzählerin/Lexi) | Sie hat nichts eingepackt, aber nach dem gemeinsamen Plan Ohm | 1. TK Diebstahl im Laden › B. Tara | `0a8d7de18d5a` |
+| 55 | 2:02.80 | 2:04.08 | Carla (Erzählerin/Lexi) | abgelenkt und soll die | 1. TK Diebstahl im Laden › B. Tara | `1065c395d81e` |
+| 56 | 2:04.08 | 2:05.29 | Carla (Erzählerin/Lexi) | Hälfte bekommen. | 1. TK Diebstahl im Laden › B. Tara | `d1a5dc3a98b1` |
+| 57 | 2:05.29 | 2:09.28 | Carla (Erzählerin/Lexi) | bekommen. Über Paragraf fünfundzwanzig Absatz zwei wird ihr Kims Wegnahme | 1. TK Diebstahl im Laden › B. Tara › §§ 242 I, 25 II StGB | `e8596ea92c36` |
+| 58 | 2:09.28 | 2:10.36 | Carla (Erzählerin/Lexi) | zugerechnet: | 1. TK Diebstahl im Laden › B. Tara › §§ 242 I, 25 II StGB | `094df5b5a526` |
+| 59 | 2:10.36 | 2:11.92 | Carla (Erzählerin/Lexi) | Mittäterin. | 1. TK Diebstahl im Laden › B. Tara › §§ 242 I, 25 II StGB | `cfe0bb37cb63` |
+| 60 | 2:11.92 | 2:17.20 | Carla (Erzählerin/Lexi) | Weil beide Unterschiedliches getan haben, prüfst du sie getrennt, Kim zuerst. | 1. TK Diebstahl im Laden › Mittäter getrennt prüfen | `97fffc7f5560` |
+| 61 | 2:17.20 | 2:21.52 | Carla (Erzählerin/Lexi) | Hätten beide dasselbe getan, dürftest du sie zusammen prüfen. | 1. TK Diebstahl im Laden › Mittäter getrennt prüfen | `9471429a2220` |
+| 62 | 2:21.92 | 2:23.20 | Carla (Erzählerin/Lexi) | kommt zuletzt. | 1. TK Diebstahl im Laden › C. Bruno | `71e9410d21bb` |
+| 63 | 2:23.20 | 2:25.32 | Carla (Erzählerin/Lexi) | Er war gar nicht im Laden. | 1. TK Diebstahl im Laden › C. Bruno | `36b122056d32` |
+| 64 | 2:25.32 | 2:30.64 | Carla (Erzählerin/Lexi) | Anstifter ist nach Paragraf sechsundzwanzig, wer vorsätzlich einen anderen zu dessen | 1. TK Diebstahl im Laden › C. Bruno › §§ 242 I, 26 StGB | `3f457cd23b62` |
+| 65 | 2:30.64 | 2:33.96 | Carla (Erzählerin/Lexi) | vorsätzlich begangener rechtswidriger Tat bestimmt. | 1. TK Diebstahl im Laden › C. Bruno › §§ 242 I, 26 StGB | `3dd51d1e8f11` |
+| 66 | 2:33.96 | 2:37.24 | Carla (Erzählerin/Lexi) | Ohne geprüfte Haupttat also keine Anstiftung. | 1. TK Diebstahl im Laden › C. Bruno › §§ 242 I, 26 StGB | `2ea1bb7c7a4e` |
+| 67 | 2:37.24 | 2:41.14 | Carla (Erzählerin/Lexi) | Darum gilt: Täter vor Teilnehmer. | Aufbau › Täter vor Teilnehmer | `61bc4a53e601` |
+| 68 | 2:41.44 | 2:45.90 | Carla (Erzählerin/Lexi) | Tatkomplex zwei, die Flucht. Wieder zuerst Kim. | 2. TK Flucht an der Ecke › A. Kim | `5c9225b2aaac` |
+| 69 | 2:45.90 | 2:46.86 | Carla (Erzählerin/Lexi) | Du beginnst mit dem | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `e6e6221f8ca0` |
+| 70 | 2:46.86 | 2:49.22 | Carla (Erzählerin/Lexi) | schwersten Delikt, das in Betracht kommt: | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `279468950bf3` |
+| 71 | 2:49.22 | 2:53.34 | Carla (Erzählerin/Lexi) | räuberischer Diebstahl, Paragraf zweihundertzweiundfünfzig. | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `5068448828a3` |
+| 72 | 2:53.34 | 2:55.86 | Carla (Erzählerin/Lexi) | Er verlangt Gewalt oder Drohung, um sich im | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `00b88991989b` |
+| 73 | 2:55.86 | 2:57.85 | Carla (Erzählerin/Lexi) | Besitz der Beute zu erhalten. | 2. TK Flucht an der Ecke › A. Kim › I. § 252 StGB | `54a5387214a1` |
+| 74 | 2:58.02 | 3:00.10 | Carla (Erzählerin/Lexi) | Akkus hatte Ohm aber schon zurück. | 2. TK Flucht an der Ecke › A. Kim › § 252 StGB: Beute schon weg | `08600d79ff2b` |
+| 75 | 3:00.10 | 3:01.14 | Carla (Erzählerin/Lexi) | Kim wollte nur | 2. TK Flucht an der Ecke › A. Kim › § 252 StGB: Beute schon weg | `1ff8ea067757` |
+| 76 | 3:01.14 | 3:02.26 | Carla (Erzählerin/Lexi) | fliehen. | 2. TK Flucht an der Ecke › A. Kim › § 252 StGB: Beute schon weg | `383cef403a25` |
+| 77 | 3:02.56 | 3:04.46 | Carla (Erzählerin/Lexi) | Danach die leichteren Delikte. | 2. TK Flucht an der Ecke › A. Kim › leichtere Delikte | `4ab64aa934f7` |
+| 78 | 3:04.46 | 3:05.58 | Carla (Erzählerin/Lexi) | Der Stoß ist eine | 2. TK Flucht an der Ecke › A. Kim › II. § 223 I StGB | `b28ec871bcf2` |
+| 79 | 3:05.58 | 3:09.02 | Carla (Erzählerin/Lexi) | Körperverletzung, Paragraf zweihundertdreiundzwanzig, | 2. TK Flucht an der Ecke › A. Kim › II. § 223 I StGB | `d668a886d1f6` |
+| 80 | 3:09.02 | 3:10.02 | Carla (Erzählerin/Lexi) | und zugleich eine | 2. TK Flucht an der Ecke › A. Kim › III. § 240 I StGB | `73a2bdd72426` |
+| 81 | 3:10.02 | 3:13.70 | Carla (Erzählerin/Lexi) | Nötigung, Paragraf zweihundertvierzig: Ohm sollte | 2. TK Flucht an der Ecke › A. Kim › III. § 240 I StGB | `eee7b7477941` |
+| 82 | 3:13.70 | 3:14.78 | Carla (Erzählerin/Lexi) | loslassen. | 2. TK Flucht an der Ecke › A. Kim › III. § 240 I StGB | `9cde75ba01d5` |
+| 83 | 3:14.78 | 3:16.66 | Carla (Erzählerin/Lexi) | Notwehr scheidet aus. | 2. TK Flucht an der Ecke › A. Kim › RW: § 127 I StPO | `ff4199968531` |
+| 84 | 3:16.66 | 3:17.86 | Carla (Erzählerin/Lexi) | Ohm durfte Kim nach | 2. TK Flucht an der Ecke › A. Kim › RW: § 127 I StPO | `7ad5a0d2a220` |
+| 85 | 3:17.86 | 3:22.42 | Carla (Erzählerin/Lexi) | Paragraf hundertsiebenundzwanzig der Strafprozessordnung festhalten. | 2. TK Flucht an der Ecke › A. Kim › RW: § 127 I StPO | `d7e416fc9dcd` |
+| 86 | 3:22.82 | 3:23.82 | Carla (Erzählerin/Lexi) | Tara. | 2. TK Flucht an der Ecke › B. Tara | `e0a69243eb61` |
+| 87 | 3:23.86 | 3:27.54 | Carla (Erzählerin/Lexi) | Vollendetes prüfst du vor Versuchtem. Bei Tara ist | 2. TK Flucht an der Ecke › B. Tara | `54cc9fbe5fe5` |
+| 88 | 3:27.54 | 3:29.70 | Carla (Erzählerin/Lexi) | nichts vollendet, die Flasche hat Ohm | 2. TK Flucht an der Ecke › B. Tara | `a892c69e0880` |
+| 89 | 3:29.70 | 3:30.62 | Carla (Erzählerin/Lexi) | verfehlt. | 2. TK Flucht an der Ecke › B. Tara | `ab81fa32c7e8` |
+| 90 | 3:30.62 | 3:33.77 | Carla (Erzählerin/Lexi) | Also versuchte gefährliche Körperverletzung: | 2. TK Flucht an der Ecke › B. Tara › §§ 223 I, 224 I Nr. 2, 22, 23 I StGB | `aa35cb491ca3` |
+| 91 | 3:33.77 | 3:36.38 | Carla (Erzählerin/Lexi) | die Flasche als gefährliches Werkzeug. | 2. TK Flucht an der Ecke › B. Tara › §§ 223 I, 224 I Nr. 2, 22, 23 I StGB | `979f3171c6e8` |
+| 92 | 3:36.38 | 3:39.74 | Carla (Erzählerin/Lexi) | Qualifikation und Grunddelikt prüfst du zusammen. | 2. TK Flucht an der Ecke › B. Tara › §§ 223 I, 224 I Nr. 2, 22, 23 I StGB | `a1c5bee0ebe1` |
+| 93 | 3:39.74 | 3:45.06 | Carla (Erzählerin/Lexi) | Strafbar ist der Versuch nach Paragraf zweihundertvierundzwanzig Absatz zwei. | 2. TK Flucht an der Ecke › B. Tara › Strafbarkeit des Versuchs, § 224 II | `f0c2bae5476a` |
+| 94 | 3:45.46 | 3:48.02 | Carla (Erzählerin/Lexi) | Stoß wird Tara nicht zugerechnet, und | 2. TK Flucht an der Ecke › keine wechselseitige Zurechnung | `0ed5e989357e` |
+| 95 | 3:48.02 | 3:50.10 | Carla (Erzählerin/Lexi) | umgekehrt: Für die Flucht gab es | 2. TK Flucht an der Ecke › keine wechselseitige Zurechnung | `793873494914` |
+| 96 | 3:50.10 | 3:51.90 | Carla (Erzählerin/Lexi) | keinen gemeinsamen Plan. | 2. TK Flucht an der Ecke › keine wechselseitige Zurechnung | `93326dbd49bd` |
+| 97 | 3:51.90 | 3:52.98 | Carla (Erzählerin/Lexi) | Und Bruno? | 2. TK Flucht an der Ecke › Bruno: kein Auftrag zur Gewalt | `f23f80c7dfc3` |
+| 98 | 3:52.98 | 3:56.28 | Carla (Erzählerin/Lexi) | Gewalt war nicht Teil seines Auftrags. | 2. TK Flucht an der Ecke › Bruno: kein Auftrag zur Gewalt | `bc3f2b7a16d5` |
+| 99 | 3:56.58 | 3:58.16 | Carla (Erzählerin/Lexi) | Bleiben die Konkurrenzen. | Konkurrenzen | `5bcbcdef7c18` |
+| 100 | 3:58.16 | 4:03.08 | Carla (Erzählerin/Lexi) | Im Tatkomplex: Kims Stoß verletzt mit einer Handlung zwei Gesetze, | Konkurrenzen › Tateinheit, § 52 StGB | `2acc6de295b6` |
+| 101 | 4:03.08 | 4:06.12 | Carla (Erzählerin/Lexi) | Tateinheit, Paragraf zweiundfünfzig. | Konkurrenzen › Tateinheit, § 52 StGB | `e78b45c9c10f` |
+| 102 | 4:06.12 | 4:11.08 | Carla (Erzählerin/Lexi) | Über die Tatkomplexe hinweg: Diebstahl und Stoß sind zwei Handlungen, | Konkurrenzen › Tatmehrheit, § 53 StGB | `99ae89d4011c` |
+| 103 | 4:11.08 | 4:14.08 | Carla (Erzählerin/Lexi) | Tatmehrheit, Paragraf dreiundfünfzig. | Konkurrenzen › Tatmehrheit, § 53 StGB | `5f61b00f2349` |
+| 104 | 4:14.28 | 4:15.64 | Carla (Erzählerin/Lexi) | Ebenso bei Tara: | Konkurrenzen › Tatmehrheit, § 53 StGB | `04d80a83ea05` |
+| 105 | 4:15.64 | 4:18.70 | Carla (Erzählerin/Lexi) | Diebstahl und Flaschenwurf. | Konkurrenzen › Tatmehrheit, § 53 StGB | `ad634ccf8b5c` |
+| 106 | 4:18.90 | 4:19.90 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Aufbau zeigen, nicht erklären | `af7333a65e2c` |
+| 107 | 4:19.90 | 4:22.90 | Carla (Erzählerin/Lexi) | Erkläre deinen Aufbau nicht, zeig ihn. | Klausurtipp · Aufbau zeigen, nicht erklären | `6381db904f7e` |
+| 108 | 4:22.90 | 4:25.62 | Carla (Erzählerin/Lexi) | Jede Überschrift nennt Tatkomplex, | Klausurtipp · Aufbau zeigen, nicht erklären | `3ee9743b418c` |
+| 109 | 4:25.62 | 4:26.30 | Carla (Erzählerin/Lexi) | Person und | Klausurtipp · Aufbau zeigen, nicht erklären | `3f296c288f9a` |
+| 110 | 4:26.30 | 4:28.18 | Carla (Erzählerin/Lexi) | Delikt mit Paragraf. | Klausurtipp · Aufbau zeigen, nicht erklären | `b8998f8cd408` |
+| 111 | 4:28.18 | 4:29.90 | Carla (Erzählerin/Lexi) | Und bei Bruno verweist du nach | Klausurtipp · Aufbau zeigen, nicht erklären | `2c17a30ad860` |
+| 112 | 4:29.90 | 4:32.94 | Carla (Erzählerin/Lexi) | oben: Die Haupttat steht schon fest. | Klausurtipp · Aufbau zeigen, nicht erklären | `df10a3420c9f` |
+| 113 | 4:32.94 | 4:34.74 | Carla (Erzählerin/Lexi) | Dein Klausurschema. | Klausurschema | `ff4d111f6199` |
+| 114 | 4:34.74 | 4:38.02 | Carla (Erzählerin/Lexi) | Erster Tatkomplex, der Diebstahl im Laden. | Klausurschema | `4bbe42eec7bc` |
+| 115 | 4:38.02 | 4:40.42 | Carla (Erzählerin/Lexi) | A: Kim, Diebstahl. | Klausurschema | `832ea4ec6f5c` |
+| 116 | 4:40.42 | 4:44.34 | Carla (Erzählerin/Lexi) | B: Tara, Diebstahl in Mittäterschaft. | Klausurschema | `925bfd557334` |
+| 117 | 4:44.34 | 4:47.90 | Carla (Erzählerin/Lexi) | C: Bruno, Anstiftung zum Diebstahl. | Klausurschema | `029beecc9553` |
+| 118 | 4:47.90 | 4:50.82 | Carla (Erzählerin/Lexi) | Zweiter Tatkomplex, die Flucht. | Klausurschema | `7d8d97695b77` |
+| 119 | 4:50.82 | 4:58.42 | Carla (Erzählerin/Lexi) | A: Kim, räuberischer Diebstahl abgelehnt, dann Körperverletzung und Nötigung in Tateinheit. | Klausurschema | `2f894eefd581` |
+| 120 | 4:58.42 | 5:02.82 | Carla (Erzählerin/Lexi) | B: Tara, versuchte gefährliche Körperverletzung. | Klausurschema | `b3bd07900154` |
+| 121 | 5:02.82 | 5:07.60 | Carla (Erzählerin/Lexi) | Zum Schluss das Gesamtergebnis: Tatmehrheit. | Klausurschema | `79ff21e2373a` |
+| 122 | 5:07.60 | 5:09.76 | Carla (Erzählerin/Lexi) | Merke: Ordne erst nach der | Merksatz | `490af42201dd` |
+| 123 | 5:09.76 | 5:11.12 | Carla (Erzählerin/Lexi) | Zeit, dann nach der | Merksatz | `8ab1fec8ea81` |
+| 124 | 5:11.12 | 5:12.32 | Carla (Erzählerin/Lexi) | Nähe zur Tat. | Merksatz | `3d80b42e92e4` |
+| 125 | 5:12.36 | 5:14.24 | Carla (Erzählerin/Lexi) | Täter vor Teilnehmer, | Merksatz | `104ebdd2741c` |
+| 126 | 5:14.24 | 5:16.24 | Carla (Erzählerin/Lexi) | Vollendung vor Versuch, | Merksatz | `915e608b3a31` |
+| 127 | 5:16.24 | 5:18.16 | Carla (Erzählerin/Lexi) | Schweres vor Leichtem. | Merksatz | `2f1ccc3ee51e` |
+| 128 | 5:18.16 | 5:18.56 | Carla (Erzählerin/Lexi) | Und die | Merksatz | `54ebc216f85b` |
+| 129 | 5:18.56 | 5:21.35 | Carla (Erzählerin/Lexi) | Konkurrenzen zum Schluss. | Merksatz | `ce4f26c1f485` |
