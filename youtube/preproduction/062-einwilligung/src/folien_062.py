@@ -285,7 +285,7 @@ folie([("rw", f"{PR} › Einwilligung, § 228 StGB"), ("rf", f"{PR} › Einwilli
     z("Anders: Einverständnis", 140, 600, "einv", "ExtraBold", 34),
     z("schließt schon den Tatbestand aus, wo das Delikt", 150, 655, beim("einv", "schließt"), size=31),
     z("ein Handeln gegen den Willen voraussetzt", 150, 700, beim("einv", "Handeln"), size=31),
-    z("z. B. Wegnahme beim Diebstahl, § 242 StGB", 150, 750, beim("einv", "Wegnahme"), "Bold", 31),
+    z("z. B. Wegnahme beim Diebstahl, § 242 StGB", 150, 750, beim("einv", "Weck"), "Bold", 31),
     peep_voll("MA_ruhig", X1, BR, FR, "rw", bis="rf"),
     peep_voll("MA_froh", X1, BR, FR, "rf", anim="cut", bis="einv"),
     peep_voll("MA_denkt", X1, BR, FR, "einv", anim="cut"),

@@ -559,7 +559,7 @@ folie([("merke", "Merksatz")], [
     karte(80, 100, 1340, 840, "merke", fill=HELL),
     titel("Merke", 750, 140, "merke", 80, anker="m"),
     *markertext([[("Wegnahme", "a"), (": fremden Gewahrsam brechen", 0)], [("und neuen begründen; nur kurz weg", 0)],
-                 [("und in der Nähe: gelockert.", 0)]], 750, 250, 38, "merke", {"a": beim("merke", "Wegnahme")}),
+                 [("und in der Nähe: gelockert.", 0)]], 750, 250, 38, "merke", {"a": beim("merke", "Weck")}),
     *markertext([[("Zueignungsabsicht", "b"), (": Aneignung gewollt,", 0)], [("Enteignung in Kauf genommen.", 0)]],
                 750, 480, 38, "m_2", {"b": beim("m_2", "Zueignungsabsicht")}),
     *markertext([[("Fester Rückgabewille", "c"), (" beim Nehmen:", 0)], [("kein Diebstahl.", 0)]], 750, 660, 38, "m_3",
