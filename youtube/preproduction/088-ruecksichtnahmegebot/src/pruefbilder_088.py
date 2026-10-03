@@ -3,7 +3,7 @@
   je Bogen 30 Bilder mit Nummer, Zeit und Prüfpfad
 - lip_<name>.png: Sprechfenster in 0,1-s-Schritten, Ausschnitt um den Kopf der Figur
 - schnittstellen.png: Einzelbilder an den Übergängen Intro/Hauptfilm/Outro (aus dem Endschnitt)
-Aufruf: python3 pruefbilder_088.py ../out/088-Anfechtungsklage-Schema-Hauptfilm.mp4 [../out/088-Anfechtungsklage-Schema.mp4]"""
+Aufruf: python3 pruefbilder_088.py ../out/088-Ruecksichtnahmegebot-Hauptfilm.mp4 [../out/088-Ruecksichtnahmegebot.mp4]"""
 import json, subprocess, sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
@@ -50,12 +50,12 @@ print(len(bilder), "Bildhalte aus dem MP4")
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"]
 # (Name, von, bis, Kopfausschnitt x0, y0, x1, y1)
-LIPPEN = [("wiesner_wi1", T("wi1"), T("antrag"), 780, 380, 1020, 580),
-          ("wiesner_waehrend_dreher", T("dr1"), T("wi2"), 700, 380, 940, 580),
-          ("dreher_dr1", T("dr1"), T("wi2"), 1380, 380, 1620, 580),
-          ("wiesner_wi2", T("wi2"), T("frage"), 700, 380, 940, 580),
-          ("dreher_waehrend_wiesner", T("wi2"), T("frage"), 1380, 380, 1620, 580),
-          ("wiesner_wi3", T("wi3"), T("tipp"), 860, 380, 1100, 580),
+LIPPEN = [("reimers_re1", T("re1"), T("genehm"), 970, 470, 1210, 670),
+          ("kolbe_waehrend_reimers", T("re1"), T("genehm"), 530, 470, 770, 670),
+          ("kolbe_ko1", T("ko1"), T("frage"), 530, 470, 770, 670),
+          ("reimers_waehrend_kolbe", T("ko1"), T("frage"), 970, 470, 1210, 670),
+          ("kolbe_ko2", T("ko2"), T("tipp"), 530, 470, 770, 670),
+          ("reimers_waehrend_ko2", T("ko2"), T("tipp"), 970, 470, 1210, 670),
           ("lexi_tipp", T("tipp"), T("tipp") + 6.0, 1440, 400, 1720, 640),
           ("lexi_merke", T("merke"), T("merke") + 6.0, 1500, 230, 1860, 530)]
 for name, a, b, x0, y0, x1, y1 in LIPPEN:

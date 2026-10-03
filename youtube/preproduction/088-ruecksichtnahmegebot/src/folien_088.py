@@ -42,6 +42,12 @@ def z(text, x, y, cue, stil="Regular", size=34, farbe=INK, d=0.0, rechts=1170, *
     return e
 
 
+def zk(text, x, y, cue, kcue, stil="Regular", size=34, **k):
+    """Tafelzeile mit Bleistift-Kreuz direkt hinter dem Zeilenende (zur gesprochenen Verneinung)."""
+    e = z(text, x, y, cue, stil, size, **k)
+    return [e, nein(e.x + e.sprite.width + 28, y + size * 0.72, kcue, gr=22)]
+
+
 def pl(text, *a, **k):
     assert k.get("size", 40) >= 26, f"Pille zu klein: {text}"
     return pille(glyphen(text), *a, **k)
@@ -221,7 +227,7 @@ folie([(NULL, "Fall · Das Haus am Stadtrand"), ("reimers", "Fall · Der Wohnblo
     blase("sprech", 820, 200, "re1", 820, 290, inhalt=["Hier entstehen 8 Geschosse mit 40 Wohnungen.",
                                                      "Die Abstandsflächen halte ich ein."], textsize=29, figur=REa, bis="genehm"),
     szene(ficon("tabler", "file-certificate", 900, 330, 90, beim("genehm", "Baugenehmigung"), fuell=WEISS, bis="ko1"),
-          "088papier*", 0.8, -0.35),
+          "088papier*", 0.8, -0.13),
     pl("Baugenehmigung erteilt", 900, 345, beim("genehm", "Baugenehmigung"), fill=GRUEN, size=28, anker="m", bis="ko1"),
     block_("masse"),
     pl("25 m hoch", BLX, 205, beim("masse", "fünfundzwanzig"), fill=BLAU, size=30, anker="m"),
@@ -256,12 +262,11 @@ folie([("klage", f"{ZU} › Anfechtungsklage eines Dritten"), ("p42", f"{ZU} ›
         [("Schutznormtheorie: nur eine Norm, die", "ExtraBold", 34, INK),
          ("zumindest auch die Nachbarin schützt", "ExtraBold", 34, INK)]),
     z("= drittschützende Norm", 150, 572, beim("schutz", "drittschützende"), "Bold", 34),
-    z("objektiv rechtswidrig: genügt nicht", 110, 650, "objektiv", "Bold", 34),
-    nein(700, 673, beim("objektiv", "genügt"), gr=22),
+    *zk("objektiv rechtswidrig: genügt nicht", 110, 650, "objektiv", beim("objektiv", "genügt"), "Bold", 34),
     z("„… rechtswidrig und der Kläger dadurch in seinen Rechten verletzt …“", 110, 712, beim("objektiv", "Paragraf"), size=28),
     zit("§ 113 Abs. 1 Satz 1 VwGO", 150, 760, beim("objektiv", "Paragraf")),
     ficon("tabler", "file-certificate", IX, IU, 110, "klage", fuell=WEISS),
-    pl("Baugenehmigung für Herrn Reimers", IX, 175, "klage", fill=GRUEN, size=26, anker="m"),
+    pl("Baugenehmigung", IX, 190, beim("klage", "Genehmigung"), fill=GRUEN, size=28, anker="m"),
     *fig("KO", FX, FB, FR, [("klage", "ruhig"), ("schutz", "denkt")]),
     schild("Frau Kolbe", FX, "klage", KO_F),
 ]))
@@ -272,19 +277,15 @@ folie([("ueber", DN), ("abst", f"{DN} › Abstandsflächen"), ("gebiet", f"{DN} 
        ("mass", f"{DN} › Maß der baulichen Nutzung"), ("bleibt", f"{BG} › {RG}")], rechts_frei([
     *tafel("ueber", "Welche drittschützende Norm?"),
     z("1. Abstandsflächen der Landesbauordnung", 110, 175, "abst", "Bold", 34),
-    z("schützen auch den Nachbarn, hier eingehalten", 150, 225, beim("abst", "schützen"), size=32),
-    nein(1110, 248, beim("abst", "eingehalten"), gr=22),
+    *zk("schützen auch den Nachbarn, hier eingehalten", 150, 225, beim("abst", "schützen"), beim("abst", "eingehalten"), size=32),
     z("2. Gebietserhaltungsanspruch (Art der Nutzung)", 110, 300, "gebiet", "Bold", 34),
-    z("Wohnblock ist Wohnen wie ihr Haus", 150, 350, beim("gebiet", "Wohnblock"), size=32),
-    nein(720, 373, beim("gebiet", "Wohnen"), gr=22),
+    *zk("Wohnblock ist Wohnen wie ihr Haus", 150, 350, beim("gebiet", "Wohnblock"), beim("gebiet", "Wohnen"), size=32),
     zit("BVerwG, Urt. v. 29.3.2022 – 4 C 6.20, Rn. 8", 150, 398, beim("gebiet", "Gebietserhaltungsanspruch")),
     z("3. Maß der baulichen Nutzung: 8 Geschosse", 110, 470, "mass", "Bold", 34),
-    z("schützt den Nachbarn in der Regel nicht", 150, 520, beim("mass", "schützt"), size=32),
-    nein(780, 543, beim("mass", "Regel"), gr=22),
+    *zk("schützt den Nachbarn in der Regel nicht", 150, 520, beim("mass", "schützt"), beim("mass", "Regel"), size=32),
     zit("BVerwG, Urt. v. 9.8.2018 – 4 C 7.17, Rn. 21; OVG NRW, 10 B 1713/08, Rn. 8", 150, 568, beim("mass", "schützt")),
     blk(110, 650, 1040, 80, GRUEN, "bleibt", [("Es bleibt: das Gebot der Rücksichtnahme", "ExtraBold", 36, INK)]),
     ficon("tabler", "building-community", IX, IU, 150, "ueber", fuell=BLAU),
-    pl("Haus und Wohnblock", IX, 190, "ueber", fill=BLAU, size=28, anker="m"),
     *fig("KO", FX, FB, FR, [("ueber", "denkt"), ("mass", "sorge"), ("bleibt", "ruhig")]),
     schild("Frau Kolbe", FX, "ueber", KO_F),
 ]))
@@ -338,7 +339,7 @@ folie([("wl15", f"{HK} › Plangebiet, § 15 I 2 BauNVO"), ("befr", f"{HK} › B
     z("„… auch unter Würdigung nachbarlicher Interessen …“", 150, w152_y + 150, beim("befr", "Würdigung"), size=32),
     zit("BVerwG, Urt. v. 9.8.2018 – 4 C 7.17, Rn. 12", 150, w152_y + 200, beim("befr", "Würdigung")),
     ficon("tabler", "map", IX, IU, 120, "wl15", fuell=GRUEN),
-    pl("Bebauungsplan", IX, 200, "wl15", fill=GRUEN, size=28, anker="m"),
+    pl("Plangebiet", IX, 200, beim("wl15", "Plangebiet"), fill=GRUEN, size=28, anker="m"),
     *fig("KO", FX, FB, FR, [("wl15", "denkt")]),
     schild("Frau Kolbe", FX, "wl15", KO_F),
 ]))
@@ -369,8 +370,7 @@ folie([("schat", f"{FA} › Verschattung"), ("indiz", f"{FA} › Abstandsfläche
       rechts_frei([
     *tafel("schat", "Im Fall: Schatten und Abstandsflächen", size=44),
     z("Verschattung: im bebauten Viertel", 110, 170, beim("schat", "bebauten"), "Bold", 34),
-    z("in der Regel hinzunehmen", 150, 220, beim("schat", "hinnehmen"), size=32),
-    nein(560, 243, beim("schat", "verschattet"), gr=22),
+    *zk("in der Regel hinzunehmen", 150, 220, beim("schat", "hinnehmen"), beim("schat", "verschattet"), size=32),
     zit("OVG NRW, Urt. v. 17.3.2021 – 7 A 1791/19, Rn. 42", 150, 268, beim("schat", "hinnehmen")),
     z("Abstandsflächen eingehalten:", 110, 345, "indiz", "Bold", 34),
     z("starkes Indiz für Licht und Sonne", 150, 395, beim("indiz", "Indiz"), size=32),
@@ -427,13 +427,13 @@ folie([("fall2", f"{FA} › erdrückende Wirkung"), ("rlos", f"{FA}: rücksichts
     pl("Grundstück vom Block beherrscht", 600, 130, beim("fall2", "beherrscht"), fill=WEISS, size=30, anker="m", bis="erg"),
     pl("neue Wohnungen: rechtfertigen das nicht", 600, 200, "wohn", fill=WEISS, size=30, anker="m", bis="erg"),
     pl("rücksichtslos", 600, 280, beim("rlos", "rücksichtslos"), fill=ROT, size=40, anker="m", bis="erg"),
-    ficon(HC, "classical-building", 900, 300, 110, "erg", fuell=WEISS, bis="ko2"),
+    ficon(HC, "classical-building", 900, 420, 110, "erg", fuell=WEISS, bis="ko2"),
     pl("Klage begründet: Genehmigung aufgehoben", 900, 60, beim("erg", "Klage"), fill=GRUEN, size=30, anker="m", bis="ko2"),
     pl("§ 212a Abs. 1 BauGB: Klage hält den Bau nicht auf", 900, 125, beim("eil", "Paragraf"), fill=WEISS, size=28,
        anker="m", bis="ko2"),
     pl("Eilrechtsschutz: §§ 80a Abs. 3, 80 Abs. 5 VwGO", 900, 190, beim("eil", "Eilrechtsschutz"), fill=GELB, size=28,
        anker="m", bis="ko2"),
-    pl("eigenes Video", 900, 330, beim("eil", "eigenes"), fill=GELB, size=26, anker="m", bis="ko2"),
+    pl("eigenes Video", 900, 435, beim("eil", "eigenes"), fill=GELB, size=26, anker="m", bis="ko2"),
     blase("sprech", 660, 150, "ko2", 420, 330, inhalt=["Dann muss Herr Reimers eben", "rücksichtsvoller planen."], textsize=30,
           figur=KOj),
 ])
