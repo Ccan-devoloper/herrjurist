@@ -50,3 +50,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 117 Bildhalte aus dem finalen MP4, Fallszenen als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen, die drei Geräusche); Themenplan-Ergänzung durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 03.10.2026
+
+## Drive (Readback 03.10.2026, rclone)
+
+Ordner `LexVerse Produktion/124 Ingerenz § 13 StGB/`, ID `1MiPMhncTBTm9eohNDc8QmjSW7Sy_E9NL` (nur per rclone angelegt, kein Doppelordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `124-Ingerenz-13-StGB.mp4` | 24.775.514 |
+| `124-Ingerenz-13-StGB-Hauptfilm.mp4` | 17.583.342 |
+| `master.zip` | 45.989.102 |
+| `thumb_A.jpg` | 171.923 |
+| `thumb_B.jpg` | 160.950 |
+| `beschreibung.txt` | 3.778 |
+| `kapitel.txt` | 431 |
+| `untertitel.srt` | 8.203 |
+| `metadaten.json` | 4.972 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 272 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`4d17add5266e…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
