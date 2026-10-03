@@ -1,4 +1,4 @@
-"""Rendert Folge 111 Raub § 249 StGB (Open Peeps, Serienstandard Katzenkönig): Bewegung, stumme Schiebe-Übergänge,
+"""Rendert Folge 111 Räuberischer Diebstahl § 252 StGB (Open Peeps, Serienstandard Katzenkönig): Bewegung, stumme Schiebe-Übergänge,
 Stimme + Handlungsgeräusche (Freesound CC0). Intro/Outro hängt tools/schnitt.py an. Kopie von render_raser.py (nur Import und Videoname)."""
 import json, os, subprocess, sys, wave
 import numpy as np
@@ -44,7 +44,7 @@ for f in FOLIEN:
     pf = []
     for k, (cue, text) in enumerate(f["pfade"]):
         nxt = f["pfade"][k + 1][0] if k + 1 < len(f["pfade"]) else None
-        pf.append(T(text, 40, 1034, cue, "Medium", 30, farbe=PFAD_FARBE[f["bg"]], anim="fade", bis=nxt))
+        pf.append(T(text, 40, 1034, cue, "Medium", 30, farbe=PFAD_FARBE[f["bg"]], anim=("cut" if f is FOLIEN[0] and k == 0 else "fade"), bis=nxt))  # Prüfpfad ab 0,0 s voll sichtbar
     f["els"] = pf + f["els"]
     for e in f["els"]:
         e.t0 = zeit(e.cue) + e.d
@@ -64,7 +64,7 @@ json.dump([{"t": round(zeit(c), 3), "pfad": txt} for f_ in FOLIEN for c, txt in 
           open("../kapitel.json", "w"), ensure_ascii=False, indent=1)
 fehl = set(cues) - genutzt
 assert not fehl, f"Marken ohne Bildelement: {fehl}"
-# Folge 111 (wie 084, 076, 073, 027): Prüfpfad und Grundbild der ersten Szene stehen ab 0,0 s (direkt nach dem Intro), ohne Einblendung
+# Folge 111 (wie 087, 084, 076, 073, 027): Prüfpfad und Grundbild der ersten Szene stehen ab 0,0 s (direkt nach dem Intro), ohne Einblendung
 for e in FOLIEN[0]["els"]:
     if e.t0 <= cues["fall"]["t"] + 1e-6:
         e.t0, e.anim = 0.0, "cut"
@@ -200,7 +200,7 @@ if "--manifest" in sys.argv:                    # Bildhalt-Manifest: Zustandswec
     import hashlib, os
     OHNE_MUND = True
     os.makedirs(f"{OUT}/bildhalte", exist_ok=True)
-    zeiten = set()
+    zeiten = {0.0}                              # erster Bildhalt ab Hauptfilmbeginn (Szene A steht ab 0,0 s)
     for fi, f_ in enumerate(FOLIEN):
         zeiten.add(round(f_["start"], 3))
         for e in f_["els"]:
@@ -310,7 +310,7 @@ ff = imageio_ffmpeg.get_ffmpeg_exe()
 cmd = [ff, "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
        "-i", f"{OUT}/ton_mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
        "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
-       "-movflags", "+faststart", "-shortest", f"{OUT}/" + os.environ.get("VIDEONAME", "111-Raub-249-StGB-Hauptfilm") + ".mp4"]
+       "-movflags", "+faststart", "-shortest", f"{OUT}/" + os.environ.get("VIDEONAME", "111-Raeuberischer-Diebstahl-252-Hauptfilm") + ".mp4"]
 p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
 n = int(round(dauer * FPS))
 letzt = None

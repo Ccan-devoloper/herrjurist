@@ -14,7 +14,7 @@ cj = json.load(open("../cues.json"))
 asr = json.load(open(sys.argv[1]))["woerter"]
 w = wave.open("../stimme.wav"); sr = w.getframerate()
 x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
-NAMEN = ("Margit", "Hagen")
+NAMEN = ("Gottfried", "Edda")
 
 
 def mel_fb(n_fft=512, n_mel=26, sr=16000):
