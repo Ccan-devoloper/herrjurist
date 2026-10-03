@@ -96,3 +96,20 @@ export function storyAsset(vp, slot) {
   const p = files(path.join(vp.fertigDir, "stories"), new RegExp(`^${slot}-.*\\.jpe?g$`, "i"))[0];
   return { bildPfad: p, bildUrl: url(vp, p) };
 }
+
+/* Betreiberregel (03.10.): Was in der Vorproduktion liegt und fertig
+   gerendert ist, wird veroeffentlicht. Beanstandungen macht der Betreiber
+   selbst, bevor der Slot faellig wird - eine automatische Formpruefung
+   (etwa die pauschale 260-Zeichen-Grenze) haelt ein fertiges Bild nicht
+   mehr zurueck. Am 03.10. fielen s4-s6 genau daran aus, obwohl Text und
+   Bild in der Vorproduktion freigegeben waren. */
+export function storyFertigGerendert(vp, slot) {
+  try {
+    const plan = vp?.tag?.plan?.stories?.find((s) => s.slot === slot);
+    if (!plan) return false;
+    if (plan.art !== "teaser" && !vp.tag.inhalte?.[slot]) return false;
+    return Boolean(storyAsset(vp, slot).bildPfad);
+  } catch {
+    return false;
+  }
+}

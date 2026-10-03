@@ -72,7 +72,7 @@ test("a plain visual flag cannot bypass the ordinary length or content checks", 
 
 test("production wiring preserves the image upload and has no paid fallback", () => {
   const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
-  assert.match(lauf, /storyFreigabe\(story, \{ vorproduktion \}\)/);
+  assert.match(lauf, /storyFreigabe\(story, \{ vorproduktion, vorproduktionFertig: vorproduktionAktiv && storyFertigGerendert\(vorproduktion, eintrag\.slot\) \}\)/);
   assert.match(lauf, /async function main\(\) \{\s+providerKostenSperren\(\)/);
   assert.match(lauf, /if \(ungeprueft.length && !vorproduktionAktiv\)/);
   assert.match(lauf, /if \(vorproduktionAktiv\) throw new Error\(`Vorproduktion.*kein KI-Fallback/);
@@ -143,4 +143,26 @@ test("cost lock prevents text, review, image, voice and fallback requests before
   assert.equal(sends, 0);
   assert.equal(counts, 0);
   assert.equal(bookings, 0);
+});
+
+test("fertig gerenderte Vorproduktion erscheint trotz Zeichengrenze, Quiz bleibt in Reihenfolge", () => {
+  /* 03.10.: s4/s5 (Antwort 340 Zeichen) und s6 (267 Zeichen) lagen fertig
+     gerendert in der Vorproduktion und fielen am lokalen 260-Zeichen-Check
+     aus. Betreiberregel: Fertig Gerendertes wird veroeffentlicht. */
+  const lang = (n) => "x".repeat(n);
+  const norm = { slot: "s6", art: "norm", titel: "Art. 12 GG", text: lang(267), manuellGeprueft: true, befundeTypisiert: true };
+  assert.equal(storyFreigabe(norm, { vorproduktionFertig: true }).frei, true);
+  assert.equal(storyFreigabe(norm).frei, false, "ohne fertiges Bild bleibt die Grenze");
+
+  const frage = { slot: "s4", art: "frage", pairId: "strafbt-764", titel: "Was liegt vor?", text: "Kurz.", optionen: ["A", "B"], richtig: 0, manuellGeprueft: true, befundeTypisiert: true };
+  const antwort = { slot: "s5", art: "antwort", pairId: "strafbt-764", titel: "Eingriff plus konkrete Gefahr", text: lang(340), manuellGeprueft: true, befundeTypisiert: true };
+  const plan = [{ slot: "s4", art: "frage", pairId: "strafbt-764", status: "geplant" }, { slot: "s5", art: "antwort", pairId: "strafbt-764", status: "geplant" }];
+  const lesen = (slot) => ({ s4: frage, s5: antwort })[slot] || null;
+  const fertig = () => true;
+  assert.notEqual(quizPaarFreigabe(plan[0], plan, lesen).status, "frei", "ohne fertige Bilder blockiert die lange Antwort");
+  assert.equal(quizPaarFreigabe(plan[0], plan, lesen, { fertig }).status, "frei");
+  assert.equal(quizPaarFreigabe(plan[1], plan, lesen, { fertig }).status, "warten", "Antwort wartet auf die Frage");
+  plan[0].status = "veroeffentlicht";
+  assert.equal(quizPaarFreigabe(plan[1], plan, lesen, { fertig }).status, "frei");
+  assert.notEqual(quizPaarFreigabe(plan[1], plan, lesen, { fertig: (s) => s === "s5" }).status, "frei", "nur wenn beide Kacheln fertig sind");
 });

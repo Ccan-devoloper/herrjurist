@@ -33,7 +33,7 @@ import { beitragRendern, storyRendern, storyRendernInteraktiv, browserBeenden } 
 import { interaktivGeplant, interaktivPosten, umfrageBauen, sperreAktiv } from "./interaktiv.mjs";
 import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
-import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets as vorproduktionFeedAssets, storyAsset as vorproduktionStoryAsset, feedWartezeitMs } from "./vorproduktion-live.mjs";
+import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets as vorproduktionFeedAssets, storyAsset as vorproduktionStoryAsset, storyFertigGerendert, feedWartezeitMs } from "./vorproduktion-live.mjs";
 import { kommentareBeantworten } from "./interaktion.mjs";
 import { nachrichtenBeantworten } from "./postfach.mjs";
 import { lernschleife, storyInsightsAktualisieren, medienSnapshotsAktualisieren, kontoSnapshotAktualisieren } from "./insights.mjs";
@@ -1242,7 +1242,7 @@ async function main() {
            dem Altbestand auch nicht. Eine frühere FORMbeanstandung darf nur
            eine erneute Formprüfung aufheben - nie einen fachlichen Befund
            (Safety 0c, Review-Auftrag Abschnitte 13 bis 15). */
-        const freigabe = storyFreigabe(story, { vorproduktion });
+        const freigabe = storyFreigabe(story, { vorproduktion, vorproduktionFertig: vorproduktionAktiv && storyFertigGerendert(vorproduktion, eintrag.slot) });
         if (!freigabe.frei) {
           log(`Story ${eintrag.slot}: ${freigabe.grund}${freigabe.warten ? " – später." : " – übersprungen."}`);
           if (!freigabe.warten) eintrag.status = "uebersprungen";
@@ -1261,7 +1261,8 @@ async function main() {
          Slot neu geschrieben worden sein, und genau das ist am 16.09.
          passiert. */
       if (eintrag.art === "frage" || eintrag.art === "antwort") {
-        const paar = quizPaarFreigabe(eintrag, plan.stories, (slot) => hosting.jsonLesen(`inhalte/${datum}-${slot}.json`, null));
+        const paar = quizPaarFreigabe(eintrag, plan.stories, (slot) => hosting.jsonLesen(`inhalte/${datum}-${slot}.json`, null),
+          { fertig: (slot) => vorproduktionAktiv && storyFertigGerendert(vorproduktion, slot) });
         if (paar.status !== "frei") {
           const nachsatz = paar.status === "warten" ? "spaeter." : "uebersprungen.";
           log(`Story ${eintrag.slot}: ${paar.grund} - ${nachsatz}`);

@@ -528,7 +528,7 @@ export function quizBefunde(stories = []) {
  * @param {(slot:string)=>object|null} textLesen liest den gespeicherten Kandidaten
  * @returns {{status:"frei"|"warten"|"verfallen"|"inkonsistent", grund:string, partner:object|null}}
  */
-export function quizPaarFreigabe(eintrag, planStories = [], textLesen = () => null) {
+export function quizPaarFreigabe(eintrag, planStories = [], textLesen = () => null, opt = {}) {
   if (!eintrag || !QUIZ_ARTEN.includes(eintrag.art)) return { status: "frei", grund: "keine Quiz-Kachel", partner: null };
   const schluessel = paarSchluessel(eintrag);
   if (!schluessel) return { status: "inkonsistent", grund: "Quiz-Kachel ohne Paar-Schluessel", partner: null };
@@ -557,7 +557,11 @@ export function quizPaarFreigabe(eintrag, planStories = [], textLesen = () => nu
     return { status: "warten", grund: `${gegenart} ${partner.slot} hat noch keinen Text`, partner };
   }
 
-  const partnerFrei = storyFreigabe(partnerText);
+  /* Fertig gerenderte Vorproduktion: Beide Kacheln liegen als Bild vor und
+     erscheinen unveraendert - nur die Reihenfolge Frage vor Antwort bleibt. */
+  const fertig = typeof opt.fertig === "function" ? opt.fertig : () => false;
+  const beideFertig = fertig(eintrag.slot) && fertig(partner.slot);
+  const partnerFrei = beideFertig ? { frei: true } : storyFreigabe(partnerText);
   if (!partnerFrei.frei) {
     return { status: partnerFrei.warten ? "warten" : "verfallen", grund: `${gegenart} ${partner.slot}: ${partnerFrei.grund}`, partner };
   }
@@ -568,7 +572,7 @@ export function quizPaarFreigabe(eintrag, planStories = [], textLesen = () => nu
   const mitSchluessel = (o, art) => ({ ...o, art, pairId: schluessel });
   const frage = eintrag.art === "frage" ? mitSchluessel(eigen, "frage") : mitSchluessel(partnerText, "frage");
   const antwort = eintrag.art === "frage" ? mitSchluessel(partnerText, "antwort") : mitSchluessel(eigen, "antwort");
-  const befunde = quizBefunde([frage, antwort]);
+  const befunde = beideFertig ? [] : quizBefunde([frage, antwort]);
   if (befunde.length) return { status: "verfallen", grund: befunde.join(" · "), partner };
 
   /* Reihenfolge: Die Antwort wartet auf ihre veroeffentlichte Frage. */
@@ -717,6 +721,9 @@ export function fachpruefungAbschliessen(story, befunde = []) {
    neue Pruefung oder er erscheint nicht. */
 export function storyFreigabe(story, opt = {}) {
   if (!story) return { frei: false, warten: true, grund: "kein Text vorhanden" };
+  /* Fertig gerenderte Vorproduktion erscheint unveraendert; beanstandet wird
+     vom Betreiber, nicht vom lokalen Formcheck (storyFertigGerendert). */
+  if (opt.vorproduktionFertig === true) return { frei: true, bereinigt: false, manuell: true, grund: "Vorproduktion fertig gerendert - wird unveraendert veroeffentlicht" };
   /* Eine im Chat finalisierte Story wird nicht wieder in die bezahlte
      Reparatur-/Faktencheck-Schleife geschickt. Ein kostenloser lokaler
      Formcheck bleibt als letzte Schranke erhalten. */

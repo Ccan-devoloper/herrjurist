@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets, storyAsset, feedWartezeitMs } from "../src/vorproduktion-live.mjs";
+import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets, storyAsset, storyFertigGerendert, feedWartezeitMs } from "../src/vorproduktion-live.mjs";
 
 function fixture() {
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),"vp-live-"));
@@ -111,4 +111,27 @@ test("Frühe Story bestimmt die Wartezeit vor einem späteren Feed-Slot",()=>{
 test("Kein Warten wenn ein Feed-Slot bereits fällig ist oder zu weit entfernt liegt",()=>{
   assert.equal(feedWartezeitMs({beitraege:[{zeit:"07:30",status:"geplant"}]},7*3600+31*60),0);
   assert.equal(feedWartezeitMs({beitraege:[{zeit:"12:00",status:"geplant"}]},9*3600),0);
+});
+
+test("fertig gerenderte Vorproduktions-Story gilt als veroeffentlichungsbereit",()=>{
+  const {dir,hosting}=fixture();
+  const tag=tagAnlegen(dir);
+  const fertig=path.join(dir,"vorproduktion","2026-09-24","fertig","stories");
+  fs.writeFileSync(path.join(fertig,"s5-antwort.jpg"),"x");
+  tag.plan.stories.push({slot:"s5",zeit:"07:05",art:"antwort"},{slot:"s6",zeit:"12:15",art:"norm"});
+  tag.inhalte.s5={slot:"s5",art:"antwort",text:"x".repeat(340)};
+  tag.inhalte.s6={slot:"s6",art:"norm",text:"x".repeat(267)};
+  fs.writeFileSync(path.join(dir,"vorproduktion","2026-09-24.json"),JSON.stringify(tag));
+  fs.writeFileSync(path.join(fertig,"s6-norm.jpg"),"x");
+  const vp=vorproduktionLaden(hosting,"2026-09-24");
+  assert.equal(storyFertigGerendert(vp,"s1"),true,"Teaser mit Bild");
+  assert.equal(storyFertigGerendert(vp,"s5"),true,"Antwort mit Bild und Inhalt, Laenge egal");
+  assert.equal(storyFertigGerendert(vp,"s6"),true,"Norm mit Bild und Inhalt, Laenge egal");
+  fs.rmSync(path.join(fertig,"s6-norm.jpg"));
+  assert.equal(storyFertigGerendert(vp,"s6"),false,"ohne fertiges Bild nicht");
+  vp.tag.plan.stories.push({slot:"s7",zeit:"14:39",art:"begriff"});
+  fs.writeFileSync(path.join(fertig,"s7-begriff.jpg"),"x");
+  assert.equal(storyFertigGerendert(vp,"s7"),false,"ohne Inhalt nicht");
+  assert.equal(storyFertigGerendert(vp,"s9"),false,"nicht im Plan");
+  assert.equal(storyFertigGerendert(null,"s1"),false,"ohne Vorproduktion nicht");
 });
