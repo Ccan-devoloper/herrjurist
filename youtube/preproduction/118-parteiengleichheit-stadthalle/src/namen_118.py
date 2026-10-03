@@ -14,7 +14,7 @@ from scipy.signal import resample_poly
 cj = json.load(open("../cues.json"))
 w = wave.open("../stimme.wav"); sr = w.getframerate()
 x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
-NAMEN = ("Hartmut", "Wetzlar", "Weitblick")
+NAMEN = ("Hartmut", "Weitblick", "Wetzlar")  # Hartmut wird nie gesprochen (nur Namensschild/Sachverhalt)
 
 
 def mel_fb(n_fft=512, n_mel=26, sr=16000):
@@ -71,7 +71,7 @@ nennungen = []
 for si, s in enumerate(cj["segmente"]):
     for wd, (a, b) in zip(s["text"].split(), s["woerter"]):
         k = re.sub(r"[^\wäöüß]", "", wd)
-        name = next((n for n in NAMEN if k == n or k == n + "s"), None)
+        name = next((n for n in NAMEN if k.startswith(n)), None)
         if not name:
             continue
         erkannt = " ".join(t for a2, b2, t in asr if a2 < b and b2 > a).strip()
@@ -79,7 +79,7 @@ for si, s in enumerate(cj["segmente"]):
                               video=round(a + 8.0, 1), dauer=round(b - a, 2), asr_satz=erkannt, asr_isoliert=isoliert(a, b),
                               m=mfcc(x[int(a * sr):int(b * sr)])))
 for n in NAMEN:
-    g = [e for e in nennungen if e["name"] == n and e["wort"] == n]
+    g = [e for e in nennungen if e["name"] == n]
     for e in g:
         ds = [dtw(e["m"], f["m"]) for f in g if f is not e]
         e["dtw"] = round(float(np.median(ds)), 3) if ds else None

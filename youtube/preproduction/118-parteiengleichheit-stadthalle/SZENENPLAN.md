@@ -1,0 +1,57 @@
+# Folge 118 · Parteiengleichheit: Stadthalle für eine umstrittene Partei? – Szenenplan
+
+**Stand:** 03.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_118.py`](src/skript_118.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
+**Format:** Mo · Der Fall · Klassiker-Fall · Kommunalrecht/Staatsorganisationsrecht. Fiktiver Fall nach dem Plan-Hook („Eine vom Verfassungsschutz beobachtete Partei will ihren Landesparteitag in der Stadthalle abhalten“), Vorbild sachlich der Fall Wetzlar (BVerfG (K) 1 BvQ 18/18). Ablauf: Fall (Antrag, Absage, Ratsbeschluss, Eilantrag) → Frage → Sachverhalt → Anspruchsgrundlage (Wortlautkarte § 8 Abs. 2, 4 GO NRW, Beispielland offengelegt) → Normtabelle (nur geprüfte Länder) und Art. 28 Abs. 2 GG → Wortlautkarte § 5 Abs. 1 PartG → Widmung/Vergabepraxis → Widmungsänderung aus konkretem Anlass → Wortlautkarte Art. 21 Abs. 4 GG, Parteienprivileg → Beobachtung, Abgrenzung Art. 21 Abs. 3 GG → Grenzen und Ergebnis → Durchsetzung § 123 VwGO (Richterin) → Wetzlar (Ablauf; was Karlsruhe festhielt; Art. 20 Abs. 3 GG) → Klausurtipp → Prüfschema → Merksatz. Hauptfilm 6:29,8.
+
+**Neutralität:** fiktive „Weitblick-Partei“ mit neutralem Symbol (Tabler `mountain` auf weißem Tuch), keine Farben, Kürzel, Logos oder Programminhalte realer Parteien; die Partei im Wetzlar-Fall wird nicht genannt („eine Partei“). Wetzlar nur als Tafel mit Icons, keine realen Personen. Hartmut und die Bürgermeisterin sachlich, ohne böse Mimiken.
+
+## Besetzung
+
+| Figur | Rolle | Open Peeps | Stimme |
+|---|---|---|---|
+| Hartmut, um 55 | Landesgeschäftsführer der Weitblick-Partei, beantragt die Halle | `standing/robot_dance-3` (Hemd Weiß, Hose Grau `#8C9399`), Kopf `Short 2`, Brille `Glasses 2`, Haut `#EAC3A0`, kein Bart. Mimiken `Calm`, `Serious` (redet), `Smile`, `Suspicious`, `Concerned|Serious` | `christian` (Mann, mittel) |
+| Bürgermeisterin, um 60 | Funktionsrolle (ohne Namen), lehnt ab, verkündet den Ratsbeschluss | `standing/resting-1` (Pullover Lila `#B8A9F5`, schwarze Hose), Kopf `Bun`, Haut `#F2D0B1`. Mimiken `Calm`, `Serious` (redet), `Suspicious`, `Concerned|Serious` | `hilde` (Frau, älter) |
+| Richterin, um 40 | Funktionsrolle (ohne Namen), verkündet den Eilbeschluss | `standing/crossed_arms-2` (schwarzes Oberteil, dunkle Hose wie eine Robe), Kopf `Medium Bangs 3`, Haut `#B07552`; hinter einem Pult. Mimiken `Calm`, `Serious` (redet), `Smile` | `lucy` (Frau, jung) |
+| Lexi | Klausurtipp (warnt) und Merksatz (erklärt) | nach `lexi.py` (`robot_dance-1`) | Carla Blum |
+| Erzählerin | – | – | Carla Blum |
+
+**Blickrichtung:** Alle Posen blicken im Original nach rechts (Kontaktbild `out/besetzung_118.png`); Grundansicht gespiegelt (nach links), `_r` nach rechts. A1: Hartmut (`_r`) zur Bürgermeisterin, Bürgermeisterin (Grund) zu Hartmut. A2: Bürgermeisterin am Rednerpult und Hartmut blicken nach links. Tafelszenen: alle nach links zur Tafel. **Alle Grundmimiken mit geschlossenem Mund**; Mundzustände a/o/e nur in `HA_redet`, `BM_redet`, `RI_redet` (je links/rechts) und Lexi. **Stimmen** nur aus dem Pool (christian, hilde, lucy; stephan nicht, weil er wie christian klingt). **Namen:** Hartmut (deutsch eindeutig; nicht in der Liste vergebener Namen, in keinem Skript/Szenenplan/Abnahmebogen unter `youtube/` – Volltextsuche; „Hubert“ wurde in 089/112 als englisch lesbar verworfen und deshalb nicht genommen). Hartmut wird im Sprechtext nicht genannt (nur Namensschild und Sachverhalt). Figuren-PNGs: `../peeps/op_118/` (50 Dateien, nicht im Repository, im Drive-Master).
+
+**Abweichung von den letzten Folgen:** 114 (`crossed_arms-1`, `walking-2`, `blazer-4`), 115 (Kneipe/Parkbank; `shirt-3`, `crossed_legs`, `resting-2`, `blazer-3`), 116 (`easing-1`, `robot_dance-2`), 117 (`shirt-4`, `pointing_finger-2`). 118: **Stadthalle, Rathaus mit Rednerpult, Gericht** – neue Schauplätze; Posen `robot_dance-3`, `resting-1`, `crossed_arms-2` in diesen Folgen nicht verwendet; keine Polka Dots. `blazer-1/-2`, `shirt-1/-2` verworfen (Prothesen-Posen; nicht reflexhaft für die umstrittene Seite).
+
+## Szenen (Cremegrund)
+
+| Szene | Ort / Handlung | Requisiten (Iconset:Name, Füllung) | Tafel / Prüfpfad | Bildhalte (Zwiebelschale) | Geräusch |
+|---|---|---|---|---|---|
+| **A1 Der Antrag** `fall`→`b1` | Stadthalle links (programmatisch, Schriftzug „STADTHALLE“), Fahne der Weitblick-Partei, Hartmut, Tisch, Bürgermeisterin | tabler:`mountain` (Fahnensymbol), `map-pin` (Rot), `eye`, `calendar-check` (Grün), `file-text`; Plakate „Parteitag Partei A/B“ am Gebäude | `Fall · Der Antrag` (ab 0,0 s) → `Fall · Die Absage` | Grundbild ab 0,0 s · Pillen „Landesparteitag in der Stadthalle“, „Sitz in der Stadt“, „vom Verfassungsschutz beobachtet“, „nicht verboten“ · Hartmut redet (Blase), Antrag gleitet auf den Tisch · „800 Plätze · Termin frei“ · Plakate · Bürgermeisterin redet (Blase) | Papier (`szene_118papier_1`, Freesound CC0 464302) |
+| **A2 Ratsbeschluss, Eilantrag** `rat`→`vorbild` | Rathaus-Icon, Bürgermeisterin am Rednerpult, Hartmut kommt von rechts | tabler:`building-bank`, `gavel` (Holz) | `Fall · Der Ratsbeschluss` → `Fall · Der Eilantrag` → `Fall · Die Frage` | „Stadtrat · 1 Woche später“ · Beschlusskarte · Hartmut kommt (1,0 s) · „Eilantrag beim Verwaltungsgericht“, „einstweilige Anordnung“ · drei Fragepillen | – |
+| **B Sachverhalt** `sv` | Karte vollständig, ≈ 9,8 s | – | `Sachverhalt` | 1 | – |
+| **C Anspruchsgrundlage** `anspr`→`rahmen` | Tafel; **Wortlautkarte § 8 Abs. 2, 4 GO NRW (Auszug)** mit Markern; Hartmut | tabler:`file-text`, `book`, `map-pin`, `building-community`, `calendar-check` | `Zulassungsanspruch › Anspruchsgrundlage` → `› § 8 Abs. 2 GO NRW (Beispiel NRW)` → `› § 8 Abs. 4: Personenvereinigungen` → `› öffentliche Einrichtung` → `› im Rahmen des geltenden Rechts` | Hinweis Beispielland, Karte, 4 Marker, 2 Haken, gelber Block | – |
+| **D Andere Länder, Art. 28 II** `tabelle`, `a28` | Normtabelle (nur am Wortlaut geprüft: NRW, NI, SN, BB; weitere Länder ohne Nummer), lila Block; Bürgermeisterin | tabler:`map`, `building-bank` | `… › andere Länder` → `… › Selbstverwaltung, Art. 28 Abs. 2 GG` | Tabelle, Block, „aber nicht beliebig“ | – |
+| **E § 5 Abs. 1 PartG** `p5`→`ohnesitz` | **Wortlautkarte § 5 Abs. 1 Satz 1 PartG (Auszug)**, Marker; Hartmut | tabler:`scale`, `flag`, `map-pin-off` | `… › § 5 Abs. 1 PartG` → `› Chancengleichheit, Art. 3, 21 GG` → `› auch ohne Sitz in der Stadt` | Karte, 2 Marker, Zeile, Haken | – |
+| **F1 Widmung** `widm`→`imzweck` | Tafel; Hartmut und Bürgermeisterin | tabler:`calendar-event`, `building-community`, `circle-check`; Plakate | `Zulassungsanspruch › Widmung` → `› Widmung: Vergabepraxis` → `› … im Widmungszweck (+)` | Zeile, Haken, Plakate, grüner Block | – |
+| **F2 Widmungsänderung** `ratsb`→`zukunft` | Tafel mit Zeitleiste „Antrag → 1 Woche später: Ratsbeschluss“ | tabler:`building-bank`, `calendar-event`, `file-text`, `lock` | `… › Widmungsänderung?` → `› … aus konkretem Anlass` → `› gestellter Antrag: alte Regeln` → `› künftig: nur für alle Parteien` | Zeitleiste, Kreuz, Block, Haken, Kreuz | – |
+| **G1 Art. 21 IV** `privi`→`bekaempf` | **Wortlautkarte Art. 21 Abs. 4 GG (Auszug)**, Marker | tabler:`eye`, `gavel`, `scale` | `Zulassungsanspruch › Verfassungsschutz` → `› Art. 21 Abs. 4 GG` → `› Parteienprivileg` | Karte, 2 Marker, Zeile, Haken, Kreuz | – |
+| **G2 Beobachtung, Abs. 3** `vs`→`abs3` | Tafel; lila Block Abgrenzung | tabler:`eye`, `x`, `coins` | `› Beobachtung` → `› keine rechtlichen Nachteile` → `› Abgrenzung: Art. 21 Abs. 3 GG` | Zeilen, Kreuz, Block | – |
+| **H Grenzen, Ergebnis** `grenz`→`erg` | Tafel; Hartmut, Bürgermeisterin | tabler:`alert-triangle`, `calendar-event`, `shield-check`, `calendar-check`, `circle-check`; fluent:`police-car` | `Zulassungsanspruch › Grenzen` → `› Kapazität` → `› sachliche Bedingungen, § 5 Abs. 3 PartG` → `› Gegendemonstrationen` → `› im Fall: keine` → `Ergebnis · Anspruch auf Zulassung (+)` | Zeile für Zeile, Haken, grüner Block | – |
+| **I Durchsetzung** `eil`→`r1` | Tafel; Hartmut; Richterin hinter dem Pult, Hammer | tabler:`file-text`, `building-community`, `calendar-event`, `gavel` | `Durchsetzung › Eilantrag, § 123 VwGO` → `› Anordnungsanspruch` → `› Anordnungsgrund` → `› Beschluss: Stadt verpflichtet` | Zeilen, Haken, Richterin redet (Blase), Hammerschlag, grüner Block | Hammer (`szene_118hammer_1`, Freesound CC0 618138) |
+| **J1 Wetzlar: Ablauf** `wetz`→`nicht` | Tafel (Daten in Ziffern), rechts nur Icons | tabler:`building-community`, `gavel`, `lock`, `coins`, `building-bank`, `x` | `Vorbild · Stadthalle Wetzlar 2018` → `› Verwaltungsgericht` → `› Stadt verweigert` → `› Zwangsgeld` → `› BVerfG, 1 BvQ 18/18` → `› Stadt folgt nicht` | Zeile für Zeile, Kreuz | – |
+| **J2 Was Karlsruhe festhielt** `gruende`→`a203` | Tafel, Zitatkarte PM 26/2018, gelber Block | tabler:`building-bank`, `scale`, `file-text`, `gavel` | `Vorbild · Was Karlsruhe festhielt` → `Vorbild › Art. 8 Abs. 1 i. V. m. Art. 20 Abs. 3, 19 Abs. 4 GG` → `Vorbild › Pressemitteilung Nr. 26/2018` → `Bindung an Gerichtsentscheidungen, Art. 20 Abs. 3 GG` | Zeilen, Zitat, Block | – |
+| **K Klausurtipp** `tipp`→`tipp3` | hellgelbe Tafel, Lexi warnt (redet) | Warnsymbol (Streamline Freehand) | `Klausurtipp · …` (3 Stände) | Zeile für Zeile | – |
+| **L Prüfschema** `sch`→`s5` | breite Karte: I. Anspruchsgrundlage – II. Einrichtung/Berechtigter – III. Widmung – IV. kein sachlicher Grund – V. Durchsetzung | – | `Prüfschema` → je Gliederungspunkt | 7 Aufbaustufen | – |
+| **M Merksatz** `merke`→`m3` | Lexi erklärt (redet), drei Sätze mit Marker | – | `Merksatz` | Satz für Satz | – |
+
+**Blasen:** Stil C (`bausteine.blase`, Rückfall auf Stil e per Assertion ausgeschlossen), Schwanzspitze außerhalb der Blase am Mund. **Zahlen** auf Tafeln, Pillen und Blasen in Ziffern („400 Delegierte“, „800 Plätze“, „1 Woche später“, „20.12.2017“, „§ 123 VwGO“).
+**Übergänge:** stumme Schiebeblenden nur zwischen den 17 Folien; innerhalb harte Schnitte und Pops; Bewegungen: Antrag gleitet auf den Tisch (0,8 s), Hartmut kommt in A2 von rechts (1,0 s), Hammer der Richterin.
+**Geräusche:** zwei Handlungsgeräusche, Freesound CC0, Herkunft in `geraeusche_herkunft.json`.
+**Lizenzen der Requisiten:** Tabler Icons (MIT), Fluent Emoji Flat (MIT; Polizeiauto), Haken/Kreuz Fluent Emoji High Contrast (MIT), Warnsymbol Streamline Freehand (CC BY 4.0, Namensnennung in `beschreibung.txt`). Stadthalle, Plakate, Fahne, Tisch und Pulte aus Grundformen (eigene `stadthalle/plakat/fahne/pult`, `tisch` aus 115).
+
+## Sachverhaltskarte (Szene B, erscheint vollständig)
+
+> Die Weitblick-Partei will im März ihren Landesparteitag in der Stadthalle abhalten. Ihr Landesverband hat seinen Sitz in der Stadt. Der Verfassungsschutz des Landes beobachtet die Partei; verboten ist sie nicht. Landesgeschäftsführer Hartmut beantragt die Halle für einen Samstag im März, für 400 Delegierte.
+>
+> Der Saal fasst 800 Menschen, der Termin ist frei. Im letzten Jahr haben zwei andere Parteien hier ihre Parteitage abgehalten. Die Bürgermeisterin lehnt ab: „Diese Partei wird vom Verfassungsschutz beobachtet. Unsere Halle bekommt sie nicht.“
+>
+> Eine Woche nach dem Antrag beschließt der Stadtrat, die Stadthalle stehe künftig nicht mehr für Parteiveranstaltungen zur Verfügung. Die Partei beantragt beim Verwaltungsgericht eine einstweilige Anordnung. Die Stadt liegt in Nordrhein-Westfalen.
+>
+> **Muss die Stadt der Partei die Stadthalle überlassen?**
