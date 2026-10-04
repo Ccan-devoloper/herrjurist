@@ -54,8 +54,8 @@ SEGMENTE = [
      "vollendete. [meist]Meist kommen beide Ansichten aber zum selben Ergebnis.", PS),
     # --- F Schema: I. 2. doppelter Gehilfenvorsatz ---------------------------------------------------------------------------
     ("[s2]Zweitens, subjektiv: der doppelte Gehilfenvorsatz. [v1]Der Gehilfe braucht Vorsatz bezüglich der Haupttat, "
-     "[v1b]und zwar in ihren wesentlichen Merkmalen, also Unrechtsgehalt und Angriffsrichtung. [v1c]Einzelheiten wie Ort "
-     "und Zeit muss er nicht kennen. [v2]Und er braucht Vorsatz bezüglich seiner eigenen Hilfe: Er weiß, dass sie die Tat "
+     "[v1b]und zwar in ihren wesentlichen Merkmalen, also Unrechtsgehalt und Angriffsrichtung. [v1c]Einzelheiten der Tat "
+     "muss er nicht kennen. [v2]Und er braucht Vorsatz bezüglich seiner eigenen Hilfe: Er weiß, dass sie die Tat "
      "fördern kann.", PS),
     # --- G Schema: II., III., Strafe ----------------------------------------------------------------------------------------
     ("[s_ii]Römisch zwei: Rechtswidrigkeit. [s_iii]Römisch drei: Schuld. [strafe]Bei der Strafe gilt Paragraf "
