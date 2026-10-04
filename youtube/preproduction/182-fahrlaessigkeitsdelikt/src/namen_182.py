@@ -14,7 +14,7 @@ from scipy.signal import resample_poly
 cj = json.load(open("../cues.json"))
 w = wave.open("../stimme.wav"); sr = w.getframerate()
 x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
-NAMEN = ("Käthe", "Wöhler")
+NAMEN = ("Berger", "Specht")
 
 
 def mel_fb(n_fft=512, n_mel=26, sr=16000):
@@ -71,7 +71,7 @@ nennungen = []
 for si, s in enumerate(cj["segmente"]):
     for wd, (a, b) in zip(s["text"].split(), s["woerter"]):
         k = re.sub(r"[^\wäöüß]", "", wd)
-        name = next((n for n in NAMEN if k == n or k == n + "s"), None)
+        name = next((n for n in NAMEN if k == n or k == n + "s" or k == n + "n"), None)
         if not name:
             continue
         erkannt = " ".join(t for a2, b2, t in asr if a2 < b and b2 > a).strip()
