@@ -62,9 +62,8 @@ srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
 srt = re.sub(r"(Abs\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
 srt = re.sub(r"Römisch (eins|zwei|drei):( |\n)",
              lambda m: {"eins": "I.", "zwei": "II.", "drei": "III."}[m.group(1)] + m.group(2), srt)
-for a, b in [("Neunzehnhunderteinundsiebzig", "1971")]:
-    assert a in srt, a
-    srt = srt.replace(a, b)
+srt = re.sub(r"§ 265\n?a StGB", "§ 265a StGB", srt)
+assert "§ 265a StGB" in srt and "1971" in srt
 assert not re.search(r"§\n|Abs\.\n", srt), "Untertitel prüfen"
 assert "hundert" not in srt and "tausend" not in srt and "Römisch" not in srt, "Zahlwort im Untertitel"
 open(f"{U}/untertitel.srt", "w").write(srt)
