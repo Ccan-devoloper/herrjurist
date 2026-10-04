@@ -59,11 +59,11 @@ open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 
 srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
-ers = [("dreißig Zentimeter", "30 cm"), ("VWGO", "VwGO"), ("Römisch eins:", "I."), ("Römisch zwei:", "II."),
+ers = [("Otti-lie", "Ottilie"), ("dreißig Zentimeter", "30 cm"), ("VWGO", "VwGO"), ("Römisch eins:", "I."), ("Römisch zwei:", "II."),
        ("Römisch drei:", "III."), ("\nWernicke: ", "\nHerr Wernicke: ")]
 for a, b in ers:
     srt = srt.replace(a, b)
-assert "Römisch" not in srt and "VWGO" not in srt and "dreißig" not in srt, [l for l in srt.split("\n") if "Römisch" in l]
+assert "Otti-lie" not in srt and "Römisch" not in srt and "VWGO" not in srt and "dreißig" not in srt, [l for l in srt.split("\n") if "Römisch" in l]
 assert not re.search(r"§\n", srt)
 open(f"{U}/untertitel.srt", "w").write(srt)
 

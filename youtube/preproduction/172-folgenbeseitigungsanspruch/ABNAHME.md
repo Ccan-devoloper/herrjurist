@@ -2,12 +2,12 @@
 
 **Folge/Titel (Nr. laut Themenplan):** 172 · „Folgenbeseitigungsanspruch: Die Stadt pflastert deinen Vorgarten“ (Mo · Der Fall · Öffentliches Recht/Staatshaftungsrecht · Format Klassiker-Fall, als Fall mit Schema)
 **Datum/Rechtsstand:** 04.10.2026; GG, VwGO, BGB nach gesetze-im-internet.de; BVerwG 9 C 5.19, 1 C 13.14, 6 C 35.14, 6 C 11.20, 7 B 14.15, 6 B 33.15, 9 B 12.13, 3 C 17.09, 6 C 1.18, 6 C 8.13 im Volltext (bverwg.de, mit Rn.); Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
-**MP4 (Drive):** `LexVerse Produktion/172 Folgenbeseitigungsanspruch/172-Folgenbeseitigungsanspruch.mp4`, 7:06,84 min (8,0 s Intro + 6:43,73 Hauptfilm + 15,08 s Outro), 29.502.748 Byte, SHA-256 `a76c193cb22e93f85cf1160ae9316ad0767140f56a45b4089376365a06bb49fb`
-**Hauptfilm allein (Drive):** `172-Folgenbeseitigungsanspruch-Hauptfilm.mp4`, 22.049.401 Byte, SHA-256 `77d06b3f28bd22f61e673b12ac43bc83a2b178572a430acada95afd13b37e32f`
+**MP4 (Drive):** `LexVerse Produktion/172 Folgenbeseitigungsanspruch/172-Folgenbeseitigungsanspruch.mp4`, 7:09,01 min (8,0 s Intro + 6:45,90 Hauptfilm + 15,08 s Outro), 29.541.958 Byte, SHA-256 `5fbf0733f434aa9ee27fa52c387099588af641c4f98f330ec1fd634b6b657da4` (Fassung 2 nach Nachvertonung, siehe Nachtrag)
+**Hauptfilm allein (Drive):** `172-Folgenbeseitigungsanspruch-Hauptfilm.mp4`, 22.162.463 Byte, SHA-256 `24101a85ca8b7bfbe03af052604bbcd1cead95d01c29809506926b1bb129cf15`
 **Intro/Outro-Quellen:** unverändert aus `LexVerse Produktion/_Quellen/` (lokaler Cache `preproduction/_quellen/`), Endschnitt mit `tools/schnitt.py`
 **Produktionsmaster (Drive):** `LexVerse Produktion/172 Folgenbeseitigungsanspruch/master.zip`
 **Figuren und Stimmen:** Ottilie (Open Peeps `shirt-3`, Stimme `sabrina`), Herr Wernicke (`easing-2`, `marc`), Bauarbeiter (`robot_dance-2`, stumm), Lexi (`lexi.py`), Erzählerin Carla Blum; [`src/figuren_172.py`](src/figuren_172.py)
-**Skript-/Schnittrevision:** Skript v1 (5.765 Zeichen Skripttext, 5.766 vertonte Zeichen; vor der Vertonung von 5.813 gekürzt und rechtlich nachgeschärft) einmal vertont (21 Segmente), **keine Nachvertonung**; ein Vollrender (Vorschau, Einzelbilder und Manifest-Bögen vorher geprüft, danach drei kleine Layoutkorrekturen vor dem Vollrender)
+**Skript-/Schnittrevision:** Skript v1 (5.765 Zeichen Skripttext, 5.766 vertonte Zeichen; vor der Vertonung von 5.813 gekürzt und rechtlich nachgeschärft) einmal vertont (21 Segmente); **Nachvertonung der Segmente 5, 9 und 14** mit Aussprachehilfe „Otti-lie“ auf Anweisung des Koordinators (siehe Nachtrag); zwei Vollrender (Vorschau, Einzelbilder und Manifest-Bögen vorher geprüft, danach drei kleine Layoutkorrekturen vor dem Vollrender)
 **Prüfer und Datum:** Claude (automatische Prüfungen, Sichtung aller 130 Bildhalte aus dem finalen MP4, Lippenbilder aus dem MP4, Spracherkennung small und medium, Namensprüfung je Nennung), 04.10.2026. **Hör- und Sichtprüfung des Kanalinhabers steht aus.**
 
 Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katzenkönig; Ablauf nach [`FOLGE-ABLAUF.md`](../../FOLGE-ABLAUF.md), Vorlagen 170 (Werkzeuge), 146 (Klassiker-Format), 142 (Kontrast § 1004 BGB, nur verwiesen), 069 (§ 113 VwGO, nur verwiesen), 015 (Namens-/Sichtprüfung). Zeiten als Videozeit (Hauptfilmzeit + 8,0 s), sofern nicht anders angegeben.
@@ -51,15 +51,24 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 **Schlussprüfung:** Kontaktbögen aller 130 Bildhalte aus dem finalen MP4, Fallszene als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen, besonders die Aussprache von „Ottilie“ und „auswies“ bei 3:52,3, sowie die beiden Geräusche); Themenplan-Ergänzung durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 04.10.2026
 
-## Drive (Readback 04.10.2026, rclone)
+## Nachtrag 04.10.2026: Nachvertonung „Ottilie“ (Fassung 2)
 
-Ordner `LexVerse Produktion/172 Folgenbeseitigungsanspruch/`, ID `1kkAU_LNskJtAjsVABgMcQB3BDb12hFCa` (nur per rclone angelegt, kein Doppelordner):
+**Anlass:** Der Koordinator wertet das übereinstimmende „Utilie“ beider Erkenner an drei Stellen (Fassung 1: 0:39,4; 2:26,6; 4:37,2) als echten Aussprachefehler (O→U).
+**Vorgehen:** Aussprachehilfe nur im Sprechtext der drei betroffenen Segmente, `skript_172.py`: „Ottilie“ → „Otti-lie“ (zentrale Liste `AUSSPRACHE` in `synth_el.py` darf nicht geändert werden). Erst Probe an einer Stelle (Segment 5, 99 Zeichen; small und medium danach „Ottili“ statt „Utilie“), dann Segmente 9 (662 Zeichen) und 14 (455 Zeichen). Je Segment eine Nachvertonung; alle übrigen Segmente aus dem Cache. Neu gesprochen 1.216 Zeichen; der Credit-Zähler von `synth_el.py` meldete 0 (verzögerte Abrechnung), Kontostand danach 105.582 Credits – die Differenz ist wegen parallel vertonter Folgen nicht eindeutig zuzuordnen, rechnerisch ≈ 145 Credits (0,118 je Zeichen). `cues.json` enthält die gesprochene Form „Otti-lie“; Tafeln, Untertitel (`meta_172.py`) und `CUE-TIMELINE.md` (`timeline_172.py`) stehen in normaler Schreibung. Kein `beim()`-Anker hing am Namen.
+**Neu erzeugt:** `stimme.wav`, `stimme_48k.wav`, `cues.json` (Hauptfilm jetzt 405,90 s, +2,17 s ab Segment 5), Vorschau, Vollrender, `bildhalt_manifest.json` (wieder 130 eigenständige Bildhalte, Median 2,8 s), `CUE-TIMELINE.md` (130 Zeilen), `kapitel.json` (39 Pfadstände), Endschnitt, Upload-Texte (17 Kapitel, 103 Untertitel).
+**Prüfungen am neuen MP4:** Bildhalt-Kontaktbögen 1–4 aus dem MP4 gesichtet (keine Verschiebung von Bildern gegen Wörter, Fall-, Tafel- und Lösungsszenen unverändert); Lippenstreifen der verschobenen Sprechfenster (Herr Wernicke 5:48,4–5:54,2, Lexi Klausurtipp 5:54,5, Lexi Merksatz 6:42,3) aus dem MP4: Mund nur bei Wörtern offen; Schnittstellen 0:07,9/0:08,05/0:08,6/6:52,8/6:54,0/6:54,6 gesichtet, Outro ab 6:53,9. Geräusche jetzt 0:15,8 und 5:44,8. `pruefe_folge.py --asr`: **Exit 0**, Spanne 0,0 LU, Segmentkanten unauffällig (Segment 9: Restlaut nach „Verwaltungsakt“ stummgeschaltet, Wort vollständig erkannt), 91,9 % Wortgleichheit; Lautheit gesamt −16,5 LUFS, Spitze −1,3 dBFS; „Copyright WDR 2021“ bei 6:51,7 ist eine Halluzination des Erkenners in der Schlusspause (dort keine Sprache).
+**Namensprüfung Fassung 2** (`namen_172.py`, medium im Satz/isoliert, DTW): Die drei nachvertonten Stellen hören beide Modelle jetzt mit O: 0:39,5 „Ottili“ (small und medium), 2:28,0 „Ottili“ (small) / „Otti Lee“ (medium), 4:39,0 „Ottilie“ (small und medium). Kein „Utilie“ mehr im Satzzusammenhang bei beiden Modellen. Die nachvertonten Nennungen sind etwas kürzer (0,40–0,48 s statt 0,48–0,56 s) und werden teils ohne Schluss-e geschrieben („Ottili“) – **bitte anhören, ob die Endung -ie hörbar ist und die drei neuen Stellen zu den übrigen passen**. Übrige Nennungen unverändert (Erkenner: „Otelie/Otilie/Ortiljes“); DTW-Ausreißer jetzt knapp 5:11,2 („Hätte Ottilie etwa“, 1,61 gegen Median ≈ 1,55; medium im Satz „Otelie“, isoliert „Utilie“, nicht von beiden Modellen im Satz bestätigt) → nicht nachvertont, bitte anhören.
+**Bitte anhören (Fassung 2, Videozeit):** neu vertont 0:39,5, 2:28,0, 4:39,0 (Endung, Passung); übrige „Ottilie(s)“ 0:08,4, 1:07,5, 3:18,4, 3:27,2, 3:34,3, 5:11,2, 5:33,9; 0:22,3 „Wo vorher“; 3:00,2 „schlicht-hoheitliches“; 3:31,9 „Widmung“; 3:54,0 „auswies“; 4:35,3 „Status quo ante“; 5:27,3 „statthaft“; 6:02,5 „zielt“; 6:05,8 „Herleitung“. Die Zeitangaben in der Tabelle oben beziehen sich auf Fassung 1; ab 0:39 liegen sie in Fassung 2 um 0,6–2,2 s später.
+
+## Drive (Readback 04.10.2026, rclone; Fassung 2 ersetzt Fassung 1)
+
+Ordner `LexVerse Produktion/172 Folgenbeseitigungsanspruch/`, ID `1kkAU_LNskJtAjsVABgMcQB3BDb12hFCa` (nur per rclone angelegt, kein Doppelordner, keine doppelten Dateien – 9 Einträge):
 
 | Datei | Größe (Byte) |
 |---|---:|
-| `172-Folgenbeseitigungsanspruch.mp4` | 29.502.748 |
-| `172-Folgenbeseitigungsanspruch-Hauptfilm.mp4` | 22.049.401 |
-| `master.zip` | 52.185.753 |
+| `172-Folgenbeseitigungsanspruch.mp4` | 29.541.958 |
+| `172-Folgenbeseitigungsanspruch-Hauptfilm.mp4` | 22.162.463 |
+| `master.zip` | 53.471.914 |
 | `thumb_A.jpg` | 124.535 |
 | `thumb_B.jpg` | 129.806 |
 | `beschreibung.txt` | 3.545 |
@@ -67,4 +76,4 @@ Ordner `LexVerse Produktion/172 Folgenbeseitigungsanspruch/`, ID `1kkAU_LNskJtAj
 | `untertitel.srt` | 9.082 |
 | `metadaten.json` | 5.147 |
 
-`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 306 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`93abcc7dcd7e…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 312 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`e9bd29778788…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.

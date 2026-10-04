@@ -12,7 +12,7 @@ Quelle: `bildhalt_manifest.json` (130 Bildhalte, davon 130 eigenständig), `cues
 | 6 | 0:17.90 | 0:22.92 | Ottilie | Herr Wernicke, das ist mein Vorgarten! Die Steine müssen wieder weg. | Fall · Am Gartenrand | `104f6e07e121` |
 | 7 | 0:22.92 | 0:26.82 | Wernicke | Das war ein Versehen. Ich kann Ihnen dafür Geld anbieten. | Fall · Am Gartenrand | `d22b8e6ee955` |
 | 8 | 0:26.82 | 0:31.20 | Ottilie | Ich will kein Geld. Ich will meinen Vorgarten zurück. | Fall · Am Gartenrand | `b8070a48f17d` |
-| 9 | 0:31.20 | 0:34.84 | Carla (Erzählerin/Lexi) | Kann Otti-lie verlangen, dass die Gemeinde das Pflaster entfernt | Fall · Die Frage | `7be4f3bd96b5` |
+| 9 | 0:31.20 | 0:34.84 | Carla (Erzählerin/Lexi) | Kann Ottilie verlangen, dass die Gemeinde das Pflaster entfernt | Fall · Die Frage | `7be4f3bd96b5` |
 | 10 | 0:34.84 | 0:38.10 | Carla (Erzählerin/Lexi) | und den Vorgarten wiederherstellt? | Fall · Die Frage | `21dbeda51370` |
 | 11 | 0:38.10 | 0:47.90 | Carla (Erzählerin/Lexi) | Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an. | Sachverhalt | `b9ff7db0bbe7` |
 | 12 | 0:48.20 | 0:49.66 | Carla (Erzählerin/Lexi) | Unter Privaten gäbe es den | Einordnung › Kontrast: § 1004 BGB | `b32772cd756d` |
@@ -47,7 +47,7 @@ Quelle: `bildhalt_manifest.json` (130 Bildhalte, davon 130 eigenständig), `cues
 | 41 | 2:12.69 | 2:14.98 | Carla (Erzählerin/Lexi) | Das Bundesverwaltungsgericht sieht darin ein | I. Rechtsgrundlage › Herleitungsstreit | `ae1379444f46` |
 | 42 | 2:14.98 | 2:17.26 | Carla (Erzählerin/Lexi) | prozessuales Mittel für den Anspruch, | I. Rechtsgrundlage › Herleitungsstreit | `94bb5f847e7a` |
 | 43 | 2:17.26 | 2:19.94 | Carla (Erzählerin/Lexi) | dazu das Video zur Anfechtungsklage. | I. Rechtsgrundlage › Herleitungsstreit | `1b4d35dbf3a5` |
-| 44 | 2:19.94 | 2:23.02 | Carla (Erzählerin/Lexi) | Otti-lie hilft die Vorschrift aber nicht: Es gibt | I. Rechtsgrundlage › kein Verwaltungsakt | `dd86168cb085` |
+| 44 | 2:19.94 | 2:23.02 | Carla (Erzählerin/Lexi) | Ottilie hilft die Vorschrift aber nicht: Es gibt | I. Rechtsgrundlage › kein Verwaltungsakt | `dd86168cb085` |
 | 45 | 2:23.02 | 2:25.28 | Carla (Erzählerin/Lexi) | keinen Verwaltungsakt. | I. Rechtsgrundlage › kein Verwaltungsakt | `b1691047d2f7` |
 | 46 | 2:25.58 | 2:29.16 | Carla (Erzählerin/Lexi) | Römisch zwei: die Voraussetzungen, vier Punkte. | II. Voraussetzungen › Überblick | `96e5fe6c3b6b` |
 | 47 | 2:29.16 | 2:32.04 | Carla (Erzählerin/Lexi) | Erstens ein hoheitlicher Eingriff, | II. Voraussetzungen › Überblick | `3d9787f8c531` |
@@ -91,7 +91,7 @@ Quelle: `bildhalt_manifest.json` (130 Bildhalte, davon 130 eigenständig), `cues
 | 85 | 4:24.36 | 4:26.64 | Carla (Erzählerin/Lexi) | Zustands vor dem Eingriff, des | III. Rechtsfolge › Status quo ante | `2727c0f61e60` |
 | 86 | 4:26.64 | 4:28.44 | Carla (Erzählerin/Lexi) | Status quo ante. | III. Rechtsfolge › Status quo ante | `5bbc6082ad43` |
 | 87 | 4:28.44 | 4:31.00 | Carla (Erzählerin/Lexi) | Er ist kein Schadensersatzanspruch. | III. Rechtsfolge › kein Schadensersatz | `fbec8029928f` |
-| 88 | 4:31.00 | 4:34.36 | Carla (Erzählerin/Lexi) | Otti-lie muss sich also nicht mit Geld abfinden lassen. | III. Rechtsfolge › kein Schadensersatz | `1c1f1e2ced10` |
+| 88 | 4:31.00 | 4:34.36 | Carla (Erzählerin/Lexi) | Ottilie muss sich also nicht mit Geld abfinden lassen. | III. Rechtsfolge › kein Schadensersatz | `1c1f1e2ced10` |
 | 89 | 4:34.66 | 4:37.76 | Carla (Erzählerin/Lexi) | Schadensersatz ist etwa Sache der Amtshaftung: Nach | III. Rechtsfolge › Kontrast: Amtshaftung | `6fc06125b64d` |
 | 90 | 4:37.76 | 4:40.80 | Carla (Erzählerin/Lexi) | Artikel vierunddreißig Satz eins G.G. trifft die | III. Rechtsfolge › Kontrast: Amtshaftung | `3ba7cf63ab6c` |
 | 91 | 4:40.80 | 4:42.88 | Carla (Erzählerin/Lexi) | Verantwortlichkeit grundsätzlich den | III. Rechtsfolge › Kontrast: Amtshaftung | `ce37ddcb49ae` |

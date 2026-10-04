@@ -21,7 +21,7 @@ zeilen = ["# Folge 172 · Cue-Timeline (Ton-Bild-Gate)", "",
 for h in man["halte"]:
     ws = [(w, r) for a, b, w, r in woerter if a < h["ende"] and b > h["start"]]
     sprecher = " / ".join(dict.fromkeys(r for _, r in ws)) or "– (Pause)"
-    text = " ".join(w for w, _ in ws)
+    text = " ".join(w for w, _ in ws).replace("Otti-lie", "Ottilie")   # Aussprachehilfe nur in der Vertonung
     if len(text) > 110:
         text = text[:107] + " …"
     zeilen.append(f"| {h['nr']} | {mmss(h['start'])} | {mmss(h['ende'])} | {sprecher} | {text.replace('|', '/')} | "
