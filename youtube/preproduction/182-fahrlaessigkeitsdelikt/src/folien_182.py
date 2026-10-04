@@ -445,8 +445,10 @@ folie([("p229", "Einordnung · fahrlässige Körperverletzung, § 229 StGB"), ("
     *tafel("p229", "§ 229 und § 222 StGB"),
     *w229, *w222,
     blk(110, w222_y + 30, 1040, 78, GRUEN, "gleich", [("Beide: dasselbe Prüfungsschema", "ExtraBold", 36, INK)]),
-    *requisit([("p229", ("tabler", "first-aid-kit", 100, ROT), "§ 229: bis 3 Jahre oder Geldstrafe", WEISS),
-               ("p222", ("tabler", "scale", 100, WEISS), "§ 222: bis 5 Jahre oder Geldstrafe", WEISS),
+    *requisit([("p229", ("tabler", "first-aid-kit", 100, ROT), "§ 229 StGB", WEISS),
+               (beim("p229", "Freiheitsstrafe"), ("tabler", "first-aid-kit", 100, ROT), "§ 229: bis 3 Jahre oder Geldstrafe", WEISS),
+               ("p222", ("tabler", "scale", 100, WEISS), "§ 222 StGB", WEISS),
+               (beim("p222", "Freiheitsstrafe"), ("tabler", "scale", 100, WEISS), "§ 222: bis 5 Jahre oder Geldstrafe", WEISS),
                ("gleich", ("tabler", "list-numbers", 100, WEISS), "ein Schema", GRUEN)]),
     *stehend("BE", FX, [("p229", "ernst"), ("gleich", "ruhig")]),
 ]))
