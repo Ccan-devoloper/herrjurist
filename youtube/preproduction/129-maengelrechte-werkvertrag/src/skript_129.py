@@ -63,7 +63,7 @@ SEGMENTE = [
     # --- G Vorschuss, § 637 Abs. 3 ---------------------------------------------------------------------------------------
     ("[v1]Vorfinanzieren muss sie die Reparatur nicht: Nach Absatz drei kann sie Vorschuss verlangen. [v2]Den Vorschuss "
      "muss sie nach dem Bundesgerichtshof für die Reparatur verwenden und danach abrechnen. [kauf2]Im Kaufrecht gibt es "
-     "weder Selbstvornahme noch Vorschuss.", PS),
+     "keine Selbstvornahme und damit auch keinen Vorschuss dafür.", PS),
     # --- H Rücktritt, Minderung, Schadensersatz --------------------------------------------------------------------------
     ("[rm1]Rücktritt und Minderung setzen ebenfalls eine erfolglose Frist voraus, Paragrafen sechshundertsechsunddreißig "
      "und dreihundertdreiundzwanzig. [rm2]Bei einem unerheblichen Mangel ist der Rücktritt ausgeschlossen, mindern geht "
@@ -78,7 +78,7 @@ SEGMENTE = [
      "zwei. Beate hat also Zeit.", PS),
     # --- J 5. Unterschiede zum Kauf (Tabelle) -----------------------------------------------------------------------------
     ("[u1]Fünftens: die Unterschiede zum Kauf auf einen Blick. [u2]Das Wahlrecht bei der Nacherfüllung hat beim Kauf der "
-     "Käufer, beim Werkvertrag der Unternehmer. [u3]Selbstvornahme und Vorschuss gibt es nur im Werkvertrag. "
+     "Käufer, beim Werkvertrag der Unternehmer. [u3]Selbstvornahme und den Vorschuss dafür gibt es nur im Werkvertrag. "
      "[u4]Maßgeblich für den Mangel ist beim Kauf der Gefahrübergang, in der Regel die Übergabe, beim Werk die Abnahme. "
      "[u5]Und die Verjährung beginnt beim Kauf mit der Ablieferung, beim Werk mit der Abnahme.", PS),
     # --- K Ergebnis ------------------------------------------------------------------------------------------------------
