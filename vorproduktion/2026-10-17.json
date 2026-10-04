@@ -1,21 +1,16 @@
 {
   "datum": "2026-10-17",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
+  "freigabeBetreiber": true,
   "liveVerknuepft": false,
-  "vorproduktionStatus": "review",
+  "vorproduktionStatus": "live-freigegeben",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungUsd": 0,
     "providerKostenUsd": 0,
-    "piperOffline": true,
     "coverbilder": false,
-    "autorUsd": 0,
-    "faktencheckUsd": 0,
-    "sonstigeTextKiUsd": 0,
     "bildgenerierungErlaubt": false,
-    "bildkostenUsd": 0,
-    "bilderStatus": "bewusst-ausgelassen"
+    "reelStimme": "elevenlabs-abo"
   },
   "plan": {
     "beitraege": [
@@ -43,7 +38,8 @@
         "format": "reel",
         "themaId": "mindset-4",
         "themaTitel": null,
-        "lang": false
+        "fach": "mindset",
+        "klausur": 0
       }
     ],
     "stories": [
@@ -63,8 +59,7 @@
         "slot": "s1",
         "zeit": "08:00",
         "art": "teaser",
-        "beitragSlot": "b1",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b1"
       },
       {
         "slot": "s6",
@@ -76,8 +71,7 @@
         "slot": "s2",
         "zeit": "12:30",
         "art": "teaser",
-        "beitragSlot": "b2",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b2"
       },
       {
         "slot": "s7",
@@ -95,8 +89,7 @@
         "slot": "s3",
         "zeit": "17:30",
         "art": "teaser",
-        "beitragSlot": "b3",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b3"
       },
       {
         "slot": "s9",
@@ -247,93 +240,7 @@
       "klausur": 0,
       "fachLabel": "Klausur- und Lernmethodik",
       "themaId": "methodik-898",
-      "slug": "2026-10-17-b1",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Aus „Fraglich ist …“ wird ein Obersatz mit Norm",
-          "titelZeilen": [
-            "Aus „Fraglich",
-            "ist …“ wird ein",
-            "Obersatz mit Norm"
-          ],
-          "coverBadge": "Klausurtechnik",
-          "coverText": "Wer, was, von wem, woraus",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Das Problem",
-          "text": "„Fraglich ist, ob A strafbar ist“ nennt weder Norm noch Tatbestand. Der Korrektor weiß nicht, was du prüfst – und du legst dich selbst nicht fest. Ein Obersatz muss so präzise sein, dass die folgende Prüfung ihn Punkt für Punkt abarbeiten kann."
-        },
-        {
-          "art": "vergleich",
-          "titel": "Zu vage oder präzise?",
-          "links": {
-            "titel": "Zu vage",
-            "punkte": [
-              "„A könnte sich strafbar gemacht haben.“",
-              "„Fraglich ist, ob ein Vertrag besteht.“"
-            ]
-          },
-          "rechts": {
-            "titel": "Präzise",
-            "punkte": [
-              "„A könnte sich nach § 242 I StGB strafbar gemacht haben, indem er die Uhr nahm.“",
-              "„K könnte gegen V einen Anspruch auf Übereignung aus § 433 I 1 BGB haben.“"
-            ]
-          }
-        },
-        {
-          "art": "schritte",
-          "titel": "Die vier Bausteine",
-          "schritte": [
-            {
-              "titel": "Wer?",
-              "text": "Anspruchsteller und Anspruchsgegner oder der Täter."
-            },
-            {
-              "titel": "Was?",
-              "text": "Das konkrete Begehren (Zahlung von 500 €) oder das konkrete Delikt."
-            },
-            {
-              "titel": "Woraus?",
-              "text": "Die Norm so genau wie möglich: mit Absatz, Satz, Alternative, wenn es sie gibt."
-            },
-            {
-              "titel": "Wodurch?",
-              "text": "Im Strafrecht das Verhalten: „indem er …“ – daran knüpft die Prüfung an."
-            }
-          ]
-        },
-        {
-          "art": "text",
-          "titel": "Auch unten im Gutachten",
-          "text": "Jedes problematische Merkmal bekommt einen eigenen kleinen Obersatz: „Die Uhr müsste für A eine fremde Sache sein.“ Dann Definition, Subsumtion, Ergebnis. „Fraglich ist …“ darf danach das Problem einleiten – den Obersatz ersetzt es nicht."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Ein guter Obersatz sagt, wer was von wem woraus verlangt – oder wer sich durch welches Verhalten nach welcher Norm strafbar gemacht haben könnte."
-        },
-        {
-          "art": "cta",
-          "titel": "Obersatz-Check vor dem Schreiben",
-          "punkte": [
-            "Personen genannt?",
-            "Begehren oder Delikt konkret?",
-            "Norm genau zitiert?",
-            "Verhalten benannt?"
-          ],
-          "icons": [
-            "personen",
-            "zielscheibe",
-            "paragraf",
-            "lupe"
-          ]
-        }
-      ],
-      "caption": "„Fraglich ist, ob …“ ist kein Obersatz. Ein subsumtionsfähiger Obersatz nennt, wer was von wem woraus verlangt – im Strafrecht: wer sich durch welches Verhalten nach welcher Norm strafbar gemacht haben könnte. Zitiere die Norm so genau wie möglich und gib jedem problematischen Merkmal einen eigenen kleinen Obersatz. Speichern und bei der nächsten Probeklausur abhaken.",
+      "caption": "„Fraglich ist, ob …“ ist kein Obersatz.\n\n▸ Ein subsumtionsfähiger Obersatz nennt, wer was von wem woraus verlangt – im Strafrecht, wer sich durch welches Verhalten nach welcher Norm strafbar gemacht haben könnte.\n▸ Zu vage: „A könnte sich strafbar gemacht haben.“ Präzise: „A könnte sich wegen Diebstahls nach § 242 Abs. 1 StGB strafbar gemacht haben, indem er die Uhr wegnahm.“ Oder: „K könnte gegen V einen Anspruch auf Übereignung aus § 433 Abs. 1 S. 1 BGB haben.“\n▸ Die Norm so genau wie möglich zitieren: mit Absatz, Satz, Alternative.\n▸ Jedes problematische Merkmal bekommt einen eigenen kleinen Obersatz, dann Definition, Subsumtion, Ergebnis. „Fraglich ist …“ darf danach das Problem einleiten – den Obersatz ersetzt es nicht.\n\nZum Schluss: der Baustein für dein Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -345,38 +252,60 @@
         "#jurastudent",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Obersatztechnik: präzise formulieren",
-      "coverText": "Wer, was, von wem, woraus",
-      "coverBadge": "Klausurtechnik",
-      "coverRegie": {
-        "charaktere": [
-          "form7",
-          "flux"
-        ],
-        "kernidee": "Ein Obersatz ist erst brauchbar, wenn er Person, Ziel und Norm genau benennt.",
-        "handlung": "{A} hovers over a blank signpost with a single vague question mark, while {B} uses his pointer to attach three clear direction arms to it, each pointing to a distinct destination.",
-        "hinweisRegie": "Place the note in the free space beside the newly attached direction arms, slightly tilted toward them, without covering the question mark or {B}'s pointer.",
-        "alternative": "{B} focuses a blurry magnifying glass until a single target comes sharply into view, while {A} holds up a tidy frame around it."
-      },
-      "bildSzene": "vague signpost gets clear direction arms",
-      "bildSzeneAlt": "blurry lens focused onto target",
       "quellen": [
-        "§ 242 StGB (Beispiel)",
-        "§ 433 BGB (Beispiel)",
-        "Themenpool: methodik-898"
+        "§ 242 Abs. 1 StGB (Beispiel)",
+        "§ 433 Abs. 1 S. 1 BGB (Beispiel)"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "umbau-vorher-nachher",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-17-b1",
+      "kurztitel": "Obersatztechnik: präzise und subsumtionsfähig formulieren",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:20:19.196Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Klausurtechnik",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Klausurtechnik",
+          "text": "Klausurtechnik · „Fraglich ist …“ · ist kein Obersatz · 4 Bausteine · + Gutachten-Baustein · Wer? · Was? · Woraus? · Wodurch?",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Klausur- und Lernmethodik",
+          "text": "Das Problem · „Fraglich ist, ob A strafbar ist.“ · Keine Norm, kein Tatbestand: Der Korrektor weiß nicht, was du prüfst. · Ein Obersatz muss sich Punkt für Punkt abarbeiten lassen. · Jetzt du: Wie wird er präzise? · Was prüfe ich?"
+        },
+        {
+          "art": "text",
+          "titel": "Klausur- und Lernmethodik",
+          "text": "Zu vage oder präzise? · Zu vage · „A könnte sich strafbar gemacht haben.“ · „Fraglich ist, ob ein Vertrag besteht.“ · Präzise · „A könnte durch Wegnahme der Uhr einen Diebstahl begangen haben.“ · § 242 Abs. 1 StGB · „K könnte von V Übereignung verlangen.“ · § 433 Abs. 1 S. 1 BGB · Norm rein!"
+        },
+        {
+          "art": "text",
+          "titel": "Klausur- und Lernmethodik",
+          "text": "Die vier Bausteine · Wer? · Anspruchsteller und Gegner oder der Täter · Was? · das konkrete Begehren oder Delikt · Woraus? · die Norm mit Absatz, Satz, Alternative · Wodurch? · im Strafrecht das Verhalten: „indem er …“ · Am Ende: Baustein für das Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Klausur- und Lernmethodik",
+          "text": "Der typische Fehler · „Fraglich ist …“ ersetzt den Obersatz. · Jedes problematische Merkmal bekommt einen eigenen kleinen Obersatz. · Dann Definition, Subsumtion, Ergebnis. · Erst der Obersatz!"
+        },
+        {
+          "art": "text",
+          "titel": "Klausur- und Lernmethodik",
+          "text": "Lösung: wer, was, von wem, woraus · im Strafrecht: wer, wodurch, nach welcher Norm · Wer will was · von wem woraus? · Erst dann subsumieren. · Speichern fürs Examen · Wie startet dein Obersatz? · Weiterwischen: Gutachten-Baustein"
+        },
+        {
+          "art": "text",
+          "titel": "Klausur- und Lernmethodik",
+          "text": "So im Gutachten · Obersatz · § 242 Abs. 1 StGB · Die Uhr müsste für A eine fremde Sache sein. · Definition · Fremd: nicht Alleineigentum des Täters, nicht herrenlos · Subsumtion · Die Uhr gehört O. · Ergebnis · Die Uhr ist für A fremd."
+        }
+      ]
     },
     "b2": {
       "format": "spickzettel",
@@ -384,83 +313,7 @@
       "klausur": 3,
       "fachLabel": "Besonderes Verwaltungsrecht",
       "themaId": "verwbt-113",
-      "slug": "2026-10-17-b2",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Verhalten, Zustand, Notstand: Wer für die Gefahr einsteht",
-          "titelZeilen": [
-            "Verhalten, Zustand,",
-            "Notstand: Wer für",
-            "die Gefahr einsteht"
-          ],
-          "coverBadge": "Spickzettel",
-          "coverText": "Nichtstörer nur im Notstand",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Die drei Wege",
-          "punkte": [
-            "Verhaltensverantwortlich: wer die Gefahr durch eigenes Verhalten verursacht.",
-            "Zustandsverantwortlich: Inhaber der tatsächlichen Gewalt oder Eigentümer der gefährlichen Sache.",
-            "Nicht verantwortlich: nur im polizeilichen Notstand, unter engen Voraussetzungen.",
-            "Je nach Landesrecht zusätzlich: Aufsichtspflichtige und Geschäftsherren für andere."
-          ]
-        },
-        {
-          "art": "vergleich",
-          "titel": "Wann ist Verhalten ursächlich?",
-          "links": {
-            "titel": "Unmittelbarkeit",
-            "punkte": [
-              "Verantwortlich ist, wer die Gefahrenschwelle unmittelbar überschreitet.",
-              "Bloß mittelbare Beiträge genügen grundsätzlich nicht."
-            ]
-          },
-          "rechts": {
-            "titel": "Zweckveranlasser",
-            "punkte": [
-              "Wer das Störerverhalten Dritter bezweckt oder zwangsläufig auslöst.",
-              "Überwiegend anerkannt, im Einzelnen umstritten."
-            ]
-          }
-        },
-        {
-          "art": "text",
-          "titel": "Anschein und Verdacht",
-          "text": "Anscheinsstörer: Bei verständiger Würdigung ex ante lag eine Gefahr vor, die er verursacht hat – auf der Primärebene ist er verantwortlich. Hat er den Anschein nicht zurechenbar veranlasst, kann er auf der Kostenebene wie ein Nichtstörer zu behandeln sein."
-        },
-        {
-          "art": "text",
-          "titel": "Störerauswahl",
-          "punkte": [
-            "Mehrere Verantwortliche: Auswahl nach pflichtgemäßem Ermessen.",
-            "Leitlinie ist die effektive Gefahrenabwehr – keine starre Rangfolge zwischen Verhalten und Zustand.",
-            "Nichtstörer erst, wenn Störer nicht oder nicht rechtzeitig herangezogen werden können."
-          ]
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Erst die Landesnorm zur Verantwortlichkeit nennen, dann Verhalten oder Zustand prüfen – den Nichtstörer nur im Notstand."
-        },
-        {
-          "art": "cta",
-          "titel": "Verantwortlichkeit in drei Zügen",
-          "punkte": [
-            "Verhalten oder Zustand?",
-            "Unmittelbar verursacht?",
-            "Auswahl ermessensfehlerfrei?"
-          ],
-          "icons": [
-            "polizei",
-            "lupe",
-            "waage"
-          ]
-        }
-      ],
-      "caption": "Drei Wege führen zur Polizeipflicht: Verhalten, Zustand und – nur im polizeilichen Notstand – die Inanspruchnahme des Nichtstörers. Die Details regeln die Polizei- und Ordnungsgesetze der Länder, deshalb gehört die Landesnorm an den Anfang. Bei mehreren Verantwortlichen entscheidet die Behörde nach Ermessen, Leitlinie ist die effektive Gefahrenabwehr. Speichern als Spickzettel für die nächste Polizeirechtsklausur.",
+      "caption": "Drei Wege führen zur Polizeipflicht: Verhalten, Zustand und – nur im polizeilichen Notstand – die Inanspruchnahme des Nichtstörers. Landesrecht prüfen: Die Details regeln die Polizei- und Ordnungsgesetze der Länder, deshalb gehört die Landesnorm an den Anfang. Zum Vergleich das Bundesrecht: §§ 17, 18, 20 BPolG.\n\n▸ Verhaltensverantwortlich ist, wer die Gefahr verursacht – nach der Unmittelbarkeitslehre, wer selbst die Gefahrenschwelle überschreitet. Der Zweckveranlasser ist überwiegend anerkannt, im Einzelnen umstritten.\n▸ Zustandsverantwortlich ist der Inhaber der tatsächlichen Gewalt, daneben der Eigentümer – nicht, wenn der Inhaber die Gewalt ohne seinen Willen ausübt (vgl. § 18 Abs. 2 BPolG).\n▸ Nichtstörer nur bei gegenwärtiger erheblicher Gefahr, wenn Verantwortliche nicht oder nicht rechtzeitig herangezogen werden können (vgl. § 20 Abs. 1 BPolG).\n▸ Mehrere Verantwortliche: Auswahl nach pflichtgemäßem Ermessen, Leitlinie ist die effektive Gefahrenabwehr – keine starre Rangfolge.\n▸ Im Fall: M ist Verhaltens- und als Mieter Zustandsstörer, E als Eigentümerin Zustandsstörerin.\n\nZum Schluss: der Baustein für dein Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -472,129 +325,73 @@
         "#jurastudent",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Polizeirecht: Wer ist Störer?",
-      "coverText": "Nichtstörer nur im Notstand",
-      "coverBadge": "Spickzettel",
-      "coverRegie": {
-        "charaktere": [
-          "rex",
-          "brakk"
-        ],
-        "kernidee": "Für eine Gefahr kann man durch sein Verhalten, durch seine Sache oder – ganz ausnahmsweise – als Unbeteiligter einstehen müssen.",
-        "handlung": "{B} steadies a teetering boulder on his own plot while {A}, who just nudged it with a lever, freezes guiltily; a bystander in the background watches with hands raised.",
-        "hinweisRegie": "Place the note in the free space near the distant bystander, slightly tilted, so it marks the rare exception without covering the boulder, the lever or faces.",
-        "alternative": "{A} sorts three keys onto a board by shape – a hand, a house and a small emergency bell – while {B} picks the first key that will stop a leak fastest."
-      },
-      "bildSzene": "lever nudges boulder, bystander watches",
-      "bildSzeneAlt": "three keys sorted: hand, house, bell",
       "quellen": [
         "Polizei- und Ordnungsgesetze der Länder",
-        "Themenpool: verwbt-113"
+        "§§ 17, 18, 20 BPolG"
       ],
-      "hookTyp": "zahl",
-      "hookMuster": "dreiklang",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-17-b2",
+      "kurztitel": "Wer ist Störer im Polizei- und Ordnungsrecht?",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:20:19.197Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Spickzettel",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Spickzettel",
+          "text": "Spickzettel · E lagert nichts – · trotzdem · Störerin · Polizeirecht · Landesrecht prüfen · Störer finden · + Gutachten-Baustein",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Besonderes Verwaltungsrecht",
+          "text": "Der Fall · Mieter M lagert undichte Ölfässer auf dem Grundstück der Eigentümerin E. · Öl ist ins Erdreich gesickert und droht ins Grundwasser zu gelangen. · Jetzt du: Wer ist verantwortlich? · Ich doch nicht!"
+        },
+        {
+          "art": "text",
+          "titel": "Besonderes Verwaltungsrecht",
+          "text": "Drei Wege zur Verantwortlichkeit · Verhalten · z. B. § 17 BPolG · wer die Gefahr verursacht · Zustand · z. B. § 18 BPolG · Inhaber der tatsächlichen Gewalt, auch der Eigentümer · Nichtstörer · z. B. § 20 BPolG · nur im polizeilichen Notstand · Am Ende: Baustein für das Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Besonderes Verwaltungsrecht",
+          "text": "Wann ist Verhalten ursächlich? · Unmittelbarkeit · überschreitet selbst die Gefahrenschwelle · mittelbare Beiträge genügen nicht · Zweckveranlasser · bezweckt das Störerverhalten Dritter · anerkannt, im Einzelnen umstritten · Wer überschreitet?"
+        },
+        {
+          "art": "text",
+          "titel": "Besonderes Verwaltungsrecht",
+          "text": "Der typische Fehler · Starre Rangfolge: erst Verhalten, dann Zustand. · Auswahl nach Ermessen, Leitlinie: effektive Gefahrenabwehr. · Landesrecht prüfen: Die Polizeigesetze der Länder regeln die Details. · Ermessen!"
+        },
+        {
+          "art": "text",
+          "titel": "Besonderes Verwaltungsrecht",
+          "text": "Lösung · M verursacht die Gefahr und hat die tatsächliche Gewalt. · E ist als Eigentümerin Zustandsstörerin. · Auswahl zwischen M und E nach Ermessen · Also auch ich."
+        },
+        {
+          "art": "text",
+          "titel": "Besonderes Verwaltungsrecht",
+          "text": "Lösung: M und E sind verantwortlich · Auswahl nach pflichtgemäßem Ermessen · Verhalten oder Zustand, · Nichtstörer nur · im Notstand. · Speichern fürs Examen · Hättest du E übersehen? · Weiterwischen: Gutachten-Baustein"
+        },
+        {
+          "art": "text",
+          "titel": "Besonderes Verwaltungsrecht",
+          "text": "So im Gutachten · Obersatz · Landesrecht prüfen · E müsste als Zustandsstörerin verantwortlich sein. · Definition · Inhaber der Gewalt oder Eigentümer der gefährlichen Sache · Subsumtion · Vom verseuchten Grundstück der E geht die Gefahr aus. · Ergebnis · E ist Zustandsstörerin."
+        }
+      ]
     },
     "b3": {
       "format": "reel",
-      "layout": "erklaer",
       "fach": "mindset",
       "klausur": 0,
       "fachLabel": "Kopfsache",
       "themaId": "mindset-4",
-      "slug": "2026-10-17-b3",
-      "szenen": [
-        {
-          "art": "hook",
-          "titel": "Lieber knapp und fertig als perfekt und halb",
-          "unter": "Kopfsache · Perfektionismus",
-          "text": "Was nicht auf dem Papier steht, kann nicht bewertet werden.",
-          "norm": null,
-          "icon": "stoppuhr",
-          "sprecher": "Lieber knapp und fertig als perfekt und halb. Das gilt in fast jeder Klausur. Perfektionismus fühlt sich gründlich an. Aber was nicht auf dem Papier steht, kann niemand bewerten.",
-          "marken": [
-            "halb perfekt?",
-            "ganz und knapp"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "schritt",
-          "nummer": 1,
-          "titel": "Jede Fallfrage anfassen",
-          "text": "Zu jeder Frage mindestens Obersatz und Ergebnis.",
-          "norm": null,
-          "sprecher": "Schritt eins: jede Fallfrage anfassen. Auch wenn die Zeit knapp wird, schreib zu jeder Frage wenigstens einen Obersatz und ein Ergebnis. Eine leere Fallfrage bringt sicher nichts.",
-          "marken": [
-            "jede Frage"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 2,
-          "titel": "Zu jedem Anspruch ein Ergebnis",
-          "text": "Knapp, aber abgeschlossen.",
-          "norm": null,
-          "sprecher": "Schritt zwei: zu jedem Anspruch ein Ergebnis. Eine knappe Prüfung mit klarem Ergebnis zeigt, dass du den Weg kennst. Eine abgebrochene Prüfung zeigt das nicht.",
-          "marken": [
-            "abgeschlossen"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 3,
-          "titel": "Erst Struktur, dann Feinschliff",
-          "text": "Gliederung komplett, dann die Schwerpunkte ausformulieren.",
-          "norm": null,
-          "sprecher": "Schritt drei: erst die Struktur, dann der Feinschliff. Schreib die Gliederung vollständig, dann formulierst du die Schwerpunkte aus. Unproblematisches bleibt kurz. Bleibt am Ende Zeit, kannst du immer noch nachschärfen.",
-          "marken": [
-            "Struktur zuerst"
-          ]
-        },
-        {
-          "art": "punkt",
-          "titel": "Perfektion kostet Minuten",
-          "text": "Der fünfte Satz zum Nebenpunkt fehlt später beim Schwerpunkt.",
-          "norm": null,
-          "sprecher": "Warum das zählt: Jeder perfekte Satz zu einem Nebenpunkt kostet Minuten, die dir später beim eigentlichen Problem fehlen.",
-          "marken": [
-            "Minuten sparen"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "merke",
-          "titel": "Vollständig schlägt perfekt",
-          "text": "Eine vollständige, knappe Lösung schlägt eine perfekte halbe.",
-          "norm": null,
-          "sprecher": "Merke: Vollständig schlägt perfekt. Fertig und gut genug ist besser als brillant und halb.",
-          "marken": [
-            "vollständig > perfekt"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "cta",
-          "titel": "Nächste Probeklausur: jede Frage beantworten",
-          "text": "Speichern und in der nächsten Probeklausur testen.",
-          "norm": null,
-          "sprecher": "Probier es in der nächsten Probeklausur aus: zu jeder Frage ein Ergebnis, egal wie knapp. Speicher dir das Reel, damit du im richtigen Moment daran denkst.",
-          "marken": [
-            "speichern & testen"
-          ],
-          "nummer": null
-        }
-      ],
-      "caption": "Lieber knapp und fertig als perfekt und halb – was nicht auf dem Papier steht, kann niemand bewerten. Drei Handgriffe gegen Perfektionismus: jede Fallfrage anfassen, zu jedem Anspruch ein Ergebnis, erst die Struktur und dann der Feinschliff. Vollständig schlägt perfekt.",
+      "caption": "Perfekte halbe Klausur oder knappe ganze? Die knappe gewinnt – was nicht auf dem Papier steht, kann niemand bewerten.\n\n▸ Jede Fallfrage anfassen: Auch wenn die Zeit knapp wird, zu jeder Frage wenigstens Obersatz und Ergebnis.\n▸ Zu jedem Anspruch ein Ergebnis: Eine knappe Prüfung mit klarem Ergebnis zeigt, dass du den Weg kennst.\n▸ Erst die Struktur, dann der Feinschliff: Gliederung vollständig, dann die Schwerpunkte ausformulieren, Unproblematisches kurz.\n▸ Jeder perfekte Satz zu einem Nebenpunkt kostet Minuten, die beim eigentlichen Problem fehlen.\n\nProbier es in der nächsten Probeklausur aus. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -606,214 +403,285 @@
         "#jurastudent",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Perfektionismus: vollständig schlägt perfekt",
-      "titelZeilen": [
-        "Lieber knapp und",
-        "fertig als perfekt",
-        "und halb"
-      ],
-      "coverText": "Vollständig schlägt perfekt",
-      "coverBadge": "Reel",
-      "coverRegie": {
-        "charaktere": [
-          "mara",
-          "zylla"
-        ],
-        "kernidee": "Eine vollständige, knappe Lösung bringt mehr als eine perfekte halbe.",
-        "handlung": "{B} is lovingly polishing one single, gleaming bridge plank, while {A} points across the gap to a simple but complete rope bridge already reaching the other side.",
-        "hinweisRegie": "Place the note in the free space above the complete rope bridge, slightly tilted toward the far side, without covering the polished plank or faces.",
-        "alternative": "{A} hands {B} a simple checklist with every box ticked lightly, while a single ornate half-finished drawing lies aside."
-      },
-      "bildSzene": "polished plank versus complete rope bridge",
-      "bildSzeneAlt": "every checklist box ticked lightly",
-      "quellen": [
-        "Themenpool: mindset-4"
-      ],
-      "hookTyp": "fehler",
-      "hookMuster": "maxime",
-      "coverBildAuslassen": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "quellen": [],
+      "slug": "2026-10-17-b3",
+      "kurztitel": null,
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:20:19.202Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "bild": "op-cover",
+      "reelTyp": "kopfsache",
+      "hookStil": "knall",
+      "coverBadge": "Reel",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Perfekt, aber nur halb fertig?"
+        },
+        {
+          "art": "schritt",
+          "titel": "Jede Fallfrage anfassen"
+        },
+        {
+          "art": "schritt",
+          "titel": "Zu jedem Anspruch ein Ergebnis"
+        },
+        {
+          "art": "schritt",
+          "titel": "Erst Struktur, dann Feinschliff"
+        }
+      ],
+      "sprecher": [
+        "Perfekte halbe Klausur oder knappe ganze? Die knappe gewinnt, denn Ungeschriebenes bringt keine Punkte.",
+        "Zuerst jede Fallfrage anfassen: mindestens Obersatz und Ergebnis.",
+        "Dann zu jedem Anspruch ein Ergebnis, knapp, aber abgeschlossen.",
+        "Erst die Gliederung komplett, dann die Schwerpunkte ausformulieren.",
+        "Merke: Vollständig schlägt perfekt."
+      ],
+      "dauerS": 25.397,
+      "tempo": 1.0
     },
     "s4": {
       "slot": "s4",
       "art": "frage",
-      "fach": "strafbt",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafbt-746",
-      "ueberzeile": "Prüfungsfrage Strafrecht",
-      "titel": "Diebstahl: Wann ist eine Sache „fremd“?",
-      "optionen": [
-        "Wenn sie nicht im Besitz des Täters ist",
-        "Wenn der Täter keinen Anspruch auf sie hat",
-        "Wenn sie zivilrechtlich zumindest auch einem anderen gehört"
-      ],
-      "richtig": 2,
-      "quellen": [
-        "§ 242 Abs. 1 StGB",
-        "Themenpool: strafbt-746"
-      ],
       "fachLabel": "Strafrecht BT",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:20:19.202Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "strafbt-746",
+      "beitragSlot": null,
+      "quellen": null,
+      "frage": [
+        "Diebstahl:",
+        "Wann ist eine",
+        "Sache fremd?"
+      ],
+      "optionen": [
+        "Nicht im Besitz des Täters",
+        "Täter hat keinen Anspruch",
+        "Gehört zumindest auch anderen"
+      ],
+      "pairId": "strafbt-746",
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Prüfungsfrage",
+        "Diebstahl:",
+        "Wann ist eine",
+        "Sache fremd?",
+        "Nicht im Besitz des Täters",
+        "Täter hat keinen Anspruch",
+        "Gehört zumindest auch anderen",
+        "Auflösung in der nächsten Story"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s5": {
       "slot": "s5",
       "art": "antwort",
-      "fach": "strafbt",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafbt-746",
-      "ueberzeile": "Auflösung",
-      "titel": "Fremd heißt: zumindest auch im Eigentum eines anderen",
-      "text": "Die Fremdheit richtet sich nach Zivilrecht. Fremd ist eine Sache, die weder im Alleineigentum des Täters steht noch herrenlos ist – Miteigentum eines anderen genügt. Ein Anspruch des Täters auf Übereignung ändert daran nichts; er wird erst bei der Rechtswidrigkeit der beabsichtigten Zueignung relevant.",
-      "norm": "§ 242 Abs. 1 StGB",
-      "quellen": [
-        "§ 242 Abs. 1 StGB",
-        "Themenpool: strafbt-746"
-      ],
       "fachLabel": "Strafrecht BT",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:20:19.202Z",
-      "fachStand": "redaktionell-2026-09-25",
-      "optionen": [
-        "Wenn sie nicht im Besitz des Täters ist",
-        "Wenn der Täter keinen Anspruch auf sie hat",
-        "Wenn sie zivilrechtlich zumindest auch einem anderen gehört"
+      "themaId": "strafbt-746",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Fremd: zumindest",
+        "auch fremdes Eigentum"
       ],
-      "richtig": 2
+      "optionen": [
+        "Nicht im Besitz des Täters",
+        "Täter hat keinen Anspruch",
+        "Gehört zumindest auch anderen"
+      ],
+      "richtig": 2,
+      "text": "Maßstab ist das Zivilrecht. Ein Übereignungsanspruch zählt erst bei der Rechtswidrigkeit der Zueignung.",
+      "norm": "§ 242 Abs. 1 StGB",
+      "pairId": "strafbt-746",
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Auflösung",
+        "Fremd: zumindest",
+        "auch fremdes Eigentum",
+        "Nicht im Besitz des Täters",
+        "Täter hat keinen Anspruch",
+        "Gehört zumindest auch anderen",
+        "Maßstab ist das Zivilrecht. Ein Übereignungsanspruch zählt erst bei der Rechtswidrigkeit der Zueignung.",
+        "§ 242 Abs. 1 StGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s6": {
       "slot": "s6",
       "art": "norm",
-      "fach": "stpo",
+      "fach": null,
       "klausur": 2,
-      "pairId": "stpo-784",
-      "ueberzeile": "Norm des Tages",
-      "titel": "§ 261 StPO: Nur was in der Hauptverhandlung war, zählt",
-      "text": "Über das Ergebnis der Beweisaufnahme entscheidet das Gericht nach seiner freien, aus dem Inbegriff der Verhandlung geschöpften Überzeugung. Das Urteil darf nur auf das gestützt werden, was prozessordnungsgemäß in die Hauptverhandlung eingeführt wurde – Aktenwissen allein genügt nicht. Die Revision rügt Verstöße mit der Verfahrensrüge.",
-      "norm": "§ 261 StPO",
-      "quellen": [
-        "§ 261 StPO",
-        "§ 344 Abs. 2 StPO",
-        "Themenpool: stpo-784"
-      ],
       "fachLabel": "Strafprozessrecht",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:20:19.202Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "stpo-784",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Nur der Inbegriff",
+        "der Verhandlung"
+      ],
+      "norm": "§ 261 StPO",
+      "punkte": [
+        [
+          "Urteil nur auf Eingeführtes stützen, nicht auf Aktenwissen",
+          "ok",
+          null
+        ],
+        [
+          "Verstoß: Verfahrensrüge",
+          "warn",
+          "§ 344 Abs. 2 S. 2 StPO"
+        ]
+      ],
+      "sichtbareTexte": [
+        "Strafprozessrecht",
+        "Norm des Tages",
+        "Nur der Inbegriff",
+        "der Verhandlung",
+        "§ 261 StPO",
+        "Urteil nur auf Eingeführtes stützen, nicht auf Aktenwissen",
+        "Verstoß: Verfahrensrüge",
+        "§ 344 Abs. 2 S. 2 StPO"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s7": {
       "slot": "s7",
       "art": "begriff",
-      "fach": "revision",
+      "fach": null,
       "klausur": 2,
-      "pairId": "revision-882",
-      "ueberzeile": "Begriff des Tages",
-      "titel": "Darstellungsmangel: der Fehler in den Urteilsgründen",
-      "text": "Ein Darstellungsmangel liegt vor, wenn die Urteilsgründe lückenhaft, widersprüchlich oder unklar sind oder gegen Denkgesetze oder gesicherte Erfahrungssätze verstoßen – etwa in der Beweiswürdigung. Er wird mit der Sachrüge geltend gemacht; das Revisionsgericht prüft ihn allein anhand der Urteilsurkunde.",
-      "norm": "§ 267 StPO · § 337 StPO",
-      "quellen": [
-        "§ 267 StPO",
-        "§ 337 StPO",
-        "Themenpool: revision-882"
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-882",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Darstellungs-",
+        "mangel"
       ],
-      "fachLabel": "Revision (StPO)",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:20:19.202Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "text": "Urteilsgründe lückenhaft, widersprüchlich, unklar oder gegen Denkgesetze: Sachrüge, geprüft allein anhand der Urteilsurkunde.",
+      "norm": "§§ 267, 337 StPO",
+      "sichtbareTexte": [
+        "Revision im Strafverfahren",
+        "Begriff des Tages",
+        "Darstellungs-",
+        "mangel",
+        "Definition",
+        "Urteilsgründe lückenhaft, widersprüchlich, unklar oder gegen Denkgesetze: Sachrüge, geprüft allein anhand der Urteilsurkunde.",
+        "§§ 267, 337 StPO"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s8": {
       "slot": "s8",
       "art": "fehler",
-      "fach": "stpo",
+      "fach": null,
       "klausur": 2,
-      "pairId": "stpo-926",
-      "ueberzeile": "Typischer Fehler",
-      "titel": "TKÜ oder Online-Durchsuchung: § 100a oder § 100b StPO?",
-      "falsch": "Wer das Smartphone des Beschuldigten heimlich durchsucht, stützt das auf § 100a StPO – ist ja auch Telekommunikation.",
-      "richtigText": "§ 100a StPO erlaubt die Überwachung der Telekommunikation, auch als Quellen-TKÜ auf dem Gerät. Wer das IT-System durchsucht und gespeicherte Daten erhebt, braucht § 100b StPO: engerer Katalog besonders schwerer Straftaten, Anordnung durch eine besondere Kammer des Landgerichts (§ 100e StPO), Kernbereichsschutz (§ 100d StPO).",
-      "quellen": [
-        "§ 100a StPO",
-        "§ 100b StPO",
-        "§ 100d StPO",
-        "§ 100e StPO",
-        "Art. 10 GG",
-        "Themenpool: stpo-926"
-      ],
       "fachLabel": "Strafprozessrecht",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:20:19.202Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "stpo-926",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Handy heimlich",
+        "durchsucht: TKÜ?"
+      ],
+      "falsch": "Daten auslesen ist doch auch TKÜ.",
+      "richtig": "Online-Durchsuchung: engerer Katalog, Kammer des Landgerichts.",
+      "norm": "§§ 100b, 100e Abs. 2 StPO",
+      "sichtbareTexte": [
+        "Strafprozessrecht",
+        "Typischer Fehler",
+        "Handy heimlich",
+        "durchsucht: TKÜ?",
+        "Falsch",
+        "Daten auslesen ist doch auch TKÜ.",
+        "Richtig",
+        "Online-Durchsuchung: engerer Katalog, Kammer des Landgerichts.",
+        "§§ 100b, 100e Abs. 2 StPO"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s9": {
       "slot": "s9",
       "art": "tipp",
-      "fach": "strafbt",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafbt-327",
-      "ueberzeile": "Klausurtipp Strafrecht",
-      "titel": "§ 244 StGB: Die Definition aus § 224 StGB passt nicht",
-      "text": "Bei § 224 Abs. 1 Nr. 2 StGB kommt es auf die konkrete Verwendung an. § 244 Abs. 1 Nr. 1 lit. a StGB verlangt nur das Beisichführen – dann gibt es keine Verwendung, an die man anknüpfen könnte. Zeige kurz, dass die Bestimmung umstritten ist (objektive Gefährlichkeit oder zusätzlich subjektive Elemente), und entscheide dich.",
-      "quellen": [
-        "§ 244 Abs. 1 Nr. 1 lit. a StGB",
-        "§ 224 Abs. 1 Nr. 2 StGB",
-        "Themenpool: strafbt-327"
-      ],
       "fachLabel": "Strafrecht BT",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:20:19.202Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "strafbt-327",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Gefährliches",
+        "Werkzeug in § 244"
+      ],
+      "punkte": [
+        [
+          "Dort: konkrete Verwendung",
+          "ok",
+          "§ 224 Abs. 1 Nr. 2 StGB"
+        ],
+        [
+          "Hier: bloßes Beisichführen",
+          "warn",
+          "§ 244 Abs. 1 Nr. 1 lit. a StGB"
+        ],
+        [
+          "Streit kurz zeigen, dann entscheiden",
+          "ok",
+          null
+        ]
+      ],
+      "icon": "tabler:tool",
+      "iconFarbe": "GELB",
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Klausurtipp",
+        "Gefährliches",
+        "Werkzeug in § 244",
+        "Dort: konkrete Verwendung",
+        "§ 224 Abs. 1 Nr. 2 StGB",
+        "Hier: bloßes Beisichführen",
+        "§ 244 Abs. 1 Nr. 1 lit. a StGB",
+        "Streit kurz zeigen, dann entscheiden"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s1": {
       "slot": "s1",
@@ -821,16 +689,25 @@
       "fach": "methodik",
       "klausur": 0,
       "fachLabel": "Klausur- und Lernmethodik",
-      "titel": "Obersatztechnik: präzise formulieren",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b1",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "„Fraglich ist …“ ist kein Obersatz"
+      ],
+      "unter": "Klausurtechnik + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Klausur- und Lernmethodik",
+        "Neu im Feed",
+        "„Fraglich ist …“ ist kein Obersatz",
+        "Klausurtechnik + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s2": {
       "slot": "s2",
@@ -838,16 +715,25 @@
       "fach": "verwbt",
       "klausur": 3,
       "fachLabel": "Besonderes Verwaltungsrecht",
-      "titel": "Polizeirecht: Wer ist Störer?",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b2",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "E lagert nichts – trotzdem Störerin"
+      ],
+      "unter": "Spickzettel + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Besonderes Verwaltungsrecht",
+        "Neu im Feed",
+        "E lagert nichts – trotzdem Störerin",
+        "Spickzettel + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s3": {
       "slot": "s3",
@@ -855,16 +741,25 @@
       "fach": "mindset",
       "klausur": 0,
       "fachLabel": "Kopfsache",
-      "titel": "Perfektionismus: vollständig schlägt perfekt",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b3",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Perfekt, aber nur halb fertig?"
+      ],
+      "unter": "Neues Reel · im Profil",
+      "sichtbareTexte": [
+        "Kopfsache",
+        "Neu im Feed",
+        "Perfekt, aber nur halb fertig?",
+        "Neues Reel · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     }
   },
   "hookOptimierung": {
@@ -874,15 +769,19 @@
   },
   "renderVorschau": {
     "status": "fertig",
-    "erzeugtAm": "2026-10-03T06:38:18.112Z",
+    "erzeugtAm": "2026-10-04T23:42:43Z",
     "pfad": "vorproduktion/2026-10-17/fertig",
     "providerKostenUsd": 0,
-    "textProviderKostenUsd": 0,
-    "faktencheckProviderKostenUsd": 0,
-    "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "reelStimme": "piper-offline",
-    "freigabeBetreiber": false
+    "coverIcons": false,
+    "renderer": "open-peeps-v4",
+    "layoutQuelle": "open-peeps-variante-c",
+    "reelStimme": "elevenlabs-laura",
+    "sfx": "freesound-cc0",
+    "freigabeBetreiber": true,
+    "liveVorrangAktiv": true,
+    "normalbetriebGesperrt": true,
+    "wartetLive": []
   },
   "liveRegel": {
     "veroeffentlichen": false,
@@ -892,5 +791,10 @@
     "pfad": "vorproduktion/2026-10-17.json",
     "sha256": "1fdb5010c0b6fe000f6da36284000dda439c23573d8299594eeffa67b9eff08e",
     "uebernommenAm": "2026-10-03T06:35:53.910Z"
-  }
+  },
+  "layoutQuelle": "open-peeps-variante-c",
+  "semantikQuelle": "herrjurist",
+  "liveVorrangAktiv": true,
+  "normalbetriebGesperrt": true,
+  "bildStatus": "open-peeps-render"
 }
