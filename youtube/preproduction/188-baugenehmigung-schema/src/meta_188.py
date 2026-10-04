@@ -65,8 +65,8 @@ srt = re.sub(r"(§§?|Art\.)\n(\S+) ", r"\1 \2\n", srt)
 srt = re.sub(r"(Abs\.|S\.|Nr\.)\n(\d+[a-z]?[,.:;]?) ?", r"\1 \2\n", srt)
 srt = re.sub(r"Römisch (eins|zwei|drei|vier)([,:])( |\n)",
              lambda m: {"eins": "I.", "zwei": "II.", "drei": "III.", "vier": "IV."}[m.group(1)] + m.group(3), srt)
-for muster, ersatz in [(r"vierzig(\s)Quadratmeter", r"40 m²"), (r"fünfzig(\s)Quadratmeter", r"50 m²"),
-                       (r"\bzwei(\s)Oldtimer", r"zwei\1Oldtimer")]:
+for muster, ersatz in [(r"vierzig\sQuadratmeter", r"40 m²"), (r"fünfzig\sQuadratmeter", r"50 m²"),
+                       (r"Nr\. 1 und fünf", r"Nr. 1 und 5")]:
     srt, n = re.subn(muster, ersatz, srt)
     assert n, muster
 srt = srt.replace("\nHasenkamp: ", "\nHerr Hasenkamp: ").replace("\nOrtmann: ", "\nFrau Ortmann: ")

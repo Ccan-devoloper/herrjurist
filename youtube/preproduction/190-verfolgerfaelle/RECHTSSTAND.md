@@ -1,0 +1,93 @@
+# Folge 190 · Kontrolleur stürzt bei Verfolgung: Die Verfolgerfälle (§ 823 I BGB) – Rechtsstand und Belege
+
+**Abruf aller Quellen:** 04.10.2026. Normtexte auf gesetze-im-internet.de im Wortlaut gelesen (HTML je Paragraf); BGH-Entscheidungen ab 2010 im Volltext mit Randnummern auf dem amtlichen Rechtsinformationsportal des Bundes (`testphase.rechtsinformationen.bund.de`, wie in den Folgen 067, 158, 187). Ältere BGH-Urteile (1971, 1974, 1996) sind amtlich nicht frei abrufbar; sie wurden in nichtamtlichen Volltexten (verkehrslexikon.de) gelesen und **nur mit Fundstellen** zitiert, die neuere amtliche BGH-Volltexte bestätigen.
+**Gesetzesstand (Standangaben der Gesamtausgaben, gelesen 04.10.2026):** BGB „Neugefasst durch Bek. v. 2.1.2002 I 42, 2909; 2003, 738; zuletzt geändert durch Art. 6 G v. 23.7.2026 I Nr. 226“; StGB „Neugefasst durch Bek. v. 13.11.1998 I 3322; zuletzt geändert durch Art. 1 G v. 20.3.2026 I Nr. 95“.
+
+**Einordnung:** Mo · Der Fall · Zivilrecht/Deliktsrecht, Format „Klassiker-Fall“. Voraussetzung laut Plan: § 823 I BGB, Prüfungsschema (Folge 067, Skript und RECHTSSTAND gelesen: dort Äquivalenz, Adäquanz, Schutzzweck allgemein) – im Video nur verwiesen („Das ganze Prüfschema zeigt das Video zum Deliktsrecht“). Folge 011 (Strafrecht: Deliktsaufbau) nicht wiederholt. § 254 BGB (Folge 046) hier nur als Wortlautkarte und Anwendung auf den Fall. Folge 187 (Stromkabel, reiner Vermögensschaden) direkt davor: andere Frage (Rechtsgutsverletzung), nichts wiederholt. Die Verfolgerfälle wurden in keiner früheren Folge behandelt (Volltextsuche „Verfolger“, „Herausforder“ in `youtube/preproduction/`, 04.10.2026: in Skripten nur „Strafverfolger“ in Folge 171, kein einschlägiger Treffer).
+
+**Fallannahmen** (fiktiv, nach dem Plan-Hook; U-Bahnhof ohne Namen, kein reales Verkehrsunternehmen):
+- Wendelin ist Fahrkartenkontrolleur und trifft im U-Bahnhof den Fahrgast Anselm ohne gültigen Fahrschein; er bittet ihn um den Ausweis, um die Personalien festzustellen.
+- Anselm läuft zur Treppe am Ausgang; Wendelin rennt hinterher, die steile Treppe hinunter, zwei Stufen auf einmal, und stürzt. Anselm hat ihn weder gestoßen noch berührt (Abweichung vom Originalfall, s. u.). Folge: Arm gebrochen, sechs Wochen Armschlinge.
+- Wendelin verlangt Schadensersatz von Anselm. Wer den Schaden wirtschaftlich trägt (Arbeitgeber, Unfallversicherung, Anspruchsübergang), bleibt offen.
+
+**Gesamtwissen** (UNCERTIFIED; Fundstelle laut Plan „5.1 Verfolgungs- und Rettungsfälle“, gefunden als Anker `#verfolgungs--und-rettungsfälle`): „Wer durch pflichtwidriges Verhalten eine nachvollziehbare Verfolgungs- oder Rettungsreaktion herausfordert, kann für dabei entstehende Schäden verantwortlich sein, wenn die Reaktion nicht völlig unangemessen oder eigenverantwortlich selbstgefährdend war. In § 823 I ist dies über Kausalität, objektive Zurechnung und gegebenenfalls Mitverschulden zu lösen.“ Nur Wegweiser, kein Beleg; Auszug nur im Scratchpad.
+
+## Normen (Wortlaut abgerufen 04.10.2026)
+
+| Norm | Wortlaut / Hinweis | URL |
+|---|---|---|
+| **§ 823 Abs. 1 BGB** | „Wer vorsätzlich oder fahrlässig das Leben, den Körper, die Gesundheit, die Freiheit, das Eigentum oder ein sonstiges Recht eines anderen widerrechtlich verletzt, ist dem anderen zum Ersatz des daraus entstehenden Schadens verpflichtet.“ (**Wortlautkarte**; die Erzählerin nennt die Merkmale „Körper … verletzt“, Marker auf „Körper“ und „verletzt“ zum Wort) | https://www.gesetze-im-internet.de/bgb/__823.html |
+| **§ 254 Abs. 1 BGB** | „Hat bei der Entstehung des Schadens ein Verschulden des Beschädigten mitgewirkt, so hängt die Verpflichtung zum Ersatz sowie der Umfang des zu leistenden Ersatzes von den Umständen, insbesondere davon ab, inwieweit der Schaden vorwiegend von dem einen oder dem anderen Teil verursacht worden ist.“ (**Wortlautkarte**, vollständig vorgelesen; Marker „Verschulden“, „Umfang“, „vorwiegend“ zum Wort) | https://www.gesetze-im-internet.de/bgb/__254.html |
+| § 265a Abs. 1 StGB | „Wer … die Beförderung durch ein Verkehrsmittel … in der Absicht erschleicht, das Entgelt nicht zu entrichten, wird mit Freiheitsstrafe bis zu einem Jahr oder mit Geldstrafe bestraft, …“ (nur ein Satz: „eine eigene Frage“; keine Aussage, ob Anselm strafbar ist) | https://www.gesetze-im-internet.de/stgb/__265a.html |
+| § 229 BGB | Selbsthilfe: Festnahme eines Verpflichteten, „welcher der Flucht verdächtig ist“, unter weiteren Voraussetzungen nicht widerrechtlich (Hintergrund zu BGHZ 57, 25: Verfolgung berechtigt; im Video nicht genannt) | https://www.gesetze-im-internet.de/bgb/__229.html |
+
+## Entscheidungen
+
+| Quelle | Kernaussage für das Video (wörtlich, Rn./Seite) | URL / Status |
+|---|---|---|
+| **BGH, Urt. v. 13.7.1971 – VI ZR 125/70, BGHZ 57, 25** (Verfolgerfall, Leitentscheidung laut Plan) | **Datum, Az. und Fundstelle amtlich gesichert:** BGH VI ZR 43/11 Rn. 8 („vom 13. Juli 1971 - VI ZR 125/70, BGHZ 57, 25, 28 ff.“), Rn. 11 („BGHZ 57, 25, 31 f.“ zur Mittel-Zweck-Relation); BGH IX ZR 149/15 Rn. 11 („BGH, Urteil vom 13. Juli 1971 - VI ZR 125/70, BGHZ 57, 25, 29 f“). **Inhalt nach nichtamtlichem Volltext (verkehrslexikon.de):** Betriebsoberaufseher der Bahn trifft einen 23-Jährigen ohne Fahrtausweis, will die Personalien feststellen; der Fahrgast flieht „die Treppe zum Bahnhofsausgang hinunter“, der Kontrolleur verfolgt ihn und stürzt am Fuß der Treppe (Schenkelhalsbruch); der Fliehende war selbst gestürzt, der Kontrolleur fiel über ihn. „Landgericht und Oberlandesgericht haben der Klage zu zwei Dritteln stattgegeben. Die zugelassene Revision des Beklagten ist ohne Erfolg geblieben.“ Zurechnung „im Bereich psychisch vermittelter Kausalität“; notwendig, „dass sich der Eingreifende zum Handeln herausgefordert fühlen durfte“; „Das … gesteigerte Risiko der Verfolgung zu Fuß über die … steile und langgezogene Treppe stand nicht außer Verhältnis zu dem Anliegen des Klägers, für die Bahn zur Sicherstellung ihres bürgerlich-rechtlichen Anspruchs die Personalien des Beklagten festzustellen.“ Haftung „beschränkt … sich auf die gesteigerten Risiken der Verfolgung … das normale Risiko des Eingreifenden [hat er] … nicht zu tragen“; „ein durch die Verfolgung deutlich erhöhtes Risiko“, „steile und langgezogene Treppe mit einer hohen Geschwindigkeit“. Mitverschulden vom Berufungsgericht bejaht. Unter Hinweis auf VI ZR 33/63: bei Gefahr für Leib und Leben werde das Eingreifen opferbereiter Dritter „nahezu zwangsläufig herausgefordert“. | https://verkehrslexikon.de/Texte/Rspr3320.php (nichtamtlich, gelesen; amtlich nicht frei abrufbar) |
+| **BGH, Urt. v. 31.1.2012 – VI ZR 43/11** (Polizeiliche Verfolgungsfahrt) | **Rn. 8:** „Nach der Rechtsprechung des erkennenden Senats kann jemand, der durch vorwerfbares Tun einen anderen zu selbstgefährdendem Verhalten herausfordert, diesem anderen dann, wenn dessen Willensentschluss auf einer mindestens im Ansatz billigenswerten Motivation beruht, aus unerlaubter Handlung zum Ersatz des Schadens verpflichtet sein, der infolge des durch die Herausforderung gesteigerten Risikos entstanden ist“; Haftung bejaht, wenn sich jemand „der (vorläufigen) Festnahme oder der Feststellung seiner Personalien … durch die Flucht zu entziehen versucht“. **Rn. 9:** Fliehender muss „sich bewusst gewesen sein oder zumindest fahrlässig nicht erkannt … haben, dass sein Verfolger … infolge der durch die Verfolgung gesteigerten Gefahr einen Schaden erleiden könnte“. **Rn. 10:** „bei der gebotenen wertenden Betrachtungsweise … sowohl objektiv als auch subjektiv zuzurechnen“. **Rn. 11:** „angemessene Mittel-Zweck-Relation, nach der die Risiken der Verfolgung … nicht außer Verhältnis zu dem Ziel der Ergreifung des Fliehenden stehen dürfen“. **Rn. 14:** subjektiv: „dass der Fliehende damit rechnen musste, verfolgt zu werden, und dass er auch voraussehen konnte, seine Verfolger könnten dabei möglicherweise zu Schaden kommen“. **Rn. 20:** Haftung, „wenn dieser Schaden auf der gesteigerten Gefahrenlage beruht und die Risiken der Verfolgung nicht außer Verhältnis zu deren Zweck standen“. | https://testphase.rechtsinformationen.bund.de/v1/case-law/KORE303412012.html |
+| **BGH, Urt. v. 12.3.1996 – VI ZR 12/95, BGHZ 132, 164** (Fenstersprung des Polizeibeamten) | Fundstelle amtlich gesichert über VI ZR 43/11 Rn. 8, 11, 14. **Nichtamtlicher Volltext:** „das nicht speziell durch die Umstände der Verfolgung begründete und deshalb zum allgemeinen Lebensrisiko gehörende ‚normale‘ Risiko der Nacheile … vermag … mangels notwendigen inneren Zusammenhangs mit der Verfolgung nicht zu einer Gefahrenverlagerung auf den fliehenden Täter zu führen (vgl. BGHZ 57, 25, 32 …)“; keine Haftung für Gefahren, „denen sich der verfolgende Beamte in gänzlich unangemessener Weise ausgesetzt hat“; Herausgefordert-fühlen-Dürfen ist „bei außergewöhnlich großer Höhe nicht mehr der Fall“; bei einer Verfolgung unterhalb der „Untragbarkeitsgrenze“ verbleibt „Raum für die Abwägung … nach § 254 BGB“; „Ein ‚Alles- oder Nichts‘-Prinzip würde … der gerechten Beurteilung … nicht selten im Wege stehen (BGHZ 63, 189, 194)“; Billigung der Schadensteilung in BGHZ 57, 25, 31. | https://verkehrslexikon.de/Texte/Rspr3318.php (nichtamtlich) |
+| BGH, Urt. v. 29.10.1974 – VI ZR 168/73, BGHZ 63, 189 | Fundstelle amtlich gesichert über VI ZR 43/11 Rn. 8, 11, 20. Nichtamtlich: Zurechnung „auf Grund einer wertenden Betrachtung“; herausgefordert nur, wenn er sich herausgefordert fühlen „durfte“; Verhältnis von Zweck und erkennbarem Risiko (Stütze für „wertende Zurechnung“, im Video nicht genannt) | https://www.verkehrslexikon.de/Texte/Rspr3317.php (nichtamtlich) |
+| BGH, Urt. v. 13.10.2016 – IX ZR 149/15 | **Rn. 11:** Zurechnungszusammenhang bei selbstschädigenden Handlungen bleibt bestehen, „wenn die Handlung durch das haftungsbegründende Ereignis herausgefordert wurde“ (mit BGHZ 57, 25, 29 f.); fehlt bei Eingriff „in völlig ungewöhnlicher oder unsachgemäßer Weise“ (Fundstellen-Gegenprobe) | https://testphase.rechtsinformationen.bund.de/v1/case-law/JURE160018475.html |
+| BGH, Beschl. v. 5.5.2021 – 4 StR 19/20 | **Leitsatz:** „Dem Täter eines fahrlässig herbeigeführten Brand- oder Explosionsgeschehens können der durch Rettungsmaßnahmen verursachte Tod oder die Körperverletzung von Berufsrettern zugerechnet werden (im Anschluss an BGH, Urteil vom 8. September 1993 - 3 StR 341/93, BGHSt 39, 322).“ Rn. 20 ff.: „Zurechenbarkeit“, Rn. 23 ff.: bewusste Selbstgefährdung (Beleg für den einen Satz zum Strafrecht) | https://testphase.rechtsinformationen.bund.de/v1/case-law/KORE311692021.html |
+| BGH, Urt. v. 23.1.2025 – 3 StR 149/24 | Rn. 19: „vgl. zu einer Verurteilung wegen fahrlässiger Tötung eines Retters BGH, Urteil vom 8. September 1993 - 3 StR 341/93, BGHSt 39, 322“ (Gegenprobe; nicht genannt) | https://testphase.rechtsinformationen.bund.de/v1/case-law/KORE704702025.html |
+
+## Aussage-Beleg-Zuordnung (Skript `src/skript_190.py`, vertont 04.10.2026)
+
+| Cue | Aussage | Beleg |
+|---|---|---|
+| `fall`–`arm` | U-Bahnhof, Zug, Kontrolle, kein gültiger Fahrschein, Ausweis, Flucht zur Treppe, Verfolgung „zwei Stufen auf einmal“, Sturz, Armbruch, sechs Wochen Armschlinge | Fallannahme (Plan-Hook), nachgebildet BGHZ 57, 25 |
+| `w2`, `a1` | Figurenrede | Dramatisierung |
+| `klass` | 1971 entschied der BGH einen sehr ähnlichen Fall, den Verfolgerfall | VI ZR 43/11 Rn. 8 (Datum, Az., BGHZ 57, 25); Sachverhalt nach nichtamtlichem Volltext |
+| `problem`–`psych` | weder gestoßen noch berührt; eigener Entschluss; psychisch vermittelte Kausalität | Fallannahme; BGHZ 57, 25 („im Bereich psychisch vermittelter Kausalität“, nichtamtlich) |
+| `norm`, `koerper`, `kaus` | § 823 Abs. 1; Körper verletzt; Frage der haftungsbegründenden Kausalität | § 823 Abs. 1 BGB; BGHZ 57, 25 („haftungsbegründende Ursächlichkeit“, nichtamtlich) |
+| `schema` | Verweis auf das Video zum Deliktsrecht | Folge 067 |
+| `aequ` | Äquivalenz: Flucht ursächlich | BGHZ 57, 25 („im Sinne des Bedingungszusammenhangs verursacht“, nichtamtlich) |
+| `wert`, `wert2` | freier Entschluss dazwischen: genügt allein nicht, wertende Zurechnung | BGHZ 57, 25 (nichtamtlich: Zurechnung „nicht selbstverständlich“); VI ZR 43/11 Rn. 10 („wertenden Betrachtungsweise“); BGHZ 63, 189 (nichtamtlich) |
+| `formel`–`h2` | Wer vorwerfbar zu einer Verfolgung herausfordert, haftet, wenn sich der Verfolger herausgefordert fühlen durfte | VI ZR 43/11 Rn. 8, 9; BGHZ 57, 25 („herausgefordert fühlen durfte“, nichtamtlich) |
+| `h3` | mindestens im Ansatz billigenswertes Motiv | VI ZR 43/11 Rn. 8 |
+| `h4` | Risiken nicht außer Verhältnis zum Zweck | VI ZR 43/11 Rn. 11, 20 |
+| `h5` | gesteigertes Risiko der Verfolgung verwirklicht | VI ZR 43/11 Rn. 8, 20 |
+| `mot`, `mot2` | Personalien feststellen, Anspruch des Verkehrsbetriebs sichern; billigenswert | BGHZ 57, 25 (nichtamtlich: „für die Bahn zur Sicherstellung ihres bürgerlich-rechtlichen Anspruchs die Personalien … festzustellen“); VI ZR 43/11 Rn. 8 (Feststellung der Personalien) |
+| `verh` | Verfolgung zu Fuß über eine Treppe nicht außer Verhältnis; so auch der BGH | BGHZ 57, 25 (nichtamtlich, wörtlich oben) |
+| `risk`, `risk2` | steile Treppe in hohem Tempo: deutlich erhöhtes Risiko, im Sturz verwirklicht | BGHZ 57, 25 (nichtamtlich: „deutlich erhöhtes Risiko … steile und langgezogene Treppe mit einer hohen Geschwindigkeit“); Subsumtion |
+| `zur` | objektiv zuzurechnen | VI ZR 43/11 Rn. 10 |
+| `versch`, `versch2` | fahrlässig: musste mit Verfolgung rechnen und mit Schaden des Verfolgers | VI ZR 43/11 Rn. 9, 14 |
+| `gegen`, `gg1` | normales Risiko jedes Laufens = allgemeines Lebensrisiko „nach dem BGH“; dafür keine Haftung | BGHZ 132, 164 (nichtamtlich, „zum allgemeinen Lebensrisiko gehörende ‚normale‘ Risiko der Nacheile“); BGHZ 57, 25, 32 |
+| `gg2` | Umknicken auf ebenem Boden ohne besondere Gefahr durch die Verfolgung: nichts von Anselm | **Beispiel (Erläuterung)**, kein BGH-Fall; Anwendung des Grundsatzes aus `gg1` |
+| `gg3` | gänzlich unangemessen, etwa Sprung aus großer Höhe: nicht mehr herausgefordert | BGHZ 132, 164 (nichtamtlich: „in gänzlich unangemessener Weise“, „bei außergewöhnlich großer Höhe nicht mehr“) |
+| `mit`, `w254` | § 254 Abs. 1 wörtlich | § 254 Abs. 1 BGB |
+| `stufen` | zwei Stufen auf einmal kann Mitverschulden sein, dann Kürzung | Fallbewertung (Möglichkeit); BGHZ 132, 164 (Mitverschulden des Verfolgers durch Selbstgefährdung) |
+| `abw` | abwägen statt alles oder nichts | BGHZ 132, 164 mit BGHZ 63, 189, 194 (nichtamtlich) |
+| `orig` | Originalfall: zwei Drittel ersetzt | BGHZ 57, 25 (nichtamtlich: Klage zu zwei Dritteln, Revision erfolglos); BGHZ 132, 164 (Billigung der Schadensteilung, BGHZ 57, 25, 31) |
+| `erg` | Anselm muss den Sturzschaden nach § 823 Abs. 1 ersetzen, gekürzt um etwaiges Mitverschulden | Ergebnis der Prüfung |
+| `retter` | Retterfälle: bei Gefahr für Leib und Leben Eingreifen „nach dem BGH nahezu zwangsläufig herausgefordert“ | BGHZ 57, 25 (nichtamtlich, unter Hinweis auf BGH, Urt. v. 24.3.1964 – VI ZR 33/63); VI ZR 43/11 Rn. 8 (allgemeine Formel „zu selbstgefährdendem Verhalten herausfordert“) |
+| `straf` | Strafrecht kennt solche Fälle, bei der objektiven Zurechnung | BGH 4 StR 19/20, Leitsatz, Rn. 20 ff. |
+| `fahrt` | ob die Fahrt ohne Fahrschein nach § 265a StGB strafbar ist, eigene Frage | § 265a StGB (ein Satz, keine Bewertung) |
+| `tipp`–`tp3` | Herausforderung bei der haftungsbegründenden Kausalität als objektive Zurechnung prüfen; nicht vorschnell verneinen; Verschulden gesondert, Mitverschulden beim Umfang des Ersatzes | VI ZR 43/11 Rn. 10 (objektiv/subjektiv); § 254 Abs. 1 („Umfang des zu leistenden Ersatzes“); Klausurkonvention |
+| `sch`–`c4` | Schema: I. Kausalität (Äquivalenz, Herausforderung mit drei Merkmalen), II. Verschulden, III. Mitverschulden | Zusammenfassung der Belege |
+| `merke`, `m2` | Merksatz | wie oben |
+
+## Bewusst nicht behauptet
+
+- Kein wörtliches Zitat aus BGHZ 57, 25 im Video; nur „1971 … ein sehr ähnlicher Fall“, „so sah es auch der Bundesgerichtshof“ (Verhältnis) und „zwei Drittel“.
+- Der Sachverhalt weicht bewusst vom Original ab: Dort fiel zuerst der Fliehende, der Kontrolleur stürzte über ihn. Im Video gibt es keinen Körperkontakt; die Herausforderungsformel setzt keinen voraus (VI ZR 43/11 Rn. 8).
+- Keine Aussage, warum im Originalfall ein Drittel gekürzt wurde (Begründung des Berufungsgerichts nicht bekannt) und keine Quote für den Videofall.
+- Keine Aussage zu Schmerzensgeld (§ 253 Abs. 2 BGB), Entgeltfortzahlung, gesetzlicher Unfallversicherung, Anspruchsübergang (§ 116 SGB X, § 6 EFZG) oder Haftungsprivilegien.
+- Keine Aussage zum erhöhten Beförderungsentgelt, zu Festnahmerechten (§ 127 StPO, § 229 BGB) und zur Strafbarkeit von Anselm (§ 265a StGB nur „eigene Frage“).
+- Kein Nierenspende-Fall, keine Einzelheiten zu Retterfällen; „gleiche Formel“ aus dem Plan wurde abgeschwächt zu „derselbe Gedanke trägt die Retterfälle“, weil BGHZ 57, 25 offenließ, ob die Verhältnismäßigkeit für Rettung und Verfolgung einheitlich zu beurteilen ist.
+- Strafrecht nur ein Satz, ohne Streitstand zur eigenverantwortlichen Selbstgefährdung.
+
+## Offene Einschränkungen
+
+- BGHZ 57, 25, BGHZ 63, 189, BGHZ 132, 164 und VI ZR 33/63 amtlich nicht online verifiziert; Datum, Aktenzeichen und Fundstellen über BGH VI ZR 43/11 und IX ZR 149/15 gesichert, die tragenden Grundsätze (Formel, Verhältnis, gesteigertes Risiko, Verschulden) über VI ZR 43/11 mit Randnummern belegt. Inhaltliche Details (Treppe, zwei Drittel, allgemeines Lebensrisiko, Sprung aus großer Höhe, „nahezu zwangsläufig“) beruhen auf nichtamtlichen Volltexten.
+- Das amtliche Rechtsinformationsportal ist eine Testphase des Bundes; Randnummern dort gelesen.
+
+## Themenplan-Abgleich (für den Koordinator)
+
+- **Leitentscheidung** „BGHZ 57, 25“ zutreffend; der Auftragstext vermutete „Urt. v. 29.10.1971 – VI ZR 3/70?“ – **falsch**. Richtig: **BGH, Urt. v. 13.7.1971 – VI ZR 125/70, BGHZ 57, 25** (VI ZR 43/11 Rn. 8; IX ZR 149/15 Rn. 11). Der 29.10. gehört zu BGHZ 63, 189 (Urt. v. 29.10.1974 – VI ZR 168/73). Vorschlag: `Leitentscheidung = BGH, Urt. v. 13.7.1971 – VI ZR 125/70, BGHZ 57, 25; BGH, Urt. v. 31.1.2012 – VI ZR 43/11, Rn. 8, 11, 20`.
+- **Auftragstext:** „VI ZR 142/06“ als Beleg der Herausforderungsformel nicht verifiziert und nicht verwendet; VI ZR 43/11 trägt die Formel (Rn. 8, 11, 20).
+- **Beschreibung (Anfang)** „… Wann muss der flüchtende Schwarzfahrer für den Sturz des Kontrolleurs haften? Die Herausforderungsformel des BGH (BGHZ 57, 25).“ fachlich zutreffend; Wortwahl „Schwarzfahrer“ im Video vermieden („Fahrgast ohne gültigen Fahrschein“).
+- **Normen, Kernfrage, Hook, Tags, Playlists:** zutreffend und eingelöst. Tag „Retterfälle“ nur im Ausblick (ein Satz).
+- **Thumbnail** siehe ABNAHME.md.
