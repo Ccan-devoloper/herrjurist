@@ -79,7 +79,7 @@ SEGMENTE = [
     ("[erg]Ergebnis: Heribert hat heimtückisch getötet. [erg2]Rechtfertigungs- und Entschuldigungsgründe gibt es nicht. "
      "Er ist strafbar wegen Mordes nach Paragraf zweihundertelf.", PS),
     # --- J Restriktion ----------------------------------------------------------------------------------------------------
-    ("[restr]Weil Mord mit lebenslanger Freiheitsstrafe bestraft wird, sucht man nach Wegen, die Heimtücke zu begrenzen. "
+    ("[restr]Weil Mord mit lebenslanger Freiheitsstrafe bestraft wird, sucht man nach Wegen, das Merkmal Heimtücke zu begrenzen. "
      "[rfl]Der Bundesgerichtshof hilft bei ganz besonderen schuldmindernden Umständen ausnahmsweise auf der Strafseite, mit "
      "der sogenannten Rechtsfolgenlösung. Mehr dazu in unserer Folge zum Haustyrannen-Fall. [lehre]Ein Teil der Lehre "
      "will schon den Tatbestand einschränken und verlangt einen besonders verwerflichen Vertrauensbruch. [bghn]Der "
@@ -91,7 +91,7 @@ SEGMENTE = [
      "einem erheblichen Angriff? [tipp3]Und diskutiere Einschränkungen der Heimtücke erst, wenn du die Merkmale sauber "
      "festgestellt hast.", PS),
     # --- L Merksatz (Lexi) ------------------------------------------------------------------------------------------------
-    ("[merke]Merke: Heimtückisch tötet, wer die Arg- und Wehrlosigkeit des Opfers bewusst ausnutzt. [mk2]Maßgeblich ist "
+    ("[merke]Merke: Heimtückisch handelt, wer die Arg- und Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt. [mk2]Maßgeblich ist "
      "der Beginn des Angriffs: [mk3]Der Schlafende bleibt arglos. Wer mit einem Angriff rechnet, ist es nicht.", 1.2),
 ]
 
