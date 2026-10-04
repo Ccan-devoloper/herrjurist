@@ -74,8 +74,8 @@ Quelle: `bildhalt_manifest.json` (128 Bildhalte, davon 128 eigenständig), `cues
 | 68 | 3:26.69 | 3:29.69 | Carla (Erzählerin/Lexi) | Hier klebt das Siegel noch, der Fernseher ist nicht | A. Zulässigkeit › Ergebnis: zulässig (+) | `fef7df59060e` |
 | 69 | 3:29.69 | 3:31.77 | Carla (Erzählerin/Lexi) | versteigert. Die Erinnerung ist | A. Zulässigkeit › Ergebnis: zulässig (+) | `4b40ba198b5f` |
 | 70 | 3:31.77 | 3:33.97 | Carla (Erzählerin/Lexi) | zulässig. | A. Zulässigkeit › Ergebnis: zulässig (+) | `a0bbc187ff2f` |
-| 71 | 3:34.07 | 3:34.65 | Carla (Erzählerin/Lexi) | B: | B. Begründetheit | `c96f40c4ff97` |
-| 72 | 3:34.65 | 3:40.02 | Carla (Erzählerin/Lexi) | Begründetheit. Die Erinnerung ist begründet, wenn die Maßnahme gegen Vorschriften des | B. Begründetheit | `f96ba872184c` |
+| 71 | 3:34.07 | 3:37.13 | Carla (Erzählerin/Lexi) | B: Begründetheit. Die Erinnerung ist | B. Begründetheit | `c96f40c4ff97` |
+| 72 | 3:37.13 | 3:40.02 | Carla (Erzählerin/Lexi) | begründet, wenn die Maßnahme gegen Vorschriften des | B. Begründetheit | `f96ba872184c` |
 | 73 | 3:40.02 | 3:42.41 | Carla (Erzählerin/Lexi) | Vollstreckungsverfahrens verstößt. | B. Begründetheit | `262c0f0a855a` |
 | 74 | 3:42.41 | 3:47.45 | Carla (Erzählerin/Lexi) | Hier Paragraf siebenhundertfünfzig Absatz eins: Die Zwangsvollstreckung | B. Begründetheit › § 750 Abs. 1 ZPO: Zustellung | `7070d88cce93` |
 | 75 | 3:47.45 | 3:49.57 | Carla (Erzählerin/Lexi) | darf nur beginnen, wenn dem Schuldner das | B. Begründetheit › § 750 Abs. 1 ZPO: Zustellung | `88f7ce48b262` |
@@ -113,9 +113,9 @@ Quelle: `bildhalt_manifest.json` (128 Bildhalte, davon 128 eigenständig), `cues
 | 107 | 5:23.28 | 5:25.68 | Carla (Erzählerin/Lexi) | Klausurtipp: Frag zuerst, | Klausurtipp · Wer hat gehandelt – und wie? | `aa5af89fd281` |
 | 108 | 5:25.68 | 5:27.76 | Carla (Erzählerin/Lexi) | wer gehandelt hat und wie. | Klausurtipp · Wer hat gehandelt – und wie? | `30a7c6b3ee6c` |
 | 109 | 5:27.76 | 5:29.16 | Carla (Erzählerin/Lexi) | Als Faustregel: | Klausurtipp · Wer hat gehandelt – und wie? | `c033c2356b1c` |
-| 110 | 5:29.16 | 5:31.24 | Carla (Erzählerin/Lexi) | Gerichtsvollzieher, oder | Klausurtipp · Wer hat gehandelt – und wie? | `e1c558fd899f` |
-| 111 | 5:31.24 | 5:33.00 | Carla (Erzählerin/Lexi) | Gericht ohne Anhörung: | Klausurtipp · Wer hat gehandelt – und wie? | `57463ddbfa2d` |
-| 112 | 5:33.00 | 5:36.04 | Carla (Erzählerin/Lexi) | Erinnerung. Gericht nach Anhörung: | Klausurtipp · Wer hat gehandelt – und wie? | `ac85c5b05c97` |
+| 110 | 5:29.16 | 5:33.00 | Carla (Erzählerin/Lexi) | Gerichtsvollzieher, oder Gericht ohne Anhörung: | Klausurtipp · Wer hat gehandelt – und wie? | `e1c558fd899f` |
+| 111 | 5:33.00 | 5:34.20 | Carla (Erzählerin/Lexi) | Erinnerung. | Klausurtipp · Wer hat gehandelt – und wie? | `4a2e57b2936d` |
+| 112 | 5:34.20 | 5:36.04 | Carla (Erzählerin/Lexi) | Gericht nach Anhörung: | Klausurtipp · Wer hat gehandelt – und wie? | `ac85c5b05c97` |
 | 113 | 5:36.04 | 5:37.84 | Carla (Erzählerin/Lexi) | sofortige Beschwerde. | Klausurtipp · Wer hat gehandelt – und wie? | `04b5aaaaf931` |
 | 114 | 5:37.84 | 5:43.36 | Carla (Erzählerin/Lexi) | Und prüfe in der Begründetheit, ob ein Mangel bis zur Entscheidung geheilt ist. | Klausurtipp · Heilung prüfen | `bf4524dab5ca` |
 | 115 | 5:43.36 | 5:45.08 | Carla (Erzählerin/Lexi) | Dein Prüfschema. | Prüfschema | `9af2abc714b6` |

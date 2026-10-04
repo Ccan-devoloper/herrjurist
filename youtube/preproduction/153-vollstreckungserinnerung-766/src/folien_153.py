@@ -654,8 +654,8 @@ folie([("aufh", "Entscheidung · Aufhebung der Pfändung")], [
               hart(ns("Herr Mühlbauer", MBW, BODEN, "aufh", LILA))],
              [*fig("GV", GVW, BODEN, FH, [("aufh", "ruhig")], erst="cut"),
               hart(ns("Gerichtsvollzieher", GVW, BODEN, "aufh", WEISS))]),
-    szene(bis_(hart(siegelmarke(SMX, SMY, "aufh", anim="cut")), AB), "153abziehen*", 0.8, 0.0),
-    pl("Pfändung aufgehoben", TVX, 400, AB, fill=GRUEN, size=32, anker="m"),
+    bis_(hart(siegelmarke(SMX, SMY, "aufh", anim="cut")), AB),
+    szene(pl("Pfändung aufgehoben", TVX, 400, AB, fill=GRUEN, size=32, anker="m"), "153abziehen*", 0.8, 0.0),
 ])
 
 # ===========================================================================================================================
