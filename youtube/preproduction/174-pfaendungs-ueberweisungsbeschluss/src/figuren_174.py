@@ -1,8 +1,8 @@
 """Figuren für Folge 174 (Pfändungs- und Überweisungsbeschluss) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0). Alle fiktiv.
 Herr Dorfmann (DO, um 45, Tischler, Gläubiger; Stimme christian): standing/crossed_arms-1 (Oberteil Holzbraun #C9A27A, schwarze
 Hose), Kopf Short 1, Haut #D9A07A, ohne Bart, ohne Brille.
-Frau Kästner (KA, um 30, Angestellte im Autowerk, Schuldnerin; Stimme lucy): standing/robot_dance-3 (Oberteil Rosa #F4A6C0,
-Hose Dunkelgrau #3A3A48), Kopf Long Bangs, Haut #F2D3B8.
+Frau Kästner (KA, um 30, Angestellte im Autowerk, Schuldnerin; Stimme lucy): standing/resting-2 (schwarzes Oberteil, Hose
+Rosa #F4A6C0), Kopf Long Bangs, Haut #F2D3B8. robot_dance-3 verworfen: gleiche Haltung wie Lexi (ausgestreckte Hand).
 Die Personalleiterin (PL, um 60, ohne Namen, Drittschuldnerin Arbeitgeber; Stimme hilde): standing/shirt-4 (schwarze Bluse, Hose
 Petrol #5FA8A0), Kopf Gray Medium, Brille Glasses 4, Haut #E8B98F.
 Der Bankberater (BB, um 40, ohne Namen, spricht nicht): standing/crossed_arms-2 (schwarzes Oberteil, Hose Grau #6B6B78), Kopf
@@ -25,7 +25,7 @@ MUND = {"a": "Explaining", "o": "Concerned Fear", "e": "Hectic"}
 # Person: (Pose, Kopf, Bart, Brille, Farben)
 P = {
     "DO": ("standing/crossed_arms-1", "Short 1", None, None, {"Skin": "#D9A07A", "Top": "#C9A27A"}),
-    "KA": ("standing/robot_dance-3", "Long Bangs", None, None, {"Skin": "#F2D3B8", "Top": "#F4A6C0", "Pants": "#3A3A48"}),
+    "KA": ("standing/resting-2", "Long Bangs", None, None, {"Skin": "#F2D3B8", "Pants": "#F4A6C0"}),
     "PL": ("standing/shirt-4", "Gray Medium", None, "Glasses 4", {"Skin": "#E8B98F", "Pants": "#5FA8A0"}),
     "BB": ("standing/crossed_arms-2", "Short 2", None, "Glasses", {"Skin": "#C99470", "Pants": "#6B6B78"}),
 }
