@@ -7,7 +7,7 @@ import json, re, sys
 U = sys.argv[1]
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"] + 8.0
-KAP = [(0.0, "Drei Fälle: Gericht, Unternehmen, Kommission"), (T("sv"), "Sachverhalt zum Nachlesen"),
+KAP = [(0.0, "Drei Fälle: Gericht, Unternehmen, Kommission – mit Sachverhalt"),
        (T("ueber"), "Überblick: Wer? Wogegen? Voraussetzungen? Folge?"),
        (T("wl267"), "1. Vorabentscheidungsverfahren, Art. 267 AEUV"),
        (T("wer1"), "Vorlage: Wer legt vor? CILFIT, Foto-Frost"),
