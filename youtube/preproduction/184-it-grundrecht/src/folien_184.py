@@ -6,8 +6,8 @@ Wortlautkarte, S. 3), D2 Maßstab 2008/2025, D3 Online-Durchsuchung (§ 100b Abs
 (Gefahrenabwehr/Strafverfolgung), E2 Richtervorbehalt und Kernbereich, E3 seit 2025 (Trojaner II), F1 Lösung (Tafel), F2 zurück
 am Laptop und im Büro, G Klausurtipp (Lexi), H Klausurschema, I Merksatz (Lexi).
 Polizei neutral (Kommissar in Zivil, keine Uniform, kein Logo), Software als Holzpferdchen (Tabler horse-toy), Chats nur als
-Sprechblasen-Icons, kein echtes Messenger-Logo. Geräusch nur bei sichtbarer Handlung: Tippen am Laptop (Freesound CC0,
-../geraeusche_herkunft.json).
+Sprechblasen-Icons, kein echtes Messenger-Logo. Keine Geräusche: Ein vorgesehenes Tippgeräusch wurde verworfen, weil Herr
+Weinhold im Bild nicht sichtbar tippt (Sichtprüfung 04.10.2026, ../geraeusche_herkunft.json).
 Hilfsfunktionen (glyphen, z, pl, tafel, fb, wl_links, zitatkarte, redet mit hörbarem Wortende, kette, stufen, wechsel, icons …)
 als eigene Kopie aus Folge 181 (gemeinsame Dateien unverändert); neu: stuhl(), sitzt(), paar(), zimmer(). Zahlen auf Tafeln,
 Pillen und Blasen als Ziffern."""
@@ -263,7 +263,7 @@ def kasten(x, y, w, h, cue, fill):
 
 def stuhl(x, unten, cue, rechts=False, anim="pop", bis=None, hoehe=SH):
     """Hocker unter der sitzenden Figur (Phosphor chair, gespiegelt je Blickrichtung)."""
-    return ficon("ph", "chair", x + (-0.16 if rechts else 0.16) * hoehe, unten, int(hoehe * 0.62), cue, fuell=HOLZ2,
+    return ficon("ph", "chair", x + (-0.2 if rechts else 0.2) * hoehe, unten, int(hoehe * 0.78), cue, fuell=HOLZ2,
                  spiegeln=not rechts, anim=anim, bis=bis)
 
 
@@ -286,8 +286,8 @@ def paar(cue, fw, fh, xw=1390, xh=1700):
 # A Fall: Laptop von Herrn Weinhold | Büro von Kommissar Hollstein ----------------------------------------------------------
 BODEN = 900
 TRENN = 1180                                        # Trennlinie zwischen den beiden Orten
-WHX, HSX = 330, 1640
-DX = 700                                            # Schreibtisch mit Laptop
+WHX, HSX = 470, 1640
+DX = 790                                            # Schreibtisch mit Laptop
 WHa = ("WH_redet_r", WHX, BODEN, SH)
 HSa = ("HS_redet", HSX, BODEN, FR)
 HSb = ("HS_beschluss", HSX, BODEN, FR)
@@ -296,19 +296,19 @@ HSb = ("HS_beschluss", HSX, BODEN, FR)
 def zimmer(cue, anim="cut"):
     """Boden, Trennlinie, Schreibtisch mit Laptop (links) und Büro mit Bildschirm (rechts); neutral, ohne Logos."""
     els = [linienzug([(60, BODEN), (1860, BODEN)], cue, breite=7, farbe=INK),
-           linienzug([(TRENN, 120), (TRENN, BODEN - 10)], cue, breite=5, farbe=GRAUD)]
+           linienzug([(TRENN, 240), (TRENN, BODEN - 10)], cue, breite=5, farbe=GRAUD)]
     tisch = ficon("tabler", "desk", DX, BODEN - 2, 380, cue, fuell=HOLZ, anim=anim)
     els += [tisch, ficon("tabler", "device-laptop", DX, tisch.y + 12, 190, cue, fuell=BLAUHELL, anim=anim),
             ficon("tabler", "lamp", DX + 130, tisch.y + 12, 80, cue, fuell=GELB, anim=anim),
-            ficon("tabler", "device-desktop", 1340, BODEN - 260, 170, cue, fuell=WEISS, anim=anim),
-            linienzug([(1250, BODEN - 260), (1430, BODEN - 260)], cue, breite=6, farbe=INK),
-            linienzug([(1340, BODEN - 260), (1340, BODEN - 4)], cue, breite=6, farbe=INK)]
+            ]
+    buero = ficon("tabler", "desk", 1360, BODEN - 2, 300, cue, fuell=GRAU, anim=anim)
+    els += [buero, ficon("tabler", "device-desktop", 1330, buero.y + 12, 150, cue, fuell=WEISS, anim=anim)]
     return els, tisch.y
 
 
 _za, TY = zimmer("fall")
 LY = TY - 150                                       # Höhe über dem Laptop für Chat-Symbole
-folie([("fall", "Fall · Der Laptop"), ("weinh", "Fall · Herr Weinhold"), ("holl", "Fall · Kommissar Hollstein"),
+folie([("fall", "Fall · Die Polizei und der Laptop"), ("weinh", "Fall · Herr Weinhold"), ("holl", "Fall · Kommissar Hollstein"),
        ("frage", "Fall · Die Frage")], [
     *_za,
     pl("Laptop", DX, TY + 30, "fall", fill=WEISS, size=28, anker="m", bis="chat"),
@@ -316,23 +316,23 @@ folie([("fall", "Fall · Der Laptop"), ("weinh", "Fall · Herr Weinhold"), ("hol
     pl("heimlich Software installieren", 600, 40, beim("fall", "heimlich"), fill=ROTHELL, size=32, anker="m", bis="verd"),
     ficon("tabler", "message-circle", DX - 40, LY, 90, beim("fall", "Chats"), fuell=WEISS, bis="frage"),
     pl("Chats mitlesen?", 600, 120, beim("fall", "Chats"), fill=WEISS, size=30, anker="m", bis="verd"),
+    stuhl(WHX, BODEN, "weinh", rechts=True),
     *stufen([("WH_ruhig_r", "weinh"), ("WH_tippt_r", "chat"), ("WH_redet_r", "w1"), ("WH_selbst_r", "holl"),
              ("WH_tippt_r", "frage")], WHX, BODEN, SH, rede={"WH_redet_r": 1}),
-    stuhl(WHX, BODEN, "weinh", rechts=True),
     namensschild(NAME["WH"], WHX, BODEN, beim("weinh", "Herrn"), FARBE["WH"]),
-    pl("Verdacht: Falschgeld, mit einer Bande", 600, 40, "verd", fill=GELB, size=32, anker="m", bis="w1"),
+    pl("Verdacht: Falschgeld, mit einer Bande", 600, 40, "verd", fill=GELB, size=32, anker="m", bis=beim("chat", "verschlüsselten")),
     ficon(HC, "euro-banknote", DX + 250, TY - 60, 110, beim("verd", "Falschgeld"), fuell=GRUENHELL, bis="w1"),
-    pl("bestimmte Tatsachen", 600, 120, beim("verd", "Bestimmte"), fill=WEISS, size=30, anker="m", bis="w1"),
-    szene(ficon("tabler", "message-circle", DX + 40, LY - 70, 80, "chat", fuell=GRUENHELL, bis="frage"), "184tippen*", 0.8,
-          versatz=0.05),
+    pl("bestimmte Tatsachen", 600, 120, beim("verd", "Bestimmte"), fill=WEISS, size=30, anker="m", bis=beim("chat", "verschlüsselten")),
+    ficon("tabler", "message-circle", DX + 40, LY - 70, 80, "chat", fuell=GRUENHELL, bis="frage"),
     ficon("tabler", "lock", DX + 110, LY - 10, 70, beim("chat", "verschlüsselten"), fuell=GELB, bis="frage"),
     pl("verschlüsselter Messenger", 600, 40, beim("chat", "verschlüsselten"), fill=BLAUHELL, size=32, anker="m", bis="w1"),
-    blase("sprech", 520, 190, "w1", 560, 200, inhalt=["Alles verschlüsselt.", "Da liest keiner mit."], textsize=34,
+    blase("sprech", 520, 190, "w1", 470, 350, inhalt=["Alles verschlüsselt.", "Da liest keiner mit."], textsize=34,
           figur=WHa, bis="holl"),
     # Büro: Kommissar Hollstein
-    *stufen([("HS_ruhig", "holl"), ("HS_redet", "h1"), ("HS_entschlossen", "frage")], HSX, BODEN, FR, rede={"HS_redet": 1}),
-    namensschild(NAME["HS"], HSX, BODEN, "holl", FARBE["HS"], d=0.2),
-    ficon("tabler", "lock", 1340, BODEN - 330, 60, beim("h1", "verschlüsselt"), fuell=GELB, bis="frage"),
+    *stufen([("HS_denkt", "fall"), ("HS_ruhig", "holl"), ("HS_redet", "h1"), ("HS_entschlossen", "frage")], HSX, BODEN, FR,
+            rede={"HS_redet": 1}, erst="cut"),
+    namensschild(NAME["HS"], HSX, BODEN, "fall", FARBE["HS"]),
+    ficon("tabler", "lock", 1330, BODEN - 330, 60, beim("h1", "verschlüsselt"), fuell=GELB, bis="frage"),
     blase("sprech", 640, 250, "h1", 1500, 210, inhalt=["Abhören bringt uns nichts, die Chats", "sind verschlüsselt. Wir müssen",
           "direkt auf seinen Laptop."], textsize=31, figur=HSa, bis="frage"),
     pl("Darf der Staat heimlich in einen Computer eindringen?", 940, 40, "frage", fill=PINK, size=32, anker="m"),
@@ -398,8 +398,8 @@ folie([("ris", f"{PS1} › 3. informationelle Selbstbestimmung")], rechts_frei([
 # C4 Die Schutzlücke und das IT-Grundrecht (BVerfGE 120, 274) --------------------------------------------------------------
 P8 = "I. Schutzbereich › 4. IT-Grundrecht"
 folie([("luecke", f"{PS1} › Schutzlücke"), ("itgr", P8)], rechts_frei([
-    *tafel("luecke", "Die Schutzlücke"),
-    fb(110, 180, 1040, 80, ROTHELL, "luecke", [("Schutzlücke", "ExtraBold", 36, INK)]),
+    *tafel("luecke", "Es bleibt eine Schutzlücke"),
+    z("Art. 10 · Art. 13 · informationelle Selbstbestimmung", 110, 180, "luecke", size=32),
     z("BVerfG 2008: Fall zum Verfassungsschutz in NRW", 110, 290, "d08", "Bold", 33),
     z("Allgemeines Persönlichkeitsrecht, Art. 2 I i. V. m. Art. 1 I GG:", 110, 360, "itgr", size=32),
     fb(110, 420, 1040, 130, GELB, beim("itgr", "Grundrecht"), [("Grundrecht auf Gewährleistung der Vertraulichkeit", "ExtraBold", 31, INK),
@@ -433,14 +433,14 @@ folie([("stpo", "II. Eingriff › Strafprozessordnung"), ("q1", PQ)], rechts_fre
     z("Übertragung hätten überwacht werden können", 110, int(_yq + 115), beim("q2", "während"), "Bold", 32),
     *icons([("tabler", "gavel", "stpo", HELL), ("tabler", "horse-toy", "q1", HOLZ),
             ("tabler", "lock-open", beim("q1b", "unverschlüsselt"), GELB), ("tabler", "messages", "q2", BLAUHELL)],
-           IX, 470, 170),
-    *kette("HS_", 1600, [("ruhig", "stpo"), ("ernst", "q1"), ("entschlossen", beim("q1b", "unverschlüsselt")),
+           1400, 700, 160),
+    *kette("HS_", 1690, [("ruhig", "stpo"), ("ernst", "q1"), ("entschlossen", beim("q1b", "unverschlüsselt")),
                          ("denkt", "q2")]),
-    namensschild(NAME["HS"], 1600, BR, "stpo", FARBE["HS"], d=0.2),
+    namensschild(NAME["HS"], 1690, BR, "stpo", FARBE["HS"], d=0.2),
 ]))
 
 # D2 Maßstab der Quellen-TKÜ: 2008 und 2025 ------------------------------------------------------------------------------
-folie([("q08", "I. Schutzbereich › Quellen-TKÜ: 2008"), ("q25", "I. Schutzbereich › Quellen-TKÜ: seit 2025")], rechts_frei([
+folie([("q08", "II. Eingriff › Quellen-TKÜ: Maßstab 2008"), ("q25", "II. Eingriff › Quellen-TKÜ: Maßstab seit 2025")], rechts_frei([
     *tafel("q08", "Quellen-TKÜ: welches Grundrecht?"),
     fb(110, 180, 1040, 130, GRAU, "q08", [("2008: nur laufende Kommunikation", "ExtraBold", 33, INK),
                                          ("dann allein Art. 10", "Regular", 33, INK)]),
@@ -470,7 +470,7 @@ folie([("od", PO)], rechts_frei([
     *okz("zugleich Art. 10: auch laufende Kommunikation", int(_yo + 255), beim("odm", "zugleich"), size=34),
     fund("BVerfG, Trojaner II, LS 3, Rn. 241–243", 110, int(_yo + 320), beim("odm", "zugleich")),
     *icons([("tabler", "device-laptop", "od", BLAUHELL), ("tabler", "folders", beim("od1", "also"), GELB),
-            ("tabler", "shield-lock", "odm", GELB)], IX, 470, 170),
+            ("tabler", "shield-lock", "odm", GELB)], 1550, 380, 150),
     *paar("od", [("ruhig",), ("schreck", beim("od1", "also")), ("ernst", "odm")],
           [("ruhig",), ("entschlossen", "od1"), ("denkt", "odm")]),
 ]))
@@ -493,9 +493,9 @@ folie([("schr", f"{PR} › nicht schrankenlos"), ("gef", f"{PR} › Gefahrenabwe
     z("besonders schweren Straftat", 140, 698, beim("straf", "Nötig"), "ExtraBold", 33, rechts=1140),
     fund("BVerfG, Trojaner II, Rn. 134, 204, 209", 110, 775, beim("straf", "Nötig")),
     *icons([("tabler", "scale", "schr", GELB), ("tabler", "shield", "gef", BLAUHELL), ("tabler", "heart", "gut", ROTHELL),
-            ("tabler", "file-search", "straf", LILAHELL)], IX, 470, 170),
-    *kette("HS_", 1600, [("ruhig", "schr"), ("ernst", "gef"), ("denkt", "gut"), ("entschlossen", "straf")]),
-    namensschild(NAME["HS"], 1600, BR, "schr", FARBE["HS"], d=0.2),
+            ("tabler", "file-search", "straf", LILAHELL)], 1400, 700, 160),
+    *kette("HS_", 1690, [("ruhig", "schr"), ("ernst", "gef"), ("denkt", "gut"), ("entschlossen", "straf")]),
+    namensschild(NAME["HS"], 1690, BR, "schr", FARBE["HS"], d=0.2),
 ]))
 
 # E2 Richtervorbehalt und Kernbereich ------------------------------------------------------------------------------------
@@ -511,9 +511,9 @@ folie([("richt", f"{PR} › Richtervorbehalt"), ("kern", f"{PR} › Kernbereich 
     *neinz("doch erfasst: unverzüglich löschen, nicht verwerten", 640, "kern3", size=33),
     fund("BVerfGE 120, 274, Rn. 271–283; heute § 100d StPO", 110, 715, "kern3"),
     *icons([("tabler", "gavel", "richt", HELL), ("tabler", "shield-lock", "kern", ROTHELL),
-            ("tabler", "notebook", "kern2", HELL), ("tabler", "trash", "kern3", GRAU)], IX, 470, 170),
-    *kette("HS_", 1600, [("ruhig", "richt"), ("still", "kern"), ("ernst", "kern3")]),
-    namensschild(NAME["HS"], 1600, BR, "richt", FARBE["HS"], d=0.2),
+            ("tabler", "notebook", "kern2", HELL), ("tabler", "trash", "kern3", GRAU)], 1400, 700, 160),
+    *kette("HS_", 1690, [("ruhig", "richt"), ("still", "kern"), ("ernst", "kern3")]),
+    namensschild(NAME["HS"], 1690, BR, "richt", FARBE["HS"], d=0.2),
 ]))
 
 # E3 Seit 2025 (Trojaner II): Straftatengewicht und Zitiergebot ----------------------------------------------------------
@@ -529,7 +529,7 @@ folie([("n1", f"{PR} › seit 2025: Quellen-TKÜ"), ("zit", f"{PR} › Zitiergeb
     fb(110, 620, 1040, 130, ROTHELL, "fort", [("verfassungswidrig, gilt aber bis zu", "ExtraBold", 33, INK),
                                              ("einer Neuregelung fort", "ExtraBold", 33, INK)]),
     fund("Trojaner II, Tenor 2, Rn. 275 f.", 110, 765, "fort"),
-    *paar("n1", [("ruhig",), ("denkt", "n2"), ("staunt", "fort")], [("ruhig",), ("ernst", "n2"), ("still", "fort")]),
+    *paar("n1", [("ruhig",), ("denkt", "n2"), ("schreck", "fort")], [("ruhig",), ("ernst", "n2"), ("still", "fort")]),
 ]))
 
 # F1 Lösung (Tafel): § 100b Abs. 1, 2 StPO ---------------------------------------------------------------------------------
@@ -544,17 +544,17 @@ folie([("loes", f"{PL_} · § 100b Abs. 1, 2 StPO")], rechts_frei([
     *okz("Nr. 3: sonst Aufklärung wesentlich erschwert", 500, "l4", size=34),
     fund("§ 100b Abs. 1 Nr. 1–3 StPO", 110, 570, "l4"),
     *icons([(HC, "euro-banknote", "l1", GRUENHELL), ("tabler", "file-search", "l2", HELL),
-            ("tabler", "scale", "l3", GELB), ("tabler", "device-laptop", "l4", BLAUHELL)], IX, 470, 170),
-    *kette("HS_", 1600, [("ruhig", "loes"), ("ernst", "l2"), ("entschlossen", "l4")]),
-    namensschild(NAME["HS"], 1600, BR, "loes", FARBE["HS"], d=0.2),
+            ("tabler", "scale", "l3", GELB), ("tabler", "device-laptop", "l4", BLAUHELL)], 1400, 700, 160),
+    *kette("HS_", 1690, [("ruhig", "loes"), ("ernst", "l2"), ("entschlossen", "l4")]),
+    namensschild(NAME["HS"], 1690, BR, "loes", FARBE["HS"], d=0.2),
 ]))
 
 # F2 Zurück am Laptop und im Büro --------------------------------------------------------------------------------------------
 _zb, _ = zimmer("l5")
 folie([("l5", "Lösung · Quellen-TKÜ oder Online-Durchsuchung"), ("l7", "Lösung · Anordnung durch das Gericht")], [
     *_zb,
-    *stufen([("WH_tippt_r", "l5"), ("WH_ruhig_r", "l7")], WHX, BODEN, SH, erst="cut"),
     stuhl(WHX, BODEN, "l5", rechts=True, anim="cut"),
+    *stufen([("WH_tippt_r", "l5"), ("WH_ruhig_r", "l7")], WHX, BODEN, SH, erst="cut"),
     namensschild(NAME["WH"], WHX, BODEN, "l5", FARBE["WH"], anim="cut"),
     ficon("tabler", "message-circle", DX - 40, LY, 90, "l5", fuell=WEISS, bis="l6"),
     ficon("tabler", "message-circle", DX + 40, LY - 70, 80, beim("l5", "Chats"), fuell=GRUENHELL, bis="l6"),
@@ -566,11 +566,11 @@ folie([("l5", "Lösung · Quellen-TKÜ oder Online-Durchsuchung"), ("l7", "Lösu
     *stufen([("HS_ruhig", "l5"), ("HS_denkt", "l6"), ("HS_entschlossen", "l7"), ("HS_beschluss", "h2")], HSX, BODEN, FR,
             rede={"HS_beschluss": 1}, erst="cut", ende="tipp"),
     namensschild(NAME["HS"], HSX, BODEN, "l5", FARBE["HS"], anim="cut"),
-    ficon("tabler", "building-bank", 1340, BODEN - 330, 110, "l7", fuell=WEISS),
+    ficon("tabler", "building-bank", 1330, BODEN - 330, 110, "l7", fuell=WEISS),
     pl("Gericht, auf Antrag der Staatsanwaltschaft", 600, 40, "l7", fill=GRUENHELL, size=32, anker="m"),
     ficon("tabler", "trash", DX, LY, 90, "l8", fuell=GRAU),
     pl("Höchstpersönliches löschen", 600, 120, "l8", fill=WEISS, size=30, anker="m"),
-    blase("sprech", 620, 200, "h2", 1500, 230, inhalt=["Dann geht der Antrag ans Gericht.", "Ohne Beschluss läuft nichts."],
+    blase("sprech", 680, 200, "h2", 1500, 230, inhalt=["Dann geht der Antrag ans Gericht.", "Ohne Beschluss läuft nichts."],
           textsize=32, figur=HSb),
 ])
 
@@ -608,7 +608,8 @@ folie([("sch", PS_), ("k1", f"{PS_} › I. Schutzbereich"), ("k2", f"{PS_} › I
     z("2. Verdacht einer besonders schweren Straftat", 220, 470, "k5", size=33, rechts=FX - 20),
     z("oder konkrete Gefahr für ein überragend", 265, 520, beim("k5", "oder"), size=33, rechts=FX - 20),
     z("wichtiges Rechtsgut", 265, 570, beim("k5", "oder"), size=33, rechts=FX - 20),
-    z("Trojaner II, Rn. 134; BVerfGE 120, 274, Rn. 247", FX, 475, "k5", size=28, farbe=TEXT, rechts=1840),
+    z("Trojaner II, Rn. 134", FX, 475, "k5", size=28, farbe=TEXT, rechts=1840),
+    z("BVerfGE 120, 274, Rn. 247", FX, 525, beim("k5", "oder"), size=28, farbe=TEXT, rechts=1840),
     z("3. Richtervorbehalt", 220, 630, "k6", size=33, rechts=FX - 20),
     z("BVerfGE 120, 274, Rn. 257–259", FX, 635, "k6", size=28, farbe=TEXT, rechts=1840),
     z("4. Schutz des Kernbereichs", 220, 690, "k7", size=33, rechts=FX - 20),
@@ -623,9 +624,9 @@ folie([("merke", "Merksatz")], [
     titel("Merke", 750, 180, "merke", 84, anker="m"),
     *markertext([[("Wer heimlich in einen Computer", 0)], [("eindringt, greift in das ", 0)],
                  [("IT-Grundrecht", "a"), (" ein.", 0)]], 750, 290, 44, "merke", {"a": beim("merke", "IT")}),
-    *markertext([[("Nur beim Verdacht ", 0), ("besonders schwerer", "b")], [("Straftaten", "b"), (" oder bei ", 0),
-                  ("konkreter Gefahr", "c")], [("für überragend wichtige Rechtsgüter,", 0)],
-                 [("mit ", 0), ("Richtervorbehalt", "d"), (" und Kernbereichsschutz.", 0)]], 750, 520, 40, "m2",
+    *markertext([[("Erlaubt nur beim Verdacht ", 0), ("besonders", "b")], [("schwerer Straftaten", "b"), (" oder bei ", 0),
+                  ("konkreter", "c")], [("Gefahr", "c"), (" für überragend wichtige Rechtsgüter,", 0)],
+                 [("mit ", 0), ("Richtervorbehalt", "d"), (" und Schutz des Kernbereichs.", 0)]], 750, 520, 38, "m2",
                 {"b": beim("m2", "besonders"), "c": beim("m2", "konkreter"), "d": beim("m2", "Richtervorbehalt")}),
     *redet("LX_erklaert", 1680, 960, 690, "merke", lexi_bis_ende("merke")),
     namensschild("Lexi", 1680, 960, "merke", GELB, d=0.2),
