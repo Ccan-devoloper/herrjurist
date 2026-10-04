@@ -330,7 +330,7 @@ def tabelle(x, y, spalten, zeilen, size=32, kopf_fill=GELB, zh=78):
 # --- eigene Szenenbausteine Folge 200 ----------------------------------------------------------------------------------------
 HGELB = (253, 240, 196, 255)                 # Fläche reines Wohngebiet im Plan
 HORANGE = (252, 216, 190, 255)               # Fläche allgemeines Wohngebiet im Plan
-BX, BY, BW, BH = 70, 130, 540, 660           # Bebauungsplan-Tafel in den Fallszenen
+BX, BY, BW, BH = 70, 130, 560, 660           # Bebauungsplan-Tafel in den Fallszenen
 ZR = (BY + 90, BY + 360)                     # Zone Nord (WR): oben/unten
 ZA = (BY + 380, BY + BH - 20)                # Zone Süd (WA)
 
@@ -350,8 +350,8 @@ def zone(c, oben, unten, fill, zeile1, zeile2, anim="pop", bis=None):
     def zz(dr, s):
         dr.rounded_rectangle((3 * s, 3 * s, (w - 3) * s, (h - 3) * s), 12 * s, fill=fill, outline=INK, width=4 * s)
         dr.text((20 * s, 18 * s), glyphen(zeile1), font=F("Bold", 28 * s), fill=TEXT)
-        dr.text((20 * s, 58 * s), glyphen(zeile2), font=F("ExtraBold", 32 * s), fill=INK)
-    assert F("ExtraBold", 32).getlength(zeile2) <= w - 40, zeile2
+        dr.text((20 * s, 58 * s), glyphen(zeile2), font=F("ExtraBold", 30 * s), fill=INK)
+    assert F("ExtraBold", 30).getlength(zeile2) <= w - 40, zeile2
     return El(_flaeche(w, h, zz), BX + 20, oben, c, anim, 0.0, bis, name="zone:" + zeile2)
 
 
@@ -384,14 +384,16 @@ folie([(NULL, "Fall · Die neue Siedlung"), ("wr", "Fall · Norden: reines Wohng
     boden(NULL),
     bplan(NULL),
     hart(pl("Neue Siedlung", 70, 30, NULL, fill=GRUEN, size=38)),
-    hart(ficon("fluent-emoji-high-contrast", "houses", 1150, BODEN_Y, 260, NULL, fuell=WEISS, anim="cut", bis="kita")),
-    hart(ficon("fluent-emoji-high-contrast", "deciduous-tree", 1700, BODEN_Y, 170, NULL, fuell=GRUEN, anim="cut", bis="kita")),
+    hart(ficon("fluent-emoji-high-contrast", "houses", 1150, BODEN_Y, 260, NULL, fuell=WEISS, anim="cut", bis=beim("kita", "Einfamilienhaus"))),
+    hart(ficon("fluent-emoji-high-contrast", "deciduous-tree", 1700, BODEN_Y, 170, NULL, fuell=GRUEN, anim="cut", bis=beim("kita", "Frau"))),
+    hart(zone(NULL, *ZR, (242, 242, 238, 255), "Norden", "", anim="cut")),
+    hart(zone(NULL, *ZA, (242, 242, 238, 255), "Süden", "", anim="cut")),
     zone("wr", *ZR, HGELB, "Norden", "WR · reines Wohngebiet"),
     ficon("fluent-emoji-high-contrast", "houses", BX + 150, ZR[1] - 18, 120, beim("wr", "reines"), fuell=WEISS),
     zone("wa", *ZA, HORANGE, "Süden", "WA · allgemeines Wohngebiet"),
     ficon("fluent-emoji-high-contrast", "houses", BX + 150, ZA[1] - 18, 120, beim("wa", "allgemeines"), fuell=WEISS),
     ficon("fluent-emoji-high-contrast", "teddy-bear", BX + 400, ZR[1] - 22, 90, beim("kita", "Kita"), fuell=GELB),
-    ficon("ph", "house-line", KITA_X, BODEN_Y, 300, "kita", fuell=GELB),
+    ficon("ph", "house-line", KITA_X, BODEN_Y, 300, beim("kita", "Einfamilienhaus"), fuell=GELB),
     pl("Kita", KITA_X, 540, beim("kita", "Kita"), fill=WEISS, size=34, anker="m"),
     ficon("fluent-emoji-high-contrast", "playground-slide", 1080, BODEN_Y, 120, beim("kita", "Kita"), fuell=ROT),
     *fig("MO", MOX, BODEN_Y, FHA, [(beim("kita", "Frau"), "froh")], erst="pop", bis="mo1"),
@@ -427,8 +429,327 @@ folie([("studio", "Fall · Süden: das Ladenlokal von Herrn Tiemann"), ("ti1", "
     ficon("tabler", "volume-off", 1260, BODEN_Y, 80, beim("ti1", "Lärm"), fuell=WEISS),
     ficon("tabler", "map-2", 1370, BODEN_Y, 80, beim("ti1", "Stadt"), fuell=GRUEN),
     *fig("TI", TIX, BODEN_Y, FHA, [("frage", "skeptisch")], erst="cut"),
-    pl("Kita ins reine Wohngebiet?", 660, 130, "frage", fill=HGELB, size=36),
+    pl("Kita ins reine Wohngebiet?", 680, 130, "frage", fill=HGELB, size=36),
     ring(BX + 400, ZR[1] - 65, 75, 60, "frage", farbe=ORANGE, breite=7),
-    pl("Studio ins allgemeine Wohngebiet?", 660, 215, "frage2", fill=HORANGE, size=36),
+    pl("Studio ins allgemeine Wohngebiet?", 680, 215, "frage2", fill=HORANGE, size=36),
     ring(BX + 400, ZA[1] - 65, 75, 60, "frage2", farbe=ORANGE, breite=7),
+])
+
+
+# ===========================================================================================================================
+# B Sachverhalt
+# ===========================================================================================================================
+def sachverhalt_200(cue, absaetze, frage):
+    els = [karte(140, 60, 1640, 900, cue, fill=HELL), titel("Sachverhalt", 210, 100, cue, 60)]
+    y = 210
+    for a in absaetze:
+        e, y = absatz(glyphen(a), 210, y, 1500, cue, size=34, zeilenabstand=1.30)
+        els += e; y += 18
+    assert y + 70 <= 950, f"Sachverhalt zu lang ({y})"
+    els.append(pille(glyphen(frage), 210, y + 6, cue, fill=PINK, size=32))
+    folie([(cue, "Sachverhalt")], els)
+
+
+sachverhalt_200("sv", [
+    "Ein qualifizierter Bebauungsplan der Gemeinde aus dem Jahr 2022 setzt für eine neue Siedlung im Norden ein reines "
+    "Wohngebiet und im Süden ein allgemeines Wohngebiet fest. Die Erschließung ist gesichert; die übrigen Festsetzungen "
+    "halten beide Vorhaben ein.",
+    "Frau Möhring will im Norden in einem Einfamilienhaus eine Kita mit 2 Gruppen und 30 Plätzen eröffnen. Alle Kinder "
+    "kommen aus der Siedlung.",
+    "Herr Tiemann mietet im Süden ein kleines Ladenlokal für sein Tattoo-Studio. Er arbeitet nur nach Termin, nach draußen "
+    "dringt kein Lärm. Seine Kundschaft kommt aus der ganzen Stadt.",
+], "Sind die Kita und das Studio nach der Art der baulichen Nutzung zulässig?")
+
+# ===========================================================================================================================
+# C § 30 Abs. 1 BauGB (Wortlaut)
+# ===========================================================================================================================
+PQ = "§ 30 Abs. 1 BauGB"
+W30 = ("„(1) Im Geltungsbereich eines Bebauungsplans, der allein oder gemeinsam mit sonstigen baurechtlichen Vorschriften "
+       "mindestens Festsetzungen über die Art und das Maß der baulichen Nutzung, die überbaubaren Grundstücksflächen und die "
+       "örtlichen Verkehrsflächen enthält, ist ein Vorhaben zulässig, wenn es diesen Festsetzungen nicht widerspricht und "
+       "die Erschließung gesichert ist.“")
+w30, w30_y = wortlaut(80, 165, 1100, W30, "§ 30 Abs. 1 BauGB", "p30", marken=[
+    ("nicht widerspricht", beim("p30w", "widerspricht")), ("Erschließung gesichert", beim("p30w", "Erschließung")),
+    ("die Art und das Maß", beim("quali", "Art")), ("überbaubaren", beim("quali", "überbaubaren")),
+    ("örtlichen Verkehrsflächen", beim("quali", "örtlichen"))], size=30)
+folie([("p30", f"{PQ} · der Ausgangspunkt"), ("p30w", f"{PQ} › nicht widersprechen, Erschließung"),
+       ("quali", f"{PQ} › qualifizierter Bebauungsplan"), ("hier", f"{PQ} › qualifiziert (+), Erschließung (+)"),
+       ("art", f"{PQ} › offen: Art der baulichen Nutzung"), ("v188", f"{PQ} › Genehmigungspflicht: eigenes Video")], rechts_frei([
+    *tafel("p30", "Ausgangspunkt: § 30 Abs. 1 BauGB"),
+    *w30,
+    *okz("qualifizierter Plan, Erschließung gesichert", w30_y + 25, "hier", "Bold", 32, x=160),
+    blk(110, w30_y + 90, 1040, 76, GELB, "art", [("offen: die Art der baulichen Nutzung", "ExtraBold", 34, INK)]),
+    zit("Genehmigungspflicht und Verfahren: Video „Baugenehmigung Schema“", 110, w30_y + 190, "v188", size=28),
+    *requisit([("p30", ("tabler", "map", 100, WEISS), "Bebauungsplan", WEISS),
+               ("hier", ("tabler", "circle-check", 100, HELLGRUEN), "qualifiziert", HELLGRUEN),
+               ("art", ("tabler", "building-community", 110, GELB), "Art der Nutzung?", GELB)]),
+    *zwei([("p30", "ruhig"), ("art", "denkt")], [("p30", "ruhig"), ("art", "skeptisch")]),
+]))
+assert w30_y + 230 <= 890, w30_y
+
+# ===========================================================================================================================
+# D Baugebiete: § 1 Abs. 2, 3 BauNVO (Tabelle)
+# ===========================================================================================================================
+PT = "Baugebiete"
+tab, tab_y = tabelle(110, 235, [150, 470, 220], [
+    ("p12", ["", "Baugebiet", "BauNVO"]),
+    ("twr", ["WR", "reines Wohngebiet", "§ 3"]),
+    ("twa", ["WA", "allgemeines Wohngebiet", "§ 4"]),
+    ("tmi", ["MI", "Mischgebiet", "§ 6"]),
+    ("tmu", ["MU", "urbanes Gebiet", "§ 6a"]),
+    ("tge", ["GE", "Gewerbegebiet", "§ 8"]),
+    ("tgi", ["GI", "Industriegebiet", "§ 9"])], zh=62)
+folie([("bng", f"{PT} · die Baunutzungsverordnung"), ("p12", f"{PT} › § 1 Abs. 2 BauNVO: 12 Baugebiete"),
+       ("twr", f"{PT} › reines Wohngebiet, § 3"), ("twa", f"{PT} › allgemeines Wohngebiet, § 4"),
+       ("tmi", f"{PT} › Mischgebiet, § 6"), ("tmu", f"{PT} › urbanes Gebiet, § 6a"), ("tge", f"{PT} › Gewerbegebiet, § 8"),
+       ("tgi", f"{PT} › Industriegebiet, § 9"), ("p13", f"{PT} › § 1 Abs. 3 S. 2 BauNVO: Teil des Plans")], rechts_frei([
+    *tafel("bng", "Die Baugebiete der BauNVO"),
+    z("§ 1 Abs. 2 BauNVO: 12 Baugebiete, z. B.", 110, 180, "p12", "Bold", 34),
+    *tab,
+    blk(110, tab_y + 20, 1040, 110, HELLGRUEN, "p13", [("Festsetzung im Plan: §§ 2 bis 14 BauNVO", "ExtraBold", 32, INK),
+                                                     ("werden Bestandteil des Bebauungsplans", "ExtraBold", 32, INK)]),
+    zit("§ 1 Abs. 3 S. 2 BauNVO", 110, tab_y + 140, "p13"),
+    *requisit([("bng", ("tabler", "book", 100, WEISS), "BauNVO", WEISS),
+               ("p12", ("tabler", "table", 100, WEISS), "12 Baugebiete", WEISS),
+               ("p13", ("tabler", "map", 100, HELLGRUEN), "Teil des Plans", HELLGRUEN)]),
+    *allein("TI", [("bng", "ruhig"), ("tmu", "skeptisch"), ("p13", "froh")]),
+]))
+assert tab_y + 180 <= 890, tab_y
+
+# ===========================================================================================================================
+# E Aufbau der §§ 2–9 BauNVO, § 31 Abs. 1 BauGB (Wortlaut), Gebietsverträglichkeit
+# ===========================================================================================================================
+PA = "Aufbau §§ 2–9 BauNVO"
+W31 = ("„(1) Von den Festsetzungen des Bebauungsplans können solche Ausnahmen zugelassen werden, die in dem "
+       "Bebauungsplan nach Art und Umfang ausdrücklich vorgesehen sind.“")
+w31, w31_y = wortlaut(80, 425, 1100, W31, "§ 31 Abs. 1 BauGB", "p31", marken=[
+    ("können", beim("p31", "können")), ("ausdrücklich vorgesehen", beim("p31", "ausdrücklich"))], size=30)
+folie([("aufbau", f"{PA} · immer gleich gebaut"), ("abs1", f"{PA} › Abs. 1: Zweck"),
+       ("abs2", f"{PA} › Abs. 2: allgemein zulässig"), ("abs3", f"{PA} › Abs. 3: ausnahmsweise"),
+       ("p31", f"{PA} › Ausnahme, § 31 Abs. 1 BauGB"), ("erm", f"{PA} › Ermessen der Behörde"),
+       ("gv", f"{PA} › ungeschrieben: Gebietsverträglichkeit")], rechts_frei([
+    *tafel("aufbau", "Aufbau der §§ 2 bis 9 BauNVO"),
+    blk(110, 175, 1040, 66, WEISS, "abs1", [("Abs. 1: Zweck des Gebiets", "ExtraBold", 32, INK)]),
+    blk(110, 256, 1040, 66, GRUEN, "abs2", [("Abs. 2: allgemein zulässig", "ExtraBold", 32, INK)]),
+    blk(110, 337, 1040, 66, GELB, "abs3", [("Abs. 3: ausnahmsweise zulassungsfähig", "ExtraBold", 32, INK)]),
+    *w31,
+    z("Entscheidung nach Ermessen der Behörde", 110, w31_y + 18, "erm", "Bold", 32),
+    blk(110, w31_y + 75, 1040, 70, LILA, "gv", [("ungeschrieben: Gebietsverträglichkeit", "ExtraBold", 32, INK)]),
+    zit("BVerwG, Beschl. v. 28.2.2008 – 4 B 60.07, Rn. 5, 11", 110, w31_y + 155, "gv"),
+    *requisit([("aufbau", ("tabler", "list-numbers", 100, WEISS), "Abs. 1 · 2 · 3", WEISS),
+               ("p31", ("tabler", "file-certificate", 100, GELB), "Ausnahme", GELB),
+               ("erm", ("tabler", "scale", 100, WEISS), "Ermessen", WEISS),
+               ("gv", ("tabler", "home-check", 100, LILA), "Gebietscharakter", LILA)]),
+    *zwei([("aufbau", "ruhig"), ("abs3", "denkt"), ("gv", "froh")], [("aufbau", "skeptisch"), ("p31", "ruhig")]),
+]))
+assert w31_y + 190 <= 890, w31_y
+
+# ===========================================================================================================================
+# F Kita im reinen Wohngebiet: § 3 Abs. 1, 2 BauNVO (Wortlaut), Gegenfall große Kita
+# ===========================================================================================================================
+PK = "Kita im reinen Wohngebiet"
+W3 = ("„(1) Reine Wohngebiete dienen dem Wohnen. (2) Zulässig sind 1. Wohngebäude, 2. Anlagen zur Kinderbetreuung, die den "
+      "Bedürfnissen der Bewohner des Gebiets dienen.“")
+w3, w3_y = wortlaut(80, 165, 1100, W3, "§ 3 Abs. 1, 2 BauNVO", "kita1", marken=[
+    ("dienen dem Wohnen", beim("p3a", "Wohnen")), ("Anlagen zur Kinderbetreuung", beim("p3b", "Kinderbetreuung")),
+    ("Bedürfnissen", beim("p3b", "Bedürfnissen")), ("Bewohner des Gebiets", beim("p3b", "Bewohner"))], size=30)
+KX1, KX2, MOT = 1700, 1810, 1440             # Kinder und Frau Möhring neben der Tafel
+folie([("kita1", f"{PK} · § 3 BauNVO"), ("p3a", f"{PK} › Abs. 1: dient dem Wohnen"),
+       ("p3b", f"{PK} › Abs. 2 Nr. 2: Kinderbetreuung für die Bewohner"), ("sub3", f"{PK} › Kinder aus der Siedlung (+)"),
+       ("gv3", f"{PK} › gebietsverträglich (+)"), ("gross", f"{PK} › Gegenfall: große Kita, Abs. 3 Nr. 2")], rechts_frei([
+    *tafel("kita1", "Kita im reinen Wohngebiet: § 3 BauNVO"),
+    *w3,
+    *okz("Kinder aus der Siedlung: dient den Bewohnern", w3_y + 25, "sub3", "Bold", 32, x=160),
+    *okz("2 Gruppen: stört den Gebietscharakter nicht", w3_y + 80, "gv3", "Bold", 32, x=160),
+    blk(110, w3_y + 150, 1040, 120, HELLROT, "gross", [("Gegenfall: große Kita für die ganze Stadt", "ExtraBold", 32, INK),
+                                                    ("nur ausnahmsweise: soziale Zwecke, Abs. 3 Nr. 2", "Bold", 32, INK)]),
+    *requisit([("kita1", ("ph", "house-line", 110, GELB), "Kita", GELB),
+               ("sub3", ("fluent-emoji-high-contrast", "teddy-bear", 90, GELB), "für die Siedlung", HELLGRUEN),
+               ("gross", ("tabler", "building-community", 120, HELLROT), "Kita für die ganze Stadt?", HELLROT)]),
+    *stehend("MO", MOT, [("kita1", "ruhig"), ("sub3", "froh"), ("gross", "denkt")]),
+    *kinder(beim("sub3", "Kinder"), x1=KX1, x2=KX2),
+]))
+assert w3_y + 290 <= 890, w3_y
+
+# ===========================================================================================================================
+# G Kinderlärm: § 22 Abs. 1a BImSchG (Wortlaut), Ergebnis Kita
+# ===========================================================================================================================
+PL = "Kinderlärm"
+W22 = ("„(1a) Geräuscheinwirkungen, die von Kindertageseinrichtungen, Kinderspielplätzen und ähnlichen Einrichtungen wie "
+       "beispielsweise Ballspielplätzen durch Kinder hervorgerufen werden, sind im Regelfall keine schädliche "
+       "Umwelteinwirkung. …“")
+w22, w22_y = wortlaut(80, 165, 1100, W22, "§ 22 Abs. 1a S. 1 BImSchG", "p22", marken=[
+    ("Kindertageseinrichtungen,", beim("p22", "Kindertageseinrichtungen")), ("im Regelfall keine", beim("p22", "Regelfall")),
+    ("schädliche Umwelteinwirkung", beim("p22", "schädliche"))], size=30)
+folie([("laerm", f"{PL} · ein Problem?"), ("p22", f"{PL} › § 22 Abs. 1a BImSchG: im Regelfall keine schädliche Umwelteinwirkung"),
+       ("kerg", "Kita › allgemein zulässig (+)")], rechts_frei([
+    *tafel("laerm", "Und der Kinderlärm?"),
+    *w22,
+    blk(110, w22_y + 40, 1040, 90, GRUEN, "kerg", [("Ergebnis: Die Kita ist allgemein zulässig.", "ExtraBold", 36, INK)]),
+    bis_(ok(150, w22_y + 85, "kerg", gr=24), None),
+    *requisit([("laerm", ("tabler", "volume", 100, WEISS), "Kinderlärm?", WEISS),
+               ("p22", ("tabler", "volume", 100, HELLGRUEN), "im Regelfall hinzunehmen", HELLGRUEN),
+               ("kerg", ("tabler", "circle-check", 100, HELLGRUEN), "Kita zulässig", HELLGRUEN)]),
+    *stehend("MO", MOT, [("laerm", "sorge"), ("p22", "ruhig"), ("kerg", "stolz")]),
+    *kinder("laerm", x1=KX1, x2=KX2),
+]))
+assert w22_y + 150 <= 890, w22_y
+
+# ===========================================================================================================================
+# H Tattoo-Studio im allgemeinen Wohngebiet: § 4 Abs. 1, 2 Nr. 2 BauNVO (Wortlaut), Gebietsversorgung
+# ===========================================================================================================================
+PS4 = "Studio im allgemeinen Wohngebiet"
+W4 = ("„(1) Allgemeine Wohngebiete dienen vorwiegend dem Wohnen. (2) Zulässig sind … 2. die der Versorgung des Gebiets "
+      "dienenden Läden, Schank- und Speisewirtschaften sowie nicht störenden Handwerksbetriebe, …“")
+w4, w4_y = wortlaut(80, 165, 1100, W4, "§ 4 Abs. 1, 2 BauNVO", "stu1", marken=[
+    ("vorwiegend dem Wohnen", beim("p4a", "vorwiegend")), ("der Versorgung des Gebiets", beim("p4b", "Versorgung")),
+    ("nicht störenden Handwerksbetriebe", beim("p4b", "Handwerksbetriebe"))], size=30)
+folie([("stu1", f"{PS4} · § 4 BauNVO"), ("p4a", f"{PS4} › Abs. 1: vorwiegend Wohnen"),
+       ("p4b", f"{PS4} › Abs. 2 Nr. 2: gebietsversorgendes Handwerk?"), ("hw", f"{PS4} › Handwerk? kann offenbleiben"),
+       ("vers", f"{PS4} › Versorgung des Gebiets: funktionale Zuordnung"), ("stadt", f"{PS4} › Kundschaft aus der ganzen Stadt"),
+       ("nein2", f"{PS4} › Abs. 2 Nr. 2 (−)")], rechts_frei([
+    *tafel("stu1", "Studio im allgemeinen Wohngebiet: § 4"),
+    *w4,
+    z("Handwerk? kann offenbleiben", 110, w4_y + 22, "hw", "Bold", 32),
+    z("Versorgung des Gebiets = funktional dem Wohngebiet zuzuordnen", 110, w4_y + 77, "vers", "Bold", 30),
+    zit("BVerwG, Urt. v. 20.3.2019 – 4 C 5.18, Rn. 16 (zur Gaststätte)", 110, w4_y + 122, "vers"),
+    *neinz("Kundschaft aus der ganzen Stadt", w4_y + 175, "stadt", "Bold", 32, x=160),
+    blk(110, w4_y + 240, 1040, 76, HELLROT, "nein2", [("§ 4 Abs. 2 Nr. 2 BauNVO (−)", "ExtraBold", 34, INK)]),
+    *requisit([("stu1", ("tabler", "building-store", 110, BLAU), "Tattoo-Studio", BLAU),
+               ("p4b", ("tabler", "tools", 100, WEISS), "Handwerk?", WEISS),
+               ("stadt", ("tabler", "map-2", 100, HELLROT), "ganze Stadt", HELLROT)]),
+    *allein("TI", [("stu1", "ruhig"), ("hw", "skeptisch"), ("nein2", "sorge")]),
+]))
+assert w4_y + 330 <= 890, w4_y
+
+# ===========================================================================================================================
+# I Ausnahme: § 4 Abs. 3 Nr. 2 BauNVO (Wortlaut), § 31 Abs. 1 BauGB, Regel-Ausnahme-Verhältnis, § 246e BauGB
+# ===========================================================================================================================
+PX3 = "Studio › Ausnahme"
+W43 = "„(3) Ausnahmsweise können zugelassen werden … 2. sonstige nicht störende Gewerbebetriebe, …“"
+w43, w43_y = wortlaut(80, 165, 1100, W43, "§ 4 Abs. 3 Nr. 2 BauNVO", "p4c", marken=[
+    ("Ausnahmsweise", beim("p4c", "ausnahmsweise")), ("sonstige nicht", beim("p4c", "Sonstige")), ("störende Gewerbebetriebe", beim("p4c", "Gewerbebetriebe"))],
+    size=30)
+folie([("p4c", f"{PX3}: § 4 Abs. 3 Nr. 2 BauNVO"), ("ruhig", f"{PX3}: nicht störend (+)"),
+       ("aus", f"{PX3} nach § 31 Abs. 1 BauGB möglich"), ("regel", f"{PX3}: Ermessen, Ausnahme bleibt Ausnahme"),
+       ("turbo", f"{PX3}: § 246e BauGB hilft nicht")], rechts_frei([
+    *tafel("p4c", "Bleibt die Ausnahme: § 4 Abs. 3"),
+    *w43,
+    *okz("klein, nur nach Termin, kein Lärm: nicht störend", w43_y + 25, "ruhig", "Bold", 32, x=160),
+    blk(110, w43_y + 90, 1040, 76, GELB, "aus", [("Ausnahme nach § 31 Abs. 1 BauGB möglich", "ExtraBold", 34, INK)]),
+    z("Ermessen: Die Ausnahme muss Ausnahme bleiben.", 110, w43_y + 195, "regel", "Bold", 32),
+    zit("BVerwG, Urt. v. 29.3.2022 – 4 C 6.20, Rn. 17", 110, w43_y + 242, "regel"),
+    *neinz("„Bau-Turbo“, § 246e BauGB: nur für den Wohnungsbau", w43_y + 305, "turbo", "Bold", 32, x=160),
+    *requisit([("p4c", ("tabler", "building-store", 110, BLAU), "sonstiger Gewerbebetrieb", BLAU),
+               ("ruhig", ("tabler", "calendar", 100, HELLGRUEN), "nur nach Termin", HELLGRUEN),
+               ("aus", ("tabler", "file-certificate", 100, GELB), "Ausnahme", GELB),
+               ("turbo", ("tabler", "home", 100, HELLROT), "nur Wohnungsbau", HELLROT)]),
+    *allein("TI", [("p4c", "ruhig"), ("ruhig", "froh"), ("regel", "ernst"), ("turbo", "skeptisch")]),
+]))
+assert w43_y + 350 <= 890, w43_y
+
+# ===========================================================================================================================
+# J § 15 Abs. 1 BauNVO (Wortlaut): Einzelfall; Verweis Nachbarklage (Folge 113)
+# ===========================================================================================================================
+P15 = "§ 15 Abs. 1 BauNVO"
+W15 = ("„(1) Die in den §§ 2 bis 14 aufgeführten baulichen und sonstigen Anlagen sind im Einzelfall unzulässig, wenn sie "
+       "nach Anzahl, Lage, Umfang oder Zweckbestimmung der Eigenart des Baugebiets widersprechen. Sie sind auch unzulässig, "
+       "wenn von ihnen Belästigungen oder Störungen ausgehen können, die nach der Eigenart des Baugebiets im Baugebiet "
+       "selbst oder in dessen Umgebung unzumutbar sind, …“")
+w15, w15_y = wortlaut(80, 165, 1100, W15, "§ 15 Abs. 1 BauNVO", "p15", marken=[
+    ("im Einzelfall unzulässig,", beim("p15w", "Einzelfall")), ("Anzahl,", beim("p15w", "Anzahl")),
+    ("unzumutbar", beim("p15w", "unzumutbar"))], size=30)
+folie([("p15", f"{P15} · der Einzelfall"), ("p15w", f"{P15} › Eigenart, unzumutbare Störung"),
+       ("h15", f"{P15} › Kita und Studio: nichts ersichtlich"), ("v113", f"{P15} › Nachbarn: Video „Nachbarklage“")], rechts_frei([
+    *tafel("p15", "Zuletzt: § 15 Abs. 1 BauNVO"),
+    *w15,
+    *okz("Kita und Studio: nichts ersichtlich", w15_y + 25, "h15", "Bold", 32, x=160),
+    zit("Gebietserhaltungsanspruch der Nachbarn: Video „Baurechtliche Nachbarklage“", 110, w15_y + 90, "v113", size=28),
+    *requisit([("p15", ("tabler", "zoom-check", 100, WEISS), "Einzelfall", WEISS),
+               ("v113", ("tabler", "users", 100, WEISS), "Nachbarn", WEISS)]),
+    *zwei([("p15", "ruhig"), ("h15", "froh")], [("p15", "skeptisch"), ("h15", "froh")]),
+]))
+assert w15_y + 130 <= 890, w15_y
+
+# ===========================================================================================================================
+# K Ergebnis: zurück zur Siedlung, Herr Tiemann (Blase)
+# ===========================================================================================================================
+MO3, TI3 = 900, 1560
+folie([("erg", "Ergebnis › Kita: allgemein zulässig"), ("erg2", "Ergebnis › Studio: nur als Ausnahme"),
+       ("ti2", "Ergebnis › Herr Tiemann beantragt die Ausnahme")], [
+    boden("erg"),
+    *plan_grund("erg"),
+    hart(pl("Ergebnis", 70, 30, "erg", fill=PINK, size=38)),
+    ficon("fluent-emoji-high-contrast", "teddy-bear", BX + 400, ZR[1] - 22, 90, "erg", fuell=GELB),
+    bis_(ok(BX + 470, ZR[0] + 120, beim("erg", "allgemein"), gr=26), None),
+    pl("Kita: allgemein zulässig", 680, 120, beim("erg", "allgemein"), fill=HELLGRUEN, size=36),
+    ficon("tabler", "building-store", BX + 400, ZA[1] - 22, 100, "erg2", fuell=BLAU),
+    pl("Studio: nur als Ausnahme", 680, 200, beim("erg2", "Ausnahme"), fill=GELB, size=36),
+    *fig("MO", MO3, BODEN_Y, FHA, [("erg", "stolz_r")], erst="pop"),
+    ns(NAME["MO"], MO3, BODEN_Y, "erg", NFARBE["MO"], d=0.1),
+    *fig("TI", TI3, BODEN_Y, FHA, [("erg", "ruhig"), ("erg2", "skeptisch")], erst="pop", bis="ti2"),
+    *redet("TI_redet2", TI3, BODEN_Y, FHA, "ti2", "sch"),
+    ns(NAME["TI"], TI3, BODEN_Y, "erg", NFARBE["TI"], d=0.1),
+    blase("sprech", 640, 200, "ti2", 1510, 300, inhalt=["Dann beantrage ich", "die Ausnahme gleich mit."], textsize=34,
+          figur=("TI_redet2", TI3, BODEN_Y, FHA), bis="sch"),
+])
+
+# ===========================================================================================================================
+# L Prüfschema: Zulässigkeit nach § 30 Abs. 1 BauGB (Aufbau Punkt für Punkt)
+# ===========================================================================================================================
+REIHEN = [("s1", 0, "1. qualifizierter Bebauungsplan (§ 30 Abs. 1 BauGB)"),
+          ("s2", 0, "2. Art der baulichen Nutzung"),
+          ("s2a", 1, "a) Baugebiet bestimmen (§ 1 Abs. 2, 3 BauNVO)"),
+          ("s2b", 1, "b) Katalog: allgemein zulässig nach Abs. 2"),
+          ("s2c", 1, "c) sonst Ausnahme (Abs. 3, § 31 Abs. 1 BauGB) oder Befreiung (§ 31 Abs. 2 BauGB)"),
+          ("s2d", 1, "d) Gebietsverträglichkeit"),
+          ("s2e", 1, "e) Einzelfall: § 15 Abs. 1 BauNVO"),
+          ("s3", 0, "3. übrige Festsetzungen, z. B. Maß der baulichen Nutzung"),
+          ("s4", 0, "4. gesicherte Erschließung")]
+els_sch = [karte(60, 50, 1800, 940, "sch"), titel(glyphen("Prüfschema: Zulässigkeit nach § 30 Abs. 1 BauGB"), 110, 90, "sch", 46)]
+y = 200
+for c, ebene, text in REIHEN:
+    x = (130, 200)[ebene]
+    els_sch.append(z(text, x, y, c, ("ExtraBold", "Regular")[ebene], (40, 36)[ebene], rechts=1820))
+    y += {0: 86, 1: 74}[ebene]
+assert y <= 960, y
+folie([("sch", "Prüfschema"), ("s1", "Prüfschema › 1. qualifizierter Bebauungsplan"), ("s2", "Prüfschema › 2. Art der Nutzung"),
+       ("s2a", "Prüfschema › 2. a) Baugebiet"), ("s2b", "Prüfschema › 2. b) Katalog Abs. 2"),
+       ("s2c", "Prüfschema › 2. c) Ausnahme oder Befreiung"), ("s2d", "Prüfschema › 2. d) Gebietsverträglichkeit"),
+       ("s2e", "Prüfschema › 2. e) § 15 BauNVO"), ("s3", "Prüfschema › 3. übrige Festsetzungen"),
+       ("s4", "Prüfschema › 4. Erschließung")], els_sch)
+
+# ===========================================================================================================================
+# M Klausurtipp (Lexi): die Reihenfolge bei der Art der Nutzung
+# ===========================================================================================================================
+els_k = [*tafel("tipp", "Klausurtipp: immer dieselbe Reihenfolge", fill=HELL), warnung_i(150, 225, "tipp", gr=26),
+         z("Art der Nutzung prüfen:", 200, 200, "tipp", "Bold", 34),
+         blk(130, 290, 1020, 76, WEISS, "k1", [("1. Gebiet bestimmen", "ExtraBold", 34, INK)]),
+         blk(130, 386, 1020, 76, GRUEN, "k2", [("2. Katalog in Abs. 2", "ExtraBold", 34, INK)]),
+         blk(130, 482, 1020, 76, GELB, "k3", [("3. Ausnahme oder Befreiung, § 31 BauGB", "ExtraBold", 34, INK)]),
+         blk(130, 578, 1020, 76, BLAU, "k4", [("4. zuletzt § 15 BauNVO", "ExtraBold", 34, INK)]),
+         z("Ältere Pläne: Welche BauNVO-Fassung gilt?", 130, 690, "k5", "Bold", 32),
+         zit("Überleitungsvorschriften §§ 25 ff. BauNVO, z. B. § 25d, § 25e", 130, 740, "k5"),
+         *redet("LX_warnt", FX, FB, FR + 40, "tipp", "merke"),
+         ns("Lexi", FX, FB, "tipp", GELB, d=0.2)]
+folie([("tipp", "Klausurtipp · immer dieselbe Reihenfolge"), ("k1", "Klausurtipp › 1. Gebiet"), ("k2", "Klausurtipp › 2. Katalog"),
+       ("k3", "Klausurtipp › 3. Ausnahme oder Befreiung"), ("k4", "Klausurtipp › 4. § 15 BauNVO"),
+       ("k5", "Klausurtipp › Fassung der BauNVO")], els_k)
+
+# ===========================================================================================================================
+# N Merksatz (Lexi)
+# ===========================================================================================================================
+folie([("merke", "Merksatz")], [
+    karte(80, 100, 1340, 840, "merke", fill=HELL),
+    titel("Merke", 750, 150, "merke", 84, anker="m"),
+    *markertext([[("Der ", 0), ("Bebauungsplan", "a"), (" wählt das Gebiet,", 0)]], 750, 290, 40, "merke",
+                {"a": beim("merke", "Bebauungsplan")}),
+    *markertext([[("die ", 0), ("BauNVO", "b"), (" liefert den Katalog.", 0)]], 750, 380, 40, "m2", {"b": beim("m2", "Baunutzungsverordnung")}),
+    *markertext([[("Was dort nicht allgemein zulässig ist,", 0)],
+                 [("braucht eine ", 0), ("Ausnahme oder Befreiung", "c"), (".", 0)]], 750, 500, 40, "m3",
+                {"c": beim("m3", "Ausnahme")}),
+    *markertext([[("Und ", 0), ("§ 15", "d"), (" prüft am Ende", 0)],
+                 [("den Einzelfall.", 0)]], 750, 680, 40, "m4", {"d": beim("m4", "Paragraf")}),
+    *redet("LX_erklaert", 1680, 950, 680, "merke", lexi_bis_ende("merke")),
+    ns("Lexi", 1680, 950, "merke", GELB, d=0.2),
 ])
