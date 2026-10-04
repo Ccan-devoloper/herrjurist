@@ -41,9 +41,9 @@ SEGMENTE = [
      "dreihundertdrei, [tb123]und er dringt in die fremde Hütte ein, Hausfriedensbruch, Paragraf hundertdreiundzwanzig. "
      "[vors]Vorsatz liegt vor. [rw]Fraglich ist die Rechtswidrigkeit.", PS),
     # --- D Wortlautkarte § 34 --------------------------------------------------------------------------------------------------
-    ("[p34]Paragraf vierunddreißig Satz eins: Wer in einer gegenwärtigen, nicht anders abwendbaren Gefahr für ein Rechtsgut "
-     "eine Tat begeht, um die Gefahr abzuwenden, handelt nicht rechtswidrig, [abw]wenn das geschützte Interesse das "
-     "beeinträchtigte wesentlich überwiegt. [s2]Satz zwei: Die Tat muss ein angemessenes Mittel sein.", PS),
+    ("[p34]Paragraf vierunddreißig Satz eins verlangt eine gegenwärtige, nicht anders abwendbare Gefahr für ein Rechtsgut "
+     "und eine Tat, um sie abzuwenden. Dann handelt der Täter nicht rechtswidrig, [abw]wenn das geschützte Interesse das "
+     "beeinträchtigte wesentlich überwiegt. [s2]Satz zwei verlangt zusätzlich ein angemessenes Mittel.", PS),
     # --- E 1. Notstandslage ----------------------------------------------------------------------------------------------------
     ("[lage]Erstens die Notstandslage: eine Gefahr für ein Rechtsgut. [leben]Korbinian droht zu erfrieren, also eine Gefahr "
      "für Leben und Leib. [gegenw]Gegenwärtig ist die Gefahr nach dem Bundesgerichtshof, wenn die Schutzmaßnahmen sofort "
@@ -60,23 +60,23 @@ SEGMENTE = [
      "Seite stehen Leben und Gesundheit in akuter Gefahr, [rechts]auf der anderen ein Schloss für dreihundertachtzig Euro und "
      "das Hausrecht für eine Nacht. [ueber]Das Leben wiegt wesentlich schwerer.", PS),
     # --- H 4. Angemessenheit ---------------------------------------------------------------------------------------------------
-    ("[angem]Viertens die Angemessenheit nach Satz zwei. [ausn]Sie spielt nur in Ausnahmefällen eine eigene Rolle, etwa "
+    ("[angem]Viertens die Angemessenheit nach Satz zwei. [ausn]Nach verbreiteter Ansicht spielt sie nur in Ausnahmefällen eine eigene Rolle, etwa "
      "wenn ein Mensch zum bloßen Mittel der Rettung gemacht wird. [angem_ok]Hier ist die Tat angemessen.", PS),
     # --- I 5. subjektives Rechtfertigungselement --------------------------------------------------------------------------------
     ("[subj]Fünftens das subjektive Rechtfertigungselement: [kennt]Korbinian muss die Notstandslage kennen [um]und handeln, "
-     "um die Gefahr abzuwenden; so steht es im Wortlaut. [subj_ok]Er will nur nicht erfrieren. [erg34]Die Voraussetzungen des "
+     "um die Gefahr abzuwenden; das verlangt schon der Wortlaut. [subj_ok]Er will nur nicht erfrieren. [erg34]Die Voraussetzungen des "
      "Paragrafen vierunddreißig liegen vor.", PS),
     # --- J § 904 BGB -----------------------------------------------------------------------------------------------------------
-    ("[bgb]Aber Achtung: Für Eingriffe in Sachen gibt es speziellere Notstandsregeln im BGB. [p904]Paragraf neunhundertvier "
-     "Satz eins: Der Eigentümer darf die Einwirkung auf seine Sache nicht verbieten, wenn sie zur Abwendung einer "
+    ("[bgb]Aber Achtung: Für Eingriffe in Sachen gibt es speziellere Notstandsregeln im BGB. [p904]Nach Paragraf "
+     "neunhundertvier Satz eins darf der Eigentümer die Einwirkung auf seine Sache nicht verbieten, wenn sie zur Abwendung einer "
      "gegenwärtigen Gefahr notwendig [p904b]und der drohende Schaden unverhältnismäßig groß ist.", P),
     ("[aggr]Das ist der Aggressivnotstand: Die Gefahr kommt von außen, hier vom Wetter, [unbet]und Korbinian greift in eine "
      "unbeteiligte fremde Sache ein, die Tür. [verbot]Das Schild hilft Frau Moser deshalb nicht. [p904s2]Satz zwei: Der "
      "Eigentümer kann Ersatz des ihm entstehenden Schadens verlangen.", P),
     ("[mo2]Dann zahlen Sie mir das Schloss also trotzdem.", PS, "Moser"),
     # --- K § 228 BGB -----------------------------------------------------------------------------------------------------------
-    ("[p228]Paragraf zweihundertachtundzwanzig regelt den Defensivnotstand: Wer eine fremde Sache beschädigt, um eine durch "
-     "sie drohende Gefahr abzuwenden, handelt nicht widerrechtlich, [p228b]wenn das erforderlich ist und der Schaden nicht "
+    ("[p228]Paragraf zweihundertachtundzwanzig regelt den Defensivnotstand: Nicht widerrechtlich handelt, wer eine fremde "
+     "Sache beschädigt, um eine durch sie drohende Gefahr abzuwenden, [p228b]wenn das erforderlich ist und der Schaden nicht "
      "außer Verhältnis zur Gefahr steht. [hund]Hier geht die Gefahr von der Sache selbst aus, etwa von einem angreifenden "
      "Hund. [tuer]Die Tür aber bedroht Korbinian nicht.", PS),
     # --- L Spezialität ---------------------------------------------------------------------------------------------------------
@@ -85,8 +85,8 @@ SEGMENTE = [
     # --- M Abgrenzung §§ 32, 35 ------------------------------------------------------------------------------------------------
     ("[p32]Zur Abgrenzung: Notwehr scheidet aus, denn es fehlt ein Angriff durch einen Menschen; das Wetter greift nicht an. "
      "[v033]Mehr dazu im Video zum Notwehrschema. [p35]Und scheitert die Abwägung, etwa bei Leben gegen Leben, bleibt nur der "
-     "entschuldigende Notstand, Paragraf fünfunddreißig: Die Tat bleibt rechtswidrig, der Täter handelt aber ohne "
-     "Schuld. [ht]So der Bundesgerichtshof im Haustyrannen-Fall.", PS),
+     "entschuldigende Notstand, Paragraf fünfunddreißig: Die Tat bleibt rechtswidrig, aber die Schuld kann "
+     "entfallen. [ht]So der Bundesgerichtshof im Haustyrannen-Fall.", PS),
     # --- N Lösung --------------------------------------------------------------------------------------------------------------
     ("[lsg]Zurück zu Korbinian. [l303]Die Sachbeschädigung an der Tür rechtfertigt "
      "Paragraf neunhundertvier, [l123]den Hausfriedensbruch jedenfalls Paragraf vierunddreißig. [straflos]Korbinian ist straflos. [ersatz]Frau Moser schuldet er aber "
@@ -102,8 +102,8 @@ SEGMENTE = [
      "überwiegt wesentlich. [s4]Vier, Angemessenheit nach Satz zwei. [s5]Fünf, das subjektive Rechtfertigungselement.", PS),
     # --- Q Merksatz (Lexi) -----------------------------------------------------------------------------------------------------
     ("[merke]Merke: Paragraf vierunddreißig rechtfertigt, wenn das geschützte Interesse wesentlich überwiegt. [m2]Bei Sachen "
-     "gehen die Paragrafen zweihundertachtundzwanzig und neunhundertvier BGB vor, [m3]und wer nach Paragraf neunhundertvier "
-     "eingreift, muss den Schaden ersetzen.", 1.2),
+     "gehen die Paragrafen zweihundertachtundzwanzig und neunhundertvier BGB vor, [m3]und bei Paragraf neunhundertvier kann der "
+     "Eigentümer Ersatz verlangen.", 1.2),
 ]
 
 if __name__ == "__main__":
