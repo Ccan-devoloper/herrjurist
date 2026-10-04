@@ -50,3 +50,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller Bildhalte aus dem finalen MP4, Fallszenen als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen, die Geräusche); Themenplan-Ergänzung durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 04.10.2026
+
+## Drive (Readback 04.10.2026, rclone)
+
+Ordner `LexVerse Produktion/170 Unmöglichkeit § 275 BGB/`, ID `1CpGpi4nG6aqNcCuZTGT-4eHkSrSpWvv9` (nur per rclone angelegt, kein Doppelordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `170-Unmoeglichkeit-275.mp4` | 28.110.739 |
+| `170-Unmoeglichkeit-275-Hauptfilm.mp4` | 20.734.133 |
+| `master.zip` | 53.956.252 |
+| `thumb_A.jpg` | 163.793 |
+| `thumb_B.jpg` | 161.953 |
+| `beschreibung.txt` | 3.136 |
+| `kapitel.txt` | 594 |
+| `untertitel.srt` | 8.782 |
+| `metadaten.json` | 4.570 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 311 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`8b4099ec5094…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
