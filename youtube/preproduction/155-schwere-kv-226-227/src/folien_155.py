@@ -391,7 +391,7 @@ sachverhalt_155("sv", [
 # ===========================================================================================================================
 folie([("grund", "Grunddelikt · § 223 StGB"), ("eq", "Erfolgsqualifizierte Delikte · §§ 226, 227 StGB")], rechts_frei([
     *tafel("grund", "Grunddelikt und schwere Folge"),
-    *okz("Faustschlag: vorsätzlich körperlich misshandelt", 190, beim("grund", "vorsätzlich"), "Bold", 34, x=160),
+    *okz("Faustschlag: vorsätzlich körperlich misshandelt", 190, beim("grund", "Faustschlag"), "Bold", 34, x=160),
     z("Grunddelikt: § 223 StGB", 160, 245, beim("grund", "Paragraf"), size=32),
     z("Einzelheiten: Video „Körperverletzung“", 160, 300, beim("grund", "mehr"), "Bold", 30, farbe=TEXT),
     linienzug([(130, 380), (1130, 380)], "eq", breite=3),
@@ -400,7 +400,7 @@ folie([("grund", "Grunddelikt · § 223 StGB"), ("eq", "Erfolgsqualifizierte Del
     blk(110, 560, 1040, 110, GELB, "formel", [("Grunddelikt  +  schwere Folge", "ExtraBold", 44, INK)]),
     *requisit([("grund", ("tabler", "alert-triangle", 100, GELB), "§ 223 StGB", WEISS),
                ("eq", ("tabler", "plus", 100, WEISS), "Erfolgsqualifikation", GELB)]),
-    *stehend("RO", FX, [("grund", "ruhig"), ("eq", "denkt")]),
+    *stehend("RO", FX, [("grund", "ernst"), ("eq", "denkt")]),
 ]))
 
 # ===========================================================================================================================
@@ -421,7 +421,7 @@ folie([("p18", "Erfolgsqualifikation › § 18 StGB: wenigstens Fahrlässigkeit"
         [("wenigstens Fahrlässigkeit: schwere Folge", "ExtraBold", 36, INK)]),
     *requisit([("p18", ("tabler", "book", 100, WEISS), "§ 18 StGB", GELB),
                ("vf", ("tabler", "scale", 100, GELB), "Vorsatz + Fahrlässigkeit", WEISS)]),
-    *stehend("RO", FX, [("p18", "ruhig"), ("vf", "denkt")]),
+    *stehend("RO", FX, [("p18", "ernst"), ("vf", "denkt")]),
 ]))
 
 # ===========================================================================================================================
@@ -452,7 +452,7 @@ folie([("p226", PA), ("nr1", f"{PA} › Nr. 1"), ("nr2", f"{PA} › Nr. 2"), ("n
                ("nr2", ("tabler", "hand-stop", 100, WEISS), "Nr. 2: wichtiges Glied", WEISS),
                ("nr3", ("tabler", "alert-triangle", 100, GELB), "Nr. 3: Entstellung u. a.", WEISS),
                ("rahmen1", ("tabler", "scale", 100, GELB), "1 bis 10 Jahre", HELLROT)]),
-    *stehend("RO", FX, [("p226", "ruhig"), ("nr3", "denkt"), ("rahmen1", "sorge")]),
+    *stehend("RO", FX, [("p226", "ernst"), ("nr3", "denkt"), ("rahmen1", "sorge")]),
 ]))
 
 # ===========================================================================================================================
@@ -475,7 +475,7 @@ folie([("sub_a", f"{PA1} › Nr. 1: Sehvermögen auf einem Auge"), ("nr23", f"{P
     z("Abs. 2: absichtlich oder wissentlich verursacht:", 110, 725, "abs2", "Bold", 32),
     z("Freiheitsstrafe nicht unter 3 Jahren", 110, 772, beim("abs2", "Freiheitsstrafe"), "Bold", 32),
     *requisit([("sub_a", ("tabler", "eye", 110, WEISS), "Sehvermögen verloren", GELB),
-               ("nr23", ("tabler", "x", 90, None), "Nr. 2 und 3 (−)", WEISS),
+               ("nr23", None, "Nr. 2 und 3 (−)", WEISS),
                ("fahrl_a", ("tabler", "bulb", 100, GELB), "vorhersehbar", WEISS),
                ("erg_a", ("tabler", "gavel", 100, HOLZ), "§ 226 Abs. 1 Nr. 1", GRUEN),
                ("abs2", None, "Abs. 2: mind. 3 Jahre", HELLROT)]),
@@ -534,7 +534,7 @@ folie([("spez", PG), ("woran", f"{PG} › Streit: Erfolg oder Handlung?"), ("let
                ("woran", ("tabler", "arrows-split", 100, WEISS), "Erfolg oder Handlung?", WEISS),
                ("leta", None, "Erfolg tödlich?", HELLROT),
                ("bgh", ("tabler", "scale", 100, GELB), "auch die Handlung", GRUEN)]),
-    *stehend("RO", FX, [("spez", "ruhig"), ("woran", "denkt"), ("bgh", "still")]),
+    *stehend("RO", FX, [("spez", "ernst"), ("woran", "denkt"), ("bgh", "still")]),
 ]))
 
 # ===========================================================================================================================
@@ -557,8 +557,8 @@ folie([("guben", f"{PG} › versuchte Körperverletzung mit Todesfolge"), ("typi
     zit("BGH, Urt. v. 10.1.2008 – 5 StR 435/07, Rn. 10", 110, 793, beim("aelter", "zweitausendacht")),
     *requisit([("guben", ("tabler", "book", 100, WEISS), "BGHSt 48, 34", GELB),
                ("typisch", ("tabler", "link", 100, WEISS), "Zusammenhang (+)", GRUEN),
-               ("aelter", ("tabler", "calendar-event", 100, WEISS), "1970 / 2008", WEISS)]),
-    *stehend("RO", FX, [("guben", "denkt"), ("aelter", "ruhig")]),
+               ("aelter", ("tabler", "calendar-event", 100, WEISS), "älteres Urteil", WEISS)]),
+    *stehend("RO", FX, [("guben", "denkt"), ("aelter", "ernst")]),
 ]))
 
 # ===========================================================================================================================
@@ -596,7 +596,7 @@ folie([("abgr", "Abgrenzung · § 212 StGB"), ("p222", "Abgrenzung · § 222 StG
     z("Überblick: Video „Tötungsdelikte“", 110, 520, "v035", "Bold", 30, farbe=TEXT),
     *requisit([("abgr", ("tabler", "arrows-split", 100, WEISS), "§ 212 StGB", HELLROT),
                ("p222", None, "§ 222 StGB", LILA)]),
-    *stehend("RO", FX, [("abgr", "ruhig")]),
+    *stehend("RO", FX, [("abgr", "ernst")]),
 ]))
 
 # ===========================================================================================================================
