@@ -79,7 +79,7 @@ SEGMENTE = [
      "Behandlungsabbruch prüfst du erst in der Rechtswidrigkeit, als Rechtfertigung durch Einwilligung nach dem "
      "Patientenwillen. [tipp3]Fehlt der Bezug zur Behandlung, scheidet die Rechtfertigung aus.", PS),
     # --- J Klausurschema ---------------------------------------------------------------------------------------------------
-    ("[sch]Dein Klausurschema. [s1]Eins, Tatbestand: Tötung eines anderen Menschen, durch Tun oder Unterlassen, und "
+    ("[sch]Dein Klausurschema. [s1]Eins, der Tatbestand: Tötung eines anderen Menschen, durch Tun oder Unterlassen, und "
      "Vorsatz. [s2]Zwei, Rechtswidrigkeit: Rechtfertigung durch Behandlungsabbruch. [s2a]Erstens, lebensbedrohliche "
      "Erkrankung und lebenserhaltende Behandlung. [s2b]Zweitens, Unterlassen, Begrenzen oder Beenden dieser Behandlung, mit "
      "unmittelbarem Behandlungsbezug. [s2c]Drittens, tatsächlicher oder mutmaßlicher Patientenwille, streng festgestellt. "
