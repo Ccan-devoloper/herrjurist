@@ -37,10 +37,10 @@ SEGMENTE = [
     # --- C Sachverhalt ----------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
     # --- D I. Beweiserhebungsverbot: Beschuldigtenstellung --------------------------------------------------------------
-    ("[besch]Erster Schritt: Belehren muss die Polizei bei der Vernehmung nur den Beschuldigten. [akt]Beschuldigter wird "
-     "man durch einen Willensakt der Strafverfolgung, den sogenannten Inkulpationsakt, [akt2]etwa ein förmliches "
-     "Ermittlungsverfahren oder eine Durchsuchung gegen den Verdächtigen. [staerke]Auch ohne einen solchen Akt kann man "
-     "Beschuldigter sein, wenn der Verdacht stark genug ist. [spiel]Ob jemand ernstlich als Täter in Betracht kommt, "
+    ("[besch]Erster Schritt: Über das Schweigerecht belehren muss die Polizei nur den Beschuldigten. [akt]Beschuldigter "
+     "wird man durch einen Willensakt der Strafverfolger, den sogenannten Inkulpationsakt, [akt2]etwa ein förmliches "
+     "Ermittlungsverfahren oder eine Durchsuchung gegen den Verdächtigen. [staerke]Auch ohne einen solchen Akt muss die "
+     "Polizei belehren, wenn der Verdacht stark genug ist. [spiel]Ob jemand ernstlich als Täter in Betracht kommt, "
      "beurteilt die Polizei pflichtgemäß, mit einem Spielraum. [grenze]Wäre alles andere aber willkürlich, muss sie ihn "
      "als Beschuldigten vernehmen.", P),
     ("[sub]Hier zeigt die Besitzerin auf ihr Rad, das Schloss liegt aufgebrochen im Korb, und einen Schlüssel hat Herr "
@@ -74,7 +74,7 @@ SEGMENTE = [
      "nahe, wenn er sie nur wiederholt.", P),
     ("[bgh]Im Fall des Bundesgerichtshofs war es anders: [bgh2]Der Angeklagte hatte nach der Belehrung erstmals neue, "
      "sich selbst schwer belastende Angaben gemacht. [bgh3]Die Abwägung sprach dort gegen ein Verwertungsverbot.", P),
-    ("[sub2]Herr Pieper dagegen wiederholt nur, was er schon gesagt hat. [sub3]Er glaubte, nicht mehr zurückzukönnen. "
+    ("[sub2]Herr Pieper dagegen wiederholt nur, was er schon gesagt hat. [sub3]Er ging offenbar davon aus, nicht mehr zurückzukönnen. "
      "[sub4]Und ein Fahrraddiebstahl ist kein schweres Delikt. [sub5]Hier spricht die Abwägung gegen die Verwertung: "
      "Auch das zweite Geständnis ist unverwertbar.", P),
     ("[fern]Davon zu trennen ist die Fernwirkung, also Beweise, die die Polizei erst durch ein unverwertbares Geständnis "
