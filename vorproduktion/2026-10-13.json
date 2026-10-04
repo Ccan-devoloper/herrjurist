@@ -1,21 +1,16 @@
 {
   "datum": "2026-10-13",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
+  "freigabeBetreiber": true,
   "liveVerknuepft": false,
-  "vorproduktionStatus": "review",
+  "vorproduktionStatus": "live-freigegeben",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungUsd": 0,
     "providerKostenUsd": 0,
-    "piperOffline": true,
     "coverbilder": false,
-    "autorUsd": 0,
-    "faktencheckUsd": 0,
-    "sonstigeTextKiUsd": 0,
     "bildgenerierungErlaubt": false,
-    "bildkostenUsd": 0,
-    "bilderStatus": "bewusst-ausgelassen"
+    "reelStimme": "elevenlabs-abo"
   },
   "plan": {
     "beitraege": [
@@ -44,8 +39,7 @@
         "themaId": "grundr-139",
         "themaTitel": "Wann ist die Meinungsfreiheit eingeschränkt?",
         "fach": "grundr",
-        "klausur": 3,
-        "lang": false
+        "klausur": 3
       }
     ],
     "stories": [
@@ -65,8 +59,7 @@
         "slot": "s1",
         "zeit": "08:00",
         "art": "teaser",
-        "beitragSlot": "b1",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b1"
       },
       {
         "slot": "s6",
@@ -78,8 +71,7 @@
         "slot": "s2",
         "zeit": "12:30",
         "art": "teaser",
-        "beitragSlot": "b2",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b2"
       },
       {
         "slot": "s7",
@@ -97,8 +89,7 @@
         "slot": "s3",
         "zeit": "17:30",
         "art": "teaser",
-        "beitragSlot": "b3",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b3"
       },
       {
         "slot": "s9",
@@ -247,95 +238,7 @@
       "klausur": 1,
       "fachLabel": "Arbeitsrecht",
       "themaId": "arbeit-254",
-      "slug": "2026-10-13-b1",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Kurz unachtsam, Firmenwagen kaputt – wer zahlt?",
-          "titelZeilen": [
-            "Kurz unachtsam,",
-            "Firmenwagen",
-            "kaputt – wer zahlt?"
-          ],
-          "coverBadge": "Streitstand",
-          "coverText": "Haftung nach Verschuldensgrad",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Das Problem",
-          "text": "Nach allgemeinem Schuldrecht haftet schon für leichte Fahrlässigkeit, wer eine Pflicht verletzt (§§ 280 Abs. 1, 276 BGB). Bei betrieblich veranlasster Tätigkeit wäre das unzumutbar: Kleine Unachtsamkeiten können große Schäden auslösen. Die Rechtsprechung begrenzt die Haftung deshalb."
-        },
-        {
-          "art": "schritte",
-          "titel": "Die Haftungsstufen",
-          "schritte": [
-            {
-              "titel": "Leichteste Fahrlässigkeit",
-              "text": "Keine Haftung des Arbeitnehmers."
-            },
-            {
-              "titel": "Mittlere Fahrlässigkeit",
-              "text": "Der Schaden wird nach den Umständen des Einzelfalls quotal verteilt."
-            },
-            {
-              "titel": "Grobe Fahrlässigkeit",
-              "text": "In der Regel volle Haftung – Erleichterungen sind möglich, wenn Verdienst und Schadensrisiko deutlich auseinanderfallen."
-            },
-            {
-              "titel": "Vorsatz",
-              "text": "Volle Haftung."
-            }
-          ]
-        },
-        {
-          "art": "vergleich",
-          "titel": "Woraus folgt die Privilegierung?",
-          "links": {
-            "titel": "Rechtsprechung (BAG)",
-            "punkte": [
-              "Entsprechende Anwendung von § 254 BGB.",
-              "Das Betriebsrisiko wird dem Arbeitgeber wie ein Mitverschulden zugerechnet."
-            ]
-          },
-          "rechts": {
-            "titel": "Teile der Literatur",
-            "punkte": [
-              "Andere Begründungen, etwa Fürsorgepflicht oder vertragliche Risikoverteilung.",
-              "Im Ergebnis weitgehend dieselben Haftungsstufen."
-            ]
-          }
-        },
-        {
-          "art": "text",
-          "titel": "Klausurhinweis",
-          "punkte": [
-            "Zuerst die betriebliche Veranlassung prüfen: Tätigkeit für den Betrieb, im Rahmen des Arbeitsverhältnisses.",
-            "§ 619a BGB: Der Arbeitgeber muss das Vertretenmüssen beweisen – § 280 Abs. 1 S. 2 BGB gilt insoweit nicht.",
-            "Den Begründungsstreit nur knapp darstellen; die Haftungsstufe entscheidet den Fall."
-          ]
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Betrieblich veranlasst? Dann haftet der Arbeitnehmer gestuft nach dem Grad seines Verschuldens – und der Arbeitgeber trägt die Beweislast (§ 619a BGB)."
-        },
-        {
-          "art": "cta",
-          "titel": "Arbeitnehmerhaftung in drei Zügen",
-          "punkte": [
-            "Betriebliche Veranlassung",
-            "Verschuldensgrad bestimmen",
-            "Beweislast nach § 619a BGB"
-          ],
-          "icons": [
-            "fabrik",
-            "waage",
-            "dokument"
-          ]
-        }
-      ],
-      "caption": "Kurz unachtsam, Firmenwagen kaputt – haftet der Arbeitnehmer nach §§ 280, 276 BGB voll? Nein. Bei betrieblich veranlasster Tätigkeit gilt der innerbetriebliche Schadensausgleich: keine Haftung bei leichtester, Quote bei mittlerer, in der Regel volle Haftung bei grober Fahrlässigkeit und Vorsatz. Das BAG stützt das auf § 254 BGB analog. Und § 619a BGB legt dem Arbeitgeber die Beweislast für das Vertretenmüssen auf. Speichern für die nächste Arbeitsrechtsklausur.",
+      "caption": "Kurz unachtsam, Firmenwagen kaputt – haftet der Arbeitnehmer nach §§ 280 Abs. 1, 276 BGB voll? Meist nicht.\n\n▸ Bei betrieblich veranlasster Tätigkeit gilt der innerbetriebliche Schadensausgleich (BAG, Großer Senat, Beschl. v. 27.9.1994 – GS 1/89 (A)).\n▸ Leichteste Fahrlässigkeit: keine Haftung. Mittlere Fahrlässigkeit: Quote nach den Umständen des Einzelfalls. Grobe Fahrlässigkeit: in der Regel volle Haftung, Erleichterungen sind möglich, wenn Verdienst und Schadensrisiko deutlich auseinanderfallen. Vorsatz: volle Haftung.\n▸ Die Rechtsprechung stützt das auf § 254 BGB analog: Das Betriebsrisiko wird dem Arbeitgeber wie ein Mitverschulden zugerechnet. Teile der Literatur begründen es anders (Fürsorgepflicht, vertragliche Risikoverteilung) – im Ergebnis ähnlich. Den Begründungsstreit nur knapp darstellen.\n▸ Abweichend von § 280 Abs. 1 BGB muss der Arbeitgeber das Vertretenmüssen beweisen (§ 619a BGB).\n\nZum Schluss: der Baustein für dein Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -347,40 +250,62 @@
         "#schuldrecht",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Arbeitnehmerhaftung: wer zahlt den Schaden?",
-      "coverText": "Haftung nach Verschuldensgrad",
-      "coverBadge": "Streitstand",
-      "coverRegie": {
-        "charaktere": [
-          "rex",
-          "mara"
-        ],
-        "kernidee": "Ein kleiner Fehler bei der Arbeit führt nicht automatisch zur vollen Haftung des Arbeitnehmers.",
-        "handlung": "{A} stares in shock at a small dent in a company van he just bumped, while {B} calmly places weights on a balance scale beside him, deciding how much of the damage he must carry.",
-        "hinweisRegie": "Place the note in the free space above the balance scale, slightly tilted toward the lighter pan, so it reads as the graded liability without covering the dent or faces.",
-        "alternative": "{B} hands {A} one small slice of a large repair bill while keeping the rest on the company desk."
-      },
-      "bildSzene": "mechanic shocked at dented company van",
-      "bildSzeneAlt": "repair bill split at company desk",
       "quellen": [
         "§ 619a BGB",
         "§ 254 BGB",
         "§§ 280 Abs. 1, 276 BGB",
-        "BAG, Großer Senat (innerbetrieblicher Schadensausgleich)",
-        "Themenpool: arbeit-254"
+        "BAG, Großer Senat, Beschl. v. 27.9.1994 – GS 1/89 (A)"
       ],
-      "hookTyp": "frage",
-      "hookMuster": "konkrete-fallfrage",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-13-b1",
+      "kurztitel": "Wie haftet der Arbeitnehmer bei betrieblich veranlasster Tätigkeit?",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:18:25.568Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Streitstand",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Streitstand",
+          "text": "Streitstand · Firmenwagen kaputt: · volle Haftung? · Meist nicht · § 254 BGB analog · Haftungsstufen · + Gutachten-Baustein",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Arbeitsrecht",
+          "text": "Der Fall · Lagerist L fährt mit dem Firmenwagen zu einem Kunden. · Er schaut kurz aufs Navi und rammt einen Poller. Arbeitgeberin G verlangt vollen Ersatz. · Jetzt du: Muss L alles zahlen? · Alles?"
+        },
+        {
+          "art": "text",
+          "titel": "Arbeitsrecht",
+          "text": "Die Haftungsstufen · Leichteste Fahrlässigkeit · keine Haftung · Mittlere Fahrlässigkeit · Quote nach den Umständen des Einzelfalls · Grobe Fahrlässigkeit · in der Regel voll, Erleichterungen möglich · Vorsatz · volle Haftung · Am Ende: Baustein für das Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Arbeitsrecht",
+          "text": "Woraus folgt das? · Rechtsprechung · Mitverschulden analog · § 254 BGB · Betriebsrisiko trägt der Arbeitgeber · Teile der Literatur · Fürsorgepflicht oder vertragliche Risikoverteilung · im Ergebnis ähnliche Stufen · Nur knapp darstellen!"
+        },
+        {
+          "art": "text",
+          "titel": "Arbeitsrecht",
+          "text": "Der typische Fehler · Sofort volle Haftung schon bei leichter Fahrlässigkeit. · §§ 280 Abs. 1, 276 BGB · Erst prüfen: Tätigkeit betrieblich veranlasst? · Das Vertretenmüssen muss der Arbeitgeber beweisen. · § 619a BGB · Betrieblich?"
+        },
+        {
+          "art": "text",
+          "titel": "Arbeitsrecht",
+          "text": "Lösung: bei mittlerer Fahrlässigkeit Quote · innerbetrieblicher Schadensausgleich, § 254 BGB analog · Betrieblich veranlasst? · Verschuldensgrad bestimmen, · Beweislast: Arbeitgeber. · Speichern fürs Examen · Welche Stufe ist ein Blick aufs Navi? · Weiterwischen: Gutachten-Baustein"
+        },
+        {
+          "art": "text",
+          "titel": "Arbeitsrecht",
+          "text": "So im Gutachten · Obersatz · § 280 Abs. 1 BGB · G könnte gegen L Schadensersatz verlangen. · Maßstab · § 619a BGB, § 254 BGB analog · betrieblich veranlasst: gestufte Haftung · Subsumtion · Die Kundenfahrt war betrieblich veranlasst. · Ergebnis · Bei mittlerer Fahrlässigkeit haftet L nur anteilig."
+        }
+      ]
     },
     "b2": {
       "format": "minifall",
@@ -388,74 +313,7 @@
       "klausur": 2,
       "fachLabel": "Strafrecht BT",
       "themaId": "strafbt-317",
-      "slug": "2026-10-13-b2",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Zeuge kennt den Täter – trotzdem Verdeckungsmord",
-          "titelZeilen": [
-            "Zeuge kennt den",
-            "Täter – trotzdem",
-            "Verdeckungsmord"
-          ],
-          "coverBadge": "Mini-Fall",
-          "coverText": "Verdecken = Täterschaft verbergen",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Der Fall",
-          "text": "A bricht nachts in den Kiosk des K ein und steckt die Tageseinnahmen ein. K kommt dazu und erkennt A. Damit K ihn nicht bei der Polizei anzeigen kann, erschlägt A ihn. Mord in Verdeckungsabsicht?"
-        },
-        {
-          "art": "text",
-          "titel": "Der typische Fehler",
-          "text": "„K hat die Tat schon entdeckt – also gibt es nichts mehr zu verdecken.“ Falsch: Verdecken will auch, wer verhindern will, dass seine Täterschaft den Strafverfolgungsbehörden bekannt wird."
-        },
-        {
-          "art": "schritte",
-          "titel": "So prüfst du die Verdeckungsabsicht",
-          "schritte": [
-            {
-              "titel": "Andere Straftat",
-              "text": "Die Vortat ist eine Straftat, auch eine eigene. Eine bloße Ordnungswidrigkeit genügt nicht."
-            },
-            {
-              "titel": "Ziel: verdecken",
-              "text": "Der Täter will die Aufdeckung der Vortat oder seiner Täterschaft verhindern – nicht, wenn er meint, die Behörden wüssten schon alles."
-            },
-            {
-              "titel": "Absicht",
-              "text": "Der Verdeckungserfolg muss sein Ziel sein. Zum Tod des Opfers kann nach der Rspr. auch bedingter Vorsatz genügen."
-            }
-          ]
-        },
-        {
-          "art": "text",
-          "titel": "Lösung des Mini-Falls",
-          "text": "A tötet K, damit der Einbruchsdiebstahl (§§ 242, 243 Abs. 1 S. 2 Nr. 1 StGB) und seine Täterschaft nicht bekannt werden. Dass K ihn schon erkannt hat, schadet nicht – gerade K soll ihn nicht anzeigen. A ist wegen Mordes in Verdeckungsabsicht strafbar (§ 211 Abs. 2 StGB, 3. Gruppe)."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Verdecken heißt: die Strafverfolgung der Vortat oder der eigenen Täterschaft vereiteln wollen – auch wenn ein Zeuge schon Bescheid weiß."
-        },
-        {
-          "art": "cta",
-          "titel": "Verdeckungsabsicht in drei Fragen",
-          "punkte": [
-            "Welche andere Straftat?",
-            "Was soll verborgen bleiben?",
-            "War genau das sein Ziel?"
-          ],
-          "icons": [
-            "paragraf",
-            "detektiv",
-            "zielscheibe"
-          ]
-        }
-      ],
-      "caption": "Der Zeuge hat den Täter schon erkannt – ist Verdeckungsmord damit ausgeschlossen? Nein. In Verdeckungsabsicht handelt auch, wer verhindern will, dass seine Täterschaft den Strafverfolgungsbehörden bekannt wird. Die Vortat muss eine Straftat sein, der Verdeckungserfolg das Ziel des Täters. Ausgeschlossen ist die Absicht erst, wenn er glaubt, die Behörden wüssten ohnehin schon alles. Speichern für die nächste Mordprüfung.",
+      "caption": "Der Zeuge hat den Täter schon erkannt – ist Verdeckungsmord damit ausgeschlossen? Nein.\n\n▸ Mordmerkmal der dritten Gruppe: töten, um eine andere Straftat zu verdecken (§ 211 Abs. 2 StGB).\n▸ Andere Straftat: auch eine eigene Vortat, hier der Einbruchsdiebstahl (§§ 242, 243 Abs. 1 S. 2 Nr. 1 StGB). Eine bloße Ordnungswidrigkeit genügt nicht.\n▸ Verdecken will auch, wer verhindern will, dass seine Täterschaft den Strafverfolgungsbehörden bekannt wird. Dass ein Zeuge schon Bescheid weiß, schadet nicht – gerade er soll nicht anzeigen.\n▸ Ausgeschlossen ist die Absicht erst, wenn der Täter glaubt, die Behörden wüssten ohnehin schon alles.\n▸ Absicht: Die Verdeckung muss sein Ziel sein.\n\nZum Schluss: der Baustein für dein Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -468,142 +326,69 @@
         "#jurastudent",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Verdeckungsabsicht trotz Zeugen",
-      "coverText": "Verdecken = Täterschaft verbergen",
-      "coverBadge": "Mini-Fall",
-      "coverRegie": {
-        "charaktere": [
-          "flux",
-          "zylla"
-        ],
-        "kernidee": "Auch wenn ein Zeuge schon alles gesehen hat, kann der Täter noch etwas verbergen wollen: seine Täterschaft vor den Behörden.",
-        "handlung": "{A} points with his pointer at a small figure trying to pull a curtain between a single eyewitness and a distant police lantern, while {B} curiously peeks around the curtain's edge.",
-        "hinweisRegie": "Place the note in the open space between the curtain and the distant police lantern, slightly tilted, so it links the concealment to the authorities without covering the eyewitness.",
-        "alternative": "{B} watches a figure hastily sweep footprints away from a kiosk door while {A} holds up a lamp toward a far-off police station."
-      },
-      "bildSzene": "curtain pulled between witness and police",
-      "bildSzeneAlt": "footprints swept away from kiosk",
       "quellen": [
         "§ 211 Abs. 2 StGB",
         "§ 242 StGB",
-        "§ 243 Abs. 1 S. 2 Nr. 1 StGB",
-        "Themenpool: strafbt-317"
+        "§ 243 Abs. 1 S. 2 Nr. 1 StGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "widerspruch",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-13-b2",
+      "kurztitel": "Wann liegt Verdeckungsabsicht vor?",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:18:25.569Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Mini-Fall",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Mini-Fall",
+          "text": "Mini-Fall · Zeuge kennt Täter – · trotzdem · Verdeckungsmord · § 211 Abs. 2 StGB · Der Kiosk · + Gutachten-Baustein",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht BT",
+          "text": "Der Fall · A bricht nachts in den Kiosk des K ein und nimmt die Tageseinnahmen. · K kommt dazu und erkennt A. Damit K ihn nicht anzeigt, erschlägt A ihn. · Jetzt du: Verdeckungsabsicht? · K kennt ihn doch!"
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht BT",
+          "text": "Der typische Fehler · „K weiß es schon, da gibt es nichts mehr zu verdecken.“ · Verdecken will auch, wer seine Täterschaft vor der Strafverfolgung verbergen will. · Ausgeschlossen erst, wenn er glaubt, die Behörden wüssten alles. · Die Polizei weiß nichts!"
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht BT",
+          "text": "Verdeckungsabsicht in 3 Schritten · Andere Straftat · auch eine eigene, keine bloße Ordnungswidrigkeit · Ziel: verdecken · Aufdeckung von Tat oder Täterschaft verhindern · Absicht · Die Verdeckung ist das Ziel des Täters. · Am Ende: Baustein für das Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht BT",
+          "text": "Lösung · A will den Einbruchsdiebstahl und seine Täterschaft verbergen. · §§ 242, 243 Abs. 1 S. 2 Nr. 1 StGB · Dass K ihn erkannt hat, schadet nicht: Gerade K soll ihn nicht anzeigen. · Mord in Verdeckungsabsicht · § 211 Abs. 2 StGB · Täterschaft verbergen!"
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht BT",
+          "text": "Lösung: Mord in Verdeckungsabsicht · § 211 Abs. 2 StGB, 3. Gruppe · Andere Straftat, · Täterschaft verbergen, · Ziel: die Verdeckung. · Speichern fürs Examen · Hättest du verneint? · Weiterwischen: Gutachten-Baustein"
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht BT",
+          "text": "So im Gutachten · Obersatz · A könnte Mord in Verdeckungsabsicht begangen haben. · Definition · § 211 Abs. 2 StGB · Verdecken: Aufdeckung von Tat oder Täterschaft verhindern. · Subsumtion · A tötet K, damit er ihn nicht anzeigt. · Ergebnis · Verdeckungsabsicht liegt vor."
+        }
+      ]
     },
     "b3": {
       "format": "reel",
-      "layout": "erklaer",
       "fach": "grundr",
       "klausur": 3,
       "fachLabel": "Grundrechte",
       "themaId": "grundr-139",
-      "slug": "2026-10-13-b3",
-      "szenen": [
-        {
-          "art": "hook",
-          "titel": "„Allgemein“ heißt: gegen keine bestimmte Meinung",
-          "unter": "Meinungsfreiheit · Art. 5 Abs. 2 GG",
-          "text": "Drei Schranken: allgemeine Gesetze, Jugendschutz, persönliche Ehre.",
-          "norm": "Art. 5 Abs. 2 GG",
-          "icon": "zeitung",
-          "sprecher": "Allgemein heißt: gegen keine bestimmte Meinung. Daran misst du die wichtigste Schranke der Meinungsfreiheit. Artikel 5 Absatz 2 nennt drei Schranken: allgemeine Gesetze, Jugendschutz und das Recht der persönlichen Ehre.",
-          "marken": [
-            "allgemein?",
-            "drei Schranken"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "schritt",
-          "nummer": 1,
-          "titel": "Schutzbereich: Meinung",
-          "text": "Werturteile; Tatsachen, soweit sie Voraussetzung der Meinungsbildung sind.",
-          "norm": "Art. 5 Abs. 1 S. 1 GG",
-          "sprecher": "Schritt eins: der Schutzbereich. Geschützt sind Werturteile, also Stellungnahme und Dafürhalten. Tatsachenbehauptungen nur, soweit sie Voraussetzung der Meinungsbildung sind. Bewusst unwahre Tatsachen fallen heraus.",
-          "marken": [
-            "Werturteil"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 2,
-          "titel": "Eingriff",
-          "text": "Verbot oder Sanktion wegen einer Äußerung.",
-          "norm": null,
-          "sprecher": "Schritt zwei: der Eingriff. Das ist jedes staatliche Verbot und jede Sanktion wegen einer Äußerung, etwa eine strafrechtliche Verurteilung.",
-          "marken": [
-            "Verbot, Sanktion"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 3,
-          "titel": "Schranke: allgemeines Gesetz",
-          "text": "Nicht gegen eine Meinung als solche – Schutz eines Rechtsguts schlechthin.",
-          "norm": "Art. 5 Abs. 2 GG",
-          "sprecher": "Schritt drei: die Schranke. Allgemein ist ein Gesetz, das sich nicht gegen eine bestimmte Meinung als solche richtet, sondern dem Schutz eines schlechthin zu schützenden Rechtsguts dient.",
-          "marken": [
-            "meinungsneutral"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 4,
-          "titel": "Wechselwirkung",
-          "text": "Das Gesetz wird im Licht der Meinungsfreiheit ausgelegt.",
-          "norm": null,
-          "sprecher": "Schritt vier: die Wechselwirkung. Das beschränkende Gesetz muss seinerseits im Licht der Meinungsfreiheit ausgelegt und angewendet werden. Am Ende steht eine Abwägung im Einzelfall.",
-          "marken": [
-            "Abwägung"
-          ]
-        },
-        {
-          "art": "punkt",
-          "titel": "Klassiker: § 130 Abs. 4 StGB",
-          "text": "Kein allgemeines Gesetz – nach dem BVerfG trotzdem ausnahmsweise zulässig.",
-          "norm": "§ 130 Abs. 4 StGB",
-          "sprecher": "Der Klassiker: Paragraf 130 Absatz 4 StGB, die Billigung der nationalsozialistischen Gewaltherrschaft, ist kein allgemeines Gesetz. Das Bundesverfassungsgericht hält ihn trotzdem für zulässig, als Ausnahme wegen der deutschen Geschichte.",
-          "marken": [
-            "Ausnahme"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "merke",
-          "titel": "Die Kurzform",
-          "text": "Allgemein heißt meinungsneutral – und auch dann wird abgewogen.",
-          "norm": "Art. 5 Abs. 2 GG",
-          "sprecher": "Merke: Allgemein heißt meinungsneutral. Und selbst das allgemeine Gesetz wird im Licht der Meinungsfreiheit gelesen.",
-          "marken": [
-            "meinungsneutral"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "cta",
-          "titel": "Schranke zuerst auf Neutralität prüfen",
-          "text": "Speichern für die nächste Grundrechtsklausur.",
-          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Und prüf bei jeder Schranke zuerst, ob sie meinungsneutral ist.",
-          "marken": [
-            "speichern"
-          ],
-          "nummer": null,
-          "norm": null
-        }
-      ],
-      "caption": "„Allgemein“ heißt: gegen keine bestimmte Meinung. Allgemein im Sinne von Art. 5 Abs. 2 GG ist ein Gesetz, das sich nicht gegen eine Meinung als solche richtet, sondern ein schlechthin schützenswertes Rechtsgut schützt. Und nach der Wechselwirkungslehre wird auch dieses Gesetz im Licht der Meinungsfreiheit ausgelegt. Klassiker: § 130 Abs. 4 StGB ist kein allgemeines Gesetz – das BVerfG hält ihn dennoch ausnahmsweise für zulässig.",
+      "caption": "Allgemeines Gesetz heißt nicht: gilt für alle. Sondern: richtet sich gegen keine bestimmte Meinung.\n\n▸ Schutzbereich (Art. 5 Abs. 1 S. 1 GG): Werturteile, also Stellungnahme und Dafürhalten. Tatsachenbehauptungen, soweit sie Voraussetzung der Meinungsbildung sind; bewusst unwahre Tatsachen fallen heraus (BVerfGE 90, 241).\n▸ Eingriff: jedes staatliche Verbot und jede Sanktion wegen einer Äußerung.\n▸ Schranken (Art. 5 Abs. 2 GG): allgemeine Gesetze, Jugendschutz, Recht der persönlichen Ehre. Allgemein ist ein Gesetz, das sich nicht gegen eine Meinung als solche richtet, sondern ein schlechthin zu schützendes Rechtsgut schützt.\n▸ Wechselwirkung: Das beschränkende Gesetz wird im Licht der Meinungsfreiheit ausgelegt (BVerfGE 7, 198 – Lüth). Am Ende steht die Abwägung im Einzelfall.\n▸ Klassiker: § 130 Abs. 4 StGB ist kein allgemeines Gesetz – das BVerfG hält ihn dennoch ausnahmsweise für zulässig (BVerfGE 124, 300 – Wunsiedel).\n\nSpeichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -615,230 +400,348 @@
         "#jurastudent",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Meinungsfreiheit: die Schranken",
-      "titelZeilen": [
-        "„Allgemein“ heißt:",
-        "gegen keine",
-        "bestimmte Meinung"
-      ],
-      "coverText": "Allgemein = meinungsneutral",
-      "coverBadge": "Reel",
-      "coverRegie": {
-        "charaktere": [
-          "brakk",
-          "form7"
-        ],
-        "kernidee": "Ein Gesetz darf die Meinungsfreiheit nur beschränken, wenn es nicht auf eine bestimmte Meinung zielt.",
-        "handlung": "{B} scans two barriers with a light beam: one blocks every speaker equally to protect a fragile crystal, the other only blocks speakers holding a particular coloured flag, while {A} lifts the unfair one away.",
-        "hinweisRegie": "Place the note in the free space above the fair barrier around the crystal, slightly tilted, so it contrasts with the removed one without covering the flags or {A}'s arms.",
-        "alternative": "{A} holds a microphone stand while {B} adjusts a volume dial that turns down every voice equally near a sleeping child."
-      },
-      "bildSzene": "scanning fair barrier versus flag barrier",
-      "bildSzeneAlt": "volume dial turned down equally",
       "quellen": [
         "Art. 5 Abs. 1, 2 GG",
         "§ 130 Abs. 4 StGB",
-        "BVerfGE 124, 300 (Wunsiedel)",
-        "Themenpool: grundr-139"
+        "BVerfGE 7, 198 – Lüth",
+        "BVerfGE 90, 241",
+        "BVerfGE 124, 300 – Wunsiedel"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "definition-als-hook",
-      "coverBildAuslassen": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-13-b3",
+      "kurztitel": "Wann ist die Meinungsfreiheit eingeschränkt?",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:18:25.574Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "bild": "op-cover",
+      "reelTyp": "klausurfalle",
+      "hookStil": "split",
+      "coverBadge": "Reel",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Allgemeines Gesetz?"
+        },
+        {
+          "art": "schritt",
+          "titel": "Schutzbereich: Meinung"
+        },
+        {
+          "art": "schritt",
+          "titel": "Schranke: allgemeines Gesetz"
+        },
+        {
+          "art": "schritt",
+          "titel": "Wechselwirkung"
+        }
+      ],
+      "sprecher": [
+        "Allgemeines Gesetz heißt nicht: gilt für alle. Sondern: gegen keine bestimmte Meinung.",
+        "Erst der Schutzbereich: Werturteile, Tatsachen nur als Grundlage einer Meinung.",
+        "Dann die Schranke: Das Gesetz schützt ein Rechtsgut schlechthin, meinungsneutral.",
+        "Zuletzt die Wechselwirkung: Das Gesetz wird im Licht der Meinungsfreiheit ausgelegt.",
+        "Merke: Allgemein heißt meinungsneutral."
+      ],
+      "dauerS": 28.929,
+      "tempo": 1.02
     },
     "s4": {
       "slot": "s4",
       "art": "frage",
-      "fach": "verwalt",
+      "fach": null,
       "klausur": 3,
-      "pairId": "verwalt-642",
-      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
-      "titel": "Anhörung vergessen, die Entscheidung war aber gebunden: Kann der Bürger die Aufhebung verlangen?",
-      "optionen": [
-        "Ja – jeder Verfahrensfehler führt zur Aufhebung",
-        "Nein, wenn der Fehler die Entscheidung offensichtlich nicht beeinflusst hat",
-        "Ja – eine unterbliebene Anhörung macht den Bescheid nichtig"
-      ],
-      "richtig": 1,
-      "quellen": [
-        "§ 46 VwVfG",
-        "§ 45 VwVfG",
-        "§ 28 VwVfG",
-        "Themenpool: verwalt-642"
-      ],
       "fachLabel": "Verwaltungsrecht AT",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:18:25.574Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "verwalt-642",
+      "beitragSlot": null,
+      "quellen": null,
+      "frage": [
+        "Anhörung vergessen,",
+        "Entscheidung gebunden:",
+        "Aufhebung?"
+      ],
+      "optionen": [
+        "Ja, jeder Verfahrensfehler",
+        "Nein, Fehler offensichtlich folgenlos",
+        "Ja, der Bescheid ist nichtig"
+      ],
+      "pairId": "verwalt-642",
+      "sichtbareTexte": [
+        "Verwaltungsrecht AT",
+        "Prüfungsfrage",
+        "Anhörung vergessen,",
+        "Entscheidung gebunden:",
+        "Aufhebung?",
+        "Ja, jeder Verfahrensfehler",
+        "Nein, Fehler offensichtlich folgenlos",
+        "Ja, der Bescheid ist nichtig",
+        "Auflösung in der nächsten Story"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s5": {
       "slot": "s5",
       "art": "antwort",
-      "fach": "verwalt",
+      "fach": null,
       "klausur": 3,
-      "pairId": "verwalt-642",
-      "ueberzeile": "Auflösung",
-      "titel": "Nein – § 46 VwVfG sperrt den Aufhebungsanspruch",
-      "text": "Die Aufhebung eines nicht nichtigen Verwaltungsakts kann nicht allein wegen eines Verfahrens- oder Formfehlers verlangt werden, wenn offensichtlich ist, dass er die Entscheidung in der Sache nicht beeinflusst hat. Bei gebundenen Entscheidungen ist das regelmäßig so. Vorher § 45 prüfen: Die Anhörung kann bis zum Abschluss der letzten Tatsacheninstanz nachgeholt werden.",
-      "norm": "§ 46 VwVfG · § 45 Abs. 1 Nr. 3, Abs. 2 VwVfG",
-      "quellen": [
-        "§ 46 VwVfG",
-        "§ 45 VwVfG",
-        "§ 28 VwVfG",
-        "Themenpool: verwalt-642"
-      ],
       "fachLabel": "Verwaltungsrecht AT",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:18:25.574Z",
-      "fachStand": "redaktionell-2026-09-25",
-      "optionen": [
-        "Ja – jeder Verfahrensfehler führt zur Aufhebung",
-        "Nein, wenn der Fehler die Entscheidung offensichtlich nicht beeinflusst hat",
-        "Ja – eine unterbliebene Anhörung macht den Bescheid nichtig"
+      "themaId": "verwalt-642",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Nein: § 46 VwVfG",
+        "sperrt die Aufhebung"
       ],
-      "richtig": 1
+      "optionen": [
+        "Ja, jeder Verfahrensfehler",
+        "Nein, Fehler offensichtlich folgenlos",
+        "Ja, der Bescheid ist nichtig"
+      ],
+      "richtig": 1,
+      "text": "Gebunden: Der Fehler war offensichtlich ohne Einfluss. Vorher prüfen: Anhörung nachgeholt?",
+      "norm": "§§ 45 Abs. 1 Nr. 3, Abs. 2, 46 VwVfG",
+      "pairId": "verwalt-642",
+      "sichtbareTexte": [
+        "Verwaltungsrecht AT",
+        "Auflösung",
+        "Nein: § 46 VwVfG",
+        "sperrt die Aufhebung",
+        "Ja, jeder Verfahrensfehler",
+        "Nein, Fehler offensichtlich folgenlos",
+        "Ja, der Bescheid ist nichtig",
+        "Gebunden: Der Fehler war offensichtlich ohne Einfluss. Vorher prüfen: Anhörung nachgeholt?",
+        "§§ 45 Abs. 1 Nr. 3, Abs. 2, 46 VwVfG"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s6": {
       "slot": "s6",
       "art": "norm",
-      "fach": "strafbt",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafbt-337",
-      "ueberzeile": "Norm des Tages",
-      "titel": "§ 259 StGB: Die Vortat muss ein anderer begangen haben",
-      "text": "Hehlerei setzt voraus, dass ein anderer die Sache gestohlen oder sonst durch eine gegen fremdes Vermögen gerichtete rechtswidrige Tat erlangt hat. Tathandlungen: ankaufen oder sonst sich oder einem Dritten verschaffen, absetzen, absetzen helfen – in Bereicherungsabsicht. Der Erlös aus der Beute ist kein taugliches Objekt: Ersatzhehlerei ist straflos.",
-      "norm": "§ 259 Abs. 1 StGB",
-      "quellen": [
-        "§ 259 StGB",
-        "Themenpool: strafbt-337"
-      ],
       "fachLabel": "Strafrecht BT",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:18:25.574Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "strafbt-337",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Hehlerei: Vortat",
+        "eines anderen"
+      ],
+      "norm": "§ 259 Abs. 1 StGB",
+      "punkte": [
+        [
+          "Sache durch fremde Vermögenstat erlangt",
+          "ok",
+          null
+        ],
+        [
+          "Erlös aus der Beute: Ersatzhehlerei ist straflos",
+          "warn",
+          null
+        ]
+      ],
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Norm des Tages",
+        "Hehlerei: Vortat",
+        "eines anderen",
+        "§ 259 Abs. 1 StGB",
+        "Sache durch fremde Vermögenstat erlangt",
+        "Erlös aus der Beute: Ersatzhehlerei ist straflos"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s7": {
       "slot": "s7",
       "art": "zahl",
-      "fach": "assessorz",
+      "fach": null,
       "klausur": 1,
-      "pairId": "assessorz-815",
-      "ueberzeile": "4 Punkte 2. Examen",
-      "titel": "Einspruch gegen das Versäumnisurteil zulässig: Wie lautet der Tenor?",
-      "text": "Der zulässige Einspruch versetzt den Prozess in die Lage vor der Säumnis zurück (§ 342 ZPO). Im Tenor musst du das Versäumnisurteil ausdrücklich behandeln.",
-      "punkte": [
-        "Ergebnis wie im VU: „Das Versäumnisurteil vom … wird aufrechterhalten.“ (§ 343 S. 1 ZPO)",
-        "Ergebnis anders: VU aufheben und neu entscheiden (§ 343 S. 2 ZPO)",
-        "Kosten der Säumnis trägt der Säumige, wenn das VU in gesetzlicher Weise erging (§ 344 ZPO)",
-        "Hält das Urteil das VU aufrecht, § 709 S. 3 ZPO im Blick behalten"
-      ],
-      "quellen": [
-        "§ 342 ZPO",
-        "§ 343 ZPO",
-        "§ 344 ZPO",
-        "§ 709 ZPO",
-        "Themenpool: assessorz-815"
-      ],
-      "fachLabel": "2. Examen Zivilrecht",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-815",
+      "beitragSlot": null,
+      "quellen": null,
       "zahl": "4",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:18:25.574Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "einheit": "Tenor-Punkte",
+      "titel": [
+        "Einspruch zulässig:",
+        "Wie tenorieren?"
+      ],
+      "punkte": [
+        [
+          "Gleiches Ergebnis: VU aufrechterhalten",
+          "ok",
+          "§ 343 S. 1 ZPO"
+        ],
+        [
+          "Anderes Ergebnis: VU aufheben",
+          "ok",
+          "§ 343 S. 2 ZPO"
+        ],
+        [
+          "Säumniskosten trägt der Säumige",
+          "ok",
+          "§ 344 ZPO"
+        ],
+        [
+          "Bei Aufrechterhaltung: Sicherheit",
+          "warn",
+          "§ 709 S. 3 ZPO"
+        ]
+      ],
+      "sichtbareTexte": [
+        "Zivilrechtliche Assessorklausur",
+        "Zahl des Tages",
+        "4",
+        "Einspruch zulässig:",
+        "Wie tenorieren?",
+        "Gleiches Ergebnis: VU aufrechterhalten",
+        "§ 343 S. 1 ZPO",
+        "Anderes Ergebnis: VU aufheben",
+        "§ 343 S. 2 ZPO",
+        "Säumniskosten trägt der Säumige",
+        "§ 344 ZPO",
+        "Bei Aufrechterhaltung: Sicherheit",
+        "§ 709 S. 3 ZPO"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s8": {
       "slot": "s8",
       "art": "streitstand",
-      "fach": "revision",
+      "fach": null,
       "klausur": 2,
-      "pairId": "revision-878",
-      "ueberzeile": "Streitstand Revision",
-      "titel": "Protokoll nach der Rüge berichtigt: Fällt die Verfahrensrüge weg?",
-      "norm": "§ 274 StPO",
-      "optionen": [
-        "BGH (Großer Senat): Eine ordnungsgemäße Berichtigung ist beachtlich, auch wenn sie der Rüge den Boden entzieht.",
-        "Kritische Literatur: Nach Erhebung der Rüge darf das Protokoll ihr nicht mehr die Grundlage nehmen."
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-878",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Protokoll berichtigt:",
+        "Rüge verloren?"
       ],
-      "text": "Klausur: Ausgangspunkt ist § 274 StPO – wesentliche Förmlichkeiten beweist nur das Protokoll. Schweigt es, gilt die Förmlichkeit als nicht beachtet.",
-      "quellen": [
-        "§ 274 StPO",
-        "§ 273 StPO",
-        "BGH, Großer Senat für Strafsachen (Rügeverkümmerung)",
-        "Themenpool: revision-878"
+      "ansichten": [
+        [
+          "BGH, Großer Senat",
+          "Ordnungsgemäße Berichtigung zählt."
+        ],
+        [
+          "Teile der Literatur",
+          "Nach Rügeerhebung unbeachtlich."
+        ]
       ],
-      "fachLabel": "Revision (StPO)",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:18:25.574Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "klausur_tipp": "Klausur: Rechtsprechung folgen.",
+      "norm": "BGHSt 51, 298; § 274 StPO",
+      "sichtbareTexte": [
+        "Revision im Strafverfahren",
+        "Streitstand",
+        "Protokoll berichtigt:",
+        "Rüge verloren?",
+        "BGH, Großer Senat",
+        "Ordnungsgemäße Berichtigung zählt.",
+        "Teile der Literatur",
+        "Nach Rügeerhebung unbeachtlich.",
+        "Klausur: Rechtsprechung folgen.",
+        "BGHSt 51, 298; § 274 StPO"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s9": {
       "slot": "s9",
       "art": "merksatz",
-      "fach": "bereich",
+      "fach": null,
       "klausur": 1,
-      "pairId": "bereich-213",
-      "ueberzeile": "Merksatz Bereicherungsrecht",
-      "titel": "Anweisungsfälle: Kondiktion im jeweiligen Leistungsverhältnis",
-      "text": "Ein Mangel wird in dem Verhältnis rückabgewickelt, in dem er liegt – Deckungs- oder Valutaverhältnis, kein Durchgriff auf den Empfänger. Ausnahme: Es fehlt schon eine zurechenbare Anweisung.",
-      "norm": "§ 812 Abs. 1 S. 1 BGB",
-      "quellen": [
-        "§ 812 Abs. 1 S. 1 BGB",
-        "Themenpool: bereich-213"
-      ],
       "fachLabel": "Bereicherungsrecht",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:18:25.574Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "bereich-213",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Anweisungsfall:",
+        "kein Durchgriff"
+      ],
+      "zeilen": [
+        [
+          [
+            "Kondiktion",
+            "a"
+          ],
+          [
+            " im jeweiligen",
+            null
+          ]
+        ],
+        [
+          [
+            "Leistungsverhältnis",
+            "b"
+          ],
+          [
+            ".",
+            null
+          ]
+        ],
+        [
+          [
+            "Ausnahme: Anweisung",
+            null
+          ]
+        ],
+        [
+          [
+            "nicht zurechenbar",
+            "c"
+          ],
+          [
+            ".",
+            null
+          ]
+        ]
+      ],
+      "norm": "§ 812 Abs. 1 S. 1 Alt. 1 BGB",
+      "sichtbareTexte": [
+        "Bereicherungsrecht",
+        "Merksatz",
+        "Anweisungsfall:",
+        "kein Durchgriff",
+        "Kondiktion im jeweiligen",
+        "Leistungsverhältnis.",
+        "Ausnahme: Anweisung",
+        "nicht zurechenbar.",
+        "§ 812 Abs. 1 S. 1 Alt. 1 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s1": {
       "slot": "s1",
@@ -846,16 +749,25 @@
       "fach": "arbeit",
       "klausur": 1,
       "fachLabel": "Arbeitsrecht",
-      "titel": "Arbeitnehmerhaftung: wer zahlt den Schaden?",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b1",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Firmenwagen kaputt: volle Haftung?"
+      ],
+      "unter": "Streitstand + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Arbeitsrecht",
+        "Neu im Feed",
+        "Firmenwagen kaputt: volle Haftung?",
+        "Streitstand + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s2": {
       "slot": "s2",
@@ -863,16 +775,25 @@
       "fach": "strafbt",
       "klausur": 2,
       "fachLabel": "Strafrecht BT",
-      "titel": "Verdeckungsabsicht trotz Zeugen",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b2",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Zeuge kennt Täter – trotzdem Mord?"
+      ],
+      "unter": "Mini-Fall + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Neu im Feed",
+        "Zeuge kennt Täter – trotzdem Mord?",
+        "Mini-Fall + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s3": {
       "slot": "s3",
@@ -880,16 +801,25 @@
       "fach": "grundr",
       "klausur": 3,
       "fachLabel": "Grundrechte",
-      "titel": "Meinungsfreiheit: die Schranken",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b3",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Allgemeines Gesetz?"
+      ],
+      "unter": "Neues Reel · im Profil",
+      "sichtbareTexte": [
+        "Grundrechte",
+        "Neu im Feed",
+        "Allgemeines Gesetz?",
+        "Neues Reel · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     }
   },
   "hookOptimierung": {
@@ -899,15 +829,19 @@
   },
   "renderVorschau": {
     "status": "fertig",
-    "erzeugtAm": "2026-09-29T07:01:36.450Z",
+    "erzeugtAm": "2026-10-04T23:39:43Z",
     "pfad": "vorproduktion/2026-10-13/fertig",
     "providerKostenUsd": 0,
-    "textProviderKostenUsd": 0,
-    "faktencheckProviderKostenUsd": 0,
-    "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "reelStimme": "piper-offline",
-    "freigabeBetreiber": false
+    "coverIcons": false,
+    "renderer": "open-peeps-v4",
+    "layoutQuelle": "open-peeps-variante-c",
+    "reelStimme": "elevenlabs-laura",
+    "sfx": "freesound-cc0",
+    "freigabeBetreiber": true,
+    "liveVorrangAktiv": true,
+    "normalbetriebGesperrt": true,
+    "wartetLive": []
   },
   "liveRegel": {
     "veroeffentlichen": false,
@@ -917,5 +851,10 @@
     "pfad": "vorproduktion/2026-10-13.json",
     "sha256": "ae71fa6eb6ea2873940c35d6af959282888444b214ddc8f6870264c1d8fb636a",
     "uebernommenAm": "2026-09-29T06:58:39.906Z"
-  }
+  },
+  "layoutQuelle": "open-peeps-variante-c",
+  "semantikQuelle": "herrjurist",
+  "liveVorrangAktiv": true,
+  "normalbetriebGesperrt": true,
+  "bildStatus": "open-peeps-render"
 }
