@@ -20,7 +20,7 @@ MODEL = "eleven_v4"
 SETTINGS = {"stability": 0.42, "similarity_boost": 0.82, "style": 0.38, "use_speaker_boost": True, "speed": 1.08}
 ROLLE_SETTINGS = {"stability": 0.35, "similarity_boost": 0.8, "style": 0.55, "use_speaker_boost": True, "speed": 1.05}
 SR = 48000
-ABK = ["VwVfG", "VwGO", "StGB", "StPO", "EStG", "BGB", "HGB", "ZPO", "AO", "GG", "UStG", "GmbHG", "AktG", "BVerfG", "BGH", "BFH", "BMF"]
+ABK = ["VwVfG", "VwGO", "StGB", "StPO", "EStG", "BGB", "HGB", "ZPO", "AO", "GG", "UStG", "GmbHG", "AktG", "BVerfG", "BGH", "BFH", "BMF", "GbR", "eGbR"]
 MARKE = re.compile(r"\[(\w+)\]")
 
 
