@@ -55,6 +55,9 @@ Figuren: Open Peeps (Pablo Stanley, CC0). Icons: Tabler Icons, Fluent Emoji (MIT
 open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 
 srt = open(f"{U}/untertitel.srt").read()
+for alt, neu in (("fünfzig Milligramm", "50 Milligramm"), ("am elften September", "am 11. September"),
+                 ("Am einundzwanzigsten\nJuni", "Am 21.\nJuni"), ("Am einundzwanzigsten Juni", "Am 21. Juni")):
+    srt = srt.replace(alt, neu)
 for w in ("zweihundert", "hunderteins", "dreihundert"):
     assert w not in srt, w
 open(f"{U}/untertitel.srt", "w").write(srt)
