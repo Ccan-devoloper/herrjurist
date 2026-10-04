@@ -309,7 +309,7 @@ folie([(NULL, "Fall · Das Auto des Nachbarn"), ("aber", "Fall · noch eine Woch
     *fig("KA", KX, BODEN, FH, [("wo2", "froh"), ("frage2", "denkt")], erst="cut"),
     *fig("WO", WX, BODEN, FH, [("frage", "froh_r")], erst="cut"),
     ficon("tabler", "key", WX + 130, HAND, 60, "frage", fuell=GELB),
-    pl("Herr Wöhler fährt weiter", 70, 110, "frage", fill=WEISS, size=34),
+    pl("Also fährt Herr Wöhler weiter.", 70, 110, "frage", fill=WEISS, size=34),
     pl("Ist Käthe schon heute Eigentümerin?", 70, 190, "frage2", fill=PINK, size=38),
 ])
 

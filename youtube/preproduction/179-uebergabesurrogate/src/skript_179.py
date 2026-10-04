@@ -30,7 +30,7 @@ SEGMENTE = [
     ("[wo1]Ich ziehe nächste Woche um. Darf ich den Wagen bis Samstag noch fahren?", P, "Wöhler"),
     ("[ka1]Gut, ich leihe ihn Ihnen bis Samstag. Aber ab heute gehört er mir.", P, "Käthe"),
     ("[wo2]Einverstanden.", P, "Wöhler"),
-    ("[frage]Herr Wöhler fährt also weiter. [frage2]Ist Käthe trotzdem schon heute Eigentümerin?", PS),
+    ("[frage]Also fährt Herr Wöhler weiter. [frage2]Ist Käthe trotzdem schon heute Eigentümerin?", PS),
     # --- B Sachverhalt -------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Fall zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
     # --- C Einordnung --------------------------------------------------------------------------------------------------
