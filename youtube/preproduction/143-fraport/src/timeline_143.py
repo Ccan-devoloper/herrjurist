@@ -12,7 +12,7 @@ def mmss(t):
     return f"{int(t // 60)}:{t % 60:05.2f}"
 
 
-zeilen = ["# Folge 143 · Cue-Timeline (Ton-Bild-Gate)", "",
+zeilen = ["# Folge 143 · Fraport-Urteil · Cue-Timeline (Ton-Bild-Gate)", "",
           f"Quelle: `bildhalt_manifest.json` ({man['bildhalte']} Bildhalte, davon {man['eigenstaendig']} eigenständig), "
           "`cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). "
           "Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind "
