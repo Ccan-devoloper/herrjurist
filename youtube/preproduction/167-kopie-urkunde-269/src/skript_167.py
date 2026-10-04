@@ -1,5 +1,5 @@
 """Folge 167 · Kopie als Urkunde? Scan, PDF & § 269 StGB (Mi · Examenswissen · StGB BT, Format Streitstand).
-Fall nach dem Plan-Hook: Janosch (19) bewirbt sich um einen Ausbildungsplatz, scannt sein Abiturzeugnis (Note 2,8), ändert
+Fall nach dem Plan-Hook: Janosch (20) bewirbt sich um eine Stelle als Sachbearbeiter, scannt sein Abiturzeugnis (Note 2,8), ändert
 am Rechner die Note in 1,8, speichert als PDF und schickt es per E-Mail an Frau Hagemann (Personalabteilung). Variante:
 Ausdruck der bearbeiteten Datei, per Post „als Kopie“.
 Prüfung: Urkundenbegriff (nur Verweis auf Folge 137) → einfache Fotokopie keine Urkunde (BGHSt 24, 140, 141 f., wiedergegeben
@@ -15,13 +15,13 @@ Segmente: (text, pause) = Erzählerin Carla (auch Lexi), (text, pause, rolle) = 
 
 P, PS = 0.4, 0.6
 
-# Janosch (19) spricht mit marc (Mann, mittel), Frau Hagemann (um 45) mit sabrina (Frau, mittel).
+# Janosch (20) spricht mit marc (Mann, mittel), Frau Hagemann (um 45) mit sabrina (Frau, mittel).
 # william und laura_ruhig werden nicht eingesetzt.
 STIMMEN = {"Janosch": "marc", "Hagemann": "sabrina"}  # Lexi = Erzählerstimme (Carla)
 
 SEGMENTE = [
     # --- A Fall ------------------------------------------------------------------------------------------------------------
-    ("[fall]Janosch ist neunzehn und bewirbt sich um einen Ausbildungsplatz. [note]In seinem Abiturzeugnis steht die "
+    ("[fall]Janosch ist zwanzig und bewirbt sich um eine Stelle als Sachbearbeiter. [note]In seinem Abiturzeugnis steht die "
      "Note zwei Komma acht. [scan]Er scannt das Zeugnis ein [aendern]und ändert am Rechner die Note in eins Komma acht.", 0.3),
     ("[j1]Eine Eins vorne sieht einfach besser aus.", 0.3, "Janosch"),
     ("[pdf]Er speichert die Datei als PDF [mail]und schickt sie per E-Mail an Frau Hagemann aus der Personalabteilung.", 0.3),
@@ -33,26 +33,26 @@ SEGMENTE = [
     # --- C Fotokopie: Grundsatz --------------------------------------------------------------------------------------------
     ("[begriff]Was eine Urkunde ist, kennst du aus der Folge zur gefälschten Entschuldigung: eine verkörperte "
      "Gedankenerklärung, die zum Beweis geeignet und bestimmt ist und ihren Aussteller erkennen lässt. [kopie]Und die "
-     "einfache Fotokopie? Seit einem Urteil des Bundesgerichtshofs von neunzehnhunderteinundsiebzig gilt: Sie ist keine "
-     "Urkunde, sofern sie nach außen als Reproduktion erscheint. [grund]Ihr fehlen die Beweiseignung und ein erkennbarer "
+     "einfache Fotokopie? Nach ständiger Rechtsprechung, etwa schon in einem Urteil des Bundesgerichtshofs von "
+     "neunzehnhunderteinundsiebzig, ist sie keine Urkunde, sofern sie nach außen als Reproduktion erscheint. [grund]Ihr fehlen die Beweiseignung und ein erkennbarer "
      "Aussteller. [grund2]Sie gibt die Erklärung des Originals nur bildlich wieder und verkörpert keine eigene.", PS),
     # --- D Streitstand Fotokopie -------------------------------------------------------------------------------------------
     ("[streit]Ganz unbestritten ist das nicht. [mm]Eine Gegenansicht in der Literatur hält Kopien für beweisgeeignet und "
-     "damit grundsätzlich für Urkunden. [hm]Die herrschende Meinung folgt der Rechtsprechung: Für eine bloße Kopie steht "
-     "kein erkennbarer Aussteller mit seiner Garantie ein.", PS),
+     "damit grundsätzlich für Urkunden. [hm]Die Rechtsprechung und große Teile der Lehre halten dagegen: Für eine bloße "
+     "Kopie steht kein erkennbarer Aussteller mit seiner Garantie ein.", PS),
     # --- E Ausnahmen und Grenze --------------------------------------------------------------------------------------------
     ("[aus]Zwei Ausnahmen und eine Grenze musst du kennen. [aus1]Erstens: Die Kopie erscheint selbst als Original. Ist "
      "sie einer Originalurkunde so ähnlich, dass eine Verwechslung möglich ist, ist sie eine Urkunde, nach einer "
      "Manipulation eine unechte. [aus2]Zweitens: Es gibt ein gefälschtes Original. Wer davon eine Kopie vorlegt, auch "
      "eine beglaubigte, gebraucht nach der Rechtsprechung das gefälschte Original. [examen]So entschied der "
-     "Bundesgerichtshof bei einem gefälschten Examenszeugnis. [beglaub]Denn der Beglaubigungsvermerk bestätigt nur, dass "
-     "die Kopie mit der Vorlage übereinstimmt. [collage]Die Grenze ist die Collage: Legt jemand Teile echter Urkunden nur "
+     "Bundesgerichtshof bei einem gefälschten Examenszeugnis. [beglaub]Der Beglaubigungsvermerk bestätigt dabei nur, "
+     "dass die Kopie mit der Vorlage übereinstimmt, nicht, dass ihr Inhalt stimmt. [collage]Die Grenze ist die Collage: Legt jemand Teile echter Urkunden nur "
      "lose zusammen und kopiert sie, entsteht kein gefälschtes Original, von dem die Kopie Gebrauch machen könnte.", PS),
     # --- F Datei: § 269 ----------------------------------------------------------------------------------------------------
     ("[datei]Jetzt zum Scan. Eine PDF-Datei ist nicht auf einer Sache verkörpert. Für Dateien und E-Mails gilt deshalb "
      "nicht Paragraf zweihundertsiebenundsechzig, [p269]sondern Paragraf zweihundertneunundsechzig: [w269]Strafbar ist, "
      "wer zur Täuschung im Rechtsverkehr beweiserhebliche Daten so speichert oder verändert, dass bei ihrer Wahrnehmung "
-     "eine unechte oder verfälschte Urkunde vorliegen würde, oder solche Daten gebraucht. [hyp]Du prüfst also "
+     "eine unechte oder verfälschte Urkunde vorliegen würde, oder derart gespeicherte oder veränderte Daten gebraucht. [hyp]Du prüfst also "
      "hypothetisch: Stell dir die Daten als verkörperte Erklärung vor. Läge dann eine unechte oder verfälschte Urkunde "
      "vor?", PS),
     # --- G Scan oder digitales Original: der Streit beim PDF ---------------------------------------------------------------
@@ -61,14 +61,14 @@ SEGMENTE = [
      "Ausstellers. [digorig]Anders, wenn ein Dokument von Haus aus digital ist, etwa eine Online-Überweisungsbestätigung, "
      "und verändert oder komplett am Rechner gefälscht wird. Dann kommt Paragraf zweihundertneunundsechzig in Betracht. "
      "[olg]Für Zeugnisse als E-Mail-Anhang hat das Oberlandesgericht Celle entschieden: Zeugnisse werden üblicherweise "
-     "auf Papier ausgegeben, ein PDF erscheint deshalb erkennbar nur als Reproduktion. [gegen]Wer Kopien grundsätzlich "
-     "für Urkunden hält, kommt dagegen auch hier zu Paragraf zweihundertneunundsechzig. [p270]Liest zuerst nur ein "
-     "Bewerbungsprogramm die Datei, hilft Paragraf zweihundertsiebzig: Der Täuschung im Rechtsverkehr steht die "
+     "auf Papier ausgegeben, ein PDF erscheint deshalb erkennbar nur als Reproduktion. [gegen]Eine Gegenansicht will "
+     "auch solche PDF-Anhänge als Datenurkunden erfassen. [p270]Und täuscht der Täter "
+     "keinen Menschen, sondern nur ein Programm, hilft Paragraf zweihundertsiebzig: Der Täuschung im Rechtsverkehr steht die "
      "fälschliche Beeinflussung einer Datenverarbeitung im Rechtsverkehr gleich.", PS),
     # --- H Lösung ----------------------------------------------------------------------------------------------------------
     ("[loes]Zur Lösung. [l1]Das PDF ist keine verkörperte Erklärung, Paragraf zweihundertsiebenundsechzig scheidet aus. "
      "[l2]Nach Paragraf zweihundertneunundsechzig zeigt es erkennbar nur den Scan eines Papierzeugnisses, also eine "
-     "Kopie. Mit der herrschenden Meinung ist auch dieser Tatbestand nicht erfüllt. [l3]Anders wäre es, wenn das "
+     "Kopie. Mit der ganz überwiegenden Meinung ist auch dieser Tatbestand nicht erfüllt. [l3]Anders könnte es liegen, wenn das "
      "Zeugnis als digitales Original ausgegeben würde. [l4]In der Variante kommt es auf den Ausdruck an. Als Kopie "
      "verschickt, erscheint er als Reproduktion. Eine Urkunde wäre er nur, wenn er wie ein Original aussähe, mit den "
      "typischen Echtheitsmerkmalen. [l5]Und in beiden Varianten fehlt ein gefälschtes Papierzeugnis, das Janosch über "
