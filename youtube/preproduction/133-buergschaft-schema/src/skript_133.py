@@ -13,7 +13,8 @@ Rn. 17). Klausurschema progressiv, Merksatz (Lexi).
 Figuren: Marlies (sabrina), Hilke (laura_ruhig), Herr Seibold (william); Lexi/Erzählerin Carla. Belege: ../RECHTSSTAND.md.
 Segmente: (text, pause) = Erzählerin Carla (auch Lexi), (text, pause, rolle) = Figurenrede. [marke] = Cue für Bild/Tafel/
 Prüfpfad; jede Marke kommt genau einmal vor. Zahlen und Paragrafen im Sprechtext als Wörter. Kein Genitiv der Namen.
-„der Bürge“ im Fließtext vermieden („wer bürgt“), weil die Erkenner in Folge 099 „Bürger“ hörten."""
+„der Bürge“ im Fließtext vermieden, weil die Erkenner in Folge 099 „Bürger“ hörten; nach der ersten Vertonung
+„wer bürgt“ in den Segmenten 12, 20, 21 ersetzt (beide Erkenner hörten „birgt“)."""
 
 P, PS = 0.3, 0.5
 
@@ -42,8 +43,8 @@ SEGMENTE = [
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 4.6),
     # --- C Anspruchsgrundlage § 765 Abs. 1 (Wortlaut) und Aufbau ------------------------------------------------------------
     ("[agl]Die Bank könnte gegen Marlies einen Anspruch aus Paragraf siebenhundertfünfundsechzig Absatz eins haben. "
-     "[w765]Danach verpflichtet sich, wer bürgt, gegenüber dem Gläubiger eines Dritten, für dessen Verbindlichkeit "
-     "einzustehen. [aufbau]Wir prüfen: Ist der Anspruch entstanden, ist er nicht erloschen, und ist er durchsetzbar?", PS),
+     "[w765]Danach verpflichtet sich die bürgende Person gegenüber dem Gläubiger eines Dritten, für dessen "
+     "Verbindlichkeit einzustehen. [aufbau]Wir prüfen: Ist der Anspruch entstanden, ist er nicht erloschen, und ist er durchsetzbar?", PS),
     # --- D1 I. 1. Bürgschaftsvertrag und Schriftform (Wortlaut § 766 S. 1) ---------------------------------------------------
     ("[i1]Römisch eins: Ist der Anspruch entstanden? Eins: ein wirksamer Bürgschaftsvertrag. [einig]Marlies und die Bank "
      "haben sich geeinigt. [w766]Dazu Paragraf siebenhundertsechsundsechzig Satz eins: Zur Gültigkeit des "
@@ -83,12 +84,12 @@ SEGMENTE = [
     ("[iv]Römisch vier: der Rückgriff. [w774]Zahlt Marlies, geht nach Paragraf siebenhundertvierundsiebzig Absatz eins "
      "Satz eins die Forderung der Bank gegen Hilke auf sie über. [legal]Das ist ein gesetzlicher Forderungsübergang, "
      "wie beim Gesamtschuldnerausgleich nach Paragraf vierhundertsechsundzwanzig Absatz zwei. [p670]Außerdem hat Hilke "
-     "sie gebeten, für sie zu bürgen. Das ist ein Auftrag, und daraus kann Marlies nach Paragraf sechshundertsiebzig Ersatz "
+     "sie um die Bürgschaft gebeten. Das ist ein Auftrag, und daraus kann Marlies nach Paragraf sechshundertsiebzig Ersatz "
      "verlangen. [wahl]Beide Wege erkennt der Bundesgerichtshof an, das Geld bekommt sie aber nur einmal. [risiko]Ob "
-     "Hilke zahlen kann, ist allerdings das Risiko von Marlies: Wer bürgt, trägt das Insolvenzrisiko der Schuldnerin.", PS),
+     "Hilke zahlen kann, ist allerdings das Risiko von Marlies: Die bürgende Person trägt das Insolvenzrisiko der Schuldnerin.", PS),
     # --- G Klausurtipp (Lexi) -------------------------------------------------------------------------------------------------
-    ("[tipp]Klausurtipp: Selbstschuldnerisch heißt nur, dass die Einrede der Vorausklage fehlt. [tipp2]Wer so bürgt, "
-     "wird nach dem Bundesgerichtshof trotzdem nicht Gesamtschuldner neben der Schuldnerin. [tipp3]Prüfe also auch "
+    ("[tipp]Klausurtipp: Selbstschuldnerisch heißt nur, dass die Einrede der Vorausklage fehlt. [tipp2]Wer sich so "
+     "verbürgt, wird nach dem Bundesgerichtshof trotzdem nicht Gesamtschuldner neben der Schuldnerin. [tipp3]Prüfe also auch "
      "hier die Hauptschuld und die Einreden nach Paragraf siebenhundertachtundsechzig. [tipp4]Und beim Rückgriff nennst "
      "du beide Wege: Paragraf siebenhundertvierundsiebzig und den Auftrag.", PS),
     # --- H Klausurschema --------------------------------------------------------------------------------------------------------
