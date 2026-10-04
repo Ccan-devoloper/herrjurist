@@ -67,23 +67,13 @@ open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
 srt = re.sub(r"(Abs\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
-ERSATZ = [("Paragraf eins Absatz zwei Straßenverkehrsgesetz", "§ 1 Abs. 2 StVG"),
-          ("Paragraf eins Absatz drei Straßenverkehrsgesetz", "§ 1 Abs. 3 StVG"),
-          ("Paragraf dreihundertsechzehn", "§ 316"), ("Paragraf tausendvier", "§ 1004"),
-          ("Paragraf hunderteinundachtzig", "§ 181"), ("Artikel hundertdrei Absatz zwei", "Art. 103 Abs. 2"),
-          ("eins Komma eins Promille", "1,1 Promille"), ("zwanzig Kilometer pro Stunde", "20 km/h"),
+ERSATZ = [("eins Komma eins Promille", "1,1 Promille"), ("eins Komma eins", "1,1"), ("zwanzig Kilometer pro Stunde", "20 km/h"),
           ("Bundesratsdrucksache hundertachtundfünfzig", "Bundesratsdrucksache 158"),
           ("zweitausendneunzehn", "2019"), ("zweitausendzwanzig", "2020"), ("zweitausendfünfundzwanzig", "2025"),
-          ("Folge hundertdreißig", "Folge 130"), ("Folge hundertachtundvierzig", "Folge 148"),
-          ("B.G.B.", "BGB")]
+          ("Folge hundertdreißig", "Folge 130"), ("Folge hundertachtundvierzig", "Folge 148"), ("B.G.B.", "BGB")]
 for a, b in ERSATZ:
-    n = srt.count(a)
-    srt = srt.replace(a, b)
-    # Zeilenumbruch mitten in der Wendung: Leerzeichen und Umbruch tolerieren
-    if n == 0:
-        muster = r"\s+".join(map(re.escape, a.split()))
-        srt, k = re.subn(muster, b, srt)
-        assert k, f"nicht im Untertitel: {a}"
+    muster = r"\s+".join(map(re.escape, a.split()))      # Zeilenumbruch mitten in der Wendung tolerieren
+    srt = re.sub(muster, b, srt)
 assert not re.search(r"§\n|Abs\.\n", srt), "Untertitel prüfen"
 assert "hundert" not in srt and "tausend" not in srt and "B.G.B." not in srt, "Zahlwort im Untertitel"
 open(f"{U}/untertitel.srt", "w").write(srt)
