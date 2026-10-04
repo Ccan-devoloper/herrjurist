@@ -8,7 +8,9 @@ Prozent oder Bruch → Kostentenor → Kostenaufhebung (§ 92 Abs. 1 S. 1 Alt. 1
 Faustregel 10 % als Literaturangabe gekennzeichnet; hier nicht anwendbar), Nr. 2 in einem Satz → Sonderregeln §§ 93, 91a,
 269 Abs. 3 S. 2, 344 (Wortlautkarten kurz) → Klausurtipp (Lexi: Kostentenor nie vergessen, § 308 Abs. 2; vorläufige
 Vollstreckbarkeit nur Verweis) → Schema → Merksatz (Lexi). Belege je Aussage: ../RECHTSSTAND.md.
-Namen mit eindeutig deutscher Aussprache, nicht vergeben (Volltextsuche 04.10.2026): Dressler, Lindau; die Richterin bleibt
+Namen mit eindeutig deutscher Aussprache, nicht vergeben (Volltextsuche 04.10.2026): Dressler, Lindau (Segment 4 nach
+Anweisung des Koordinators umgestellt: „Vor dem Amtsgericht klagt Malermeister Dressler …“ statt „Herr Dressler klagt …“,
+weil beide Erkenner dort zweimal „Bressler“ hörten); die Richterin bleibt
 namenlos. Stimmen (Pool william, sabrina, marc, laura_ruhig): Herr Dressler marc, Frau Lindau sabrina, Richterin laura_ruhig;
 william nicht verwendet. Lexi = Erzählerin Carla.
 Segmente: (text, pause) = Erzählerin Carla (auch Lexi), (text, pause, rolle) = Figurenrede. [marke] = Cue; jede Marke genau
@@ -25,7 +27,7 @@ SEGMENTE = [
     ("[li1]Die Fassade ist fleckig, und die Garage habe ich nie bestellt!", P, "Lindau"),
     ("[dr1]Dann sehen wir uns vor Gericht.", P, "Dressler"),
     # --- B Fall: im Amtsgericht ---------------------------------------------------------------------------------------------
-    ("[klage]Herr Dressler klagt zehntausend Euro Werklohn ein. [beweis]Nach der Beweisaufnahme steht fest: Die Fassade "
+    ("[klage]Vor dem Amtsgericht klagt Malermeister Dressler zehntausend Euro Werklohn ein. [beweis]Nach der Beweisaufnahme steht fest: Die Fassade "
      "ist in Ordnung. [beweis2]Einen Auftrag für die Garage kann er aber nicht beweisen.", P),
     ("[ri1]Die Beklagte wird verurteilt, an den Kläger siebentausenddreihundert Euro zu zahlen. Im Übrigen wird die Klage "
      "abgewiesen.", P, "Richterin"),
