@@ -338,40 +338,44 @@ folie([(NULL, "Fall · Das Mietshaus"), ("sp1", "Fall · Die Hinweise der Mieter
 ])
 
 # ===========================================================================================================================
-# A2 Fall: 6 Wochen später, der Besuch (derselbe Ort; die Brüstung wackelt noch)
+# A2 Fall: 6 Wochen später, der Besuch (derselbe Ort; die Brüstung wackelt noch); der Gast oben am Balkon
 # ===========================================================================================================================
-GAST_DA = beim("wochen", "Besuch")
-folie([("wochen", "Fall · 6 Wochen später: Besuch")], [
+GAST_DA = beim("wochen", "Frau")
+GBX, GBH = BAL_X + BAL_W / 2 - 20, 300      # Gast auf dem Balkon hinter der Brüstung (kleiner, weil oben)
+folie([("wochen", "Fall · 6 Wochen später: Besuch"), ("gast", "Fall · Auf dem Balkon")], [
     *haus("wochen"),
-    bruestung("wochen", "wackelt"),
-    ficon("tabler", "alert-triangle", WARN_X, WARN_U, 90, "wochen", fuell=GELB, anim="cut"),
+    bruestung("wochen", "wackelt", bis="gast"),
+    ficon("tabler", "alert-triangle", WARN_X, WARN_U, 90, "wochen", fuell=GELB, anim="cut", bis="gast"),
     pl("6 Wochen nach dem 1. Hinweis", 70, 30, "wochen", fill=GELB, size=38),
     ficon("tabler", "calendar-event", 760, 100, 70, "wochen", fuell=WEISS),
-    pl("Frau Specht hat Besuch.", 70, 110, GAST_DA, fill=TUERKIS, size=34),
+    pl("Frau Specht hat Besuch.", 70, 110, beim("wochen", "Besuch"), fill=TUERKIS, size=34),
     # Frau Specht (blickt nach rechts zum Gast), der Gast kommt von rechts (Türklingel)
-    *fig("SP", 1130, BODEN, FH, [("wochen", "ruhig_r"), (GAST_DA, "froh_r")]),
-    ns("Frau Specht", 1130, BODEN, "wochen", TUERKIS, d=0.1),
-    szene(bewegt(peep_voll("GA_froh", GAX, BODEN, FH - 10, GAST_DA, anim="cut"), GAST_DA, (GAST_DA[0], GAST_DA[1] + 1.0), 200, 0),
-          "182klingel*", 0.8, -0.1),
-    bewegt(ns("Gast", GAX, BODEN, GAST_DA, BLAU, anim="cut"), GAST_DA, (GAST_DA[0], GAST_DA[1] + 1.0), 200, 0),
+    *fig("SP", 1130, BODEN, FH, [("wochen", "ruhig_r"), (beim("wochen", "Besuch"), "froh_r")], bis="gast"),
+    bis_(ns("Frau Specht", 1130, BODEN, "wochen", TUERKIS, d=0.1), "gast"),
+    szene(bewegt(peep_voll("GA_froh", GAX, BODEN, FH - 10, GAST_DA, anim="cut", bis="gast"), GAST_DA,
+                 (GAST_DA[0], GAST_DA[1] + 1.0), 200, 0), "182klingel*", 0.8, -0.1),
+    bis_(bewegt(ns("Gast", GAX, BODEN, GAST_DA, BLAU, anim="cut"), GAST_DA, (GAST_DA[0], GAST_DA[1] + 1.0), 200, 0), "gast"),
+    # auf dem Balkon: der Gast steht an der Brüstung (die Brüstung liegt vor ihm), kein Sturz im Bild
+    peep_voll("GA_ruhig_r", GBX, BAL_Y + 4, GBH, "gast", anim="cut"),
+    bruestung("gast", "wackelt"),
+    pl("Gast", BAL_X + BAL_W + 20, BAL_Y - 20, "gast", fill=BLAU, size=30, anim="cut"),
+    pl("Der Gast lehnt sich an die Brüstung.", 70, 190, beim("gast", "lehnt"), fill=WEISS, size=36),
 ])
 
 # ===========================================================================================================================
 # A3 Fall: Die Brüstung bricht – nur Gebäude-Icon mit Warnsymbol, die Folge als Text (kein Sturz, kein Aufprall im Bild)
 # ===========================================================================================================================
 BRICHT = beim("bricht", "bricht")
-folie([("gast", "Fall · Auf dem Balkon"), ("bricht", "Fall · Die Brüstung bricht"), ("gutacht", "Fall · Der Sachverständige"),
+folie([("bricht", "Fall · Die Brüstung bricht"), ("gutacht", "Fall · Der Sachverständige"),
        ("frage", "Die Frage · Strafbar trotz Fahrlässigkeit?")], [
-    *haus("gast"),
-    bruestung("gast", "wackelt", bis=BRICHT),
-    ficon("tabler", "alert-triangle", WARN_X, WARN_U, 90, "gast", fuell=GELB, anim="cut", bis=BRICHT),
-    pl("Der Gast lehnt sich an die Brüstung.", 70, 30, "gast", fill=WEISS, size=36),
+    *haus("bricht"),
+    bruestung("bricht", "wackelt", bis=BRICHT),
     bruestung(BRICHT, "gebrochen"),
     ficon("tabler", "alert-triangle", WARN_X, WARN_U, 130, BRICHT, fuell=ROT),
-    pl("Die Brüstung bricht.", 70, 110, BRICHT, fill=HELLROT, size=36),
-    pl("Der Gast stürzt in den Hof: schwer verletzt", 70, 190, "verletzt", fill=HELLROT, size=34),
+    pl("Die Brüstung bricht.", 70, 30, BRICHT, fill=HELLROT, size=36),
+    pl("Der Gast stürzt in den Hof: schwer verletzt", 70, 110, "verletzt", fill=HELLROT, size=34),
     ficon("fluent-emoji-flat", "ambulance", 1010, BODEN, 260, beim("verletzt", "verletzt")),
-    ficon("tabler", "hammer", 800, 360, 80, "gutacht", fuell=HOLZ),
+    ficon("tabler", "hammer", 1770, 330, 80, "gutacht", fuell=HOLZ),
     pl("Sachverständiger: Rechtzeitige Reparatur", 900, 250, "gutacht", fill=GRUEN, size=32),
     pl("hätte den Bruch verhindert.", 900, 320, beim("gutacht", "hätte"), fill=GRUEN, size=32),
     # Herr Berger (sachlich, besorgt) zur Frage
@@ -478,7 +482,7 @@ folie([("erfolg", f"{PT} › 1. Erfolg"), ("handl", f"{PT} › 2. Handlung: Tun 
     z("§ 13 StGB: Herr Berger muss Garant sein.", 160, 515, "p13", "Bold", 32),
     *okz("Eigentümer: Haus als Gefahrenquelle", 580, beim("vsp", "Eigentümer"), size=32, x=210),
     *okz("verkehrssicherungspflichtig: Überwachergarant", 640, beim("vsp", "verkehrssicherungspflichtig"), size=32, x=210),
-    zit("vgl. BGH 4 StR 252/08, Rn. 17; 5 StR 394/08, Rn. 23", 210, 690, beim("vsp", "Das")),
+    zit("vgl. BGH 4 StR 252/08, Rn. 17; 5 StR 394/08, Rn. 23", 210, 690, beim("vsp", "macht")),
     *okz("Reparatur war ihm möglich", 740, "moegl", size=32, x=210),
     z("Einzelheiten: Video „Unterlassungsdelikt“", 160, 805, "verw", "Bold", 30, farbe=TEXT),
     *requisit([("erfolg", ("fluent-emoji-flat", "ambulance", 170, None), "Körper verletzt", HELLROT),
@@ -536,7 +540,7 @@ folie([("vorh", f"{PT} › 5. objektive Vorhersehbarkeit"), ("vorh2", f"{PT} ›
     *tafel("vorh", "I. Tatbestand: Vorhersehbarkeit"),
     punkt(5, "5. Objektive Vorhersehbarkeit", "vorh"),
     z("Erfolg in seinem Gewicht im Wesentlichen", 110, 290, beim("vorh", "Der"), "Bold", 34),
-    z("vorhersehbar, nicht in allen Einzelheiten", 110, 342, beim("vorh", "vorhersehbar"), "Bold", 34),
+    z("vorhersehbar, nicht in allen Einzelheiten", 110, 342, beim("vorh", "vorhersehbar", nr=2), "Bold", 34),
     zit("BGH 4 StR 19/20, Rn. 18", 110, 400, beim("vorh", "Einzelheiten")),
     *okz("Die Mieterin hatte mehrfach gewarnt.", 480, "vorh2", "Bold", 34, x=160),
     *okz("Anlehnen und Absturz: liegt auf der Hand", 550, beim("vorh2", "Dass"), "Bold", 34, x=160),
@@ -621,20 +625,20 @@ LX0, RX0, SW = 110, 640, 510
 folie([("vors", "Abgrenzung · bewusste Fahrlässigkeit oder bedingter Vorsatz?")], rechts_frei([
     *tafel("vors", "Warum kein Vorsatz?"),
     karte(LX0, 180, SW, 330, beim("vors", "Herr"), fill=HELLGRUEN, rund=18, schatten=6, rand=4),
-    z("bewusste Fahrlässigkeit", LX0 + 25, 198, beim("vors", "Herr"), "ExtraBold", 32, rechts=LX0 + SW - 10),
+    z("bewusste Fahrlässigkeit", LX0 + 25, 198, beim("vors", "bewusste"), "ExtraBold", 32, rechts=LX0 + SW - 10),
     z("Unfall für möglich", LX0 + 25, 262, beim("vors", "möglich"), size=30, rechts=LX0 + SW - 10),
     z("gehalten, aber ernsthaft", LX0 + 25, 304, beim("vors", "ernsthaft"), size=30, rechts=LX0 + SW - 10),
     z("darauf vertraut, dass", LX0 + 25, 346, beim("vors", "ernsthaft"), size=30, rechts=LX0 + SW - 10),
     z("nichts passiert", LX0 + 25, 388, beim("vors", "passiert"), size=30, rechts=LX0 + SW - 10),
-    *okz("Herr Berger", 450, beim("vors", "Das"), "ExtraBold", 32, x=LX0 + 70),
+    *okz("Herr Berger", 450, beim("vors", "bewusste"), "ExtraBold", 32, x=LX0 + 70),
     karte(RX0, 180, SW, 330, "event", fill=HELLROT, rund=18, schatten=6, rand=4),
-    z("bedingter Vorsatz", RX0 + 25, 198, "event", "ExtraBold", 32, rechts=RX0 + SW - 10),
+    z("bedingter Vorsatz", RX0 + 25, 198, beim("event", "bedingter"), "ExtraBold", 32, rechts=RX0 + SW - 10),
     z("mit einer Verletzung", RX0 + 25, 262, beim("event", "mit"), size=30, rechts=RX0 + SW - 10),
     z("abgefunden", RX0 + 25, 304, beim("event", "abgefunden"), size=30, rechts=RX0 + SW - 10),
     zit("BGH 1 StR 474/19, Rn. 14", 110, 545, "event"),
     *requisit([("vors", ("tabler", "bulb", 100, GELB), "kein Vorsatz?", WEISS),
                ("event", ("tabler", "arrows-split", 100, WEISS), "Abgrenzung", WEISS)]),
-    *stehend("BE", FX, [("vors", "denkt"), (beim("vors", "Das"), "ruhig")]),
+    *stehend("BE", FX, [("vors", "denkt"), (beim("vors", "bewusste"), "ruhig")]),
 ]))
 
 # ===========================================================================================================================
