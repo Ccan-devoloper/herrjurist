@@ -20,7 +20,7 @@ Quelle: `bildhalt_manifest.json` (123 Bildhalte, davon 123 eigenständig), `cues
 | 14 | 0:32.68 | 0:34.60 | Carla (Erzählerin/Lexi) | Ich bürge selbstschuldnerisch für den | Fall · Marlies unterschreibt | `4532fad33d60` |
 | 15 | 0:34.60 | 0:37.16 | Carla (Erzählerin/Lexi) | Kredit von Hilke über fünfzehntausend | Fall · Marlies unterschreibt | `8f2846d240b0` |
 | 16 | 0:37.16 | 0:38.60 | Carla (Erzählerin/Lexi) | Euro. Herr Seibold | Fall · Marlies unterschreibt | `cb2573a4e9c3` |
-| 17 | 0:38.60 | 0:40.50 | Carla (Erzählerin/Lexi) | nimmt die Erklärung an. | Fall · Marlies unterschreibt | `03c785967d2d` |
+| 17 | 0:38.60 | 0:40.50 | Carla (Erzählerin/Lexi) | nimmt die Erklärung an. | Fall · Marlies unterschreibt | `9c7ec46d3f35` |
 | 18 | 0:40.60 | 0:44.54 | Carla (Erzählerin/Lexi) | Zwei Jahre später zahlt Hilke die Raten nicht mehr. Die Bank | Fall · Zwei Jahre später | `beafd7d69ade` |
 | 19 | 0:44.54 | 0:46.02 | Carla (Erzählerin/Lexi) | kündigt den Kredit, | Fall · Zwei Jahre später | `cc01a5b44f97` |
 | 20 | 0:46.02 | 0:48.30 | Carla (Erzählerin/Lexi) | neuntausend Euro sind offen. | Fall · Zwei Jahre später | `628d5ccbee1a` |
