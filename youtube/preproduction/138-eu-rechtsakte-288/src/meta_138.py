@@ -59,11 +59,11 @@ ERS = [(r"fünfundzwanzigsten\s+Mai\s+zweitausendachtzehn", "25. Mai 2018"),
        (r"ersten\s+Januar\s+zweitausendachtzehn", "1. Januar 2018"), (r"ersten\s+Juli\s+zweitausendachtzehn", "1. Juli 2018"),
        (r"Artikel\s+zweihundertachtundachtzig", "Art. 288"),
        (r"Paragrafen\s+sechshunderteinundfünfzig\s+a\s+folgende", "§§ 651a ff."),
-       (r"651a(\s+)folgende", r"651a\1ff."), (r"Absatz\s+eins\b", "Absatz 1"), (r"Absatz\s+zwei\b", "Absatz 2"), (r"Absatz\s+drei\b", "Absatz 3"),
+       (r"651a(\s+)folgende", r"651a\1ff."), (r"(?m)^folgende BGB", "ff. BGB"), (r"ff\.\.", "ff."), (r"fünfundzwanzigsten(\s+)Mai", r"25.\1Mai"), (r"ersten(\s+)Januar", r"1.\1Januar"), (r"ersten(\s+)Juli", r"1.\1Juli"), (r"Absatz\s+eins\b", "Absatz 1"), (r"Absatz\s+zwei\b", "Absatz 2"), (r"Absatz\s+drei\b", "Absatz 3"),
        (r"Absatz\s+vier\b", "Absatz 4"), (r"Absatz\s+fünf\b", "Absatz 5"), (r"B\.G\.B\.", "BGB")]
 for a, b in ERS:
     srt = re.sub(a, b, srt)
-for w in ("zweitausendachtzehn", "zweihundert", "sechshundert", "B.G.B."):
+for w in ("zweitausendachtzehn", "zweihundert", "sechshundert", "B.G.B.", "folgende", "fünfundzwanzigsten"):
     assert w not in srt, w
 open(f"{U}/untertitel.srt", "w").write(srt)
 
