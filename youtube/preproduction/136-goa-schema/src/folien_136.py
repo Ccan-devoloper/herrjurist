@@ -308,14 +308,15 @@ HX, UX = 1420, 1730                         # Fallszenen: Harald, Frau Huber
 # A1 Fall: Frau Huber verreist
 # ===========================================================================================================================
 URL = beim("fall", "Urlaub")
+GEHT = beim("fall", "fährt")                # Frau Huber zieht ihren Koffer nach rechts
 folie([(NULL, "Fall · Frau Huber verreist"), ("nachbar", "Fall · Der Nachbar Harald")], [
     *kulisse(NULL),
     hart(pl("Haus von Frau Huber", 70, 30, NULL, fill=GELB, size=40)),
     pl("2 Wochen Urlaub", 70, 112, beim("fall", "zwei"), fill=WEISS, size=32),
     ficon("tabler", "plane-departure", 480, 190, 90, URL, fuell=WEISS),
-    szene(bewegt(peep_voll("HU_froh_r", UX, BODEN, FH, NULL, anim="cut"), URL, "nachbar", -300), "136koffer*", 0.6, T_(URL)),
-    bewegt(ficon("tabler", "luggage", UX - 175, BODEN - 3, 80, NULL, fuell=LILA, anim="cut"), URL, "nachbar", -300),
-    bewegt(hart(ns("Frau Huber", UX, BODEN, NULL, HU_N)), URL, "nachbar", -300),
+    szene(bewegt(peep_voll("HU_froh_r", UX, BODEN, FH, NULL, anim="cut"), GEHT, "nachbar", -300), "136koffer*", 0.6, T_(GEHT)),
+    bewegt(ficon("tabler", "luggage", UX - 175, BODEN - 3, 80, NULL, fuell=LILA, anim="cut"), GEHT, "nachbar", -300),
+    bewegt(hart(ns("Frau Huber", UX, BODEN, NULL, HU_N)), GEHT, "nachbar", -300),
     *fig("HJ", HX - 60, BODEN, FH, [("nachbar", "ruhig_r")], erst="pop"),
     ns("Harald", HX - 60, BODEN, "nachbar", HA_N, d=0.1),
     pl("Nachbar", HX - 60, 330, beim("nachbar", "Nachbar"), fill=BLAU, size=30, anker="m"),
@@ -348,8 +349,8 @@ _HAND = (_hx + 10, _hy + 70)                # Jacke hängt an Haralds ausgestrec
 folie([("loesch", "Fall · Harald löscht mit der Jacke"), ("kaputt", "Fall · Die Jacke ist ruiniert")], [
     *kulisse("loesch", hart_=False),
     flamme("loesch", bis="aus"),
-    ficon("tabler", "fire-extinguisher", 1660, 300, 90, beim("loesch", "Feuerlöscher"), fuell=ROT, bis="aus"),
-    bis_(nein(1660, 255, beim("loesch", "nicht"), gr=30), "aus"),
+    ficon("tabler", "fire-extinguisher", 1660, 320, 120, beim("loesch", "Feuerlöscher"), fuell=WEISS, bis="aus"),
+    bis_(nein(1660, 262, beim("loesch", "nicht"), gr=34), "aus"),
     pl("kein Feuerlöscher zur Hand", 70, 30, beim("loesch", "nicht"), fill=GELB, size=34),
     jacke_icon(*_HAND, ZIEHT, bis=ERST, breite=110),
     jacke_icon(TX, TONNE_OBEN + 40, ERST, bis="kaputt", breite=150, anim="cut"),
