@@ -295,8 +295,8 @@ def laden(cue):
 
 def belgierkiste(cue, bis=None, anim="pop"):
     """Die neue Kiste mit dem Bier aus Belgien (neutral, ohne Marke) vor dem Regal."""
-    return [ficon("tabler", "package", 830, BODEN - 4, 170, cue, fuell=GELB, anim=anim, bis=bis),
-            *[ficon("tabler", "bottle", xx, BODEN - 150, 46, cue, fuell=AMBER, anim=anim, bis=bis) for xx in (790, 830, 870)]]
+    k = ficon("tabler", "package", 585, BODEN - 4, 150, cue, fuell=GELB, anim=anim, bis=bis)
+    return [k, *[ficon("tabler", "bottle", xx, k.y + 8, 44, cue, fuell=AMBER, anim=anim, bis=bis) for xx in (550, 585, 620)]]
 
 
 folie([("fall", "Fall · Herr Brodersen und das Bier aus Belgien"), ("timm", "Fall · Frau Timmermann prüft"),
@@ -403,14 +403,14 @@ _kc, _yc = zitatkarte(WC, 110, 240, 31, "formel", {"a": beim("formel", "Hemmniss
                                                   "e": beim("vier", "wirksamen"), "f": beim("vier", "Schutzes"),
                                                   "g": beim("vier", "Lauterkeit"), "h": beim("vier", "Verbraucherschutzes")})
 folie([("formel", f"{PC} › zwingende Erfordernisse, Rn. 8"), ("neben", f"{PC} › neben Art. 36 AEUV")], rechts_frei([
-    *tafel("formel", "Die Cassis-Formel"),
-    z("Zwingende Erfordernisse", 110, 180, "formel", "Bold", 36),
+    *tafel("formel", "Zwingende Erfordernisse"),
+    z("Der Gerichtshof, Rn. 8:", 110, 180, "formel", "Bold", 36),
     *_kc,
     fund("EuGH, Rs. 120/78 (Cassis de Dijon), Slg. 1979, 649, Rn. 8", 110, int(_yc + 12), "formel"),
     fb(110, int(_yc + 75), 1040, 90, GELB, "neben", [("neben den Gründen aus Art. 36 AEUV", "ExtraBold", 34, INK)]),
     fund("Rs. 113/80 (Kommission/Irland), Rn. 8–10; VO (EU) 2019/515, Erwägungsgrund 4", 110, int(_yc + 180), "neben"),
     *einzeln("TM", "formel", [("ruhig",), ("denkt", "vier"), ("staunt", "neben")]),
-    *wechsel([("Rechtfertigung", "formel", GELB), ("4 Beispiele", "vier", HELL), ("+ Art. 36 AEUV", "neben", GELB)],
+    *wechsel([("zwingende Erfordernisse", beim("formel", "zwingenden"), HELL), ("neben Art. 36 AEUV", "neben", GELB)],
              XE, 250, size=30),
 ]))
 
@@ -422,15 +422,15 @@ folie([("gesund", f"{PC} › Gesundheit?"), ("lauter", f"{PC} › unlauterer Wet
     *neinz("nicht stichhaltig: sehr viele Getränke mit", 250, "stich", size=34),
     z("geringem oder mittlerem Alkoholgehalt", 185, 300, beim("stich", "sehr"), size=34),
     z("2. Schutz vor unlauterem Wettbewerb", 110, 390, "lauter", "Bold", 36),
-    *neinz("es genügt: Herkunft und Alkoholgehalt", 455, "etik1", size=34),
-    z("auf der Verpackung", 185, 505, beim("etik1", "Herkunft"), size=34),
+    *neinz("trägt nicht: es genügt, Herkunft und Alkohol-", 455, "etik1", size=34),
+    z("gehalt auf der Verpackung vorzuschreiben", 185, 505, beim("etik1", "Herkunft"), size=34),
     fb(110, 590, 1040, 90, GRUENHELL, "milder", [("Etikett: das mildere Mittel", "ExtraBold", 34, INK)]),
     fund("Rs. 120/78, Rn. 9–13", 110, 700, "milder"),
     *icons([("tabler", "activity-heartbeat", "gesund", ROTHELL), ("tabler", "scale", "lauter", GELB),
             ("tabler", "label", "etik1", HELL), ("tabler", "bottle", "milder", LIKOER)], IX, 560, 190),
     *wechsel([("Gesundheit?", "gesund", ROTHELL), ("nicht stichhaltig", "stich", ROTHELL),
               ("unlauterer Wettbewerb?", "lauter", GELB), ("Herkunft · Alkoholgehalt", "etik1", HELL),
-              ("Etikett statt Verbot", "milder", GRUENHELL)], IX, 640, size=30),
+              ("Etikett: milderes Mittel", "milder", GRUENHELL)], IX, 640, size=30),
 ]))
 
 # D5 Gegenseitige Anerkennung (Rn. 14; VO (EU) 2019/515, ErwG 4) -------------------------------------------------------------
@@ -482,8 +482,8 @@ folie([("name", P1), ("vschutz", f"{P1} › Verbraucherschutz?")], rechts_frei([
     *tafel("name", "1. Der Name „Bier“"),
     *okz("Bezeichnungsverbot kann die Einfuhr behindern", 185, "hemm", "Bold", 34),
     z("Deutschland: Verbraucherschutz", 110, 260, "vschutz", "Bold", 34),
-    *neinz("Vorstellungen der Verbraucher können sich", 330, "wandel", size=34),
-    z("fortentwickeln", 185, 380, beim("wandel", "Vorstellungen"), size=34),
+    z("Gerichtshof: Vorstellungen der Verbraucher können", 110, 330, "wandel", size=34),
+    z("sich fortentwickeln", 110, 380, beim("wandel", "Vorstellungen"), size=34),
     kasten(110, 450, 1040, 150, "zement", ZITAT),
     z("Recht eines Mitgliedstaats darf „nicht dazu dienen,", 140, 468, "zement", size=33, rechts=1140),
     z("die gegebenen Verbrauchsgewohnheiten zu zementieren“", 140, 520, beim("zement", "gegebenen"), size=33, rechts=1140),
@@ -561,8 +561,8 @@ _kb, _yb = zitatkarte(WB, 110, 335, 28, "bierv", {"a": beim("bierv", "Ausland"),
 folie([("tenor", f"{PR} · Ergebnis"), ("bierv", "Heute · § 1 Abs. 2 BierV"), ("ilnd", "Heute · Inländerdiskriminierung")],
       rechts_frei([
     *tafel("tenor", "Ergebnis und heute"),
-    *neinz("Tenor: Deutschland hat gegen Art. 30 EWG-Vertrag", 180, "tenor", "Bold", 33),
-    z("(heute Art. 34 AEUV) verstoßen", 185, 228, beim("tenor", "Deutschland"), size=33),
+    z("Tenor: Deutschland hat gegen Art. 30 EWG-Vertrag", 110, 180, "tenor", "Bold", 33),
+    z("(heute Art. 34 AEUV) verstoßen", 110, 228, beim("tenor", "Deutschland"), size=33),
     fund("§ 1 Abs. 2 Satz 1 BierV (Stand 5.7.2017)", 110, 290, "bierv"),
     *_kb,
     z("in Deutschland hergestellt: grundsätzlich Reinheitsgebot", 110, int(_yb + 30), "inl", "Bold", 33),
@@ -591,8 +591,8 @@ folie([("l5", "Lösung · Das Bier darf Bier heißen")], [
     *belgierkiste("l5", anim="cut"),
     ficon("tabler", "door", 1830, BODEN, 90, "l5", fuell=HOLZ, anim="cut"),
     pl("darf als Bier verkauft werden", ZB, 135, "l5", fill=GRUENHELL, size=32, anker="m", bis="t2"),
-    ficon("tabler", "label", 830, BODEN - 200, 110, "l5", fuell=HELL),
-    pl("Gerstenmalz · Reis · Mais", 830, 640, beim("l5", "belgisches"), fill=WEISS, size=26, anker="m"),
+    pl("Etikett: Gerstenmalz, Reis und Mais", ZB, 205, beim("l5", "belgisches"), fill=HELL, size=28, anker="m", bis="t2"),
+    ficon("tabler", "label", 585, BODEN - 45, 70, beim("l5", "belgisches"), fuell=WEISS),
     *stufen([("BD_froh_r", "l5"), ("BD_entschlossen_r", "t2")], BDX, BODEN, GH, erst="cut", ende="tipp"),
     namensschild(NAME["BD"], BDX, BODEN, "l5", FARBE["BD"]),
     *stufen([("TM_ruhig", "l5"), ("TM_einsicht", "t2")], TMX, BODEN, GH, rede={"TM_einsicht": 1}, erst="cut", ende="tipp"),
@@ -636,7 +636,6 @@ folie([("sch", PS_), ("s1", f"{PS_} › I. Rechtfertigungsgrund"), ("s2", f"{PS_
     z("Rs. 178/84, Rn. 28", FX, 580, "s2b", size=28, farbe=TEXT, rechts=1840),
     z("z. B. Etikett statt Verbot", 265, 630, beim("s2b", "etwa"), size=32, rechts=FX - 20),
     z("Rs. 120/78, Rn. 13; Rs. 178/84, Rn. 35", FX, 635, beim("s2b", "etwa"), size=28, farbe=TEXT, rechts=1840),
-    z("Prüfung bis zur Beschränkung: Video zu Dassonville", 110, 760, "sch", size=30, farbe=TEXT, rechts=1820),
 ])
 
 # I Merksatz (Lexi) --------------------------------------------------------------------------------------------------------
