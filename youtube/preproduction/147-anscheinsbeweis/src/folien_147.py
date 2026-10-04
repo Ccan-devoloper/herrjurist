@@ -478,7 +478,7 @@ folie([("grund", "Ausgangspunkt · Grundregel der Beweislast")], rechts_frei([
 # ===========================================================================================================================
 folie([("a1", "1. Anscheinsbeweis › Grundlage")], rechts_frei([
     *wtafel("a1", "1. Anscheinsbeweis", BLAU), *raster([("a1", 0)], BLAU),
-    z("steht in keinem Gesetz", 110, 260, beim("a2", "keinem"), "Bold", 36),
+    z("nicht allgemein im Gesetz geregelt", 110, 260, beim("a2", "allgemein"), "Bold", 36),
     z("beruht auf einem Erfahrungssatz:", 110, 320, beim("a2", "Erfahrungssatz"), "Bold", 36),
     blk(110, 390, 1040, 70, HELLBLAU, "a3", [("typischer Geschehensablauf", "ExtraBold", 34, INK)]),
     z("feststehende Tatsachen: Schluss auf", 110, 485, beim("a3", "feststehenden"), size=34),
@@ -489,7 +489,7 @@ folie([("a1", "1. Anscheinsbeweis › Grundlage")], rechts_frei([
     *requisit([("a1", ("tabler", "bulb", 100, BLAU), "Anscheinsbeweis", BLAU),
                (beim("a2", "Erfahrungssatz"), ("tabler", "repeat", 100, WEISS), "Erfahrungssatz", WEISS),
                ("a4", ("tabler", "scale", 130, WEISS), "§ 286 ZPO", WEISS)]),
-    *paar("a1", "KR", [("a1", "ruhig"), ("a3", "skeptisch")], "HE", [("a1", "ruhig"), (beim("a2", "keinem"), "denkt")]),
+    *paar("a1", "KR", [("a1", "ruhig"), ("a3", "skeptisch")], "HE", [("a1", "ruhig"), (beim("a2", "allgemein"), "denkt")]),
 ]))
 
 QA = ["„Die Grundsätze des Anscheinsbeweises begründen …",
@@ -740,7 +740,7 @@ folie([("tab", "Merktabelle"), ("t1", "Merktabelle › 1. Grundlage"), ("t2", "M
 VERBEN = [("Anschein", "Anschein: erschüttern", BLAU), ("Vermutung", "Vermutung: widerlegen", GELB),
           ("Umkehr", "Umkehr: Gegner trägt die Beweislast", GRUEN)]
 els_i = [*tafel("tipp", "Klausurtipp", fill=HELL), warnung_i(150, 225, "tipp", gr=26),
-         z("Werkzeug beim Namen nennen, passendes Verb:", 200, 200, beim("tipp", "Nenne"), "Bold", 34)]
+         z("Werkzeug genau benennen, passendes Verb:", 200, 200, beim("tipp", "Benenne"), "Bold", 34)]
 for k, (w, t, fa) in enumerate(VERBEN):
     y = 280 + k * 62
     els_i += [karte(205, y + 10, 34, 34, beim("tipp2", w), fill=fa, rund=8, schatten=0, rand=3),

@@ -41,7 +41,7 @@ SEGMENTE = [
     ("[grund]Der Ausgangspunkt steht im Video zur Beweislast: Jede Partei beweist die Voraussetzungen der Norm, die ihr "
      "günstig ist. [grund2]Bleibt es unklar, verliert, wer die Beweislast trägt.", PS),
     # --- D 1. Anscheinsbeweis ------------------------------------------------------------------------------------------------
-    ("[a1]Erstens: der Anscheinsbeweis. [a2]Er steht in keinem Gesetz. Er beruht auf einem Erfahrungssatz: [a3]Bei einem "
+    ("[a1]Erstens: der Anscheinsbeweis. [a2]Er ist nicht allgemein im Gesetz geregelt. Er beruht auf einem Erfahrungssatz: [a3]Bei einem "
      "typischen Geschehensablauf schließt das Gericht von feststehenden Tatsachen auf eine Ursache oder ein Verschulden. "
      "[a4]Das ist Teil der freien Beweiswürdigung nach Paragraf zweihundertsechsundachtzig ZPO.", P),
     ("[a5]Was ändert sich? Bewiesen werden müssen nur die Tatsachen, an die der Erfahrungssatz anknüpft. [a6]Die "
@@ -87,7 +87,7 @@ SEGMENTE = [
      "Gegenteil beweisen. [t2c]Bei der Umkehr wechselt sie. [t3]Die Gegenwehr: [t3a]erschüttern, [t3b]das Gegenteil voll "
      "beweisen, [t3c]die Entlastung voll beweisen.", PS),
     # --- I Klausurtipp (Lexi) -------------------------------------------------------------------------------------------------
-    ("[tipp]Klausurtipp: Nenne das Werkzeug beim Namen und nimm das passende Verb. [tipp2]Einen Anschein erschütterst du, "
+    ("[tipp]Klausurtipp: Benenne das Werkzeug genau und nimm das passende Verb. [tipp2]Einen Anschein erschütterst du, "
      "eine Vermutung widerlegst du, und bei der Umkehr trägt der Gegner die Beweislast. [tipp3]Für den Fall passt, angelehnt "
      "an den Bundesgerichtshof: Für ein unfallursächliches Verschulden des Beklagten spricht ein nicht erschütterter "
      "Anscheinsbeweis. [tipp4]Und schreib nie, der Anscheinsbeweis kehre die Beweislast um.", PS),
