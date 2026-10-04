@@ -1,11 +1,12 @@
 """Figuren für Folge 138 (EU-Rechtsakte Art. 288 AEUV) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0). Fiktive Personen.
-Herr Stegemann (um 58, führt ein kleines Reisebüro, stellt Pauschalreisen zusammen): standing/robot_dance-3 (Oberteil in
-  der Originalfarbe Türkis, Hose Marine #3B4A6B), Kopf Gray Short (Haar Grau #B4B4BE), Brille Glasses, Haut #E8B894,
-  ohne Bart (kein Bart über dem Mund).
-Frau Kettner (um 40, Datenschutzbeauftragte): standing/blazer-1 (Blazer Koralle #F07A6A, schwarzes Oberteil aus der Pose,
-  Hose Schwarz #151515, Prothese aus der Originalpose – keine Täterrolle), Kopf Bun, Haut #C68E6A, ohne Brille.
+Herr Stegemann (um 58, führt ein kleines Reisebüro, stellt Pauschalreisen zusammen): standing/resting-1 (Pullover Grün
+  #8FD694, schwarze Hose aus der Pose), Kopf No Hair 2 (Halbglatze), Brille Glasses, Haut #E8B894, ohne Bart.
+Frau Kettner (um 40, Datenschutzbeauftragte): standing/blazer-1 (Blazer in der Originalfarbe Pink, schwarzes Oberteil aus
+  der Pose, Hose Schwarz #151515, Prothese aus der Originalpose – keine Täterrolle), Kopf Bun, Haut #C68E6A, ohne Brille.
+Parallel produzierte Folge 139 nutzt robot_dance-3 und pointing_finger-2 (grauer Kurzhaarschnitt, Brille) – deshalb
+  hier bewusst andere Posen, Köpfe und Farben.
 Posen der letzten drei Folgen (135: blazer-4, crossed_arms-2; 136: blazer-3, robot_dance-2, pointing_finger-1; 137: easing-2,
-shirt-3, resting-2) nicht verwendet; keine Polka Dots; Blazerfarben der Vorfolgen (Lila 135, Blau 136, Grün 137) vermieden.
+shirt-3, resting-2) nicht verwendet; keine Polka Dots; Blazerfarben der Vorfolgen (Lila 135, Blau 136) vermieden.
 Alle Posen blicken im Original nach rechts; Suffix _r = Original (blickt nach rechts), ohne Suffix gespiegelt (nach links).
 Grundmimik immer mit geschlossenem Mund; sprechende Ansichten zusätzlich a/o/e (Augen der Grundmimik + Mund Explaining /
 Concerned Fear / Hectic, Schnitt bei 60 % der Gesichtshöhe)."""
@@ -19,8 +20,8 @@ ZIEL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../peeps/op_
 MUND = {"a": "Explaining", "o": "Concerned Fear", "e": "Hectic"}
 
 P = {   # Person: (Pose, Kopf, Bart, Brille, Farben)
-    "ST": ("standing/robot_dance-3", "Gray Short", None, "Glasses", {"Skin": "#E8B894", "Pants": "#3B4A6B", "Hair": "#B4B4BE"}),
-    "KE": ("standing/blazer-1", "Bun", None, None, {"Skin": "#C68E6A", "Jacket": "#F07A6A", "Pants": "#151515"}),
+    "ST": ("standing/resting-1", "No Hair 2", None, "Glasses", {"Skin": "#E8B894", "Top": "#8FD694"}),
+    "KE": ("standing/blazer-1", "Bun", None, None, {"Skin": "#C68E6A", "Pants": "#151515"}),
 }
 
 # (Name, Person, Grundmimik, mit Mundzuständen); jede Ansicht zusätzlich als _r (blickt nach rechts)

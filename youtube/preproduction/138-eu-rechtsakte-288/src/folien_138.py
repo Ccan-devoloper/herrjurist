@@ -161,7 +161,7 @@ BR, FR = 930, 480                       # Figuren rechts neben der Tafel
 X1, X2 = 1420, 1720                     # zwei Figuren
 XE = 1600                               # eine Figur
 IX = 1580                               # Requisiten rechts (Folien ohne Figuren)
-FARBE = {"ST": BLAU, "KE": ROT}
+FARBE = {"ST": BLAU, "KE": PINK}
 NAME = {"ST": "Herr Stegemann", "KE": "Frau Kettner"}
 
 
@@ -251,7 +251,7 @@ folie([("fall", "Fall · Herr Stegemann und sein Reisebüro"), ("kett", "Fall ·
     *stufen([("KE_ruhig", "kett"), ("KE_redet", "k1"), ("KE_ruhig", "s1"), ("KE_froh", "frage"),
              ("KE_denkt", "warum")], KEX, BODEN, GH, rede={"KE_redet": 1}),
     namensschild(NAME["KE"], KEX, BODEN, "kett", FARBE["KE"], d=0.2),
-    pl("Datenschutzbeauftragte", KEX, 300, beim("kett", "Datenschutzbeauftragte"), fill=ROTHELL, size=28, anker="m", bis="k1"),
+    pl("Datenschutzbeauftragte", KEX, 300, beim("kett", "Datenschutzbeauftragte"), fill=WEISS, size=28, anker="m", bis="k1"),
     szene(ficon("tabler", "folder", 1090, 744, 80, "ordner", fuell=ROT), "138ordner*", 1.0, versatz=0.05),
     # Figurenrede
     blase("sprech", 900, 240, "k1", 1000, 215, inhalt=["Für Ihre Kundendaten gilt die", "Datenschutz-Grundverordnung. Sie gilt hier",
@@ -260,10 +260,8 @@ folie([("fall", "Fall · Herr Stegemann und sein Reisebüro"), ("kett", "Fall ·
           "in der EU-Richtlinie?"], textsize=30, figur=STa, bis="frage"),
     # Die Frage
     pl("Beides kommt aus der EU", 980, 150, "frage", fill=WEISS, size=30, anker="m"),
-    ficon("tabler", "shield-lock", 700, 330, 80, "dsg", fuell=GRUEN),
     pl("DSGVO: ab 25.5.2018 unmittelbar in allen Mitgliedstaaten", 980, 230, beim("dsg", "galt"), fill=GRUENHELL, size=28,
        anker="m"),
-    ficon("tabler", "book", 1260, 330, 80, "prl", fuell=GELB),
     pl("Pauschalreiserichtlinie: erst ein deutsches Gesetz", 980, 300, beim("prl", "brauchte"), fill=HELL, size=28, anker="m"),
     pl("Warum?", 980, 380, "warum", fill=PINK, size=40, anker="m"),
 ])
@@ -426,12 +424,13 @@ folie([("prob", f"{PN} › Frist abgelaufen"), ("ratti", f"{PN} › kein Berufen
     fb(110, 620, 1040, 90, GRUEN, "vert", [("vertikale unmittelbare Wirkung", "ExtraBold", 34, INK)]),
     ficon("tabler", "building-bank", IX, 360, 150, beim("genau", "Staat"), fuell=BLAU),
     pl("Staat", IX, 375, beim("genau", "Staat"), fill=BLAU, size=28, anker="m"),
-    ficon("tabler", "user", IX, 800, 130, beim("genau", "Einzelne"), fuell=GELB),
+    ficon("tabler", "id", IX, 800, 130, beim("genau", "Einzelne"), fuell=GELB),
     pl("Einzelner", IX, 815, beim("genau", "Einzelne"), fill=GELB, size=28, anker="m"),
     linienzug([(IX, 640), (IX, 450)], "vert", breite=8, farbe=DGRUEN),
     linienzug([(IX - 22, 475), (IX, 448), (IX + 22, 475)], "vert", breite=8, farbe=DGRUEN),
     pl("vertikal", IX + 140, 520, "vert", fill=GRUEN, size=28, anker="m"),
     pl("Frist abgelaufen?", IX, 200, "prob", fill=HELL, size=30, anker="m", bis=beim("genau", "Staat")),
+    ficon("tabler", "calendar-due", IX, 600, 150, "prob", fuell=HELL, bis=beim("genau", "Einzelne")),
 ]))
 
 # I Keine Wirkung zwischen Privaten: Faccini Dori -------------------------------------------------------------------------
@@ -455,7 +454,7 @@ folie([("horiz", f"{PN} › keine Wirkung zwischen Privaten"), ("fd", f"{PN} ›
     fund("Rn. 25", 170, 815, beim("fd3", "Richtlinie")),
     pl("zwischen Privaten", IX, 200, "horiz", fill=WEISS, size=30, anker="m"),
     ficon("tabler", "language", IX, 420, 110, beim("fd", "Englisch"), fuell=BLAUHELL),
-    ficon("tabler", "user", 1410, 640, 120, beim("fd", "Verbraucherin"), fuell=GELB),
+    ficon("tabler", "shopping-bag", 1410, 640, 120, beim("fd", "Verbraucherin"), fuell=GELB),
     pl("Verbraucherin", 1410, 655, beim("fd", "Verbraucherin"), fill=GELB, size=28, anker="m"),
     ficon("tabler", "building-store", 1750, 640, 130, beim("fd", "Vertrag"), fuell=HELL),
     pl("Unternehmen", 1750, 655, beim("fd", "Vertrag"), fill=HELL, size=28, anker="m"),
@@ -527,39 +526,39 @@ folie([("tipp", "Klausurtipp · erst die Umsetzungsfrist"), ("tipp3", "Klausurti
 # M Klausurschema als Tabelle ------------------------------------------------------------------------------------------------
 PS_ = "Klausurschema"
 C0, C1, C2, C3 = 110, 560, 980, 1400       # Spalten: Merkmal, Verordnung, Richtlinie, Beschluss
-RY = {1: 275, 2: 375, 3: 515, 4: 655}       # Zeilen
+RY = {1: 290, 2: 400, 3: 555, 4: 710}       # Zeilen
 T_ = []
 
 
 def zelle(zeilen, x, r, cue, stil="Regular"):
-    return [z(t, x, RY[r] + i * 42, cue, stil, 30, rechts=x + 420 if x > C0 else C1 - 10) for i, t in enumerate(zeilen)]
+    return [z(t, x, RY[r] + i * 46, cue, stil, 34, rechts=x + 420 if x > C0 else C1 - 10) for i, t in enumerate(zeilen)]
 
 
 folie([("sch", PS_), ("z1", f"{PS_} › I. verbindlich?"), ("z2", f"{PS_} › II. für wen?"), ("z3", f"{PS_} › III. Umsetzung nötig?"),
        ("z4", f"{PS_} › IV. Beispiele")], [
     karte(60, 50, 1800, 900, "sch"),
     titel("Klausurschema: Rechtsakte nach Art. 288 AEUV", 110, 90, "sch", 48),
-    z("Verordnung", C1, 195, "z1a", "ExtraBold", 32, rechts=1820), z("Richtlinie", C2, 195, "z1b", "ExtraBold", 32, rechts=1820),
-    z("Beschluss", C3, 195, "z1c", "ExtraBold", 32, rechts=1820),
-    linienzug([(110, 250), (1810, 250)], "z1", breite=4, farbe=INK),
+    z("Verordnung", C1, 200, "z1a", "ExtraBold", 36, rechts=1820), z("Richtlinie", C2, 200, "z1b", "ExtraBold", 36, rechts=1820),
+    z("Beschluss", C3, 200, "z1c", "ExtraBold", 36, rechts=1820),
+    linienzug([(110, 265), (1810, 265)], "z1", breite=4, farbe=INK),
     *zelle(["I. verbindlich?"], C0, 1, "z1", "Bold"),
     *zelle(["in allen Teilen"], C1, 1, "z1a"), *zelle(["nur im Ziel"], C2, 1, "z1b"), *zelle(["in allen Teilen"], C3, 1, "z1c"),
-    linienzug([(110, 350), (1810, 350)], "z2", breite=3, farbe=TEXT),
+    linienzug([(110, 375), (1810, 375)], "z2", breite=3, farbe=TEXT),
     *zelle(["II. für wen?"], C0, 2, "z2", "Bold"),
     *zelle(["allgemein"], C1, 2, "z2a"), *zelle(["Mitgliedstaaten, an", "die sie gerichtet ist"], C2, 2, "z2b"),
     *zelle(["seine Adressaten"], C3, 2, "z2c"),
-    linienzug([(110, 490), (1810, 490)], "z3", breite=3, farbe=TEXT),
+    linienzug([(110, 530), (1810, 530)], "z3", breite=3, farbe=TEXT),
     *zelle(["III. Umsetzung", "nötig?"], C0, 3, "z3", "Bold"),
     *zelle(["nein"], C1, 3, "z3a"), *zelle(["ja, innerhalb", "der Frist"], C2, 3, "z3b"),
     *zelle(["nein, der Adressat", "muss ihn befolgen"], C3, 3, "z3c"),
-    linienzug([(110, 630), (1810, 630)], "z4", breite=3, farbe=TEXT),
+    linienzug([(110, 685), (1810, 685)], "z4", breite=3, farbe=TEXT),
     *zelle(["IV. Beispiele"], C0, 4, "z4", "Bold"),
     *zelle(["Datenschutz-", "Grundverordnung"], C1, 4, "z4a"), *zelle(["Pauschalreise-", "richtlinie"], C2, 4, "z4b"),
     *zelle(["Beihilfebeschluss", "der Kommission"], C3, 4, "z4c"),
-    linienzug([(540, 180), (540, 750)], "z1", breite=3, farbe=TEXT),
-    linienzug([(960, 180), (960, 750)], "z1b", breite=3, farbe=TEXT),
-    linienzug([(1380, 180), (1380, 750)], "z1c", breite=3, farbe=TEXT),
-    fund("Art. 288 Abs. 2–4 AEUV; DSGVO Art. 99; RL (EU) 2015/2302 Art. 28; Art. 108 Abs. 2 AEUV", 110, 790, beim("z4c", "Kommission"),
+    linienzug([(540, 190), (540, 820)], "z1", breite=3, farbe=TEXT),
+    linienzug([(960, 190), (960, 820)], "z1b", breite=3, farbe=TEXT),
+    linienzug([(1380, 190), (1380, 820)], "z1c", breite=3, farbe=TEXT),
+    fund("Art. 288 Abs. 2–4 AEUV; DSGVO Art. 99; RL (EU) 2015/2302 Art. 28; Art. 108 Abs. 2 AEUV", 110, 860, beim("z4c", "Kommission"),
          rechts=1820),
 ])
 
