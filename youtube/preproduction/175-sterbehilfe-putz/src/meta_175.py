@@ -59,6 +59,10 @@ open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 
 srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
+srt = srt.replace("hundertachtundzwanzig", "128")
+srt, n1 = re.subn(r"Totschlags zu neun\n", "Totschlags zu 9\n", srt)
+srt, n2 = re.subn(r"gut(\s+)zwei(\s+)Wochen", r"gut\g<1>2\2Wochen", srt)
+assert n1 == 1 and n2 == 1, (n1, n2)
 assert not re.search(r"§\n", srt)
 for w in ("zweitausendzwei", "hundertachtundzwanzig", "achtzehnhundert", "neunzehnhundert", "zweihundert"):
     assert w not in srt, w
