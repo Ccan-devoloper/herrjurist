@@ -35,7 +35,7 @@ SEGMENTE = [
      "verbreiten. [wert]Geschützt ist eine Meinung, egal ob sie wertvoll oder wertlos, gefährlich oder harmlos ist. "
      "[ns]Selbst die Verbreitung nationalsozialistischen Gedankenguts fällt nicht von vornherein aus dem Schutzbereich. "
      "[art8]Weil die Versammlung wegen ihres Inhalts "
-     "verboten wurde, richtet sich auch Artikel acht hier nach Artikel fünf; [brok]mehr dazu beim Brokdorf-Beschluss.", P),
+     "verboten wurde, richtet sich auch Artikel acht hier nach Artikel fünf; [brok]mehr dazu beim Brockdorf-Beschluss.", P),
     # --- E § 130 Abs. 4 StGB, Eingriff (Rn. 3, 51) ---------------------------------------------------------------------
     ("[p130]Paragraf hundertdreißig Absatz vier bestraft, wer öffentlich oder in einer Versammlung den öffentlichen "
      "Frieden in einer die Würde der Opfer verletzenden Weise dadurch stört, dass er die nationalsozialistische Gewalt- "

@@ -192,6 +192,10 @@ def neinz(text, y, cue, stil="Regular", size=34, x=185, gr=20, **k):
     return [nein(x - 45, y + 20, cue, gr=gr), z(text, x, y, cue, stil, size, **k)]
 
 
+def neinz2(text, y, cue, kreuz, stil="Regular", size=34, x=185, gr=20, **k):
+    """Tafelzeile zum Satzbeginn, Kreuz erst zur gesprochenen Verneinung (kreuz = Cue des Wortes „nicht“)."""
+    return [nein(x - 45, y + 20, kreuz, gr=gr), z(text, x, y, cue, stil, size, **k)]
+
 
 # --- eigene Szenenbausteine (programmatisch, Palettenflächen, Tuschekontur) ---------------------------------------------------
 def _flaeche(w, h):
@@ -459,6 +463,8 @@ folie([("a52", f"{PIII} · Art. 5 Abs. 2 GG"), ("sonder", f"{PIII} › Sonderrec
     blk(645, w52_y + 105, 505, 150, LILAHELL, "abwl", [("Abwägungslehre", "ExtraBold", 32, INK),
                                                      ("Rechtsgut mit Vorrang", "Regular", 30, INK),
                                                      ("vor der Meinungsfreiheit", "Regular", 30, INK)]),
+    ok(568, w52_y + 125, beim("kombi", "nicht"), gr=22),                    # Element der Sonderrechtslehre
+    ok(1103, w52_y + 125, beim("kombi", "Vorrang"), gr=22),                 # Element der Abwägungslehre
     blk(110, w52_y + 280, 1040, 80, HELLGRUEN, "kombi", [("BVerfG verbindet beides, schon im Lüth-Urteil", "ExtraBold", 32, INK)]),
     zit("BVerfGE 7, 198 <209 f.>; BVerfGE 124, 300, Rn. 54", 110, w52_y + 370, "kombi"),
     pl("meinungsneutral: blind gegenüber denen, auf die es angewendet wird", 110, w52_y + 415, "blind", fill=GELB, size=28),
@@ -469,7 +475,7 @@ folie([("a52", f"{PIII} · Art. 5 Abs. 2 GG"), ("sonder", f"{PIII} › Sonderrec
                ("kombi", ("tabler", "circle-check", 90, HELLGRUEN), "beides", HELLGRUEN),
                ("blind", ("tabler", "eye-off", 100, GELB), "meinungsneutral", GELB)]),
     *paar("SW", [("a52", "ruhig"), ("sonder", "denkt"), ("blind", "froh")],
-          "AH", [("a52", "ruhig"), ("kombi", "froh")]),
+          "AH", [("a52", "ruhig"), ("kombi", "froh"), (beim("kombi", "Vorrang"), "ernst")]),
 ])
 
 # ===========================================================================================================================
@@ -489,7 +495,7 @@ folie([("bverwg", f"{PIII} › § 130 Abs. 4 StGB allgemein?"), ("nur", f"{PIII}
     z("gerade auch in Wunsiedel", 185, 615, beim("antwort", "gerade"), size=33),
     blk(110, 665, 1040, 72, ROT, "sonderr", [("Sonderrecht, kein allgemeines Gesetz", "ExtraBold", 34, INK)]),
     zit("Rn. 61", 110, 745, "sonderr"),
-    *neinz("auch nicht: Schranke der persönlichen Ehre", 790, "ehre", size=33),
+    *neinz2("auch nicht: Schranke der persönlichen Ehre", 790, "ehre", beim("ehre", "nicht"), size=33),
     zit("Rn. 62 f.", 900, 798, "ehre"),
     *requisit([("bverwg", ("tabler", "gavel", 110, HOLZ), "BVerwG: allgemein", WEISS),
                ("nein", ("tabler", "building-bank", 110, WEISS), "BVerfG: nein", HELLROT),
@@ -535,7 +541,7 @@ folie([("ah3", f"{PIII} › Grenzen der Ausnahme"), ("geist", f"{PIII} › kein 
     *tafel("ah3", "Grenzen der Ausnahme"),
     *neinz("nicht übertragbar auf andere Meinungen", 185, beim("ah3", "andere"), "Bold", 34),
     zit("BVerfGE 124, 300, Rn. 66", 185, 233, beim("ah3", "andere")),
-    *neinz("kein Verbot von rechtsradikalem oder", 300, "geist", "Bold", 34),
+    *neinz2("kein Verbot von rechtsradikalem oder", 300, "geist", beim("geist", "nicht"), "Bold", 34),
     z("nationalsozialistischem Gedankengut", 185, 346, beim("geist", "nationalsozialistisches"), "Bold", 34),
     z("allein wegen seiner geistigen Wirkung", 185, 392, beim("geist", "geistigen"), size=34),
     zit("Leitsatz 2; Rn. 67", 185, 440, beim("geist", "geistigen")),
@@ -606,7 +612,7 @@ folie([("anw", f"{PA} · Billigung durch eine Ehrung?"), ("person", f"{PA} › n
     z("wenn sie als Symbolfigur für die national-", 185, 226, beim("symbol", "Symbolfigur"), size=34),
     z("sozialistische Herrschaft als solche steht", 185, 272, beim("symbol", "Symbolfigur"), size=34),
     zit("BVerfGE 124, 300, Rn. 101, 107", 185, 320, beim("symbol", "Symbolfigur")),
-    *neinz("ein Lob, das nur der Person gilt: reicht nicht", 385, "person", "Bold", 34),
+    *neinz2("ein Lob, das nur der Person gilt: reicht nicht", 385, "person", beim("person", "nicht"), "Bold", 34),
     zit("Rn. 107", 185, 433, "person"),
     *okz("BVerwG durfte annehmen: Billigung der", 495, "vertretbar", "Bold", 34),
     z("nationalsozialistischen Herrschaft im Ganzen", 185, 541, beim("vertretbar", "Ganzen"), size=34),
@@ -654,7 +660,7 @@ folie([("tipp", "Klausurtipp · erst: allgemeines Gesetz?"), ("tipp2", "Klausurt
     z("ob das Gesetz allgemein ist", 200, 250, beim("tipp", "allgemein"), "Bold", 36),
     *neinz("wenn nicht: Sonderrecht, grundsätzlich unzulässig", 330, "tipp2", size=34, x=200),
     linienzug([(130, 410), (1130, 410)], "tipp3", breite=3),
-    *neinz("Wunsiedel-Ausnahme nicht auf andere", 440, "tipp3", "Bold", 34, x=200),
+    *neinz2("Wunsiedel-Ausnahme nicht auf andere", 440, "tipp3", beim("tipp3", "nicht"), "Bold", 34, x=200),
     z("Meinungen übertragen", 200, 488, beim("tipp3", "andere"), "Bold", 34),
     zit("BVerfGE 124, 300, Rn. 61, 64, 66", 200, 538, beim("tipp3", "andere")),
     *redet("LX_warnt", FX, FB, FR + 40, "tipp", "sch"),
