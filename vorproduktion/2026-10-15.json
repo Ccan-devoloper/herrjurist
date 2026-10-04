@@ -1,21 +1,16 @@
 {
   "datum": "2026-10-15",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
+  "freigabeBetreiber": true,
   "liveVerknuepft": false,
-  "vorproduktionStatus": "review",
+  "vorproduktionStatus": "live-freigegeben",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungUsd": 0,
     "providerKostenUsd": 0,
-    "piperOffline": true,
     "coverbilder": false,
-    "autorUsd": 0,
-    "faktencheckUsd": 0,
-    "sonstigeTextKiUsd": 0,
     "bildgenerierungErlaubt": false,
-    "bildkostenUsd": 0,
-    "bilderStatus": "bewusst-ausgelassen"
+    "reelStimme": "elevenlabs-abo"
   },
   "plan": {
     "beitraege": [
@@ -44,8 +39,7 @@
         "themaId": "strafat-724",
         "themaTitel": "Notwehr: Erforderlichkeit und Gebotenheit",
         "fach": "strafat",
-        "klausur": 2,
-        "lang": false
+        "klausur": 2
       }
     ],
     "stories": [
@@ -65,8 +59,7 @@
         "slot": "s1",
         "zeit": "08:00",
         "art": "teaser",
-        "beitragSlot": "b1",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b1"
       },
       {
         "slot": "s6",
@@ -78,8 +71,7 @@
         "slot": "s2",
         "zeit": "12:30",
         "art": "teaser",
-        "beitragSlot": "b2",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b2"
       },
       {
         "slot": "s7",
@@ -97,8 +89,7 @@
         "slot": "s3",
         "zeit": "17:30",
         "art": "teaser",
-        "beitragSlot": "b3",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b3"
       },
       {
         "slot": "s9",
@@ -253,81 +244,7 @@
       "klausur": 3,
       "fachLabel": "Verwaltungsprozessrecht",
       "themaId": "vwgo-652",
-      "slug": "2026-10-15-b1",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Erst das Begehren, dann die Klageart: § 88 VwGO",
-          "titelZeilen": [
-            "Erst das Begehren,",
-            "dann die Klageart:",
-            "§ 88 VwGO"
-          ],
-          "coverBadge": "Spickzettel",
-          "coverText": "Begehren schlägt Wortlaut",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Der Ausgangspunkt",
-          "text": "Das Gericht darf über das Klagebegehren nicht hinausgehen, ist an die Fassung der Anträge aber nicht gebunden (§ 88 VwGO). Deshalb fragst du zuerst: Was will der Kläger in der Sache erreichen? Erst daraus folgt die statthafte Klageart."
-        },
-        {
-          "art": "vergleich",
-          "titel": "Begehren: Geht es um einen VA?",
-          "links": {
-            "titel": "VA",
-            "punkte": [
-              "Aufhebung: Anfechtungsklage",
-              "Erlass: Verpflichtungsklage",
-              "Erledigt: Fortsetzungs-feststellungsklage"
-            ]
-          },
-          "rechts": {
-            "titel": "Kein VA",
-            "punkte": [
-              "Tun oder Unterlassen: Leistungsklage",
-              "Rechtsverhältnis: Feststellungsklage",
-              "Bebauungsplan: Normenkontrolle"
-            ]
-          }
-        },
-        {
-          "art": "text",
-          "titel": "Die Stolperstellen",
-          "punkte": [
-            "Antrag abgelehnt: Verpflichtungsklage – die Ablehnung wird dabei mit aufgehoben.",
-            "Belastende Nebenbestimmung: Anfechtungsklage; die Teilbarkeit gehört in die Begründetheit.",
-            "Realakt wie Auskunft oder Warnung: Leistungs- bzw. Unterlassungsklage, keine Anfechtung.",
-            "Erledigung vor Klageerhebung: Fortsetzungsfeststellungsklage analog – die Einordnung ist umstritten."
-          ]
-        },
-        {
-          "art": "text",
-          "titel": "So schreibst du es",
-          "text": "„Der Kläger begehrt … (§ 88 VwGO). Statthaft ist daher die …klage.“ Ein Satz zum Begehren, einer zur Klageart. Ausführlicher wird es nur, wenn die Einordnung wirklich zweifelhaft ist – etwa bei der Frage, ob überhaupt ein Verwaltungsakt vorliegt."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Erst das Begehren, dann die Klageart. Der Wortlaut des Antrags ist nur ein Indiz."
-        },
-        {
-          "art": "cta",
-          "titel": "Klageart in drei Fragen",
-          "punkte": [
-            "Was will der Kläger erreichen?",
-            "Geht es um einen Verwaltungsakt?",
-            "Hat sich etwas erledigt?"
-          ],
-          "icons": [
-            "zielscheibe",
-            "dokument",
-            "uhr"
-          ]
-        }
-      ],
-      "caption": "Die statthafte Klageart folgt nicht dem Wortlaut des Antrags, sondern dem Begehren des Klägers: Nach § 88 VwGO ist das Gericht an die Fassung der Anträge nicht gebunden. Frag also zuerst, was der Kläger erreichen will, dann ob es um einen Verwaltungsakt geht – Aufhebung, Erlass oder erledigt – oder um ein sonstiges Verwaltungshandeln. Speichern als Spickzettel für die Zulässigkeit.",
+      "caption": "Die statthafte Klageart folgt nicht dem Wortlaut des Antrags, sondern dem Begehren: Das Gericht ist an die Fassung der Anträge nicht gebunden (§ 88 VwGO).\n\n▸ Geht es um einen Verwaltungsakt? Aufhebung: Anfechtungsklage (§ 42 Abs. 1 Alt. 1 VwGO). Erlass: Verpflichtungsklage (§ 42 Abs. 1 Alt. 2 VwGO). Erledigt: Fortsetzungsfeststellungsklage (§ 113 Abs. 1 S. 4 VwGO).\n▸ Kein Verwaltungsakt: allgemeine Leistungsklage für Tun oder Unterlassen, Feststellungsklage für ein Rechtsverhältnis (§ 43 VwGO), Normenkontrolle etwa gegen einen Bebauungsplan (§ 47 Abs. 1 Nr. 1 VwGO).\n▸ Stolperstellen: Antrag abgelehnt – Verpflichtungsklage, die Ablehnung wird mit aufgehoben. Belastende Nebenbestimmung – Anfechtungsklage, die Teilbarkeit gehört in die Begründetheit. Realakt wie Auskunft oder Warnung – Leistungs- bzw. Unterlassungsklage. Erledigung vor Klageerhebung – Fortsetzungsfeststellungsklage analog, die Einordnung ist umstritten.\n▸ Im Gutachten: ein Satz zum Begehren, einer zur Klageart.\n\nZum Schluss: der Baustein für dein Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -339,41 +256,63 @@
         "#klausurtraining",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Statthafte Klageart nach dem Begehren",
-      "coverText": "Begehren schlägt Wortlaut",
-      "coverBadge": "Spickzettel",
-      "coverRegie": {
-        "charaktere": [
-          "zylla",
-          "form7"
-        ],
-        "kernidee": "Nicht die Worte des Antrags entscheiden über die Klageart, sondern das, was der Kläger wirklich will.",
-        "handlung": "{A} holds up a crumpled note with a vague request, while {B} hovers beside her and projects a small beam onto her heart-shaped wish icon, sorting it into the right one of several labelled slots.",
-        "hinweisRegie": "Place the note in the free space near the illuminated wish icon, slightly tilted toward the chosen slot, without covering {A}'s face or the crumpled note.",
-        "alternative": "{B} ignores the label on a parcel and opens it to see its real contents before placing it on the correct conveyor belt, while {A} watches curiously."
-      },
-      "bildSzene": "droid sorts real wish into right slot",
-      "bildSzeneAlt": "parcel opened before sorting",
       "quellen": [
         "§ 88 VwGO",
         "§ 42 Abs. 1 VwGO",
         "§ 43 VwGO",
         "§ 47 VwGO",
-        "§ 113 Abs. 1 S. 4 VwGO",
-        "Themenpool: vwgo-652"
+        "§ 113 Abs. 1 S. 4 VwGO"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "reihenfolge",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-15-b1",
+      "kurztitel": "Statthafte Klageart nach dem Begehren",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:19:48.213Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Spickzettel",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Spickzettel",
+          "text": "Spickzettel · Antrag verunglückt? · Das Begehren · zählt · § 88 VwGO · Klageart finden · + Gutachten-Baustein",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsprozessrecht",
+          "text": "Der Fall · B beantragt eine Baugenehmigung. Die Behörde lehnt ab. · B klagt auf „Aufhebung des Ablehnungsbescheids“. · Jetzt du: Welche Klageart ist statthaft? · Anfechtung?"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsprozessrecht",
+          "text": "Geht es um einen VA? · Verwaltungsakt · Aufhebung: Anfechtung · § 42 Abs. 1 Alt. 1 VwGO · Erlass: Verpflichtung · § 42 Abs. 1 Alt. 2 VwGO · erledigt: Fortsetzungs­feststellung · § 113 Abs. 1 S. 4 VwGO · Kein VA · Tun, Unterlassen: Leistungsklage · Rechtsverhältnis: Feststellung · § 43 VwGO · Bebauungsplan: Normenkontrolle · § 47 VwGO · Erst das Begehren!"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsprozessrecht",
+          "text": "Der typische Fehler · Am Wortlaut des Antrags kleben. · Abgelehnter Antrag: Verpflichtungsklage, die Ablehnung fällt mit. · Realakt wie eine Warnung: Leistungs- oder Unterlassungsklage. · Was will B?"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsprozessrecht",
+          "text": "Lösung · B will die Baugenehmigung, nicht nur die Aufhebung. · § 88 VwGO · Statthaft ist die Verpflichtungsklage. · § 42 Abs. 1 Alt. 2 VwGO · Begehren schlägt Wortlaut · Verpflichtung!"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsprozessrecht",
+          "text": "Lösung: Verpflichtungsklage · Begehren auslegen, § 88 VwGO · Erst das Begehren, · dann die Klageart. · Wortlaut ist nur Indiz. · Speichern fürs Examen · Hättest du Anfechtung gewählt? · Weiterwischen: Gutachten-Baustein"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsprozessrecht",
+          "text": "So im Gutachten · Obersatz · § 88 VwGO · Die Klageart richtet sich nach dem Begehren. · Definition · § 42 Abs. 1 Alt. 2 VwGO · Verpflichtungsklage: Erlass eines abgelehnten VA · Subsumtion · B will die Baugenehmigung erhalten. · Ergebnis · Statthaft ist die Verpflichtungsklage."
+        }
+      ]
     },
     "b2": {
       "format": "vergleich",
@@ -381,93 +320,7 @@
       "klausur": 1,
       "fachLabel": "Deliktsrecht",
       "themaId": "delikt-128",
-      "slug": "2026-10-15-b2",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Eigentum verletzt: rechtswidrig. Persönlichkeit: erst abwägen",
-          "titelZeilen": [
-            "Eigentum verletzt:",
-            "rechtswidrig.",
-            "Persönlichkeit: erst",
-            "abwägen"
-          ],
-          "coverBadge": "Abgrenzung",
-          "coverText": "Rahmenrecht: erst abwägen",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Woher das Persönlichkeitsrecht kommt",
-          "text": "Das allgemeine Persönlichkeitsrecht steht nicht ausdrücklich im BGB. Die Rechtsprechung hat es aus Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG entwickelt und als sonstiges Recht im Sinne des § 823 Abs. 1 BGB anerkannt."
-        },
-        {
-          "art": "vergleich",
-          "titel": "Klassisches Rechtsgut vs. Rahmenrecht",
-          "links": {
-            "titel": "Rechtsgut",
-            "punkte": [
-              "Leben, Körper, Eigentum: Der Tatbestand indiziert die Rechtswidrigkeit.",
-              "Geprüft werden nur noch Rechtfertigungsgründe."
-            ]
-          },
-          "rechts": {
-            "titel": "Rahmenrecht",
-            "punkte": [
-              "Die Rechtswidrigkeit muss positiv festgestellt werden.",
-              "Güter- und Interessenabwägung, etwa mit Meinungs- oder Pressefreiheit."
-            ]
-          }
-        },
-        {
-          "art": "text",
-          "titel": "Orientierung in der Abwägung",
-          "punkte": [
-            "Intimsphäre: grundsätzlich absolut geschützt.",
-            "Privatsphäre: geschützt, aber Abwägung mit dem Informationsinteresse.",
-            "Sozialsphäre: Eingriffe eher hinzunehmen, etwa wahre Berichte über berufliches Wirken.",
-            "Bildnisse: vorrangig §§ 22, 23 KUG."
-          ]
-        },
-        {
-          "art": "vergleich",
-          "titel": "Welche Rechtsfolge?",
-          "links": {
-            "titel": "Unterlassung",
-            "punkte": [
-              "Unterlassung und Beseitigung analog § 1004 BGB.",
-              "Widerruf unwahrer Tatsachen."
-            ]
-          },
-          "rechts": {
-            "titel": "Entschädigung",
-            "punkte": [
-              "Geld nur bei schwerer Verletzung ohne andere Abhilfe.",
-              "Aus § 823 I BGB mit Art. 1, 2 GG – nicht § 253 BGB."
-            ]
-          }
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Beim Persönlichkeitsrecht entscheidet die Abwägung über die Rechtswidrigkeit – nicht schon der Eingriff."
-        },
-        {
-          "art": "cta",
-          "titel": "Persönlichkeitsrecht in drei Zügen",
-          "punkte": [
-            "Schutzbereich und Sphäre bestimmen",
-            "Rechtswidrigkeit durch Abwägung",
-            "Abwehr oder Geldentschädigung"
-          ],
-          "icons": [
-            "person",
-            "waage",
-            "banknote"
-          ]
-        }
-      ],
-      "caption": "Wer Eigentum verletzt, handelt grundsätzlich rechtswidrig. Beim allgemeinen Persönlichkeitsrecht ist das anders: Bei diesem Rahmenrecht ist die Rechtswidrigkeit nicht indiziert – sie muss durch eine Güter- und Interessenabwägung positiv festgestellt werden, etwa gegen die Pressefreiheit. Rechtsfolgen: Unterlassung analog § 1004 BGB, bei schweren Verletzungen Geldentschädigung aus § 823 Abs. 1 BGB i.V.m. Art. 1, 2 GG.",
+      "caption": "Wer Eigentum verletzt, handelt grundsätzlich rechtswidrig. Beim allgemeinen Persönlichkeitsrecht ist das anders.\n\n▸ Das allgemeine Persönlichkeitsrecht hat die Rechtsprechung aus Art. 2 Abs. 1 i. V. m. Art. 1 Abs. 1 GG entwickelt und als sonstiges Recht im Sinne des § 823 Abs. 1 BGB anerkannt (BGHZ 13, 334).\n▸ Bei diesem Rahmenrecht ist die Rechtswidrigkeit nicht indiziert – sie muss durch eine Güter- und Interessenabwägung positiv festgestellt werden, etwa gegen die Pressefreiheit (Art. 5 Abs. 1 S. 2 GG).\n▸ Orientierung: Intimsphäre grundsätzlich absolut geschützt, Privatsphäre mit Abwägung, Sozialsphäre – etwa wahre Berichte über berufliches Wirken – eher hinzunehmen. Bildnisse: vorrangig §§ 22, 23 KUG.\n▸ Rechtsfolgen: Unterlassung und Beseitigung analog § 1004 BGB, Widerruf unwahrer Tatsachen. Geldentschädigung nur bei schwerer Verletzung ohne andere Abhilfe, aus § 823 Abs. 1 BGB i. V. m. Art. 1 Abs. 1, Art. 2 Abs. 1 GG, nicht aus § 253 BGB (BGHZ 128, 1).\n\nZum Schluss: der Baustein für dein Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -479,143 +332,78 @@
         "#jurastudent",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Persönlichkeitsrecht: Abwägung statt Indiz",
-      "coverText": "Rahmenrecht: erst abwägen",
-      "coverBadge": "Abgrenzung",
-      "coverRegie": {
-        "charaktere": [
-          "mara",
-          "flux"
-        ],
-        "kernidee": "Beim Persönlichkeitsrecht folgt die Rechtswidrigkeit nicht aus dem Eingriff, sondern erst aus einer Abwägung.",
-        "handlung": "{A} holds a camera away from a private window while {B} places a newspaper and a small portrait on the two pans of a balance scale, waiting for it to settle.",
-        "hinweisRegie": "Place the note in the open space right above the balance scale, gently tilted, so it reads as the decisive weighing without covering the camera, the window or faces.",
-        "alternative": "{B} draws three nested circles on the ground around a figure, while {A} steps carefully only into the outermost ring."
-      },
-      "bildSzene": "newspaper and portrait on balance scale",
-      "bildSzeneAlt": "three nested privacy circles",
       "quellen": [
         "§ 823 Abs. 1 BGB",
         "§ 1004 BGB analog",
+        "§ 253 BGB",
         "§§ 22, 23 KUG",
-        "Art. 1 Abs. 1, Art. 2 Abs. 1 GG",
-        "Themenpool: delikt-128"
+        "Art. 1 Abs. 1, Art. 2 Abs. 1, Art. 5 Abs. 1 GG",
+        "BGHZ 13, 334",
+        "BGHZ 128, 1"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "kontrastpaar",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-15-b2",
+      "kurztitel": "Wie wird das allgemeine Persönlichkeitsrecht geschützt?",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:19:48.213Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Vergleich",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vergleich",
+          "text": "Vergleich · Persönlichkeit · verletzt? Erst · abwägen · § 823 Abs. 1 BGB · Rahmenrecht · + Gutachten-Baustein · Rechtsgut · oder · Rahmenrecht",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Deliktsrecht",
+          "text": "Der Fall · Zeitschrift Z berichtet ausführlich über die Scheidung der Moderatorin M. · M verlangt Unterlassung. · Jetzt du: Ist der Eingriff schon rechtswidrig? · Mein Privatleben!"
+        },
+        {
+          "art": "text",
+          "titel": "Deliktsrecht",
+          "text": "Woher kommt das Recht? · Nicht im BGB geregelt, von der Rechtsprechung entwickelt. · Art. 2 Abs. 1 i. V. m. Art. 1 Abs. 1 GG · Geschützt als sonstiges Recht. · § 823 Abs. 1 BGB · Richterrecht!"
+        },
+        {
+          "art": "text",
+          "titel": "Deliktsrecht",
+          "text": "Rechtsgut oder Rahmenrecht? · Rechtsgut · Eingriff indiziert die Rechtswidrigkeit · nur noch Rechtfertigung prüfen · Rahmenrecht · Rechtswidrigkeit positiv feststellen · abwägen, etwa mit der Pressefreiheit · Art. 5 Abs. 1 S. 2 GG · Erst abwägen!"
+        },
+        {
+          "art": "text",
+          "titel": "Deliktsrecht",
+          "text": "Sphären in der Abwägung · Intimsphäre: grundsätzlich absolut geschützt. · Privatsphäre: Abwägung mit dem Informationsinteresse. · Sozialsphäre: wahre Berichte eher hinzunehmen. · Bildnisse: vorrangig das KUG · §§ 22, 23 KUG · Scheidung: privat?"
+        },
+        {
+          "art": "text",
+          "titel": "Deliktsrecht",
+          "text": "Welche Rechtsfolge? · Abwehr · Unterlassung, Beseitigung · § 1004 BGB analog · Widerruf unwahrer Tatsachen · Geldentschädigung · nur bei schwerer Verletzung ohne andere Abhilfe · aus dem Schutzauftrag des GG, nicht § 253 BGB · Geld nur selten!"
+        },
+        {
+          "art": "text",
+          "titel": "Deliktsrecht",
+          "text": "Lösung: erst die Abwägung entscheidet · Rahmenrecht: Rechtswidrigkeit nicht indiziert · Rahmenrecht: · Abwägung entscheidet · über die Rechtswidrigkeit. · Speichern fürs Examen · Hättest du die Abwägung vergessen? · Weiterwischen: Gutachten-Baustein"
+        },
+        {
+          "art": "text",
+          "titel": "Deliktsrecht",
+          "text": "So im Gutachten · Obersatz · §§ 823 Abs. 1, 1004 BGB analog · M könnte Unterlassung verlangen. · Definition · Rahmenrecht: Rechtswidrigkeit durch Abwägung · Subsumtion · Scheidung betrifft die Privatsphäre, gegen das Informationsinteresse abwägen. · Ergebnis · Rechtswidrig, wenn Ms Schutzinteresse überwiegt."
+        }
+      ]
     },
     "b3": {
       "format": "reel",
-      "layout": "erklaer",
       "fach": "strafat",
       "klausur": 2,
       "fachLabel": "Strafrecht AT",
       "themaId": "strafat-724",
-      "slug": "2026-10-15-b3",
-      "szenen": [
-        {
-          "art": "hook",
-          "titel": "Diesen Satz zur Notwehr liest man oft – er stimmt nicht",
-          "unter": "Notwehr · § 32 StGB",
-          "text": "„Notwehr muss verhältnismäßig sein“ – stimmt nicht: Erforderlich heißt mildestes gleich wirksames Mittel.",
-          "norm": "§ 32 Abs. 2 StGB",
-          "icon": "schild",
-          "sprecher": "Diesen Satz zur Notwehr liest man in vielen Klausuren. Die Verteidigung müsse verhältnismäßig sein. Das stimmt nicht: Das Recht braucht dem Unrecht nicht zu weichen. Geprüft wird die Erforderlichkeit, danach die Gebotenheit.",
-          "marken": [
-            "stimmt nicht",
-            "keine Güterabwägung"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "schritt",
-          "nummer": 1,
-          "titel": "Geeignet",
-          "text": "Die Abwehr kann den Angriff beenden oder abschwächen.",
-          "norm": "§ 32 Abs. 2 StGB",
-          "sprecher": "Schritt eins: geeignet. Die Verteidigung muss den Angriff sofort beenden oder wenigstens abschwächen können.",
-          "marken": [
-            "geeignet"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 2,
-          "titel": "Mildestes gleich wirksames Mittel",
-          "text": "Unter mehreren sicheren Mitteln das mildeste.",
-          "norm": "§ 32 Abs. 2 StGB",
-          "sprecher": "Schritt zwei: das mildeste Mittel. Stehen mehrere gleich wirksame Abwehrmittel zur Verfügung, muss der Verteidiger das mildeste wählen. Auf ein unsicheres Mittel muss er sich aber nicht verlassen. Beurteilt wird das objektiv aus der Sicht vor der Tat.",
-          "marken": [
-            "mildestes Mittel"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 3,
-          "titel": "Lebensgefährliche Mittel: stufenweise",
-          "text": "Wenn Zeit bleibt: androhen, Warnschuss, dann weniger gefährlich treffen.",
-          "norm": null,
-          "sprecher": "Schritt drei: lebensgefährliche Waffen. Lässt die Lage es zu, muss der Einsatz grundsätzlich erst angedroht werden, etwa durch einen Warnschuss. Ist dafür keine Zeit, darf der Verteidiger sofort wirksam abwehren.",
-          "marken": [
-            "androhen, wenn möglich"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 4,
-          "titel": "Gebotenheit",
-          "text": "Hier – und nur hier – wirken sozialethische Einschränkungen.",
-          "norm": "§ 32 Abs. 1 StGB",
-          "sprecher": "Schritt vier: Gebotenheit. Hier, und nur hier, kommen sozialethische Einschränkungen ins Spiel. Das Notwehrrecht kann dann begrenzt oder sogar ganz ausgeschlossen sein.",
-          "marken": [
-            "geboten?"
-          ]
-        },
-        {
-          "art": "punkt",
-          "titel": "Die Fallgruppen",
-          "text": "Krasses Missverhältnis, erkennbar schuldlos Handelnde, Notwehrprovokation.",
-          "norm": null,
-          "sprecher": "Die Klassiker: ein krasses Missverhältnis zwischen geschütztem Gut und Verletzung, Angriffe erkennbar schuldlos Handelnder wie Kinder, und die selbst provozierte Notwehrlage. Dort gilt eher: ausweichen, erst Schutzwehr, dann Trutzwehr.",
-          "marken": [
-            "drei Fallgruppen"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "merke",
-          "titel": "Die Kurzform",
-          "text": "Erforderlich statt verhältnismäßig – Einschränkungen nur über die Gebotenheit.",
-          "norm": "§ 32 StGB",
-          "sprecher": "Merke: erforderlich, nicht verhältnismäßig. Einschränkungen kommen nur über die Gebotenheit.",
-          "marken": [
-            "nicht verhältnismäßig"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "cta",
-          "titel": "Beide Prüfpunkte sauber trennen",
-          "text": "Speichern für die nächste Notwehrprüfung.",
-          "sprecher": "Speicher dir das für die nächste Notwehrprüfung. Und trenn Erforderlichkeit und Gebotenheit immer sauber.",
-          "marken": [
-            "speichern"
-          ],
-          "nummer": null,
-          "norm": null
-        }
-      ],
-      "caption": "„Notwehr muss verhältnismäßig sein“ – diesen Satz liest man in vielen Klausuren, und er stimmt nicht. Eine Güterabwägung findet bei der Erforderlichkeit nicht statt. Erforderlich ist die Abwehr, die geeignet ist und unter mehreren gleich wirksamen Mitteln das mildeste darstellt. Lebensgefährliche Mittel sind, wenn die Lage es zulässt, zuerst anzudrohen. Sozialethische Einschränkungen gehören erst in die Gebotenheit: krasses Missverhältnis, schuldlos Handelnde, Notwehrprovokation.",
+      "caption": "„Notwehr muss verhältnismäßig sein“ – diesen Satz liest man in vielen Klausuren, und er stimmt nicht.\n\n▸ Notwehr ist die Verteidigung, die erforderlich ist, um einen gegenwärtigen rechtswidrigen Angriff abzuwenden (§ 32 Abs. 2 StGB). Eine Güterabwägung findet bei der Erforderlichkeit nicht statt.\n▸ Erforderlich ist die Abwehr, die geeignet ist und unter mehreren gleich wirksamen Mitteln das mildeste darstellt. Auf ein unsicheres Mittel muss sich der Verteidiger nicht verlassen; beurteilt wird objektiv aus der Sicht vor der Tat.\n▸ Lebensgefährliche Mittel sind, wenn die Lage es zulässt, zuerst anzudrohen.\n▸ Sozialethische Einschränkungen gehören erst in die Gebotenheit (§ 32 Abs. 1 StGB): krasses Missverhältnis, Angriffe erkennbar schuldlos Handelnder wie Kinder, Notwehrprovokation. Dort gilt eher: ausweichen, erst Schutzwehr, dann Trutzwehr.\n\nSpeichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -627,218 +415,315 @@
         "#jurastudent",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Notwehr: Erforderlichkeit und Gebotenheit",
-      "titelZeilen": [
-        "Diesen Satz zur",
-        "Notwehr liest man",
-        "oft – er stimmt nicht"
-      ],
-      "coverText": "Erst erforderlich, dann geboten",
-      "coverBadge": "Reel",
-      "coverRegie": {
-        "charaktere": [
-          "mara",
-          "rex"
-        ],
-        "kernidee": "Bei der Notwehr zählt das mildeste sichere Abwehrmittel, nicht ein Gleichgewicht der Güter.",
-        "handlung": "{A} stands firmly with a raised shield blocking an incoming attack, while {B} nervously lines up three defensive tools from gentle to heavy and hands her the gentlest one that still works.",
-        "hinweisRegie": "Place the note in the free space above the row of three tools, slightly tilted toward the chosen gentle one, without covering the shield or {A}'s face.",
-        "alternative": "{B} tries to put weights on a balance scale during an attack, while {A} calmly sets the scale aside and raises a simple shield."
-      },
-      "bildSzene": "shield raised, gentlest working tool chosen",
-      "bildSzeneAlt": "balance scale set aside during attack",
       "quellen": [
-        "§ 32 StGB",
-        "Themenpool: strafat-724"
+        "§ 32 StGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "zuspitzung-klassiker",
-      "coverBildAuslassen": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-15-b3",
+      "kurztitel": "Notwehr: Erforderlichkeit und Gebotenheit",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:19:48.215Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "bild": "op-cover",
+      "reelTyp": "klausurfalle",
+      "hookStil": "kippen",
+      "coverBadge": "Reel",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Notwehr? Muss verhältnismäßig sein."
+        },
+        {
+          "art": "schritt",
+          "titel": "Geeignet"
+        },
+        {
+          "art": "schritt",
+          "titel": "Mildestes sicheres Mittel"
+        },
+        {
+          "art": "schritt",
+          "titel": "Gebotenheit"
+        }
+      ],
+      "sprecher": [
+        "Notwehr muss verhältnismäßig sein? Falsch. Sie muss erforderlich sein.",
+        "Erst geeignet: Die Abwehr kann den Angriff beenden oder abschwächen.",
+        "Dann das mildeste gleich wirksame Mittel. Auf unsichere Mittel muss sich niemand verlassen.",
+        "Einschränkungen erst bei der Gebotenheit: etwa krasses Missverhältnis, Kinder, Provokation.",
+        "Merke: erforderlich, nicht verhältnismäßig."
+      ],
+      "dauerS": 28.783,
+      "tempo": 1.0
     },
     "s4": {
       "slot": "s4",
       "art": "frage",
-      "fach": "sachen",
+      "fach": null,
       "klausur": 1,
-      "pairId": "sachen-498",
-      "ueberzeile": "Prüfungsfrage Sachenrecht",
-      "titel": "Gutgläubiger Erwerb: Wann ist der Erwerber nach § 932 BGB nicht in gutem Glauben?",
-      "optionen": [
-        "Bei Kenntnis oder grob fahrlässiger Unkenntnis vom fehlenden Eigentum",
-        "Schon bei leicht fahrlässiger Unkenntnis",
-        "Nur bei positiver Kenntnis vom fehlenden Eigentum"
-      ],
-      "richtig": 0,
-      "quellen": [
-        "§ 932 BGB",
-        "§ 935 BGB",
-        "Themenpool: sachen-498"
-      ],
       "fachLabel": "Sachenrecht",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:19:48.215Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "sachen-498",
+      "beitragSlot": null,
+      "quellen": null,
+      "frage": [
+        "Wann ist der",
+        "Erwerber bösgläubig?"
+      ],
+      "optionen": [
+        "Kenntnis oder grobe Fahrlässigkeit",
+        "Schon leichte Fahrlässigkeit",
+        "Nur positive Kenntnis"
+      ],
+      "pairId": "sachen-498",
+      "sichtbareTexte": [
+        "Sachenrecht",
+        "Prüfungsfrage",
+        "Wann ist der",
+        "Erwerber bösgläubig?",
+        "Kenntnis oder grobe Fahrlässigkeit",
+        "Schon leichte Fahrlässigkeit",
+        "Nur positive Kenntnis",
+        "Auflösung in der nächsten Story"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s5": {
       "slot": "s5",
       "art": "antwort",
-      "fach": "sachen",
+      "fach": null,
       "klausur": 1,
-      "pairId": "sachen-498",
-      "ueberzeile": "Auflösung",
-      "titel": "Kenntnis oder grobe Fahrlässigkeit schadet",
-      "text": "§ 932 Abs. 2 BGB: Nicht in gutem Glauben ist, wem bekannt oder infolge grober Fahrlässigkeit unbekannt ist, dass die Sache nicht dem Veräußerer gehört. Klassiker Gebrauchtwagen: Wer sich die Zulassungsbescheinigung Teil II nicht vorlegen lässt, handelt regelmäßig grob fahrlässig. Und bei abhandengekommenen Sachen hilft auch guter Glaube nicht (§ 935 BGB).",
-      "norm": "§ 932 Abs. 2 BGB · § 935 BGB",
-      "quellen": [
-        "§ 932 BGB",
-        "§ 935 BGB",
-        "Themenpool: sachen-498"
-      ],
       "fachLabel": "Sachenrecht",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:19:48.215Z",
-      "fachStand": "redaktionell-2026-09-25",
-      "optionen": [
-        "Bei Kenntnis oder grob fahrlässiger Unkenntnis vom fehlenden Eigentum",
-        "Schon bei leicht fahrlässiger Unkenntnis",
-        "Nur bei positiver Kenntnis vom fehlenden Eigentum"
+      "themaId": "sachen-498",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Kenntnis oder grobe",
+        "Fahrlässigkeit"
       ],
-      "richtig": 0
+      "optionen": [
+        "Kenntnis oder grobe Fahrlässigkeit",
+        "Schon leichte Fahrlässigkeit",
+        "Nur positive Kenntnis"
+      ],
+      "richtig": 0,
+      "text": "Gebrauchtwagen ohne Blick in die Zulassungsbescheinigung Teil II: regelmäßig grob fahrlässig.",
+      "norm": "§ 932 Abs. 2 BGB",
+      "pairId": "sachen-498",
+      "sichtbareTexte": [
+        "Sachenrecht",
+        "Auflösung",
+        "Kenntnis oder grobe",
+        "Fahrlässigkeit",
+        "Kenntnis oder grobe Fahrlässigkeit",
+        "Schon leichte Fahrlässigkeit",
+        "Nur positive Kenntnis",
+        "Gebrauchtwagen ohne Blick in die Zulassungsbescheinigung Teil II: regelmäßig grob fahrlässig.",
+        "§ 932 Abs. 2 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s6": {
       "slot": "s6",
       "art": "norm",
-      "fach": "delikt",
+      "fach": null,
       "klausur": 1,
-      "pairId": "delikt-036",
-      "ueberzeile": "Norm des Tages",
-      "titel": "Gewerbebetrieb als sonstiges Recht: nur bei betriebsbezogenem Eingriff",
-      "text": "Die Rechtsprechung schützt den eingerichteten und ausgeübten Gewerbebetrieb als sonstiges Recht nach § 823 Abs. 1 BGB – aber nur subsidiär und nur gegen betriebsbezogene Eingriffe, die sich gegen den Betrieb als solchen richten. Wer bloß ein Stromkabel beschädigt, greift nicht betriebsbezogen ein. Die Rechtswidrigkeit ist durch Abwägung festzustellen.",
-      "norm": "§ 823 Abs. 1 BGB",
-      "quellen": [
-        "§ 823 Abs. 1 BGB",
-        "Themenpool: delikt-036"
-      ],
       "fachLabel": "Deliktsrecht",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:19:48.215Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "delikt-036",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Gewerbebetrieb:",
+        "nur betriebsbezogen"
+      ],
+      "norm": "§ 823 Abs. 1 BGB",
+      "punkte": [
+        [
+          "Eingriff gegen den Betrieb als solchen, nur subsidiär",
+          "ok",
+          null
+        ],
+        [
+          "Stromkabel beschädigt: nicht betriebsbezogen",
+          "nein",
+          null
+        ]
+      ],
+      "sichtbareTexte": [
+        "Deliktsrecht",
+        "Norm des Tages",
+        "Gewerbebetrieb:",
+        "nur betriebsbezogen",
+        "§ 823 Abs. 1 BGB",
+        "Eingriff gegen den Betrieb als solchen, nur subsidiär",
+        "Stromkabel beschädigt: nicht betriebsbezogen"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s7": {
       "slot": "s7",
       "art": "streitstand",
-      "fach": "assessorz",
+      "fach": null,
       "klausur": 1,
-      "pairId": "assessorz-812",
-      "ueberzeile": "Streitstand 2. Examen",
-      "titel": "Hilfsaufrechnung: Muss erst die Klageforderung feststehen?",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-812",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Hilfsaufrechnung:",
+        "erst die Klageforderung?"
+      ],
+      "ansichten": [
+        [
+          "Beweiserhebungstheorie (h. M.)",
+          "Ja, erst Klageforderung klären."
+        ],
+        [
+          "Klageabweisungstheorie",
+          "Nein, Aufrechnung genügt."
+        ]
+      ],
+      "klausur_tipp": "Klausur: der h. M. folgen.",
       "norm": "§ 322 Abs. 2 ZPO",
-      "optionen": [
-        "Beweiserhebungstheorie (h.M.): Erst die Klageforderung klären, dann über die Hilfsaufrechnung entscheiden.",
-        "Klageabweisungstheorie: Abweisung schon wegen der Aufrechnung, die Klageforderung darf offenbleiben."
+      "sichtbareTexte": [
+        "Zivilrechtliche Assessorklausur",
+        "Streitstand",
+        "Hilfsaufrechnung:",
+        "erst die Klageforderung?",
+        "Beweiserhebungstheorie (h. M.)",
+        "Ja, erst Klageforderung klären.",
+        "Klageabweisungstheorie",
+        "Nein, Aufrechnung genügt.",
+        "Klausur: der h. M. folgen.",
+        "§ 322 Abs. 2 ZPO"
       ],
-      "text": "Folge der h.M.: Wegen der Rechtskraft nach § 322 Abs. 2 ZPO darf die Gegenforderung nicht verbraucht werden, wenn die Klageforderung gar nicht bestand.",
-      "quellen": [
-        "§ 322 Abs. 2 ZPO",
-        "§ 387 BGB",
-        "§ 45 Abs. 3 GKG",
-        "Themenpool: assessorz-812"
-      ],
-      "fachLabel": "2. Examen Zivilrecht",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:19:48.215Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s8": {
       "slot": "s8",
       "art": "merksatz",
-      "fach": "schuldbt",
+      "fach": null,
       "klausur": 1,
-      "pairId": "schuldbt-191",
-      "ueberzeile": "Merksatz Kaufrecht",
-      "titel": "Kratzer beim Kauf gesehen: keine Nacherfüllung",
-      "text": "Kennt der Käufer den Mangel bei Vertragsschluss, sind seine Rechte ausgeschlossen – auch die Nacherfüllung (§ 442 Abs. 1 S. 1 BGB). Grob fahrlässige Unkenntnis schadet nur, wenn der Verkäufer nicht arglistig geschwiegen und keine Garantie übernommen hat.",
-      "norm": "§ 442 Abs. 1 BGB",
-      "quellen": [
-        "§ 442 BGB",
-        "§ 437 BGB",
-        "Themenpool: schuldbt-191"
-      ],
       "fachLabel": "Schuldrecht BT",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:19:48.215Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "schuldbt-191",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Kratzer gesehen:",
+        "keine Nacherfüllung"
+      ],
+      "zeilen": [
+        [
+          [
+            "Kenntnis",
+            "a"
+          ],
+          [
+            " beim Kauf:",
+            null
+          ]
+        ],
+        [
+          [
+            "keine Mängelrechte",
+            "b"
+          ],
+          [
+            ".",
+            null
+          ]
+        ],
+        [
+          [
+            "Grob fahrlässig",
+            "c"
+          ],
+          [
+            ": nur bei",
+            null
+          ]
+        ],
+        [
+          [
+            "Arglist oder Garantie.",
+            null
+          ]
+        ]
+      ],
+      "norm": "§ 442 Abs. 1 BGB",
+      "sichtbareTexte": [
+        "Schuldrecht BT",
+        "Merksatz",
+        "Kratzer gesehen:",
+        "keine Nacherfüllung",
+        "Kenntnis beim Kauf:",
+        "keine Mängelrechte.",
+        "Grob fahrlässig: nur bei",
+        "Arglist oder Garantie.",
+        "§ 442 Abs. 1 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s9": {
       "slot": "s9",
       "art": "begriff",
-      "fach": "staat",
+      "fach": null,
       "klausur": 3,
-      "pairId": "staat-605",
-      "ueberzeile": "Begriff des Tages",
-      "titel": "Wesentlichkeitstheorie: Was muss das Parlament selbst entscheiden?",
-      "text": "Der Gesetzgeber muss die wesentlichen Entscheidungen selbst treffen, vor allem im grundrechtsrelevanten Bereich, und darf sie nicht der Verwaltung überlassen. Hergeleitet aus Rechtsstaats- und Demokratieprinzip. Je intensiver der Grundrechtseingriff, desto genauer muss das Parlamentsgesetz ihn regeln.",
-      "norm": "Art. 20 Abs. 3 GG",
-      "quellen": [
-        "Art. 20 Abs. 3 GG",
-        "Themenpool: staat-605"
-      ],
       "fachLabel": "Staatsrecht",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T12:19:48.215Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "themaId": "staat-605",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Wesentlichkeits-",
+        "theorie"
+      ],
+      "kopf": "Definition",
+      "text": "Das Parlament muss wesentliche, vor allem grundrechtsrelevante Fragen selbst regeln.",
+      "norm": "Art. 20 Abs. 3 GG",
+      "sichtbareTexte": [
+        "Staatsrecht",
+        "Begriff des Tages",
+        "Wesentlichkeits-",
+        "theorie",
+        "Definition",
+        "Das Parlament muss wesentliche, vor allem grundrechtsrelevante Fragen selbst regeln.",
+        "Art. 20 Abs. 3 GG"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s1": {
       "slot": "s1",
@@ -846,16 +731,25 @@
       "fach": "vwgo",
       "klausur": 3,
       "fachLabel": "Verwaltungsprozessrecht",
-      "titel": "Statthafte Klageart nach dem Begehren",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b1",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Antrag verunglückt? Begehren zählt"
+      ],
+      "unter": "Spickzettel + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Verwaltungsprozessrecht",
+        "Neu im Feed",
+        "Antrag verunglückt? Begehren zählt",
+        "Spickzettel + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s2": {
       "slot": "s2",
@@ -863,16 +757,25 @@
       "fach": "delikt",
       "klausur": 1,
       "fachLabel": "Deliktsrecht",
-      "titel": "Persönlichkeitsrecht: Abwägung statt Indiz",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b2",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Persönlichkeit verletzt? Erst abwägen"
+      ],
+      "unter": "Vergleich + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Deliktsrecht",
+        "Neu im Feed",
+        "Persönlichkeit verletzt? Erst abwägen",
+        "Vergleich + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s3": {
       "slot": "s3",
@@ -880,16 +783,25 @@
       "fach": "strafat",
       "klausur": 2,
       "fachLabel": "Strafrecht AT",
-      "titel": "Notwehr: Erforderlichkeit und Gebotenheit",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b3",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Notwehr verhältnismäßig?"
+      ],
+      "unter": "Neues Reel · im Profil",
+      "sichtbareTexte": [
+        "Strafrecht AT",
+        "Neu im Feed",
+        "Notwehr verhältnismäßig?",
+        "Neues Reel · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     }
   },
   "hookOptimierung": {
@@ -899,15 +811,19 @@
   },
   "renderVorschau": {
     "status": "fertig",
-    "erzeugtAm": "2026-10-01T07:35:04.510Z",
+    "erzeugtAm": "2026-10-04T23:41:21Z",
     "pfad": "vorproduktion/2026-10-15/fertig",
     "providerKostenUsd": 0,
-    "textProviderKostenUsd": 0,
-    "faktencheckProviderKostenUsd": 0,
-    "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "reelStimme": "piper-offline",
-    "freigabeBetreiber": false
+    "coverIcons": false,
+    "renderer": "open-peeps-v4",
+    "layoutQuelle": "open-peeps-variante-c",
+    "reelStimme": "elevenlabs-laura",
+    "sfx": "freesound-cc0",
+    "freigabeBetreiber": true,
+    "liveVorrangAktiv": true,
+    "normalbetriebGesperrt": true,
+    "wartetLive": []
   },
   "liveRegel": {
     "veroeffentlichen": false,
@@ -917,5 +833,10 @@
     "pfad": "vorproduktion/2026-10-15.json",
     "sha256": "0a17e9d70b096702e625ca54c45d1411137c3c25711fe83a2a8018505b7cc093",
     "uebernommenAm": "2026-10-01T07:32:22.516Z"
-  }
+  },
+  "layoutQuelle": "open-peeps-variante-c",
+  "semantikQuelle": "herrjurist",
+  "liveVorrangAktiv": true,
+  "normalbetriebGesperrt": true,
+  "bildStatus": "open-peeps-render"
 }
