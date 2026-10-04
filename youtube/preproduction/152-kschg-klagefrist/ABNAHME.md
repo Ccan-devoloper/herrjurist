@@ -50,3 +50,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 116 Bildhalte aus dem finalen MP4, Fallszene als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen, die zwei Geräusche); Themenplan-Ergänzung durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 04.10.2026
+
+## Drive (Readback 04.10.2026, rclone)
+
+Ordner `LexVerse Produktion/152 Kündigungsschutzgesetz Klagefrist/`, ID `19dkAd91qswxF56n0XqMac9k-VB8cptZL` (nur per rclone angelegt, vorher kein Ordner „152 …“ vorhanden, kein Doppelordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `152-KSchG-Drei-Wochen-Frist.mp4` | 27.013.773 |
+| `152-KSchG-Drei-Wochen-Frist-Hauptfilm.mp4` | 19.702.496 |
+| `master.zip` | 49.013.580 |
+| `thumb_A.jpg` | 176.540 |
+| `thumb_B.jpg` | 168.936 |
+| `beschreibung.txt` | 3.309 |
+| `kapitel.txt` | 567 |
+| `untertitel.srt` | 8.706 |
+| `metadaten.json` | 4.698 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 275 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`b2e97c94ed21…`), MP4-MD5 lokal = Drive (`d19e467119d1…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
