@@ -34,25 +34,28 @@ SEGMENTE = [
     # --- C Tatbestand der Willenserklärung: objektiv -------------------------------------------------------------------
     ("[tb]Frau Haller verlangt neunhundert Euro. Das setzt einen Kaufvertrag voraus, also ein Gebot von Ekkehard. "
      "[ot]Eine Willenserklärung hat einen objektiven und einen subjektiven Tatbestand. [ausl]Objektiv kommt es darauf an, "
-     "wie der Empfänger das Verhalten verstehen durfte. [p133]Nach den Paragrafen hundertdreiunddreißig und "
-     "hundertsiebenundfünfzig ist der wirkliche Wille zu erforschen, [p157]aber nach Treu und Glauben mit Rücksicht auf "
-     "die Verkehrssitte.", P),
+     "wie der Empfänger das Verhalten verstehen durfte. [p133]Nach Paragraf hundertdreiunddreißig ist der wirkliche Wille zu "
+     "erforschen, [p157]nach Paragraf hundertsiebenundfünfzig wird nach Treu und Glauben mit Rücksicht auf die "
+     "Verkehrssitte ausgelegt.", P),
     ("[saal]Im Versteigerungssaal heißt die erhobene Hand: Ich biete mehr. [objok]Objektiv liegt also ein Gebot vor.", P),
     # --- C2 subjektiv ---------------------------------------------------------------------------------------------------
     ("[st]Subjektiv unterscheidet man drei Elemente. [hw]Der Handlungswille: Ekkehard hebt die Hand bewusst, kein "
-     "Reflex. [eb]Das Erklärungsbewusstsein: das Bewusstsein, überhaupt etwas rechtlich Erhebliches zu erklären. "
+     "Reflex. [eb]Das Erklärungsbewusstsein: das Bewusstsein, überhaupt eine rechtsgeschäftliche Erklärung "
+     "abzugeben. "
      "[ebn]Das fehlt ihm, er wollte nur winken. [gw]Und der Geschäftswille, ein bestimmtes Geschäft zu schließen. "
      "Den hat er erst recht nicht.", P),
     ("[frage2]Gibt es eine Willenserklärung ohne Erklärungsbewusstsein?", PS),
     # --- D Streit ------------------------------------------------------------------------------------------------------
     ("[wt]Die Willenstheorie sagt nein: Das Erklärungsbewusstsein sei unverzichtbar. [w118]Sie stützt sich auf "
-     "Paragraf hundertachtzehn: Eine nicht ernstlich gemeinte Erklärung ist nichtig. [w122]Der Erklärende schulde "
+     "Paragraf hundertachtzehn: Eine nicht ernstlich gemeinte Erklärung ist nichtig, wenn man erwartet, "
+     "dass das erkannt wird. [w122]Der Erklärende schulde "
      "allenfalls analog Paragraf hundertzweiundzwanzig den Vertrauensschaden.", P),
     ("[et]Die Gegenansicht schützt das Vertrauen des Empfängers und den Verkehr: [et2]Die Erklärung ist zunächst "
      "wirksam, kann aber angefochten werden.", P),
     ("[bghz]Dem folgt der Bundesgerichtshof, mit einer Einschränkung. [formel]Trotz fehlenden Erklärungsbewusstseins "
      "liegt eine Willenserklärung vor, wenn der Erklärende bei Anwendung der im Verkehr erforderlichen Sorgfalt hätte "
-     "erkennen und vermeiden können, dass seine Äußerung als Willenserklärung aufgefasst werden durfte, [verst]und wenn "
+     "erkennen und vermeiden können, dass seine Äußerung nach Treu und Glauben und der Verkehrssitte "
+     "als Willenserklärung aufgefasst werden durfte, [verst]und wenn "
      "der Empfänger sie auch tatsächlich so verstanden hat. [pot]Man spricht von potentiellem Erklärungsbewusstsein.", P),
     ("[wahl]Der Grund: Der Erklärende behält die Wahl. [wa]Er kann anfechten und muss dann den Vertrauensschaden "
      "ersetzen. [wb]Oder er bleibt bei seiner Erklärung und erhält die Gegenleistung. [p118]Paragraf hundertachtzehn "
@@ -63,12 +66,12 @@ SEGMENTE = [
     # --- E Anfechtung ---------------------------------------------------------------------------------------------------
     ("[anf]Ekkehard kann sich aber lösen. [p119]Nach Paragraf hundertneunzehn Absatz eins kann anfechten, wer eine "
      "Erklärung dieses Inhalts überhaupt nicht abgeben wollte. [bgh119]Das trifft nach dem Bundesgerichtshof auch den, "
-     "der gar keine rechtsgeschäftliche Erklärung abgeben wollte. [analog]Meist spricht man von einer Anfechtung analog "
+     "der gar keine rechtsgeschäftliche Erklärung abgeben wollte. [analog]Oft spricht man von einer Anfechtung analog "
      "Paragraf hundertneunzehn.", P),
     ("[p121]Die Anfechtung muss unverzüglich erfolgen, also ohne schuldhaftes Zögern, nachdem er den Anfechtungsgrund "
      "kennt. [mangel]Und sie muss erkennen lassen, dass er das Geschäft gerade wegen des Willensmangels nicht gelten "
      "lassen will. [spk2]Daran scheiterte die Sparkasse: Ihr erster Brief bestritt nur die Bürgschaft, "
-     "[tage]die Anfechtung kam fünfzehn Tage später, zu spät.", P),
+     "[tage]die Anfechtung kam erst fünfzehn Tage nach Kenntnis des Grundes, zu spät.", P),
     ("[eok]Ekkehard dagegen widerspricht sofort und nennt den Grund: Er hat nur gewinkt. [p142]Damit ist der Kaufvertrag "
      "nach Paragraf hundertzweiundvierzig von Anfang an nichtig.", P),
     ("[p122]Aber Paragraf hundertzweiundzwanzig: Ekkehard muss Frau Haller den Schaden ersetzen, den sie erleidet, weil "
@@ -87,7 +90,7 @@ SEGMENTE = [
      "analog Paragraf hundertneunzehn, unverzüglich nach Paragraf hunderteinundzwanzig. [k6]Römisch drei: "
      "Vertrauensschaden nach Paragraf hundertzweiundzwanzig.", PS),
     # --- I Merksatz (Lexi) ----------------------------------------------------------------------------------------------
-    ("[merke]Merke: Wer erkennen konnte, dass sein Verhalten als Willenserklärung verstanden wird, muss es sich "
+    ("[merke]Merke: Wer bei nötiger Sorgfalt erkennen konnte, dass sein Verhalten als Willenserklärung verstanden wird, muss es sich "
      "zurechnen lassen. [m2]Er kann anfechten, zahlt dann aber den Vertrauensschaden.", 1.2),
 ]
 
