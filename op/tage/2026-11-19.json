@@ -1,0 +1,997 @@
+{
+ "datum": "2026-11-19",
+ "beitraege": [
+  {
+   "slot": "b1",
+   "zeit": "08:00",
+   "format": "spickzettel",
+   "klausur": 2,
+   "fach": "strafbt",
+   "fachLabel": "Strafrecht BT",
+   "klausurLabel": "Staatsexamen",
+   "themaId": "strafbt-748",
+   "themaTitel": "Diebstahl mit Waffen/Bandendiebstahl",
+   "figuren": {
+    "A": {
+     "name": "Timo",
+     "kopf": "Short 4",
+     "haut": "#F1C7A5",
+     "haar": "#8B4A2B",
+     "oberteil": "#8DB3F2",
+     "bueste": "Hoodie"
+    },
+    "B": {
+     "name": "Nora",
+     "kopf": "Bun 2",
+     "haut": "#C99470",
+     "haar": "#2B2B2B",
+     "oberteil": "#9AD48F",
+     "bueste": "Sweater"
+    }
+   },
+   "folien": [
+    {
+     "typ": "cover",
+     "badge": "Spickzettel",
+     "badgeFarbe": "WEISS",
+     "zeilen": [
+      "Einbruch ins Büro?",
+      "Kein § 244 StGB"
+     ],
+     "unter": "Büro oder Wohnung",
+     "teaser": "+ Gutachten-Baustein",
+     "motiv": {
+      "typ": "icon",
+      "name": "tabler:door",
+      "farbe": "GELB"
+     },
+     "figur": "A:staunt"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "§ 244 Abs. 1 im Überblick",
+     "punkte": [
+      [
+       "Nr. 1a: Waffe oder anderes gefährliches Werkzeug",
+       "ok",
+       "Regular",
+       null
+      ],
+      [
+       "Nr. 1b: sonst Werkzeug oder Mittel gegen Widerstand",
+       "ok",
+       "Regular",
+       null
+      ],
+      [
+       "Nr. 2: Bandendiebstahl",
+       "ok",
+       "Regular",
+       null
+      ],
+      [
+       "Nr. 3: Wohnungseinbruchdiebstahl",
+       "ok",
+       "Bold",
+       null
+      ]
+     ],
+     "figur": "B:erklaert",
+     "x": 790,
+     "blase": "Vier Varianten!"
+    },
+    {
+     "typ": "vergleich",
+     "titel": "Einbruch ist nicht gleich Einbruch",
+     "links": {
+      "kopf": "Büro, Geschäft",
+      "farbe": "GELB",
+      "punkte": [
+       [
+        "Regelbeispiel: Strafzumessung",
+        "§ 243 Abs. 1 S. 2 Nr. 1 StGB"
+       ],
+       [
+        "Prüfung nach der Schuld",
+        null
+       ]
+      ]
+     },
+     "rechts": {
+      "kopf": "Wohnung",
+      "farbe": "GRUEN",
+      "punkte": [
+       [
+        "Qualifikation: Tatbestand",
+        "§ 244 Abs. 1 Nr. 3 StGB"
+       ],
+       [
+        "Prüfung direkt nach § 242",
+        null
+       ]
+      ]
+     },
+     "figur": "A:denkt",
+     "x": 290,
+     "blase": "Wo prüfe ich das?"
+    },
+    {
+     "typ": "inhalt",
+     "falle": true,
+     "titel": "Der typische Fehler",
+     "punkte": [
+      [
+       "Den Wohnungseinbruch als Regelbeispiel nach § 243 prüfen.",
+       "nein",
+       "Bold",
+       null
+      ],
+      [
+       "Er ist Qualifikation: Tatbestand, direkt nach § 242.",
+       "ok",
+       "Regular",
+       "§ 244 Abs. 1 Nr. 3 StGB"
+      ],
+      [
+       "Dauerhaft genutzte Privatwohnung: ab einem Jahr, also Verbrechen.",
+       "warn",
+       "Regular",
+       "§ 244 Abs. 4, § 12 Abs. 1 StGB"
+      ]
+     ],
+     "figur": "B:skeptisch",
+     "x": 790,
+     "blase": "Qualifikation!"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Waffe und Werkzeug",
+     "punkte": [
+      [
+       "Bei sich führen: griffbereit während der Tat, Einsatz nicht nötig.",
+       "ok",
+       "Regular",
+       "§ 244 Abs. 1 Nr. 1a StGB"
+      ],
+      [
+       "Gefährliches Werkzeug ohne Verwendungsabsicht? Umstritten.",
+       "warn",
+       "Bold",
+       null
+      ],
+      [
+       "Klausur: Streit kurz, am konkreten Gegenstand entscheiden.",
+       "ok",
+       "Regular",
+       null
+      ]
+     ],
+     "figur": "A:erklaert",
+     "x": 290,
+     "blase": "Taschenmesser?"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Bandendiebstahl",
+     "punkte": [
+      [
+       "Bande: mindestens drei Personen, verbunden zu fortgesetztem Raub oder Diebstahl.",
+       "ok",
+       "Regular",
+       "BGHSt 46, 321"
+      ],
+      [
+       "Mitwirkung eines anderen Mitglieds, nicht zwingend am Tatort.",
+       "ok",
+       "Regular",
+       "§ 244 Abs. 1 Nr. 2 StGB"
+      ],
+      [
+       "Bande plus Regelbeispiel, Nr. 1 oder 3: schwerer Bandendiebstahl.",
+       "warn",
+       "Bold",
+       "§ 244a Abs. 1 StGB"
+      ]
+     ],
+     "figur": "B:redet",
+     "x": 790,
+     "blase": "Drei reichen!"
+    },
+    {
+     "typ": "merke",
+     "oben": [
+      "Büro: § 243 · Wohnung: § 244",
+      "Regelbeispiel oder Qualifikation",
+      "GRUEN"
+     ],
+     "zeilen": [
+      [
+       [
+        "Wohnung",
+        "a"
+       ],
+       [
+        ": Tatbestand,",
+        null
+       ]
+      ],
+      [
+       [
+        "Büro",
+        "b"
+       ],
+       [
+        ": Strafzumessung,",
+        null
+       ]
+      ],
+      [
+       [
+        "Privatwohnung",
+        "c"
+       ],
+       [
+        ": Verbrechen.",
+        null
+       ]
+      ]
+     ],
+     "speichern": "Speichern fürs Examen",
+     "frage": "Prüfst du an der richtigen Stelle?",
+     "teaser": "Weiterwischen: Baustein für das Gutachten"
+    },
+    {
+     "typ": "schritte",
+     "titel": "So im Gutachten",
+     "schritte": [
+      [
+       "Obersatz",
+       "§§ 242 Abs. 1, 244 Abs. 1 Nr. 3 StGB",
+       "A hebelt die Wohnungstür des O auf und nimmt Schmuck."
+      ],
+      [
+       "Definition",
+       null,
+       "Wohnung: Räume, die Menschen zur Unterkunft dienen"
+      ],
+      [
+       "Subsumtion",
+       null,
+       "Wohnungstür aufgehebelt: eingebrochen"
+      ],
+      [
+       "Ergebnis",
+       null,
+       "Qualifikation erfüllt, Abs. 4 prüfen"
+      ]
+     ]
+    }
+   ],
+   "caption": "Diebstahl mit Waffen, Bandendiebstahl, Wohnungseinbruch: Büro oder Wohnung entscheidet, ob du ein Regelbeispiel oder eine Qualifikation prüfst.\n\n▸ § 244 Abs. 1 StGB: Nr. 1a Waffe oder anderes gefährliches Werkzeug, Nr. 1b sonst ein Werkzeug oder Mittel, um Widerstand durch Gewalt oder Drohung mit Gewalt zu verhindern oder zu überwinden, Nr. 2 Bandendiebstahl, Nr. 3 Wohnungseinbruchdiebstahl.\n▸ Einbruch in Büro oder Geschäftsraum: Regelbeispiel nach § 243 Abs. 1 S. 2 Nr. 1 StGB, geprüft in der Strafzumessung nach der Schuld.\n▸ Einbruch in eine Wohnung: Qualifikation nach § 244 Abs. 1 Nr. 3 StGB, geprüft im Tatbestand direkt nach § 242 StGB. Bei einer dauerhaft genutzten Privatwohnung Freiheitsstrafe von einem Jahr bis zu zehn Jahren (§ 244 Abs. 4 StGB), also ein Verbrechen (§ 12 Abs. 1 StGB).\n▸ Bei sich führen heißt: griffbereit während der Tat, eingesetzt werden muss das Tatmittel nicht. Ob ein Gegenstand ohne Verwendungsabsicht ein gefährliches Werkzeug ist, ist umstritten: Streit kurz darstellen, am konkreten Gegenstand entscheiden.\n▸ Bande: mindestens drei Personen, verbunden zur fortgesetzten Begehung von Raub oder Diebstahl; die Mitwirkung eines anderen Mitglieds verlangt keine Anwesenheit am Tatort (BGHSt 46, 321). Bande plus § 243 Abs. 1 S. 2 oder § 244 Abs. 1 Nr. 1 oder 3: schwerer Bandendiebstahl (§ 244a Abs. 1 StGB).\n\nZum Schluss: der Baustein für das Gutachten. Speichern fürs Examen 📌",
+   "quellen": [
+    "§§ 242, 243 Abs. 1 S. 2 Nr. 1 StGB",
+    "§ 244 Abs. 1, 4 StGB",
+    "§ 244a Abs. 1 StGB",
+    "§ 12 Abs. 1 StGB",
+    "BGHSt 46, 321"
+   ],
+   "hashtags": [
+    "#jura",
+    "#jurastudium",
+    "#staatsexamen",
+    "#strafrecht",
+    "#strafrechtbt",
+    "#244stgb",
+    "#diebstahl",
+    "#jurastudent",
+    "#examensvorbereitung"
+   ]
+  },
+  {
+   "slot": "b2",
+   "zeit": "12:30",
+   "format": "vergleich",
+   "klausur": 3,
+   "fach": "vwgo",
+   "fachLabel": "Verwaltungsprozessrecht",
+   "klausurLabel": "Staatsexamen",
+   "themaId": "vwgo-410",
+   "themaTitel": "Welcher Zeitpunkt ist für die Beurteilung der Sach- und Rechtslage maßgeblich?",
+   "figuren": {
+    "A": {
+     "name": "Hanna",
+     "kopf": "Long",
+     "haut": "#F3D0B5",
+     "haar": "#C9A15A",
+     "oberteil": "#F4A3B5",
+     "bueste": "Blazer Black Tee"
+    },
+    "B": {
+     "name": "Yusuf",
+     "kopf": "Short 2",
+     "haut": "#8D5A3B",
+     "haar": "#1E1A18",
+     "oberteil": "#F6C26B",
+     "bueste": "Button Shirt 2",
+     "bart": "Full"
+    }
+   },
+   "folien": [
+    {
+     "typ": "cover",
+     "badge": "Vergleich",
+     "badgeFarbe": "WEISS",
+     "zeilen": [
+      "Gesetz verschärft:",
+      "Welcher Tag zählt?"
+     ],
+     "norm": "§ 113 Abs. 1, 5 VwGO",
+     "unter": "Stichtag",
+     "teaser": "+ Gutachten-Baustein",
+     "motiv": {
+      "typ": "kalender",
+      "monat": "MÄRZ",
+      "tag": "12",
+      "unter": "Verhandlung"
+     },
+     "figur": "A:fragt"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Der Fall",
+     "punkte": [
+      [
+       "B beantragt eine Genehmigung, die Behörde lehnt ab; B klagt.",
+       "ok",
+       "Regular",
+       null
+      ],
+      [
+       "Danach wird das Gesetz verschärft, ohne Übergangsrecht.",
+       "ok",
+       "Regular",
+       null
+      ]
+     ],
+     "extra": [
+      "Jetzt du: Welcher Tag zählt?",
+      "GELB",
+      null
+     ],
+     "kalender": [
+      [
+       "FEB",
+       "10",
+       "Antrag"
+      ],
+      [
+       "MÄRZ",
+       "12",
+       "Verhandlung"
+      ]
+     ]
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Die Ausgangsfrage",
+     "punkte": [
+      [
+       "Die VwGO regelt den Zeitpunkt nicht ausdrücklich.",
+       "warn",
+       "Regular",
+       null
+      ],
+      [
+       "Maßgeblich ist das materielle Recht.",
+       "ok",
+       "Bold",
+       null
+      ],
+      [
+       "Für den Normalfall gibt es Faustregeln je Klageart.",
+       "ok",
+       "Regular",
+       null
+      ]
+     ],
+     "figur": "B:denkt",
+     "x": 790,
+     "blase": "Antrag oder heute?"
+    },
+    {
+     "typ": "vergleich",
+     "titel": "Die Faustregeln",
+     "links": {
+      "kopf": "Anfechtung",
+      "farbe": "GELB",
+      "punkte": [
+       [
+        "letzte Behördenentscheidung, meist Widerspruch",
+        "§ 113 Abs. 1 S. 1 VwGO"
+       ],
+       [
+        "War der VA damals rechtswidrig?",
+        null
+       ]
+      ]
+     },
+     "rechts": {
+      "kopf": "Verpflichtung",
+      "farbe": "WEISS",
+      "punkte": [
+       [
+        "letzte mündliche Verhandlung",
+        "§ 113 Abs. 5 S. 1 VwGO"
+       ],
+       [
+        "Besteht der Anspruch jetzt?",
+        null
+       ]
+      ]
+     },
+     "figur": "A:erklaert",
+     "x": 290,
+     "blase": "Zurück oder heute!"
+    },
+    {
+     "typ": "vergleich",
+     "titel": "Wichtige Abweichungen",
+     "links": {
+      "kopf": "Anfechtung",
+      "farbe": "GELB",
+      "punkte": [
+       [
+        "Dauer-VA, etwa Verkehrszeichen: letzte Verhandlung",
+        null
+       ],
+       [
+        "Nachbarklage: Stand bei Erteilung, spätere Änderungen für den Bauherrn zählen",
+        null
+       ]
+      ]
+     },
+     "rechts": {
+      "kopf": "Verpflichtung",
+      "farbe": "WEISS",
+      "punkte": [
+       [
+        "Fachrecht kann einen anderen Zeitpunkt vorgeben",
+        null
+       ],
+       [
+        "Übergangsrecht kann ältere Anträge schützen",
+        null
+       ]
+      ]
+     },
+     "figur": "A:erklaert",
+     "x": 790,
+     "blase": "Fachrecht zuerst!"
+    },
+    {
+     "typ": "inhalt",
+     "falle": true,
+     "titel": "Der typische Fehler",
+     "punkte": [
+      [
+       "Auf den Antragstag abstellen, weil das Gesetz da milder war.",
+       "nein",
+       "Bold",
+       null
+      ],
+      [
+       "Verpflichtung: Anspruch nach heutiger Rechtslage.",
+       "ok",
+       "Regular",
+       "§ 113 Abs. 5 S. 1 VwGO"
+      ],
+      [
+       "Immer nach Übergangsvorschriften suchen.",
+       "warn",
+       "Regular",
+       null
+      ]
+     ],
+     "figur": "B:skeptisch",
+     "x": 290,
+     "blase": "Erst Übergangsrecht!"
+    },
+    {
+     "typ": "merke",
+     "oben": [
+      "Lösung: der 12. März",
+      "Verpflichtung: Der Anspruch muss heute bestehen",
+      "GRUEN"
+     ],
+     "zeilen": [
+      [
+       [
+        "Anfechtung",
+        "a"
+       ],
+       [
+        ": Blick zurück,",
+        null
+       ]
+      ],
+      [
+       [
+        "Verpflichtung",
+        "b"
+       ],
+       [
+        ": Blick auf heute,",
+        null
+       ]
+      ],
+      [
+       [
+        "Fachrecht",
+        "c"
+       ],
+       [
+        " entscheidet.",
+        null
+       ]
+      ]
+     ],
+     "speichern": "Speichern fürs Examen",
+     "frage": "Hättest du den Antragstag genommen?",
+     "teaser": "Weiterwischen: Baustein für das Gutachten"
+    },
+    {
+     "typ": "schritte",
+     "titel": "So im Gutachten",
+     "schritte": [
+      [
+       "Obersatz",
+       "§ 113 Abs. 5 S. 1 VwGO",
+       "Begründet, wenn B jetzt einen Anspruch hat."
+      ],
+      [
+       "Zeitpunkt",
+       null,
+       "letzte mündliche Verhandlung, kein Übergangsrecht"
+      ],
+      [
+       "Subsumtion",
+       null,
+       "neues Gesetz: Voraussetzung fehlt"
+      ],
+      [
+       "Ergebnis",
+       null,
+       "Kein Anspruch, Klage unbegründet."
+      ]
+     ]
+    }
+   ],
+   "caption": "Antrag gestellt, dann Gesetz verschärft: Welcher Tag zählt für die Sach- und Rechtslage?\n\n▸ Die VwGO sagt es nicht ausdrücklich. Maßgeblich ist das materielle Recht, für den Normalfall gelten Faustregeln je Klageart.\n▸ Anfechtungsklage (§ 113 Abs. 1 S. 1 VwGO): grundsätzlich die letzte Behördenentscheidung, meist der Widerspruchsbescheid. Ausnahmen etwa beim Dauerverwaltungsakt wie einem Verkehrszeichen. Bei der Nachbarklage gegen eine Baugenehmigung zählt der Stand bei Erteilung; spätere Änderungen zugunsten des Bauherrn sind zu berücksichtigen.\n▸ Verpflichtungsklage (§ 113 Abs. 5 S. 1 VwGO): grundsätzlich die letzte mündliche Verhandlung, denn der Anspruch muss jetzt bestehen.\n▸ Das Fachrecht kann einen anderen Zeitpunkt vorgeben, Übergangsrecht kann ältere Anträge schützen. Darum immer nach Übergangsvorschriften suchen.\n\nZum Schluss: der Baustein für das Gutachten. Speichern fürs Examen 📌",
+   "quellen": [
+    "§ 113 Abs. 1 S. 1, Abs. 5 S. 1 VwGO",
+    "materielles Fachrecht"
+   ],
+   "hashtags": [
+    "#jura",
+    "#jurastudium",
+    "#staatsexamen",
+    "#öffentlichesrecht",
+    "#vwgo",
+    "#verpflichtungsklage",
+    "#anfechtungsklage",
+    "#klausurtraining",
+    "#examensvorbereitung"
+   ]
+  },
+  {
+   "slot": "b3",
+   "zeit": "17:30",
+   "format": "reel",
+   "klausur": 1,
+   "fach": "sachen",
+   "fachLabel": "Sachenrecht",
+   "klausurLabel": "Staatsexamen",
+   "themaId": "sachen-505",
+   "themaTitel": "EBV: Nutzungsersatz",
+   "reelTyp": "erklaer",
+   "layout": "D",
+   "figuren": {
+    "A": {
+     "name": "Lasse",
+     "kopf": "Flat Top",
+     "haut": "#E8B98F",
+     "haar": "#3B2219",
+     "oberteil": "#F2A65A",
+     "bueste": "Tee 1"
+    }
+   },
+   "sprecher": [
+    {
+     "id": "hook",
+     "text": "Muss der redliche Besitzer die Nutzungen herausgeben? Meist nicht. Die Sache ja, die Nutzungen nicht."
+    },
+    {
+     "id": "s1",
+     "text": "Erst die Vindikationslage: Eigentümer gegen Besitzer ohne Recht zum Besitz."
+    },
+    {
+     "id": "s2",
+     "text": "Verklagt oder bösgläubig? Dann haftet er für gezogene Nutzungen."
+    },
+    {
+     "id": "s3",
+     "text": "Redlich, aber unentgeltlich? Herausgabe nach Bereicherungsrecht."
+    },
+    {
+     "id": "cta",
+     "text": "Merke: Sonst sperrt das Gesetz, bis auf Übermaßfrüchte."
+    }
+   ],
+   "hook": {
+    "zeilen": [
+     "Redlicher Besitzer:",
+     "Nutzungen raus."
+    ],
+    "pille": "EBV · §§ 987 ff. BGB",
+    "figur": "A/skeptisch",
+    "name": "Lasse",
+    "icons": [],
+    "stil": "kippen",
+    "stempel": {
+     "text": "Meist nicht!",
+     "wort": "Meist"
+    },
+    "richtig": {
+     "label": "Richtig",
+     "text": "Die Sache ja, Nutzungen nein",
+     "wort": "Sache",
+     "farbe": "GRUEN"
+    }
+   },
+   "szenen": [
+    {
+     "seg": "s1",
+     "titel": "Vindikationslage",
+     "elemente": [
+      {
+       "typ": "text",
+       "text": "Eigentümer gegen Besitzer",
+       "unter": "ohne Recht zum Besitz",
+       "wort": "Eigentümer",
+       "farbe": "WEISS"
+      },
+      {
+       "typ": "norm",
+       "text": "§§ 985, 986 BGB",
+       "wort": "Vindikationslage"
+      }
+     ]
+    },
+    {
+     "seg": "s2",
+     "titel": "Verklagt oder bösgläubig",
+     "elemente": [
+      {
+       "typ": "block",
+       "label": "gezogene Nutzungen",
+       "wert": "herausgeben",
+       "farbe": "GELB",
+       "wort": "haftet",
+       "zs": 90
+      },
+      {
+       "typ": "norm",
+       "text": "§§ 987, 990 BGB",
+       "wort": "Verklagt"
+      }
+     ]
+    },
+    {
+     "seg": "s3",
+     "titel": "Redlich, aber unentgeltlich",
+     "elemente": [
+      {
+       "typ": "block",
+       "label": "unentgeltlich",
+       "wert": "Bereicherungsrecht",
+       "farbe": "GRUEN",
+       "wort": "Bereicherungsrecht",
+       "zs": 80
+      },
+      {
+       "typ": "norm",
+       "text": "§ 988 BGB",
+       "wort": "unentgeltlich"
+      }
+     ]
+    }
+   ],
+   "merke": {
+    "seg": "cta",
+    "zeilen": [
+     "Sonst:",
+     "Sperrwirkung,",
+     "außer",
+     "Übermaßfrüchte"
+    ],
+    "woerter": [
+     "Sonst",
+     "sperrt",
+     "bis",
+     "Übermaßfrüchte"
+    ],
+    "cta": "Speichern fürs Examen",
+    "cta_wort": "Übermaßfrüchte",
+    "hinweis": "Alle Fundstellen in der Beschreibung"
+   },
+   "caption": "EBV, Nutzungsersatz: Der redliche Besitzer gibt die Sache heraus, die Nutzungen meist nicht.\n\n▸ Zuerst die Vindikationslage: Eigentümer gegen Besitzer ohne Recht zum Besitz (§§ 985, 986 BGB), und zwar zur Zeit der Nutzungsziehung.\n▸ Verklagter Besitzer ab Rechtshängigkeit (§ 987 BGB), bösgläubiger Besitzer ab Erwerb bzw. Kenntnis (§ 990 Abs. 1 BGB): Herausgabe der gezogenen und Ersatz schuldhaft nicht gezogener Nutzungen (§ 987 Abs. 2 BGB).\n▸ Redlicher, unentgeltlicher Besitzer: Herausgabe nach Bereicherungsrecht (§ 988 BGB). Streitig ist der rechtsgrundlose Erwerb: Die Rechtsprechung wendet § 988 BGB analog an, Teile der Literatur lösen über die Leistungskondiktion.\n▸ Redlicher, unverklagter, entgeltlicher Besitzer: nur Übermaßfrüchte nach Bereicherungsrecht, im Übrigen weder Nutzungen noch Schadensersatz (§ 993 Abs. 1 BGB).\n\nSpeichern fürs Examen 📌",
+   "quellen": [
+    "§§ 985, 986 BGB",
+    "§§ 987, 988, 990, 993 Abs. 1 BGB"
+   ],
+   "hashtags": [
+    "#jura",
+    "#jurastudium",
+    "#staatsexamen",
+    "#zivilrecht",
+    "#sachenrecht",
+    "#ebv",
+    "#987bgb",
+    "#jurastudent",
+    "#examensvorbereitung"
+   ]
+  }
+ ],
+ "stories": [
+  {
+   "slot": "s4",
+   "zeit": "07:05",
+   "art": "frage",
+   "klausur": 1,
+   "fachLabel": "Zivilprozessrecht",
+   "themaId": "zpo-555",
+   "ueberzeile": "Prüfungsfrage",
+   "frage": [
+    "K erklärt erledigt,",
+    "B widerspricht:",
+    "Was liegt vor?"
+   ],
+   "optionen": [
+    "Klagerücknahme",
+    "Kostenbeschluss nach § 91a ZPO",
+    "Klageänderung in einen Feststellungsantrag"
+   ],
+   "figuren": {
+    "Q": {
+     "name": "Pia",
+     "kopf": "Medium Straight",
+     "haut": "#F1C7A5",
+     "haar": "#6B3E26",
+     "oberteil": "#F2A65A",
+     "bueste": "Tee 1"
+    }
+   },
+   "figur": "Q:fragt"
+  },
+  {
+   "slot": "s5",
+   "zeit": "07:05",
+   "art": "antwort",
+   "klausur": 1,
+   "fachLabel": "Zivilprozessrecht",
+   "themaId": "zpo-555",
+   "titel": [
+    "Klageänderung",
+    "auf Feststellung"
+   ],
+   "optionen": [
+    "Klagerücknahme",
+    "Kostenbeschluss nach § 91a ZPO",
+    "Klageänderung in einen Feststellungsantrag"
+   ],
+   "richtig": 2,
+   "text": "K will festgestellt haben: Die Klage war zulässig und begründet und ist erledigt.",
+   "norm": "§ 264 Nr. 2 ZPO",
+   "figuren": {
+    "Q": {
+     "name": "Pia",
+     "kopf": "Medium Straight",
+     "haut": "#F1C7A5",
+     "haar": "#6B3E26",
+     "oberteil": "#F2A65A",
+     "bueste": "Tee 1"
+    }
+   },
+   "figur": "Q:froh"
+  },
+  {
+   "slot": "s1",
+   "zeit": "08:00",
+   "art": "teaser",
+   "beitragSlot": "b1",
+   "titel": [
+    "Einbruch ins Büro? Kein § 244"
+   ],
+   "unter": "Spickzettel + Gutachten-Baustein · im Profil"
+  },
+  {
+   "slot": "s6",
+   "zeit": "11:59",
+   "art": "norm",
+   "klausur": 1,
+   "fachLabel": "BGB Allgemeiner Teil",
+   "themaId": "bgbat-008",
+   "titel": [
+    "Erst anpassen,",
+    "dann lösen"
+   ],
+   "norm": "§ 313 BGB",
+   "punkte": [
+    [
+     "Gestörte Geschäftsgrundlage: zuerst Vertragsanpassung.",
+     "ok",
+     "§ 313 Abs. 1 BGB"
+    ],
+    [
+     "Rücktritt nur, wenn Anpassung unmöglich oder unzumutbar.",
+     "warn",
+     "§ 313 Abs. 3 S. 1 BGB"
+    ]
+   ],
+   "figuren": {
+    "N": {
+     "name": "Ole",
+     "kopf": "Gray Short",
+     "haut": "#E8B98F",
+     "haar": "#9A9A9A",
+     "oberteil": "#F4A3B5",
+     "bueste": "Button Shirt 1",
+     "brille": "Glasses 2"
+    }
+   },
+   "figur": "N:erklaert"
+  },
+  {
+   "slot": "s2",
+   "zeit": "12:30",
+   "art": "teaser",
+   "beitragSlot": "b2",
+   "titel": [
+    "Gesetz verschärft: Welcher Tag?"
+   ],
+   "unter": "Vergleich + Gutachten-Baustein · im Profil"
+  },
+  {
+   "slot": "s7",
+   "zeit": "14:23",
+   "art": "streitstand",
+   "klausur": 3,
+   "fachLabel": "VwGO",
+   "themaId": "streit-03",
+   "titel": [
+    "Erledigt vor",
+    "der Klage?"
+   ],
+   "ansichten": [
+    [
+     "Rspr.: FFK analog",
+     "§ 113 Abs. 1 S. 4 VwGO analog."
+    ],
+    [
+     "Teile der Lit.",
+     "Feststellungsklage, § 43 VwGO."
+    ]
+   ],
+   "klausur_tipp": "Keine Klagefrist; Interesse nötig.",
+   "norm": "BVerwGE 109, 203",
+   "figuren": {
+    "T": {
+     "name": "Selma",
+     "kopf": "Bangs",
+     "haut": "#C99470",
+     "haar": "#2B2B2B",
+     "oberteil": "#F6C26B",
+     "bueste": "Sweater"
+    }
+   },
+   "figur": "T:denkt"
+  },
+  {
+   "slot": "s8",
+   "zeit": "16:52",
+   "art": "merksatz",
+   "klausur": 1,
+   "fachLabel": "Schuldrecht BT",
+   "themaId": "schuldbt-198",
+   "titel": [
+    "Unrenoviert",
+    "übergeben?"
+   ],
+   "zeilen": [
+    [
+     [
+      "Ohne",
+      "a"
+     ],
+     [
+      " Ausgleich:",
+      null
+     ]
+    ],
+    [
+     [
+      "Klausel",
+      "b"
+     ],
+     [
+      " unwirksam,",
+      null
+     ]
+    ],
+    [
+     [
+      "Pflicht",
+      "c"
+     ],
+     [
+      " bleibt beim",
+      null
+     ]
+    ],
+    [
+     [
+      "Vermieter.",
+      null
+     ]
+    ]
+   ],
+   "norm": "§ 307 Abs. 1 S. 1, § 535 Abs. 1 S. 2 BGB",
+   "figuren": {
+    "M": {
+     "name": "Jonte",
+     "kopf": "Short 3",
+     "haut": "#F3D0B5",
+     "haar": "#C9A15A",
+     "oberteil": "#F4A3B5",
+     "bueste": "Polo and Sweater"
+    }
+   },
+   "figur": "M:erklaert"
+  },
+  {
+   "slot": "s3",
+   "zeit": "17:30",
+   "art": "teaser",
+   "beitragSlot": "b3",
+   "titel": [
+    "Redlicher Besitzer: Nutzungen raus?"
+   ],
+   "unter": "Neues Reel · im Profil"
+  },
+  {
+   "slot": "s9",
+   "zeit": "19:23",
+   "art": "begriff",
+   "klausur": 2,
+   "fachLabel": "Strafrecht BT",
+   "themaId": "strafbt-324",
+   "titel": [
+    "Bedingtes",
+    "Einverständnis"
+   ],
+   "text": "Automat: Einverständnis nur bei ordnungsgemäßer Bedienung. Wer Falschgeld einwirft, bricht Gewahrsam.",
+   "norm": "§ 242 Abs. 1 StGB",
+   "figuren": {
+    "C": {
+     "name": "Amira",
+     "kopf": "Long Afro",
+     "haut": "#8D5A3B",
+     "haar": "#1E1A18",
+     "oberteil": "#9AD48F",
+     "bueste": "Device"
+    }
+   },
+   "figur": "C:erklaert"
+  }
+ ]
+}
