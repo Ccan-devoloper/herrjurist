@@ -18,7 +18,9 @@ Frau Weigel, Frau Bühler (nie im Genitiv). Der ältere Mann bleibt ohne Namen (
 Stimmen (nur aus dem Pool): Herr Brauer marc (Mann, mittel), Frau Hauser sabrina (Frau, mittel), Herr Kessel william
 (Mann, älter), Frau Bühler laura_ruhig (Frau, mittel); Frau Weigel spricht nicht. Lexi = Erzählerin Carla.
 Segmente: (text, pause) = Erzählerin Carla (auch Lexi), (text, pause, rolle) = Figurenrede. [marke] = Cue; jede Marke genau
-einmal. Zahlen und Paragrafen im Sprechtext als Wörter."""
+einmal. Zahlen und Paragrafen im Sprechtext als Wörter.
+Nachvertonung v2 (nur Segment 15): „plötzlich eintretendes Ereignis“ hörten whisper small und medium als „einträgendes“;
+umformuliert zu „ein Ereignis, das plötzlich eintritt, …“ (Paraphrase der BGH-Definition)."""
 
 P, PS = 0.3, 0.5
 
@@ -52,7 +54,7 @@ SEGMENTE = [
     ("[echt]Das ist ein echtes Unterlassungsdelikt: Bestraft wird das Nichthelfen selbst. [jeder]Die Pflicht trifft jeden, "
      "auch ohne Garantenstellung. [kein]Und es kommt nicht darauf an, ob die Hilfe am Ende etwas geändert hätte.", PS),
     # --- D 1. Unglücksfall ---------------------------------------------------------------------------------------------------
-    ("[ungl]Erstens der Unglücksfall. [def]Nach dem Bundesgerichtshof ist das ein plötzlich eintretendes Ereignis, das "
+    ("[ungl]Erstens der Unglücksfall. [def]Nach dem Bundesgerichtshof ist das ein Ereignis, das plötzlich eintritt, "
      "erheblichen Schaden an Menschen oder Sachen anrichtet und weiteren Schaden zu verursachen droht. [droht]Schon ein "
      "drohender erheblicher Schaden genügt. "
      "[exante]Du beurteilst das ex ante: so, wie ein verständiger Beobachter die Lage im Moment der Hilfe sieht. "
