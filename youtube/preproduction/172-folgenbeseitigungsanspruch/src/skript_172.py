@@ -47,7 +47,7 @@ SEGMENTE = [
      "[w113]Und Paragraf hundertdreizehn Absatz eins Satz zwei VwGO: Ist der Verwaltungsakt schon vollzogen, so kann das "
      "Gericht auf Antrag auch aussprechen, dass und wie die Verwaltungsbehörde die Vollziehung rückgängig zu machen hat. "
      "[streit]Ob der Anspruch daraus folgt, ist umstritten. [prozess]Das Bundesverwaltungsgericht sieht darin ein "
-     "prozessuales Mittel für den Anspruch, dazu das Video zur Anfechtungsklage. [keinva]Ottilie hilft "
+     "prozessuales Mittel für den Anspruch, dazu das Video zur Anfechtungsklage. [keinva]Otti-lie hilft "
      "die Vorschrift aber nicht: Es gibt keinen Verwaltungsakt.", PS),
     # --- F II. Voraussetzungen im Überblick ------------------------------------------------------------------------------
     ("[vor]Römisch zwei: die Voraussetzungen, vier Punkte. [v1]Erstens ein hoheitlicher Eingriff, [v2]zweitens in ein "
@@ -72,7 +72,7 @@ SEGMENTE = [
      "[d5]Hier reicht es, die Steine auf dem Streifen herauszunehmen und Erde aufzufüllen: möglich und zumutbar.", PS),
     # --- J III. Rechtsfolge: Status quo ante, kein Schadensersatz; Art. 34 Satz 1 GG ------------------------------------
     ("[rf]Römisch drei: die Rechtsfolge. [rf1]Der Anspruch richtet sich auf die Wiederherstellung des Zustands vor dem "
-     "Eingriff, des Status quo ante. [rf2]Er ist kein Schadensersatzanspruch. [rf3]Ottilie muss sich also nicht mit Geld "
+     "Eingriff, des Status quo ante. [rf2]Er ist kein Schadensersatzanspruch. [rf3]Otti-lie muss sich also nicht mit Geld "
      "abfinden lassen. [w34]Schadensersatz ist etwa Sache der Amtshaftung: Nach Artikel vierunddreißig Satz eins "
      "GG trifft die Verantwortlichkeit grundsätzlich den Staat, [w839]und Paragraf achthundertneununddreißig BGB verlangt "
      "Vorsatz oder Fahrlässigkeit.", PS),
