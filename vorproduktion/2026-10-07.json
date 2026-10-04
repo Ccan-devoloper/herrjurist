@@ -1,21 +1,16 @@
 {
   "datum": "2026-10-07",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
+  "freigabeBetreiber": true,
   "liveVerknuepft": false,
-  "vorproduktionStatus": "review",
+  "vorproduktionStatus": "live-freigegeben",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungUsd": 0,
     "providerKostenUsd": 0,
-    "piperOffline": true,
     "coverbilder": false,
-    "autorUsd": 0,
-    "faktencheckUsd": 0,
-    "sonstigeTextKiUsd": 0,
     "bildgenerierungErlaubt": false,
-    "bildkostenUsd": 0,
-    "bilderStatus": "bewusst-ausgelassen"
+    "reelStimme": "elevenlabs-abo"
   },
   "plan": {
     "beitraege": [
@@ -44,8 +39,7 @@
         "themaId": "verwalt-649",
         "themaTitel": "Verwaltungsvollstreckung: Grundstrukturen",
         "fach": "verwalt",
-        "klausur": 3,
-        "lang": false
+        "klausur": 3
       }
     ],
     "stories": [
@@ -65,8 +59,7 @@
         "slot": "s1",
         "zeit": "08:00",
         "art": "teaser",
-        "beitragSlot": "b1",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b1"
       },
       {
         "slot": "s6",
@@ -78,8 +71,7 @@
         "slot": "s2",
         "zeit": "11:00",
         "art": "teaser",
-        "beitragSlot": "b2",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b2"
       },
       {
         "slot": "s7",
@@ -97,8 +89,7 @@
         "slot": "s3",
         "zeit": "15:30",
         "art": "teaser",
-        "beitragSlot": "b3",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b3"
       },
       {
         "slot": "s9",
@@ -115,91 +106,7 @@
       "klausur": 1,
       "fachLabel": "Zivilprozessrecht",
       "themaId": "zpo-287",
-      "slug": "2026-10-07-b1",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Vollstreckungsfehler mit § 767 ZPO angreifen? Die falsche Klage",
-          "titelZeilen": [
-            "Vollstreckungsfehler",
-            "mit § 767 ZPO?",
-            "Die falsche Klage"
-          ],
-          "coverBadge": "Prüfungsfrage",
-          "coverText": "Materielle Einwendung, nicht Vollstreckungsfehler",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Was § 767 ZPO angreift",
-          "text": "Die Vollstreckungsabwehrklage richtet sich gegen die Vollstreckbarkeit des titulierten Anspruchs, weil dem Schuldner eine materiell-rechtliche Einwendung gegen den Anspruch zusteht."
-        },
-        {
-          "art": "schritte",
-          "titel": "Die Prüfung in vier Schritten",
-          "schritte": [
-            {
-              "titel": "1. Statthaftigkeit",
-              "text": "Materielle Einwendung gegen den titulierten Anspruch, etwa Erfüllung, Aufrechnung oder Erlass."
-            },
-            {
-              "titel": "2. Zuständigkeit",
-              "text": "Zuständig ist das Prozessgericht des ersten Rechtszugs (§ 767 Abs. 1 ZPO)."
-            },
-            {
-              "titel": "3. Präklusion",
-              "text": "§ 767 Abs. 2 ZPO sperrt bestimmte Einwendungen, deren Gründe schon früher entstanden waren."
-            },
-            {
-              "titel": "4. Begründetheit",
-              "text": "Die Einwendung muss materiell-rechtlich bestehen und dem titulierten Anspruch entgegenstehen."
-            }
-          ]
-        },
-        {
-          "art": "vergleich",
-          "titel": "Nicht mit anderen Vollstreckungsbehelfen vermischen",
-          "links": {
-            "titel": "§ 766 ZPO",
-            "punkte": [
-              "Angriff auf Art und Weise der Vollstreckung.",
-              "Verfahrensfehler des Vollstreckungsorgans."
-            ]
-          },
-          "rechts": {
-            "titel": "§ 767 ZPO",
-            "punkte": [
-              "Angriff aus materiellem Recht.",
-              "Der titulierte Anspruch soll nicht mehr durchsetzbar sein."
-            ]
-          }
-        },
-        {
-          "art": "text",
-          "titel": "Drittrechte laufen anders",
-          "text": "Behauptet ein Dritter ein Recht, das die Veräußerung des Vollstreckungsgegenstands hindert, ist nicht § 767, sondern die Drittwiderspruchsklage nach § 771 ZPO der Ausgangspunkt."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "§ 766 fragt: Wie wird vollstreckt? § 767 fragt: Darf aus diesem Anspruch noch vollstreckt werden? § 771 fragt: Gehört der Gegenstand überhaupt in die Vollstreckung?"
-        },
-        {
-          "art": "cta",
-          "titel": "Drei Behelfe vor der Begründetheit trennen",
-          "punkte": [
-            "Verfahrensfehler → § 766 ZPO",
-            "Materielle Einwendung → § 767 ZPO",
-            "Drittrecht → § 771 ZPO"
-          ],
-          "icons": [
-            "hammer",
-            "dokument",
-            "personen"
-          ]
-        }
-      ],
-      "caption": "Vollstreckungsfehler mit § 767 ZPO angreifen? Die falsche Klage\n\nDie Vollstreckungsabwehrklage nach § 767 ZPO ist der richtige Behelf für materielle Einwendungen gegen den titulierten Anspruch. Statthaftigkeit, Zuständigkeit, Präklusion nach § 767 Abs. 2 und Begründetheit gehören sichtbar getrennt in die Prüfung. Verfahrensfehler der Vollstreckung laufen über § 766 ZPO; Drittrechte über § 771 ZPO.",
+      "caption": "Vollstreckungsfehler mit § 767 ZPO angreifen? Die falsche Klage.\n\n▸ Vollstreckungsabwehrklage: Einwendungen, die den festgestellten Anspruch selbst betreffen, etwa Erfüllung (§ 362 Abs. 1 BGB), beim Prozessgericht des ersten Rechtszugs (§ 767 Abs. 1 ZPO; ausschließlich, § 802 ZPO).\n▸ Präklusion: Die Gründe müssen nach dem Schluss der mündlichen Verhandlung entstanden sein, in der sie spätestens hätten geltend gemacht werden müssen (§ 767 Abs. 2 ZPO). Alle verfügbaren Einwendungen in einer Klage (§ 767 Abs. 3 ZPO).\n▸ Erinnerung: Art und Weise der Zwangsvollstreckung und Verfahren des Gerichtsvollziehers; es entscheidet das Vollstreckungsgericht (§ 766 Abs. 1 ZPO, § 764 ZPO). Beispiel: Vollstreckung zur Nachtzeit (21 bis 6 Uhr) in der Wohnung ohne besondere richterliche Anordnung (§ 758a Abs. 4 ZPO).\n▸ Recht eines Dritten am Vollstreckungsgegenstand: Drittwiderspruchsklage (§ 771 ZPO).\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -212,37 +119,65 @@
         "#771zpo",
         "#examensvorbereitung"
       ],
-      "kurztitel": "§ 767 ZPO: nur materielle Einwendungen",
-      "coverText": "Materielle Einwendung, nicht Vollstreckungsfehler",
-      "coverBadge": "Prüfungsfrage",
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Drei getrennte Angriffswege führen zu Verfahrensfehler, Anspruchseinwendung und Drittrecht; § 767 liegt bewusst in der Mitte.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Drei getrennte Angriffswege führen zu Verfahrensfehler, Anspruchseinwendung und Drittrecht; § 767 liegt bewusst in der Mitte.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 767 ZPO",
-        "§ 766 ZPO",
+        "§ 767 Abs. 1–3 ZPO",
+        "§ 766 Abs. 1 ZPO",
+        "§ 764 ZPO",
+        "§ 758a Abs. 4 ZPO",
         "§ 771 ZPO",
-        "Themenpool: zpo-287"
+        "§ 802 ZPO",
+        "§ 362 Abs. 1 BGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "klageartfehler",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-07-b1",
+      "kurztitel": "§ 767 ZPO: nur materielle Einwendungen",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T11:38:55.752Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Prüfungsfrage",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Prüfungsfrage",
+          "text": "Prüfungsfrage · Vollstreckungsfehler · mit § 767 ZPO? · Falsche Klage · Welcher Behelf? · + Gutachten-Baustein · § 766: wie? · § 767: ob noch?",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Zivilprozessrecht",
+          "text": "Der Fall · G hat ein Urteil gegen S über 5.000 €. Nach dem Urteil zahlt S alles. · Trotzdem pfändet der Gerichtsvollzieher um 23 Uhr in der Wohnung, ohne richterliche Anordnung. · Jetzt du: Welcher Behelf wofür? · Ich hab doch bezahlt!"
+        },
+        {
+          "art": "text",
+          "titel": "Zivilprozessrecht",
+          "text": "Der typische Fehler · Alles mit der Vollstreckungsabwehrklage angreifen. · Nachtpfändung ohne Anordnung: Art und Weise, also Erinnerung. · § 766 Abs. 1, § 758a Abs. 4 S. 1 ZPO · Zahlung: Einwendung gegen den Anspruch selbst. · § 767 Abs. 1 ZPO · Zwei Fehler, zwei Wege!"
+        },
+        {
+          "art": "text",
+          "titel": "Zivilprozessrecht",
+          "text": "§ 767 ZPO in 4 Schritten · Statthaft · § 767 Abs. 1 ZPO · materielle Einwendung gegen den Anspruch · Zuständig · §§ 767 Abs. 1, 802 ZPO · Prozessgericht des ersten Rechtszugs · Keine Präklusion · § 767 Abs. 2 ZPO · Grund erst nach der letzten Verhandlung · Begründet · Einwendung besteht · Am Ende: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Zivilprozessrecht",
+          "text": "Erinnerung oder Klage? · § 766 ZPO · Art und Weise der Vollstreckung · entscheidet das Vollstreckungsgericht · § 764 ZPO · § 767 ZPO · Anspruch selbst: Erfüllung, Erlass, Aufrechnung · Klage beim Prozessgericht · Recht eines Dritten? § 771!"
+        },
+        {
+          "art": "text",
+          "titel": "Zivilprozessrecht",
+          "text": "Lösung: zwei Behelfe · Zahlung: § 767 ZPO · Nachtpfändung: § 766 ZPO · Wie vollstreckt? § 766, · Ob noch? § 767, · Wessen Sache? § 771. · Speichern fürs Examen · Hättest du beide gesehen? · Weiterwischen: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Zivilprozessrecht",
+          "text": "So im Gutachten · Obersatz · Die Klage des S hat Erfolg, wenn sie zulässig und begründet ist. · Norm · § 767 Abs. 1, 2 ZPO · Einwendung gegen den Anspruch, später entstanden · Subsumtion · § 362 Abs. 1 BGB · S zahlte nach dem Urteil: Erfüllung, nicht präkludiert · Ergebnis · Vollstreckung für unzulässig erklären"
+        }
+      ]
     },
     "b2": {
       "format": "pruefungsfrage",
@@ -250,65 +185,7 @@
       "klausur": 2,
       "fachLabel": "Strafprozessrecht",
       "themaId": "stpo-777",
-      "slug": "2026-10-07-b2",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Dringender Tatverdacht – U-Haft? Noch nicht",
-          "titelZeilen": [
-            "Dringender",
-            "Tatverdacht –",
-            "U-Haft? Noch nicht"
-          ],
-          "coverBadge": "Prüfungsfrage",
-          "coverText": "Tatverdacht + Haftgrund + Verhältnismäßigkeit",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "1. Dringender Tatverdacht",
-          "text": "Es muss eine hohe Wahrscheinlichkeit bestehen, dass der Beschuldigte Täter oder Teilnehmer einer Straftat ist. Der dringende Tatverdacht ist stärker als der hinreichende Tatverdacht der Anklage."
-        },
-        {
-          "art": "text",
-          "titel": "2. Haftgrund konkret feststellen",
-          "punkte": [
-            "Flucht: Der Beschuldigte hat sich dem Verfahren entzogen.",
-            "Fluchtgefahr: Bei Würdigung der Umstände ist wahrscheinlicher, dass er sich entziehen wird.",
-            "Verdunkelungsgefahr: Konkrete Gefahr unlauterer Einwirkung auf Beweismittel oder Beweispersonen."
-          ]
-        },
-        {
-          "art": "text",
-          "titel": "3. § 112a StPO ist ein Sonderfall",
-          "text": "Wiederholungsgefahr ist nur unter den besonderen Voraussetzungen und für die gesetzlich erfassten Delikte ein Haftgrund. Nicht aus einem allgemeinen Rückfallrisiko ableiten."
-        },
-        {
-          "art": "text",
-          "titel": "4. Verhältnismäßigkeit bleibt eigene Schranke",
-          "text": "Untersuchungshaft ist ein besonders intensiver Grundrechtseingriff. Dauer und Bedeutung der Sache müssen deshalb in einem angemessenen Verhältnis zur Freiheitsentziehung stehen (§ 112 Abs. 1 S. 2 StPO)."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Dringender Tatverdacht öffnet die Prüfung – ein konkreter Haftgrund und Verhältnismäßigkeit tragen die Haftentscheidung."
-        },
-        {
-          "art": "cta",
-          "titel": "Drei Überschriften niemals verschmelzen",
-          "punkte": [
-            "Dringender Tatverdacht",
-            "Haftgrund nach §§ 112, 112a StPO",
-            "Verhältnismäßigkeit"
-          ],
-          "icons": [
-            "lupe",
-            "warnung",
-            "waage"
-          ]
-        }
-      ],
-      "caption": "Dringender Tatverdacht – U-Haft? Noch nicht\n\nFür Untersuchungshaft genügt ein dringender Tatverdacht nicht. Zusätzlich braucht es einen gesetzlichen Haftgrund – etwa Flucht, Fluchtgefahr oder Verdunkelungsgefahr – und die Haft muss verhältnismäßig sein. Wiederholungsgefahr nach § 112a StPO ist ein gesetzlich enger Sonderfall.",
+      "caption": "Dringender Tatverdacht – U-Haft? Noch nicht.\n\n▸ Untersuchungshaft verlangt dringenden Tatverdacht und einen Haftgrund (§ 112 Abs. 1 S. 1 StPO). Sie darf nicht angeordnet werden, wenn sie zur Bedeutung der Sache und zur zu erwartenden Strafe oder Maßregel außer Verhältnis steht (§ 112 Abs. 1 S. 2 StPO).\n▸ Haftgründe auf Grund bestimmter Tatsachen: Flucht oder Verbergen (§ 112 Abs. 2 Nr. 1 StPO), Fluchtgefahr bei Würdigung der Umstände des Einzelfalls (Nr. 2), Verdunkelungsgefahr bei dringendem Verdacht von Verdunkelungshandlungen (Nr. 3).\n▸ Ohne Haftgrund nach Abs. 2 nur bei den Katalogtaten des § 112 Abs. 3 StPO. Wiederholungsgefahr ist ein enger Sonderfall mit eigenem Katalog und eigenen Voraussetzungen (§ 112a StPO).\n▸ Die Schwere der Tat allein ersetzt keinen Haftgrund.\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -321,138 +198,69 @@
         "#klausurtechnik",
         "#examensvorbereitung"
       ],
-      "kurztitel": "U-Haft: Tatverdacht reicht nicht",
-      "coverText": "Drei Voraussetzungen sichtbar trennen",
-      "coverBadge": "Prüfungsfrage",
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Drei Sicherheitssperren liegen vor einer Haftzelle: dringender Tatverdacht, gesetzlicher Haftgrund und Verhältnismäßigkeit.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Drei Sicherheitssperren liegen vor einer Haftzelle: dringender Tatverdacht, gesetzlicher Haftgrund und Verhältnismäßigkeit.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 112 StPO",
+        "§ 112 Abs. 1–3 StPO",
         "§ 112a StPO",
-        "Themenpool: stpo-777"
+        "§ 263 Abs. 1 StGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "widerspruch",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-07-b2",
+      "kurztitel": "U-Haft: Tatverdacht reicht nicht",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T12:19:07.948Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Prüfungsfrage",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Prüfungsfrage",
+          "text": "Prüfungsfrage · Dringender · Tatverdacht – U-Haft? · Noch nicht · § 112 Abs. 1 S. 1 StPO · Haftgrund? · + Gutachten-Baustein",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "Der Fall · B ist eines Betrugs dringend verdächtig, Schaden 40.000 €. · § 263 Abs. 1 StGB · B hat Wohnung, Familie und Arbeit. Die StA will Haftbefehl „wegen der Schwere der Tat“. · Jetzt du: Ergeht der Haftbefehl? · Reicht die Schwere?"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "Der typische Fehler · Dringender Verdacht plus schwere Tat gleich Haft. · Haftgrund nur auf Grund bestimmter Tatsachen. · § 112 Abs. 2 StPO · Ohne Haftgrund nur bei den Katalogtaten, Betrug gehört nicht dazu. · § 112 Abs. 3 StPO · Kein Haftgrund, keine Haft!"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "U-Haft in 4 Schritten · Dringender Tatverdacht · § 112 Abs. 1 S. 1 StPO · hohe Wahrscheinlichkeit · Haftgrund · § 112 Abs. 2 StPO · bestimmte Tatsachen · Sonderfälle · §§ 112 Abs. 3, 112a StPO · Katalog, Wiederholungsgefahr · Verhältnismäßigkeit · § 112 Abs. 1 S. 2 StPO · Bedeutung, erwartete Strafe · Am Ende: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "Die Haftgründe · Flucht: flüchtig oder verborgen. · § 112 Abs. 2 Nr. 1 StPO · Fluchtgefahr: Würdigung aller Umstände des Einzelfalls. · § 112 Abs. 2 Nr. 2 StPO · Verdunkelung: dringender Verdacht unlauterer Einwirkung auf Beweise. · § 112 Abs. 2 Nr. 3 StPO · Wohnung, Job, Familie?"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "Lösung: kein Haftbefehl · Keine Tatsachen für Flucht oder Verdunkelung · Verdacht öffnet, · Haftgrund trägt, · Verhältnis begrenzt. · Speichern fürs Examen · Wie prüfst du die Fluchtgefahr? · Weiterwischen: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "So im Gutachten · Obersatz · Ein Haftbefehl setzt dringenden Tatverdacht und einen Haftgrund voraus. · Norm · § 112 Abs. 1 S. 1, Abs. 2 StPO · Haftgrund auf Grund bestimmter Tatsachen · Subsumtion · B ist sozial fest eingebunden; Tatsachen für Flucht oder Verdunkelung fehlen. · Ergebnis · Kein Haftgrund, kein Haftbefehl"
+        }
+      ]
     },
     "b3": {
       "format": "reel",
-      "layout": "erklaer",
       "fach": "verwalt",
       "klausur": 3,
       "fachLabel": "Verwaltungsrecht AT",
       "themaId": "verwalt-649",
-      "slug": "2026-10-07-b3",
-      "szenen": [
-        {
-          "art": "hook",
-          "nummer": null,
-          "titel": "Verwaltungsvollstreckung: Nicht direkt beim Zwangsmittel anfangen",
-          "unter": "Verwaltungsrecht",
-          "text": "Grundverfügung und Vollstreckbarkeit kommen zuerst.",
-          "norm": "VwVG / Landesrecht",
-          "icon": "gebaeude",
-          "sprecher": "Bei der Verwaltungsvollstreckung ist das Zwangsgeld nicht der erste Prüfungspunkt. Zuerst brauchst du eine vollstreckbare Grundverfügung – und erst danach die Voraussetzungen des konkreten Zwangsmittels.",
-          "marken": [
-            "Grundverfügung zuerst"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 1,
-          "titel": "Grundverfügung bestimmen",
-          "text": "Welche Handlung, Duldung oder Unterlassung wird vom Pflichtigen verlangt?",
-          "norm": "VwVG / Landesrecht",
-          "sprecher": "Schritt eins: Bestimme die Grundverfügung. Was genau soll der Pflichtige tun, dulden oder unterlassen? Ohne diesen Ausgangspunkt lässt sich die Vollstreckung nicht sauber prüfen.",
-          "marken": [
-            "Grundverfügung"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 2,
-          "titel": "Vollstreckbarkeit prüfen",
-          "text": "Der Verwaltungsakt muss vollstreckbar sein, etwa weil er bestandskräftig oder sofort vollziehbar ist.",
-          "norm": "§ 80 VwGO / Vollstreckungsrecht",
-          "sprecher": "Schritt zwei: Ist die Grundverfügung vollstreckbar? Das hängt insbesondere davon ab, ob Rechtsbehelfe aufschiebende Wirkung haben oder die sofortige Vollziehung beziehungsweise gesetzlicher Sofortvollzug greift.",
-          "marken": [
-            "vollstreckbar?"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 3,
-          "titel": "Zwangsmittel richtig auswählen",
-          "text": "Ersatzvornahme, Zwangsgeld und unmittelbarer Zwang haben unterschiedliche Voraussetzungen.",
-          "norm": "VwVG / Landesrecht",
-          "sprecher": "Schritt drei: Wähle das passende Zwangsmittel. Ersatzvornahme, Zwangsgeld und unmittelbarer Zwang sind nicht austauschbar und richten sich nach Bundes- oder Landesvollstreckungsrecht.",
-          "marken": [
-            "Zwangsmittel"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 4,
-          "titel": "Androhung und weitere Vollstreckungsstufen",
-          "text": "Im gestreckten Verfahren folgen regelmäßig Androhung und die weiteren gesetzlich vorgesehenen Schritte.",
-          "norm": "VwVG / Landesrecht",
-          "sprecher": "Schritt vier: Im gestreckten Verfahren kommt die Androhung vor dem eigentlichen Zwang. Je nach anwendbarem Vollstreckungsgesetz folgen Festsetzung und Anwendung in der dort geregelten Form.",
-          "marken": [
-            "Androhung"
-          ]
-        },
-        {
-          "art": "punkt",
-          "nummer": null,
-          "titel": "Sofortvollzug ist die Ausnahme",
-          "text": "Vollstreckung ohne vorausgehende Grundverfügung oder ohne reguläre Stufen braucht eine besondere gesetzliche Grundlage.",
-          "norm": "VwVG / Landesrecht",
-          "sprecher": "Ein Sofortvollzug ist keine Abkürzung aus Bequemlichkeit. Er braucht die besonderen gesetzlichen Voraussetzungen des anwendbaren Vollstreckungsrechts.",
-          "marken": [
-            "Ausnahme"
-          ]
-        },
-        {
-          "art": "merke",
-          "nummer": null,
-          "titel": "Die Prüfungskette",
-          "text": "Grundverfügung → Vollstreckbarkeit → Zwangsmittel → Androhung/Stufen → Verhältnismäßigkeit.",
-          "norm": null,
-          "sprecher": "Merke die Kette: Grundverfügung, Vollstreckbarkeit, Zwangsmittel, Vollstreckungsstufen und Verhältnismäßigkeit. Und sag bei Landesrecht ausdrücklich, welches Vollstreckungsgesetz gilt.",
-          "marken": [
-            "Prüfungskette"
-          ]
-        },
-        {
-          "art": "cta",
-          "nummer": null,
-          "titel": "Landesrecht sichtbar kennzeichnen",
-          "text": "Keine bundesrechtliche Norm einsetzen, wenn das Land vollstreckt.",
-          "norm": null,
-          "sprecher": "Gerade in Polizeirechts- und Kommunalrechtsfällen ist der letzte Punkt wichtig: Prüfe zuerst, ob Bundes- oder Landesvollstreckungsrecht anwendbar ist. Sonst stimmt die schönste Prüfungskette mit den falschen Normen.",
-          "marken": [
-            "Bund oder Land?"
-          ]
-        }
-      ],
-      "caption": "Verwaltungsvollstreckung beginnt nicht mit dem Zwangsmittel. Zuerst stehen Grundverfügung und Vollstreckbarkeit, danach Auswahl und Stufen des Zwangsmittels sowie Verhältnismäßigkeit. Welches Vollstreckungsgesetz gilt, hängt vom handelnden Hoheitsträger und dem einschlägigen Bundes- oder Landesrecht ab – Landesrecht deshalb in der Klausur ausdrücklich kennzeichnen.",
+      "caption": "Zwangsgeld als erster Prüfungspunkt? Falsch – zuerst kommt die vollstreckbare Grundverfügung.\n\nNormen nach dem VwVG des Bundes; vollstreckt eine Landesbehörde, gilt das Landesvollstreckungsrecht (Landesrecht prüfen).\n\n▸ Grundverfügung: Verwaltungsakt, der auf Herausgabe einer Sache, eine Handlung, Duldung oder Unterlassung gerichtet ist (§ 6 Abs. 1 VwVG).\n▸ Vollstreckbarkeit: unanfechtbar, sofortiger Vollzug angeordnet oder Rechtsbehelf ohne aufschiebende Wirkung (§ 6 Abs. 1 VwVG, § 80 Abs. 2 VwGO).\n▸ Zwangsmittel: Ersatzvornahme, Zwangsgeld, unmittelbarer Zwang (§ 9 Abs. 1 VwVG), angemessen zum Zweck (§ 9 Abs. 2 VwVG).\n▸ Gestrecktes Verfahren: schriftliche Androhung mit Frist (§ 13 VwVG), Festsetzung (§ 14 VwVG), Anwendung (§ 15 VwVG).\n▸ Sofortiger Vollzug ohne vorausgehenden Verwaltungsakt nur unter den Voraussetzungen des § 6 Abs. 2 VwVG.\n\nSpeichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -464,204 +272,316 @@
         "#klausurtechnik",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Verwaltungsvollstreckung: die Prüfungskette",
-      "titelZeilen": [
-        "Verwaltungs-",
-        "vollstreckung:",
-        "die Prüfungskette"
-      ],
-      "coverText": "Grundverfügung zuerst",
-      "coverBadge": "Reel",
-      "coverBildAuslassen": true,
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Eine behördliche Vollstreckung läuft über fünf sichtbare Stufen statt direkt zum Zwangsmittel zu springen.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Eine behördliche Vollstreckung läuft über fünf sichtbare Stufen statt direkt zum Zwangsmittel zu springen.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "Verwaltungsvollstreckungsgesetz des Bundes bzw. Landesrecht",
-        "§ 80 VwGO",
-        "Themenpool: verwalt-649"
+        "§§ 6, 9, 13–15 VwVG",
+        "§ 80 Abs. 2 VwGO",
+        "Landesvollstreckungsrecht (Landesrecht prüfen)"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "echter-aufbaufehler",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-07-b3",
+      "kurztitel": "Verwaltungsvollstreckung: Grundstrukturen",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "bild": "op-cover",
+      "reelTyp": "klausurfalle",
+      "hookStil": "kippen",
+      "coverBadge": "Reel",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Verwaltungszwang? Zuerst das Zwangsgeld."
+        },
+        {
+          "art": "schritt",
+          "titel": "Grundverfügung"
+        },
+        {
+          "art": "schritt",
+          "titel": "Vollstreckbarkeit"
+        },
+        {
+          "art": "schritt",
+          "titel": "Androhen, festsetzen, anwenden"
+        }
+      ],
+      "sprecher": [
+        "Zwangsgeld als erster Prüfungspunkt? Falsch. Zuerst kommt die vollstreckbare Grundverfügung.",
+        "Grundverfügung: Was soll der Pflichtige tun, dulden oder unterlassen?",
+        "Vollstreckbar ist sie, wenn sie unanfechtbar oder sofort vollziehbar ist.",
+        "Erst dann das Zwangsmittel: androhen, festsetzen, anwenden, verhältnismäßig.",
+        "Merke: erst Grundverfügung, dann Zwang."
+      ],
+      "dauerS": 27.91,
+      "tempo": 1.0
     },
     "s4": {
       "slot": "s4",
       "art": "frage",
-      "fach": "vwgo",
+      "fach": null,
       "klausur": 3,
-      "pairId": "vwgo-665",
-      "ueberzeile": "Prüfungsfrage VwGO",
-      "titel": "Wann ist die Verpflichtungsklage begründet?",
       "fachLabel": "Verwaltungsprozessrecht",
-      "quellen": [
-        "§ 113 Abs. 5 VwGO",
-        "Themenpool: vwgo-665"
+      "themaId": "vwgo-665",
+      "beitragSlot": null,
+      "quellen": null,
+      "frage": [
+        "Wann ist die",
+        "Verpflichtungsklage",
+        "begründet?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
       "optionen": [
-        "Ablehnung rechtswidrig, Kläger in Rechten verletzt, Sache spruchreif",
-        "Nur wenn der Kläger vorher Widerspruch eingelegt hat",
-        "Schon wenn der Ablehnungsbescheid formell rechtswidrig ist"
+        "Ablehnung rechtswidrig, Rechtsverletzung, Spruchreife",
+        "Nur nach erfolglosem Widerspruch",
+        "Schon bei jedem Formfehler"
       ],
-      "richtig": 0
+      "pairId": "vwgo-665",
+      "sichtbareTexte": [
+        "Verwaltungsprozessrecht",
+        "Prüfungsfrage",
+        "Wann ist die",
+        "Verpflichtungsklage",
+        "begründet?",
+        "Ablehnung rechtswidrig, Rechtsverletzung, Spruchreife",
+        "Nur nach erfolglosem Widerspruch",
+        "Schon bei jedem Formfehler",
+        "Auflösung in der nächsten Story"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s5": {
       "slot": "s5",
       "art": "antwort",
-      "fach": "vwgo",
+      "fach": null,
       "klausur": 3,
-      "pairId": "vwgo-665",
-      "ueberzeile": "Auflösung",
-      "titel": "Anspruch plus Rechtsverletzung",
-      "text": "Die Verpflichtungsklage ist begründet, soweit die Ablehnung oder Unterlassung des begehrten Verwaltungsakts rechtswidrig ist, den Kläger in seinen Rechten verletzt und die Sache spruchreif ist. Dann spricht das Gericht die Verpflichtung zur Vornahme aus; fehlt Spruchreife, kommt ein Bescheidungsausspruch in Betracht.",
-      "norm": "§ 113 Abs. 5 VwGO",
       "fachLabel": "Verwaltungsprozessrecht",
-      "quellen": [
-        "§ 113 Abs. 5 VwGO",
-        "Themenpool: vwgo-665"
+      "themaId": "vwgo-665",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Rechtswidrig, verletzt,",
+        "spruchreif"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
       "optionen": [
-        "Ablehnung rechtswidrig, Kläger in Rechten verletzt, Sache spruchreif",
-        "Nur wenn der Kläger vorher Widerspruch eingelegt hat",
-        "Schon wenn der Ablehnungsbescheid formell rechtswidrig ist"
+        "Ablehnung rechtswidrig, Rechtsverletzung, Spruchreife",
+        "Nur nach erfolglosem Widerspruch",
+        "Schon bei jedem Formfehler"
       ],
-      "richtig": 0
+      "richtig": 0,
+      "text": "Dann Verpflichtung zur Vornahme. Fehlt die Spruchreife: Bescheidungsurteil.",
+      "norm": "§ 113 Abs. 5 VwGO",
+      "pairId": "vwgo-665",
+      "sichtbareTexte": [
+        "Verwaltungsprozessrecht",
+        "Auflösung",
+        "Rechtswidrig, verletzt,",
+        "spruchreif",
+        "Ablehnung rechtswidrig, Rechtsverletzung, Spruchreife",
+        "Nur nach erfolglosem Widerspruch",
+        "Schon bei jedem Formfehler",
+        "Dann Verpflichtung zur Vornahme. Fehlt die Spruchreife: Bescheidungsurteil.",
+        "§ 113 Abs. 5 VwGO"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s6": {
       "slot": "s6",
       "art": "norm",
-      "fach": "verwalt",
+      "fach": null,
       "klausur": 3,
-      "pairId": "verwalt-391",
-      "ueberzeile": "Anspruch des Tages",
-      "titel": "Folgenbeseitigungsanspruch",
-      "text": "Der öffentlich-rechtliche Folgenbeseitigungsanspruch zielt auf die Beseitigung eines fortdauernden rechtswidrigen Zustands, den hoheitliches Handeln verursacht hat. Er richtet sich grundsätzlich auf Wiederherstellung des früheren rechtmäßigen Zustands, soweit dies tatsächlich und rechtlich möglich und zumutbar ist.",
-      "norm": "Richterrecht · Rechtsstaatsprinzip",
       "fachLabel": "Verwaltungsrecht AT",
-      "quellen": [
-        "Art. 20 Abs. 3 GG",
-        "Themenpool: verwalt-391"
+      "themaId": "verwalt-391",
+      "beitragSlot": null,
+      "quellen": null,
+      "ueberzeile": "Anspruch des Tages",
+      "titel": [
+        "Folgenbeseitigung:",
+        "Zustand zurück"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "norm": "Art. 20 Abs. 3 GG",
+      "punkte": [
+        [
+          "Hoheitlicher Eingriff, fortdauernd rechtswidriger Zustand.",
+          "ok",
+          null
+        ],
+        [
+          "Ziel: früherer Zustand, soweit möglich und zumutbar.",
+          "warn",
+          null
+        ]
+      ],
+      "sichtbareTexte": [
+        "Verwaltungsrecht AT",
+        "Anspruch des Tages",
+        "Folgenbeseitigung:",
+        "Zustand zurück",
+        "Art. 20 Abs. 3 GG",
+        "Hoheitlicher Eingriff, fortdauernd rechtswidriger Zustand.",
+        "Ziel: früherer Zustand, soweit möglich und zumutbar."
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s7": {
       "slot": "s7",
       "art": "streitstand",
-      "fach": "bgbat",
+      "fach": null,
       "klausur": 1,
-      "pairId": "bgbat-002",
-      "ueberzeile": "Abgrenzungsstreit BGB AT",
-      "titel": "Vertrag oder Gefälligkeit: Sollte eine Rechtsbindung entstehen?",
-      "norm": "§§ 145 ff., 241 Abs. 1 BGB",
-      "optionen": [
-        "Vertragliche Bindung: Aus Sicht eines objektiven Empfängers sprechen wirtschaftliche Bedeutung, erkennbare Risiken und ein Interesse an verlässlicher Leistung für Rechtsbindungswillen.",
-        "Reine Gefälligkeit: Bei alltäglicher, unentgeltlicher Hilfe ohne erkennbaren Rechtsfolgewillen soll gerade keine einklagbare Leistungspflicht entstehen."
-      ],
-      "text": "Die Einordnung folgt keinem einzelnen Merkmal. Entscheidend ist eine Gesamtwürdigung aus objektivierter Empfängersicht; Freundschaft oder Unentgeltlichkeit schließen Rechtsbindungswillen nicht automatisch aus.",
       "fachLabel": "BGB Allgemeiner Teil",
-      "quellen": [
-        "§ 145 BGB",
-        "§ 241 Abs. 1 BGB",
-        "Themenpool: bgbat-002"
+      "themaId": "bgbat-002",
+      "beitragSlot": null,
+      "quellen": null,
+      "ueberzeile": "Abgrenzung",
+      "titel": [
+        "Vertrag oder",
+        "Gefälligkeit?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "ansichten": [
+        [
+          "Für Rechtsbindung",
+          "Wirtschaftliche Bedeutung, Risiko."
+        ],
+        [
+          "Für Gefälligkeit",
+          "Alltägliche, unentgeltliche Hilfe."
+        ]
+      ],
+      "klausur_tipp": "Gesamtwürdigung, Empfängersicht.",
+      "norm": "§§ 133, 157 BGB",
+      "sichtbareTexte": [
+        "BGB Allgemeiner Teil",
+        "Abgrenzung",
+        "Vertrag oder",
+        "Gefälligkeit?",
+        "Für Rechtsbindung",
+        "Wirtschaftliche Bedeutung, Risiko.",
+        "Für Gefälligkeit",
+        "Alltägliche, unentgeltliche Hilfe.",
+        "Gesamtwürdigung, Empfängersicht.",
+        "§§ 133, 157 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s8": {
       "slot": "s8",
       "art": "merksatz",
-      "fach": "strafbt",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafbt-761",
-      "ueberzeile": "Merksatz Aussagedelikte",
-      "titel": "Falsche Aussage und Meineid trennen",
-      "text": "§ 153 StGB erfasst die vorsätzlich falsche uneidliche Aussage vor einer zuständigen Stelle. § 154 StGB setzt zusätzlich einen Eid voraus. Deshalb zuerst Aussage, Zuständigkeit und Falschheit prüfen – erst dann die Eidesqualität.",
-      "norm": "§§ 153, 154 StGB",
       "fachLabel": "Strafrecht BT",
-      "quellen": [
-        "§ 153 StGB",
-        "§ 154 StGB",
-        "Themenpool: strafbt-761"
+      "themaId": "strafbt-761",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Falsche Aussage",
+        "oder Meineid?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "zeilen": [
+        [
+          [
+            "§ 153",
+            "a"
+          ],
+          [
+            " uneidlich,",
+            null
+          ]
+        ],
+        [
+          [
+            "§ 154",
+            "b"
+          ],
+          [
+            " geschworen.",
+            null
+          ]
+        ],
+        [
+          [
+            "Zuständige Stelle",
+            "c"
+          ]
+        ],
+        [
+          [
+            "immer prüfen.",
+            null
+          ]
+        ]
+      ],
+      "norm": "§§ 153, 154 Abs. 1 StGB",
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Merksatz",
+        "Falsche Aussage",
+        "oder Meineid?",
+        "§ 153 uneidlich,",
+        "§ 154 geschworen.",
+        "Zuständige Stelle",
+        "immer prüfen.",
+        "§§ 153, 154 Abs. 1 StGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s9": {
       "slot": "s9",
       "art": "begriff",
-      "fach": "strafat",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafat-294",
-      "ueberzeile": "Begriff des Tages",
-      "titel": "Sozialethische Einschränkungen der Notwehr",
-      "text": "Auch eine erforderliche Verteidigung kann ausnahmsweise nicht geboten sein. Klassische Fallgruppen sind etwa krasses Missverhältnis bei Bagatellangriffen, Angriffe erkennbar schuldlos Handelnder, besondere Garantenbeziehungen und vorwerfbare Notwehrprovokation. Immer fallbezogen begründen.",
-      "norm": "§ 32 StGB",
       "fachLabel": "Strafrecht AT",
-      "quellen": [
-        "§ 32 StGB",
-        "Themenpool: strafat-294"
+      "themaId": "strafat-294",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Gebotenheit",
+        "der Notwehr"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "text": "Erforderliche Verteidigung ist ausnahmsweise nicht geboten: etwa krasses Missverhältnis, schuldlos Angreifende, Provokation.",
+      "norm": "§ 32 Abs. 1 StGB",
+      "sichtbareTexte": [
+        "Strafrecht AT",
+        "Begriff des Tages",
+        "Gebotenheit",
+        "der Notwehr",
+        "Definition",
+        "Erforderliche Verteidigung ist ausnahmsweise nicht geboten: etwa krasses Missverhältnis, schuldlos Angreifende, Provokation.",
+        "§ 32 Abs. 1 StGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s1": {
       "slot": "s1",
@@ -669,16 +589,25 @@
       "fach": "zpo",
       "klausur": 1,
       "fachLabel": "Zivilprozessrecht",
-      "titel": "§ 767 ZPO: Vollstreckungsabwehrklage",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b1",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Mit § 767 ZPO? Falsche Klage"
+      ],
+      "unter": "Prüfungsfrage + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Zivilprozessrecht",
+        "Neu im Feed",
+        "Mit § 767 ZPO? Falsche Klage",
+        "Prüfungsfrage + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s2": {
       "slot": "s2",
@@ -686,16 +615,25 @@
       "fach": "stpo",
       "klausur": 2,
       "fachLabel": "Strafprozessrecht",
-      "titel": "U-Haft: Tatverdacht, Haftgrund, Verhältnismäßigkeit",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b2",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Tatverdacht – U-Haft? Noch nicht"
+      ],
+      "unter": "Prüfungsfrage + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Strafprozessrecht",
+        "Neu im Feed",
+        "Tatverdacht – U-Haft? Noch nicht",
+        "Prüfungsfrage + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s3": {
       "slot": "s3",
@@ -703,16 +641,25 @@
       "fach": "verwalt",
       "klausur": 3,
       "fachLabel": "Verwaltungsrecht AT",
-      "titel": "Verwaltungsvollstreckung: die Prüfungskette",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b3",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Zuerst das Zwangsgeld? Falsch"
+      ],
+      "unter": "Neues Reel · im Profil",
+      "sichtbareTexte": [
+        "Verwaltungsrecht AT",
+        "Neu im Feed",
+        "Zuerst das Zwangsgeld? Falsch",
+        "Neues Reel · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     }
   },
   "hookOptimierung": {
@@ -728,35 +675,27 @@
   },
   "renderVorschau": {
     "status": "fertig",
-    "erzeugtAm": "2026-09-24T21:48:39.473Z",
+    "erzeugtAm": "2026-10-04T23:45:10Z",
     "pfad": "vorproduktion/2026-10-07/fertig",
     "providerKostenUsd": 0,
-    "textProviderKostenUsd": 0,
-    "faktencheckProviderKostenUsd": 0,
-    "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "reelStimme": "piper-offline",
-    "freigabeBetreiber": false,
-    "coverbilderAngewandt": {
-      "stand": "2026-09-25T12:35:32.077Z",
-      "providerKostenUsd": 0,
-      "slots": [
-        "b1",
-        "b2",
-        "b3"
-      ]
-    },
-    "quizPatch": {
-      "stand": "2026-09-25T11:28:46.717Z",
-      "slots": [
-        "s4",
-        "s5"
-      ],
-      "providerKostenUsd": 0
-    }
+    "coverIcons": false,
+    "renderer": "open-peeps-v4",
+    "layoutQuelle": "open-peeps-variante-c",
+    "reelStimme": "elevenlabs-laura",
+    "sfx": "freesound-cc0",
+    "freigabeBetreiber": true,
+    "liveVorrangAktiv": true,
+    "normalbetriebGesperrt": true,
+    "wartetLive": []
   },
   "liveRegel": {
     "veroeffentlichen": false,
     "freigabeErforderlich": true
-  }
+  },
+  "layoutQuelle": "open-peeps-variante-c",
+  "semantikQuelle": "herrjurist",
+  "liveVorrangAktiv": true,
+  "normalbetriebGesperrt": true,
+  "bildStatus": "open-peeps-render"
 }
