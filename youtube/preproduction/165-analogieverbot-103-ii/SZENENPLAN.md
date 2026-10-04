@@ -47,7 +47,7 @@ Ablauf: Fall am See → Sachverhalt → Diebstahl? (Wortlautkarte § 242 Abs. 1)
 
 Die Zahl der Bildhalte je Szene steht im [`bildhalt_manifest.json`](bildhalt_manifest.json) und in der [`CUE-TIMELINE.md`](CUE-TIMELINE.md).
 
-**Übergänge:** stumme Schiebeblenden nur zwischen den 21 Folien; innerhalb harte Schnitte und Pops; Bewegungen nur in A (Fahrt hinaus ≈ 2 s, Rückfahrt ≈ 1,4 s).
+**Übergänge:** stumme Schiebeblenden nur zwischen den 21 Folien; innerhalb harte Schnitte und Pops; Bewegungen nur in A (Fahrt hinaus ≈ 1,5 s, Rückfahrt ≈ 0,9 s).
 **Blasen:** Stil C (`bausteine.blase`, Rückfall auf Stil e per Assertion ausgeschlossen), wortgleich mit dem Gesprochenen.
 **Lateinische Begriffe:** auf Tafeln in normaler Schreibung (lex certa, lex praevia, nulla poena); gesprochen mit deutscher Juristenaussprache über Aussprachehilfen in `src/vertonen_165.py` („zerta“, „präwia“, „pöna“).
 **Geräusche:** zwei Handlungsgeräusche, Freesound CC0 (IDs 378045, 637206) über die API ohne Schlüssel, eigene Namen `sfx3/szene_165treten_1.wav`, `sfx3/szene_165steg_1.wav`; Herkunft in `geraeusche_herkunft.json`.

@@ -8,7 +8,7 @@ import json, re, sys
 U = sys.argv[1]
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"] + 8.0
-KAP = [(0.0, "Der Fall: Tretboot geliehen, ohne zu fragen – strafbar?"),
+KAP = [(0.0, "Der Fall: Tretboot ohne zu fragen benutzt – strafbar?"),
        (T("dieb"), "Diebstahl und § 248b StGB: kein Paragraf passt"),
        (T("a103"), "Art. 103 Abs. 2 GG und § 1 StGB: keine Strafe ohne Gesetz"),
        (T("vier"), "Die vier Gewährleistungen"),
