@@ -9,8 +9,7 @@ cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"] + 8.0
 KAP = [(0.0, "Der Fall: Winken bei der Weinversteigerung"),
        (T("p156"), "§ 156 BGB: Vertrag durch Zuschlag"),
-       (T("klassiker"), "Der Klassiker: Lehrbuchfall und BGHZ 91, 324"),
-       (T("sv"), "Sachverhalt"),
+       (T("klassiker"), "Der Klassiker: Lehrbuchfall und BGHZ 91, 324; Sachverhalt"),
        (T("tb"), "Objektiver Tatbestand, §§ 133, 157 BGB"),
        (T("st"), "Subjektiver Tatbestand: Erklärungsbewusstsein"),
        (T("wt"), "Der Streit: Willenstheorie und Gegenansicht"),
@@ -66,13 +65,15 @@ open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
 srt = re.sub(r"(Abs\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
-for a, b in [("Achthundertfünfzig Euro", "850 Euro"), ("Neunhundert Euro", "900 Euro"), ("neunhundert Euro", "900 Euro"),
-             ("neunhundert?", "900?"), ("Haller: ", "Frau Haller: ")]:
+srt = re.sub(r"[Aa]chthundertfünfzig", "850", srt)
+srt = re.sub(r"[Nn]eunhundert", "900", srt)
+for a, b in [("\nHaller: ", "\nFrau Haller: "), ("Ekkehard: ", "Ekkehard: "),
+             ("Kosten, das Fass", "Kosten, um das Fass")]:   # gesprochen mit „um“ (beide Erkenner)
     assert a in srt, a
     srt = srt.replace(a, b)
-srt = re.sub(r"Jahr\n?achtzehnhundertneunundneunzig", "Jahr 1899", srt)
+srt = re.sub(r"achtzehnhundertneunundneunzig", "1899", srt)
 srt = re.sub(r"neunzehnhundertvierundachtzig", "1984", srt)
-srt = re.sub(r"fünfzehn\n?Tage", "15 Tage", srt)
+srt = re.sub(r"fünfzehn(\n| )Tage", r"15\1Tage", srt)
 srt = re.sub(r"Römisch (eins|zwei|drei):( |\n)", lambda m: {"eins": "I.", "zwei": "II.", "drei": "III."}[m.group(1)] + m.group(2), srt)
 assert not re.search(r"§\n|Abs\.\n", srt) and "neunhundert" not in srt.lower() and "achtzehnhundert" not in srt, "Untertitel prüfen"
 open(f"{U}/untertitel.srt", "w").write(srt)
