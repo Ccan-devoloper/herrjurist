@@ -205,3 +205,290 @@ def _flaeche(w, h):
     return im, ImageDraw.Draw(im), s
 
 
+GELBHELL = (255, 245, 210, 255)
+LILAMITTEL = (236, 230, 255, 255)
+BLAUMITTEL = (214, 228, 252, 255)
+WASSER = (190, 220, 245, 255)
+WELLE = (120, 165, 215, 255)
+UFER = (214, 196, 150, 255)
+
+# Vier Gewährleistungen: eigene Farbe je Ausprägung (Tafelfläche hell, Pille und Ergebnisblock kräftig)
+GEW = {1: (BLAU, BLAUMITTEL, "lex scripta"), 2: (GELB, GELBHELL, "lex certa"), 3: (LILA, LILAMITTEL, "lex stricta"),
+       4: (GRUEN, HELLGRUEN, "lex praevia")}
+
+BODEN = 860
+FH = 440                                    # stehende Figur in der Fallszene
+X1, X2 = 1400, 1720                         # zwei Figuren neben der Tafel
+FB, FR = 930, 480                           # Figuren neben der Tafel: Unterkante, Höhe
+FX = 1560                                   # eine Figur neben der Tafel
+NULL = ("fall", -round(T_("fall"), 3))      # = 0,0 s: erstes Bild nach dem Intro vollständig
+PX, PY, PU = 1575, 160, 380                 # Requisit über den Figuren: Mitte, Pillenhöhe, Unterkante
+NAME = {"WI": "Wieland", "HA": "Hartwin"}
+NFARBE = {"WI": TUERKIS, "HA": ORANGE}
+
+
+def requisit(folge, px=PX, bis=None, pu=PU, py=PY):
+    """Wechselndes Requisit rechts der Tafel: folge = [(cue, (set, icon, breite, fuell), pillentext, pillenfarbe)]."""
+    els = []
+    for i, (c, ic, txt, pf) in enumerate(folge):
+        b = folge[i + 1][0] if i + 1 < len(folge) else bis
+        if ic:
+            s_, n_, br, fu = ic
+            els.append(ficon(s_, n_, px, pu, br, c, fuell=fu, bis=b))
+        if txt:
+            els.append(pl(txt, px, py, c, fill=pf, size=28, anker="m", bis=b))
+    return rechts_frei(els)
+
+
+def stehend(k, x, folge, bis=None):
+    els = [*fig(k, x, FB, FR, folge, bis=bis), bis_(ns(NAME[k], x, FB, folge[0][0], NFARBE[k], d=0.1), bis)]
+    return rechts_frei(els, 1200)
+
+
+def paar(af, bf):
+    """Tafelszene: Wieland und Hartwin rechts der Tafel (beide blicken nach links zur Tafel)."""
+    return [*stehend("WI", X1, af), *stehend("HA", X2, bf)]
+
+
+# --- See, Steg und Tretboot aus Grundformen (Palettenflächen, Tuschekontur) ------------------------------------------------
+SEE_X0, SEE_X1, SEE_O, SEE_U = 40, 1250, 835, 1000      # Wasserfläche (unten frei für den Prüfpfad)
+STEG_X0, STEG_X1, STEG_O = 880, 1262, 815               # Steg: Deck von x0 bis zum Ufer, Oberkante
+POLLER_X = 905
+
+
+def see(cue):
+    """Wasserfläche mit Wellenlinien und Uferböschung rechts."""
+    w, h = SEE_X1 - SEE_X0, SEE_U - SEE_O
+    im, dr, s = _flaeche(w, h)
+    o = 6 * s
+    dr.rounded_rectangle((o, o, o + w * s, o + h * s), 20 * s, fill=WASSER, outline=INK, width=5 * s)
+    for r, y in enumerate((40, 85, 130)):
+        for x in range(60 + (r % 2) * 90, w - 80, 180):
+            pts = [(o + (x + k * 10) * s, o + (y + (6 if k % 2 else -6)) * s) for k in range(7)]
+            dr.line(pts, fill=WELLE, width=4 * s, joint="curve")
+    im = im.resize((w + 12, h + 12), Image.LANCZOS)
+    return hart(El(im, SEE_X0 - 6, SEE_O - 6, cue, "cut", 0.0, None, name="see"))
+
+
+def ufer(cue):
+    """Ufer rechts: Böschung und Bodenlinie, auf der Hartwin steht."""
+    w, h = 1880 - 1230, 1000 - BODEN
+    im, dr, s = _flaeche(w, h)
+    o = 6 * s
+    dr.polygon([(o, o + h * s), (o + 40 * s, o), (o + w * s, o), (o + w * s, o + h * s)], fill=UFER)
+    dr.line([(o, o + h * s), (o + 40 * s, o), (o + w * s, o)], fill=INK, width=6 * s)
+    im = im.resize((w + 12, h + 12), Image.LANCZOS)
+    return hart(El(im, 1230 - 6, BODEN - 6, cue, "cut", 0.0, None, name="ufer"))
+
+
+def steg(cue):
+    """Holzsteg vom Ufer in den See: Deck mit Planken, zwei Pfähle, Poller zum Festbinden."""
+    w, h = STEG_X1 - STEG_X0 + 20, 1000 - STEG_O + 30
+    im, dr, s = _flaeche(w, h)
+    o = 6 * s
+    for px in (40, 200):
+        dr.rectangle((o + px * s, o + 22 * s, o + (px + 26) * s, o + (h - 70) * s), fill=(150, 105, 70, 255), outline=INK,
+                     width=4 * s)
+    dr.rectangle((o, o, o + (w - 20) * s, o + 24 * s), fill=HOLZ, outline=INK, width=5 * s)
+    for px in range(60, w - 20, 60):
+        dr.line([(o + px * s, o + 4 * s), (o + px * s, o + 20 * s)], fill=INK, width=3 * s)
+    im = im.resize((w + 12, h + 12), Image.LANCZOS)
+    return hart(El(im, STEG_X0 - 6, STEG_O - 6, cue, "cut", 0.0, None, name="steg"))
+
+
+def poller(cue):
+    w, h = 26, 34
+    im, dr, s = _flaeche(w, h)
+    o = 6 * s
+    dr.rounded_rectangle((o, o, o + w * s, o + h * s), 6 * s, fill=(150, 105, 70, 255), outline=INK, width=4 * s)
+    im = im.resize((w + 12, h + 12), Image.LANCZOS)
+    return hart(El(im, POLLER_X - 13 - 6, STEG_O - h - 6, cue, "cut", 0.0, None, name="poller"))
+
+
+BOOT_W, BOOT_H = 330, 120                    # Rumpf
+BOOT_X = 545                                 # festgemacht: Rumpf von BOOT_X bis BOOT_X + BOOT_W
+BOOT_FAHRT = 140                             # draußen auf dem See
+BOOT_O = 790                                 # Oberkante Rumpf
+
+
+def _rumpf(spiegeln):
+    w, h = BOOT_W, BOOT_H
+    im, dr, s = _flaeche(w, h)
+    o = 6 * s
+    pts = [(o, o + 10 * s), (o + w * s, o + 10 * s), (o + (w - 40) * s, o + (h - 10) * s), (o + 40 * s, o + (h - 10) * s)]
+    dr.polygon(pts, fill=GELB)
+    dr.line(pts + [pts[0]], fill=INK, width=5 * s)
+    dr.rectangle((o + 20 * s, o + 34 * s, o + (w - 20) * s, o + 50 * s), fill=ROT)
+    im = im.resize((w + 12, h + 12), Image.LANCZOS)
+    return im.transpose(Image.FLIP_LEFT_RIGHT) if spiegeln else im
+
+
+def _aufbau(spiegeln):
+    """Sitzlehne und Radkasten (hinter der Figur)."""
+    w, h = BOOT_W, 150
+    im, dr, s = _flaeche(w, h)
+    o = 6 * s
+    dr.pieslice((o + (w - 150) * s, o + 40 * s, o + (w - 10) * s, o + 180 * s), 180, 360, fill=BLAU, outline=INK, width=5 * s)
+    for a in range(200, 360, 40):
+        import math as _m
+        cx_, cy_ = o + (w - 80) * s, o + 110 * s
+        dr.line([(cx_, cy_), (cx_ + 60 * s * _m.cos(_m.radians(a)), cy_ + 60 * s * _m.sin(_m.radians(a)))], fill=INK,
+                width=3 * s)
+    dr.rounded_rectangle((o + 150 * s, o + 30 * s, o + 175 * s, o + 150 * s), 8 * s, fill=WEISS, outline=INK, width=5 * s)
+    im = im.resize((w + 12, h + 12), Image.LANCZOS)
+    return im.transpose(Image.FLIP_LEFT_RIGHT) if spiegeln else im
+
+
+def tretboot(x, cue, bis=None, spiegeln=False, weg=None, mit=None, anim="cut", oben=BOOT_O):
+    """Tretboot (Rumpf Gelb mit roter Linie, Radkasten Blau, Sitzlehne) bei Rumpf-x = x; mit = Figur im Boot
+    (Name der Ansicht), weg = (start, ende, dx) Bewegung über den See. Reihenfolge: Aufbau, Figur, Rumpf."""
+    els = []
+    a = El(_aufbau(spiegeln), x - 6, oben - 150 + 20 - 6, cue, anim, 0.0, bis, name="boot_aufbau")
+    els.append(a)
+    if mit:
+        els.append(peep_voll(mit, x + BOOT_W / 2, oben + 70, 330, cue, anim=anim, bis=bis))
+    els.append(El(_rumpf(spiegeln), x - 6, oben - 6, cue, anim, 0.0, bis, name="boot_rumpf"))
+    if weg:
+        for e in els:
+            bewegt(e, weg[0], weg[1], weg[2])
+    return els
+
+
+def seil(cue, bis=None, lose=False):
+    """Seil vom Bug zum Poller (festgebunden) oder lose im Wasser hängend."""
+    bx, by = BOOT_X + BOOT_W - 12, BOOT_O + 22
+    if lose:
+        pts = [(POLLER_X, STEG_O - 26), (POLLER_X - 8, STEG_O + 10), (POLLER_X - 4, STEG_O + 40)]
+    else:
+        pts = [(bx, by), (bx + 10, by + 6), (POLLER_X - 8, STEG_O - 6), (POLLER_X, STEG_O - 26)]
+    return bis_(linienzug(pts, cue, breite=7, farbe=(120, 80, 50, 255)), bis)
+
+
+def seekulisse(cue):
+    return [see(cue), ufer(cue), steg(cue), poller(cue),
+            hart(ficon("tabler", "sunset", 1790, 230, 120, cue, fuell=GELB, anim="cut")),
+            hart(ficon("tabler", "trees", 1790, BODEN + 4, 130, cue, fuell=GRUEN, anim="cut"))]
+
+
+WIX, WIU = 1110, STEG_O                     # Wieland auf dem Steg
+HAX = 1560                                  # Hartwin am Ufer
+
+# ===========================================================================================================================
+# A Fall: Sommerabend am See. Wieland steht auf dem Steg (blickt nach links zum Boot), bindet das Tretboot los, fährt über
+# den See (Bewegung nach links), kommt zurück (Bewegung nach rechts) und bindet es wieder fest. Hartwin kommt am Ufer hinzu.
+# ===========================================================================================================================
+LOS = beim("nimmt", "bindet")
+FAEHRT = beim("nimmt", "fährt")
+BRINGT = beim("zurueck", "bringt")
+FEST = beim("zurueck", "bindet")
+DX = BOOT_X - BOOT_FAHRT
+ANKUNFT = beim("zurueck", "zurück", ende=True)
+RUECK = tretboot(BOOT_X, BRINGT, bis=FEST, mit="WB_ruhig_r", spiegeln=True, weg=(BRINGT, ANKUNFT, -DX))
+szene(RUECK[-1], "165steg*", 0.8, round(T_(ANKUNFT) - T_(BRINGT) - 0.43, 3))   # Rumpf stößt beim Anlegen an den Steg
+folie([(NULL, "Fall · Ein Sommerabend am See"), ("boot", "Fall · Das Tretboot von Hartwin"),
+       ("nimmt", "Fall · Wieland fährt los, ohne zu fragen"), ("zurueck", "Fall · Wieland bringt das Boot zurück"),
+       ("ha1", "Fall · „Das ist doch Diebstahl!“"), ("frage", "Die Frage · Passt ein Paragraf genau?"),
+       ("frage2", "Die Frage · Pech für den Staat?")], [
+    *seekulisse(NULL),
+    hart(pl("Ein Sommerabend am See", 70, 40, NULL, fill=GELB, size=34, bis="ha1")),
+    # Boot festgemacht ab 0,0 s bis „fährt“; Seil bis „bindet … los“
+    *tretboot(BOOT_X, NULL, bis=FAEHRT),
+    seil(NULL, bis=LOS), seil(LOS, bis=FAEHRT, lose=True),
+    pl("Tretboot von Hartwin", 70, 108, "boot", fill=WEISS, size=32, bis="ha1"),
+    pl("nur mit einem Seil festgebunden", 70, 172, beim("boot", "Seil"), fill=WEISS, size=32, bis="ha1"),
+    ring(POLLER_X - 30, STEG_O - 4, 70, 42, beim("boot", "Seil"), bis=LOS),
+    # Fahrt hinaus (nach links), Rückfahrt (nach rechts)
+    *[szene(e, "165treten*", 0.7, 0.0) if i == 0 else e for i, e in
+      enumerate(tretboot(BOOT_FAHRT, FAEHRT, bis=BRINGT, mit="WB_froh", weg=(FAEHRT, beim("nimmt", "See"), DX)))],
+    pl("eine Stunde über den See, ohne zu fragen", 70, 236, beim("nimmt", "Stunde"), fill=PINK, size=32, bis="ha1"),
+    *RUECK,
+    *tretboot(BOOT_X, FEST), seil(FEST),
+    pl("wieder festgebunden", 70, 300, FEST, fill=WEISS, size=32, bis="ha1"),
+    pl("Kaputt ist nichts.", 70, 364, beim("zurueck", "Kaputt"), fill=GRUEN, size=32, bis="ha1"),
+    # Wieland auf dem Steg: bis „fährt“ und ab „bindet … fest“
+    *fig("WI", WIX, WIU, FH, [(NULL, "ruhig"), (LOS, "frech")], bis=FAEHRT, erst="cut"),
+    bis_(hart(ns("Wieland", WIX, WIU, NULL, TUERKIS)), FAEHRT),
+    *fig("WI", WIX, WIU, FH, [(FEST, "froh_r"), ("ha1", "sorge_r")], bis="wi1", erst="cut"),
+    *redet("WI_redet_r", WIX, WIU, FH, "wi1", "frage"),
+    *fig("WI", WIX, WIU, FH, [("frage", "frech_r")], erst="cut"),
+    ns("Wieland", WIX, WIU, FEST, TUERKIS, anim="cut"),
+    # Hartwin kommt am Ufer hinzu (blickt nach links zu Wieland)
+    *redet("HA_redet", HAX, BODEN, FH + 20, "ha1", "wi1"),
+    *fig("HA", HAX, BODEN, FH + 20, [("wi1", "ernst"), ("frage2", "denkt")], erst="cut"),
+    ns("Hartwin", HAX, BODEN, "ha1", ORANGE, anim="cut"),
+    blase("sprech", 600, 230, "ha1", 1420, 210, inhalt=["Das ist doch Diebstahl!", "Dafür gehört er bestraft!"], textsize=32,
+          figur=("HA_redet", HAX, BODEN, FH + 20), bis="wi1"),
+    blase("sprech", 520, 200, "wi1", 760, 250, inhalt=["Ich habe es doch", "zurückgebracht."], textsize=32,
+          figur=("WI_redet_r", WIX, WIU, FH), bis="frage"),
+    pl("Verwerflich – aber passt ein Paragraf genau?", 70, 40, "frage", fill=WEISS, size=34),
+    pl("Pech für den Staat?", 70, 112, "frage2", fill=PINK, size=36),
+])
+
+
+# ===========================================================================================================================
+# B Sachverhalt
+# ===========================================================================================================================
+def sachverhalt_165(cue, absaetze, frage):
+    els = [karte(140, 60, 1640, 900, cue, fill=HELL), titel("Sachverhalt", 210, 100, cue, 60)]
+    y = 220
+    for a in absaetze:
+        e, y = absatz(glyphen(a), 210, y, 1500, cue, size=36, zeilenabstand=1.3)
+        els += e; y += 22
+    assert y + 70 <= 950, f"Sachverhalt zu lang ({y})"
+    els.append(pille(glyphen(frage), 210, y + 10, cue, fill=PINK, size=34))
+    folie([(cue, "Sachverhalt")], els)
+
+
+sachverhalt_165("sv", [
+    "Hartwin hat sein Tretboot am öffentlichen Steg eines Sees mit einem Seil festgebunden. Ohne zu fragen, bindet "
+    "Wieland es los und fährt eine Stunde damit über den See. Er will es von Anfang an zurückbringen.",
+    "Danach bindet er das Boot wieder am Steg fest. Beschädigt ist nichts.",
+    "Hartwin meint: „Das ist doch Diebstahl! Dafür gehört er bestraft!“",
+], "Hat Wieland sich strafbar gemacht?")
+
+# ===========================================================================================================================
+# C1 Diebstahl? Wortlautkarte § 242 Abs. 1 StGB; bloße Gebrauchsanmaßung (BGH 3 StR 484/14 Rn. 6)
+# ===========================================================================================================================
+PF = "Welcher Paragraf?"
+W242 = ["„(1) Wer eine fremde bewegliche Sache einem anderen in der",
+        "Absicht wegnimmt, die Sache sich oder einem Dritten",
+        "rechtswidrig zuzueignen, wird … bestraft.“"]
+w242, w242_y = wortlaut(80, 175, 1100, W242, "§ 242 Abs. 1 StGB (Auszug)", "dieb", marken=[
+    (1, "Absicht", beim("dieb", "Absicht")), (2, "zuzueignen", beim("dieb", "zuzueignen"))], size=32)
+folie([("dieb", f"{PF} · Diebstahl, § 242 StGB"), ("rueck", f"{PF} › nur benutzen und zurückbringen"),
+       (beim("rueck", "kein"), f"{PF} › kein Diebstahl")], [
+    *tafel("dieb", "Diebstahl?"),
+    *w242,
+    z("Wieland will das Boot nur benutzen", 110, w242_y + 40, "rueck", "Bold", 34),
+    z("und zurückbringen: bloße Gebrauchsanmaßung", 110, w242_y + 86, beim("rueck", "maßt"), "Bold", 34),
+    zit("BGH, Beschl. v. 17.12.2014 – 3 StR 484/14, Rn. 6", 110, w242_y + 140, beim("rueck", "maßt")),
+    *neinz("kein Diebstahl", w242_y + 200, beim("rueck", "kein"), "ExtraBold", 36, x=160),
+    *requisit([("dieb", ("tabler", "hand-grab", 110, WEISS), "Zueignung?", WEISS),
+               ("rueck", ("tabler", "arrow-back-up", 110, GRUEN), "zurückbringen", GRUEN),
+               (beim("rueck", "kein"), ("tabler", "ban", 100, HELLROT), "kein Diebstahl", HELLROT)]),
+    *paar([("dieb", "ruhig"), (beim("rueck", "kein"), "froh")], [("dieb", "ernst"), (beim("rueck", "kein"), "sorge")]),
+])
+
+# ===========================================================================================================================
+# C2 § 248b StGB (Wortlautkarte Abs. 1 und Abs. 4): nur Kraftfahrzeug oder Fahrrad
+# ===========================================================================================================================
+W248 = ["„(1) Wer ein Kraftfahrzeug oder ein Fahrrad gegen den Willen",
+        "des Berechtigten in Gebrauch nimmt, wird … bestraft, …",
+        "(4) Kraftfahrzeuge im Sinne dieser Vorschrift sind die",
+        "Fahrzeuge, die durch Maschinenkraft bewegt werden, …“"]
+w248, w248_y = wortlaut(80, 175, 1100, W248, "§ 248b Abs. 1 und 4 StGB (Auszug)", "p248", marken=[
+    (0, "Kraftfahrzeug", beim("p248", "Kraftfahrzeugs")), (0, "Fahrrad", beim("p248", "Fahrrads")),
+    (3, "Maschinenkraft", beim("kein", "Motor"))], size=31)
+folie([("p248", f"{PF} · § 248b StGB: unbefugter Gebrauch"), ("kein", f"{PF} › Tretboot: kein Kraftfahrzeug"),
+       (beim("kein", "Fahrrad"), f"{PF} › Tretboot: kein Fahrrad")], [
+    *tafel("p248", "Unbefugter Gebrauch, § 248b StGB"),
+    *w248,
+    *neinz("kein Motor: kein Kraftfahrzeug", w248_y + 40, beim("kein", "Motor"), "Bold", 34, x=160),
+    *neinz("kein Fahrrad, auch wenn man tritt", w248_y + 96, beim("kein", "Fahrrad"), "Bold", 34, x=160),
+    *requisit([("p248", ("tabler", "car", 120, BLAU), "Kraftfahrzeug", BLAU),
+               (beim("p248", "Fahrrads"), ("tabler", "bike", 120, GRUEN), "Fahrrad", GRUEN),
+               ("kein", None, None, None)]),
+    *rechts_frei(tretboot(PX - BOOT_W / 2, "kein", anim="pop", oben=300)),
+    pl("Tretboot", PX, 100, "kein", fill=GELB, size=28, anker="m"),
+    *paar([("p248", "denkt"), (beim("kein", "Fahrrad"), "froh")], [("p248", "ruhig"), ("kein", "sorge")]),
+])
