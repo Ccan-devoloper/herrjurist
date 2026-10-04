@@ -1,21 +1,16 @@
 {
   "datum": "2026-10-08",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
+  "freigabeBetreiber": true,
   "liveVerknuepft": false,
-  "vorproduktionStatus": "review",
+  "vorproduktionStatus": "live-freigegeben",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungUsd": 0,
     "providerKostenUsd": 0,
-    "piperOffline": true,
     "coverbilder": false,
-    "autorUsd": 0,
-    "faktencheckUsd": 0,
-    "sonstigeTextKiUsd": 0,
     "bildgenerierungErlaubt": false,
-    "bildkostenUsd": 0,
-    "bilderStatus": "bewusst-ausgelassen"
+    "reelStimme": "elevenlabs-abo"
   },
   "plan": {
     "beitraege": [
@@ -44,8 +39,7 @@
         "themaId": "schuldbt-461",
         "themaTitel": "Rechtsmangel: § 435 BGB",
         "fach": "schuldbt",
-        "klausur": 1,
-        "lang": false
+        "klausur": 1
       }
     ],
     "stories": [
@@ -65,8 +59,7 @@
         "slot": "s1",
         "zeit": "07:00",
         "art": "teaser",
-        "beitragSlot": "b1",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b1"
       },
       {
         "slot": "s6",
@@ -78,8 +71,7 @@
         "slot": "s2",
         "zeit": "10:30",
         "art": "teaser",
-        "beitragSlot": "b2",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b2"
       },
       {
         "slot": "s7",
@@ -97,8 +89,7 @@
         "slot": "s3",
         "zeit": "17:30",
         "art": "teaser",
-        "beitragSlot": "b3",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b3"
       },
       {
         "slot": "s9",
@@ -115,76 +106,7 @@
       "klausur": 2,
       "fachLabel": "Strafprozessrecht",
       "themaId": "stpo-769",
-      "slug": "2026-10-08-b1",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "§ 55 StPO: einzelne Fragen, nicht das ganze Zeugnis",
-          "titelZeilen": [
-            "§ 55 StPO:",
-            "einzelne Fragen,",
-            "nicht das Zeugnis"
-          ],
-          "coverBadge": "Spickzettel",
-          "coverText": "Person · Beruf · Selbstbelastung",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "§ 52 StPO: Angehörige",
-          "text": "Bestimmte Angehörige des Beschuldigten dürfen das Zeugnis vollständig verweigern. Das Recht beruht auf der persönlichen Beziehung; die Belehrung nach § 52 Abs. 3 StPO ist deshalb ein eigener Prüfungspunkt."
-        },
-        {
-          "art": "text",
-          "titel": "§ 53 StPO: Berufsgeheimnisträger",
-          "text": "Bestimmte Berufsgruppen dürfen über Tatsachen schweigen, die ihnen in ihrer geschützten beruflichen Eigenschaft anvertraut oder bekannt geworden sind. Ob und wie eine Entbindung wirkt, ist nach der jeweiligen gesetzlichen Regelung zu prüfen."
-        },
-        {
-          "art": "text",
-          "titel": "§ 53a StPO: mitwirkende Personen",
-          "text": "Der Schutz kann sich auf Personen erstrecken, die bei der beruflichen Tätigkeit der in § 53 StPO genannten Zeugnisverweigerungsberechtigten mitwirken."
-        },
-        {
-          "art": "vergleich",
-          "titel": "§ 55 StPO ist etwas anderes",
-          "links": {
-            "titel": "Zeugnisverweigerung",
-            "punkte": [
-              "§§ 52, 53, 53a StPO.",
-              "Betrifft das Zeugnis als solches oder den geschützten beruflichen Bereich."
-            ]
-          },
-          "rechts": {
-            "titel": "Auskunftsverweigerung",
-            "punkte": [
-              "§ 55 StPO.",
-              "Nur einzelne Antworten dürfen verweigert werden, wenn Selbst- oder Angehörigenbelastung droht."
-            ]
-          }
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Erst fragen, wer der Zeuge ist; dann, ob das ganze Zeugnis oder nur eine einzelne Auskunft verweigert werden darf."
-        },
-        {
-          "art": "cta",
-          "titel": "Vier Normen auf einen Blick",
-          "punkte": [
-            "§ 52: Angehörige",
-            "§ 53: Berufsgeheimnis",
-            "§ 53a: mitwirkende Personen",
-            "§ 55: Selbstbelastung bei einzelnen Fragen"
-          ],
-          "icons": [
-            "personen",
-            "aktentasche",
-            "personen",
-            "stopp"
-          ]
-        }
-      ],
-      "caption": "§ 55 StPO: einzelne Fragen, nicht das ganze Zeugnis\n\nZeugnisverweigerungsrecht und Auskunftsverweigerungsrecht sind nicht dasselbe. § 52 StPO schützt bestimmte Angehörige, § 53 Berufsgeheimnisträger und § 53a mitwirkende Personen. § 55 StPO erlaubt dagegen die Verweigerung einzelner Auskünfte bei drohender Selbst- oder Angehörigenbelastung. In der Klausur deshalb zuerst Person und Schutzgrund bestimmen.",
+      "caption": "Schweigerecht? Bei § 55 StPO nur für einzelne Fragen – der Spickzettel zu §§ 52–55 StPO.\n\n▸ § 52 StPO: Angehörige dürfen das Zeugnis ganz verweigern – Verlobte, Ehegatten und Lebenspartner, auch nach Ende der Ehe oder Partnerschaft (Abs. 1 Nr. 1–2a), Verwandte und Verschwägerte nach Abs. 1 Nr. 3. Belehrung vor jeder Vernehmung (Abs. 3 S. 1). Verwandtschaftsgrad: § 1589 Abs. 1 S. 3 BGB.\n▸ § 53 StPO: Berufsgeheimnisträger über das, was ihnen in dieser Eigenschaft anvertraut oder bekannt geworden ist (Abs. 1 S. 1). Die in Abs. 1 S. 1 Nr. 2 bis 3b Genannten verlieren das Recht bei Entbindung (Abs. 2 S. 1).\n▸ § 53a StPO: mitwirkende Personen stehen den Berufsgeheimnisträgern nach § 53 Abs. 1 S. 1 Nr. 1 bis 4 gleich.\n▸ § 55 StPO: Jeder Zeuge darf die Auskunft auf einzelne Fragen verweigern, deren Beantwortung ihm oder einem Angehörigen nach § 52 Abs. 1 die Gefahr der Verfolgung wegen einer Straftat oder Ordnungswidrigkeit zuziehen würde (Abs. 1); Belehrung (Abs. 2).\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -197,38 +119,63 @@
         "#55stpo",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Zeugnisverweigerung §§ 52–55 StPO",
-      "coverText": "Person · Beruf · Selbstbelastung",
-      "coverBadge": "Spickzettel",
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Vier getrennte Schutzschilder markieren Angehörige, Berufsgeheimnis, Mitarbeitende und einzelne selbstbelastende Fragen.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Vier getrennte Schutzschilder markieren Angehörige, Berufsgeheimnis, Mitarbeitende und einzelne selbstbelastende Fragen.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 52 StPO",
-        "§ 53 StPO",
-        "§ 53a StPO",
+        "§ 52 Abs. 1, 3 StPO",
+        "§ 53 Abs. 1, 2 StPO",
+        "§ 53a Abs. 1 StPO",
         "§ 55 StPO",
-        "Themenpool: stpo-769"
+        "§ 1589 Abs. 1 BGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "nicht-klarstellung",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-08-b1",
+      "kurztitel": "Zeugnisverweigerung §§ 52–55 StPO",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T12:19:07.949Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Spickzettel",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Spickzettel",
+          "text": "Spickzettel · Schweigerecht? · Bei § 55 StPO · nur Einzelfragen · §§ 52–55 StPO · + Gutachten-Baustein · Zeugnis: ganz · Auskunft: einzeln",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "§ 52: Angehörige · Verlobte, Ehegatten, Lebenspartner, auch nach dem Ende der Ehe. · § 52 Abs. 1 Nr. 1–2a StPO · Verwandte in gerader Linie und in der Seitenlinie bis zum dritten Grad; auch Verschwägerte. · § 52 Abs. 1 Nr. 3 StPO · Belehrung vor jeder Vernehmung. · § 52 Abs. 3 S. 1 StPO · Ganz schweigen!"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "§§ 53, 53a: Berufsgeheimnis · Nur, was in der beruflichen Eigenschaft anvertraut oder bekannt wurde. · § 53 Abs. 1 S. 1 StPO · Entbindung: Bei Nr. 2 bis 3b entfällt das Recht. · § 53 Abs. 2 S. 1 StPO · Mitwirkende Personen sind gleichgestellt. · § 53a Abs. 1 StPO · Was weiß er beruflich?"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "Der typische Fehler · Droht Selbstbelastung, darf der Zeuge ganz schweigen. · § 55: Auskunft nur auf einzelne Fragen verweigern. · § 55 Abs. 1 StPO · Auch dafür: Belehrung. · § 55 Abs. 2 StPO · Frage für Frage!"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "Zeugnis oder Auskunft? · Zeugnis · ganze Aussage verweigern · §§ 52, 53, 53a StPO · wegen Person oder Beruf · Auskunft · einzelne Fragen verweigern · § 55 Abs. 1 StPO · wegen Verfolgungsgefahr, auch für Angehörige · Erst: Wer ist der Zeuge?"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "Kurz: Person, dann Umfang · §§ 52–53a: ganz · § 55: einzeln · Angehörige schweigen ganz, · Berufsgeheimnis ganz, · Selbstbelastung einzeln. · Speichern fürs Examen · Welche Norm verwechselst du? · Weiterwischen: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Strafprozessrecht",
+          "text": "So im Gutachten · Obersatz · § 52 Abs. 1 Nr. 3 StPO · Z könnte das Zeugnis verweigern dürfen. · Definition · § 1589 Abs. 1 S. 3 BGB · Grad nach vermittelnden Geburten · Subsumtion · Z ist die Schwester: Seitenlinie, zweiter Grad. · Ergebnis · § 52 Abs. 3 S. 1 StPO · Z darf ganz schweigen; vorher belehren."
+        }
+      ]
     },
     "b2": {
       "format": "vergleich",
@@ -236,75 +183,7 @@
       "klausur": 3,
       "fachLabel": "Öffentlich-rechtliche Assessorklausur",
       "themaId": "assessoroer-840",
-      "slug": "2026-10-08-b2",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Anfechtungsurteil vorläufig vollstreckbar? Nur die Kosten",
-          "titelZeilen": [
-            "Anfechtungsurteil",
-            "vorläufig",
-            "vollstreckbar?",
-            "Nur die Kosten"
-          ],
-          "coverBadge": "Abgrenzung",
-          "coverText": "Kostenurteil ≠ Leistungsurteil",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Ausgangspunkt: § 167 Abs. 1 VwGO",
-          "text": "Für die Vollstreckung verweist die VwGO grundsätzlich auf das Achte Buch der ZPO, soweit das Verwaltungsprozessrecht nichts Abweichendes regelt. Die ZPO-Vollstreckungsregeln werden deshalb entsprechend herangezogen."
-        },
-        {
-          "art": "text",
-          "titel": "Anfechtungs- und Verpflichtungsurteile",
-          "text": "§ 167 Abs. 2 VwGO begrenzt die vorläufige Vollstreckbarkeit bei Urteilen auf Anfechtungs- und Verpflichtungsklagen auf die Kosten. Die Hauptsache wird nicht über einen ZPO-Vollstreckbarkeitstenor vorläufig vollzogen."
-        },
-        {
-          "art": "vergleich",
-          "titel": "Zwei typische Tenorlagen",
-          "links": {
-            "titel": "Anfechtung / Verpflichtung",
-            "punkte": [
-              "Vorläufige Vollstreckbarkeit nur wegen der Kosten (§ 167 Abs. 2 VwGO).",
-              "Kosten-Vollstreckbarkeit nach den entsprechend anwendbaren ZPO-Regeln formulieren."
-            ]
-          },
-          "rechts": {
-            "titel": "Leistungsurteil",
-            "punkte": [
-              "§ 167 Abs. 1 VwGO eröffnet grundsätzlich die entsprechende Anwendung des ZPO-Vollstreckungsrechts.",
-              "Die konkrete Vollstreckungsart und der Schuldner bestimmen die weiteren Vorschriften."
-            ]
-          }
-        },
-        {
-          "art": "text",
-          "titel": "Im Urteil nicht aus dem Zivilrecht kopieren",
-          "text": "Ein Zivilurteilstenor darf nicht unverändert übernommen werden. Klageart, Inhalt des Ausspruchs und die besonderen Vollstreckungsregeln der VwGO entscheiden über die Formulierung."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "§ 167 VwGO zuerst: Bei Anfechtung und Verpflichtung ist nur die Kostenentscheidung vorläufig vollstreckbar."
-        },
-        {
-          "art": "cta",
-          "titel": "Drei Fragen vor dem Vollstreckbarkeitstenor",
-          "punkte": [
-            "Welche Klageart liegt vor?",
-            "Greift § 167 Abs. 2 VwGO?",
-            "Welche ZPO-Regel gilt entsprechend für den verbleibenden Ausspruch?"
-          ],
-          "icons": [
-            "lupe",
-            "dokument",
-            "hammer"
-          ]
-        }
-      ],
-      "caption": "Anfechtungsurteil vorläufig vollstreckbar? Nur die Kosten\n\nBei der vorläufigen Vollstreckbarkeit im Verwaltungsurteil ist § 167 VwGO die Schaltstelle. Absatz 1 verweist grundsätzlich auf das ZPO-Vollstreckungsrecht; Absatz 2 begrenzt Anfechtungs- und Verpflichtungsurteile auf die Vollstreckbarkeit wegen der Kosten. Deshalb den Tenor nicht aus der Zivilurteilsklausur übernehmen, sondern zuerst Klageart und § 167 VwGO prüfen.",
+      "caption": "Anfechtungsurteil vorläufig vollstreckbar? Nur die Kosten.\n\n▸ Für die Vollstreckung gilt das Achte Buch der ZPO entsprechend, soweit die VwGO nichts anderes regelt (§ 167 Abs. 1 S. 1 VwGO).\n▸ Urteile auf Anfechtungs- und Verpflichtungsklagen können nur wegen der Kosten für vorläufig vollstreckbar erklärt werden (§ 167 Abs. 2 VwGO). Die Verpflichtung der Behörde wird über § 172 VwGO durchgesetzt.\n▸ Für die Kosten gelten die §§ 708 ff. ZPO entsprechend, etwa § 708 Nr. 11 und § 711 ZPO.\n▸ Bei Leistungsurteilen bleibt es bei der entsprechenden Anwendung der ZPO auch für die Hauptsache.\n▸ Tenor: Aufhebung (§ 113 Abs. 1 S. 1 VwGO), Kosten (§ 154 Abs. 1 VwGO), vorläufige Vollstreckbarkeit wegen der Kosten.\n\nZum Schluss: der Baustein fürs Urteil. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#rechtsreferendariat",
@@ -316,139 +195,71 @@
         "#urteilsklausur",
         "#examensvorbereitung"
       ],
-      "kurztitel": "§ 167 II VwGO: nur die Kosten",
-      "coverText": "Kostenurteil ≠ Leistungsurteil",
-      "coverBadge": "Abgrenzung",
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Ein Verwaltungsurteil teilt sich in Hauptsache und Kosten; nur der passende Bereich führt durch die Vollstreckbarkeitsschleuse.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Ein Verwaltungsurteil teilt sich in Hauptsache und Kosten; nur der passende Bereich führt durch die Vollstreckbarkeitsschleuse.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 167 VwGO",
-        "Achtens Buch der ZPO",
-        "Themenpool: assessoroer-840"
+        "§ 167 Abs. 1 S. 1, Abs. 2 VwGO",
+        "§ 172 VwGO",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "§ 154 Abs. 1 VwGO",
+        "§§ 708 Nr. 11, 711 ZPO"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "verbreiteter-irrtum",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-08-b2",
+      "kurztitel": "§ 167 II VwGO: nur die Kosten",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T11:38:55.753Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Vergleich",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vergleich",
+          "text": "Vergleich · Anfechtungsurteil · vollstreckbar? · Nur die Kosten · § 167 Abs. 2 VwGO · Im Tenor · + Baustein Urteil · Hauptsache: nein · Kosten: ja",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Öffentlich-rechtliche Assessorklausur",
+          "text": "Die Lage · Das VG hebt den Gebührenbescheid gegen K auf. · § 113 Abs. 1 S. 1 VwGO · Die Behörde unterliegt und trägt die Kosten. · § 154 Abs. 1 VwGO · Jetzt du: Was ist vorläufig vollstreckbar? · Wie im Zivilurteil?"
+        },
+        {
+          "art": "text",
+          "titel": "Öffentlich-rechtliche Assessorklausur",
+          "text": "Welche Klageart? · Anfechtung, Verpflichtung · nur wegen der Kosten · § 167 Abs. 2 VwGO · Verpflichtung durchsetzen: Zwangsgeld · § 172 VwGO · Leistung · Achtes Buch der ZPO entsprechend · § 167 Abs. 1 S. 1 VwGO · also §§ 708 ff. ZPO · Erst die Klageart!"
+        },
+        {
+          "art": "text",
+          "titel": "Öffentlich-rechtliche Assessorklausur",
+          "text": "Der typische Fehler · „Das Urteil ist vorläufig vollstreckbar.“ aus dem Zivilurteil kopieren. · Anfechtung und Verpflichtung: nur wegen der Kosten. · § 167 Abs. 2 VwGO · Für die Kosten: §§ 708 ff. ZPO entsprechend. · § 167 Abs. 1 S. 1 VwGO · Nur die Kosten!"
+        },
+        {
+          "art": "text",
+          "titel": "Öffentlich-rechtliche Assessorklausur",
+          "text": "Der Tenor in 3 Schritten · Hauptsache · § 113 Abs. 1 S. 1 VwGO · Aufhebung des Bescheids · Kosten · § 154 Abs. 1 VwGO · der unterliegende Teil · Vollstreckbarkeit · § 167 Abs. 2 VwGO · nur wegen der Kosten · Am Ende: Baustein fürs Urteil"
+        },
+        {
+          "art": "text",
+          "titel": "Öffentlich-rechtliche Assessorklausur",
+          "text": "Lösung: nur die Kosten · § 167 Abs. 2 VwGO, Rest über § 167 Abs. 1 VwGO · Klageart zuerst, · Anfechtung: nur Kosten, · Leistung: wie ZPO. · Speichern fürs Examen · Hättest du den Tenor kopiert? · Weiterwischen: Baustein fürs Urteil"
+        },
+        {
+          "art": "text",
+          "titel": "Öffentlich-rechtliche Assessorklausur",
+          "text": "So im Urteil · Hauptsache · § 113 Abs. 1 S. 1 VwGO · Der Bescheid vom … wird aufgehoben. · Kosten · § 154 Abs. 1 VwGO · Der Beklagte trägt die Kosten des Verfahrens. · Vollstreckbarkeit · § 167 Abs. 2 VwGO · Das Urteil ist wegen der Kosten vorläufig vollstreckbar. · Ergänzung · § 167 Abs. 1 S. 1 VwGO, §§ 708 Nr. 11, 711 ZPO · Abwendungsbefugnis, wenn einschlägig"
+        }
+      ]
     },
     "b3": {
       "format": "reel",
-      "layout": "erklaer",
       "fach": "schuldbt",
       "klausur": 1,
       "fachLabel": "Schuldrecht BT",
       "themaId": "schuldbt-461",
-      "slug": "2026-10-08-b3",
-      "szenen": [
-        {
-          "art": "hook",
-          "nummer": null,
-          "titel": "Funktioniert perfekt – und ist trotzdem mangelhaft",
-          "unter": "Rechtsmangel beim Kauf",
-          "text": "§ 435 BGB schützt vor Rechten Dritter an der Kaufsache.",
-          "norm": "§ 435 BGB",
-          "icon": "schloss",
-          "sprecher": "Die Kaufsache funktioniert perfekt – und ist trotzdem mangelhaft. § 435 BGB kennt den Rechtsmangel: Dritte dürfen gegen den Käufer keine Rechte an der Sache geltend machen können, die er nicht im Kaufvertrag übernommen hat.",
-          "marken": [
-            "Rechtsmangel",
-            "§ 435 BGB"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 1,
-          "titel": "Recht eines Dritten identifizieren",
-          "text": "Entscheidend ist ein fremdes Recht, das gegenüber dem Käufer geltend gemacht werden kann.",
-          "norm": "§ 435 BGB",
-          "sprecher": "Schritt eins: Welches Recht eines Dritten steht im Raum? Denk nicht nur an Eigentum. Auch andere private Rechte können die geschuldete Rechtsposition des Käufers beeinträchtigen.",
-          "marken": [
-            "Recht eines Dritten"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 2,
-          "titel": "Vertraglich übernommen?",
-          "text": "Ein ausdrücklich übernommenes Recht ist kein unerwarteter Rechtsmangel.",
-          "norm": "§ 435 BGB",
-          "sprecher": "Schritt zwei: Hat der Käufer dieses Recht im Kaufvertrag übernommen? § 435 fragt gerade danach, ob Dritte mehr Rechte geltend machen können, als der Käufer vertraglich akzeptiert hat.",
-          "marken": [
-            "übernommen?"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 3,
-          "titel": "Sachmangel und Rechtsmangel trennen",
-          "text": "§ 434 BGB betrifft die Beschaffenheit der Sache; § 435 BGB die rechtliche Belastung.",
-          "norm": "§§ 434, 435 BGB",
-          "sprecher": "Schritt drei: Trenne Sachmangel und Rechtsmangel. Ein Defekt oder eine fehlende Beschaffenheit gehört zu § 434; eine nicht geschuldete Drittberechtigung zu § 435.",
-          "marken": [
-            "§ 434 ≠ § 435"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 4,
-          "titel": "Dann die Käuferrechte",
-          "text": "Bei einem Rechtsmangel gelten die kaufrechtlichen Mängelrechte des § 437 BGB.",
-          "norm": "§ 437 BGB",
-          "sprecher": "Schritt vier: Ist ein Rechtsmangel festgestellt, öffnest du § 437 BGB. Dann prüfst du Nacherfüllung, Rücktritt oder Minderung und Schadensersatz jeweils mit ihren weiteren Voraussetzungen.",
-          "marken": [
-            "§ 437 BGB"
-          ]
-        },
-        {
-          "art": "punkt",
-          "nummer": null,
-          "titel": "Beispiel: belastetes Eigentum",
-          "text": "Verkauft wird Eigentum ohne vereinbarte Belastung, ein Dritter kann aber ein entgegenstehendes Recht geltend machen.",
-          "norm": null,
-          "sprecher": "Ein typischer Fall ist eine rechtliche Belastung, die der Käufer nicht übernommen hat und die ein Dritter gegen ihn durchsetzen kann. Entscheidend bleibt immer der Vergleich mit der geschuldeten Rechtsposition.",
-          "marken": [
-            "Soll vs. Drittbelastung"
-          ]
-        },
-        {
-          "art": "merke",
-          "nummer": null,
-          "titel": "Die Kurzform",
-          "text": "Technischer Zustand = § 434. Recht eines Dritten = § 435.",
-          "norm": "§§ 434, 435 BGB",
-          "sprecher": "Merke: § 434 fragt, wie die Sache beschaffen ist. § 435 fragt, welche fremden Rechte auf ihr lasten. Danach laufen beide in die Mängelrechte des § 437.",
-          "marken": [
-            "Beschaffenheit / Recht"
-          ]
-        },
-        {
-          "art": "cta",
-          "nummer": null,
-          "titel": "Bei jedem Kaufmangel zuerst die Ebene klären",
-          "text": "Tatsächliche Beschaffenheit oder rechtliche Belastung?",
-          "norm": null,
-          "sprecher": "Wenn ein Kaufrechtsfall von 'Mangel' spricht, frag zuerst: Geht es um die tatsächliche Beschaffenheit oder um ein Recht eines Dritten? Diese Weiche spart dir später viel Aufbauarbeit.",
-          "marken": [
-            "Sach- oder Rechtsmangel?"
-          ]
-        }
-      ],
-      "caption": "Funktioniert perfekt – und ist trotzdem mangelhaft\n\nRechtsmangel nach § 435 BGB bedeutet: Ein Dritter kann in Bezug auf die Kaufsache ein Recht gegen den Käufer geltend machen, das der Käufer vertraglich nicht übernommen hat. Das ist von einem Sachmangel nach § 434 BGB zu trennen. Liegt ein Rechtsmangel vor, führen die Rechtsfolgen in das kaufrechtliche Mängelrecht des § 437 BGB.",
+      "caption": "Funktioniert perfekt und trotzdem mangelhaft? Ja – beim Rechtsmangel.\n\n▸ Die Sache ist frei von Rechtsmängeln, wenn Dritte in Bezug auf die Sache keine oder nur die im Kaufvertrag übernommenen Rechte gegen den Käufer geltend machen können (§ 435 S. 1 BGB). Einem Rechtsmangel steht ein im Grundbuch eingetragenes, nicht bestehendes Recht gleich (§ 435 S. 2 BGB).\n▸ Beispiele: eine nicht übernommene Dienstbarkeit oder ein Mietrecht, das ein Dritter dem Käufer entgegenhalten kann.\n▸ Vom Sachmangel trennen: Beschaffenheit, Verwendung, Montage (§ 434 BGB) betreffen die Sache selbst.\n▸ Rechtsfolgen wie beim Sachmangel: Nacherfüllung, Rücktritt oder Minderung, Schadensersatz (§ 437 BGB).\n\nSpeichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -461,210 +272,321 @@
         "#schuldrecht",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Rechtsmangel: § 435 BGB",
-      "titelZeilen": [
-        "Funktioniert",
-        "perfekt – und",
-        "trotzdem mangelhaft"
-      ],
-      "coverText": "Drittrecht statt Defekt",
-      "coverBadge": "Reel",
-      "coverBildAuslassen": true,
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Eine äußerlich intakte Kaufsache ist durch ein fremdes Recht sichtbar blockiert; nicht der Zustand, sondern die rechtliche Belastung ist das Problem.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Eine äußerlich intakte Kaufsache ist durch ein fremdes Recht sichtbar blockiert; nicht der Zustand, sondern die rechtliche Belastung ist das Problem.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 434 BGB",
         "§ 435 BGB",
-        "§ 437 BGB",
-        "Themenpool: schuldbt-461"
+        "§ 434 BGB",
+        "§ 437 BGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "widerspruch",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-08-b3",
+      "kurztitel": "Rechtsmangel: § 435 BGB",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T12:19:07.949Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "bild": "op-cover",
+      "reelTyp": "klausurfalle",
+      "hookStil": "kippen",
+      "coverBadge": "Reel",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Funktioniert perfekt. Also mangelfrei."
+        },
+        {
+          "art": "schritt",
+          "titel": "Recht eines Dritten"
+        },
+        {
+          "art": "schritt",
+          "titel": "Im Vertrag übernommen?"
+        },
+        {
+          "art": "schritt",
+          "titel": "Mängelrechte nach § 437 BGB"
+        }
+      ],
+      "sprecher": [
+        "Funktioniert perfekt und trotzdem mangelhaft? Ja, wenn ein Dritter Rechte an der Sache hat.",
+        "Ein Dritter kann Rechte gegen den Käufer geltend machen, etwa eine Dienstbarkeit oder ein Mietrecht.",
+        "Hat der Käufer dieses Recht im Vertrag übernommen, ist es kein Mangel.",
+        "Sonst: Rechtsmangel, und die Mängelrechte laufen wie beim Sachmangel.",
+        "Merke: fremdes Recht ist Rechtsmangel."
+      ],
+      "dauerS": 26.738,
+      "tempo": 1.0
     },
     "s4": {
       "slot": "s4",
       "art": "frage",
-      "fach": "assessorz",
+      "fach": null,
       "klausur": 1,
-      "pairId": "assessorz-810",
-      "ueberzeile": "Prüfungsfrage 2. Examen",
-      "titel": "Beide Parteien erklären den Rechtsstreit für erledigt – was entscheidet das Gericht noch?",
       "fachLabel": "Zivilrechtliche Assessorklausur",
-      "quellen": [
-        "§ 91a ZPO",
-        "Themenpool: assessorz-810"
+      "themaId": "assessorz-810",
+      "beitragSlot": null,
+      "quellen": null,
+      "frage": [
+        "Beide erklären",
+        "erledigt. Und jetzt?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
       "optionen": [
-        "Weiter über die Hauptsache, nur ohne Beweisaufnahme",
-        "Gar nichts mehr – jede Partei trägt ihre Kosten selbst",
-        "Nur noch über die Kosten, durch Beschluss nach billigem Ermessen"
+        "Weiter über die Hauptsache",
+        "Nichts mehr, Kosten geteilt",
+        "Nur Kosten: Beschluss, billiges Ermessen"
       ],
-      "richtig": 2
+      "pairId": "assessorz-810",
+      "sichtbareTexte": [
+        "Zivilrechtliche Assessorklausur",
+        "Prüfungsfrage",
+        "Beide erklären",
+        "erledigt. Und jetzt?",
+        "Weiter über die Hauptsache",
+        "Nichts mehr, Kosten geteilt",
+        "Nur Kosten: Beschluss, billiges Ermessen",
+        "Auflösung in der nächsten Story"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s5": {
       "slot": "s5",
       "art": "antwort",
-      "fach": "assessorz",
+      "fach": null,
       "klausur": 1,
-      "pairId": "assessorz-810",
-      "ueberzeile": "Auflösung",
-      "titel": "Die Hauptsache endet – die Kosten bleiben",
-      "text": "Nach übereinstimmender Erledigung entscheidet das Gericht nur noch über die Kosten durch Beschluss nach billigem Ermessen. Maßstab ist insbesondere der bisherige Sach- und Streitstand; der erledigte Hauptsachestreit wird nicht vollständig weiter ausermittelt.",
-      "norm": "§ 91a ZPO",
       "fachLabel": "Zivilrechtliche Assessorklausur",
-      "quellen": [
-        "§ 91a ZPO",
-        "Themenpool: assessorz-810"
+      "themaId": "assessorz-810",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Nur noch die",
+        "Kosten"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
       "optionen": [
-        "Weiter über die Hauptsache, nur ohne Beweisaufnahme",
-        "Gar nichts mehr – jede Partei trägt ihre Kosten selbst",
-        "Nur noch über die Kosten, durch Beschluss nach billigem Ermessen"
+        "Weiter über die Hauptsache",
+        "Nichts mehr, Kosten geteilt",
+        "Nur Kosten: Beschluss, billiges Ermessen"
       ],
-      "richtig": 2
+      "richtig": 2,
+      "text": "Beschluss nach billigem Ermessen, unter Berücksichtigung des bisherigen Sach- und Streitstands.",
+      "norm": "§ 91a Abs. 1 S. 1 ZPO",
+      "pairId": "assessorz-810",
+      "sichtbareTexte": [
+        "Zivilrechtliche Assessorklausur",
+        "Auflösung",
+        "Nur noch die",
+        "Kosten",
+        "Weiter über die Hauptsache",
+        "Nichts mehr, Kosten geteilt",
+        "Nur Kosten: Beschluss, billiges Ermessen",
+        "Beschluss nach billigem Ermessen, unter Berücksichtigung des bisherigen Sach- und Streitstands.",
+        "§ 91a Abs. 1 S. 1 ZPO"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s6": {
       "slot": "s6",
       "art": "norm",
-      "fach": "verwbt",
+      "fach": null,
       "klausur": 3,
-      "pairId": "verwbt-117",
-      "ueberzeile": "Landesrecht im Blick",
-      "titel": "Mitwirkungsverbot im Gemeinderat",
-      "text": "Ob ein Ratsmitglied wegen persönlicher Betroffenheit von Beratung und Entscheidung ausgeschlossen ist, richtet sich nach der jeweiligen Gemeindeordnung. Typisch ist ein unmittelbarer persönlicher Vor- oder Nachteil für das Mitglied oder nahestehende Personen; Tatbestand und Ausnahmen sind landesrechtlich exakt zu prüfen.",
-      "norm": "Gemeindeordnung des Landes",
       "fachLabel": "Besonderes Verwaltungsrecht",
-      "quellen": [
-        "Gemeindeordnung des Landes",
-        "Themenpool: verwbt-117"
+      "themaId": "verwbt-117",
+      "beitragSlot": null,
+      "quellen": null,
+      "ueberzeile": "Landesrecht im Blick",
+      "titel": [
+        "Befangen",
+        "im Gemeinderat?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "norm": "Gemeindeordnung des Landes",
+      "punkte": [
+        [
+          "Typisch: unmittelbarer persönlicher Vor- oder Nachteil.",
+          "ok",
+          null
+        ],
+        [
+          "Tatbestand und Ausnahmen exakt nach Landesrecht.",
+          "warn",
+          null
+        ]
+      ],
+      "sichtbareTexte": [
+        "Besonderes Verwaltungsrecht",
+        "Landesrecht im Blick",
+        "Befangen",
+        "im Gemeinderat?",
+        "Gemeindeordnung des Landes",
+        "Typisch: unmittelbarer persönlicher Vor- oder Nachteil.",
+        "Tatbestand und Ausnahmen exakt nach Landesrecht."
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s7": {
       "slot": "s7",
       "art": "streitstand",
-      "fach": "schuld",
+      "fach": null,
       "klausur": 1,
-      "pairId": "schuld-018",
-      "ueberzeile": "Streitstand Bereicherungsrecht",
-      "titel": "Rückabwicklung nichtiger Verträge: Zwei Kondiktionen oder Saldo?",
-      "norm": "§ 812 BGB · § 818 Abs. 3 BGB",
-      "optionen": [
-        "Zweikondiktionentheorie: Jede Partei hat einen selbständigen Bereicherungsanspruch; Entreicherung wird für jeden Anspruch getrennt geprüft.",
-        "Saldotheorie: Bei einem nichtigen gegenseitigen Vertrag werden Leistung und Gegenleistung bei der Berechnung des Bereicherungsanspruchs grundsätzlich miteinander verrechnet."
-      ],
-      "text": "Die Saldotheorie darf nicht schematisch angewendet werden, wenn dadurch gesetzliche Schutzwertungen unterlaufen würden. In der Klausur deshalb erst beide Leistungen und mögliche Entreicherung getrennt erfassen, dann die Korrektur begründen.",
       "fachLabel": "Schuldrecht AT",
-      "quellen": [
-        "§ 812 BGB",
-        "§ 818 Abs. 3 BGB",
-        "Themenpool: schuld-018"
+      "themaId": "schuld-018",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Nichtiger Vertrag:",
+        "Saldo oder zwei?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "ansichten": [
+        [
+          "Rechtsprechung",
+          "Saldotheorie: Leistungen verrechnen."
+        ],
+        [
+          "Gegenansicht",
+          "Zwei Kondiktionen, getrennt."
+        ]
+      ],
+      "klausur_tipp": "Grenze: Minderjährige, Getäuschte.",
+      "norm": "§§ 812 Abs. 1 S. 1, 818 Abs. 3 BGB",
+      "sichtbareTexte": [
+        "Schuldrecht AT",
+        "Streitstand",
+        "Nichtiger Vertrag:",
+        "Saldo oder zwei?",
+        "Rechtsprechung",
+        "Saldotheorie: Leistungen verrechnen.",
+        "Gegenansicht",
+        "Zwei Kondiktionen, getrennt.",
+        "Grenze: Minderjährige, Getäuschte.",
+        "§§ 812 Abs. 1 S. 1, 818 Abs. 3 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s8": {
       "slot": "s8",
       "art": "merksatz",
-      "fach": "schuld",
+      "fach": null,
       "klausur": 1,
-      "pairId": "schuld-020",
-      "ueberzeile": "Merksatz Schuldrecht AT",
-      "titel": "Vertrag mit Schutzwirkung zugunsten Dritter",
-      "text": "Vier Punkte als Klausuranker: Leistungsnähe des Dritten, Gläubigernähe beziehungsweise Einbeziehungsinteresse, Erkennbarkeit für den Schuldner und Schutzbedürftigkeit des Dritten. Die Rechtsfolge ist Schutz, nicht ein eigener Primärleistungsanspruch.",
-      "norm": "§§ 280 Abs. 1, 241 Abs. 2 BGB",
       "fachLabel": "Schuldrecht AT",
-      "quellen": [
-        "§ 280 Abs. 1 BGB",
-        "§ 241 Abs. 2 BGB",
-        "Themenpool: schuld-020"
+      "themaId": "schuld-020",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Vertrag mit",
+        "Schutzwirkung"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "zeilen": [
+        [
+          [
+            "Leistungsnähe",
+            "a"
+          ],
+          [
+            ",",
+            null
+          ]
+        ],
+        [
+          [
+            "Einbeziehungsinteresse",
+            "b"
+          ],
+          [
+            ",",
+            null
+          ]
+        ],
+        [
+          [
+            "Erkennbarkeit",
+            "c"
+          ],
+          [
+            ",",
+            null
+          ]
+        ],
+        [
+          [
+            "Schutzbedürftigkeit",
+            "d"
+          ],
+          [
+            ".",
+            null
+          ]
+        ]
+      ],
+      "norm": "§§ 280 Abs. 1, 241 Abs. 2 BGB",
+      "sichtbareTexte": [
+        "Schuldrecht AT",
+        "Merksatz",
+        "Vertrag mit",
+        "Schutzwirkung",
+        "Leistungsnähe,",
+        "Einbeziehungsinteresse,",
+        "Erkennbarkeit,",
+        "Schutzbedürftigkeit.",
+        "§§ 280 Abs. 1, 241 Abs. 2 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s9": {
       "slot": "s9",
       "art": "begriff",
-      "fach": "bgbat",
+      "fach": null,
       "klausur": 1,
-      "pairId": "bgbat-427",
-      "ueberzeile": "Begriff des Tages",
-      "titel": "Arglistige Täuschung und widerrechtliche Drohung",
-      "text": "§ 123 BGB kennt zwei eigenständige Anfechtungsgründe. Täuschung setzt eine bewusste Irreführung über Tatsachen voraus; bei der Drohung wird ein künftiges Übel in Aussicht gestellt. Für die Widerrechtlichkeit der Drohung sind Mittel, Zweck und ihre Verknüpfung zu prüfen.",
-      "norm": "§ 123 BGB",
       "fachLabel": "BGB Allgemeiner Teil",
-      "quellen": [
-        "§ 123 BGB",
-        "§ 124 BGB",
-        "Themenpool: bgbat-427"
+      "themaId": "bgbat-427",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Täuschung",
+        "oder Drohung?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "text": "Täuschung: bewusste Irreführung über Tatsachen. Drohung: künftiges Übel; widerrechtlich nach Mittel, Zweck, Verknüpfung.",
+      "norm": "§ 123 Abs. 1 BGB",
+      "sichtbareTexte": [
+        "BGB Allgemeiner Teil",
+        "Begriff des Tages",
+        "Täuschung",
+        "oder Drohung?",
+        "Definition",
+        "Täuschung: bewusste Irreführung über Tatsachen. Drohung: künftiges Übel; widerrechtlich nach Mittel, Zweck, Verknüpfung.",
+        "§ 123 Abs. 1 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s1": {
       "slot": "s1",
@@ -672,16 +594,25 @@
       "fach": "stpo",
       "klausur": 2,
       "fachLabel": "Strafprozessrecht",
-      "titel": "Zeugnisverweigerung §§ 52–55 StPO",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b1",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Bei § 55 StPO nur Einzelfragen"
+      ],
+      "unter": "Spickzettel + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Strafprozessrecht",
+        "Neu im Feed",
+        "Bei § 55 StPO nur Einzelfragen",
+        "Spickzettel + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s2": {
       "slot": "s2",
@@ -689,16 +620,25 @@
       "fach": "assessoroer",
       "klausur": 3,
       "fachLabel": "Öffentlich-rechtliche Assessorklausur",
-      "titel": "§ 167 VwGO: vorläufige Vollstreckbarkeit",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b2",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Anfechtungsurteil? Nur Kosten"
+      ],
+      "unter": "Vergleich + Baustein Urteil · im Profil",
+      "sichtbareTexte": [
+        "Öffentlich-rechtliche Assessorklausur",
+        "Neu im Feed",
+        "Anfechtungsurteil? Nur Kosten",
+        "Vergleich + Baustein Urteil · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s3": {
       "slot": "s3",
@@ -706,16 +646,25 @@
       "fach": "schuldbt",
       "klausur": 1,
       "fachLabel": "Schuldrecht BT",
-      "titel": "Rechtsmangel: § 435 BGB",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b3",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Perfekt – und trotzdem mangelhaft"
+      ],
+      "unter": "Neues Reel · im Profil",
+      "sichtbareTexte": [
+        "Schuldrecht BT",
+        "Neu im Feed",
+        "Perfekt – und trotzdem mangelhaft",
+        "Neues Reel · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     }
   },
   "hookOptimierung": {
@@ -731,35 +680,27 @@
   },
   "renderVorschau": {
     "status": "fertig",
-    "erzeugtAm": "2026-09-24T21:52:01.871Z",
+    "erzeugtAm": "2026-10-04T23:45:45Z",
     "pfad": "vorproduktion/2026-10-08/fertig",
     "providerKostenUsd": 0,
-    "textProviderKostenUsd": 0,
-    "faktencheckProviderKostenUsd": 0,
-    "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "reelStimme": "piper-offline",
-    "freigabeBetreiber": false,
-    "coverbilderAngewandt": {
-      "stand": "2026-09-25T12:35:32.077Z",
-      "providerKostenUsd": 0,
-      "slots": [
-        "b1",
-        "b2",
-        "b3"
-      ]
-    },
-    "quizPatch": {
-      "stand": "2026-09-25T11:28:47.111Z",
-      "slots": [
-        "s4",
-        "s5"
-      ],
-      "providerKostenUsd": 0
-    }
+    "coverIcons": false,
+    "renderer": "open-peeps-v4",
+    "layoutQuelle": "open-peeps-variante-c",
+    "reelStimme": "elevenlabs-laura",
+    "sfx": "freesound-cc0",
+    "freigabeBetreiber": true,
+    "liveVorrangAktiv": true,
+    "normalbetriebGesperrt": true,
+    "wartetLive": []
   },
   "liveRegel": {
     "veroeffentlichen": false,
     "freigabeErforderlich": true
-  }
+  },
+  "layoutQuelle": "open-peeps-variante-c",
+  "semantikQuelle": "herrjurist",
+  "liveVorrangAktiv": true,
+  "normalbetriebGesperrt": true,
+  "bildStatus": "open-peeps-render"
 }
