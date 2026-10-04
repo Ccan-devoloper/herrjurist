@@ -81,13 +81,13 @@ Quelle: `bildhalt_manifest.json` (126 Bildhalte, davon 126 eigenständig), `cues
 | 75 | 3:45.95 | 3:48.79 | Carla (Erzählerin/Lexi) | hier: nach der Aussage der Polizistin. | 4. Widerspruchslösung › spätestens nach der Beweiserhebung | `8a9e2970b411` |
 | 76 | 3:48.79 | 3:49.75 | Carla (Erzählerin/Lexi) | Danach kann er | 4. Widerspruchslösung › danach nicht nachholbar | `592af31c4bc5` |
 | 77 | 3:49.75 | 3:51.90 | Carla (Erzählerin/Lexi) | nicht mehr nachgeholt werden. | 4. Widerspruchslösung › danach nicht nachholbar | `215f60ea21e7` |
-| 78 | 3:52.20 | 3:54.27 | Carla (Erzählerin/Lexi) | der Angeklagte keinen Verteidiger, | 4. Widerspruchslösung › ohne Verteidiger: Hinweis nötig | `7ad45158199c` |
-| 79 | 3:54.27 | 3:56.74 | Carla (Erzählerin/Lexi) | gilt das nur, wenn ihn der Vorsitzende auf die | 4. Widerspruchslösung › ohne Verteidiger: Hinweis nötig | `d0432999b672` |
-| 80 | 3:56.74 | 3:58.14 | Carla (Erzählerin/Lexi) | Möglichkeit des Widerspruchs | 4. Widerspruchslösung › ohne Verteidiger: Hinweis nötig | `a4fd7b976291` |
-| 81 | 3:58.14 | 3:59.70 | Carla (Erzählerin/Lexi) | hingewiesen hat. | 4. Widerspruchslösung › ohne Verteidiger: Hinweis nötig | `32b3d5db0ac0` |
-| 82 | 3:59.70 | 4:04.54 | Carla (Erzählerin/Lexi) | Unumstritten ist die Frist nicht: Sogar ein Senat des Bundesgerichtshofs hat sie | 4. Widerspruchslösung › Frist umstritten | `9dfe3aa336e4` |
-| 83 | 4:04.54 | 4:06.82 | Carla (Erzählerin/Lexi) | bezweifelt, allerdings für Funde aus | 4. Widerspruchslösung › Frist umstritten | `ce2f1c0601f3` |
-| 84 | 4:06.82 | 4:08.68 | Carla (Erzählerin/Lexi) | Durchsuchungen. | 4. Widerspruchslösung › Frist umstritten | `423e394f902f` |
+| 78 | 3:52.20 | 3:54.27 | Carla (Erzählerin/Lexi) | der Angeklagte keinen Verteidiger, | 4. Widerspruchslösung › ohne Verteidiger: Hinweis nötig | `4ec52c16b59a` |
+| 79 | 3:54.27 | 3:56.74 | Carla (Erzählerin/Lexi) | gilt das nur, wenn ihn der Vorsitzende auf die | 4. Widerspruchslösung › ohne Verteidiger: Hinweis nötig | `c4b5b3fec97e` |
+| 80 | 3:56.74 | 3:58.14 | Carla (Erzählerin/Lexi) | Möglichkeit des Widerspruchs | 4. Widerspruchslösung › ohne Verteidiger: Hinweis nötig | `cec48c39bdd6` |
+| 81 | 3:58.14 | 3:59.70 | Carla (Erzählerin/Lexi) | hingewiesen hat. | 4. Widerspruchslösung › ohne Verteidiger: Hinweis nötig | `79c56de5d4e8` |
+| 82 | 3:59.70 | 4:04.54 | Carla (Erzählerin/Lexi) | Unumstritten ist die Frist nicht: Sogar ein Senat des Bundesgerichtshofs hat sie | 4. Widerspruchslösung › Frist umstritten | `6aa835d4e3e4` |
+| 83 | 4:04.54 | 4:06.82 | Carla (Erzählerin/Lexi) | bezweifelt, allerdings für Funde aus | 4. Widerspruchslösung › Frist umstritten | `1e10887f70a2` |
+| 84 | 4:06.82 | 4:08.68 | Carla (Erzählerin/Lexi) | Durchsuchungen. | 4. Widerspruchslösung › Frist umstritten | `790de49c29d9` |
 | 85 | 4:08.98 | 4:10.36 | Carla (Erzählerin/Lexi) | Grundfall hat Hufnagel | Ergebnis › Grundfall: rechtzeitig widersprochen | `de902ff333fb` |
 | 86 | 4:10.36 | 4:12.08 | Carla (Erzählerin/Lexi) | rechtzeitig widersprochen. | Ergebnis › Grundfall: rechtzeitig widersprochen | `5a0d0c636282` |
 | 87 | 4:12.08 | 4:14.80 | Carla (Erzählerin/Lexi) | Das Geständnis ist unverwertbar. | Ergebnis › Grundfall: Geständnis unverwertbar | `8286bf206b8d` |
