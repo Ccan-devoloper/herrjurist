@@ -68,3 +68,5 @@ Ordner `LexVerse Produktion/188 Baugenehmigung Schema/`, ID `1KisVOxp7Dzb6WawO3i
 | `metadaten.json` | 5.251 |
 
 `rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 279 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`6cbf0f247261…`), MP4-MD5 lokal = Drive (`c32634051cc3…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
+
+**Nachtrag Koordinator (04.10.2026):** In beschreibung.txt und metadaten.json (Drive) sowie src/meta_188.py die ungeprüfte Liste der Normnummern der 13 übrigen Länder entfernt; ersetzt durch den Hinweis, die Anspruchsnorm in der jeweiligen Landesbauordnung nachzuschlagen. Nur am amtlichen Text geprüfte Nummern (BY, NRW, BB) bleiben in der Beschreibung.

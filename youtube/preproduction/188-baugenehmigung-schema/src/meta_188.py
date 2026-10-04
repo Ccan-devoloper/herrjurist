@@ -42,7 +42,7 @@ Inhalt:
 
 Normen: §§ 29, 30, 34, 35 BauGB; Art. 70, 74 Abs. 1 Nr. 18 GG; § 42 Abs. 1 VwGO; Beispiele: Art. 55, 57, 58, 59, 62b, 68 BayBO; §§ 60, 62, 63, 64, 74 BauO NRW 2018
 
-In deinem Land ggf. andere Nummer – Anspruch auf Baugenehmigung in allen 16 Ländern: Bayern Art. 68 BayBO (Genehmigungspflicht Art. 55, vereinfachtes Verfahren Art. 59), Nordrhein-Westfalen § 74 BauO NRW 2018 (§§ 60, 64), Brandenburg § 72 BbgBO (§§ 59, 63) – diese drei am amtlichen Text geprüft. Übrige Länder ohne Gewähr, bitte im Landesrecht nachlesen: Baden-Württemberg § 58 LBO, Berlin § 71 BauO Bln, Bremen § 72 BremLBO, Hamburg § 72 HBauO, Hessen § 74 HBO, Mecklenburg-Vorpommern § 72 LBauO M-V, Niedersachsen § 70 NBauO, Rheinland-Pfalz § 70 LBauO, Saarland § 73 LBO, Sachsen § 72 SächsBO, Sachsen-Anhalt § 71 BauO LSA, Schleswig-Holstein § 72 LBO, Thüringen ThürBO (Nummer bitte nachschlagen).
+In deinem Land ggf. andere Nummer – Anspruch auf Baugenehmigung in allen 16 Ländern: Bayern Art. 68 BayBO (Genehmigungspflicht Art. 55, vereinfachtes Verfahren Art. 59), Nordrhein-Westfalen § 74 BauO NRW 2018 (§§ 60, 64), Brandenburg § 72 BbgBO (§§ 59, 63) – diese drei am amtlichen Text geprüft. In den übrigen Ländern steht der Anspruch in der jeweiligen Landesbauordnung – Nummer bitte im eigenen Landesrecht nachschlagen.
 
 Rechtsprechung:
 – BVerwG, Urt. v. 19.4.2012 – 4 C 10.11, Rn. 11 (Außenbereich: nicht Bestandteil eines im Zusammenhang bebauten Ortsteils)
