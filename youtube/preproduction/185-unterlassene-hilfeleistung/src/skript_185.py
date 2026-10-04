@@ -37,7 +37,7 @@ SEGMENTE = [
     ("[ke1]Der schläft doch nur.", P, "Kessel"),
     ("[weigel]Frau Weigel bleibt kurz stehen. Sie hat nie Erste Hilfe gelernt und geht wieder.", P),
     # --- A3 Fall: Frau Bühler hilft ------------------------------------------------------------------------------------------
-    ("[buehler]Erst Frau Bühler kniet sich zu ihm, spricht ihn an und wählt den Notruf.", P),
+    ("[buehler]Erst die fünfte Kundin, Frau Bühler, kniet sich zu ihm, spricht ihn an und wählt den Notruf.", P),
     ("[bu1]Hier liegt ein Mann bewusstlos am Boden. Er atmet.", P, "Buehler"),
     ("[seite]Sie bringt ihn in die stabile Seitenlage und bleibt bei ihm. [rtw]Der Rettungsdienst bringt ihn ins "
      "Krankenhaus, dort erholt er sich.", 0.4),

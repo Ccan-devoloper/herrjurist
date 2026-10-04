@@ -277,7 +277,7 @@ def sitzt(cue, folge, x=XE, unten=BR, rechts=False, schild=True, d=0.0, bis_=Non
     return els
 
 
-def paar(cue, fw, fh, xw=X1 - 20, xh=X2 + 20):
+def paar(cue, fw, fh, xw=1390, xh=1700):
     """Herr Weinhold (sitzt, links) und Kommissar Hollstein (steht, rechts) neben der Tafel, beide blicken zur Tafel."""
     return sitzt(cue, fw, x=xw) + kette("HS_", xh, [(fh[0][0], cue)] + list(fh[1:]), d=0.2) + \
         [namensschild(NAME["HS"], xh, BR, cue, FARBE["HS"], d=0.3)]
