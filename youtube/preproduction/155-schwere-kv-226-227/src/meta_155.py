@@ -63,6 +63,11 @@ open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
 srt = srt.replace("§ 226 a", "§ 226a").replace("§§ 223 bis 226 a", "§§ 223 bis 226a")
+srt = srt.replace("bis zweihundertsechsundzwanzig a,", "bis 226a,").replace("Hake den §§ 227", "Hake den § 227")
+srt = srt.replace("Nr. 2 und drei dagegen", "Nr. 2 und 3 dagegen")
+for w, z in (("Eins:", "1."), ("Zwei:", "2."), ("Drei:", "3."), ("Vier:", "4."), ("Fünf:", "5.")):
+    srt = srt.replace("\n" + w + " ", "\n" + z + " ")
+assert "zweihundert" not in srt and "§§ 227 nicht" not in srt
 srt = srt.replace("Römisch eins,", "I.").replace("Römisch zwei,", "II.").replace("Römisch drei,", "III.")
 assert not re.search(r"§\n", srt)
 open(f"{U}/untertitel.srt", "w").write(srt)
