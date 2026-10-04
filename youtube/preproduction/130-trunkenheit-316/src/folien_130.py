@@ -224,7 +224,7 @@ def ortsschild(cx, boden_, cue):
     """Ortsausgangsschild als Grundform: gelbe Tafel, zwei dunkle Schriftbalken (ohne realen Ortsnamen), roter
     Schrägstrich, grauer Pfosten."""
     s = 2
-    w, h, hp = 170, 110, 150
+    w, h, hp = 170, 110, 80
     im = Image.new("RGBA", ((w + 12) * s, (h + hp + 12) * s))
     dr = ImageDraw.Draw(im)
     dr.rounded_rectangle(((w / 2 - 2) * s, h * s, (w / 2 + 14) * s, (h + hp + 6) * s), 4 * s, fill=(150, 150, 150, 255),
@@ -241,9 +241,9 @@ def kulisse(c):
     """Kulisse der Kontrollstelle: Straße, Bäume, Ortsausgangsschild (für jede Folie neu erzeugt)."""
     h = (lambda e: hart(e)) if c == NULL else (lambda e: e)
     return [h(kontrollstelle(c)),
-            h(ficon("tabler", "trees", 150, STR_O + 4, 190, c, fuell=GRUEN, anim="cut")),
-            h(ficon("tabler", "trees", 440, STR_O + 4, 160, c, fuell=GRUEN, anim="cut")),
-            h(ortsschild(770, STR_O + 4, c))]
+            h(ficon("tabler", "trees", 450, STR_O + 4, 190, c, fuell=GRUEN, anim="cut")),
+            h(ficon("tabler", "trees", 660, STR_O + 4, 160, c, fuell=GRUEN, anim="cut")),
+            h(ortsschild(150, STR_O + 4, c))]
 
 
 def polizei(c, d=0.0):
@@ -632,9 +632,9 @@ y = 230
 for c, ebene, text, fett in REIHEN:
     x = (130, 200, 270)[ebene]
     if c == "k1b":
-        els_sch.append(karte(180, y - 16, 1640, 194, c, fill=HELLGRUEN, rund=16, schatten=5, rand=4))
-    els_sch.append(z(text, x, y, c, "ExtraBold" if fett else "Regular", 36 if ebene == 0 else 33, rechts=1800))
-    y += {0: 80, 1: 70, 2: 66}[ebene]
+        els_sch.append(karte(180, y - 16, 1640, 212, c, fill=HELLGRUEN, rund=16, schatten=5, rand=4))
+    els_sch.append(z(text, x, y, c, "ExtraBold" if fett else "Regular", 38 if ebene == 0 else 35, rechts=1800))
+    y += {0: 90, 1: 76, 2: 70}[ebene]
 assert y <= 970, y
 folie([("sch", "Prüfschema"), ("k1", "Prüfschema › I. Tatbestand"), ("k1b", "Prüfschema › I. Fahruntüchtigkeit"),
        ("k1e", "Prüfschema › I. 2. Vorsatz/Fahrlässigkeit"), ("k2", "Prüfschema › II. und III."),
