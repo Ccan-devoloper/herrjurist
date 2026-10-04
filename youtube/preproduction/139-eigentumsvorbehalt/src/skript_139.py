@@ -78,8 +78,8 @@ SEGMENTE = [
      "nach Paragraf neunhundertfünfundachtzig und nach Paragraf dreihundertsechsundvierzig Absatz eins.", PS),
     # --- K Klausurtipp (Lexi) ---------------------------------------------------------------------------------------------------
     ("[tipp]Klausurtipp: Mit der letzten Rate geht das Eigentum automatisch über. [tipp2]Eine neue Einigung oder Erklärung "
-     "braucht es nicht, denn die Bedingung tritt ein, Paragraf hundertachtundfünfzig Absatz eins. [tipp3]Und merke dir die "
-     "Begriffe für später: verlängerter und erweiterter Eigentumsvorbehalt.", PS),
+     "braucht es nicht, denn die Bedingung tritt ein, Paragraf hundertachtundfünfzig Absatz eins. [tipp3]Und merke dir zwei "
+     "Begriffe für später: den verlängerten und den erweiterten Eigentumsvorbehalt.", PS),
     # --- L Klausurschema --------------------------------------------------------------------------------------------------------
     ("[sch]Dein Schema für den Herausgabeanspruch des Vorbehaltsverkäufers: [k1]Römisch eins: Eigentum des Verkäufers. "
      "[k11]Die Übereignung ist aufschiebend bedingt, [k12]die Bedingung ist noch nicht eingetreten, der Käufer hat nur das "
