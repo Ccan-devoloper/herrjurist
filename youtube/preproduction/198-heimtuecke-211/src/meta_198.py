@@ -71,8 +71,7 @@ srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?|Art\.)\n(\S+) ", r"\1 \2\n", srt)
 srt = re.sub(r"(Abs\.|S\.|Nr\.)\n(\d+[a-z]?[,.:;]?) ?", r"\1 \2\n", srt)
 srt = re.sub(r"§\n(\d+)", r"§ \1\n", srt)
-for vorn, hinten, e1, e2 in [("um neunzehn", "Uhr", "um 19", "Uhr"), ("zwölfter", "März", "12.", "März"),
-                             ("März, neunzehn", "Uhr", "März, 19", "Uhr")]:
+for vorn, hinten, e1, e2 in [("neunzehn", "Uhr", "19", "Uhr"), ("zwölfter", "März", "12.", "März")]:
     srt, n = re.subn(re.escape(vorn) + r"(\s)" + re.escape(hinten), lambda m: e1 + m.group(1) + e2, srt)
     assert n, vorn
 assert not re.search(r"§\n|Abs\.\n|Art\.\n(?=\S)", srt), "Untertitel prüfen"

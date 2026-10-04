@@ -20,12 +20,12 @@ Quelle: `bildhalt_manifest.json` (101 Bildhalte, davon 101 eigenständig), `cues
 | 14 | 0:22.72 | 0:23.24 | Carla (Erzählerin/Lexi) | Pächterin | Fall · An der Kasse: Pächterin Margarete | `1e99db31adca` |
 | 15 | 0:23.34 | 0:24.66 | Carla (Erzählerin/Lexi) | Margarete. | Fall · An der Kasse: Pächterin Margarete | `0968d76314d1` |
 | 16 | 0:24.66 | 0:25.82 | Margarete | Achtzig Euro an | Fall · Margarete: 80 € an Säule 4 | `267e9f72c697` |
-| 17 | 0:25.82 | 0:30.08 | Margarete | Säule vier. Das Benzin ist aber schon in Ihrem Tank. | Fall · Margarete: 80 € an Säule 4 | `544d7ef4f8fa` |
-| 18 | 0:30.08 | 0:35.34 | Armin | Heißt das, ich habe schon gekauft? Bezahlt wird doch erst hier an der Kasse. | Fall · Armin: schon gekauft? | `41570a5065c1` |
-| 19 | 0:35.34 | 0:41.11 | Carla (Erzählerin/Lexi) | Wann kommt der Kaufvertrag zustande: schon an der Zapfsäule oder erst an der Kasse? | Fall · Die Frage | `a901f43eda1f` |
-| 20 | 0:41.11 | 0:43.54 | Carla (Erzählerin/Lexi) | Und wem gehört das Benzin im Tank? | Fall · Die Frage | `eed0aa7c6b37` |
-| 21 | 0:43.54 | 0:46.22 | Carla (Erzählerin/Lexi) | Darüber hat der Bundesgerichtshof entschieden, am | Fall · Der Tankstellenfall des BGH | `63f67eca73ea` |
-| 22 | 0:46.22 | 0:48.80 | Carla (Erzählerin/Lexi) | vierten Mai zweitausendelf. | Fall · Der Tankstellenfall des BGH | `f8bc29aeabb1` |
+| 17 | 0:25.82 | 0:30.08 | Margarete | Säule vier. Das Benzin ist aber schon in Ihrem Tank. | Fall · Margarete: 80 € an Säule 4 | `8343714bf212` |
+| 18 | 0:30.08 | 0:35.34 | Armin | Heißt das, ich habe schon gekauft? Bezahlt wird doch erst hier an der Kasse. | Fall · Armin: schon gekauft? | `da23d7a25a69` |
+| 19 | 0:35.34 | 0:41.11 | Carla (Erzählerin/Lexi) | Wann kommt der Kaufvertrag zustande: schon an der Zapfsäule oder erst an der Kasse? | Fall · Die Frage | `9a5357b205cb` |
+| 20 | 0:41.11 | 0:43.54 | Carla (Erzählerin/Lexi) | Und wem gehört das Benzin im Tank? | Fall · Die Frage | `d9b5d18b7bf9` |
+| 21 | 0:43.54 | 0:46.22 | Carla (Erzählerin/Lexi) | Darüber hat der Bundesgerichtshof entschieden, am | Fall · Der Tankstellenfall des BGH | `565174604323` |
+| 22 | 0:46.22 | 0:48.80 | Carla (Erzählerin/Lexi) | vierten Mai zweitausendelf. | Fall · Der Tankstellenfall des BGH | `6b9b34302b2f` |
 | 23 | 0:48.80 | 0:58.44 | Carla (Erzählerin/Lexi) | Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an. | Sachverhalt | `822a44323419` |
 | 24 | 0:58.54 | 1:04.76 | Carla (Erzählerin/Lexi) | Margarete verlangt achtzig Euro aus Paragraf vierhundertdreiunddreißig Absatz zwei B.G.B.. | Anspruch: § 433 Abs. 2 BGB | `44585a7e73c6` |
 | 25 | 1:04.76 | 1:09.44 | Carla (Erzählerin/Lexi) | Dafür braucht es einen Kaufvertrag, also Angebot und Annahme. | Anspruch: § 433 Abs. 2 BGB › Kaufvertrag? | `e8c908cb40aa` |

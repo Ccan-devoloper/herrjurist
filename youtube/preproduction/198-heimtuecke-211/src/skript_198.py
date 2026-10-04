@@ -86,7 +86,8 @@ SEGMENTE = [
      "Bundesgerichtshof verlangt das nicht. [hier]Wer der Lehre folgt, kann hier gut vertreten: Heribert hat das Vertrauen "
      "in die Versöhnung gezielt geweckt und dann missbraucht.", PS),
     # --- K Klausurtipp (Lexi) ---------------------------------------------------------------------------------------------
-    ("[tipp]Klausurtipp: Prüfe die Arglosigkeit immer bei Beginn des ersten mit Tötungsvorsatz geführten Angriffs. "
+    ("[tipp]Klausurtipp: Prüfe immer, ob das Opfer arglos war, und zwar bei Beginn des ersten mit Tötungsvorsatz "
+     "geführten Angriffs. "
      "[tipp2]Ein Streit davor schließt sie nicht automatisch aus. Frag: Rechnete das Opfer genau in diesem Moment mit "
      "einem erheblichen Angriff? [tipp3]Und diskutiere Einschränkungen der Heimtücke erst, wenn du die Merkmale sauber "
      "festgestellt hast.", PS),
