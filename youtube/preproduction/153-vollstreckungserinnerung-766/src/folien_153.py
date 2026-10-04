@@ -581,7 +581,7 @@ w750, w750_y = wortlaut(80, 280, 1100, W750, "§ 750 Abs. 1 Satz 1 Nr. 2 Buchst.
     (2, "zugestellt ist", beim("wl750", "zugestellt")), (2, "gleichzeitig", beim("wl750", "gleichzeitig"))], size=32)
 folie([("begr", BG_), ("wl750", f"{BG_} › § 750 Abs. 1 ZPO: Zustellung"), ("zweck", f"{BG_} › Zweck: rechtliches Gehör")], [
     *tafel("begr", BG_),
-    z("begründet: Verstoß gegen Vorschriften des", 110, 175, beim("begr", "begründet"), "Bold", 34),
+    z("begründet: Verstoß gegen Vorschriften des", 110, 175, beim("begr", "begründet", nr=2), "Bold", 34),
     z("Vollstreckungsverfahrens", 110, 221, beim("begr", "Vollstreckungsverfahrens"), "Bold", 34),
     *w750,
     z("Zweck: rechtliches Gehör – der Schuldner soll die", 110, w750_y + 26, "zweck", "Bold", 33),
@@ -704,7 +704,7 @@ folie([("tipp", "Klausurtipp · Wer hat gehandelt – und wie?"), ("tipp3", "Kla
     pl("Faustregel", 200, 290, "tipp2", fill=PINK, size=32),
     z("Gerichtsvollzieher oder Gericht ohne Anhörung:", 200, 370, beim("tipp2", "Gerichtsvollzieher"), "Bold", 33),
     pl("Erinnerung, § 766 ZPO", 200, 420, beim("tipp2", "Erinnerung"), fill=BLAUHELL, size=32),
-    z("Gericht nach Anhörung:", 200, 520, beim("tipp2", "Gericht", nr=2), "Bold", 33),
+    z("Gericht nach Anhörung:", 200, 520, beim("tipp2", "Gericht", nr=3), "Bold", 33),
     pl("sofortige Beschwerde, § 793 ZPO", 200, 570, beim("tipp2", "sofortige"), fill=LILA, size=32),
     linienzug([(130, 670), (1130, 670)], "tipp3", breite=3),
     *okz("Begründetheit: Mangel bis zur Entscheidung geheilt?", 700, "tipp3", "Bold", 33, x=200),
