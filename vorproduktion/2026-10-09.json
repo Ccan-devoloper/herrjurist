@@ -1,21 +1,16 @@
 {
   "datum": "2026-10-09",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
+  "freigabeBetreiber": true,
   "liveVerknuepft": false,
-  "vorproduktionStatus": "review",
+  "vorproduktionStatus": "live-freigegeben",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungUsd": 0,
     "providerKostenUsd": 0,
-    "piperOffline": true,
     "coverbilder": false,
-    "autorUsd": 0,
-    "faktencheckUsd": 0,
-    "sonstigeTextKiUsd": 0,
     "bildgenerierungErlaubt": false,
-    "bildkostenUsd": 0,
-    "bilderStatus": "bewusst-ausgelassen"
+    "reelStimme": "elevenlabs-abo"
   },
   "plan": {
     "beitraege": [
@@ -44,8 +39,7 @@
         "themaId": "strafbt-738",
         "themaTitel": "Heimtücke heißt nicht „von hinten“",
         "fach": "strafbt",
-        "klausur": 2,
-        "lang": false
+        "klausur": 2
       }
     ],
     "stories": [
@@ -65,8 +59,7 @@
         "slot": "s1",
         "zeit": "06:00",
         "art": "teaser",
-        "beitragSlot": "b1",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b1"
       },
       {
         "slot": "s6",
@@ -78,8 +71,7 @@
         "slot": "s2",
         "zeit": "12:30",
         "art": "teaser",
-        "beitragSlot": "b2",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b2"
       },
       {
         "slot": "s7",
@@ -97,8 +89,7 @@
         "slot": "s3",
         "zeit": "17:30",
         "art": "teaser",
-        "beitragSlot": "b3",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b3"
       },
       {
         "slot": "s9",
@@ -115,79 +106,7 @@
       "klausur": 3,
       "fachLabel": "Verwaltungsrecht AT",
       "themaId": "verwalt-640",
-      "slug": "2026-10-09-b1",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Bescheid früher im Briefkasten? Die Frist startet trotzdem später",
-          "titelZeilen": [
-            "Bescheid früher",
-            "im Briefkasten?",
-            "Die Frist startet",
-            "trotzdem später"
-          ],
-          "coverBadge": "Mini-Fall",
-          "coverText": "Tag 4 nach Aufgabe zur Post",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Der Fall",
-          "text": "Die Behörde gibt einen belastenden Bescheid am Montag, 05.10.2026, als einfachen Brief im Inland zur Post. A findet ihn schon am Mittwoch, 07.10., im Briefkasten. Ab wann läuft die Monatsfrist für seinen Rechtsbehelf?"
-        },
-        {
-          "art": "text",
-          "titel": "Der typische Fehler",
-          "text": "Gerechnet wird ab dem Datum des Bescheids oder ab dem Tag im Briefkasten. Beides ist falsch, wenn die Bekanntgabefiktion des § 41 Abs. 2 VwVfG greift."
-        },
-        {
-          "art": "schritte",
-          "titel": "So prüfst du die Bekanntgabe",
-          "schritte": [
-            {
-              "titel": "Fiktion anwenden",
-              "text": "Ein schriftlicher Verwaltungsakt, der im Inland durch die Post übermittelt wird, gilt am vierten Tag nach der Aufgabe zur Post als bekannt gegeben (§ 41 Abs. 2 S. 1 VwVfG)."
-            },
-            {
-              "titel": "Früherer Zugang ändert nichts",
-              "text": "Kommt der Brief früher an, bleibt es beim vierten Tag. Die Frist wird dadurch nicht kürzer."
-            },
-            {
-              "titel": "Ausnahme prüfen",
-              "text": "Die Fiktion gilt nicht, wenn der Bescheid gar nicht oder später zugegangen ist; im Zweifel muss die Behörde Zugang und Zeitpunkt nachweisen (§ 41 Abs. 2 S. 3 VwVfG)."
-            },
-            {
-              "titel": "Landesrecht mitdenken",
-              "text": "Handelt eine Landesbehörde, gilt das Landes-VwVfG. Dessen aktuelle Fassung der Fiktion kurz gegenprüfen."
-            }
-          ]
-        },
-        {
-          "art": "text",
-          "titel": "Lösung des Mini-Falls",
-          "text": "Bekanntgabe am Freitag, 09.10.2026. Die Monatsfrist beginnt am 10.10. und endet mit Ablauf des 09.11.2026 (§§ 187 Abs. 1, 188 Abs. 2 BGB). Das gilt für die Widerspruchsfrist (§ 70 Abs. 1 VwGO) und, wo das Land kein Vorverfahren vorsieht, ebenso für die Klagefrist (§ 74 Abs. 1 S. 2 VwGO) – eine ordnungsgemäße Rechtsbehelfsbelehrung vorausgesetzt (§ 58 VwGO)."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Tag 4 nach Aufgabe zur Post zählt – nicht der Tag im Briefkasten."
-        },
-        {
-          "art": "cta",
-          "titel": "Fristen in drei Zügen",
-          "punkte": [
-            "Tag der Aufgabe zur Post finden",
-            "Plus vier Tage = Bekanntgabe",
-            "Fristende nach §§ 187, 188 BGB"
-          ],
-          "icons": [
-            "umschlag",
-            "kalender",
-            "uhr"
-          ]
-        }
-      ],
-      "caption": "Bescheid früher im Briefkasten? Die Frist startet trotzdem später\n\nDer Bescheid lag schon am Mittwoch im Briefkasten – läuft die Frist deshalb früher ab? Nein. Wird ein schriftlicher Verwaltungsakt im Inland per Post übermittelt, gilt er nach § 41 Abs. 2 S. 1 VwVfG am vierten Tag nach Aufgabe zur Post als bekannt gegeben. Ein früherer Zugang verkürzt die Frist nicht; nur ein späterer oder fehlender Zugang verschiebt die Bekanntgabe. Danach rechnest du die Monatsfrist mit §§ 187 Abs. 1, 188 Abs. 2 BGB. Speichern für die nächste Fristenprüfung.",
+      "caption": "Bescheid früher im Briefkasten? Die Frist zählt trotzdem später.\n\n▸ Ein schriftlicher Verwaltungsakt, der im Inland durch die Post übermittelt wird, gilt als bekannt gegeben – maßgeblich ist Tag 4 nach der Aufgabe zur Post (§ 41 Abs. 2 S. 1 VwVfG). Ein früherer Zugang ändert daran nichts. Die Fiktion gilt nicht, wenn der Verwaltungsakt nicht oder später zugegangen ist; im Zweifel muss die Behörde Zugang und Zeitpunkt nachweisen (§ 41 Abs. 2 S. 3 VwVfG).\n▸ Im Fall: Aufgabe Montag, 05.10.2026 – Bekanntgabe Freitag, 09.10.2026.\n▸ Widerspruchsfrist: ein Monat nach Bekanntgabe (§ 70 Abs. 1 S. 1 VwGO). Berechnung nach §§ 187 Abs. 1, 188 Abs. 2 BGB (über § 31 Abs. 1 VwVfG; für die Klage § 57 Abs. 2 VwGO, § 222 Abs. 1 ZPO): Beginn 10.10., Ende mit Ablauf des 09.11.2026. Ohne Vorverfahren gilt die Monatsfrist für die Klage (§ 74 Abs. 1 S. 2 VwGO).\n▸ Die Frist läuft nur bei ordnungsgemäßer Rechtsbehelfsbelehrung, sonst grundsätzlich ein Jahr (§ 58 Abs. 1, 2 VwGO).\n▸ Handelt eine Landesbehörde, gilt das Landes-VwVfG: Landesrecht prüfen.\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -200,45 +119,66 @@
         "#widerspruchsfrist",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Bekanntgabe: Tag 4 nach Aufgabe zur Post",
-      "coverText": "Tag 4 nach Aufgabe zur Post",
-      "coverBadge": "Mini-Fall",
-      "coverRegie": {
-        "charaktere": [
-          "form7",
-          "rex"
-        ],
-        "kernidee": "Ein Brief ist früh angekommen, aber die Frist startet erst an einem festen Tag – nicht mit dem Briefkasten.",
-        "handlung": "{A} hovers beside a mailbox and firmly holds back a large stopwatch that {B} is eagerly trying to start the moment an envelope drops in; four simple calendar tiles lie between them, the fourth glowing.",
-        "hinweisRegie": "Place the note in the open space near the glowing fourth calendar tile, slightly tilted, close enough to read as the correct start date without covering the stopwatch or the hands.",
-        "alternative": "{A} stamps a single envelope on a conveyor while {B} counts four ticking steps on a simple track toward a small starting flag."
-      },
-      "bildSzene": "droid stops early stopwatch at mailbox",
-      "bildSzeneAlt": "envelope travels four steps to start flag",
       "quellen": [
-        "§ 41 VwVfG",
-        "§ 70 VwGO",
-        "§ 74 VwGO",
+        "§ 41 Abs. 2 VwVfG",
+        "§ 31 Abs. 1 VwVfG",
+        "§ 70 Abs. 1 VwGO",
+        "§ 74 Abs. 1 VwGO",
+        "§ 57 Abs. 2 VwGO",
+        "§ 222 Abs. 1 ZPO",
         "§ 58 VwGO",
-        "§§ 187, 188 BGB",
-        "Themenpool: verwalt-640"
+        "§§ 187 Abs. 1, 188 Abs. 2 BGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "konkrete-wendung",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-09-b1",
+      "kurztitel": "Bekanntgabe: Tag 4 nach Aufgabe zur Post",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T10:40:42.689Z",
-      "fachStand": "redaktionell-2026-09-25",
-      "hookUpdate": {
-        "stand": "2026-09-25T12:19:07.949Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Mini-Fall",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Mini-Fall",
+          "text": "Mini-Fall · Früher im · Briefkasten? · Frist zählt später · § 41 Abs. 2 S. 1 VwVfG · Tag 4 zählt · + Gutachten-Baustein · OKT · 9 · Tag 4",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "Der Fall · Die Behörde gibt den Bescheid am Montag, 05.10.2026, im Inland zur Post. · A findet ihn schon am Mittwoch, 07.10., im Briefkasten. · Jetzt du: Wann endet die Widerspruchsfrist? · Ab Mittwoch?"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "Der typische Fehler · Ab Bescheiddatum oder ab dem Tag im Briefkasten rechnen. · Bekanntgabe gilt: Tag 4 nach Aufgabe zur Post. · § 41 Abs. 2 S. 1 VwVfG · Früherer Zugang verkürzt nichts; späterer oder fehlender Zugang verschiebt. · § 41 Abs. 2 S. 3 VwVfG · Also Freitag!"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "Die Frist in 4 Schritten · Aufgabe zur Post · Montag, 05.10. · Bekanntgabe · § 41 Abs. 2 S. 1 VwVfG · Freitag, 09.10. · Fristbeginn · § 187 Abs. 1 BGB · Samstag, 10.10. · Fristende · § 188 Abs. 2 BGB · Ablauf Montag, 09.11. · Am Ende: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "Die Lösung · Widerspruch: ein Monat ab Bekanntgabe. · § 70 Abs. 1 S. 1 VwGO · Nur mit richtiger Belehrung; sonst ein Jahr. · § 58 Abs. 1, 2 VwGO · OKT · 9 · Bekanntgabe · NOV · 9 · Fristende"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "Lösung: Fristende 09.11.2026 · Bekanntgabe Freitag, 09.10. (§ 41 Abs. 2 S. 1 VwVfG) · Tag 4 nach Aufgabe, · nicht der Briefkasten, · dann §§ 187, 188 BGB. · Speichern fürs Examen · Hättest du ab Mittwoch gerechnet? · Weiterwischen: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "So im Gutachten · Obersatz · § 70 Abs. 1 S. 1 VwGO · Der Widerspruch müsste fristgerecht erhoben sein. · Norm · § 41 Abs. 2 S. 1 VwVfG · Bekanntgabe: Tag 4 nach Aufgabe zur Post · Subsumtion · §§ 187 Abs. 1, 188 Abs. 2 BGB · Aufgabe 05.10., Bekanntgabe 09.10., Ende 09.11. · Ergebnis · Widerspruch bis 09.11.2026 fristgerecht"
+        }
+      ]
     },
     "b2": {
       "format": "pruefungsfrage",
@@ -246,80 +186,7 @@
       "klausur": 1,
       "fachLabel": "Schuldrecht BT",
       "themaId": "schuldbt-191",
-      "slug": "2026-10-09-b2",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Reparatur oder neue Sache? Nicht der Verkäufer wählt",
-          "titelZeilen": [
-            "Reparatur oder",
-            "neue Sache?",
-            "Nicht der",
-            "Verkäufer wählt"
-          ],
-          "coverBadge": "Klausurklassiker",
-          "coverText": "Verkäufer hat nur ein Veto",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Die Frage",
-          "text": "K kauft eine Waschmaschine, die schon bei Übergabe mangelhaft ist. K verlangt eine neue Maschine, V will lieber reparieren. Wer setzt sich durch?"
-        },
-        {
-          "art": "vergleich",
-          "titel": "Zwei Arten der Nacherfüllung",
-          "links": {
-            "titel": "Nachbesserung",
-            "punkte": [
-              "Beseitigung des Mangels.",
-              "Der Käufer behält dieselbe Sache."
-            ]
-          },
-          "rechts": {
-            "titel": "Nachlieferung",
-            "punkte": [
-              "Lieferung einer mangelfreien Sache.",
-              "Die mangelhafte Sache kann der Verkäufer nach §§ 346–348 BGB zurückverlangen."
-            ]
-          }
-        },
-        {
-          "art": "text",
-          "titel": "Wer wählt?",
-          "text": "Der Käufer. § 439 Abs. 1 BGB gibt ihm die Nacherfüllung „nach seiner Wahl“. V darf die gewählte Art nur unter den Voraussetzungen des § 439 Abs. 4 BGB verweigern – insbesondere, wenn sie nur mit unverhältnismäßigen Kosten möglich ist."
-        },
-        {
-          "art": "text",
-          "titel": "So prüfst du die Verweigerung",
-          "punkte": [
-            "Wert der Sache in mangelfreiem Zustand",
-            "Bedeutung des Mangels",
-            "Kann der Käufer ohne erhebliche Nachteile auf die andere Art ausweichen?",
-            "Folge: Der Anspruch beschränkt sich auf die andere Art."
-          ]
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Der Käufer wählt. Der Verkäufer kann nur nach § 439 Abs. 4 BGB verweigern."
-        },
-        {
-          "art": "cta",
-          "titel": "Drei Schritte für die Klausur",
-          "punkte": [
-            "Mangel bei Gefahrübergang feststellen",
-            "Gewählte Art der Nacherfüllung benennen",
-            "§ 439 Abs. 4 BGB als Einrede prüfen"
-          ],
-          "icons": [
-            "lupe",
-            "werkzeug",
-            "waage"
-          ]
-        }
-      ],
-      "caption": "Reparieren oder neu liefern – wer entscheidet? Viele lassen in der Klausur den Verkäufer wählen. Falsch: Nach § 439 Abs. 1 BGB wählt der Käufer zwischen Nachbesserung und Nachlieferung. Der Verkäufer hat nur ein Verweigerungsrecht nach § 439 Abs. 4 BGB, etwa bei unverhältnismäßigen Kosten; dann beschränkt sich der Anspruch auf die andere Art. Die Aufwendungen der Nacherfüllung trägt der Verkäufer (§ 439 Abs. 2 BGB).",
+      "caption": "Reparieren oder neu liefern – wer entscheidet? Der Käufer, nicht der Verkäufer.\n\n▸ Der Käufer kann als Nacherfüllung nach seiner Wahl die Beseitigung des Mangels oder die Lieferung einer mangelfreien Sache verlangen (§§ 437 Nr. 1, 439 Abs. 1 BGB).\n▸ Der Verkäufer kann die gewählte Art nur verweigern, wenn sie nur mit unverhältnismäßigen Kosten möglich ist (§ 439 Abs. 4 S. 1 BGB; unbeschadet § 275 Abs. 2, 3 BGB). Abzuwägen sind der Wert der Sache in mangelfreiem Zustand, die Bedeutung des Mangels und ob die andere Art ohne erhebliche Nachteile für den Käufer möglich ist (§ 439 Abs. 4 S. 2 BGB). Dann beschränkt sich der Anspruch auf die andere Art (§ 439 Abs. 4 S. 3 BGB).\n▸ Aufwendungen der Nacherfüllung trägt der Verkäufer (§ 439 Abs. 2 BGB). Bei Nachlieferung kann er die mangelhafte Sache nach §§ 346 bis 348 BGB zurückverlangen (§ 439 Abs. 6 S. 1 BGB).\n▸ Verbrauchsgüterkauf, Verträge ab 31.07.2026: Der Unternehmer muss vorher über das Wahlrecht informieren (§ 475 Abs. 4 BGB; Art. 229 § 72 EGBGB).\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -332,142 +199,72 @@
         "#439bgb",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Nacherfüllung: Der Käufer wählt",
-      "coverText": "Verkäufer hat nur ein Veto",
-      "coverBadge": "Klausurklassiker",
-      "coverRegie": {
-        "charaktere": [
-          "zylla",
-          "brakk"
-        ],
-        "kernidee": "Der Käufer entscheidet zwischen Reparatur und neuer Sache; der Verkäufer kann nur unter engen Voraussetzungen blockieren.",
-        "handlung": "{A} confidently points at a shiny new washing machine while {B}, holding a wrench beside the dented old one, raises a small stop sign with a hesitant, weighing expression.",
-        "hinweisRegie": "Set the note in the free space just above {B}'s raised stop sign, gently tilted toward it, so it reads as the seller's only limited veto without covering faces or hands.",
-        "alternative": "{A} stands at a fork between a repair workshop door and a delivery door, choosing freely, while {B} holds a small cost scale that can only close one door."
-      },
-      "bildSzene": "buyer chooses new machine, seller vetoes",
-      "bildSzeneAlt": "buyer at fork: repair or delivery",
       "quellen": [
-        "§ 439 BGB",
         "§ 437 Nr. 1 BGB",
+        "§ 439 Abs. 1, 2, 4, 6 BGB",
         "§§ 346–348 BGB",
-        "Themenpool: schuldbt-191"
+        "§ 275 Abs. 2, 3 BGB",
+        "§ 475 Abs. 4 BGB",
+        "Art. 229 § 72 EGBGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "verbreiteter-irrtum",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-09-b2",
+      "kurztitel": "Nacherfüllung: Der Käufer wählt",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T10:40:42.689Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Prüfungsfrage",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Prüfungsfrage",
+          "text": "Prüfungsfrage · Reparieren oder neu? · Der Käufer wählt · § 439 Abs. 1 BGB · Nicht der Verkäufer · + Gutachten-Baustein",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Schuldrecht BT",
+          "text": "Der Fall · K kauft bei V eine Waschmaschine. Schon bei Übergabe ist die Pumpe defekt. · K verlangt eine neue Maschine. V will nur reparieren. · Jetzt du: Wer setzt sich durch? · Ich will eine neue!"
+        },
+        {
+          "art": "text",
+          "titel": "Schuldrecht BT",
+          "text": "Der typische Fehler · Der Verkäufer bestimmt die Art der Nacherfüllung. · Der Käufer wählt: Beseitigung oder neue Sache. · § 439 Abs. 1 BGB · V kann nur bei unverhältnismäßigen Kosten verweigern. · § 439 Abs. 4 S. 1 BGB · Oh."
+        },
+        {
+          "art": "text",
+          "titel": "Schuldrecht BT",
+          "text": "Zwei Arten · Nachbesserung · Mangel beseitigen · K behält dieselbe Sache · Nachlieferung · mangelfreie Sache liefern · alte Sache zurück · § 439 Abs. 6 S. 1 BGB · Ich habe die Wahl!"
+        },
+        {
+          "art": "text",
+          "titel": "Schuldrecht BT",
+          "text": "Verweigerung prüfen · Wert der Sache ohne Mangel, Bedeutung des Mangels. · § 439 Abs. 4 S. 2 BGB · Andere Art ohne erhebliche Nachteile für K möglich? · Folge: Anspruch nur noch auf die andere Art. · § 439 Abs. 4 S. 3 BGB · Kosten zu hoch?"
+        },
+        {
+          "art": "text",
+          "titel": "Schuldrecht BT",
+          "text": "Lösung: K bekommt eine neue Maschine · Wahl des Käufers, § 439 Abs. 4 BGB nicht ersichtlich · Käufer wählt, · Verkäufer kann nur · verweigern nach Abs. 4. · Speichern fürs Examen · Wen hättest du wählen lassen? · Weiterwischen: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Schuldrecht BT",
+          "text": "So im Gutachten · Obersatz · §§ 437 Nr. 1, 439 Abs. 1 BGB · K könnte Lieferung einer neuen Maschine verlangen. · Norm · § 439 Abs. 1 BGB · Wahlrecht des Käufers · Subsumtion · § 439 Abs. 4 BGB · K wählt Nachlieferung; unverhältnismäßige Kosten nicht ersichtlich. · Ergebnis · Anspruch auf eine neue Maschine"
+        }
+      ]
     },
     "b3": {
       "format": "reel",
-      "layout": "erklaer",
       "fach": "strafbt",
       "klausur": 2,
       "fachLabel": "Strafrecht BT",
       "themaId": "strafbt-738",
-      "slug": "2026-10-09-b3",
-      "szenen": [
-        {
-          "art": "hook",
-          "nummer": null,
-          "titel": "Heimtücke heißt nicht „von hinten“",
-          "unter": "Mord · § 211 StGB",
-          "text": "Entscheidend ist die Arglosigkeit bei Beginn des Angriffs.",
-          "norm": "§ 211 Abs. 2 StGB",
-          "icon": "warnung",
-          "sprecher": "Heimtücke heißt nicht: von hinten. Auch ein Angriff von vorn kann heimtückisch sein. Es kommt darauf an, ob das Opfer bei Beginn des Angriffs arglos war.",
-          "marken": [
-            "nicht „von hinten“",
-            "arglos?"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 1,
-          "titel": "Arglos bei Beginn des Angriffs",
-          "text": "Das Opfer rechnet in diesem Moment nicht mit einem Angriff.",
-          "norm": "§ 211 StGB",
-          "sprecher": "Schritt eins: Arglosigkeit. Das Opfer versieht sich bei Beginn des ersten mit Tötungsvorsatz geführten Angriffs keines Angriffs. Genau dieser Zeitpunkt zählt.",
-          "marken": [
-            "Zeitpunkt: Angriffsbeginn"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 2,
-          "titel": "Wehrlos infolge der Arglosigkeit",
-          "text": "Weil es nichts ahnt, kann es sich nicht oder kaum wehren.",
-          "norm": "§ 211 StGB",
-          "sprecher": "Schritt zwei: Wehrlosigkeit. Gerade wegen seiner Arglosigkeit ist das Opfer in seiner Verteidigung aufgehoben oder stark eingeschränkt.",
-          "marken": [
-            "wehrlos, weil arglos"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 3,
-          "titel": "Bewusst ausgenutzt",
-          "text": "Der Täter erkennt die Lage und nutzt sie für die Tat.",
-          "norm": "§ 211 StGB",
-          "sprecher": "Schritt drei: Ausnutzungsbewusstsein. Der Täter erfasst Arg- und Wehrlosigkeit und nutzt sie bewusst aus. Die Rechtsprechung verlangt dazu eine feindselige Willensrichtung.",
-          "marken": [
-            "bewusst ausgenutzt"
-          ]
-        },
-        {
-          "art": "punkt",
-          "nummer": null,
-          "titel": "Schlafend ja – bewusstlos nein",
-          "text": "Schlafende nehmen ihre Arglosigkeit mit in den Schlaf; Bewusstlose können keinen Argwohn fassen.",
-          "norm": null,
-          "sprecher": "Der Klausurklassiker: Wer schläft, nimmt seine Arglosigkeit mit in den Schlaf. Wer bewusstlos ist, kann keinen Argwohn bilden. Dort scheidet Arglosigkeit aus.",
-          "marken": [
-            "Schlaf ≠ Bewusstlosigkeit"
-          ]
-        },
-        {
-          "art": "punkt",
-          "nummer": null,
-          "titel": "Die Einschränkung ist umstritten",
-          "text": "Teile der Lehre: verwerflicher Vertrauensbruch. BGH: Rechtsfolgenlösung.",
-          "norm": "§ 211 StGB · § 49 Abs. 1 StGB",
-          "sprecher": "Weil Mord lebenslang bedeutet, wird Heimtücke eingeschränkt. Teile der Lehre verlangen einen verwerflichen Vertrauensbruch. Der BGH mildert bei außergewöhnlichen Umständen über die Rechtsfolgenlösung.",
-          "marken": [
-            "Lehre vs. BGH"
-          ]
-        },
-        {
-          "art": "merke",
-          "nummer": null,
-          "titel": "Die Kurzform",
-          "text": "Arglos + dadurch wehrlos + bewusst ausgenutzt.",
-          "norm": "§ 211 StGB",
-          "sprecher": "Merke: arglos, dadurch wehrlos, und das bewusst ausgenutzt. Maßgeblich ist der Beginn des Angriffs, nicht die Richtung.",
-          "marken": [
-            "arglos · wehrlos · ausgenutzt"
-          ]
-        },
-        {
-          "art": "cta",
-          "nummer": null,
-          "titel": "Zuerst den Angriffsbeginn bestimmen",
-          "text": "Speichern für die nächste Mordprüfung.",
-          "norm": null,
-          "sprecher": "Speicher dir das für die nächste Mordprüfung. Und bestimme immer zuerst, wann genau der Angriff beginnt.",
-          "marken": [
-            "Angriffsbeginn zuerst"
-          ]
-        }
-      ],
-      "caption": "Heimtücke heißt nicht „von hinten“. Nach der Rechtsprechung handelt heimtückisch, wer die Arg- und Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt – bezogen auf den Beginn des ersten mit Tötungsvorsatz geführten Angriffs. Klausurklassiker: Schlafende sind arglos, Bewusstlose nicht. Und weil § 211 StGB zwingend lebenslang bedeutet, ist die Einschränkung umstritten: verwerflicher Vertrauensbruch (Teile der Lehre) oder Rechtsfolgenlösung (BGH).",
+      "caption": "Heimtücke heißt von hinten? Falsch – auch ein Angriff von vorn kann heimtückisch sein.\n\n▸ Heimtückisch handelt nach der Rechtsprechung, wer die Arg- und Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt (§ 211 Abs. 2 StGB). Maßgeblich ist der Beginn des ersten mit Tötungsvorsatz geführten Angriffs.\n▸ Wehrlos muss das Opfer gerade infolge seiner Arglosigkeit sein.\n▸ Klausurklassiker: Schlafende nehmen ihre Arglosigkeit mit in den Schlaf; Bewusstlose können keinen Argwohn fassen.\n▸ Wegen der absoluten lebenslangen Strafe wird das Merkmal eingeschränkt: Teile der Lehre verlangen einen verwerflichen Vertrauensbruch; der Bundesgerichtshof wendet bei außergewöhnlichen Umständen die Rechtsfolgenlösung an – Strafrahmen nach § 49 Abs. 1 Nr. 1 StGB (BGH GSSt, BGHSt 30, 105).\n\nSpeichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -480,217 +277,308 @@
         "#jurastudent",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Heimtücke heißt nicht „von hinten“",
-      "titelZeilen": [
-        "Heimtücke heißt",
-        "nicht „von hinten“"
-      ],
-      "coverText": "Arglos · wehrlos · ausgenutzt",
-      "coverBadge": "Reel",
-      "coverBildAuslassen": true,
-      "coverRegie": {
-        "charaktere": [
-          "mara",
-          "flux"
-        ],
-        "kernidee": "Heimtücke hängt nicht an der Angriffsrichtung, sondern an der Ahnungslosigkeit des Opfers im Moment des Angriffs.",
-        "handlung": "{B} uses his pointer to sweep aside a big 'from behind' direction arrow sign, while {A} calmly points to a peacefully unaware figure silhouette seen from the front, lit by a single spotlight.",
-        "hinweisRegie": "Place the note in the open area beside the spotlighted unaware silhouette, slightly tilted, relating it to the moment of the attack without covering faces or the pointer.",
-        "alternative": "{A} freezes a clock at the exact moment an attack begins, while {B} contrasts a sleeping figure in a hammock with an unconscious figure behind a thin veil."
-      },
-      "bildSzene": "professor dismisses from-behind arrow sign",
-      "bildSzeneAlt": "clock frozen at start of attack",
       "quellen": [
-        "§ 211 StGB",
-        "§ 49 Abs. 1 StGB",
-        "BGHSt 30, 105 (Rechtsfolgenlösung)",
-        "Themenpool: strafbt-738"
+        "§ 211 Abs. 2 StGB",
+        "§ 49 Abs. 1 Nr. 1 StGB",
+        "BGHSt 30, 105"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "verbreiteter-irrtum",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-09-b3",
+      "kurztitel": "Heimtücke heißt nicht „von hinten“",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T10:40:42.689Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "bild": "op-cover",
+      "reelTyp": "klausurfalle",
+      "hookStil": "kippen",
+      "coverBadge": "Reel",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Heimtücke? Also von hinten."
+        },
+        {
+          "art": "schritt",
+          "titel": "Arglos bei Angriffsbeginn"
+        },
+        {
+          "art": "schritt",
+          "titel": "Bewusst ausgenutzt"
+        },
+        {
+          "art": "schritt",
+          "titel": "Rechtsfolgenlösung"
+        }
+      ],
+      "sprecher": [
+        "Heimtücke heißt von hinten? Falsch. Auch ein Angriff von vorn kann heimtückisch sein.",
+        "Entscheidend: Das Opfer ist bei Beginn des Angriffs arglos und deshalb wehrlos.",
+        "Der Täter nutzt das bewusst aus. Wer schläft, nimmt seine Arglosigkeit mit in den Schlaf.",
+        "Ausnahmen löst der Bundesgerichtshof über die Rechtsfolgenlösung.",
+        "Merke: arglos, wehrlos, bewusst ausgenutzt."
+      ],
+      "dauerS": 28.301,
+      "tempo": 1.0
     },
     "s4": {
       "slot": "s4",
       "art": "frage",
-      "fach": "staat",
+      "fach": null,
       "klausur": 3,
-      "pairId": "staat-632",
-      "ueberzeile": "Prüfungsfrage Staatsrecht",
-      "titel": "Verfassungsbeschwerde: Was brauchst du für die Beschwerdebefugnis?",
       "fachLabel": "Staatsrecht",
-      "quellen": [
-        "Art. 93 Abs. 1 Nr. 4a GG",
-        "§ 90 Abs. 1 BVerfGG",
-        "Themenpool: staat-632"
+      "themaId": "staat-632",
+      "beitragSlot": null,
+      "quellen": null,
+      "frage": [
+        "Beschwerdebefugnis:",
+        "Was brauchst du?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T10:40:42.689Z",
-      "fachStand": "redaktionell-2026-09-25",
       "optionen": [
-        "Allein die objektive Verfassungswidrigkeit des Akts",
-        "Möglichkeit eigener Grundrechtsverletzung; selbst, gegenwärtig, unmittelbar",
-        "Die Erschöpfung des Rechtswegs"
+        "Objektive Verfassungswidrigkeit",
+        "Mögliche eigene Verletzung, selbst, gegenwärtig, unmittelbar",
+        "Erschöpften Rechtsweg"
       ],
-      "richtig": 1
+      "pairId": "staat-632",
+      "sichtbareTexte": [
+        "Staatsrecht",
+        "Prüfungsfrage",
+        "Beschwerdebefugnis:",
+        "Was brauchst du?",
+        "Objektive Verfassungswidrigkeit",
+        "Mögliche eigene Verletzung, selbst, gegenwärtig, unmittelbar",
+        "Erschöpften Rechtsweg",
+        "Auflösung in der nächsten Story"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s5": {
       "slot": "s5",
       "art": "antwort",
-      "fach": "staat",
+      "fach": null,
       "klausur": 3,
-      "pairId": "staat-632",
-      "ueberzeile": "Auflösung",
-      "titel": "Möglichkeit plus selbst, gegenwärtig, unmittelbar",
-      "text": "Der Beschwerdeführer muss substantiiert die Möglichkeit darlegen, in einem eigenen Grundrecht oder grundrechtsgleichen Recht verletzt zu sein. Dazu kommt die Betroffenheit: selbst, gegenwärtig und unmittelbar. Knackpunkt bei Gesetzen ist die Unmittelbarkeit – braucht es noch einen Vollzugsakt, fehlt sie regelmäßig.",
-      "norm": "Art. 93 Abs. 1 Nr. 4a GG · § 90 Abs. 1 BVerfGG",
       "fachLabel": "Staatsrecht",
-      "quellen": [
-        "Art. 93 Abs. 1 Nr. 4a GG",
-        "§ 90 Abs. 1 BVerfGG",
-        "Themenpool: staat-632"
+      "themaId": "staat-632",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Mögliche eigene",
+        "Verletzung"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T10:40:42.689Z",
-      "fachStand": "redaktionell-2026-09-25",
       "optionen": [
-        "Allein die objektive Verfassungswidrigkeit des Akts",
-        "Möglichkeit eigener Grundrechtsverletzung; selbst, gegenwärtig, unmittelbar",
-        "Die Erschöpfung des Rechtswegs"
+        "Objektive Verfassungswidrigkeit",
+        "Mögliche eigene Verletzung, selbst, gegenwärtig, unmittelbar",
+        "Erschöpften Rechtsweg"
       ],
-      "richtig": 1
+      "richtig": 1,
+      "text": "Bei Gesetzen fehlt die Unmittelbarkeit meist, wenn noch ein Vollzugsakt nötig ist.",
+      "norm": "Art. 94 Abs. 1 Nr. 4a GG, § 90 Abs. 1 BVerfGG",
+      "pairId": "staat-632",
+      "sichtbareTexte": [
+        "Staatsrecht",
+        "Auflösung",
+        "Mögliche eigene",
+        "Verletzung",
+        "Objektive Verfassungswidrigkeit",
+        "Mögliche eigene Verletzung, selbst, gegenwärtig, unmittelbar",
+        "Erschöpften Rechtsweg",
+        "Bei Gesetzen fehlt die Unmittelbarkeit meist, wenn noch ein Vollzugsakt nötig ist.",
+        "Art. 94 Abs. 1 Nr. 4a GG, § 90 Abs. 1 BVerfGG"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s6": {
       "slot": "s6",
       "art": "norm",
-      "fach": "delikt",
+      "fach": null,
       "klausur": 1,
-      "pairId": "delikt-249",
-      "ueberzeile": "Norm des Tages",
-      "titel": "Auto in der Werkstatt: Wann gibt es Nutzungsausfall?",
-      "text": "Der Entzug der Nutzungsmöglichkeit ist ein ersatzfähiger Vermögensschaden, wenn es um ein Gut geht, auf dessen ständige Verfügbarkeit die eigenwirtschaftliche Lebensführung typischerweise angewiesen ist – etwa das privat genutzte Kfz. Zusätzlich braucht es Nutzungswillen und hypothetische Nutzungsmöglichkeit.",
-      "norm": "§ 249 BGB",
       "fachLabel": "Deliktsrecht",
-      "quellen": [
-        "§ 249 BGB",
-        "BGH GSZ, Nutzungsausfall",
-        "Themenpool: delikt-249"
+      "themaId": "delikt-249",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Auto in der Werkstatt:",
+        "Nutzungsausfall?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T10:40:42.689Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "norm": "§ 249 BGB",
+      "punkte": [
+        [
+          "Kfz: Lebensführung ist auf ständige Verfügbarkeit angewiesen.",
+          "ok",
+          "BGHZ 98, 212"
+        ],
+        [
+          "Dazu: Nutzungswille und Nutzungsmöglichkeit.",
+          "warn",
+          null
+        ]
+      ],
+      "sichtbareTexte": [
+        "Deliktsrecht",
+        "Norm des Tages",
+        "Auto in der Werkstatt:",
+        "Nutzungsausfall?",
+        "§ 249 BGB",
+        "Kfz: Lebensführung ist auf ständige Verfügbarkeit angewiesen.",
+        "BGHZ 98, 212",
+        "Dazu: Nutzungswille und Nutzungsmöglichkeit."
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s7": {
       "slot": "s7",
       "art": "merksatz",
-      "fach": "schuldbt",
+      "fach": null,
       "klausur": 1,
-      "pairId": "schuldbt-473",
-      "ueberzeile": "Neu seit 31.07.2026",
-      "titel": "Verbrauchsgüterkauf: Nachbesserung und Verjährungsverlängerung",
-      "text": "Vor der Nacherfüllung muss der Unternehmer über das Wahlrecht und die Verjährungsfolge einer Nachbesserung informieren – und zügig, ohne erhebliche Unannehmlichkeiten nacherfüllen.",
-      "norm": "§ 475 Abs. 4–6 BGB · § 475e Abs. 5 BGB · Art. 229 § 72 EGBGB",
       "fachLabel": "Schuldrecht BT",
-      "quellen": [
-        "§ 475 Abs. 4-6 BGB",
-        "§ 475e Abs. 5 BGB",
-        "Art. 229 § 72 EGBGB",
-        "Themenpool: schuldbt-473"
+      "themaId": "schuldbt-473",
+      "beitragSlot": null,
+      "quellen": null,
+      "ueberzeile": "Neu für Käufe ab 31.07.2026",
+      "titel": [
+        "Verbrauchsgüterkauf:",
+        "erst informieren"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T10:40:42.689Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "zeilen": [
+        [
+          [
+            "Wahlrecht",
+            "a"
+          ],
+          [
+            " nennen,",
+            null
+          ]
+        ],
+        [
+          [
+            "Nachbesserung",
+            "b"
+          ],
+          [
+            " verlängert",
+            null
+          ]
+        ],
+        [
+          [
+            "die Verjährung",
+            "c"
+          ]
+        ],
+        [
+          [
+            "um zwölf Monate",
+            "d"
+          ],
+          [
+            ".",
+            null
+          ]
+        ]
+      ],
+      "norm": "§§ 475 Abs. 4, 475e Abs. 5 BGB",
+      "sichtbareTexte": [
+        "Schuldrecht BT",
+        "Neu für Käufe ab 31.07.2026",
+        "Verbrauchsgüterkauf:",
+        "erst informieren",
+        "Wahlrecht nennen,",
+        "Nachbesserung verlängert",
+        "die Verjährung",
+        "um zwölf Monate.",
+        "§§ 475 Abs. 4, 475e Abs. 5 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s8": {
       "slot": "s8",
       "art": "begriff",
-      "fach": "schuldbt",
+      "fach": null,
       "klausur": 1,
-      "pairId": "schuldbt-476",
-      "ueberzeile": "Begriff des Tages",
-      "titel": "Digitale Produkte: Auch Daten können der Preis sein",
-      "text": "Die §§ 327 ff. BGB erfassen Verbraucherverträge über digitale Inhalte (etwa App oder E-Book) und digitale Dienstleistungen (etwa Cloud oder Streaming). Sie gelten auch, wenn der Verbraucher statt Geld personenbezogene Daten bereitstellt (§ 327 Abs. 3 BGB) – mit eigenem Mängelrecht und Aktualisierungspflicht.",
-      "norm": "§§ 327 ff. BGB",
       "fachLabel": "Schuldrecht BT",
-      "quellen": [
-        "§ 327 BGB",
-        "§ 327f BGB",
-        "Themenpool: schuldbt-476"
+      "themaId": "schuldbt-476",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Digitale Produkte:",
+        "Daten als Preis"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T10:40:42.689Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "text": "Verbraucherverträge über digitale Inhalte oder Dienstleistungen, auch wenn der Verbraucher personenbezogene Daten bereitstellt.",
+      "norm": "§ 327 Abs. 1, 3 BGB",
+      "sichtbareTexte": [
+        "Schuldrecht BT",
+        "Begriff des Tages",
+        "Digitale Produkte:",
+        "Daten als Preis",
+        "Definition",
+        "Verbraucherverträge über digitale Inhalte oder Dienstleistungen, auch wenn der Verbraucher personenbezogene Daten bereitstellt.",
+        "§ 327 Abs. 1, 3 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s9": {
       "slot": "s9",
       "art": "fehler",
-      "fach": "zpo",
+      "fach": null,
       "klausur": 1,
-      "pairId": "zpo-917",
-      "ueberzeile": "Typischer Fehler",
-      "titel": "Falsche Partei verklagt: Rubrum berichtigen oder Parteiwechsel?",
-      "falsch": "Die falsche Person wurde verklagt – also wird einfach das Rubrum berichtigt.",
-      "richtigText": "Berichtigt wird nur, wenn die gemeinte Partei feststand und bloß falsch bezeichnet war. Soll eine andere Person Partei werden, ist das ein Parteiwechsel: Die Rechtsprechung behandelt ihn wie eine Klageänderung (§§ 263 ff. ZPO) – Einwilligung oder Sachdienlichkeit; nach Beginn der mündlichen Verhandlung muss der alte Beklagte zustimmen (§ 269 Abs. 1 ZPO analog).",
       "fachLabel": "Zivilprozessrecht",
-      "quellen": [
-        "§ 263 ZPO",
-        "§ 269 ZPO",
-        "Themenpool: zpo-917"
+      "themaId": "zpo-917",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Falsche Partei:",
+        "Rubrum berichtigen?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T10:40:42.689Z",
-      "fachStand": "redaktionell-2026-09-25"
+      "falsch": "Falsche Person verklagt: einfach das Rubrum berichtigen.",
+      "richtig": "Nur bei Falschbezeichnung. Sonst Parteiwechsel: ab Verhandlungsbeginn Zustimmung des alten Beklagten.",
+      "norm": "§ 269 Abs. 1 ZPO analog",
+      "sichtbareTexte": [
+        "Zivilprozessrecht",
+        "Typischer Fehler",
+        "Falsche Partei:",
+        "Rubrum berichtigen?",
+        "Falsch",
+        "Falsche Person verklagt: einfach das Rubrum berichtigen.",
+        "Richtig",
+        "Nur bei Falschbezeichnung. Sonst Parteiwechsel: ab Verhandlungsbeginn Zustimmung des alten Beklagten.",
+        "§ 269 Abs. 1 ZPO analog"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s1": {
       "slot": "s1",
@@ -698,16 +586,25 @@
       "fach": "verwalt",
       "klausur": 3,
       "fachLabel": "Verwaltungsrecht AT",
-      "titel": "Bekanntgabe: Tag 4 nach Aufgabe zur Post",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b1",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Früher im Briefkasten?"
+      ],
+      "unter": "Mini-Fall + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Verwaltungsrecht AT",
+        "Neu im Feed",
+        "Früher im Briefkasten?",
+        "Mini-Fall + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s2": {
       "slot": "s2",
@@ -715,16 +612,25 @@
       "fach": "schuldbt",
       "klausur": 1,
       "fachLabel": "Schuldrecht BT",
-      "titel": "Nacherfüllung: Der Käufer wählt",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b2",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Reparieren oder neu?"
+      ],
+      "unter": "Prüfungsfrage + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Schuldrecht BT",
+        "Neu im Feed",
+        "Reparieren oder neu?",
+        "Prüfungsfrage + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s3": {
       "slot": "s3",
@@ -732,16 +638,25 @@
       "fach": "strafbt",
       "klausur": 2,
       "fachLabel": "Strafrecht BT",
-      "titel": "Heimtücke heißt nicht „von hinten“",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b3",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Heimtücke = von hinten? Falsch"
+      ],
+      "unter": "Neues Reel · im Profil",
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Neu im Feed",
+        "Heimtücke = von hinten? Falsch",
+        "Neues Reel · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     }
   },
   "hookOptimierung": {
@@ -768,26 +683,27 @@
   },
   "renderVorschau": {
     "status": "fertig",
-    "erzeugtAm": "2026-09-25T10:46:39.646Z",
+    "erzeugtAm": "2026-10-04T23:46:22Z",
     "pfad": "vorproduktion/2026-10-09/fertig",
     "providerKostenUsd": 0,
-    "textProviderKostenUsd": 0,
-    "faktencheckProviderKostenUsd": 0,
-    "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "reelStimme": "piper-offline",
-    "freigabeBetreiber": false,
-    "quizPatch": {
-      "stand": "2026-09-25T11:28:47.521Z",
-      "slots": [
-        "s4",
-        "s5"
-      ],
-      "providerKostenUsd": 0
-    }
+    "coverIcons": false,
+    "renderer": "open-peeps-v4",
+    "layoutQuelle": "open-peeps-variante-c",
+    "reelStimme": "elevenlabs-laura",
+    "sfx": "freesound-cc0",
+    "freigabeBetreiber": true,
+    "liveVorrangAktiv": true,
+    "normalbetriebGesperrt": true,
+    "wartetLive": []
   },
   "liveRegel": {
     "veroeffentlichen": false,
     "freigabeErforderlich": true
-  }
+  },
+  "layoutQuelle": "open-peeps-variante-c",
+  "semantikQuelle": "herrjurist",
+  "liveVorrangAktiv": true,
+  "normalbetriebGesperrt": true,
+  "bildStatus": "open-peeps-render"
 }
