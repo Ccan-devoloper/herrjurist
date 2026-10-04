@@ -376,7 +376,8 @@ folie([("bew", f"{PO}: Beweisfunktion"), ("absicht", f"{PO}: Absichts- und Zufal
 folie([("gar", f"{PO}: Garantiefunktion"), ("bz", f"{PO}: Beweiszeichen"), ("urk", "I. Tatbestand › 1. objektiv › a) Urkunde (+)")],
       rechts_frei([
     *tafel("gar", "3. Garantiefunktion"),
-    *leiste(170, "gar", 2),
+    *leiste(170, "gar", 2, bis="urk"),
+    *leiste(170, "urk", 3),
     z("Die Urkunde lässt ihren Aussteller erkennen:", 110, 262, beim("gar", "Die"), "Bold", 32),
     z("den, der für die Erklärung einsteht", 110, 305, beim("gar", "also"), "Bold", 32),
     *zeile_ok("Unterschrift zeigt die Mutter als Ausstellerin", 110, 375, "gar2", size=32),
@@ -421,7 +422,7 @@ folie([("tat", PT), ("unecht", f"{PT}: unecht = Täuschung über den Aussteller"
 ]))
 
 # H Abgrenzung: schriftliche Lüge ---------------------------------------------------------------------------------------
-folie([("luege", "Abgrenzung › Inhalt falsch, Urkunde trotzdem unecht?"), ("luege2", "Abgrenzung › echte, inhaltlich unwahre Urkunde"),
+folie([("luege", "Abgrenzung › Inhalt falsch: deshalb nicht unecht"), ("luege2", "Abgrenzung › echte, inhaltlich unwahre Urkunde"),
        ("luege3", "Abgrenzung › schriftliche Lüge: § 267 (−)")], rechts_frei([
     *tafel("luege", "Klausurpunkt: schriftliche Lüge", fill=HELL),
     z("Dass der Zettel lügt, macht ihn nicht unecht.", 110, 180, beim("luege", "Dass"), "ExtraBold", 34),
@@ -434,7 +435,7 @@ folie([("luege", "Abgrenzung › Inhalt falsch, Urkunde trotzdem unecht?"), ("lu
     fund("BGH, Beschl. v. 14.3.2024 – 2 StR 192/23, Rn. 29, 35", 150, 595, beim("luege3", "erfasst")),
     fb(110, 660, 1040, 140, GELB, "luege4", [("Echtheit der Urkunde,", "ExtraBold", 36, INK),
                                             ("nicht Wahrheit ihres Inhalts", "ExtraBold", 36, INK)]),
-    *st("MU", X1, [("ruhig", "luege"), ("froh", "luege2"), ("ernst", "luege3")]),
+    *st("MU", X1, [("ruhig", "luege"), ("denkt", "luege2"), ("ernst", "luege3")]),
     *st("FE", X2, [("ruhig", "luege"), ("still", "luege2"), ("denkt", "luege4")], d=0.2),
     *wechsel([("Lüge = unecht?", "luege", GELB), ("echt, aber unwahr", "luege2", WEISS), ("§ 267 (−)", "luege3", ROTHELL),
               ("Echtheit", "luege4", GELB)], MB, 160),

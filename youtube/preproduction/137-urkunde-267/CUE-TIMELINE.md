@@ -57,7 +57,7 @@ Quelle: `bildhalt_manifest.json` (140 Bildhalte, davon 140 eigenständig), `cues
 | 51 | 2:26.74 | 2:30.26 | Carla (Erzählerin/Lexi) | Hier zeigt die Unterschrift die Mutter als Ausstellerin. | I. Tatbestand › 1. objektiv › a) Urkunde: Garantiefunktion | `f1455deffdd7` |
 | 52 | 2:30.26 | 2:33.86 | Carla (Erzählerin/Lexi) | Übrigens kann auch ein bloßes Zeichen eine Urkunde sein, ein | I. Tatbestand › 1. objektiv › a) Urkunde: Beweiszeichen | `42affefb51b0` |
 | 53 | 2:33.86 | 2:40.79 | Carla (Erzählerin/Lexi) | sogenanntes Beweiszeichen. So bildet die Fahrzeugidentifikationsnummer mit dem Auto eine Urkunde. | I. Tatbestand › 1. objektiv › a) Urkunde: Beweiszeichen | `ad89e460c077` |
-| 54 | 2:40.79 | 2:44.26 | Carla (Erzählerin/Lexi) | Urkunde. Die Entschuldigung ist also eine Urkunde. | I. Tatbestand › 1. objektiv › a) Urkunde (+) | `ca544dbd4290` |
+| 54 | 2:40.79 | 2:44.26 | Carla (Erzählerin/Lexi) | Urkunde. Die Entschuldigung ist also eine Urkunde. | I. Tatbestand › 1. objektiv › a) Urkunde (+) | `c3d97768a0df` |
 | 55 | 2:44.61 | 2:48.22 | Carla (Erzählerin/Lexi) | Jetzt die Tathandlung. Das Gesetz nennt drei: | I. Tatbestand › 1. objektiv › b) Tathandlung | `acfdcf18e80c` |
 | 56 | 2:48.22 | 2:50.78 | Carla (Erzählerin/Lexi) | Herstellen einer unechten Urkunde, | I. Tatbestand › 1. objektiv › b) Tathandlung | `dc8b47a43a7f` |
 | 57 | 2:50.78 | 2:52.54 | Carla (Erzählerin/Lexi) | Verfälschen einer echten | I. Tatbestand › 1. objektiv › b) Tathandlung | `10d6b379a756` |
@@ -71,12 +71,12 @@ Quelle: `bildhalt_manifest.json` (140 Bildhalte, davon 140 eigenständig), `cues
 | 65 | 3:13.93 | 3:17.14 | Carla (Erzählerin/Lexi) | Die Mutter will sich diesen Zettel nicht zurechnen lassen. | I. Tatbestand › 1. objektiv › b) Tathandlung: Geistigkeitstheorie | `0a6b2721e844` |
 | 66 | 3:17.14 | 3:19.26 | Carla (Erzählerin/Lexi) | Er stammt geistig von Femke. | I. Tatbestand › 1. objektiv › b) Tathandlung: Geistigkeitstheorie | `1b64e91b620d` |
 | 67 | 3:19.26 | 3:24.14 | Carla (Erzählerin/Lexi) | Die Urkunde ist unecht, und Femke hat sie hergestellt. | I. Tatbestand › 1. objektiv › b) Tathandlung: Herstellen einer unechten Urkunde (+) | `920e91bfcb47` |
-| 68 | 3:24.49 | 3:26.94 | Carla (Erzählerin/Lexi) | Achtung, zentraler Klausurpunkt: | Abgrenzung › Inhalt falsch, Urkunde trotzdem unecht? | `72a264299613` |
-| 69 | 3:26.94 | 3:30.18 | Carla (Erzählerin/Lexi) | Dass der Zettel lügt, macht ihn nicht unecht. | Abgrenzung › Inhalt falsch, Urkunde trotzdem unecht? | `9d281e2447ba` |
-| 70 | 3:30.18 | 3:31.91 | Carla (Erzählerin/Lexi) | Femke war nicht krank. | Abgrenzung › Inhalt falsch, Urkunde trotzdem unecht? | `39a1514200b2` |
-| 71 | 3:31.91 | 3:34.83 | Carla (Erzählerin/Lexi) | krank. Hätte die Mutter selbst die falsche Entschuldigung geschrieben, | Abgrenzung › echte, inhaltlich unwahre Urkunde | `1ffda39869f4` |
-| 72 | 3:34.83 | 3:36.43 | Carla (Erzählerin/Lexi) | wäre die Urkunde echt, | Abgrenzung › echte, inhaltlich unwahre Urkunde | `997fbde01564` |
-| 73 | 3:36.43 | 3:38.34 | Carla (Erzählerin/Lexi) | nur inhaltlich unwahr. | Abgrenzung › echte, inhaltlich unwahre Urkunde | `fe6ccbd38bdb` |
+| 68 | 3:24.49 | 3:26.94 | Carla (Erzählerin/Lexi) | Achtung, zentraler Klausurpunkt: | Abgrenzung › Inhalt falsch: deshalb nicht unecht | `0a560886d179` |
+| 69 | 3:26.94 | 3:30.18 | Carla (Erzählerin/Lexi) | Dass der Zettel lügt, macht ihn nicht unecht. | Abgrenzung › Inhalt falsch: deshalb nicht unecht | `6457c3d61c4d` |
+| 70 | 3:30.18 | 3:31.91 | Carla (Erzählerin/Lexi) | Femke war nicht krank. | Abgrenzung › Inhalt falsch: deshalb nicht unecht | `075ce63a9d5b` |
+| 71 | 3:31.91 | 3:34.83 | Carla (Erzählerin/Lexi) | krank. Hätte die Mutter selbst die falsche Entschuldigung geschrieben, | Abgrenzung › echte, inhaltlich unwahre Urkunde | `562b9760d07b` |
+| 72 | 3:34.83 | 3:36.43 | Carla (Erzählerin/Lexi) | wäre die Urkunde echt, | Abgrenzung › echte, inhaltlich unwahre Urkunde | `66ad0f4274b0` |
+| 73 | 3:36.43 | 3:38.34 | Carla (Erzählerin/Lexi) | nur inhaltlich unwahr. | Abgrenzung › echte, inhaltlich unwahre Urkunde | `25b90186c2b0` |
 | 74 | 3:38.34 | 3:39.74 | Carla (Erzählerin/Lexi) | Diese schriftliche Lüge | Abgrenzung › schriftliche Lüge: § 267 (−) | `5794b4f3df53` |
 | 75 | 3:39.74 | 3:43.06 | Carla (Erzählerin/Lexi) | erfasst Paragraf zweihundertsiebenundsechzig nicht. | Abgrenzung › schriftliche Lüge: § 267 (−) | `c7f1409a838b` |
 | 76 | 3:43.06 | 3:48.50 | Carla (Erzählerin/Lexi) | Es geht um die Echtheit der Urkunde, nicht um die Wahrheit ihres Inhalts. | Abgrenzung › schriftliche Lüge: § 267 (−) | `995199898481` |
