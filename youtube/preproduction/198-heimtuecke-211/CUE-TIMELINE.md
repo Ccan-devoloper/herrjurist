@@ -1,6 +1,6 @@
 # Folge 198 · Heimtücke § 211: Arglosigkeit, Wehrlosigkeit & Schlafende · Cue-Timeline (Ton-Bild-Gate)
 
-Quelle: `bildhalt_manifest.json` (115 Bildhalte, davon 115 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
+Quelle: `bildhalt_manifest.json` (116 Bildhalte, davon 116 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
 
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
@@ -109,13 +109,14 @@ Quelle: `bildhalt_manifest.json` (115 Bildhalte, davon 115 eigenständig), `cues
 | 103 | 5:40.44 | 5:43.24 | Carla (Erzählerin/Lexi) | Der Bundesgerichtshof verlangt das nicht. | Einschränkung der Heimtücke? › BGH: nicht erforderlich | `b073ed3045ec` |
 | 104 | 5:43.24 | 5:48.08 | Carla (Erzählerin/Lexi) | Wer der Lehre folgt, kann hier gut vertreten: Heribert hat das Vertrauen in die | Einschränkung der Heimtücke? › hier: Vertrauen missbraucht | `4f0e46fcba74` |
 | 105 | 5:48.08 | 5:52.18 | Carla (Erzählerin/Lexi) | Versöhnung gezielt geweckt und dann missbraucht. | Einschränkung der Heimtücke? › hier: Vertrauen missbraucht | `f855daa03947` |
-| 106 | 5:52.38 | 5:56.90 | Carla (Erzählerin/Lexi) | Klausurtipp: Prüfe die Arglosigkeit immer bei Beginn des ersten mit | Klausurtipp · Arglosigkeit: der richtige Zeitpunkt | `79829339f47a` |
-| 107 | 5:56.90 | 5:59.26 | Carla (Erzählerin/Lexi) | Tötungsvorsatz geführten Angriffs. | Klausurtipp · Arglosigkeit: der richtige Zeitpunkt | `df3250d7180d` |
-| 108 | 5:59.26 | 6:08.30 | Carla (Erzählerin/Lexi) | Ein Streit davor schließt sie nicht automatisch aus. Frag: Rechnete das Opfer genau in diesem Moment mit ei … | Klausurtipp › Streit davor | `6caaa5712853` |
-| 109 | 6:08.30 | 6:14.92 | Carla (Erzählerin/Lexi) | Und diskutiere Einschränkungen der Heimtücke erst, wenn du die Merkmale sauber festgestellt hast. | Klausurtipp › Einschränkungen erst danach | `45cfd3075cdc` |
-| 110 | 6:15.12 | 6:17.64 | Carla (Erzählerin/Lexi) | Merke: Heimtückisch handelt, wer die | Merksatz | `3588f12d0ad4` |
-| 111 | 6:17.64 | 6:22.00 | Carla (Erzählerin/Lexi) | Arg- und Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt. | Merksatz | `fb636e8fecae` |
-| 112 | 6:22.00 | 6:23.08 | Carla (Erzählerin/Lexi) | Maßgeblich ist der | Merksatz | `47dcb5433259` |
-| 113 | 6:23.08 | 6:24.75 | Carla (Erzählerin/Lexi) | Beginn des Angriffs: | Merksatz | `a218472f02b0` |
-| 114 | 6:24.92 | 6:28.12 | Carla (Erzählerin/Lexi) | Schlafende bleibt arglos. Wer mit einem Angriff | Merksatz | `187d31f9c810` |
-| 115 | 6:28.12 | 6:31.08 | Carla (Erzählerin/Lexi) | rechnet, ist es nicht. | Merksatz | `a4491ba08599` |
+| 106 | 5:52.38 | 5:53.54 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Arglosigkeit: der richtige Zeitpunkt | `1baa1ae38806` |
+| 107 | 5:53.54 | 5:58.30 | Carla (Erzählerin/Lexi) | Prüfe immer, ob das Opfer arglos war, und zwar bei Beginn des ersten mit | Klausurtipp · Arglosigkeit: der richtige Zeitpunkt | `bee39577d2ce` |
+| 108 | 5:58.30 | 6:00.73 | Carla (Erzählerin/Lexi) | Tötungsvorsatz geführten Angriffs. | Klausurtipp · Arglosigkeit: der richtige Zeitpunkt | `dd912dbf2755` |
+| 109 | 6:00.73 | 6:09.74 | Carla (Erzählerin/Lexi) | Ein Streit davor schließt sie nicht automatisch aus. Frag: Rechnete das Opfer genau in diesem Moment mit ei … | Klausurtipp › Streit davor | `73a8464bcfea` |
+| 110 | 6:09.74 | 6:16.52 | Carla (Erzählerin/Lexi) | Und diskutiere Einschränkungen der Heimtücke erst, wenn du die Merkmale sauber festgestellt hast. | Klausurtipp › Einschränkungen erst danach | `e5ef93bb53df` |
+| 111 | 6:16.72 | 6:19.24 | Carla (Erzählerin/Lexi) | Merke: Heimtückisch handelt, wer die | Merksatz | `3588f12d0ad4` |
+| 112 | 6:19.24 | 6:23.60 | Carla (Erzählerin/Lexi) | Arg- und Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt. | Merksatz | `fb636e8fecae` |
+| 113 | 6:23.60 | 6:24.68 | Carla (Erzählerin/Lexi) | Maßgeblich ist der | Merksatz | `47dcb5433259` |
+| 114 | 6:24.68 | 6:26.35 | Carla (Erzählerin/Lexi) | Beginn des Angriffs: | Merksatz | `a218472f02b0` |
+| 115 | 6:26.52 | 6:29.72 | Carla (Erzählerin/Lexi) | Schlafende bleibt arglos. Wer mit einem Angriff | Merksatz | `187d31f9c810` |
+| 116 | 6:29.72 | 6:32.68 | Carla (Erzählerin/Lexi) | rechnet, ist es nicht. | Merksatz | `a4491ba08599` |
