@@ -252,7 +252,7 @@ folie([(NULL, "Fall · Hedwig und Wilfried"), ("bitte", "Fall · Die Bitte"), ("
     pl("seit Monaten", MX, 720, beim("bitte", "Seit"), fill=WEISS, size=28, anker="m", bis="tat"),
     pl("bittet ihn ausdrücklich um Hilfe beim Sterben", 960, 120, beim("bitte", "ausdrücklich"), fill=WEISS, size=30,
        anker="m", bis="h1"),
-    pl("lange und klar überlegt", 960, 195, "klar", fill=GELB, size=30, anker="m", bis="h1"),
+    pl("lange und klar überlegt", 1150, 200, "klar", fill=GELB, size=30, anker="m", bis="h1"),
     blase("sprech", 640, 220, "h1", 1050, 190, inhalt=["Ich habe es mir gut überlegt.", "Bitte hilf mir."], textsize=34,
           figur=HEa, bis="tat"),
     ficon("tabler", "key", WFX + 170, 330, 90, TAT, fuell=GELB),
@@ -332,9 +332,8 @@ folie([("aus", f"{P1} › Selbsttötung straflos"), ("p212", f"{P1} › Tötung 
     zit("vgl. Folge 094 (Sirius-Fall)", 110, 370, beim("teiln", "Folge")),
     z("Tötung eines anderen: § 212 StGB", 110, 460, "p212", "Bold", 36),
     z("strafbar, auch wenn das Opfer es will", 110, 515, beim("p212", "auch"), size=34),
-    z("Freiheitsstrafe nicht unter 5 Jahren, § 212 Abs. 1", 110, 585, beim("p212", "strafbar"), size=32, farbe=TEXT),
     *wilfried("aus", [("aus", "ernst"), ("p212", "still")]),
-    *requisit([("aus", None, "Selbsttötung: straflos", WEISS), ("teiln", None, "vgl. Folge 094", GELB),
+    *requisit([(beim("aus", "Wer"), None, "Selbsttötung: straflos", WEISS), ("teiln", None, "vgl. Folge 094", GELB),
                ("p212", None, "§ 212 StGB", WEISS)], x=FX),
 ]))
 
@@ -376,7 +375,7 @@ folie([("krit", f"{P2} › Wer beherrscht den letzten Akt?"), ("f119", f"{P2} �
                                                    ("er tötet sich selbst, mit fremder Hilfe", "ExtraBold", 31, INK)]),
     zit("BGHSt 63, 161 Rn. 18; BGH 6 StR 68/21 Rn. 14 (st. Rspr.)", 110, 785, beim("selbst", "Hilfe")),
     *wilfried("krit", [("krit", "ernst"), ("hand", "still")]),
-    *requisit([("krit", None, "zuletzt beherrscht?", WEISS), ("letzt", ("tabler", "key", 100, GELB), "letzter Akt", GELB),
+    *requisit([(beim("krit", "zuletzt"), None, "zuletzt beherrscht?", WEISS), ("letzt", ("tabler", "key", 100, GELB), "letzter Akt", GELB),
                ("f119", ("tabler", "key", 100, GELB), "Tatherrschaft", WEISS),
                ("hand", ("tabler", "key", 100, GELB), "beim anderen", ROTHELL),
                ("selbst", ("tabler", "key", 100, GELB), "beim Sterbewilligen", GRUENHELL)], x=FX),
@@ -427,7 +426,7 @@ folie([("neu", f"{P3} › BGH, 6 StR 68/21 (2022)"), ("norm", f"{P3} › normati
     blk(110, 710, 1040, 80, GRUENHELL, "frei", [("straflose Suizidhilfe: Freispruch", "ExtraBold", 32, INK)]),
     zit("6 StR 68/21 Rn. 13, 15–17", 110, 805, beim("frei", "B.G.H")),
     ficon("fluent-emoji-flat", "classical-building", GX, 560, 260, "neu"),
-    pl("Bundesgerichtshof", GX, 610, "neu", fill=WEISS, size=30, anker="m"),
+    pl("Bundesgerichtshof", GX, 610, beim("neu", "B.G.H"), fill=WEISS, size=30, anker="m"),
     pl("2022", GX, 680, beim("neu", "Zweitausendzweiundzwanzig"), fill=GELB, size=34, anker="m"),
     pl("6 StR 68/21", GX, 150, beim("neu", "Zweitausendzweiundzwanzig"), fill=WEISS, size=30, anker="m", bis="norm"),
     pl("normativ", GX, 150, "norm", fill=GELB, size=30, anker="m", anim="cut", bis="plan"),
@@ -441,7 +440,7 @@ folie([("neu", f"{P3} › BGH, 6 StR 68/21 (2022)"), ("norm", f"{P3} › normati
 # ===========================================================================================================================
 folie([("bverfg", f"{P3} › Recht auf selbstbestimmtes Sterben"), ("offen", f"{P3} › § 216 einschränken? offen")], rechts_frei([
     *tafel("bverfg", "Recht auf selbstbestimmtes Sterben"),
-    blk(110, 180, 1040, 140, BLAUHELL, "bverfg", [("BVerfG 2020: Verbot der geschäftsmäßigen", "ExtraBold", 32, INK),
+    blk(110, 180, 1040, 140, BLAUHELL, beim("bverfg", "Deshalb"), [("BVerfG 2020: Verbot der geschäftsmäßigen", "ExtraBold", 32, INK),
                                                 ("Suizidhilfe (§ 217 StGB) nichtig", "ExtraBold", 32, INK)]),
     zit("BVerfG, Urt. v. 26.2.2020 – 2 BvR 2347/15, Leitsatz 1, Rn. 337", 110, 335, beim("bverfg", "zweitausendzwanzig")),
     zit("vgl. Folge 094", 110, 375, beim("bverfg", "Folge")),
@@ -449,7 +448,7 @@ folie([("bverfg", f"{P3} › Recht auf selbstbestimmtes Sterben"), ("offen", f"{
     z("Schritt faktisch nicht selbst gehen kann?", 110, 508, beim("offen", "faktisch"), "Bold", 32),
     z("BGH: offengelassen, hält es für naheliegend", 110, 580, beim("offen", "ließ"), size=32),
     zit("6 StR 68/21 Rn. 21, 23", 110, 630, beim("offen", "naheliegend")),
-    ficon("fluent-emoji-flat", "classical-building", GX, 560, 260, "bverfg"),
+    ficon("fluent-emoji-flat", "classical-building", GX, 560, 260, beim("bverfg", "Deshalb")),
     pl("Bundesverfassungsgericht", GX, 610, beim("bverfg", "Bundesverfassungsgericht"), fill=WEISS, size=30, anker="m"),
     pl("2020", GX, 680, beim("bverfg", "zweitausendzwanzig"), fill=GELB, size=34, anker="m"),
     pl("selbstbestimmtes Sterben", GX, 150, beim("bverfg", "selbstbestimmtes"), fill=BLAUHELL, size=30, anker="m", bis="offen"),
@@ -475,7 +474,7 @@ folie([("merk", P4), ("ausdr", f"{P4} › ausdrücklich"), ("ernst", f"{P4} › 
     blk(110, 690, 1040, 90, GRUENHELL, "best", [("bestimmt: Das Verlangen ist handlungsleitend.", "ExtraBold", 30, INK)]),
     zit("BGHSt 63, 161 Rn. 19", 110, 790, beim("best", "handlungsleitend")),
     *wilfried("merk", [("merk", "ernst"), ("best", "still")]),
-    *requisit([("merk", None, "§ 216 StGB", GELB), ("ausdr", None, "ausdrücklich", LILAHELL),
+    *requisit([(beim("merk", "Paragraf"), None, "§ 216 StGB", GELB), ("ausdr", None, "ausdrücklich", LILAHELL),
                ("ernst", None, "ernstlich", BLAUHELL), ("best", None, "bestimmt", GRUENHELL)], x=FX),
 ]))
 
@@ -496,24 +495,24 @@ def spalte(x, y, w, h, fill, kopf, cue, zeilen, size=29):
     return els
 
 
-ZY, ZH = 90, 250
+ZY, ZH = 170, 230
 folie([("zw", f"{P5} › Täter oder Gehilfe?"), ("erg", f"{P5} › Wilfried: Tatherrschaft"),
        ("erg3", f"{P5} › Wilfried: § 216 Abs. 1 StGB"), ("gegen", f"{P5} › Gegenvariante: straflos")], rechts_frei([
-    karte(60, 60, 1140, 870, "zw"),
+    *tafel("zw", "5. Ergebnis: Täter oder Gehilfe?", h=870),
     *spalte(90, ZY, 535, ZH, ROTHELL, "Täter des § 216 StGB", "zl", [
         ("führt den letzten Akt", beim("zl", "führt")), ("selbst aus", beim("zl", "selbst")),
         ("Opfer kann danach", beim("zl", "das")), ("nichts mehr ändern", beim("zl", "nichts"))]),
     *spalte(640, ZY, 535, ZH, GRUENHELL, "strafloser Gehilfe", "zr", [
         ("bereitet vor", beim("zr", "bereitet")), ("Opfer behält den letzten", beim("zr", "das")),
         ("Schritt und die freie", beim("zr", "Schritt")), ("Entscheidung bis zuletzt", beim("zr", "Entscheidung"))]),
-    *okz("Wilfried: letzter Schritt selbst, Hedwig konnte danach", 375, beim("erg", "Er"), "Bold", 30, x=150),
-    z("nichts mehr ändern: Tatherrschaft", 150, 417, beim("erg", "hatte"), "Bold", 30),
-    *okz("Verlangen ausdrücklich und ernstlich, hat ihn bestimmt", 480, "erg2", "Bold", 30, x=150),
-    blk(90, 550, 1085, 90, GRUEN, "erg3", [("Wilfried: Tötung auf Verlangen, § 216 Abs. 1 StGB", "ExtraBold", 32, INK)]),
-    blk(90, 665, 1085, 80, BLAUHELL, "gegen", [("Gegenvariante: Hedwig geht den letzten Schritt selbst", "ExtraBold", 30, INK)]),
-    blk(90, 770, 1085, 80, GRUENHELL, "gegen2", [("Sie tötet sich selbst: Wilfried als Gehilfe straflos", "ExtraBold", 30, INK)]),
+    *okz("Wilfried: letzter Schritt selbst, Hedwig konnte danach", 425, beim("erg", "Er"), "Bold", 30, x=150),
+    z("nichts mehr ändern: Tatherrschaft", 150, 467, beim("erg", "hatte"), "Bold", 30),
+    *okz("Verlangen ausdrücklich und ernstlich, hat ihn bestimmt", 525, "erg2", "Bold", 30, x=150),
+    blk(90, 590, 1085, 80, GRUEN, "erg3", [("Wilfried: Tötung auf Verlangen, § 216 Abs. 1 StGB", "ExtraBold", 32, INK)]),
+    blk(90, 690, 1085, 80, BLAUHELL, "gegen", [("Gegenvariante: Hedwig geht den letzten Schritt selbst", "ExtraBold", 30, INK)]),
+    blk(90, 790, 1085, 80, GRUENHELL, "gegen2", [("Sie tötet sich selbst: Wilfried als Gehilfe straflos", "ExtraBold", 30, INK)]),
     *wilfried("zw", [("zw", "ernst"), ("erg", "still"), ("gegen", "ernst")]),
-    *requisit([("zw", ("tabler", "key", 100, GELB), "Wer hat den letzten Akt?", WEISS),
+    *requisit([("zw", ("tabler", "key", 100, GELB), None, WEISS),
                ("erg", ("tabler", "key", 100, GELB), "Wilfried", ROTHELL),
                ("erg3", ("tabler", "gavel", 110, (214, 160, 110, 255)), "§ 216 StGB", GRUEN),
                ("gegen", ("tabler", "key", 100, GELB), "Gegenvariante: Hedwig", GRUENHELL)], x=FX),
