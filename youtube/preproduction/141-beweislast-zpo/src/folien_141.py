@@ -328,7 +328,6 @@ folie([(NULL, "Fall · Im Sitzungssaal"), ("niemand", "Fall · Aussage gegen Aus
     *fig("RI", RIX, 790, 400, [(NULL, "ruhig"), ("zeuge1", "ernst"), ("zeugin", "ernst_r"), ("niemand", "denkt")], erst="cut"),
     hart(richtertisch(RIX, BODEN, NULL)),
     hart(ns("Richterin", RIX, BODEN, NULL, WEISS)),
-    pl("Amtsgericht", RIX, 30, NULL, fill=WEISS, size=36, anker="m", anim="cut"),
     pl("eine Frage", 70, 30, beim("fall", "Frage"), fill=GELB, size=36, bis="re1"),
     pl("zwei Antworten", 70, 110, beim("fall", "Antworten"), fill=PINK, size=36, bis="re1"),
     *fig("RT", RTX, BODEN, FH, [(ZG, "ruhig_r"), ("zeuge1", "ernst_r")], bis="re1"),
@@ -435,8 +434,10 @@ folie([("plan", "Beweislast › Aufbau")], rechts_frei([
         z(r, 180 - F("ExtraBold", 38).getlength(r) / 2, 215 + k * 108, c, "ExtraBold", 38),
         z(t, 270, 215 + k * 108, c, "Bold", 40))],
     *requisit([("plan", ("tabler", "list-numbers", 100, WEISS), "6 Schritte", WEISS),
-               ("s2", ("tabler", "scale", 120, GELB), "Beweiswürdigung", GELB),
+               ("s2", ("tabler", "bulb", 100, GELB), "Beweiswürdigung", GELB),
                ("s3", ("tabler", "question-mark", 100, PINK), "non liquet", PINK),
+               ("s4", ("tabler", "scale", 130, GRUEN), "Beweislast", GRUEN),
+               ("s5", ("tabler", "cash-banknote", 120, GRUEN), "der Fall", LILA),
                ("s6", ("tabler", "file-text", 100, WEISS), "Urteil", TUERKIS)]),
     *paar("plan", "WI", [("plan", "ruhig"), ("s3", "denkt")], "KR", [("plan", "ruhig"), ("s4", "skeptisch")]),
 ]))
@@ -599,7 +600,7 @@ folie([("fall5", "5. Der Fall › Auszahlung: anspruchsbegründend"), ("f2", "5.
     WJ,
     pl("Beweislast: Kläger", WJL[0], WJL[1], "f3", fill=GELB, size=28, anker="m"),
     pl("non liquet", 630, 430, "f3", fill=PINK, size=30, anker="m"),
-    pl("zu seinen Lasten", WJR[0], WJR[1], beim("f3", "Lasten"), fill=ROT, size=28, anker="m"),
+    pl("zu seinen Lasten", WJL[0], WJL[1] + 62, beim("f3", "Lasten"), fill=ROT, size=28, anker="m"),
     blk(110, 810, 1040, 74, HELLROT, beim("f4", "Klage"), [("Klage abgewiesen", "ExtraBold", 38, INK)]),
     *requisit([("fall5", ("tabler", "cash-banknote", 120, GRUEN), "Auszahlung", WEISS),
                ("f2", ("tabler", "scale", 130, GELB), "Beweislast: Kläger", GELB),
@@ -620,8 +621,7 @@ folie([("gv", "5. Gegenvariante › Rückzahlung behauptet"), ("gv2", "5. Gegenv
     z("Rückzahlung = Erfüllung, § 362 BGB:", 110, 320, beim("gv2", "Rückzahlung"), "Bold", 34),
     z("rechtsvernichtende Einwendung", 150, 370, beim("gv2", "rechtsvernichtende"), size=34),
     WK,
-    pl("non liquet", 1040, 470, "gv3", fill=PINK, size=30, anker="m"),
-    pl("Rückzahlung?", WKL[0], WKL[1], "gv3", fill=WEISS, size=28, anker="m"),
+    pl("Rückzahlung: non liquet", 870, 392, "gv3", fill=PINK, size=30, anker="m"),
     pl("Beweislast: Beklagte", WKR[0], WKR[1], beim("gv3", "Frau"), fill=GELB, size=28, anker="m"),
     blk(110, 790, 1040, 70, HELLROT, beim("gv4", "verurteilt"), [("Frau Krause wird verurteilt", "ExtraBold", 38, INK)]),
     zit("vgl. BGH, Urt. v. 18.1.2022 – XI ZR 380/20, Rn. 31", 110, 866, beim("gv3", "Frau")),
@@ -681,9 +681,8 @@ REIHEN = [("k1", "I.", "streitige, erhebliche Tatsache", "", BLAU, 0),
           (beim("k4", "zuerst"), "1.", "gesetzliche Sonderregeln", "", None, 1),
           (beim("k4", "sonst"), "2.", "sonst: Normentheorie", "", None, 1),
           ("k5", "V.", "Ergebnis zulasten der", "", LILA, 0)]
-els_sch = [karte(60, 50, 1800, 940, "sch"), titel(glyphen("Klausurschema: Beweisstation"), 110, 90, "sch", 46),
-           zit("Beweisaufnahme, Beweiswürdigung, Beweislast", 110, 150, "sch", size=30)]
-y = 215
+els_sch = [karte(60, 50, 1800, 940, "sch"), titel(glyphen("Klausurschema: Beweisstation"), 110, 90, "sch", 46)]
+y = 200
 for c, r, kopf, norm, farbe, ebene in REIHEN:
     if ebene == 0:
         els_sch += [karte(110, y, 110, 70, c, fill=farbe, rund=14, schatten=5, rand=4),
@@ -698,10 +697,10 @@ for c, r, kopf, norm, farbe, ebene in REIHEN:
     y += hh
 els_sch.append(z("beweisbelasteten Partei", 255, y - 45, "k5", "ExtraBold", 40, rechts=1240))
 assert y + 20 <= 970, y
-WS, WSL, WSR = waage(1530, 430, "k3")
-els_sch += [WS, pl("non liquet", 1530, 370, "k3", fill=PINK, size=30, anker="m"),
+WS, WSL, WSR = waage(1470, 430, "k3")
+els_sch += [WS, pl("non liquet", 1470, 370, "k3", fill=PINK, size=30, anker="m"),
             pl("Beweislast?", WSL[0], WSL[1], "k4", fill=GELB, size=28, anker="m"),
-            pl("verliert", WSL[0], WSL[1] + 70, "k5", fill=ROT, size=28, anker="m")]
+            pl("zulasten", WSL[0], WSL[1] + 70, "k5", fill=ROT, size=28, anker="m")]
 folie([("sch", "Klausurschema"), ("k1", "Klausurschema › I. Streitige Tatsache"), ("k2", "Klausurschema › II. Beweiswürdigung"),
        ("k3", "Klausurschema › III. Non liquet"), ("k4", "Klausurschema › IV. Beweislast"), ("k5", "Klausurschema › V. Ergebnis")],
       els_sch)
