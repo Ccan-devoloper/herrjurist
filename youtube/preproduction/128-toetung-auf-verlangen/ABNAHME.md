@@ -70,4 +70,4 @@ Namen mit eindeutig deutscher Aussprache, nicht auf der Koordinatorliste und in 
 
 ## Drive
 
-(wird nach dem Upload ergänzt)
+Ordner `LexVerse Produktion/128 Tötung auf Verlangen § 216/` (ID `1dUcSNyKXdvDtWk4NUozJyKJwUpOou4Xj`), mit rclone angelegt (einziger Ordner „128 …“, vorher und nachher per `rclone lsf` geprüft), 9 Dateien: `128-Toetung-auf-Verlangen-216.mp4` (25.512.666 B, MD5 lokal = Drive `7e37c9d3…`), `128-Toetung-auf-Verlangen-216-Hauptfilm.mp4` (18.173.570 B, MD5 lokal = Drive `144ccae3…`), `master.zip` (45.901.330 B, 273 Einträge, `unzip -t` fehlerfrei, MD5 lokal = Drive `c6b35a39…`), `thumb_A.jpg` (169.953 B), `thumb_B.jpg` (159.624 B), `beschreibung.txt`, `kapitel.txt`, `untertitel.srt`, `metadaten.json`. `rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; Readback per `rclone lsl`/`rclone md5sum` am 04.10.2026, 00:24. Die Kopie dieses Bogens im `master.zip` wurde vor dem Upload gepackt; dieser Abschnitt steht nur in der Repository-Fassung. `out/ton_mix.wav` und `stimme_48k.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme.wav`, `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
