@@ -1,21 +1,16 @@
 {
   "datum": "2026-10-05",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
+  "freigabeBetreiber": true,
   "liveVerknuepft": false,
-  "vorproduktionStatus": "review",
+  "vorproduktionStatus": "live-freigegeben",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungUsd": 0,
     "providerKostenUsd": 0,
-    "piperOffline": true,
     "coverbilder": false,
-    "autorUsd": 0,
-    "faktencheckUsd": 0,
-    "sonstigeTextKiUsd": 0,
     "bildgenerierungErlaubt": false,
-    "bildkostenUsd": 0,
-    "bilderStatus": "bewusst-ausgelassen"
+    "reelStimme": "elevenlabs-abo"
   },
   "plan": {
     "beitraege": [
@@ -44,8 +39,7 @@
         "themaId": "assessorz-807",
         "themaTitel": "Vollstreckbarkeit: § 708 zuerst",
         "fach": "assessorz",
-        "klausur": 1,
-        "lang": false
+        "klausur": 1
       }
     ],
     "stories": [
@@ -65,8 +59,7 @@
         "slot": "s1",
         "zeit": "06:30",
         "art": "teaser",
-        "beitragSlot": "b1",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b1"
       },
       {
         "slot": "s6",
@@ -78,8 +71,7 @@
         "slot": "s2",
         "zeit": "12:00",
         "art": "teaser",
-        "beitragSlot": "b2",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b2"
       },
       {
         "slot": "s7",
@@ -97,8 +89,7 @@
         "slot": "s3",
         "zeit": "16:30",
         "art": "teaser",
-        "beitragSlot": "b3",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b3"
       },
       {
         "slot": "s9",
@@ -115,80 +106,7 @@
       "klausur": 2,
       "fachLabel": "Anklage und Strafakte",
       "themaId": "anklage-793",
-      "slug": "2026-10-05-b1",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Strafbefehl bei Verbrechen? Ausgeschlossen",
-          "titelZeilen": [
-            "Strafbefehl bei",
-            "Verbrechen?",
-            "Ausgeschlossen"
-          ],
-          "coverBadge": "Prüfungsfrage",
-          "coverText": "§§ 407 ff. StPO",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Ausgangspunkt: schriftliches Verfahren",
-          "text": "Im Strafbefehlsverfahren kann das Amtsgericht auf Antrag der Staatsanwaltschaft bei Vergehen bestimmte Rechtsfolgen ohne Hauptverhandlung festsetzen. Die Voraussetzungen stehen in §§ 407 ff. StPO."
-        },
-        {
-          "art": "schritte",
-          "titel": "Die Prüfung in vier Stationen",
-          "schritte": [
-            {
-              "titel": "1. Vergehen und zulässige Rechtsfolge",
-              "text": "Prüfen, ob Tat und beantragte Rechtsfolge vom Strafbefehlsverfahren erfasst werden."
-            },
-            {
-              "titel": "2. Antrag der Staatsanwaltschaft",
-              "text": "Der Strafbefehl wird nicht von Amts wegen erlassen."
-            },
-            {
-              "titel": "3. Richterliche Prüfung",
-              "text": "Das Gericht prüft insbesondere den hinreichenden Tatverdacht und den beantragten Inhalt."
-            },
-            {
-              "titel": "4. Erlass oder Hauptverfahren",
-              "text": "Je nach richterlicher Bewertung wird der Strafbefehl erlassen oder das Verfahren nimmt den gesetzlich vorgesehenen anderen Weg."
-            }
-          ]
-        },
-        {
-          "art": "text",
-          "titel": "Der Beschuldigte kann widersprechen",
-          "text": "Gegen den Strafbefehl kann binnen zwei Wochen nach Zustellung Einspruch eingelegt werden. Der Einspruch kann nach den gesetzlichen Regeln auch beschränkt werden."
-        },
-        {
-          "art": "text",
-          "titel": "Kein Einspruch? Dann wird es ernst",
-          "text": "Wird nicht rechtzeitig Einspruch eingelegt, steht der Strafbefehl einem rechtskräftigen Urteil gleich (§ 410 Abs. 3 StPO)."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Strafbefehl ist kein bloßer Vorschlag: Ohne rechtzeitigen Einspruch kann er die Wirkung eines rechtskräftigen Urteils erhalten."
-        },
-        {
-          "art": "cta",
-          "titel": "Vier Normblöcke merken",
-          "punkte": [
-            "§ 407: Anwendungsbereich",
-            "§ 408: richterliche Entscheidung",
-            "§ 410: Einspruch und Frist",
-            "Rechtsfolgen immer am beantragten Strafbefehl prüfen"
-          ],
-          "icons": [
-            "dokument",
-            "gericht",
-            "uhr",
-            "lupe"
-          ]
-        }
-      ],
-      "caption": "Strafbefehl bei Verbrechen? Ausgeschlossen\n\nDas Strafbefehlsverfahren nach §§ 407 ff. StPO ermöglicht bei Vergehen eine Entscheidung ohne Hauptverhandlung. Die Staatsanwaltschaft beantragt den Strafbefehl, das Gericht prüft die Voraussetzungen und den Tatverdacht. Gegen den erlassenen Strafbefehl kann binnen zwei Wochen Einspruch eingelegt werden; ohne rechtzeitigen Einspruch steht er einem rechtskräftigen Urteil gleich (§ 410 Abs. 3 StPO).",
+      "caption": "Strafbefehl bei Verbrechen? Ausgeschlossen – auch im minder schweren Fall.\n\n▸ Strafbefehl nur bei Vergehen, auf schriftlichen Antrag der Staatsanwaltschaft im Verfahren vor dem Strafrichter oder dem Schöffengericht (§ 407 Abs. 1 S. 1 StPO). Mit dem Antrag wird die öffentliche Klage erhoben (§ 407 Abs. 1 S. 4 StPO).\n▸ Verbrechen oder Vergehen entscheidet die abstrakte Mindeststrafe (§ 12 Abs. 1, 2 StGB). Milderungen für minder schwere Fälle bleiben außer Betracht (§ 12 Abs. 3 StGB). Raub bleibt daher Verbrechen, auch nach § 249 Abs. 2 StGB.\n▸ Festgesetzt werden dürfen nur die Rechtsfolgen des Katalogs (§ 407 Abs. 2 StPO).\n▸ Fehlt der hinreichende Tatverdacht, lehnt der Richter den Erlass ab (§ 408 Abs. 2 StPO); bei Bedenken beraumt er Hauptverhandlung an (§ 408 Abs. 3 S. 2 StPO).\n▸ Einspruch binnen zwei Wochen nach Zustellung (§ 410 Abs. 1 S. 1 StPO), beschränkbar (§ 410 Abs. 2 StPO). Ohne rechtzeitigen Einspruch steht der Strafbefehl einem rechtskräftigen Urteil gleich (§ 410 Abs. 3 StPO). Fristberechnung: § 43 StPO.\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#rechtsreferendariat",
@@ -201,37 +119,64 @@
         "#anklage",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Strafbefehl: nur bei Vergehen",
-      "coverText": "§§ 407 ff. StPO",
-      "coverBadge": "Prüfungsfrage",
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Ein schriftliches Strafverfahren verzweigt sichtbar in Erlass, Einspruch und Hauptverhandlung.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Ein schriftliches Strafverfahren verzweigt sichtbar in Erlass, Einspruch und Hauptverhandlung.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 407 StPO",
-        "§ 408 StPO",
-        "§ 410 StPO",
-        "Themenpool: anklage-793"
+        "§ 407 Abs. 1, 2 StPO",
+        "§ 408 Abs. 2, 3 StPO",
+        "§ 410 Abs. 1–3 StPO",
+        "§ 43 StPO",
+        "§ 12 Abs. 1–3 StGB",
+        "§ 249 StGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "konkrete-fallfrage",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-05-b1",
+      "kurztitel": "Strafbefehl: nur bei Vergehen",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T12:19:07.948Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Prüfungsfrage",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Prüfungsfrage",
+          "text": "Prüfungsfrage · Strafbefehl bei · Verbrechen? · Ausgeschlossen · § 407 Abs. 1 S. 1 StPO · Auch mild? · + Gutachten-Baustein · Vergehen: ja · Verbrechen: nein",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Anklage und Strafakte",
+          "text": "Der Fall · A entreißt O mit Gewalt die Handtasche. Die Beute ist gering, A ist geständig. · Die StA bejaht einen minder schweren Fall und will einen Strafbefehl beantragen. · § 249 Abs. 2 StGB · Jetzt du: Ist der Strafbefehl zulässig? · Ist doch mild?"
+        },
+        {
+          "art": "text",
+          "titel": "Anklage und Strafakte",
+          "text": "Der typische Fehler · Auf die konkrete Strafe schauen: minder schwerer Fall, also Vergehen. · Milderungen bleiben für die Einteilung außer Betracht. · § 12 Abs. 3 StGB · Raub: Freiheitsstrafe nicht unter einem Jahr, also Verbrechen. · § 249 Abs. 1, § 12 Abs. 1 StGB · Mindeststrafe zählt!"
+        },
+        {
+          "art": "text",
+          "titel": "Anklage und Strafakte",
+          "text": "Die Prüfung in 4 Schritten · Vergehen? · § 12 Abs. 2 StGB · abstrakte Mindeststrafe · Antrag der StA · § 407 Abs. 1 S. 1 StPO · Strafrichter oder Schöffengericht · Rechtsfolge · § 407 Abs. 2 StPO · nur der Katalog · Richter · § 408 Abs. 2, 3 StPO · Erlass, Ablehnung oder Hauptverhandlung · Am Ende: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Anklage und Strafakte",
+          "text": "Nach dem Erlass · Einspruch binnen zwei Wochen nach Zustellung. · § 410 Abs. 1 S. 1 StPO · Kein rechtzeitiger Einspruch: wirkt wie ein rechtskräftiges Urteil. · § 410 Abs. 3 StPO · OKT · 1 · Zustellung · OKT · 15 · Fristende"
+        },
+        {
+          "art": "text",
+          "titel": "Anklage und Strafakte",
+          "text": "Lösung: kein Strafbefehl · Raub bleibt Verbrechen (§ 12 Abs. 3 StGB) · Nur Vergehen zählen, · Milderung ändert nichts, · Einspruch in zwei Wochen. · Speichern fürs Examen · Hättest du den Raub erkannt? · Weiterwischen: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Anklage und Strafakte",
+          "text": "So im Gutachten · Obersatz · Fraglich ist, ob ein Strafbefehl beantragt werden kann. · Norm · § 407 Abs. 1 S. 1 StPO · Strafbefehl nur bei Vergehen · Subsumtion · § 12 Abs. 1, 3 StGB · Raub: mindestens ein Jahr; der minder schwere Fall bleibt außer Betracht · Ergebnis · Verbrechen, daher Anklage statt Strafbefehl"
+        }
+      ]
     },
     "b2": {
       "format": "schema",
@@ -239,66 +184,7 @@
       "klausur": 3,
       "fachLabel": "Europarecht",
       "themaId": "europa-700",
-      "slug": "2026-10-05-b2",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Arbeitnehmerfreizügigkeit: Art. 45 AEUV in fünf Schritten",
-          "titelZeilen": [
-            "Arbeitnehmer-",
-            "freizügigkeit:",
-            "Art. 45 AEUV",
-            "in 5 Schritten"
-          ],
-          "coverBadge": "Klausurschema",
-          "coverText": "Grenzbezug zuerst",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "1. Arbeitnehmerbegriff unionsrechtlich bestimmen",
-          "text": "Arbeitnehmer ist, wer während einer bestimmten Zeit für einen anderen nach dessen Weisung Leistungen erbringt und dafür eine Vergütung erhält. Der Begriff wird unionsrechtlich autonom ausgelegt."
-        },
-        {
-          "art": "text",
-          "titel": "2. Grenzüberschreitenden Bezug prüfen",
-          "text": "Art. 45 AEUV schützt die Freizügigkeit innerhalb der Union. Ein rein interner Sachverhalt ohne unionsrechtlichen Bezug genügt grundsätzlich nicht."
-        },
-        {
-          "art": "text",
-          "titel": "3. Diskriminierung oder Beschränkung?",
-          "text": "Erfasst werden insbesondere unmittelbare und mittelbare Benachteiligungen wegen der Staatsangehörigkeit sowie weitere Beschränkungen der Arbeitnehmerfreizügigkeit."
-        },
-        {
-          "art": "text",
-          "titel": "4. Rechtfertigung öffnen",
-          "text": "Art. 45 Abs. 3 AEUV nennt Gründe der öffentlichen Ordnung, Sicherheit und Gesundheit. Zusätzlich sind bei bestimmten nichtdiskriminierenden Beschränkungen unionsrechtlich anerkannte Rechtfertigungsgründe zu prüfen."
-        },
-        {
-          "art": "text",
-          "titel": "5. Verhältnismäßigkeit",
-          "text": "Die nationale Maßnahme muss zur Zielerreichung geeignet und erforderlich sein. Pauschale Beschränkungen scheitern häufig an einer fehlenden fallbezogenen Rechtfertigung."
-        },
-        {
-          "art": "cta",
-          "titel": "Fünf Überschriften sichtbar machen",
-          "punkte": [
-            "Arbeitnehmer",
-            "Grenzbezug",
-            "Beeinträchtigung",
-            "Rechtfertigung",
-            "Verhältnismäßigkeit"
-          ],
-          "icons": [
-            "person",
-            "globus",
-            "warnung",
-            "dokument",
-            "waage"
-          ]
-        }
-      ],
-      "caption": "Art. 45 AEUV lässt sich als klare Prüfungskette schreiben: Arbeitnehmerbegriff, grenzüberschreitender Bezug, Beeinträchtigung, Rechtfertigung und Verhältnismäßigkeit. Besonders wichtig ist die Trennung zwischen Diskriminierung und sonstiger Beschränkung. Bei der Rechtfertigung die ausdrücklichen Gründe des Art. 45 Abs. 3 AEUV und die unionsrechtliche Verhältnismäßigkeit sauber auseinanderhalten.",
+      "caption": "Anwärterin? Für Art. 45 AEUV trotzdem Arbeitnehmerin – das Klausurschema zur Arbeitnehmerfreizügigkeit.\n\n▸ Arbeitnehmer ist, wer während einer bestimmten Zeit für einen anderen nach dessen Weisung Leistungen erbringt und dafür eine Vergütung erhält; der Begriff ist unionsrechtlich autonom (EuGH, Rs. 66/85 – Lawrie-Blum). Auch ein vergüteter Vorbereitungsdienst genügt.\n▸ Grenzüberschreitender Bezug: Ein rein interner Sachverhalt genügt nicht.\n▸ Bereichsausnahme „öffentliche Verwaltung“ (Art. 45 Abs. 4 AEUV) eng: nur Stellen mit Ausübung hoheitlicher Befugnisse und Wahrung allgemeiner Belange des Staates (EuGH, Rs. 149/79 – Kommission/Belgien; Rs. 66/85 – Lawrie-Blum).\n▸ Beeinträchtigung: Diskriminierung wegen der Staatsangehörigkeit (Art. 45 Abs. 2 AEUV) oder sonstige Beschränkung (EuGH, C-415/93 – Bosman).\n▸ Rechtfertigung: öffentliche Ordnung, Sicherheit, Gesundheit (Art. 45 Abs. 3 AEUV); bei unterschiedslosen Beschränkungen auch zwingende Gründe des Allgemeininteresses (EuGH, C-415/93 – Bosman). Immer verhältnismäßig.\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -310,122 +196,75 @@
         "#klausurschema",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Art. 45 AEUV in fünf Schritten",
-      "coverText": "Grenzbezug zuerst",
-      "coverBadge": "Klausurschema",
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Eine Person passiert fünf unionsrechtliche Prüftore vom Arbeitnehmerbegriff bis zur Verhältnismäßigkeit.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Eine Person passiert fünf unionsrechtliche Prüftore vom Arbeitnehmerbegriff bis zur Verhältnismäßigkeit.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "Art. 45 AEUV",
-        "Themenpool: europa-700"
+        "Art. 45 Abs. 2–4 AEUV",
+        "EuGH, Rs. 66/85 – Lawrie-Blum",
+        "EuGH, Rs. 149/79 – Kommission/Belgien",
+        "EuGH, C-415/93 – Bosman"
       ],
-      "hookTyp": "zahl",
-      "hookMuster": "fuenf-echte-pruefschritte",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-05-b2",
+      "kurztitel": "Arbeitnehmerfreizügigkeit",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Klausurschema",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Klausurschema",
+          "text": "Klausurschema · Anwärterin? · Für Art. 45 AEUV · Arbeitnehmerin · In 5 Schritten · + Gutachten-Baustein",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Europarecht",
+          "text": "Der Fall · Die Französin F will in Land L den Vorbereitungsdienst für das Lehramt antreten. · L lässt nur deutsche Staatsangehörige zu. · Jetzt du: Hilft F Art. 45 AEUV? · Bin ich Arbeitnehmerin?"
+        },
+        {
+          "art": "text",
+          "titel": "Europarecht",
+          "text": "Art. 45 AEUV in 5 Schritten · Arbeitnehmer · unionsrechtlich autonom · Grenzbezug · kein rein interner Fall · Bereichsausnahme · Art. 45 Abs. 4 AEUV · Beeinträchtigung · Art. 45 Abs. 2 AEUV · Rechtfertigung · Art. 45 Abs. 3 AEUV · verhältnismäßig? · Am Ende: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Europarecht",
+          "text": "Schritt 1: Arbeitnehmer · Leistung für einen anderen, nach dessen Weisung, gegen Vergütung. · EuGH, Rs. 66/85 – Lawrie-Blum · Auch ein Vorbereitungsdienst mit Vergütung genügt. · Also ja!"
+        },
+        {
+          "art": "text",
+          "titel": "Europarecht",
+          "text": "Die Falle: Art. 45 Abs. 4 · Jeder Staatsdienst ist öffentliche Verwaltung. · Nur Stellen mit hoheitlichen Befugnissen und Wahrung allgemeiner Belange des Staates. · EuGH, Rs. 149/79 – Kommission/Belgien · Referendare im Schuldienst: nicht erfasst. · EuGH, Rs. 66/85 · Lehrerin ist kein Hoheitsamt!"
+        },
+        {
+          "art": "text",
+          "titel": "Europarecht",
+          "text": "Beeinträchtigung und Rechtfertigung · Zulassung nur für Deutsche: offene Diskriminierung. · Art. 45 Abs. 2 AEUV · Rechtfertigung nur aus öffentlicher Ordnung, Sicherheit, Gesundheit. · Art. 45 Abs. 3 AEUV · Bloße Beschränkungen: auch zwingende Gründe, verhältnismäßig. · EuGH, C-415/93 – Bosman · Abs. 3 trägt hier nicht!"
+        },
+        {
+          "art": "text",
+          "titel": "Europarecht",
+          "text": "Lösung: Verstoß gegen Art. 45 AEUV · Arbeitnehmerin, Abs. 4 greift nicht, keine Rechtfertigung · Arbeitnehmer autonom, · Abs. 4 eng auslegen, · Diskriminierung nur Abs. 3. · Speichern fürs Examen · Hättest du Abs. 4 geprüft? · Weiterwischen: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Europarecht",
+          "text": "So im Gutachten · Obersatz · Die Zulassungsregel könnte gegen Art. 45 AEUV verstoßen. · Definition · EuGH, Rs. 66/85 · Arbeitnehmer: weisungsgebunden, für einen anderen, gegen Vergütung · Subsumtion · Art. 45 Abs. 2, 4 AEUV · F ist Arbeitnehmerin, keine hoheitliche Stelle, offene Diskriminierung · Ergebnis · Kein Grund nach Abs. 3: Verstoß"
+        }
+      ]
     },
     "b3": {
       "format": "reel",
-      "layout": "erklaer",
       "fach": "assessorz",
       "klausur": 1,
       "fachLabel": "Zivilrechtliche Assessorklausur",
       "themaId": "assessorz-807",
-      "slug": "2026-10-05-b3",
-      "szenen": [
-        {
-          "art": "hook",
-          "nummer": null,
-          "titel": "Immer gegen Sicherheitsleistung? Der § 708-Fehler",
-          "unter": "Urteilsklausur",
-          "text": "Die Sicherheitsleistung hängt davon ab, in welche gesetzliche Gruppe das Urteil fällt.",
-          "norm": "§§ 708, 709 ZPO",
-          "icon": "hammer",
-          "sprecher": "Jedes Urteil nur gegen Sicherheitsleistung vollstreckbar? Das ist der typische Tenorfehler. Zuerst fragst du: Fällt das Urteil unter § 708 ZPO? Dann wird ohne Sicherheitsleistung vollstreckt.",
-          "marken": [
-            "§ 708 oder § 709?"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 1,
-          "titel": "Zuerst § 708 ZPO prüfen",
-          "text": "Die Norm zählt Fälle auf, in denen ohne Sicherheitsleistung vorläufig vollstreckt werden kann.",
-          "norm": "§ 708 ZPO",
-          "sprecher": "Schritt eins: Prüfe den Katalog des § 708 ZPO. Trifft eine Nummer zu, ist das Urteil ohne Sicherheitsleistung vorläufig vollstreckbar. Welche Nummer passt, muss aus der konkreten Entscheidungsart folgen.",
-          "marken": [
-            "Katalog prüfen"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 2,
-          "titel": "Schuldnerschutz nach § 711 mitdenken",
-          "text": "In den gesetzlich erfassten §-708-Fällen kann eine Abwendungsbefugnis in den Tenor gehören.",
-          "norm": "§ 711 ZPO",
-          "sprecher": "Schritt zwei: Denk an § 711 ZPO. In den dort erfassten Fällen des § 708 gehört die Abwendungsbefugnis des Schuldners in den Tenor. Das ist ein eigener Tenorbaustein, nicht bloß eine Randnotiz.",
-          "marken": [
-            "§ 711 ZPO"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 3,
-          "titel": "Außerhalb des § 708: § 709 ZPO",
-          "text": "Dann erfolgt die vorläufige Vollstreckbarkeit grundsätzlich gegen Sicherheitsleistung.",
-          "norm": "§ 709 ZPO",
-          "sprecher": "Schritt drei: Passt keine Nummer des § 708, führt der Weg grundsätzlich zu § 709 ZPO. Dann hängt die Vollstreckung von einer Sicherheitsleistung des Gläubigers ab.",
-          "marken": [
-            "§ 709 ZPO"
-          ]
-        },
-        {
-          "art": "punkt",
-          "nummer": null,
-          "titel": "Nicht erst nach dem Urteil daran denken",
-          "text": "Kosten und vorläufige Vollstreckbarkeit gehören zum vollständigen Tenor.",
-          "norm": "§ 313 Abs. 1 ZPO",
-          "sprecher": "In der Assessorklausur darf die vorläufige Vollstreckbarkeit nicht am Ende vergessen werden. Hauptsache, Kosten und Vollstreckbarkeit gehören gemeinsam in den vollständigen Tenor.",
-          "marken": [
-            "vollständiger Tenor"
-          ]
-        },
-        {
-          "art": "merke",
-          "nummer": null,
-          "titel": "Die Entscheidungskette",
-          "text": "§ 708? → gegebenenfalls § 711 → sonst § 709.",
-          "norm": "§§ 708, 709, 711 ZPO",
-          "sprecher": "Merke die Entscheidungskette: erst § 708. Wenn die gesetzliche Konstellation es verlangt, § 711 ergänzen. Außerhalb des Katalogs grundsätzlich § 709.",
-          "marken": [
-            "708 → 711 / 709"
-          ]
-        },
-        {
-          "art": "cta",
-          "nummer": null,
-          "titel": "Im Tenor nicht improvisieren",
-          "text": "Norm auswählen und den passenden Vollstreckbarkeitsausspruch formulieren.",
-          "norm": null,
-          "sprecher": "Der Vollstreckbarkeitstenor ist keine Stelle für Bauchgefühl. Bestimme zuerst die Normgruppe und formuliere dann den dazu passenden gesetzlichen Ausspruch.",
-          "marken": [
-            "Norm vor Formulierung"
-          ]
-        }
-      ],
-      "caption": "Immer gegen Sicherheitsleistung? Der § 708-Fehler\n\nVorläufige Vollstreckbarkeit in der Zivilurteilsklausur: zuerst § 708 ZPO prüfen. Trifft ein Katalogfall zu, ist die Vollstreckung ohne Sicherheitsleistung möglich; in den gesetzlich erfassten Fällen ist § 711 ZPO mit seiner Abwendungsbefugnis mitzudenken. Außerhalb des § 708 führt der Weg grundsätzlich zu § 709 ZPO und zur Sicherheitsleistung.",
+      "caption": "Jedes Urteil nur gegen Sicherheit vollstreckbar? Falsch – erst kommt der Katalog des § 708 ZPO.\n\n▸ § 708 ZPO: ohne Sicherheitsleistung vorläufig vollstreckbar sind u. a. Anerkenntnis- und Verzichtsurteile (Nr. 1), Versäumnisurteile (Nr. 2) und andere Urteile in vermögensrechtlichen Streitigkeiten, wenn der Gegenstand der Verurteilung in der Hauptsache 1.250 Euro nicht übersteigt oder nur die Kostenentscheidung bis 1.500 Euro vollstreckbar ist (Nr. 11).\n▸ In den Fällen des § 708 Nr. 4 bis 11 ZPO spricht das Gericht die Abwendungsbefugnis des Schuldners aus, wenn nicht der Gläubiger vor der Vollstreckung Sicherheit leistet (§ 711 S. 1 ZPO).\n▸ Alle anderen Urteile: vorläufig vollstreckbar gegen Sicherheitsleistung (§ 709 S. 1 ZPO); bei Geldforderungen genügt ein Verhältnis zum jeweils vollstreckten Betrag (§ 709 S. 2 ZPO).\n▸ Die Entscheidung gehört in die Urteilsformel (§ 313 Abs. 1 Nr. 4 ZPO).\n\nSpeichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#rechtsreferendariat",
@@ -438,215 +277,327 @@
         "#711zpo",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Vollstreckbarkeit: § 708 zuerst",
-      "titelZeilen": [
-        "Immer gegen",
-        "Sicherheitsleistung?",
-        "Der § 708-Fehler"
-      ],
-      "coverText": "Katalog vor Sicherheitsleistung",
-      "coverBadge": "Reel",
-      "coverBildAuslassen": true,
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Ein Urteil steht an einer klaren Weiche: Katalogfall § 708 links, Sicherheitsleistung § 709 rechts; § 711 liegt als Schutzschleuse am §-708-Weg.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Ein Urteil steht an einer klaren Weiche: Katalogfall § 708 links, Sicherheitsleistung § 709 rechts; § 711 liegt als Schutzschleuse am §-708-Weg.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 708 ZPO",
-        "§ 709 ZPO",
-        "§ 711 ZPO",
-        "Themenpool: assessorz-807"
+        "§ 708 Nr. 1, 2, 4–11 ZPO",
+        "§ 709 S. 1, 2 ZPO",
+        "§ 711 S. 1 ZPO",
+        "§ 313 Abs. 1 Nr. 4 ZPO"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "tenorfehler",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-05-b3",
+      "kurztitel": "Vollstreckbarkeit: § 708 zuerst",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T11:38:55.751Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "bild": "op-cover",
+      "reelTyp": "klausurfalle",
+      "hookStil": "kippen",
+      "coverBadge": "Reel",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vorläufig vollstreckbar? Immer gegen Sicherheit."
+        },
+        {
+          "art": "schritt",
+          "titel": "Katalog des § 708 ZPO"
+        },
+        {
+          "art": "schritt",
+          "titel": "Abwendung nach § 711 ZPO"
+        },
+        {
+          "art": "schritt",
+          "titel": "Sonst: § 709 ZPO"
+        }
+      ],
+      "sprecher": [
+        "Jedes Urteil nur gegen Sicherheit vollstreckbar? Falsch. Erst kommt der Katalog.",
+        "Paragraf siebenhundertacht: etwa Anerkenntnis, Versäumnisurteil oder bis zwölfhundertfünfzig Euro.",
+        "In den Nummern vier bis elf kommt die Abwendungsbefugnis des Schuldners dazu.",
+        "Passt keine Nummer: Paragraf siebenhundertneun, nur gegen Sicherheit.",
+        "Merke: erst Katalog, dann Abwendung, sonst Sicherheit."
+      ],
+      "dauerS": 28.49,
+      "tempo": 1.03
     },
     "s4": {
       "slot": "s4",
       "art": "frage",
-      "fach": "strafat",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafat-726",
-      "ueberzeile": "Prüfungsfrage Versuch",
-      "titel": "Was muss der Tatentschluss beim Versuch umfassen?",
       "fachLabel": "Strafrecht AT",
-      "quellen": [
-        "§§ 22, 23 StGB",
-        "Themenpool: strafat-726"
+      "themaId": "strafat-726",
+      "beitragSlot": null,
+      "quellen": null,
+      "frage": [
+        "Was umfasst",
+        "der Tatentschluss?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
       "optionen": [
-        "Nur den Willen, irgendeine Straftat zu begehen",
-        "Nur den Vorsatz zum unmittelbaren Ansetzen",
-        "Vorsatz zu allen objektiven Merkmalen plus sonstige subjektive Merkmale"
+        "Willen zu irgendeiner Tat",
+        "Vorsatz nur zum Ansetzen",
+        "Vorsatz zum ganzen Tatbestand + Absichten"
       ],
-      "richtig": 2
+      "pairId": "strafat-726",
+      "sichtbareTexte": [
+        "Strafrecht AT",
+        "Prüfungsfrage",
+        "Was umfasst",
+        "der Tatentschluss?",
+        "Willen zu irgendeiner Tat",
+        "Vorsatz nur zum Ansetzen",
+        "Vorsatz zum ganzen Tatbestand + Absichten",
+        "Auflösung in der nächsten Story"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s5": {
       "slot": "s5",
       "art": "antwort",
-      "fach": "strafat",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafat-726",
-      "ueberzeile": "Auflösung",
-      "titel": "Vorsatz plus besondere subjektive Merkmale",
-      "text": "Der Tatentschluss ist die subjektive Seite des versuchten Delikts: Vorsatz bezüglich aller objektiven Tatbestandsmerkmale sowie die sonstigen subjektiven Merkmale des Tatbestands. Danach getrennt das unmittelbare Ansetzen nach § 22 StGB prüfen.",
-      "norm": "§ 22 StGB",
       "fachLabel": "Strafrecht AT",
-      "quellen": [
-        "§ 22 StGB",
-        "§ 23 StGB",
-        "Themenpool: strafat-726"
+      "themaId": "strafat-726",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Vorsatz zum ganzen",
+        "Tatbestand"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
       "optionen": [
-        "Nur den Willen, irgendeine Straftat zu begehen",
-        "Nur den Vorsatz zum unmittelbaren Ansetzen",
-        "Vorsatz zu allen objektiven Merkmalen plus sonstige subjektive Merkmale"
+        "Willen zu irgendeiner Tat",
+        "Vorsatz nur zum Ansetzen",
+        "Vorsatz zum ganzen Tatbestand + Absichten"
       ],
-      "richtig": 2
+      "richtig": 2,
+      "text": "Vorsatz zu allen objektiven Merkmalen plus besondere subjektive Merkmale. Danach: unmittelbares Ansetzen.",
+      "norm": "§§ 22, 23 Abs. 1 StGB",
+      "pairId": "strafat-726",
+      "sichtbareTexte": [
+        "Strafrecht AT",
+        "Auflösung",
+        "Vorsatz zum ganzen",
+        "Tatbestand",
+        "Willen zu irgendeiner Tat",
+        "Vorsatz nur zum Ansetzen",
+        "Vorsatz zum ganzen Tatbestand + Absichten",
+        "Vorsatz zu allen objektiven Merkmalen plus besondere subjektive Merkmale. Danach: unmittelbares Ansetzen.",
+        "§§ 22, 23 Abs. 1 StGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s6": {
       "slot": "s6",
       "art": "norm",
-      "fach": "handelsg",
+      "fach": null,
       "klausur": 1,
-      "pairId": "handelsg-271",
-      "ueberzeile": "Norm des Tages",
-      "titel": "GmbH: Trennungsprinzip zuerst",
-      "text": "Für Verbindlichkeiten der GmbH haftet grundsätzlich nur das Gesellschaftsvermögen (§ 13 Abs. 2 GmbHG). Persönliche Haftung eines Gesellschafters braucht deshalb eine eigene Anspruchsgrundlage, etwa aus eigenem deliktischem Verhalten; sie folgt nicht schon aus der Gesellschafterstellung.",
-      "norm": "§ 13 Abs. 2 GmbHG",
       "fachLabel": "Handels- und Gesellschaftsrecht",
-      "quellen": [
-        "§ 13 Abs. 2 GmbHG",
-        "§ 826 BGB",
-        "Themenpool: handelsg-271"
+      "themaId": "handelsg-271",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "GmbH-Schulden?",
+        "Erst Trennung"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "norm": "§ 13 Abs. 2 GmbHG",
+      "punkte": [
+        [
+          "Gläubigern haftet nur das Gesellschaftsvermögen.",
+          "ok",
+          null
+        ],
+        [
+          "Gesellschafter persönlich: nur mit eigener Anspruchsgrundlage.",
+          "warn",
+          "z. B. § 826 BGB"
+        ]
+      ],
+      "sichtbareTexte": [
+        "Handels- und Gesellschaftsrecht",
+        "Norm des Tages",
+        "GmbH-Schulden?",
+        "Erst Trennung",
+        "§ 13 Abs. 2 GmbHG",
+        "Gläubigern haftet nur das Gesellschaftsvermögen.",
+        "Gesellschafter persönlich: nur mit eigener Anspruchsgrundlage.",
+        "z. B. § 826 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s7": {
       "slot": "s7",
       "art": "tipp",
-      "fach": "schuldbt",
+      "fach": null,
       "klausur": 1,
-      "pairId": "schuldbt-026",
-      "ueberzeile": "Klausurtipp Anwaltsvertrag",
-      "titel": "Vertragspartner nicht aus der Rolle erraten",
-      "text": "Wer den Anwalt beauftragt und aus dem Dienstvertrag berechtigt oder verpflichtet ist, ergibt sich aus den Erklärungen und Umständen des Mandats. Der Mandant ist häufig, aber nicht zwingend in jeder Konstellation, identisch mit der Person, die wirtschaftlich betroffen ist. Vertragsschluss sauber auslegen.",
       "fachLabel": "Schuldrecht BT",
-      "quellen": [
-        "§§ 611, 675 BGB",
-        "Themenpool: schuldbt-026"
+      "themaId": "schuldbt-026",
+      "beitragSlot": null,
+      "quellen": null,
+      "ueberzeile": "Klausurtipp Anwaltsvertrag",
+      "titel": [
+        "Wer ist Mandant?",
+        "Auslegen, nicht raten"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "punkte": [
+        [
+          "Vertragspartner aus Erklärungen und Umständen bestimmen.",
+          "ok",
+          "§§ 133, 157 BGB"
+        ],
+        [
+          "Wirtschaftlich Betroffene sind nicht zwingend Mandant.",
+          "warn",
+          null
+        ],
+        [
+          "Anwaltsvertrag: Geschäftsbesorgung mit Dienstcharakter.",
+          "ok",
+          "§§ 611, 675 Abs. 1 BGB"
+        ]
+      ],
+      "icon": "tabler:writing-sign",
+      "iconFarbe": "GELB",
+      "sichtbareTexte": [
+        "Schuldrecht BT",
+        "Klausurtipp Anwaltsvertrag",
+        "Wer ist Mandant?",
+        "Auslegen, nicht raten",
+        "Vertragspartner aus Erklärungen und Umständen bestimmen.",
+        "§§ 133, 157 BGB",
+        "Wirtschaftlich Betroffene sind nicht zwingend Mandant.",
+        "Anwaltsvertrag: Geschäftsbesorgung mit Dienstcharakter.",
+        "§§ 611, 675 Abs. 1 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s8": {
       "slot": "s8",
       "art": "zahl",
-      "fach": "anklage",
+      "fach": null,
       "klausur": 2,
-      "pairId": "anklage-866",
-      "ueberzeile": "4 typische Verfahrenshindernisse",
-      "zahl": "4",
-      "titel": "Vor dem Tatnachweis: Vier Hindernisse von Amts wegen im Blick",
-      "text": "Die Liste ist nicht abschließend; sie zeigt vier besonders klausurtypische Gruppen.",
-      "punkte": [
-        "Verjährung der Strafverfolgung.",
-        "Strafklageverbrauch wegen einer bereits rechtskräftig entschiedenen Tat.",
-        "Fehlender wirksamer Strafantrag, soweit er Verfolgungsvoraussetzung ist.",
-        "Anderweitige Rechtshängigkeit derselben prozessualen Tat."
-      ],
       "fachLabel": "Anklage und Strafakte",
-      "quellen": [
-        "StPO",
-        "StGB",
-        "Themenpool: anklage-866"
+      "themaId": "anklage-866",
+      "beitragSlot": null,
+      "quellen": null,
+      "ueberzeile": "Verfahrenshindernisse",
+      "zahl": "4",
+      "einheit": "Hindernisse",
+      "titel": [
+        "Vor dem",
+        "Tatnachweis prüfen"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "punkte": [
+        [
+          "Verjährung",
+          "ok",
+          "§§ 78 ff. StGB"
+        ],
+        [
+          "Strafklageverbrauch",
+          "ok",
+          "Art. 103 Abs. 3 GG"
+        ],
+        [
+          "Fehlender Strafantrag",
+          "ok",
+          "§§ 77 ff. StGB"
+        ],
+        [
+          "Anderweitige Rechtshängigkeit",
+          "ok",
+          null
+        ]
+      ],
+      "sichtbareTexte": [
+        "Anklage und Strafakte",
+        "Verfahrenshindernisse",
+        "4",
+        "Vor dem",
+        "Tatnachweis prüfen",
+        "Verjährung",
+        "§§ 78 ff. StGB",
+        "Strafklageverbrauch",
+        "Art. 103 Abs. 3 GG",
+        "Fehlender Strafantrag",
+        "§§ 77 ff. StGB",
+        "Anderweitige Rechtshängigkeit"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s9": {
       "slot": "s9",
       "art": "streitstand",
-      "fach": "bgbat",
+      "fach": null,
       "klausur": 1,
-      "pairId": "bgbat-160",
-      "ueberzeile": "Streitstand Stellvertretung",
-      "titel": "Anscheinsvollmacht: Vertragliche Bindung ohne Kenntnis?",
-      "norm": "§§ 164 ff. BGB",
-      "optionen": [
-        "Rechtsprechung und herrschende Ansicht: Wiederholter zurechenbarer Rechtsschein kann den Vertretenen wie bei einer Vollmacht binden, wenn er das Auftreten bei pflichtgemäßer Sorgfalt hätte erkennen und verhindern können.",
-        "Kritische Literatur: Ohne Kenntnis des Vertretenen fehle die Grundlage für rechtsgeschäftliche Bindung; Vertrauensschutz sei eher über eine Haftung wegen schuldhaft gesetzten Rechtsscheins zu lösen."
-      ],
-      "text": "Duldungsvollmacht und Anscheinsvollmacht nicht vermischen: Bei der Duldung kennt der Vertretene das Auftreten, bei der Anscheinsvollmacht gerade nicht.",
       "fachLabel": "BGB Allgemeiner Teil",
-      "quellen": [
-        "§§ 164 ff. BGB",
-        "Themenpool: bgbat-160"
+      "themaId": "bgbat-160",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Anscheinsvollmacht:",
+        "Bindung ohne Wissen?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "ansichten": [
+        [
+          "Rechtsprechung",
+          "Rechtsschein bindet wie Vollmacht."
+        ],
+        [
+          "Teile der Literatur",
+          "Nur Vertrauenshaftung, kein Vertrag."
+        ]
+      ],
+      "klausur_tipp": "Klausur: Rechtsprechung folgen.",
+      "norm": "§§ 164 ff. BGB",
+      "sichtbareTexte": [
+        "BGB Allgemeiner Teil",
+        "Streitstand",
+        "Anscheinsvollmacht:",
+        "Bindung ohne Wissen?",
+        "Rechtsprechung",
+        "Rechtsschein bindet wie Vollmacht.",
+        "Teile der Literatur",
+        "Nur Vertrauenshaftung, kein Vertrag.",
+        "Klausur: Rechtsprechung folgen.",
+        "§§ 164 ff. BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s1": {
       "slot": "s1",
@@ -654,16 +605,25 @@
       "fach": "anklage",
       "klausur": 2,
       "fachLabel": "Anklage und Strafakte",
-      "titel": "Strafbefehl: Antrag, Erlass, Einspruch",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b1",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Strafbefehl bei Verbrechen?"
+      ],
+      "unter": "Prüfungsfrage + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Anklage und Strafakte",
+        "Neu im Feed",
+        "Strafbefehl bei Verbrechen?",
+        "Prüfungsfrage + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s2": {
       "slot": "s2",
@@ -671,16 +631,25 @@
       "fach": "europa",
       "klausur": 3,
       "fachLabel": "Europarecht",
-      "titel": "Art. 45 AEUV in fünf Schritten",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b2",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Anwärterin = Arbeitnehmerin"
+      ],
+      "unter": "Klausurschema + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Europarecht",
+        "Neu im Feed",
+        "Anwärterin = Arbeitnehmerin",
+        "Klausurschema + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s3": {
       "slot": "s3",
@@ -688,16 +657,25 @@
       "fach": "assessorz",
       "klausur": 1,
       "fachLabel": "Zivilrechtliche Assessorklausur",
-      "titel": "Vollstreckbarkeit: § 708 oder § 709?",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b3",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Immer gegen Sicherheit? Falsch"
+      ],
+      "unter": "Neues Reel · im Profil",
+      "sichtbareTexte": [
+        "Zivilrechtliche Assessorklausur",
+        "Neu im Feed",
+        "Immer gegen Sicherheit? Falsch",
+        "Neues Reel · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     }
   },
   "hookOptimierung": {
@@ -713,35 +691,27 @@
   },
   "renderVorschau": {
     "status": "fertig",
-    "erzeugtAm": "2026-09-24T21:43:00.112Z",
+    "erzeugtAm": "2026-10-04T23:43:58Z",
     "pfad": "vorproduktion/2026-10-05/fertig",
     "providerKostenUsd": 0,
-    "textProviderKostenUsd": 0,
-    "faktencheckProviderKostenUsd": 0,
-    "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "reelStimme": "piper-offline",
-    "freigabeBetreiber": false,
-    "coverbilderAngewandt": {
-      "stand": "2026-09-25T12:35:32.077Z",
-      "providerKostenUsd": 0,
-      "slots": [
-        "b1",
-        "b2",
-        "b3"
-      ]
-    },
-    "quizPatch": {
-      "stand": "2026-09-25T11:28:45.919Z",
-      "slots": [
-        "s4",
-        "s5"
-      ],
-      "providerKostenUsd": 0
-    }
+    "coverIcons": false,
+    "renderer": "open-peeps-v4",
+    "layoutQuelle": "open-peeps-variante-c",
+    "reelStimme": "elevenlabs-laura",
+    "sfx": "freesound-cc0",
+    "freigabeBetreiber": true,
+    "liveVorrangAktiv": true,
+    "normalbetriebGesperrt": true,
+    "wartetLive": []
   },
   "liveRegel": {
     "veroeffentlichen": false,
     "freigabeErforderlich": true
-  }
+  },
+  "layoutQuelle": "open-peeps-variante-c",
+  "semantikQuelle": "herrjurist",
+  "liveVorrangAktiv": true,
+  "normalbetriebGesperrt": true,
+  "bildStatus": "open-peeps-render"
 }
