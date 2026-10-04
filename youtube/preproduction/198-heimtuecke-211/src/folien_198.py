@@ -663,8 +663,8 @@ folie([("restr", f"{PR} · Grund: lebenslange Strafe"), ("rfl", f"{PR} › BGH: 
 # K Klausurtipp (Lexi)
 # ===========================================================================================================================
 els_k = [*tafel("tipp", "Klausurtipp: der richtige Zeitpunkt", fill=HELL), warnung_i(150, 225, "tipp", gr=26),
-         z("Arglosigkeit bei Beginn des ersten mit", 200, 200, "tipp", "Bold", 32),
-         z("Tötungsvorsatz geführten Angriffs prüfen", 200, 245, beim("tipp", "Tötungsvorsatz"), "Bold", 32),
+         z("Opfer arglos? Prüfen bei Beginn des ersten", 200, 200, beim("tipp", "Prüfe"), "Bold", 32),
+         z("mit Tötungsvorsatz geführten Angriffs", 200, 245, beim("tipp", "Tötungsvorsatz"), "Bold", 32),
          blk(130, 320, 1020, 160, GELB, "tipp2", [("Streit davor: schließt nicht automatisch aus", "ExtraBold", 32, INK),
                                                   ("Frage: Rechnete das Opfer genau in diesem", "Bold", 30, INK),
                                                   ("Moment mit einem erheblichen Angriff?", "Bold", 30, INK)]),
