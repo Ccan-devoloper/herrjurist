@@ -32,8 +32,8 @@ SEGMENTE = [
     # --- A3 Fall: am nächsten Morgen -------------------------------------------------------------------------------------------
     ("[morgen]Am nächsten Morgen kommt Frau Moser zur Hütte. [preis]Ein neues Schloss kostet dreihundertachtzig Euro.", P),
     ("[mo1]Die Tür war abgesperrt! Wer bezahlt mir jetzt das neue Schloss?", P, "Moser"),
-    ("[frage]Hat Korbinian sich strafbar gemacht? [frage2]Und muss er das Schloss bezahlen? [frage3]An diesem Fall prüfen "
-     "wir den rechtfertigenden Notstand Schritt für Schritt.", PS),
+    ("[frage]Hat Korbinian sich strafbar gemacht? [frage2]Und muss er das Schloss bezahlen? [frage3]Wir prüfen den rechtfertigenden "
+     "Notstand Schritt für Schritt.", PS),
     # --- B Sachverhalt ---------------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
     # --- C Tatbestand kurz -----------------------------------------------------------------------------------------------------
@@ -43,9 +43,7 @@ SEGMENTE = [
     # --- D Wortlautkarte § 34 --------------------------------------------------------------------------------------------------
     ("[p34]Paragraf vierunddreißig Satz eins: Wer in einer gegenwärtigen, nicht anders abwendbaren Gefahr für ein Rechtsgut "
      "eine Tat begeht, um die Gefahr abzuwenden, handelt nicht rechtswidrig, [abw]wenn das geschützte Interesse das "
-     "beeinträchtigte wesentlich überwiegt. [s2]Satz zwei: Die Tat muss ein angemessenes Mittel sein.", P),
-    ("[aufbau]Das ergibt fünf Schritte: [a1]Notstandslage, [a2]Notstandshandlung, [a3]Interessenabwägung, "
-     "[a4]Angemessenheit [a5]und das subjektive Element.", PS),
+     "beeinträchtigte wesentlich überwiegt. [s2]Satz zwei: Die Tat muss ein angemessenes Mittel sein.", PS),
     # --- E 1. Notstandslage ----------------------------------------------------------------------------------------------------
     ("[lage]Erstens die Notstandslage: eine Gefahr für ein Rechtsgut. [leben]Korbinian droht zu erfrieren, also eine Gefahr "
      "für Leben und Leib. [gegenw]Gegenwärtig ist die Gefahr nach dem Bundesgerichtshof, wenn die Schutzmaßnahmen sofort "
@@ -83,16 +81,15 @@ SEGMENTE = [
      "Hund. [tuer]Die Tür aber bedroht Korbinian nicht.", PS),
     # --- L Spezialität ---------------------------------------------------------------------------------------------------------
     ("[spez]Nach herrschender Meinung gehen diese zivilrechtlichen Notstände bei Eingriffen in Sachen dem Paragrafen "
-     "vierunddreißig vor. [spez_tuer]Die Sachbeschädigung an der Tür rechtfertigt deshalb Paragraf neunhundertvier. "
-     "[spez_123]Für den Hausfriedensbruch greift jedenfalls Paragraf vierunddreißig.", PS),
+     "vierunddreißig vor.", PS),
     # --- M Abgrenzung §§ 32, 35 ------------------------------------------------------------------------------------------------
     ("[p32]Zur Abgrenzung: Notwehr scheidet aus, denn es fehlt ein Angriff durch einen Menschen; das Wetter greift nicht an. "
      "[v033]Mehr dazu im Video zum Notwehrschema. [p35]Und scheitert die Abwägung, etwa bei Leben gegen Leben, bleibt nur der "
      "entschuldigende Notstand, Paragraf fünfunddreißig: Die Tat bleibt rechtswidrig, der Täter handelt aber ohne "
      "Schuld. [ht]So der Bundesgerichtshof im Haustyrannen-Fall.", PS),
     # --- N Lösung --------------------------------------------------------------------------------------------------------------
-    ("[lsg]Zurück zu Korbinian. [l303]Die Sachbeschädigung ist nach Paragraf neunhundertvier gerechtfertigt, [l123]der "
-     "Hausfriedensbruch nach Paragraf vierunddreißig. [straflos]Korbinian ist straflos. [ersatz]Frau Moser schuldet er aber "
+    ("[lsg]Zurück zu Korbinian. [l303]Die Sachbeschädigung an der Tür rechtfertigt "
+     "Paragraf neunhundertvier, [l123]den Hausfriedensbruch jedenfalls Paragraf vierunddreißig. [straflos]Korbinian ist straflos. [ersatz]Frau Moser schuldet er aber "
      "Ersatz für das Schloss, Paragraf neunhundertvier Satz zwei.", P),
     ("[ko2]Das Schloss zahle ich gern. Hauptsache, ich bin nicht erfroren.", PS, "Korbinian"),
     # --- O Klausurtipp (Lexi) --------------------------------------------------------------------------------------------------
@@ -106,7 +103,7 @@ SEGMENTE = [
     # --- Q Merksatz (Lexi) -----------------------------------------------------------------------------------------------------
     ("[merke]Merke: Paragraf vierunddreißig rechtfertigt, wenn das geschützte Interesse wesentlich überwiegt. [m2]Bei Sachen "
      "gehen die Paragrafen zweihundertachtundzwanzig und neunhundertvier BGB vor, [m3]und wer nach Paragraf neunhundertvier "
-     "in eine fremde Sache eingreift, muss den Schaden ersetzen.", 1.2),
+     "eingreift, muss den Schaden ersetzen.", 1.2),
 ]
 
 if __name__ == "__main__":
