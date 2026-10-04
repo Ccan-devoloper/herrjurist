@@ -1,21 +1,16 @@
 {
   "datum": "2026-10-06",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
+  "freigabeBetreiber": true,
   "liveVerknuepft": false,
-  "vorproduktionStatus": "review",
+  "vorproduktionStatus": "live-freigegeben",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungUsd": 0,
     "providerKostenUsd": 0,
-    "piperOffline": true,
     "coverbilder": false,
-    "autorUsd": 0,
-    "faktencheckUsd": 0,
-    "sonstigeTextKiUsd": 0,
     "bildgenerierungErlaubt": false,
-    "bildkostenUsd": 0,
-    "bilderStatus": "bewusst-ausgelassen"
+    "reelStimme": "elevenlabs-abo"
   },
   "plan": {
     "beitraege": [
@@ -44,8 +39,7 @@
         "themaId": "strafbt-746",
         "themaTitel": "Diebstahl: Wegnahme sauber prüfen",
         "fach": "strafbt",
-        "klausur": 2,
-        "lang": false
+        "klausur": 2
       }
     ],
     "stories": [
@@ -65,8 +59,7 @@
         "slot": "s1",
         "zeit": "07:30",
         "art": "teaser",
-        "beitragSlot": "b1",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b1"
       },
       {
         "slot": "s6",
@@ -78,8 +71,7 @@
         "slot": "s2",
         "zeit": "12:30",
         "art": "teaser",
-        "beitragSlot": "b2",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b2"
       },
       {
         "slot": "s7",
@@ -97,8 +89,7 @@
         "slot": "s3",
         "zeit": "18:30",
         "art": "teaser",
-        "beitragSlot": "b3",
-        "status": "aus-beitrag-ableitbar"
+        "beitragSlot": "b3"
       },
       {
         "slot": "s9",
@@ -115,74 +106,7 @@
       "klausur": 3,
       "fachLabel": "Verwaltungsrecht AT",
       "themaId": "verwalt-638",
-      "slug": "2026-10-06-b1",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Nebenbestimmung stört? Anfechtung reicht meist",
-          "titelZeilen": [
-            "Nebenbestimmung",
-            "stört? Anfechtung",
-            "reicht meist"
-          ],
-          "coverBadge": "Streitstand",
-          "coverText": "§ 36 VwVfG trifft § 113 VwGO",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Erst klären: echte Nebenbestimmung?",
-          "text": "§ 36 Abs. 2 VwVfG nennt Befristung, Bedingung, Widerrufsvorbehalt, Auflage und Auflagenvorbehalt. Eine bloße Inhaltsbestimmung, die den beantragten Regelungsgegenstand selbst verändert, ist davon zu trennen."
-        },
-        {
-          "art": "vergleich",
-          "titel": "Welche Klageart gegen die Belastung?",
-          "links": {
-            "titel": "Rechtsprechung",
-            "punkte": [
-              "Belastende echte Nebenbestimmungen sind grundsätzlich isoliert mit der Anfechtungsklage angreifbar.",
-              "Ob der Hauptverwaltungsakt ohne die Nebenbestimmung rechtmäßig bestehen kann, wird vor allem in der Begründetheit geprüft."
-            ]
-          },
-          "rechts": {
-            "titel": "Ältere / differenzierende Ansicht",
-            "punkte": [
-              "Die Klageart wird stärker nach der Art der Nebenbestimmung und ihrer Trennbarkeit differenziert.",
-              "Bei eng mit der Hauptregelung verbundenen Bedingungen oder Befristungen wird eher die Verpflichtung auf einen unbeschränkten Verwaltungsakt erwogen."
-            ]
-          }
-        },
-        {
-          "art": "text",
-          "titel": "Der Prüfungsanker: Was bleibt nach der Aufhebung?",
-          "text": "Isolierte Aufhebung setzt voraus, dass die verbleibende Hauptregelung rechtmäßig und sinnvoll bestehen kann. Fehlt diese Teilbarkeit, kann die bloße Anfechtung der Nebenbestimmung nicht zum begehrten Ergebnis führen."
-        },
-        {
-          "art": "text",
-          "titel": "Nicht verwechseln: modifizierende Gewährung",
-          "text": "Gewährt die Behörde inhaltlich etwas anderes als beantragt, liegt nicht zwingend eine Nebenbestimmung vor. Dann zielt das Begehren regelmäßig auf den Erlass des ursprünglich beantragten Verwaltungsakts und damit auf Verpflichtung."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "Erst Nebenbestimmung oder Inhaltsbestimmung trennen; dann Klageart; die rechtliche Teilbarkeit gehört in die Begründetheit."
-        },
-        {
-          "art": "cta",
-          "titel": "Drei Fragen vor dem Streitentscheid",
-          "punkte": [
-            "§ 36 Abs. 2 VwVfG oder Inhaltsbestimmung?",
-            "Isolierte Anfechtung statthaft?",
-            "Kann der Rest rechtmäßig bestehen?"
-          ],
-          "icons": [
-            "dokument",
-            "lupe",
-            "waage"
-          ]
-        }
-      ],
-      "caption": "Nebenbestimmung stört? Anfechtung reicht meist\n\nBei Nebenbestimmungen ist die Klageart ein Klassiker. Zuerst musst du klären, ob überhaupt eine echte Nebenbestimmung nach § 36 VwVfG vorliegt. Nach der Rechtsprechung sind belastende Nebenbestimmungen grundsätzlich isoliert anfechtbar; ob der Hauptverwaltungsakt ohne sie rechtmäßig bestehen kann, ist vor allem eine Frage der Begründetheit. Eine inhaltlich modifizierte Gewährung ist davon zu trennen.",
+      "caption": "Nur die Auflage anfechten? Meistens ja – der Streit um die Klageart gegen Nebenbestimmungen.\n\n▸ Zuerst prüfen, ob eine echte Nebenbestimmung vorliegt: Befristung, Bedingung, Widerrufsvorbehalt, Auflage, Auflagenvorbehalt (§ 36 Abs. 2 Nr. 1–5 VwVfG; im Landesrecht gleichlautendes VwVfG prüfen). Eine Inhaltsbestimmung oder modifizierende Gewährung ist kein abtrennbarer Zusatz; dann Verpflichtungsklage auf das Beantragte (§ 42 Abs. 1 Alt. 2 VwGO).\n▸ Rechtsprechung: Gegen belastende Nebenbestimmungen ist die Anfechtungsklage gegeben (§ 42 Abs. 1 Alt. 1 VwGO). Ob die Nebenbestimmung isoliert aufgehoben werden kann, ist eine Frage der Begründetheit, sofern nicht eine isolierte Aufhebbarkeit offenkundig von vornherein ausscheidet (BVerwG, Urt. v. 22.11.2000 – 11 C 2.00, BVerwGE 112, 221).\n▸ Gegenansicht: Unterscheidung nach der Art der Nebenbestimmung; gegen Bedingung und Befristung Verpflichtungsklage auf einen unbeschränkten Verwaltungsakt.\n▸ Begründetheit: Aufhebung „soweit“ der Verwaltungsakt rechtswidrig ist (§ 113 Abs. 1 S. 1 VwGO) – der Rest muss sinnvoll und rechtmäßig bestehen bleiben können.\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -195,37 +119,62 @@
         "#klausurtechnik",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Nebenbestimmung: isoliert anfechten",
-      "coverText": "§ 36 VwVfG trifft § 113 VwGO",
-      "coverBadge": "Streitstand",
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Ein Verwaltungsakt bleibt als Hauptkörper stehen, während eine belastende Nebenregel seitlich abgetrennt werden soll; die Frage ist, ob der Rest tragen kann.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Ein Verwaltungsakt bleibt als Hauptkörper stehen, während eine belastende Nebenregel seitlich abgetrennt werden soll; die Frage ist, ob der Rest tragen kann.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 36 VwVfG",
+        "§ 36 Abs. 1, 2 VwVfG",
         "§ 42 Abs. 1 VwGO",
         "§ 113 Abs. 1 S. 1 VwGO",
-        "Themenpool: verwalt-638"
+        "BVerwG, Urt. v. 22.11.2000 – 11 C 2.00, BVerwGE 112, 221"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "kontraintuitive-regel",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-06-b1",
+      "kurztitel": "Nebenbestimmung: isoliert anfechten",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T12:19:07.948Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Streitstand",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Streitstand",
+          "text": "Streitstand · Nur die Auflage · anfechten? · Meistens ja · § 36 Abs. 2 Nr. 4 VwVfG · Klageart · + Gutachten-Baustein · Erlaubnis: bleibt · Auflage: weg",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "Der Fall · B erhält die beantragte Erlaubnis für ein Straßenfest. · Beigefügt: B muss auf eigene Kosten einen Ordnungsdienst stellen. · Jetzt du: Welche Klage gegen den Ordnungsdienst? · Ich will nur die Auflage weg!"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "Welche Klageart? · Rechtsprechung · Belastende Nebenbestimmung: isoliert anfechten · BVerwGE 112, 221 · Teilbarkeit erst in der Begründetheit · § 113 Abs. 1 S. 1 VwGO · Gegenansicht · Nach Art der Nebenbestimmung trennen · Bedingung, Befristung: Verpflichtung auf unbeschränkten VA · § 42 Abs. 1 Alt. 2 VwGO · Erst mal: Anfechtung!"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "Die Falle: Inhaltsbestimmung · Jede Einschränkung ist eine Nebenbestimmung. · Gewährt die Behörde etwas anderes als beantragt, fehlt der abtrennbare Zusatz. · Dann: Verpflichtungsklage auf das Beantragte. · § 42 Abs. 1 Alt. 2 VwGO · Zusatz oder Inhalt?"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "In der Begründetheit · Ist die Nebenbestimmung rechtswidrig und verletzt sie B? · § 36 Abs. 1, 2 VwVfG · Kann der Rest sinnvoll und rechtmäßig bestehen bleiben? · § 113 Abs. 1 S. 1 VwGO · Scheidet isolierte Aufhebung offenkundig aus: Klage schon unzulässig. · BVerwGE 112, 221 · Bleibt das Fest erlaubt?"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "Lösung: Anfechtungsklage gegen die Auflage · § 42 Abs. 1 Alt. 1 VwGO, Teilbarkeit in der Begründetheit · Zusatz oder Inhalt? · Zusatz: anfechten, · Teilbarkeit später. · Speichern fürs Examen · Wie hättest du entschieden? · Weiterwischen: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "Verwaltungsrecht AT",
+          "text": "So im Gutachten · Obersatz · Statthaft könnte die Anfechtungsklage gegen die Auflage sein. · Norm · § 36 Abs. 2 Nr. 4 VwVfG · Auflage: selbständiger, belastender Zusatz · Subsumtion · BVerwGE 112, 221 · Belastende Nebenbestimmungen sind grundsätzlich isoliert anfechtbar. · Ergebnis · § 42 Abs. 1 Alt. 1 VwGO · Anfechtungsklage statthaft"
+        }
+      ]
     },
     "b2": {
       "format": "minifall",
@@ -233,62 +182,7 @@
       "klausur": 1,
       "fachLabel": "BGB Allgemeiner Teil",
       "themaId": "bgbat-428",
-      "slug": "2026-10-06-b2",
-      "folien": [
-        {
-          "art": "titel",
-          "titel": "Vertreter ahnungslos, Chef fein raus? § 166 II BGB sagt nein",
-          "titelZeilen": [
-            "Vertreter ahnungslos,",
-            "Chef fein raus?",
-            "§ 166 II BGB",
-            "sagt nein"
-          ],
-          "coverBadge": "Mini-Fall",
-          "coverText": "§ 166 BGB ist die Zurechnungsweiche",
-          "coverBildAuslassen": true
-        },
-        {
-          "art": "text",
-          "titel": "Der Fall",
-          "text": "P lässt V nach genauer Vorgabe einen Vertrag schließen. V kennt einen für die rechtliche Bewertung wichtigen Umstand nicht; P kennt ihn. Nach Vertragsschluss will P sich auf die Unkenntnis des V berufen."
-        },
-        {
-          "art": "text",
-          "titel": "Grundregel des § 166 Abs. 1 BGB",
-          "text": "Soweit die rechtlichen Folgen einer Willenserklärung durch Willensmängel oder Kenntnis beziehungsweise Kennenmüssen beeinflusst werden, kommt es grundsätzlich auf die Person des Vertreters an – nicht auf den Vertretenen."
-        },
-        {
-          "art": "text",
-          "titel": "Ausnahme bei Weisung: § 166 Abs. 2 BGB",
-          "text": "Handelt der Vertreter nach bestimmten Weisungen des Vertretenen, kann sich der Vertretene hinsichtlich der Umstände, die er selbst kannte oder kennen musste, nicht auf die Unkenntnis des Vertreters berufen."
-        },
-        {
-          "art": "text",
-          "titel": "Lösung des Mini-Falls",
-          "text": "Weil V nach konkreter Vorgabe des P handelt, ist § 166 Abs. 2 BGB zu prüfen. P kann seine eigene Kenntnis nicht dadurch neutralisieren, dass er einen unwissenden Vertreter vorschiebt."
-        },
-        {
-          "art": "merke",
-          "titel": "Merksatz",
-          "text": "§ 166 I: grundsätzlich Vertreterwissen. § 166 II: bei konkreter Weisung schlägt relevantes Wissen des Vertretenen zurück."
-        },
-        {
-          "art": "cta",
-          "titel": "Drei Stationen bei Wissenszurechnung",
-          "punkte": [
-            "Welche Kenntnis oder welcher Willensmangel ist entscheidend?",
-            "§ 166 Abs. 1: Vertreter als Bezugsperson",
-            "§ 166 Abs. 2: konkrete Weisung und Wissen des Vertretenen?"
-          ],
-          "icons": [
-            "lupe",
-            "person",
-            "link"
-          ]
-        }
-      ],
-      "caption": "Vertreter ahnungslos, Chef fein raus? § 166 II BGB sagt nein\n\nBei der Stellvertretung ist Wissen nicht automatisch dem Geschäftsherrn zuzuordnen. § 166 Abs. 1 BGB stellt bei Willensmängeln und Kenntnis grundsätzlich auf die Person des Vertreters ab. Handelt der Vertreter aber nach bestimmten Weisungen, verhindert § 166 Abs. 2 BGB, dass sich der Vertretene auf die Unkenntnis des Vertreters beruft, obwohl er den maßgeblichen Umstand selbst kannte oder kennen musste.",
+      "caption": "Vertreter ahnungslos – Chefin trotzdem bösgläubig: Mini-Fall zu § 166 Abs. 2 BGB.\n\n▸ Grundregel: Soweit Willensmängel oder Kenntnis bzw. Kennenmüssen die Rechtsfolgen beeinflussen, kommt es auf die Person des Vertreters an (§ 166 Abs. 1 BGB).\n▸ Ausnahme: Handelt der Bevollmächtigte nach bestimmten Weisungen des Vollmachtgebers, kann sich dieser hinsichtlich der Umstände, die er selbst kannte, nicht auf die Unkenntnis des Vertreters berufen (§ 166 Abs. 2 S. 1 BGB); dasselbe gilt für Kennenmüssen, soweit es der Kenntnis gleichsteht (§ 166 Abs. 2 S. 2 BGB).\n▸ Im Fall: P wies V an, genau diesen Wagen zu kaufen, und kannte den Unfallschaden. Ihre Kenntnis wird ihr entgegengehalten; die Mängelrechte sind ausgeschlossen (§ 442 Abs. 1 S. 1 BGB).\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -301,140 +195,68 @@
         "#minifall",
         "#examensvorbereitung"
       ],
-      "kurztitel": "§ 166 II BGB: Wessen Wissen zählt",
-      "coverText": "§ 166 BGB ist die Zurechnungsweiche",
-      "coverBadge": "Mini-Fall",
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Zwischen Vertretenem und Vertreter liegt eine Wissensleitung; eine konkrete Weisung öffnet den Rückkanal zur Kenntnis des Vertretenen.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Zwischen Vertretenem und Vertreter liegt eine Wissensleitung; eine konkrete Weisung öffnet den Rückkanal zur Kenntnis des Vertretenen.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 166 Abs. 1 BGB",
-        "§ 166 Abs. 2 BGB",
-        "Themenpool: bgbat-428"
+        "§ 166 Abs. 1, 2 BGB",
+        "§ 442 Abs. 1 S. 1 BGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "verbreiteter-irrtum",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-06-b2",
+      "kurztitel": "§ 166 II BGB: Wessen Wissen zählt",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T11:38:55.752Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "coverBadge": "Mini-Fall",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Mini-Fall",
+          "text": "Mini-Fall · Vertreter ahnungslos – · Chefin trotzdem · bösgläubig · § 166 Abs. 2 S. 1 BGB · Wessen Wissen? · + Gutachten-Baustein",
+          "bild": "op-cover"
+        },
+        {
+          "art": "text",
+          "titel": "BGB Allgemeiner Teil",
+          "text": "Der Fall · P bevollmächtigt V: „Kauf genau diesen Gebrauchtwagen von K.“ · P weiß vom Unfallschaden, V nicht. Später verlangt P Nacherfüllung. · Jetzt du: Zählt das Wissen des V oder der P? · Ich wusste nichts!"
+        },
+        {
+          "art": "text",
+          "titel": "BGB Allgemeiner Teil",
+          "text": "Grundregel: Vertreterwissen · Bei Willensmängeln, Kenntnis und Kennenmüssen zählt der Vertreter. · § 166 Abs. 1 BGB · V kannte den Schaden nicht: Ausschluss nach § 442 BGB scheint zu scheitern. · § 442 Abs. 1 S. 1 BGB · Also alles gut?"
+        },
+        {
+          "art": "text",
+          "titel": "BGB Allgemeiner Teil",
+          "text": "Der typische Fehler · Bei § 166 Abs. 1 BGB stehen bleiben. · Handelt V nach bestimmten Weisungen, kann sich P nicht auf seine Unkenntnis berufen. · § 166 Abs. 2 S. 1 BGB · Gilt auch für Kennenmüssen, wo es der Kenntnis gleichsteht. · § 166 Abs. 2 S. 2 BGB · Erwischt."
+        },
+        {
+          "art": "text",
+          "titel": "BGB Allgemeiner Teil",
+          "text": "Prüfung in 3 Schritten · Wissensnorm · § 442 Abs. 1 S. 1 BGB · Kenntnis des Käufers bei Vertragsschluss · Vertreter · § 166 Abs. 1 BGB · V wusste nichts · Weisung · § 166 Abs. 2 S. 1 BGB · Kauf genau dieses Wagens: P muss sich ihr Wissen entgegenhalten lassen · Am Ende: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "BGB Allgemeiner Teil",
+          "text": "Lösung: keine Mängelrechte · §§ 166 Abs. 2 S. 1, 442 Abs. 1 S. 1 BGB · Vertreter ist die Regel, · Weisung dreht es um: · eigenes Wissen schadet. · Speichern fürs Examen · Hättest du Abs. 2 gesehen? · Weiterwischen: Baustein fürs Gutachten"
+        },
+        {
+          "art": "text",
+          "titel": "BGB Allgemeiner Teil",
+          "text": "So im Gutachten · Obersatz · § 442 Abs. 1 S. 1 BGB · Die Mängelrechte der P könnten ausgeschlossen sein. · Norm · § 166 Abs. 2 S. 1 BGB · bei Weisung zählt das Wissen des Vollmachtgebers · Subsumtion · V kaufte nach Weisung genau diesen Wagen; P kannte den Schaden. · Ergebnis · Mängelrechte ausgeschlossen"
+        }
+      ]
     },
     "b3": {
       "format": "reel",
-      "layout": "erklaer",
       "fach": "strafbt",
       "klausur": 2,
       "fachLabel": "Strafrecht BT",
       "themaId": "strafbt-746",
-      "slug": "2026-10-06-b3",
-      "szenen": [
-        {
-          "art": "hook",
-          "nummer": null,
-          "titel": "„Sache weg“ ist noch keine Wegnahme",
-          "unter": "§ 242 StGB",
-          "text": "Gewahrsamsbruch und neue Gewahrsamsbegründung müssen zusammenpassen.",
-          "norm": "§ 242 StGB",
-          "icon": "handtasche",
-          "sprecher": "Sache weg – ist das schon eine Wegnahme? Noch nicht. Du brauchst eine fremde bewegliche Sache, fremden Gewahrsam, dessen Bruch und neuen Gewahrsam.",
-          "marken": [
-            "Wegnahme",
-            "Gewahrsam"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 1,
-          "titel": "Fremde bewegliche Sache",
-          "text": "Die Sache darf nicht im Alleineigentum des Täters stehen und muss tatsächlich fortbewegbar sein.",
-          "norm": "§ 242 Abs. 1 StGB",
-          "sprecher": "Schritt eins: Tatobjekt. Die Sache muss für den Täter fremd und beweglich sein. Fremd ist sie, wenn sie zumindest auch im Eigentum eines anderen steht.",
-          "marken": [
-            "fremd",
-            "beweglich"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 2,
-          "titel": "Bestehenden Gewahrsam bestimmen",
-          "text": "Gewahrsam ist tatsächliche Sachherrschaft getragen von natürlichem Herrschaftswillen.",
-          "norm": null,
-          "sprecher": "Schritt zwei: Wer hatte vor der Tat Gewahrsam? Entscheidend ist die tatsächliche Sachherrschaft nach der Verkehrsauffassung, getragen von einem natürlichen Herrschaftswillen.",
-          "marken": [
-            "alter Gewahrsam"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 3,
-          "titel": "Gewahrsam brechen",
-          "text": "Der bisherige Gewahrsam wird gegen oder ohne den Willen des Inhabers aufgehoben.",
-          "norm": null,
-          "sprecher": "Schritt drei: Der alte Gewahrsam muss gebrochen werden. Das geschieht gegen oder ohne den Willen des bisherigen Gewahrsamsinhabers.",
-          "marken": [
-            "Bruch"
-          ]
-        },
-        {
-          "art": "schritt",
-          "nummer": 4,
-          "titel": "Neuen Gewahrsam begründen",
-          "text": "Der Täter oder ein Dritter muss die Sachherrschaft so erlangen, dass der alte Inhaber nicht mehr ohne Überwindung der neuen Herrschaft zugreifen kann.",
-          "norm": null,
-          "sprecher": "Schritt vier: Neuer Gewahrsam muss entstehen. Wann das der Fall ist, hängt stark von Größe, Ort und Verkehrsauffassung ab – im Laden etwa anders als bei einem Auto.",
-          "marken": [
-            "neuer Gewahrsam"
-          ]
-        },
-        {
-          "art": "punkt",
-          "nummer": null,
-          "titel": "Subjektive Seite danach",
-          "text": "Vorsatz plus Absicht rechtswidriger Zueignung getrennt prüfen.",
-          "norm": "§ 242 Abs. 1 StGB",
-          "sprecher": "Erst danach gehst du auf die subjektive Seite: Vorsatz und die Absicht rechtswidriger Zueignung. Die Wegnahme wird nicht durch die Zueignungsabsicht ersetzt.",
-          "marken": [
-            "Zueignungsabsicht"
-          ]
-        },
-        {
-          "art": "merke",
-          "nummer": null,
-          "titel": "Die Formel",
-          "text": "Fremde bewegliche Sache + Bruch fremden Gewahrsams + Begründung neuen Gewahrsams.",
-          "norm": "§ 242 StGB",
-          "sprecher": "Merke die Wegnahmeformel: Bruch fremden und Begründung neuen Gewahrsams. Genau diese beiden Bewegungen musst du am Sachverhalt zeigen.",
-          "marken": [
-            "brechen → neu begründen"
-          ]
-        },
-        {
-          "art": "cta",
-          "nummer": null,
-          "titel": "Bei Wegnahme nicht abkürzen",
-          "text": "Gewahrsam vor und nach der Tat konkret beschreiben.",
-          "norm": null,
-          "sprecher": "Schreib bei schwierigen Fällen zwei Sätze mehr: Wer hatte vorher Gewahrsam, und ab welchem Moment hatte ihn der Täter oder ein Dritter? Das macht die Subsumtion belastbar.",
-          "marken": [
-            "vorher / nachher"
-          ]
-        }
-      ],
-      "caption": "„Sache weg“ ist noch keine Wegnahme\n\nWegnahme bei § 242 StGB bedeutet Bruch fremden und Begründung neuen Gewahrsams. Deshalb zuerst den Gewahrsam vor der Tat bestimmen und dann erklären, wann die neue Sachherrschaft entsteht. Erst danach gehören Vorsatz und die Absicht rechtswidriger Zueignung in die Prüfung.",
+      "caption": "Sache weg, also Wegnahme? Nicht so schnell – Wegnahme heißt Bruch fremden und Begründung neuen Gewahrsams.\n\n▸ Tatobjekt: fremde bewegliche Sache (§ 242 Abs. 1 StGB).\n▸ Alter Gewahrsam: tatsächliche Sachherrschaft, getragen von einem natürlichen Herrschaftswillen, beurteilt nach der Verkehrsauffassung.\n▸ Bruch: Aufhebung ohne oder gegen den Willen des bisherigen Gewahrsamsinhabers. Ein Einverständnis schließt den Bruch aus.\n▸ Neuer Gewahrsam: Der Täter oder ein Dritter erlangt die Sachherrschaft so, dass der alte Inhaber nicht mehr ohne Überwindung dieser Herrschaft zugreifen kann. Kleine Sachen in der eigenen Kleidung: neuer Gewahrsam schon im Laden.\n▸ Erst danach die subjektive Seite: Vorsatz und Absicht rechtswidriger Zueignung.\n\nSpeichern fürs Examen 📌",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -447,210 +269,331 @@
         "#klausurtechnik",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Diebstahl: Wegnahme sauber prüfen",
-      "titelZeilen": [
-        "„Sache weg“",
-        "ist noch keine",
-        "Wegnahme"
-      ],
-      "coverText": "Alter Gewahrsam → Bruch → neuer Gewahrsam",
-      "coverBadge": "Reel",
-      "coverBildAuslassen": true,
-      "coverRegie": {
-        "charaktere": [],
-        "kernidee": "Eine Sache überquert sichtbar die Grenze zwischen altem und neuem Gewahrsamsbereich; der Bruch ist die zentrale Bewegung.",
-        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Eine Sache überquert sichtbar die Grenze zwischen altem und neuem Gewahrsamsbereich; der Bruch ist die zentrale Bewegung.",
-        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
-        "alternative": null
-      },
       "quellen": [
-        "§ 242 StGB",
-        "Themenpool: strafbt-746"
+        "§ 242 Abs. 1 StGB"
       ],
-      "hookTyp": "fehler",
-      "hookMuster": "nicht-klarstellung",
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
+      "slug": "2026-10-06-b3",
+      "kurztitel": "Diebstahl: Wegnahme sauber prüfen",
+      "regelGeprueft": true,
+      "manuellGeprueft": false,
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
-      "hookUpdate": {
-        "stand": "2026-09-25T12:19:07.948Z",
-        "quelle": "vorproduktion/hook-update.json"
-      }
+      "bildStatus": "open-peeps-render",
+      "renderer": "open-peeps-v4",
+      "liveVorrangAktiv": true,
+      "bild": "op-cover",
+      "reelTyp": "klausurfalle",
+      "hookStil": "kippen",
+      "coverBadge": "Reel",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Sache weg? Also Wegnahme."
+        },
+        {
+          "art": "schritt",
+          "titel": "Alter Gewahrsam"
+        },
+        {
+          "art": "schritt",
+          "titel": "Bruch"
+        },
+        {
+          "art": "schritt",
+          "titel": "Neuer Gewahrsam"
+        }
+      ],
+      "sprecher": [
+        "Sache weg, also Wegnahme? Nicht so schnell. Du brauchst Bruch und neuen Gewahrsam.",
+        "Erst: Wer hatte Gewahrsam? Sachherrschaft mit Herrschaftswillen, nach Verkehrsauffassung.",
+        "Dann der Bruch: ohne oder gegen den Willen des Inhabers. Einverständnis schließt ihn aus.",
+        "Neuer Gewahrsam: Kleines in der Jackentasche genügt schon im Laden.",
+        "Merke: alten brechen, neuen begründen."
+      ],
+      "dauerS": 28.77,
+      "tempo": 1.05
     },
     "s4": {
       "slot": "s4",
       "art": "frage",
-      "fach": "strafbt",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafbt-321",
-      "ueberzeile": "Prüfungsfrage Strafrecht BT",
-      "titel": "Wann ist eine Freiheitsberaubung vollendet?",
       "fachLabel": "Strafrecht BT",
-      "quellen": [
-        "§ 239 StGB",
-        "Themenpool: strafbt-321"
+      "themaId": "strafbt-321",
+      "beitragSlot": null,
+      "quellen": null,
+      "frage": [
+        "Wann ist § 239",
+        "StGB vollendet?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
       "optionen": [
-        "Erst nach einer Mindestdauer von mehreren Stunden",
-        "Sobald das Opfer seinen Aufenthaltsort nicht verlassen kann",
-        "Schon wenn das Verlassen bloß erschwert wird"
+        "Erst nach mehreren Stunden",
+        "Sobald das Opfer nicht weg kann",
+        "Schon bei bloßer Erschwerung"
       ],
-      "richtig": 1
+      "pairId": "strafbt-321",
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Prüfungsfrage",
+        "Wann ist § 239",
+        "StGB vollendet?",
+        "Erst nach mehreren Stunden",
+        "Sobald das Opfer nicht weg kann",
+        "Schon bei bloßer Erschwerung",
+        "Auflösung in der nächsten Story"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s5": {
       "slot": "s5",
       "art": "antwort",
-      "fach": "strafbt",
+      "fach": null,
       "klausur": 2,
-      "pairId": "strafbt-321",
-      "ueberzeile": "Auflösung",
-      "titel": "Auf die Fortbewegungsfreiheit kommt es an",
-      "text": "§ 239 StGB ist vollendet, sobald das Opfer gegen oder ohne seinen Willen daran gehindert wird, seinen Aufenthaltsort zu verlassen. Auch eine nur relativ kurze Aufhebung der Fortbewegungsfreiheit kann genügen; bloße Erschwerung reicht nicht automatisch.",
-      "norm": "§ 239 StGB",
       "fachLabel": "Strafrecht BT",
-      "quellen": [
-        "§ 239 StGB",
-        "Themenpool: strafbt-321"
+      "themaId": "strafbt-321",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Sobald das Opfer",
+        "nicht weg kann"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24",
       "optionen": [
-        "Erst nach einer Mindestdauer von mehreren Stunden",
-        "Sobald das Opfer seinen Aufenthaltsort nicht verlassen kann",
-        "Schon wenn das Verlassen bloß erschwert wird"
+        "Erst nach mehreren Stunden",
+        "Sobald das Opfer nicht weg kann",
+        "Schon bei bloßer Erschwerung"
       ],
-      "richtig": 1
+      "richtig": 1,
+      "text": "Die Fortbewegungsfreiheit ist aufgehoben. Schon kurze Dauer kann genügen, bloße Erschwerung nicht.",
+      "norm": "§ 239 Abs. 1 StGB",
+      "pairId": "strafbt-321",
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Auflösung",
+        "Sobald das Opfer",
+        "nicht weg kann",
+        "Erst nach mehreren Stunden",
+        "Sobald das Opfer nicht weg kann",
+        "Schon bei bloßer Erschwerung",
+        "Die Fortbewegungsfreiheit ist aufgehoben. Schon kurze Dauer kann genügen, bloße Erschwerung nicht.",
+        "§ 239 Abs. 1 StGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s6": {
       "slot": "s6",
       "art": "norm",
-      "fach": "bgbat",
+      "fach": null,
       "klausur": 1,
-      "pairId": "bgbat-154",
-      "ueberzeile": "Norm des Tages",
-      "titel": "§ 107 BGB: Nur rechtlich vorteilhaft?",
-      "text": "Ein Geschäft ist lediglich rechtlich vorteilhaft, wenn es die Rechtsstellung des Minderjährigen ausschließlich verbessert und keine rechtlichen Verpflichtungen oder Rechtsverluste begründet. Wirtschaftlich günstig ist nicht dasselbe wie rechtlich vorteilhaft.",
-      "norm": "§ 107 BGB",
       "fachLabel": "BGB Allgemeiner Teil",
-      "quellen": [
-        "§ 107 BGB",
-        "Themenpool: bgbat-154"
+      "themaId": "bgbat-154",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Günstig gekauft =",
+        "lediglich Vorteil?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "norm": "§ 107 BGB",
+      "punkte": [
+        [
+          "Lediglich rechtlich vorteilhaft: keine Pflicht, kein Rechtsverlust.",
+          "ok",
+          null
+        ],
+        [
+          "Auch ein Schnäppchenkauf verpflichtet zur Zahlung: Einwilligung nötig.",
+          "nein",
+          null
+        ]
+      ],
+      "sichtbareTexte": [
+        "BGB Allgemeiner Teil",
+        "Norm des Tages",
+        "Günstig gekauft =",
+        "lediglich Vorteil?",
+        "§ 107 BGB",
+        "Lediglich rechtlich vorteilhaft: keine Pflicht, kein Rechtsverlust.",
+        "Auch ein Schnäppchenkauf verpflichtet zur Zahlung: Einwilligung nötig."
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s7": {
       "slot": "s7",
       "art": "zahl",
-      "fach": "assessorz",
+      "fach": null,
       "klausur": 1,
-      "pairId": "assessorz-803",
-      "ueberzeile": "4 Angaben zuerst lesen",
-      "zahl": "4",
-      "titel": "Bearbeitervermerk: Vier Dinge vor der Akte klären",
-      "text": "Diese vier Angaben bestimmen, welche Leistung die Klausur überhaupt verlangt.",
-      "punkte": [
-        "Rolle: Gericht, Staatsanwaltschaft, Behörde oder Anwaltschaft?",
-        "Zeitpunkt: Auf welchen Bearbeitungsstand ist abzustellen?",
-        "Auszuformulierende Teile: Urteil, Gutachten, Schriftsatz, Verfügung oder Vortrag?",
-        "Erlassene Formalien: Welche Standardteile dürfen nach dem Vermerk weggelassen werden?"
-      ],
       "fachLabel": "Zivilrechtliche Assessorklausur",
-      "quellen": [
-        "Themenpool: assessorz-803"
+      "themaId": "assessorz-803",
+      "beitragSlot": null,
+      "quellen": null,
+      "ueberzeile": "Bearbeitervermerk",
+      "zahl": "4",
+      "einheit": "Angaben",
+      "titel": [
+        "Vor der Akte",
+        "lesen"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "punkte": [
+        [
+          "Rolle: Gericht oder Anwalt?",
+          "ok",
+          null
+        ],
+        [
+          "Maßgeblicher Zeitpunkt",
+          "ok",
+          null
+        ],
+        [
+          "Was auszuformulieren ist",
+          "ok",
+          null
+        ],
+        [
+          "Welche Teile erlassen sind",
+          "warn",
+          null
+        ]
+      ],
+      "sichtbareTexte": [
+        "Zivilrechtliche Assessorklausur",
+        "Bearbeitervermerk",
+        "4",
+        "Vor der Akte",
+        "lesen",
+        "Rolle: Gericht oder Anwalt?",
+        "Maßgeblicher Zeitpunkt",
+        "Was auszuformulieren ist",
+        "Welche Teile erlassen sind"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s8": {
       "slot": "s8",
       "art": "streitstand",
-      "fach": "gesetzs",
+      "fach": null,
       "klausur": 1,
-      "pairId": "gesetzs-205",
-      "ueberzeile": "Streitstand GoA",
-      "titel": "Auch-fremdes Geschäft: Wird Fremdgeschäftsführungswille vermutet?",
-      "norm": "§ 677 BGB",
-      "optionen": [
-        "Rechtsprechung und verbreitete Ansicht: Beim auch-fremden Geschäft wird der Fremdgeschäftsführungswille grundsätzlich vermutet.",
-        "Einschränkende Ansicht: Bei neutralen oder stark eigennützigen Geschäften darf die Vermutung nicht schematisch greifen; es braucht zusätzliche Anhaltspunkte für das Handeln auch für einen anderen."
-      ],
-      "text": "Ein ausschließlich eigenes Geschäft bleibt außerhalb der GoA. In der Klausur deshalb zuerst objektive Fremdheit beziehungsweise Auch-Fremdheit bestimmen und erst dann die Vermutung diskutieren.",
       "fachLabel": "Gesetzliche Schuldverhältnisse",
-      "quellen": [
-        "§ 677 BGB",
-        "Themenpool: gesetzs-205"
+      "themaId": "gesetzs-205",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Auch-fremdes Geschäft:",
+        "Wille vermutet?"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "ansichten": [
+        [
+          "Rechtsprechung",
+          "Fremder Wille wird vermutet."
+        ],
+        [
+          "Teile der Literatur",
+          "Keine schematische Vermutung."
+        ]
+      ],
+      "klausur_tipp": "Erst Fremdheit, dann Vermutung.",
+      "norm": "§ 677 BGB",
+      "sichtbareTexte": [
+        "Gesetzliche Schuldverhältnisse",
+        "Streitstand",
+        "Auch-fremdes Geschäft:",
+        "Wille vermutet?",
+        "Rechtsprechung",
+        "Fremder Wille wird vermutet.",
+        "Teile der Literatur",
+        "Keine schematische Vermutung.",
+        "Erst Fremdheit, dann Vermutung.",
+        "§ 677 BGB"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s9": {
       "slot": "s9",
       "art": "merksatz",
-      "fach": "vwgo",
+      "fach": null,
       "klausur": 3,
-      "pairId": "vwgo-404",
-      "ueberzeile": "Merksatz VwGO",
-      "titel": "Schutznormtheorie bei § 42 Abs. 2 VwGO",
-      "text": "Eine Norm vermittelt Drittschutz, wenn sie nicht nur öffentlichen Interessen dient, sondern zumindest auch den Schutz eines abgrenzbaren Kreises Einzelner bezweckt. Erst Schutzrichtung der Norm bestimmen, dann mögliche eigene Rechtsverletzung.",
-      "norm": "§ 42 Abs. 2 VwGO",
       "fachLabel": "Verwaltungsprozessrecht",
-      "quellen": [
-        "§ 42 Abs. 2 VwGO",
-        "Themenpool: vwgo-404"
+      "themaId": "vwgo-404",
+      "beitragSlot": null,
+      "quellen": null,
+      "titel": [
+        "Klagebefugnis:",
+        "Schutznormtheorie"
       ],
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen",
-      "manuellGeprueft": true,
-      "regelGeprueft": true,
-      "finalisiertVon": "chat-vorproduktion",
-      "fachStand": "redaktionell-2026-09-24"
+      "zeilen": [
+        [
+          [
+            "Drittschutz",
+            "a"
+          ],
+          [
+            " nur,",
+            null
+          ]
+        ],
+        [
+          [
+            "wenn die Norm",
+            null
+          ]
+        ],
+        [
+          [
+            "auch Einzelne",
+            "b"
+          ]
+        ],
+        [
+          [
+            "schützen will.",
+            null
+          ]
+        ]
+      ],
+      "norm": "§ 42 Abs. 2 VwGO",
+      "sichtbareTexte": [
+        "Verwaltungsprozessrecht",
+        "Merksatz",
+        "Klagebefugnis:",
+        "Schutznormtheorie",
+        "Drittschutz nur,",
+        "wenn die Norm",
+        "auch Einzelne",
+        "schützen will.",
+        "§ 42 Abs. 2 VwGO"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s1": {
       "slot": "s1",
@@ -658,16 +601,25 @@
       "fach": "verwalt",
       "klausur": 3,
       "fachLabel": "Verwaltungsrecht AT",
-      "titel": "Nebenbestimmung: isoliert anfechten?",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b1",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Nur die Auflage anfechten?"
+      ],
+      "unter": "Streitstand + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "Verwaltungsrecht AT",
+        "Neu im Feed",
+        "Nur die Auflage anfechten?",
+        "Streitstand + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s2": {
       "slot": "s2",
@@ -675,16 +627,25 @@
       "fach": "bgbat",
       "klausur": 1,
       "fachLabel": "BGB Allgemeiner Teil",
-      "titel": "§ 166 BGB: Wessen Wissen zählt?",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b2",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Vertreter ahnungslos"
+      ],
+      "unter": "Mini-Fall + Gutachten-Baustein · im Profil",
+      "sichtbareTexte": [
+        "BGB Allgemeiner Teil",
+        "Neu im Feed",
+        "Vertreter ahnungslos",
+        "Mini-Fall + Gutachten-Baustein · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     },
     "s3": {
       "slot": "s3",
@@ -692,16 +653,25 @@
       "fach": "strafbt",
       "klausur": 2,
       "fachLabel": "Strafrecht BT",
-      "titel": "Diebstahl: Wegnahme sauber prüfen",
-      "text": "Der vollständige Beitrag ist jetzt im Feed.",
-      "pille": "Jetzt im Feed",
+      "themaId": null,
       "beitragSlot": "b3",
-      "abgeleitet": true,
-      "freigabeBetreiber": false,
-      "vorproduktionStatus": "review",
-      "textProviderKostenUsd": 0,
-      "faktencheckProviderKostenUsd": 0,
-      "bildStatus": "bewusst-ausgelassen"
+      "quellen": null,
+      "titel": [
+        "Sache weg, also Wegnahme?"
+      ],
+      "unter": "Neues Reel · im Profil",
+      "sichtbareTexte": [
+        "Strafrecht BT",
+        "Neu im Feed",
+        "Sache weg, also Wegnahme?",
+        "Neues Reel · im Profil"
+      ],
+      "renderer": "open-peeps-v4",
+      "bildStatus": "open-peeps-render",
+      "freigabeBetreiber": true,
+      "vorproduktionStatus": "live-freigegeben",
+      "liveVorrangAktiv": true,
+      "regelGeprueft": true
     }
   },
   "hookOptimierung": {
@@ -717,35 +687,27 @@
   },
   "renderVorschau": {
     "status": "fertig",
-    "erzeugtAm": "2026-09-24T21:45:38.745Z",
+    "erzeugtAm": "2026-10-04T23:44:34Z",
     "pfad": "vorproduktion/2026-10-06/fertig",
     "providerKostenUsd": 0,
-    "textProviderKostenUsd": 0,
-    "faktencheckProviderKostenUsd": 0,
-    "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "reelStimme": "piper-offline",
-    "freigabeBetreiber": false,
-    "coverbilderAngewandt": {
-      "stand": "2026-09-25T12:35:32.077Z",
-      "providerKostenUsd": 0,
-      "slots": [
-        "b1",
-        "b2",
-        "b3"
-      ]
-    },
-    "quizPatch": {
-      "stand": "2026-09-25T11:28:46.329Z",
-      "slots": [
-        "s4",
-        "s5"
-      ],
-      "providerKostenUsd": 0
-    }
+    "coverIcons": false,
+    "renderer": "open-peeps-v4",
+    "layoutQuelle": "open-peeps-variante-c",
+    "reelStimme": "elevenlabs-laura",
+    "sfx": "freesound-cc0",
+    "freigabeBetreiber": true,
+    "liveVorrangAktiv": true,
+    "normalbetriebGesperrt": true,
+    "wartetLive": []
   },
   "liveRegel": {
     "veroeffentlichen": false,
     "freigabeErforderlich": true
-  }
+  },
+  "layoutQuelle": "open-peeps-variante-c",
+  "semantikQuelle": "herrjurist",
+  "liveVorrangAktiv": true,
+  "normalbetriebGesperrt": true,
+  "bildStatus": "open-peeps-render"
 }
