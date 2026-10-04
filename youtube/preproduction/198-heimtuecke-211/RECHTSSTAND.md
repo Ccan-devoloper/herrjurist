@@ -70,7 +70,7 @@
 | `lehre` | Teil der Lehre: Tatbestand einschränken, besonders verwerflicher Vertrauensbruch | Lösungsskizze Freiburg Fall 1 („M2 (Lit.)“); als Meinung gekennzeichnet |
 | `bghn` | BGH verlangt das nicht | 1 StR 393/10 Rn. 5 |
 | `hier` | wer der Lehre folgt, kann hier gut vertreten: Vertrauen in die Versöhnung gezielt geweckt und missbraucht | eigene Subsumtion, vorsichtig formuliert („kann … gut vertreten“); die Lehre kann bei zerrüttetem Verhältnis auch anders entscheiden (Freiburg Fall 1: „hier wohl (−), da Vertrauensverhältnis nicht mehr besteht“), deshalb kein „nach beiden Ansichten“ |
-| `tipp`–`tipp3` | Arglosigkeit zum Beginn des ersten mit Tötungsvorsatz geführten Angriffs prüfen; Streit davor schließt sie nicht automatisch aus; Einschränkungen erst nach den Merkmalen | 2 StR 352/24 Rn. 25; 3 StR 171/12 Rn. 5; Klausurkonvention (Gesamtwissen: „erst danach Restriktionsansätze diskutieren“) |
+| `tipp`–`tipp3` | prüfen, ob das Opfer bei Beginn des ersten mit Tötungsvorsatz geführten Angriffs arglos war; Streit davor schließt sie nicht automatisch aus; Einschränkungen erst nach den Merkmalen | 2 StR 352/24 Rn. 25; 3 StR 171/12 Rn. 5; Klausurkonvention (Gesamtwissen: „erst danach Restriktionsansätze diskutieren“) |
 | `merke`–`mk3` | Heimtückisch handelt, wer die Arg- und Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt; maßgeblich Beginn des Angriffs; Schlafender bleibt arglos; wer mit einem Angriff rechnet, ist es nicht | 2 StR 352/24 Rn. 25–27; Merksatz verkürzt (feindliche Willensrichtung im Merksatz nicht wiederholt; „wer mit einem Angriff rechnet“ = erheblicher Angriff, Rn. 25 f.) |
 
 ## Bewusst nicht behauptet
