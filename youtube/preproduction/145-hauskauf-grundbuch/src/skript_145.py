@@ -43,7 +43,7 @@ SEGMENTE = [
     # --- D 1. Kaufvertrag ---------------------------------------------------------------------------------------------------
     ("[k1]Erstens: der Kaufvertrag. Paragraf dreihundertelf b Absatz eins Satz eins: [w311]Ein Vertrag, durch den sich der "
      "eine Teil verpflichtet, das Eigentum an einem Grundstück zu übertragen oder zu erwerben, bedarf der notariellen "
-     "Beurkundung. [zweck]Das soll die Beteiligten vor übereilten Verträgen bewahren, und der Notar kann sie belehren. "
+     "Beurkundung. [zweck]Das soll die Beteiligten vor unüberlegten Verträgen bewahren, und der Notar kann sie belehren. "
      "[nichtig]Fehlt die Beurkundung, ist der Vertrag nach Paragraf hundertfünfundzwanzig Satz eins nichtig.", P),
     ("[heil]Satz zwei kennt aber eine Heilung: [w311b]Ein ohne Beachtung dieser Form geschlossener Vertrag wird seinem "
      "ganzen Inhalt nach gültig, wenn die Auflassung und die Eintragung in das Grundbuch erfolgen.", P),
