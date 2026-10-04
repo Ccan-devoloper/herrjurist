@@ -66,7 +66,7 @@ SEGMENTE = [
      "spricht von vertikaler unmittelbarer Wirkung.", PS),
     # --- I Keine horizontale Wirkung, Auswege ------------------------------------------------------------------------------
     ("[horiz]Zwischen Privaten gilt das nicht. [fd]Im Fall Faccini Dori widerrief eine Verbraucherin einen Vertrag über einen "
-     "Englisch-Fernkurs, den sie im Mailänder Hauptbahnhof abgeschlossen hatte. Italien hatte die Richtlinie dazu nicht umgesetzt. [fd2]Der Gerichtshof: Eine Richtlinie kann nicht selbst Pflichten für einen Bürger begründen. [fd3]Gegenüber "
+     "Englischkurs im Fernunterricht, den sie im Mailänder Hauptbahnhof abgeschlossen hatte. Italien hatte die Richtlinie dazu nicht umgesetzt. [fd2]Der Gerichtshof: Eine Richtlinie kann nicht selbst Pflichten für einen Bürger begründen. [fd3]Gegenüber "
      "dem Unternehmen konnte sie ihr Widerrufsrecht deshalb nicht auf die Richtlinie stützen.", PS),
     ("[ausw]Zwei Auswege bleiben. [rka]Erstens die richtlinienkonforme Auslegung: Gerichte legen das nationale Recht so weit "
      "wie möglich am Wortlaut und Zweck der Richtlinie aus. [fran]Zweitens die Staatshaftung nach Francovich: Der Staat muss "

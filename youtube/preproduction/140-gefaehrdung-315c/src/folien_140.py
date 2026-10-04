@@ -205,7 +205,7 @@ ASPH = (200, 200, 198, 255)
 GRAS = (205, 234, 196, 255)
 XC, HW, HH, T0 = 900, 600, 120, 700          # Kuppe: Scheitel bei x = 900, halbe Breite, Höhe, Fahrbahnoberkante im Flachen
 RB = 120                                     # Fahrbahnbreite in der Seitenansicht
-SPUR = {"fern": 54, "nah": 112}              # Unterkante der Fahrzeuge: Gegenfahrbahn (hinten) / eigene Spur (vorn)
+SPUR = {"fern": 46, "nah": 114}              # Unterkante der Fahrzeuge: Gegenfahrbahn (hinten) / eigene Spur (vorn)
 
 
 def tk(x):
@@ -325,7 +325,7 @@ P = "§ 315c StGB"
 # ===========================================================================================================================
 # A1 Fall: Überholen vor der Kuppe
 # ===========================================================================================================================
-RX0, LX_, RX1, RX2 = 330, 600, 770, 880     # Reinhold: Start hinter dem Lastwagen, Lastwagen, auf der Gegenfahrbahn, zurück
+RX0, LX_, RX1, RX2 = 330, 600, 860, 950     # Reinhold: Start hinter dem Lastwagen, Lastwagen, auf der Gegenfahrbahn, zurück
 GX0, GX1, GX2 = 1780, 1340, 1250            # Gertrud: kommt hinter der Kuppe hervor, beginnt zu bremsen, steht
 UEB = beim("ueber", "überholt")
 KNAPP = ("knapp", 0.0)

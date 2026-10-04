@@ -441,7 +441,7 @@ folie([("horiz", f"{PN} › keine Wirkung zwischen Privaten"), ("fd", f"{PN} ›
     z("keine unmittelbare Wirkung zwischen Privaten", 170, 180, beim("horiz", "nicht"), "Bold", 32),
     karte(110, 255, 1040, 250, "fd", fill=HELL, rund=18, schatten=6, rand=4),
     z("Faccini Dori, EuGH 1994: Verbraucherin widerruft", 140, 275, "fd", "Bold", 31, rechts=1140),
-    z("Vertrag über einen Englisch-Fernkurs,", 140, 322, beim("fd", "Vertrag"), size=31, rechts=1140),
+    z("Vertrag über einen Englischkurs im Fernunterricht,", 140, 322, beim("fd", "Vertrag"), size=31, rechts=1140),
     z("abgeschlossen im Mailänder Hauptbahnhof", 140, 367, beim("fd", "Mailänder"), size=31, rechts=1140),
     z("Italien: Richtlinie nicht umgesetzt", 140, 420, beim("fd", "Italien"), "Bold", 31, rechts=1140),
     fund("Rs. C-91/92, Slg. 1994, I-3325, Rn. 3 f., 8", 110, 515, beim("fd", "Italien")),

@@ -7,7 +7,7 @@ import json, re, sys
 U = sys.argv[1]
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"] + 8.0
-KAP = [(0.0, "Fall: DSGVO sofort, Pauschalreiserichtlinie erst über das BGB?"), (T("sv"), "Sachverhalt zum Nachlesen"),
+KAP = [(0.0, "Fall: DSGVO sofort, Pauschalreiserichtlinie erst über das BGB? (mit Sachverhalt)"),
        (T("ebene"), "Primär- und Sekundärrecht"), (T("abs1"), "Art. 288 AEUV im Wortlaut"),
        (T("vo"), "Verordnung: DSGVO und BDSG"), (T("rl"), "Richtlinie: Umsetzungsfrist, §§ 651a ff. BGB"),
        (T("be"), "Beschluss, Empfehlung, Stellungnahme"), (T("prob"), "Nicht umgesetzte Richtlinie: vertikale Wirkung"),
@@ -59,7 +59,7 @@ ERS = [(r"fünfundzwanzigsten\s+Mai\s+zweitausendachtzehn", "25. Mai 2018"),
        (r"ersten\s+Januar\s+zweitausendachtzehn", "1. Januar 2018"), (r"ersten\s+Juli\s+zweitausendachtzehn", "1. Juli 2018"),
        (r"Artikel\s+zweihundertachtundachtzig", "Art. 288"),
        (r"Paragrafen\s+sechshunderteinundfünfzig\s+a\s+folgende", "§§ 651a ff."),
-       (r"Absatz\s+eins\b", "Absatz 1"), (r"Absatz\s+zwei\b", "Absatz 2"), (r"Absatz\s+drei\b", "Absatz 3"),
+       (r"651a(\s+)folgende", r"651a\1ff."), (r"Absatz\s+eins\b", "Absatz 1"), (r"Absatz\s+zwei\b", "Absatz 2"), (r"Absatz\s+drei\b", "Absatz 3"),
        (r"Absatz\s+vier\b", "Absatz 4"), (r"Absatz\s+fünf\b", "Absatz 5"), (r"B\.G\.B\.", "BGB")]
 for a, b in ERS:
     srt = re.sub(a, b, srt)
