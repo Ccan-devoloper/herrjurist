@@ -270,11 +270,15 @@ export class Instagram {
   }
 
   /* Einzelbild oder Carousel (2–10 Bilder). Rückgabe: Medien-ID oder "trocken". */
-  async beitragPosten({ bildUrls, caption }) {
+  /* vorVeroeffentlichen (optional) läuft, wenn der Container fertig ist, und
+     unmittelbar vor media_publish – damit lässt sich bis zu einer exakten
+     Uhrzeit warten, während Upload und Verarbeitung schon erledigt sind. */
+  async beitragPosten({ bildUrls, caption, vorVeroeffentlichen = null }) {
     if (this.trockenlauf) { this.protokoll.push({ art: "beitrag", bildUrls, caption }); return "trocken"; }
     if (bildUrls.length === 1) {
       const c = await this.anfrage("POST", `${this.kontoId}/media`, { image_url: bildUrls[0], caption });
       await this.containerWarten(c.id);
+      if (vorVeroeffentlichen) await vorVeroeffentlichen();
       return this.veroeffentlichenSicher(c.id, caption);
     }
     const kinder = [];
@@ -286,6 +290,7 @@ export class Instagram {
     for (const id of kinder) await this.containerWarten(id, { vorlauf: 0 });
     const carousel = await this.anfrage("POST", `${this.kontoId}/media`, { media_type: "CAROUSEL", children: kinder.join(","), caption });
     await this.containerWarten(carousel.id);
+    if (vorVeroeffentlichen) await vorVeroeffentlichen();
     return this.veroeffentlichenSicher(carousel.id, caption);
   }
 
@@ -304,17 +309,19 @@ export class Instagram {
   }
 
   /* Reel (Video 9:16, MP4/H.264/AAC). Die Verarbeitung dauert länger als bei Bildern. */
-  async reelPosten({ videoUrl, caption, coverUrl }) {
+  async reelPosten({ videoUrl, caption, coverUrl, vorVeroeffentlichen = null }) {
     if (this.trockenlauf) { this.protokoll.push({ art: "reel", videoUrl, caption }); return "trocken"; }
     const c = await this.anfrage("POST", `${this.kontoId}/media`, { media_type: "REELS", video_url: videoUrl, caption, share_to_feed: "true", cover_url: coverUrl });
     await this.containerWarten(c.id, { maxSekunden: 900 });
+    if (vorVeroeffentlichen) await vorVeroeffentlichen();
     return this.veroeffentlichenSicher(c.id, caption);
   }
 
-  async storyPosten({ bildUrl }) {
+  async storyPosten({ bildUrl, vorVeroeffentlichen = null }) {
     if (this.trockenlauf) { this.protokoll.push({ art: "story", bildUrl }); return "trocken"; }
     const c = await this.anfrage("POST", `${this.kontoId}/media`, { image_url: bildUrl, media_type: "STORIES" });
     await this.containerWarten(c.id);
+    if (vorVeroeffentlichen) await vorVeroeffentlichen();
     return this.veroeffentlichen(c.id);
   }
 

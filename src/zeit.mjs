@@ -46,3 +46,19 @@ export function datumLesbar(iso) {
   const [j, m, t] = iso.split("-");
   return `${t}.${m}.${j}`;
 }
+
+/* Absoluter Zeitpunkt (ms seit 1970) für Datum + Uhrzeit in Europe/Berlin.
+   Der Versatz zur UTC wird für genau diesen Moment ermittelt, damit Sommer-
+   und Winterzeit stimmen. */
+export function zeitpunktVon(isoDatum, uhrzeit) {
+  const [j, mo, t] = isoDatum.split("-").map(Number);
+  const [h, mi] = uhrzeit.split(":").map(Number);
+  const wunsch = Date.UTC(j, mo - 1, t, h, mi);
+  let ms = wunsch;
+  for (let i = 0; i < 2; i++) {
+    const p = teile(new Date(ms));
+    const gesehen = Date.UTC(+p.jahr, +p.monat - 1, +p.tag, p.stunde, p.minute);
+    ms += wunsch - gesehen;
+  }
+  return ms;
+}

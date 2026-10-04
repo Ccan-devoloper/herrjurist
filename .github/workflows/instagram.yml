@@ -297,13 +297,29 @@ jobs:
   # kleiner Job bis kurz nach dem nächsten Vorbereitungsstart (volle Stunde, 05–20 UTC) und
   # startet den Lauf selbst, falls GitHub ihn nicht gestartet hat. Kommt der
   # Zeitplan doch, übernimmt dessen Lauf die Kette – es lebt immer genau eine.
+  #
+  # Punktgenau: Während des Wartens liest der Job jede Minute den Tagesplan der
+  # Vorproduktion (inkl. Änderungen aus dem Dashboard). Steht ein Termin in
+  # weniger als 8 Minuten an, weckt er den Bot sofort. Der Bot bereitet den
+  # Beitrag vor und veröffentlicht ihn zur eingestellten Minute – nicht erst
+  # mit dem nächsten Stundenlauf.
   weckruf:
     needs: posten
     if: always() && (github.event_name == 'schedule' || github.event.inputs.wecker == 'true')
     runs-on: ubuntu-latest
     timeout-minutes: 350
     steps:
-      - name: Bis zum nächsten Slot warten, dann nachsehen und ggf. wecken
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            src
+            bin
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Bis zum nächsten Termin oder Slot warten, dann wecken
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -311,9 +327,9 @@ jobs:
           set -e
           # Nur eine Kette: Läuft oder wartet bereits ein jüngerer Lauf dieses Workflows
           # (höhere Run-ID), trägt der die Kette weiter – dieser Job endet. Geprüft zu
-          # Beginn und noch einmal direkt vor dem Wecken (ein planmäßiger Lauf von GitHub
-          # startet sonst eine zweite Kette). „pending“ sind Läufe, die auf die
-          # Concurrency-Gruppe warten.
+          # Beginn, alle zehn Minuten und direkt vor dem Wecken (ein planmäßiger Lauf
+          # von GitHub startet sonst eine zweite Kette). „pending“ sind Läufe, die auf
+          # die Concurrency-Gruppe warten.
           juengere_kette() {
             local n=0 st
             for st in in_progress queued pending waiting requested; do
@@ -322,25 +338,53 @@ jobs:
             echo $n
           }
           if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
-          jetzt=$(date -u +%s)
+          start=$(date -u +%s)
           # Nächster Vorbereitungsstart: nächste volle Stunde zwischen 05 und 20 UTC, sonst morgen 05:00.
-          h=$((10#$(date -u +%H))); m=$((10#$(date -u +%M)))
+          h=$((10#$(date -u +%H)))
           tag=$(date -u +%F)
           zielh=$((h+1))
           if [ $zielh -lt 5 ]; then zielh=5; fi
           if [ $zielh -gt 20 ]; then zielh=5; tag=$(date -u -d "$tag +1 day" +%F); fi
           slot=$(date -u -d "$tag $(printf %02d $zielh):00:00" +%s)
-          warten=$((slot + 120 - jetzt))
-          echo "Nächster Slot: $(date -u -d @$slot +%FT%TZ) – warte $warten s"
-          if [ $warten -gt 19800 ]; then
-            # Länger als 5,5 h (Nachtpause): zwischendurch einmal nur die Kette weiterreichen.
-            sleep 19800
-            if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
+          frist=$((slot + 120))
+          # Länger als 5,5 h (Nachtpause): nach 5,5 h nur die Kette weiterreichen.
+          nacht=0
+          if [ $((frist - start)) -gt 19800 ]; then frist=$((start + 19800)); nacht=1; fi
+          echo "Nächster Slot: $(date -u -d @$slot +%FT%TZ) – beobachte den Tagesplan bis $(date -u -d @$frist +%FT%TZ)"
+          vorlauf=480
+          # Termine bis zum Start dieses Laufs hat der Lauf selbst bedient; was
+          # während des Laufs fällig wurde, weckt sofort.
+          laufstart=$(gh api "repos/$GH_REPO/actions/runs/$GITHUB_RUN_ID" --jq .run_started_at || true)
+          NAECHSTER_SEIT=$start
+          if [ -n "$laufstart" ]; then NAECHSTER_SEIT=$(date -u -d "$laufstart" +%s); fi
+          export NAECHSTER_SEIT
+          kette_geprueft=$start
+          zuletzt_gemeldet=""
+          while :; do
+            jetzt=$(date -u +%s)
+            [ $jetzt -ge $frist ] && break
+            termin=$(node bin/naechster-termin.mjs || true)
+            if [ -n "$termin" ] && [ "$termin" != "$zuletzt_gemeldet" ]; then
+              echo "Nächster Termin laut Tagesplan: $(date -u -d @$termin +%FT%TZ)"
+              zuletzt_gemeldet=$termin
+            fi
+            if [ -n "$termin" ] && [ $((termin - vorlauf)) -le $jetzt ]; then
+              if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
+              echo "Termin $(date -u -d @$termin +%FT%TZ) steht an – wecke den Bot jetzt."
+              gh workflow run instagram.yml -f modus=live -f wecker=true
+              exit 0
+            fi
+            if [ $((jetzt - kette_geprueft)) -ge 600 ]; then
+              if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
+              kette_geprueft=$jetzt
+            fi
+            sleep 60
+          done
+          if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
+          if [ $nacht = 1 ]; then
             gh workflow run instagram.yml -f modus=live -f wecker=true -f nur_wecken=true
             exit 0
           fi
-          [ $warten -gt 0 ] && sleep $warten
-          if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
           seit=$(date -u -d @$slot +%FT%TZ)
           n=$(gh api "repos/$GH_REPO/actions/runs?created=>=$seit&per_page=20" --jq '[.workflow_runs[] | select(.path == ".github/workflows/instagram.yml")] | length')
           echo "Läufe seit $seit: $n"

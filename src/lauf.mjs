@@ -57,7 +57,7 @@ import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.m
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
 import { wochentag } from "./zeit.mjs";
-import { heuteIso, lokaleMinuten, minutenVon } from "./zeit.mjs";
+import { heuteIso, lokaleMinuten, minutenVon, zeitpunktVon } from "./zeit.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
 const args = new Map(process.argv.slice(2).map((a) => { const [k, v] = a.replace(/^--/, "").split("="); return [k, v ?? true]; }));
@@ -732,13 +732,16 @@ async function main() {
     }
   }
   /* Bei vorproduzierten Tagen ist die Planzeit die echte Publikationszeit.
-     Der Runner startet frueher, erledigt Token-/Insight-/Lernschleifenarbeit
-     und wartet erst unmittelbar vor dem Feed-Posting bis zur geplanten Minute.
-     Ein bereits faelliger Slot und ein manueller Sofortlauf warten nie. */
+     Der Runner startet frueher (die Weckkette weckt ihn einige Minuten vor
+     jedem Termin), erledigt Token-/Insight-/Lernschleifenarbeit und wartet bis
+     kurz vor der geplanten Minute. Upload und Container-Verarbeitung laufen in
+     dieser Spanne; media_publish selbst wartet bis zur Planminute
+     (punktgenau, unten). Ein manueller Sofortlauf wartet nie. */
+  const VORBEREITUNG_SEKUNDEN = 180;
   if (exakterVorproduktionslauf) {
     const d = new Date();
     const jetztSekunden = lokaleMinuten(d) * 60 + d.getSeconds();
-    const wartenMs = feedWartezeitMs(plan, jetztSekunden);
+    const wartenMs = feedWartezeitMs(plan, jetztSekunden, 100, VORBEREITUNG_SEKUNDEN);
     if (wartenMs > 0) {
       const naechster = [...(plan.beitraege || []), ...(plan.stories || [])]
         .filter((e) => e.status !== "veroeffentlicht" && minutenVon(e.zeit) * 60 > jetztSekunden)
@@ -749,7 +752,19 @@ async function main() {
   }
 
   const jetzt = lokaleMinuten();
-  const faellig = (e) => e.status !== "veroeffentlicht" && (alles || minutenVon(e.zeit) <= jetzt);
+  const vorbereitungMinuten = exakterVorproduktionslauf ? Math.ceil(VORBEREITUNG_SEKUNDEN / 60) : 0;
+  const faellig = (e) => e.status !== "veroeffentlicht" && (alles || minutenVon(e.zeit) <= jetzt + vorbereitungMinuten);
+  /* Unmittelbar vor media_publish bis zur Planminute warten – der Container
+     ist dann schon fertig verarbeitet, der Beitrag erscheint auf die Minute. */
+  const punktgenau = (eintrag) => (exakterVorproduktionslauf && /^\d{1,2}:\d{2}$/.test(String(eintrag.zeit || ""))
+    ? async () => {
+      const rest = zeitpunktVon(datum, eintrag.zeit) - Date.now();
+      if (rest > 0) {
+        log(`  ⏱ ${eintrag.slot} vorbereitet · veröffentlicht um ${eintrag.zeit} (in ${Math.ceil(rest / 1000)} s)`);
+        await new Promise((resolve) => setTimeout(resolve, rest));
+      }
+    }
+    : null);
   const beitraegeFaellig = plan.beitraege.filter(faellig);
   const storiesFaellig = plan.stories.filter(faellig);
 
@@ -1105,7 +1120,7 @@ async function main() {
           [videoUrl, coverUrl] = await hosting.veroeffentlichen([r.video, r.cover], datum, `Reel ${datum} ${eintrag.slot}`);
         }
         const caption = `${reel.caption}${reel.bildQuelle ? `\n\n${reel.bildQuelle}` : ""}\n\n${reel.hashtags.join(" ")}`;
-        const medienId = await ig.reelPosten({ videoUrl, coverUrl, caption });
+        const medienId = await ig.reelPosten({ videoUrl, coverUrl, caption, vorVeroeffentlichen: punktgenau(eintrag) });
         kontingent.genutzt += 1;
         const echt = veroeffentlichungEintragen(eintrag, medienId);
         if (!echt.bestaetigt) { probelaeufe.push({ slot: eintrag.slot, art: "reel", kennung: echt.kennung, zeit: new Date().toISOString() }); log(`  ○ Probelauf: Reel ${eintrag.slot} ${echt.grund} – der Plan bleibt unverändert.`); }
@@ -1151,7 +1166,7 @@ async function main() {
       const caption = `${beitrag.caption}${bildnachweis(beitrag)}\n\n${beitrag.hashtags.join(" ")}`;
       const schonDa = await ig.bereitsVeroeffentlicht(caption);
       if (schonDa) log(`  Beitrag steht bereits auf Instagram (${schonDa}) – wird nur vermerkt.`);
-      const medienId = schonDa || await ig.beitragPosten({ bildUrls: urls, caption });
+      const medienId = schonDa || await ig.beitragPosten({ bildUrls: urls, caption, vorVeroeffentlichen: punktgenau(eintrag) });
       kontingent.genutzt += 1;
       const echt = veroeffentlichungEintragen(eintrag, medienId);
       if (!echt.bestaetigt) { probelaeufe.push({ slot: eintrag.slot, art: "beitrag", kennung: echt.kennung, zeit: new Date().toISOString() }); log(`  ○ Probelauf: Beitrag ${eintrag.slot} ${echt.grund} – der Plan bleibt unverändert.`); }
@@ -1280,7 +1295,7 @@ async function main() {
       let medienId = null;
       if (vorproduktionAktiv) {
         const asset = vorproduktionStoryAsset(vorproduktion, eintrag.slot);
-        medienId = await ig.storyPosten({ bildUrl: asset.bildUrl });
+        medienId = await ig.storyPosten({ bildUrl: asset.bildUrl, vorVeroeffentlichen: punktgenau(eintrag) });
         kontingent.genutzt += 1;
         log(`  Vorproduktion: fertige Story ${eintrag.slot} wird unverändert verwendet.`);
       } else {

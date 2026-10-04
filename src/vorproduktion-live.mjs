@@ -76,20 +76,33 @@ export function feedAssets(vp, e) {
 }
 
 
-export function feedWartezeitMs(plan, jetztSekunden, maxMinuten = 100) {
+/* Status, die nicht mehr auf eine Veröffentlichung warten. */
+const ERLEDIGT = new Set(["veroeffentlicht", "uebersprungen"]);
+
+export function feedWartezeitMs(plan, jetztSekunden, maxMinuten = 100, vorlaufSekunden = 0) {
   // Beim exakten Vorproduktionslauf zählt der früheste offene Slot – Feed ODER
   // Story. Sonst kann ein früher Story-Slot hinter einem späteren Feed-Slot
   // hängen bleiben, während der Runner auf die falsche Uhrzeit wartet.
+  // Gewartet wird bis vorlaufSekunden vor dem Slot: In dieser Spanne werden
+  // Upload und Container vorbereitet, media_publish folgt zur Planminute.
   const offen = [...(plan?.beitraege || []), ...(plan?.stories || [])]
-    .filter((e) => e.status !== "veroeffentlicht" && /^\d{1,2}:\d{2}$/.test(String(e.zeit || "")));
+    .filter((e) => !ERLEDIGT.has(e.status) && /^\d{1,2}:\d{2}$/.test(String(e.zeit || "")));
   if (!offen.length) return 0;
   const sekunden = offen.map((e) => {
     const [h, m] = e.zeit.split(":").map(Number);
     return h * 3600 + m * 60;
   }).sort((a, b) => a - b);
-  if (sekunden.some((s) => s <= jetztSekunden)) return 0;
-  const diff = sekunden[0] - jetztSekunden;
-  return diff <= maxMinuten * 60 ? diff * 1000 : 0;
+  // Ein bereits vergangener offener Slot (z. B. eine Story, die jeder Lauf
+  // erneut überspringt) darf das Warten auf den nächsten Slot nicht abschalten
+  // – am 04.10.2026 ging dadurch ab 07:21 jeder Slot erst zur vollen Stunde
+  // raus. Er verkürzt nur die erlaubte Wartezeit, damit er selbst nicht lange
+  // hängt; die Weckkette sorgt für den rechtzeitigen Start.
+  const zukunft = sekunden.filter((s) => s > jetztSekunden);
+  if (!zukunft.length) return 0;
+  const diff = zukunft[0] - vorlaufSekunden - jetztSekunden;
+  if (diff <= 0) return 0;
+  const grenze = (zukunft.length < sekunden.length ? Math.min(15, maxMinuten) : maxMinuten) * 60;
+  return diff <= grenze ? diff * 1000 : 0;
 }
 
 export function storyAsset(vp, slot) {
