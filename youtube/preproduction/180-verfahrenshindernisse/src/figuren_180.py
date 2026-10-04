@@ -3,7 +3,7 @@ Bibliothek (Open Peeps, CC0). Alle Figuren fiktiv.
 Herr Ostwald (OS, um 68, Nachbar und Verletzter, stellt den Strafantrag; Stimme helmut): standing/easing-1 (Strickjacke Blau
   #8DB3F2 offen, weißes Shirt, schwarze Hose, weiße Schuhe), Kopf Gray Short mit grauem Haar #BDBDBD, Brille Glasses 4,
   Haut #F0CDB4, kein Bart.
-Herr Stolte (ST, um 40, Beschuldigter, spricht nicht): standing/crossed_arms-1 (Pullover Grün #8FD694, schwarze Hose,
+Herr Stolte (ST, um 40, Beschuldigter, spricht nicht): standing/crossed_arms-1 (Pullover Koralle #F07A6A, schwarze Hose,
   weiße Schuhe), Kopf Short 3, Haut #E2B190, kein Bart, keine Brille; Alltagskleidung, keine „fiese“ Täterfigur.
 Referendarin Hartlieb (HA, um 27, Referendarin bei der Staatsanwaltschaft; Stimme ela_froh, eifrig): standing/resting-2
   (schwarzes Oberteil der Pose, Hose Lila #B8A9F5, Hand in der Hüfte), Kopf Medium Bangs 3, Haut #EDC3A0. (robot_dance-3
@@ -29,7 +29,7 @@ MUND = {"a": "Explaining", "o": "Concerned Fear", "e": "Hectic"}
 P = {   # Person: (Pose, Kopf, Bart, Brille, Farben)
     "OS": ("standing/easing-1", "Gray Short", None, "Glasses 4",
            {"Skin": "#F0CDB4", "Jacket": "#8DB3F2", "Top": "#FFFFFF", "Hair": "#BDBDBD"}),
-    "ST": ("standing/crossed_arms-1", "Short 3", None, None, {"Skin": "#E2B190", "Top": "#8FD694"}),
+    "ST": ("standing/crossed_arms-1", "Short 3", None, None, {"Skin": "#E2B190", "Top": "#F07A6A"}),
     "HA": ("standing/resting-2", "Medium Bangs 3", None, None, {"Skin": "#EDC3A0", "Pants": "#B8A9F5"}),
     "PB": ("standing/shirt-4", "Bun", None, None, {"Skin": "#D9A07A", "Pants": "#2B3A55"}),
 }
