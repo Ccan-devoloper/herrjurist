@@ -2,7 +2,7 @@
 
 **Stand:** 04.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_195.py`](src/skript_195.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
 **Format:** Fr · 2. Examen · ZPO, Themenplan-Format „Schema“ (Urteilstenor aus Sicht des 2. Examens). Beispielfall nach dem Plan-Hook („Der Kläger verlangt 10.000 Euro und bekommt 7.300 Euro zugesprochen“), Werklohnklage: Malermeister Herr Dressler streicht die Fassade am Haus von Frau Lindau und berechnet 10.000 €, davon 2.700 € für die Garage; Frau Lindau zahlt nichts. Das Amtsgericht spricht 7.300 € zu, weil ein Auftrag für die Garage nicht bewiesen ist. Ablauf: Fall → Urteil in der Hauptsache und Frage → Sachverhalt → Grundsatz § 91 Abs. 1 S. 1 (Wortlaut) → Teilunterliegen § 92 Abs. 1 S. 1 (Wortlaut) → Quote rechnen (Balken, 27 % / 73 %) → Prozent oder Bruch, Kostentenor → Kostenaufhebung (§ 92 Abs. 1 S. 2, Wortlaut) → Ausnahme § 92 Abs. 2 (Wortlaut Nr. 1, Skala mit Faustregel 10 % als Literaturangabe, Nr. 2 ein Satz) → vier Sonderregeln (§§ 93, 91a, 269 Abs. 3 S. 2, 344; Wortlautkarten) → Klausurtipp (Lexi; § 308 Abs. 2, Verweis vorläufige Vollstreckbarkeit) → Schema → Merksatz (Lexi).
-**Länge:** Hauptfilm 5:19,4; 106 eigenständige Bildhalte (Skript 4.464 Zeichen) – Regelumfang, keine Begründung für Überlänge nötig.
+**Länge:** Hauptfilm 5:21,4; 106 eigenständige Bildhalte (Skript 4.492 Zeichen; Segment 4 nach Namensprüfung umgestellt: „Vor dem Amtsgericht klagt Malermeister Dressler …“) – Regelumfang, keine Begründung für Überlänge nötig.
 
 ## Besetzung
 
