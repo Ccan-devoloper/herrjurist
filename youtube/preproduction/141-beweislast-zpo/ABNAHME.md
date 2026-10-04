@@ -1,0 +1,90 @@
+# Abnahmebogen · Folge 141 · Beweislast ZPO: Wer verliert beim non liquet?
+
+**Folge/Titel (Nr. laut Themenplan):** 141 · „Beweislast ZPO: Wer verliert beim non liquet?“ (Fr · 2. Examen · ZPO · Format Schema)
+**Datum/Rechtsstand:** 04.10.2026; Normen im Wortlaut gesetze-im-internet.de (Abruf 04.10.2026), BGH-Entscheidungen im Volltext mit Randnummern (amtliches Rechtsinformationsportal des Bundes); Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
+**MP4 (Drive):** `LexVerse Produktion/141 Beweislast non liquet/141-Beweislast-non-liquet.mp4`, 6:30,7 min (8,0 s Intro + 6:07,6 Hauptfilm + 15,1 s Outro), 26.575.022 B, SHA-256 `f2e034ce92ecee4bd239b1b8cc93ffa81a42714729cf0c021afb48169dc3c3bf`
+**Hauptfilm allein (Drive):** `141-Beweislast-non-liquet-Hauptfilm.mp4`, 19.297.010 B, SHA-256 `d6cfc45403fb7aa08ae01c34cee0209db6de0aaa7bb3fd995fed94538408ec4e`
+**Produktionsmaster (Drive):** `LexVerse Produktion/141 Beweislast non liquet/master.zip`
+**Figuren und Stimmen:** Herr Wiedemann (`blazer-4`, Stimme `helmut`), Herr Reichert (`easing-1`, `niklas`), Frau Fischer (`robot_dance-2`, `julia`), Frau Krause (`crossed_arms-2`, ohne Text), Richterin (`blazer-3`, ohne Text), Lexi (`lexi.py`), Erzählerin Carla Blum; [`src/figuren_141.py`](src/figuren_141.py), Besetzung in [`SZENENPLAN.md`](SZENENPLAN.md)
+**Skript-/Schnittrevision:** Skript v1 (rechtlich geprüft, einmal vertont, keine Nachvertonung); Render v1 nach Vorschau und Einzelbildern; Endschnitt `tools/schnitt.py`
+**Prüfer und Datum:** Claude (automatische Prüfungen, Sichtung aller 133 Bildhalte aus dem finalen MP4, Mund-Einzelbilder aus dem MP4, Spracherkennung small/medium, Namensprüfung je Nennung), 04.10.2026. **Hör- und Sichtprüfung des Kanalinhabers steht aus.**
+
+Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katzenkönig; Ablauf nach [`FOLGE-ABLAUF.md`](../../FOLGE-ABLAUF.md), Vorlagen 018/030/048. Zeiten im Hauptfilm; **Videozeit = Hauptfilmzeit + 8,0 s**.
+
+**Länge über fünf Minuten (Begründung):** Hauptfilm 6:07,6 bei 5.185 Zeichen (unter der Grenze von 5.800/6.200 Zeichen und 7:00 min). Der Stoff braucht drei Wortlautkarten (§ 488 Abs. 1 S. 2 BGB, § 286 Abs. 1 S. 1 und S. 2 ZPO, S. 1 vorgelesen), die BGH-Formel zum Beweismaß, die Normentheorie mit Sonderregeln (§§ 280 Abs. 1 S. 2, 477, 1006 BGB) und subjektiver Beweislast sowie Fall **und** Gegenvariante (Erfüllung) und die Urteilsformulierung, alles vom Themenplan verlangt. Keine gestreckten Pausen (Pausen 0,2–0,5 s, Lesepause 4,8 s, Schluss 1,2 s).
+
+| Gate | Nachweis / Ergebnis |
+| --- | --- |
+| Fallhook nach Intro; Frage, Sachverhaltskarte, Prüfung, Schluss als roter Faden | Intro 0–8,0 s vollständig; ab 8,0 s Sitzungssaal mit zwei Zeugen, die sich exakt widersprechen (Plan-Hook), dann Küche und Klage, Frage „Wer verliert, wenn sich nicht klären lässt, was wirklich passiert ist?“ (Video 0:58). Sachverhaltskarte erscheint auf einmal (Video 1:06), gesprochener Hinweis zum Anhalten, 4,8 s Lesepause, steht insgesamt ≈ 9,8 s. Danach sechs Schritte, Fall, Gegenvariante, Urteil, Klausurtipp, Schema, Merksatz. **OK** |
+| Juristische Aussagen an Normtext und Primärquellen geprüft; Rechtsstand-Hinweise | Aussage-Beleg-Tabelle je Cue in `RECHTSSTAND.md`; Wortlaut §§ 286, 300, 138, 373 ZPO, §§ 488, 362, 280, 477, 1006 BGB; BGH VI ZR 76/23 Rn. 15 (Formel wörtlich), VI ZR 435/19 Rn. 13, IV ZR 68/22 Rn. 68 (Grundprinzip wörtlich), III ZR 6/18 Rn. 14, V ZR 28/22 Rn. 28, XI ZR 380/20 Rn. 31, IX ZR 121/20 Rn. 30, VII ZR 274/17 Rn. 9 und 19. Offengelegt: „Rosenberg“ nur als Lehrbezeichnung (nicht an Primärquelle verifiziert), „Der Kläger ist beweisfällig geblieben.“ als übliche Formulierung („Üblich ist …“, Tafel mit Fundstelle Berufungsgericht). Plan-Rechtsstand „stabil“: zutreffend. **OK** |
+| Klausurschema progressiv; Klausurtipp und Merksatz mit Lexi | Schema I.–V. (IV. mit 1. Sonderregeln, 2. Normentheorie) baut sich Punkt für Punkt zum Wort auf (Video 5:36–6:13), mit Waage; Klausurtipp (Video 5:20) und Merksatz (Video 6:05) mit Lexi. **OK** |
+| Figuren Open Peeps, Lexi nach `lexi.py`, Outfit konstant, Besetzung neu | `figuren_141.py` (74 PNGs in `peeps/op_141`), jede Person mit fester Pose, Kopf und Farben. Posen der Folgen 138–140 nicht wiederholt (dort `resting-1`, `blazer-1`, `robot_dance-3`, `pointing_finger-2`, `crossed_arms-1`, `walking-1`); keine Muster, keine Bärte, keine Prothesen-Posen. Hinweis: Grün als Kleidungsfarbe kommt auch in 140 (Reinhold, Pullover) und 138 vor; hier anderes Kleidungsstück (offenes Hemd über gelbem Shirt bzw. grüne Hose) und andere Pose. **OK** |
+| Stimmen: Erzählerin Carla Blum und Ensemble passend | Wiedemann (um 65) `helmut`, Reichert (um 30) `niklas`, Fischer (um 30) `julia`; nur aus dem Pool; `ela_froh` nicht verwendet. Vorfolge 140 nutzte andere Stimmen. **OK** |
+| Figurenrede: richtige Figur, Blasenschwanz am Mund, Blasentext gleich dem Gesprochenen | Reichert 7,85–12,41 s (Video 0:15,9–0:20,4) „Ich war dabei. Herr Wiedemann hat ihr 5.000 € bar gegeben.“; Fischer 14,03–17,87 s (Video 0:22,0–0:25,9) „Ich saß am selben Tisch. Da ist kein Geld übergeben worden.“; Wiedemann 37,86–41,38 s (Video 0:45,9–0:49,4) „Ich habe ihr das Geld gegeben, in einem Umschlag!“. Blasen Stil C, Spitze außerhalb der Blase am Mund (Bildhalte 006, 008, 021), Zahl in Ziffern. **OK** |
+| Mundbewegung tongebunden; Pausen zu; frameweise gesichtet; Viseme geschätzt | Lippenstreifen in 0,1-s-Schritten aus dem finalen Hauptfilm-MP4 (`out/lip_reichert.png`, `lip_fischer.png`, `lip_wiedemann.png`): Mund vor und nach jedem Satz und zwischen Wörtern zu, a/o/e wechseln mit den Wörtern, kein Loop, keine Patchkante. Andere Figuren im Bild mit geschlossenem Mund. Viseme aus der Schreibung geschätzt (kein Phonem-Alignment). Hinweis: Wiedemanns sprechende Ansicht hat als Ruheform `Driven` mit geschlossenem Mund, wirkt zwischen den Wörtern leicht lächelnd. **OK** |
+| Nichts angeschnitten; Requisiten aus Bibliotheken; Lizenzen | Assertionen `peep_voll`/`pruefe_im_bild` im Render bestanden. Requisiten: Tabler (MIT: `cash-banknote`, `cash-banknote-off`, `question-mark`, `fridge`, `moon`, `mail`, `receipt-off`, `building-bank`, `list-numbers`, `bulb`, `scale`, `file-text`, `coin-euro`, `file-check`, `shield-check`, `messages`, `book`, `receipt`, `key`, `user-check`, `file-x`, `arrow-back-up`, `circle-check`, `writing`), Fluent Emoji High Contrast (Haken/Kreuz, MIT), Warnsymbol Streamline Freehand (**CC BY 4.0**, Namensnennung in `beschreibung.txt`). Richtertisch, Küchentisch und Waage programmatisch als Pastellflächen. Nunito-Glyphen geprüft, keine Kästchen. **OK** |
+| Serienkonstante Gestaltung | Cremegrund, Tafeln links (x ≤ 1200, Schema ≤ 1820), Figuren rechts (x ≥ 1260), Prüfpfad unten links (Nunito, gedämpft), Palette. Abend nur über Mond-Icon, kein Nachtverlauf. Vergleich mit den Bildhalt-Bögen aus den MP4 von 140 und 139: Stil, Tafel- und Pfadposition gleich. **OK** |
+| Eigenständiges Setting; Vergleich Vorfolgen | Sitzungssaal mit Richtertisch Mitte und Zeugen links/rechts, Küche mit Kühlschrank, Küchentisch und Umschlag, freie Bühne mit Waage. Sitzungssaal kehrt gegenüber 018 wieder, weil der Hook die Beweisaufnahme ist; andere Anordnung und Besetzung. 140 (Straßenverkehr) und 139 (Eigentumsvorbehalt) haben andere Schauplätze. **OK** |
+| ≥ 45 unterschiedliche Bildhalte, Manifest mit SHA-256 | `bildhalt_manifest.json`: **133 Bildhalte, alle eigenständig** (6:07,6 min, ≈ 21,7 je Minute; Vorgabe rund 9 je Minute), Start/Ende, Folie, Prüfpfad, SHA-256 je Keyframe. **OK** |
+| Bildhalte und Mundzustände getrennt gezählt | 133 Bildhalte (Mundzustände ausgenommen); 24 Mundasset-PNGs (a/o/e für WI_redet, RT_redet, FI_redet je links/rechts und Lexi zwei Ansichten). **OK** |
+| Ruhige Halte; Schiebeblenden nur zwischen Szenen; kein Zoom | 17 Folien, Schiebeblende 14 Frames nur beim Folienwechsel, innerhalb der Szene harte Schnitte/Pops; kein Zoom. **OK** |
+| Prüfpfad im gesamten Hauptfilm sichtbar und aktuell | ab 0,0 s „Fall · Im Sitzungssaal“ (Bildhalt 001), am Wort aktualisiert (`kapitel.json`, 40+ Pfadstände, z. B. 81,4 s „1. Streitige Tatsache“, 145,5 s „2. Freie Beweiswürdigung › volle Überzeugung“, 223,5 s „4. Beweislast › subjektive Beweislast“, 330,2 s „Klausurschema › I. Streitige Tatsache“), bis zum letzten Bild „Merksatz“. **OK** |
+| Rechtstafeln links, Punkte zum Begriff, Haken/Kreuz synchron, keine Gesichter verdeckt | Stichproben: Wortlautkarte § 286 I 1 mit Hervorhebungen „gesamten“, „freier Überzeugung“, „für wahr“, „für nicht wahr“ zum Wort (113–131 s); Haken „Vereinbarung/Fälligkeit: unstreitig“ bei 100,8/101,8 s; Kreuze „… von der Auszahlung / … davon, dass kein Geld geflossen ist“ bei 162,8/165,1 s; „Klage abgewiesen“ bei 258,7 s; „Frau Krause wird verurteilt“ bei 283,8 s. Keine Überdeckung, keine geisternden Texte in Blenden. **OK** |
+| Texte in ihren Boxen; 100 % und mobil lesbar | Assertionen `z()` (x ≤ 1170, Schrift ≥ 26 px), `blase()` und Titelbreite bestanden. Fundstellen 26 px, Tafeltext 33–40 px, Pillen ≥ 28 px; Vollbild 1920 × 1080 (z. B. Video 3:48) und Bögen in Handygröße gesichtet. **OK** |
+| Ton-Bild-Gate: Cue-Timeline ≥ 45 Zeilen | [`CUE-TIMELINE.md`](CUE-TIMELINE.md): 133 Zeilen aus `cues.json` (ElevenLabs-Wortzeiten der verwendeten Spur), Starts über `beim()` an Wortgrenzen; Stichproben in den Bildhalt-Bögen (Requisit/Pille erscheinen mit dem Wort). **OK** |
+| Keine Untertitel/Kapitelanzeige/Labels/Schlusseinblendung | ffprobe: nur Video- und Audiospur; keine eingebrannten Captions, kein Zähler; Ende direkt ins Outro. **OK** |
+| Keine abgeschnittenen Satzenden oder Restlaute | `synth_el.py`: Restlaute in Segment 12 und 17 stummgeschaltet; `pruefe_folge.py`: „Segmentkanten auffällig: keine“. Satzschlüsse in der ASR vollständig erkannt. **OK** |
+| Stimmen wiederverwendet; Credits | Eine Vertonung, 22 Segmente, **5.173 Zeichen, 532 Credits** (Kontingent vorher 22.777). Keine Test- und keine Nachvertonung. Nach dem Containerneustart nichts neu vertont (Cache `el_cache`, 44 Dateien). **OK** |
+| Nur Handlungsgeräusche, Herkunft | Ein Einsatz: Umschlag rutscht auf den Küchentisch bei 34,16 s (Video 0:42,2), `szene_141umschlag_1.wav` aus Freesound #444431 (CC0, MTJohnson), Pegel 0,066, Spitze 0,59; Herkunft in `geraeusche_herkunft.json`. Schiebeblenden stumm. **OK** |
+| Kein Abschiedsgruß; letztes Sachwort vollständig; Anschluss Outro | letztes Wort „ist“ endet bei 366,46 s (Video 6:14,5), 1,1 s Ruhe, Outro ab Video 6:15,6 (`out/schnittstellen.png`). **OK** |
+| MP4-Technik | H.264 yuv420p 1920×1080 30 fps; AAC 48 kHz Stereo; 390,67 s; keine Subtitle-Streams; `ffmpeg -xerror` vollständig ohne Fehler; Lautheit −16,5 LUFS gesamt (Intro −16,7, Hauptfilm −16,5, Outro −17,4), Spitze −1,3 dBTP, LRA 2,8 LU; Sprecherspanne 0,0 LU. **OK** |
+| Thumbnail | `aus_plan.py --render … --nr 141-141`: 1 Spezifikation, **0 Fehler**; A „BEWEISLAST ZPO“, B „NON LIQUET?“ (Vorlage lern, Karte SCHEMA, Geldschein mit Fragezeichen). **Eigene Zeile in `themenplanung/thumbs_ex2meth.json` geändert:** Zeugin `mimik` „sehr_wuetend“ → „entschlossen“, Kopf `Medium Straight`, Haut `#C68E6A` (wie Frau Fischer); Zeuge `mimik` „skeptisch“ → „entschlossen“, Kopf `Short 3`, Haut `#E0AC84` (wie Herr Reichert) – im Video ist keine Zeugin wütend und keiner skeptisch, beide sind sich ihrer Aussage sicher. Texte unverändert (rechtlich zutreffend). Handy-Vorschau 246 × 138 lesbar, keine Waffen/Klischees. **OK** |
+| Upload-Texte | `youtube_metadaten.py --folge 141 --versatz 8.0`: 96 Untertitel, 20 Kapitel (alle ≥ 10 s, ab 0:00), 8 Tags. Nachbearbeitet: Kapiteltitel geglättet (z. B. „5. Der Fall: Beweislast beim Kläger, Klage abgewiesen“), Beschreibung um Fallabsatz, Normen, BGH-Fundstellen mit Rn., Hinweis zur Formulierung „beweisfällig“ und Lizenzzeile ergänzt (statt Plan-Zeilen „Normen: § 286 ZPO; …“, „Leitentscheidung: —“). Untertitel gegengelesen: „fünftausend Euro“ → „5.000 Euro“, „Römisch eins … fünf“ → „I. … V.“. Planbeschreibung fachlich zutreffend. Kein Landesrecht. **OK** |
+| Produktionsmaster | `master.zip` mit `tools/master_packen.sh`: Dokumente, Code inkl. etb2, Figuren-PNGs, 133 Bildhalt-Keyframes, Prüfbilder (Kontaktbogen, Bildhalt-Bögen aus dem MP4, Lippenstreifen, Schnittstellen, Render-Log, `sfx_cues.json`), Stimme mit `el_cache`, SFX, Schriften, Thumbnail-Kontaktbogen, LIESMICH; `unzip -t` im Packskript. **OK** |
+| Drive-Ablage, Readback, Repo ohne Binärdateien | siehe Abschnitt „Drive“ unten. Im Repository nur Text und Code. |
+
+## Spracherkennung und „Bitte anhören“
+
+`pruefe_folge.py --asr` (Exit 0) sowie faster-whisper small und medium je Segment (`src/asr_seg_141.py`). Alle übrigen Abweichungen sind Zahlschreibweisen („§ 488“ statt „Paragraf vierhundertachtundachtzig“), Getrennt-/Zusammenschreibung („gleichglaubwürdig“, „bargegeben“, „zu Lasten“) oder der lateinische Begriff „non liquet“ (durchgehend „Liquid“). Keine von zwei Modellen bestätigte Fehlaussprache → keine Nachvertonung.
+
+| Videozeit | Stelle | Befund | Bewertung |
+|---|---|---|---|
+| 1:22,1 und weitere (2:45,6, 4:24,4, 4:50,7, 5:52,0, 6:06,2) | „non liquet“ | alle Erkenner „Liquid“ | lateinischer Begriff; bitte anhören, ob „li-kwet“ klar ist |
+| 3:10,2 und 5:58,3 | „Normentheorie“ | small und medium „Norm in Theorie“, einmal „Normenteorie“ | Kompositum (Erkennerschwäche); bitte anhören |
+| 1:47,0 | „Darlehen“ | nur `pruefe_folge`-ASR „Darlehenn“ | ein Modell; bitte anhören |
+| 2:11,4 | „etwaigen“ | nur `pruefe_folge`-ASR „edweigen“ | ein Modell; bitte anhören |
+| 6:02,3 | „beweisbelasteten“ | nur medium „weißbelasteten“ (small korrekt) | ein Modell; bitte anhören |
+| 1:28,9 und 5:36,7 | „Beweisstation“ | small/`pruefe_folge` „Beweistation“ | Fuge; vermutlich Erkennerschwäche |
+| 1:08,5 | „Halte“ | nur small „haltet“ | ein Modell |
+
+## Namensprüfung
+
+`src/namen_141.py`: jede Nennung einzeln ausgeschnitten, im Satz und isoliert erkannt (medium), akustisch per MFCC/DTW gegen die übrigen Nennungen verglichen.
+
+| Name | Nennungen (Videozeit) | Ergebnis |
+|---|---|---|
+| Wiedemann | 0:17,3 (Reichert/niklas), 0:32,2, 0:53,6, 1:37,5, 4:07,6, 4:20,5 (Erzählerin) | alle als „Wiedemann“ erkannt, kein DTW-Ausreißer; deutsche Aussprache (Wie-de-mann), einheitlich auch in der Figurenstimme. **OK** |
+| Krause | 0:33,2, 0:49,9, 4:31,1, 4:48,8 | alle „Krause“; 4:48,8 (satzfinal vor Pause, 0,88 s gedehnt) DTW-Ausreißer, isoliert aber korrekt „Frau Krause.“ – Längung am Satzende, keine abweichende Aussprache; bitte bei der Hörprüfung mithören. **OK** |
+| Reichert | 0:14,9, 4:09,7 | beide „Reichert“, kein Ausreißer. **OK** |
+| Fischer | 0:21,3 | „Fischer“. **OK** |
+
+## Sichtprüfung (Befunde und Korrekturen)
+
+Gesichtet aus dem finalen Hauptfilm-MP4: alle 133 Bildhalte (`out/bildhalte_mp4_1…5.png`), Vollbilder an Fall-, Tafel- und Schemamomenten, Lippenstreifen aller Sprechfenster, Schnittstellen Intro/Hauptfilm/Outro.
+
+- Erster Bildhalt nicht leer (Richterin am Tisch „Gericht“, Namensschild, Prüfpfad). Namensschilder jeder Figur ab dem ersten Auftritt und solange sie im Bild ist (auch Wiedemann allein in der Szene Sonderregeln, Richterin allein in „Non liquet“ und „Im Urteil“).
+- Blickrichtungen stimmen (Zeuge links blickt nach rechts, Zeugin rechts nach links; Figuren neben der Tafel blicken zur Tafel).
+- Bild und Sachverhalt: Umschlag auf dem Küchentisch zur Behauptung der Barübergabe, durchgestrichener Beleg zu „keine Quittung“, durchgestrichener Geldschein zu „nie Geld bekommen“, Waage im Gleichstand für Aussage gegen Aussage, „zu seinen Lasten“ an der Klägerschale, in der Gegenvariante an der Beklagtenschale.
+- Vor dem Containerneustart (früherer Lauf) wurden Vorschau und Einzelbilder geprüft und das Folienskript vor dem Vollrender angepasst; im finalen Render keine weiteren Bildfehler gefunden, daher kein erneuter Render.
+- Kleinere Hinweise ohne Korrektur: Tafelzeile Klausurtipp „z. B. §§ 280 Abs. 1 S. 2, 477, 1006 BGB“ (Video 5:32,5) nennt Normen, die an dieser Stelle nicht erneut gesprochen werden, aber zwei Minuten vorher erklärt wurden; Merkkarte „Sie trägt jede Partei …“ statt gesprochen „Und die trägt jede Partei …“ (sinngleich, keine Sprechblase). Zitatzeile BGH IV ZR 68/22 mit „[muss]“, um der gesprochenen Satzstellung zu folgen.
+
+## Themenplan-Abgleich (für den Koordinator)
+
+Siehe [`RECHTSSTAND.md`](RECHTSSTAND.md), Abschnitt „Themenplan-Abgleich“. Vorschläge: `Normen = § 286 Abs. 1 ZPO; § 488 Abs. 1 S. 2, § 362 BGB; Sonderregeln §§ 280 Abs. 1 S. 2, 477, 1006 BGB; Rosenberg’sche Normentheorie`; `Leitentscheidung = BGH, Urt. v. 20.3.2024 – IV ZR 68/22, Rn. 68; BGH, Urt. v. 12.12.2023 – VI ZR 76/23, Rn. 15`. Thumbnail-Texte unverändert.
+
+**Schlussprüfung:** Kontaktbogen je Folie, alle 133 Bildhalte aus dem finalen MP4, Mund-Einzelbilder aller Sprechfenster aus dem finalen MP4, Schnittstellen gesichtet; Spracherkennung small, medium und `pruefe_folge`, Namensvergleich, Segmentkantenanalyse, technische Prüfung. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die Stellen unter „Bitte anhören“); Themenplan-Korrekturen durch den Koordinator; Zuordnung „Normentheorie ↔ Leo Rosenberg“ nicht an Primärquelle online verifiziert.
+**Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 04.10.2026
+
+## Drive
+
+Ordner `LexVerse Produktion/141 Beweislast non liquet/` (ID `18ghirZD9xAbk0LHprDhuwN1_DkYIll2b`), per rclone angelegt und befüllt (`tools/master_packen.sh`), 9 Dateien: `141-Beweislast-non-liquet.mp4` (26.575.022 B), `141-Beweislast-non-liquet-Hauptfilm.mp4` (19.297.010 B), `master.zip` (49.121.997 B, 316 Dateien, `unzip -t` fehlerfrei), `thumb_A.jpg`, `thumb_B.jpg`, `beschreibung.txt`, `kapitel.txt`, `untertitel.srt`, `metadaten.json`. `rclone check --one-way`: **0 Abweichungen, 9 übereinstimmende Dateien** (Readback `rclone lsl`, 04.10.2026, 03:57 UTC); genau ein Ordner dieses Namens. Der Abnahmebogen im Master ist der Stand unmittelbar vor diesem Drive-Abschnitt. Nach dem Upload `out/ton_mix.wav` im Container gelöscht; MP4s, `stimme.wav` und `el_cache` bleiben bis zur Koordinatorprüfung.

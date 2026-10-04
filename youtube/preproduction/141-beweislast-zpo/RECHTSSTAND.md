@@ -49,6 +49,7 @@
 | **BGH, Urt. v. 18.1.2022 – XI ZR 380/20** | Rn. 31: Ist „nur streitig, ob der Anspruch … bereits erfüllt worden ist, trägt das Kreditinstitut die Darlegungs- und Beweislast für die Erfüllung“ (Schuldner beweist Erfüllung; Tafel Gegenvariante „vgl.“) | https://testphase.rechtsinformationen.bund.de/v1/case-law/KORE303572022.html |
 | BGH, Urt. v. 8.7.2021 – IX ZR 121/20 | Rn. 30: „Zweifel gehen zulasten des Drittschuldners, der die Darlegungs- und Beweislast für die Erfüllung … trägt.“ (Beleg für „Die Unklarheit geht zulasten der Partei, die sie trägt“ und für die Gegenvariante) | https://testphase.rechtsinformationen.bund.de/v1/case-law/KORE302762021.html |
 | BGH, Urt. v. 7.2.2019 – VII ZR 274/17 | Rn. 9 (Wiedergabe des Berufungsurteils): „Die Klage sei abzuweisen, weil der Kläger beweisfällig geblieben sei. Der Kläger … sei beweisbelastet …“ (Beleg, dass die Formulierung in der Praxis gebraucht wird; Tafel „Formulierung z. B. in …, Rn. 9 (Berufungsgericht)“) | https://testphase.rechtsinformationen.bund.de/v1/case-law/KORE312422019.html |
+| BGH, Urt. v. 7.2.2019 – VII ZR 274/17 (Senat) | Rn. 19: „Die Anwendung der Beweislastregeln zur Streitentscheidung stellt eine ultima ratio dar, die erst dann zum Tragen kommt, wenn …“ (Beleg für Klausurtipp „Flüchte nicht zu früh in die Beweislast“ und „Jetzt, und erst jetzt, entscheidet die Beweislast“; nachgetragen 04.10.2026) | ebd. |
 
 Zusätzlich gesichtet, nicht als Beleg verwendet: BGH VIII ZR 181/16 Rn. 6 („beweisfällig geblieben“, Berufungsgericht), X ZR 82/07 Rn. 5 (non liquet nach widersprüchlichen Zeugenaussagen, Berufungsgericht), II ZR 273/12 Rn. 11 („geht das non liquet … zu Lasten“), VII ZR 396/21 (Beweismaß), VIII ZR 6/24 Rn. 35 (Entlastung nach § 280 Abs. 1 S. 2 BGB). Die Suche nach „Normentheorie“ und „Rosenberg … Beweislast“ im Portal ergab keinen Beleg für den Namen der Lehre.
 
@@ -85,7 +86,7 @@ Zusätzlich gesichtet, nicht als Beleg verwendet: BGH VIII ZR 181/16 Rn. 6 („b
 | `urt`/`u1` | übliche Formulierung „Der Kläger ist beweisfällig geblieben.“ | Praxis-/Klausurkonvention; Verwendung belegt in BGH VII ZR 274/17 Rn. 9 (Berufungsgericht) und VIII ZR 181/16 Rn. 6 |
 | `u2` | davor die Beweiswürdigung; Gründe anzugeben, die für die richterliche Überzeugung leitend gewesen sind | § 286 Abs. 1 S. 2 ZPO (wörtlich) |
 | `u3` | erst erklären, warum keine Aussage überzeugt, dann wer die Beweislast trägt | Aufbauempfehlung (Gesamtwissen Band 14, 5.: „jedes Beweismittel würdigen und Gesamtergebnis nachvollziehbar begründen“; „Beweislastentscheidung“) |
-| `tipp`–`tipp3` | nicht zu früh in die Beweislast; erst würdigen; vorher Sonderregeln/Vermutungen prüfen | Klausurtipp; § 286 Abs. 1 ZPO; Gesamtwissen 5. („Vorher Beweiserleichterungen, gesetzliche Vermutungen … prüfen“) |
+| `tipp`–`tipp3` | nicht zu früh in die Beweislast; erst würdigen; vorher Sonderregeln/Vermutungen prüfen | Klausurtipp; BGH VII ZR 274/17 Rn. 19 (Beweislastregeln als „ultima ratio“); § 286 Abs. 1 ZPO; Gesamtwissen 5. („Vorher Beweiserleichterungen, gesetzliche Vermutungen … prüfen“) |
 | `sch`–`k5` | Schema I.–V. | wie oben; Gliederung ist Klausurkonvention |
 | `merke`/`mk2` | beim non liquet verliert, wer die Beweislast trägt; jede Partei trägt sie für die Voraussetzungen der ihr günstigen Norm | BGH IV ZR 68/22 Rn. 68; IX ZR 121/20 Rn. 30 |
 
