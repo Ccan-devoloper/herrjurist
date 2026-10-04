@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "stand": "2026-10-18",
+  "stand": "2026-10-04T23:39:10Z",
   "status": "live-vorrang",
   "zweck": "Kostenfreie redaktionelle Vorproduktion. Im Live-Lauf sollen keine Autor-, Faktencheck- oder sonstigen Text-KI-Kosten entstehen.",
   "kostenPolicy": {
@@ -235,15 +235,23 @@
     {
       "datum": "2026-10-12",
       "status": "vorproduziert",
-      "freigabeBetreiber": false,
+      "freigabeBetreiber": true,
       "liveVerknuepft": false,
-      "vorproduktionStatus": "review",
+      "vorproduktionStatus": "live-freigegeben",
       "feed": 3,
       "storiesEigenstaendig": 6,
       "teaserAbgeleitet": 3,
       "reviewPfad": "vorproduktion/2026-10-12/fertig",
       "coverbilder": false,
-      "providerKostenUsd": 0
+      "providerKostenUsd": 0,
+      "wartetLive": 0,
+      "liveVorrangAktiv": true,
+      "normalbetriebGesperrt": true,
+      "bilderStatus": "open-peeps-render",
+      "renderStatus": "fertig",
+      "renderErzeugtAm": "2026-10-04T23:39:10Z",
+      "coverIcons": false,
+      "renderer": "open-peeps-v4"
     },
     {
       "datum": "2026-10-13",
