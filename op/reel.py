@@ -52,7 +52,8 @@ class Reel:
     def kopfzeile(self):
         kl = self.s.get("klausurLabel") or k.MARKE["klausurLabel"] or f"Klausur {self.k}"
         self.T(self.s["fachLabel"].upper(), kl)
-        self.zeige(pille(self.s["fachLabel"].upper(), 48, 50, C, fill=PASTELL[self.k], size=k.passt(self.s["fachLabel"].upper(), "Bold", 46, 620, 28), pad=(30, 12)), 0, None, "cut")
+        frei = (W_ - 48 - F("Bold", 32).getlength(kl) - 44) - 48 - 60 - 28
+        self.zeige(pille(self.s["fachLabel"].upper(), 48, 50, C, fill=PASTELL[self.k], size=k.passt(self.s["fachLabel"].upper(), "Bold", 46, min(620, frei), 24), pad=(30, 12)), 0, None, "cut")
         self.zeige(pille(kl, W_ - 48, 56, C, fill=WEISS, size=32, anker="r", pad=(22, 10)), 0, None, "cut")
 
     def hook(self, h, t_ende):
@@ -351,8 +352,9 @@ class Reel:
         h, kk = self.s["hook"], self.k
         els = []
         lbl = self.s["fachLabel"].upper()
-        els.append(pille(lbl, 64, 272, C, fill=PASTELL[kk], size=k.passt(lbl, "Bold", 42, 640, 28), pad=(28, 11)))
         kl = self.s.get("klausurLabel") or k.MARKE["klausurLabel"] or f"Klausur {kk}"
+        frei = (W_ - 64 - F("Bold", 32).getlength(kl) - 44) - 64 - 56 - 28      # Fach-Pille endet vor der Klausur-Pille
+        els.append(pille(lbl, 64, 272, C, fill=PASTELL[kk], size=k.passt(lbl, "Bold", 42, min(640, frei), 24), pad=(28, 11)))
         els.append(pille(kl, W_ - 64, 278, C, fill=WEISS, size=32, anker="r", pad=(22, 10)))
         zeilen = h["zeilen"]
         stil, st = h.get("stil", "split"), h.get("stempel") or {}
