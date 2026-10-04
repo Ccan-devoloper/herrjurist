@@ -197,7 +197,7 @@ class Stories:
         t, y = self.gross(s["titel"], OBEN + 200, 96, kk); els += t
         y = self.textkarte(els, y + 30, "Falsch", s["falsch"], FALLE_FILL, zeichen="nein")
         y = self.textkarte(els, y + 30, "Richtig", s["richtig"], (226, 245, 228, 255), zeichen="ok", norm=s.get("norm"))
-        if s.get("figur") and UNTEN - y >= 260:
+        if s.get("figur") and UNTEN - y >= 340:
             els.append(k.nah(self.f(s["figur"], 820), 820, int(y + 40), min(520, UNTEN - y - 20)))
         self.speichern(s, els, k.worte(*s["titel"], s["falsch"], s["richtig"]) + (1 if s.get("norm") else 0))
 
@@ -213,7 +213,7 @@ class Stories:
             els.append(warnung_i(94, y + 62, C, gr=26)); els += e; y = y2
         if s.get("norm"):
             self.T(s["norm"]); els.append(OT(s["norm"], 64, y + 20, C, "Bold", 42, farbe=GRAUTEXT)); y += 70
-        if s.get("figur") and UNTEN - y >= 260:
+        if s.get("figur") and UNTEN - y >= 340:
             els.append(k.nah(self.f(s["figur"], 820), 820, int(y + 40), min(560, UNTEN - y - 20)))
         self.speichern(s, els, k.worte(*s["titel"], *[x for a in s["ansichten"] for x in a], s.get("klausur_tipp")) + (1 if s.get("norm") else 0))
 
@@ -222,7 +222,7 @@ class Stories:
         kk = int(s["klausur"]); els = self.kopfzeile(s, s.get("ueberzeile", "Begriff des Tages"))
         t, y = self.gross(s["titel"], OBEN + 200, 104, kk); els += t
         y = self.textkarte(els, y + 40, s.get("kopf", "Definition"), s["text"], HELL, size=54, norm=s.get("norm"))
-        if s.get("figur") and UNTEN - y >= 260:
+        if s.get("figur") and UNTEN - y >= 340:
             els.append(k.nah(self.f(s["figur"], 820), 820, int(y + 40), min(560, UNTEN - y - 20)))
         self.speichern(s, els, k.worte(*s["titel"], s.get("kopf", "Definition"), s["text"]) + (1 if s.get("norm") else 0))
 
@@ -238,7 +238,7 @@ class Stories:
             gr = k.passt(z, "ExtraBold", 72, 540, 46)
             els.append(OT(z, 476, yy, C, "ExtraBold", gr)); yy += int(gr * 1.2)
         y = self.punkte(els, s["punkte"], max(OBEN + 560, yy + 30), size=52, normsize=40)
-        if s.get("figur") and UNTEN - y >= 260:
+        if s.get("figur") and UNTEN - y >= 340:
             els.append(k.nah(self.f(s["figur"], 820), 820, int(y + 40), min(560, UNTEN - y - 20)))
         self.speichern(s, els, k.worte(s["zahl"], *s["titel"], *[p[0] for p in s["punkte"]]) + sum(1 for p in s["punkte"] if len(p) > 2 and p[2]))
 
