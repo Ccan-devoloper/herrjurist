@@ -26,7 +26,7 @@ SEGMENTE = [
     ("[j1]Eine Eins vorne sieht einfach besser aus.", 0.3, "Janosch"),
     ("[pdf]Er speichert die Datei als PDF [mail]und schickt sie per E-Mail an Frau Hagemann aus der Personalabteilung.", 0.3),
     ("[h1]Eins Komma acht, sehr gut. Sie sind in der nächsten Runde.", 0.3, "Hagemann"),
-    ("[variante]Variante: Janosch druckt die bearbeitete Datei aus und schickt den Ausdruck per Post, als Kopie seines "
+    ("[variante]In der Variante druckt Janosch die bearbeitete Datei aus und schickt den Ausdruck per Post, als Kopie seines "
      "Zeugnisses. [frage]Hat er eine Urkunde gefälscht? [frage2]Oder greift Paragraf zweihundertneunundsechzig?", 0.6),
     # --- B Sachverhalt -----------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),

@@ -9,7 +9,9 @@ sys.path.insert(0, "../../stimme-elevenlabs")
 import synth_el
 
 LATEIN = [(r"\bpoena\b", "pöna"), (r"\bcerta\b", "zerta"), (r"\bpraevia\b", "präwia")]
-synth_el.AUSSPRACHE = list(synth_el.AUSSPRACHE) + LATEIN
+# Nachvertonung Segment 16 (einmalig): whisper small und medium hörten „Merkmal“ übereinstimmend als „Nagmal/Nackmal“
+NACH = [(r"\bMerkmal\b", "Merk-mal")]
+synth_el.AUSSPRACHE = list(synth_el.AUSSPRACHE) + LATEIN + NACH
 
 if __name__ == "__main__":
     sperre = open(os.path.join(os.path.dirname(os.path.abspath(synth_el.__file__)), ".vertonung.lock"), "w")

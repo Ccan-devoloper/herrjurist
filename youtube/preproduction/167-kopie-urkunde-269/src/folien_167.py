@@ -235,7 +235,7 @@ folie([(NULL, "Fall · Die Bewerbung"), ("note", "Fall · Das Zeugnis: Note 2,8"
     pl("eingescannt", IX, 520, beim("scan", "scannt"), fill=WEISS, size=30, anker="m", bis="pdf"),
     szene(pl("am Rechner geändert", ZX + ZW // 2, 520, beim("aendern", "ändert"), fill=ROTHELL, size=30, anker="m", bis="j1"),
           "167tasten_1", 1.0),
-    blase("sprech", 560, 175, "j1", 900, 640, inhalt=["Eine 1 vorne sieht", "einfach besser aus."], textsize=34,
+    blase("sprech", 520, 175, "j1", 640, 215, inhalt=["Eine 1 vorne sieht", "einfach besser aus."], textsize=34,
           figur=("JA_redet_r", FX, BODEN, FH), bis="pdf"),
     ficon("tabler", "file-type-pdf", IX, 470, 150, "pdf"),
     pl("als PDF gespeichert", IX, 520, beim("pdf", "speichert"), fill=WEISS, size=30, anker="m", bis="mail"),
@@ -258,7 +258,7 @@ folie([("h1", "Fall · In der Personalabteilung"), ("variante", "Fall · Variant
     pl("PDF: Note 1,8", 1260, TT2 - 215, "h1", fill=WEISS, size=30, anker="m"),
     *st("HA", HX, [("redet", "h1"), ("ruhig", "variante"), ("denkt", "frage"), ("ernst", "frage2")], rede=("redet",),
         unten=BODEN, hoehe=FH, erst="cut"),
-    blase("sprech", 600, 175, "h1", HX - 330, 250, inhalt=["1,8, sehr gut. Sie sind", "in der nächsten Runde."], textsize=34,
+    blase("sprech", 600, 175, "h1", HX - 330, 240, inhalt=["1,8, sehr gut. Sie sind", "in der nächsten Runde."], textsize=34,
           figur=("HA_redet", HX, BODEN, FH), bis="variante"),
     linienzug([(930, 400), (930, BODEN - 4)], "variante", breite=4, farbe=GRAU),
     pl("Variante", 70, 40, "variante", fill=GELB, size=36),
@@ -287,7 +287,7 @@ folie([("begriff", "Voraussetzung › Urkundenbegriff"), ("kopie", "Fotokopie �
     z("Urkunde: verkörperte Gedankenerklärung, zum Beweis", 110, 175, "begriff", "Bold", 31),
     z("geeignet und bestimmt, Aussteller erkennbar", 110, 218, beim("begriff", "geeignet"), "Bold", 31),
     fund("Urkundenbegriff: Folge zur gefälschten Entschuldigung", 150, 264, "begriff"),
-    karte(110, 330, 1040, 190, "kopie", fill=HELL, rund=18, schatten=6, rand=4),
+    karte(110, 330, 1040, 190, beim("kopie", "Nach"), fill=HELL, rund=18, schatten=6, rand=4),
     z("Bloße Fotokopie, die nach außen als", 140, 350, beim("kopie", "Nach"), "ExtraBold", 33),
     z("Reproduktion erscheint: keine Urkunde", 140, 400, beim("kopie", "Reproduktion"), "ExtraBold", 33),
     fund("st. Rspr.; BGHSt 24, 140, 141 f.; BGH, Beschl. v. 9.3.2011 – 2 StR 428/10, Rn. 11", 140, 460,
@@ -358,9 +358,9 @@ folie([("aus", "Fotokopie › Ausnahmen"), ("aus1", "Ausnahme 1 › Kopie ersche
 
 # F Datei: § 269 Abs. 1 im Wortlaut, hypothetischer Urkundenvergleich ----------------------------------------------------
 W269 = [[("„Wer zur Täuschung im Rechtsverkehr ", 0), ("beweiserhebliche Daten", "a"), (" so", 0)],
-        [("speichert oder verändert", "b"), (", daß bei ihrer Wahrnehmung eine", 0)],
-        [("unechte oder verfälschte Urkunde vorliegen würde", "c"), (", oder derart", 0)],
-        [("gespeicherte oder veränderte Daten ", 0), ("gebraucht", "d"), (", wird mit Freiheitsstrafe", 0)],
+        [("speichert oder verändert,", "b"), (" daß bei ihrer Wahrnehmung eine", 0)],
+        [("unechte oder verfälschte Urkunde vorliegen würde,", "c"), (" oder derart", 0)],
+        [("gespeicherte oder veränderte Daten ", 0), ("gebraucht,", "d"), (" wird mit Freiheitsstrafe", 0)],
         [("bis zu fünf Jahren oder mit Geldstrafe bestraft.“", 0)]]
 folie([("datei", "Scan und PDF › Datei: nicht § 267"), ("p269", "§ 269 Abs. 1 StGB › Wortlaut"),
        ("hyp", "§ 269 › hypothetischer Urkundenvergleich")], rechts_frei([

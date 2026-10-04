@@ -334,7 +334,7 @@ def _aufbau(spiegeln):
         cx_, cy_ = o + (w - 80) * s, o + 110 * s
         dr.line([(cx_, cy_), (cx_ + 60 * s * _m.cos(_m.radians(a)), cy_ + 60 * s * _m.sin(_m.radians(a)))], fill=INK,
                 width=3 * s)
-    dr.rounded_rectangle((o + 150 * s, o + 30 * s, o + 175 * s, o + 150 * s), 8 * s, fill=WEISS, outline=INK, width=5 * s)
+    dr.rounded_rectangle((o + 96 * s, o + 92 * s, o + 196 * s, o + 150 * s), 12 * s, fill=WEISS, outline=INK, width=5 * s)
     im = im.resize((w + 12, h + 12), Image.LANCZOS)
     return im.transpose(Image.FLIP_LEFT_RIGHT) if spiegeln else im
 
@@ -346,7 +346,7 @@ def tretboot(x, cue, bis=None, spiegeln=False, weg=None, mit=None, anim="cut", o
     a = El(_aufbau(spiegeln), x - 6, oben - 150 + 20 - 6, cue, anim, 0.0, bis, name="boot_aufbau")
     els.append(a)
     if mit:
-        els.append(peep_voll(mit, x + BOOT_W / 2, oben + 70, 330, cue, anim=anim, bis=bis))
+        els.append(peep_voll(mit, x + BOOT_W / 2 - 10, oben + 100, 330, cue, anim=anim, bis=bis))
     els.append(El(_rumpf(spiegeln), x - 6, oben - 6, cue, anim, 0.0, bis, name="boot_rumpf"))
     if weg:
         for e in els:
@@ -491,4 +491,356 @@ folie([("p248", f"{PF} · § 248b StGB: unbefugter Gebrauch"), ("kein", f"{PF} �
     *rechts_frei(tretboot(PX - BOOT_W / 2, "kein", anim="pop", oben=300)),
     pl("Tretboot", PX, 100, "kein", fill=GELB, size=28, anker="m"),
     *paar([("p248", "denkt"), (beim("kein", "Fahrrad"), "froh")], [("p248", "ruhig"), ("kein", "sorge")]),
+])
+
+# ===========================================================================================================================
+# D1 Art. 103 Abs. 2 GG und § 1 StGB (Wortlautkarten, vollständig vorgelesen bzw. „wortgleich“), nullum crimen …
+# ===========================================================================================================================
+PG = "Gesetzlichkeitsprinzip"
+WT = ["„Eine Tat kann nur bestraft werden, wenn die Strafbarkeit",
+      "gesetzlich bestimmt war, bevor die Tat begangen wurde.“"]
+A103 = beim("a103", "Artikel")
+w103, w103_y = wortlaut(80, 175, 1100, ["„(2) " + WT[0][1:], WT[1]], "Art. 103 Abs. 2 GG", A103, marken=[
+    (1, "gesetzlich bestimmt", beim("a103", "gesetzlich")), (1, "bevor", beim("a103", "bevor"))], size=32)
+w1, w1_y = wortlaut(80, w103_y + 20, 1100, WT, "§ 1 StGB – Keine Strafe ohne Gesetz", "p1", size=32)
+folie([("a103", f"{PG} · Warum hilft das Gericht nicht nach?"), (A103, f"{PG} · Art. 103 Abs. 2 GG"),
+       ("p1", f"{PG} › § 1 StGB: wortgleich"), ("latein", f"{PG} › nullum crimen, nulla poena sine lege")], [
+    *tafel("a103", "Warum hilft das Gericht nicht nach?"),
+    *w103, *w1,
+    *okz("wortgleich", w1_y + 22, beim("p1", "wortgleich"), "Bold", 34, x=160),
+    blk(110, w1_y + 90, 1040, 84, GELBHELL, "latein", [("nullum crimen, nulla poena sine lege", "ExtraBold", 36, INK)]),
+    z("kein Verbrechen, keine Strafe ohne Gesetz", 140, w1_y + 192, beim("latein", "Kein"), "Bold", 34),
+    *requisit([("a103", ("tabler", "help", 110, WEISS), "Gericht nachhelfen?", WEISS),
+               (A103, ("tabler", "book", 110, WEISS), "Art. 103 Abs. 2 GG", WEISS),
+               ("p1", ("tabler", "book-2", 110, GELB), "§ 1 StGB", GELB),
+               ("latein", ("tabler", "scale", 120, GELBHELL), "sine lege", GELBHELL)]),
+    *paar([("a103", "denkt"), ("latein", "ruhig")], [("a103", "ernst"), ("p1", "denkt")]),
+])
+
+# ===========================================================================================================================
+# D2 Zwei Zwecke (BVerfGE 126, 170 Rn. 69 f.)
+# ===========================================================================================================================
+folie([("zweck", f"{PG} · zwei Zwecke"), ("z1", f"{PG} › Der Gesetzgeber entscheidet"),
+       ("z2", f"{PG} › Vorhersehbarkeit")], [
+    *tafel("zweck", "Zwei Zwecke"),
+    zit("BVerfG, Beschl. v. 23.6.2010 – 2 BvR 2559/08 u. a., Rn. 69 f.", 110, 170, "zweck"),
+    ficon("tabler", "building-bank", 190, 380, 120, "z1", fuell=BLAUHELL),
+    blk(280, 240, 870, 150, BLAUHELL, "z1", [("1. Über Strafbarkeit entscheidet", "ExtraBold", 36, INK),
+                                          ("der Gesetzgeber selbst.", "ExtraBold", 36, INK)]),
+    ficon("tabler", "eye", 190, 600, 120, "z2", fuell=HELLGRUEN),
+    blk(280, 460, 870, 150, HELLGRUEN, "z2", [("2. Jeder soll vorhersehen können,", "ExtraBold", 36, INK),
+                                           ("was verboten ist.", "ExtraBold", 36, INK)]),
+    *requisit([("zweck", ("tabler", "gavel", 120, HOLZ), "Bundesverfassungsgericht", WEISS),
+               ("z1", ("tabler", "building-bank", 110, BLAUHELL), "Gesetzgeber", BLAUHELL),
+               ("z2", ("tabler", "eye", 110, HELLGRUEN), "vorhersehbar", HELLGRUEN)]),
+    *paar([("zweck", "ruhig"), ("z2", "denkt")], [("zweck", "denkt"), ("z1", "ruhig")]),
+])
+
+# ===========================================================================================================================
+# E0 Vier Gewährleistungen (Überblick, deutsche Begriffe; Farben wie die vier Tafeln)
+# ===========================================================================================================================
+PV = "Vier Gewährleistungen"
+folie([("vier", f"{PV} · Überblick"), ("va", f"{PV} › geschrieben"), ("vb", f"{PV} › bestimmt"),
+       ("vc", f"{PV} › streng angewendet"), ("vd", f"{PV} › vor der Tat")], [
+    *tafel("vier", "Vier Gewährleistungen"),
+    zit("Art. 103 Abs. 2 GG, § 1 StGB", 110, 170, "vier"),
+    blk(110, 230, 505, 150, BLAU, "va", [("1. geschrieben", "ExtraBold", 38, INK)]),
+    blk(645, 230, 505, 150, GELB, "vb", [("2. bestimmt", "ExtraBold", 38, INK)]),
+    blk(110, 420, 505, 150, LILA, "vc", [("3. streng angewendet", "ExtraBold", 38, INK)]),
+    blk(645, 420, 505, 150, GRUEN, "vd", [("4. schon vor der Tat", "ExtraBold", 36, INK), ("gelten", "ExtraBold", 36, INK)]),
+    *requisit([("vier", ("tabler", "list-numbers", 110, WEISS), "vier Gewährleistungen", WEISS)]),
+    *paar([("vier", "ruhig"), ("vc", "denkt")], [("vier", "denkt"), ("vd", "ruhig")]),
+])
+
+
+# ===========================================================================================================================
+# E1–E4 je eine Tafel in eigener Farbe, gleiche Struktur: Titel + Pille „Gewährleistung n“, Kernzeile (Begriff, Adressat),
+# Inhalt, farbiger Block am Fall/Beispiel, Fundstelle
+# ===========================================================================================================================
+def gewaehr_tafel(nr, cue, titel_):
+    farbe, hell, _ = GEW[nr]
+    return [*tafel(cue, titel_, fill=hell, frei=880), pl(f"Gewährleistung {nr}", 930, 96, cue, fill=farbe, size=30)]
+
+
+folie([("sa", "1. lex scripta · geschriebenes Gesetz"), ("sb", "1. lex scripta › kein Gewohnheitsrecht"),
+       ("sc", "1. lex scripta › Anstand ist kein Straftatbestand")], [
+    *gewaehr_tafel(1, "sa", "1. lex scripta"),
+    z("Strafe braucht ein geschriebenes Gesetz.", 110, 190, beim("sa", "Strafe"), "ExtraBold", 36),
+    *neinz("Gewohnheitsrecht begründet keine Strafbarkeit", 290, "sb", "Bold", 34),
+    zit("BVerfG, Beschl. v. 23.6.2010 – 2 BvR 2559/08 u. a., Rn. 68, 77", 185, 345, "sb"),
+    blk(110, 440, 1040, 130, BLAU, "sc", [("Fremde Boote nicht nehmen:", "ExtraBold", 34, INK),
+                                       ("Regel des Anstands, kein Straftatbestand", "Bold", 34, INK)]),
+    *requisit([("sa", ("tabler", "writing", 110, BLAU), "geschrieben", BLAU),
+               ("sb", ("tabler", "ban", 100, HELLROT), "kein Gewohnheitsrecht", HELLROT),
+               ("sc", ("tabler", "heart-handshake", 110, BLAUMITTEL), "Anstand", BLAUMITTEL)]),
+    *paar([("sa", "ruhig"), ("sc", "froh")], [("sa", "denkt"), ("sc", "sorge")]),
+])
+
+folie([("ca", "2. lex certa · Bestimmtheitsgebot"), (beim("ca", "richtet"), "2. lex certa › richtet sich an den Gesetzgeber"),
+       ("cb", "2. lex certa › am Wortlaut erkennbar"), ("cc", "2. lex certa › „Wer Unrecht tut …“ genügt nicht")], [
+    *gewaehr_tafel(2, "ca", "2. lex certa"),
+    z("Bestimmtheitsgebot", 110, 190, beim("ca", "Bestimmtheitsgebot"), "ExtraBold", 36),
+    z("richtet sich an den Gesetzgeber", 520, 192, beim("ca", "richtet"), "Bold", 34),
+    z("Strafbarkeit so genau beschreiben, dass man sie", 110, 280, "cb", "Bold", 34),
+    z("im Regelfall schon am Wortlaut erkennt", 110, 326, beim("cb", "Regelfall"), "Bold", 34),
+    zit("BVerfG, Beschl. v. 23.6.2010 – 2 BvR 2559/08 u. a., Rn. 71", 110, 380, beim("cb", "Regelfall")),
+    blk(110, 440, 1040, 130, GELB, "cc", [("„Wer Unrecht tut, wird bestraft.“", "ExtraBold", 34, INK),
+                                       ("zu unbestimmt: genügte dem nicht", "Bold", 34, INK)]),
+    nein(1100, 505, beim("cc", "genügte"), gr=24),
+    *requisit([("ca", ("tabler", "focus", 110, GELB), "bestimmt", GELB),
+               (beim("ca", "richtet"), ("tabler", "building-bank", 110, GELBHELL), "Gesetzgeber", GELBHELL),
+               ("cc", ("tabler", "help", 110, HELLROT), "zu vage", HELLROT)]),
+    *paar([("ca", "denkt"), ("cc", "frech")], [("ca", "ruhig"), ("cc", "denkt")]),
+])
+
+folie([("sta", "3. lex stricta · Analogieverbot"), (beim("sta", "richtet"), "3. lex stricta › richtet sich an die Gerichte"),
+       ("stb", "3. lex stricta › § 248b nicht auf Tretboote"), ("stc", "3. lex stricta › Verweis auf zwei Folgen")], [
+    *gewaehr_tafel(3, "sta", "3. lex stricta"),
+    z("Analogieverbot", 110, 190, beim("sta", "Analogieverbot"), "ExtraBold", 36),
+    z("richtet sich an die Gerichte", 430, 192, beim("sta", "richtet"), "Bold", 34),
+    *neinz2("§ 248b StGB nicht auf Tretboote erweitern", 290, "stb", beim("stb", "nicht"), "Bold", 34),
+    blk(110, 440, 1040, 130, LILA, "stc", [("Einzelheiten: Folgen zur Analogie", "ExtraBold", 34, INK),
+                                        ("und zur Unfallflucht", "Bold", 34, INK)]),
+    *requisit([("sta", ("tabler", "ban", 100, LILA), "streng", LILA),
+               (beim("sta", "richtet"), ("tabler", "gavel", 120, HOLZ), "Gerichte", WEISS),
+               ("stc", ("tabler", "player-play", 110, LILAMITTEL), "zwei Folgen", LILAMITTEL)]),
+    *paar([("sta", "ruhig"), ("stb", "froh")], [("sta", "denkt"), ("stb", "sorge")]),
+])
+
+W2 = ["„(1) Die Strafe und ihre Nebenfolgen bestimmen sich nach dem",
+      "Gesetz, das zur Zeit der Tat gilt.“"]
+w2, w2_y = wortlaut(80, 260, 1100, W2, "§ 2 Abs. 1 StGB", "pb", marken=[(1, "zur Zeit der Tat", beim("pb", "zur"))], size=32)
+folie([("pa", "4. lex praevia · Rückwirkungsverbot"), ("pb", "4. lex praevia › § 2 Abs. 1 StGB"),
+       ("pc", "4. lex praevia › neues Gesetz zu spät")], [
+    *gewaehr_tafel(4, "pa", "4. lex praevia"),
+    z("Rückwirkungsverbot", 110, 190, beim("pa", "Rückwirkungsverbot"), "ExtraBold", 36),
+    *w2,
+    blk(110, w2_y + 30, 1040, 130, GRUEN, "pc", [("neues Gesetz gegen fremde Bootsfahrten:", "ExtraBold", 34, INK),
+                                              ("für Wieland zu spät", "Bold", 34, INK)]),
+    *requisit([("pa", ("tabler", "history", 110, GRUEN), "vorher", GRUEN),
+               ("pb", ("tabler", "calendar-time", 110, HELLGRUEN), "Tatzeit", HELLGRUEN),
+               ("pc", ("tabler", "calendar-x", 110, WEISS), "zu spät", WEISS)]),
+    *paar([("pa", "ruhig"), ("pc", "froh")], [("pa", "denkt"), ("pc", "muede")]),
+])
+
+# ===========================================================================================================================
+# F1 Schwerpunkt Bestimmtheit: Untreue-Beschluss BVerfGE 126, 170 (Leitsatz 1, Rn. 73, 84, 89)
+# ===========================================================================================================================
+PB = "Bestimmtheit"
+Z73 = ["„Es schließt die Verwendung wertausfüllungsbedürftiger",
+       "Begriffe bis hin zu Generalklauseln im Strafrecht nicht",
+       "von vornherein aus …“"]
+DENN = beim("gk", "Denn")
+z73, z73_y = wortlaut(80, 480, 1100, Z73, "BVerfGE 126, 170, Rn. 73", DENN, marken=[
+    (1, "Generalklauseln", beim("gk", "Generalklauseln"))], size=31)
+folie([("best", f"{PB} · Wie bestimmt muss ein Strafgesetz sein?"), ("unt", f"{PB} › Untreue-Beschluss 2010"),
+       ("weit", f"{PB} › § 266 StGB: sehr weit gefasst"), ("gk", f"{PB} › noch vereinbar"),
+       (DENN, f"{PB} › Generalklauseln nicht ausgeschlossen")], [
+    *tafel("best", "Wie bestimmt muss es sein?"),
+    z("Untreue-Beschluss", 110, 180, beim("unt", "Untreue-Beschluss"), "ExtraBold", 36),
+    zit("BVerfG, Beschl. v. 23.6.2010 – 2 BvR 2559/08 u. a. (BVerfGE 126, 170)", 110, 232, beim("unt", "Untreue-Beschluss")),
+    z("§ 266 StGB (Untreue): sehr weit gefasst", 110, 290, "weit", "Bold", 34),
+    zit("Rn. 89", 790, 298, "weit"),
+    *okz("mit dem Bestimmtheitsgebot noch vereinbar", 360, beim("gk", "vereinbar"), "Bold", 34, x=160),
+    zit("Leitsatz 1, Rn. 84", 160, 410, beim("gk", "vereinbar")),
+    *z73,
+    *requisit([("best", ("tabler", "focus", 110, GELB), "Bestimmtheit", GELB),
+               ("weit", ("tabler", "arrows-diagonal-minimize", 110, WEISS), "sehr weit", WEISS),
+               ("gk", ("tabler", "circle-check", 110, GRUEN), "noch vereinbar", GRUEN)]),
+    *paar([("best", "denkt"), ("gk", "ruhig")], [("best", "ruhig"), ("weit", "denkt")]),
+])
+
+# ===========================================================================================================================
+# F2 Pflichten der Rechtsprechung: Präzisierungsgebot (Rn. 80, Zitatkarte), Verbot der Verschleifung (Rn. 78)
+# ===========================================================================================================================
+Z80 = ["„… ist die Rechtsprechung gehalten, verbleibende Unklarheiten",
+       "über den Anwendungsbereich einer Norm durch Präzisierung",
+       "und Konkretisierung im Wege der Auslegung nach Möglichkeit",
+       "auszuräumen (Präzisierungsgebot).“"]
+z80, z80_y = wortlaut(80, 175, 1100, Z80, "BVerfGE 126, 170, Rn. 80", "pg", marken=[
+    (1, "Präzisierung", beim("pg", "Präzisierung")), (3, "Präzisierungsgebot", beim("pg", "Präzisierungsgebot"))], size=30)
+folie([("pflicht", f"{PB} · Pflichten der Rechtsprechung"), ("pg", f"{PB} › Präzisierungsgebot"),
+       ("versch", f"{PB} › kein Merkmal geht im anderen auf"), ("vs2", f"{PB} › Verbot der Verschleifung")], [
+    *tafel("pflicht", "Pflichten der Rechtsprechung"),
+    *z80,
+    z("Kein Merkmal so weit auslegen,", 110, z80_y + 34, "versch", "Bold", 34),
+    z("dass es in einem anderen aufgeht.", 110, z80_y + 80, beim("versch", "dass"), "Bold", 34),
+    blk(110, z80_y + 150, 700, 84, HELLROT, "vs2", [("Verschleifung: verboten", "ExtraBold", 34, INK)]),
+    zit("BVerfGE 126, 170, Rn. 78", 840, z80_y + 180, "vs2"),
+    *requisit([("pflicht", ("tabler", "gavel", 120, HOLZ), "Rechtsprechung", WEISS),
+               ("pg", ("tabler", "zoom-in", 110, GELB), "präzisieren", GELB),
+               ("versch", ("tabler", "arrows-join", 110, HELLROT), "Verschleifung", HELLROT)]),
+    *paar([("pflicht", "ruhig"), ("versch", "denkt")], [("pflicht", "denkt"), ("vs2", "ernst")]),
+])
+
+# ===========================================================================================================================
+# F3 Daran scheiterte eine Verurteilung (Rn. 152, 154, 158)
+# ===========================================================================================================================
+NT_NACH = beim("nt2", "Vermögensnachteil")
+NT_PFL = beim("nt2", "Pflichtwidrigkeit")
+folie([("nachteil", f"{PB} · Daran scheiterte eine Verurteilung"), ("nt2", f"{PB} › Nachteil nicht eigenständig ermittelt"),
+       (NT_PFL, f"{PB} › aus der Pflichtwidrigkeit gefolgert"), ("aufh", f"{PB} › Urteil aufgehoben")], [
+    *tafel("nachteil", "Daran scheiterte eine Verurteilung"),
+    z("Das Landgericht:", 110, 185, "nt2", "ExtraBold", 34),
+    blk(700, 260, 450, 140, PINK, NT_NACH, [("Vermögensnachteil", "ExtraBold", 34, INK), ("§ 266 StGB", "Regular", 30, INK)]),
+    *neinz("nicht eigenständig", 425, beim("nt2", "nicht"), "Bold", 34, x=750),
+    z("ermittelt", 750, 471, beim("nt2", "ermittelt"), "Bold", 34),
+    blk(110, 260, 450, 140, WEISS, NT_PFL, [("Pflichtwidrigkeit", "ExtraBold", 34, INK), ("§ 266 StGB", "Regular", 30, INK)]),
+    pfeil(570, 330, 690, 330, beim("nt2", "gefolgert"), breite=10, kopf=28),
+    z("gefolgert", 566, 284, beim("nt2", "gefolgert"), "Bold", 26),
+    blk(110, 540, 1040, 84, GRUEN, "aufh", [("Das Bundesverfassungsgericht hob das Urteil auf.", "ExtraBold", 34, INK)]),
+    zit("BVerfGE 126, 170, Rn. 152, 154, 158", 110, 640, "aufh"),
+    *requisit([("nachteil", ("tabler", "coin-euro", 110, PINK), "Nachteil", PINK),
+               ("aufh", ("tabler", "gavel", 120, HOLZ), "aufgehoben", GRUEN)]),
+    *paar([("nachteil", "ruhig"), ("aufh", "froh")], [("nachteil", "denkt"), ("aufh", "ernst")]),
+])
+
+# ===========================================================================================================================
+# F4 Sitzblockaden-Beschluss BVerfGE 92, 1 (DFR, Seitenzahlen): Gesetz bestimmt genug, vergeistigte Auslegung nicht
+# ===========================================================================================================================
+W240 = ["„(1) Wer einen Menschen rechtswidrig mit Gewalt oder durch",
+        "Drohung mit einem empfindlichen Übel … nötigt, …“"]
+w240, w240_y = wortlaut(80, 205, 1100, W240, "§ 240 Abs. 1 StGB (Auszug)", "sitz", marken=[
+    (0, "Gewalt", beim("verg", "Gewaltbegriff"))], size=31)
+VST_A = beim("vst", "Auslegung")
+folie([("sitz", f"{PB} · Sitzblockaden-Beschluss 1995"), ("verg", f"{PB} › vergeistigter Gewaltbegriff"),
+       ("unvor", f"{PB} › nicht mehr vorhersehbar"), ("vst", f"{PB} › Gesetz bestimmt genug"),
+       (VST_A, f"{PB} › Auslegung verstößt gegen Art. 103 Abs. 2 GG")], [
+    *tafel("sitz", "Sitzblockaden-Beschluss (1995)"),
+    zit("BVerfG, Beschl. v. 10.1.1995 – 1 BvR 718/89 u. a. (BVerfGE 92, 1)", 110, 160, "sitz"),
+    *w240,
+    z("vergeistigt: bloße Anwesenheit auf der Straße", 110, w240_y + 26, beim("verg", "vergeistigt"), "Bold", 33),
+    z("+ psychische Hemmung = Gewalt", 110, w240_y + 70, beim("verg", "psychisch"), "Bold", 33),
+    zit("BVerfGE 92, 1 (15, 17)", 650, w240_y + 78, beim("verg", "psychisch")),
+    *neinz("nicht mehr sicher vorhersehbar, was verboten ist", w240_y + 130, "unvor", "Bold", 33, x=160),
+    zit("(18)", 1000, w240_y + 138, "unvor"),
+    *okz("das Gesetz: bestimmt genug", w240_y + 200, "vst", "Bold", 33, x=160),
+    zit("(13)", 620, w240_y + 208, "vst"),
+    blk(110, w240_y + 262, 1040, 84, HELLROT, VST_A, [("die Auslegung: Verstoß gegen Art. 103 Abs. 2 GG", "ExtraBold", 33, INK)]),
+    zit("BVerfGE 92, 1 (1, 14); mit 5 : 3 Stimmen (16)", 110, w240_y + 358, VST_A),
+    *requisit([("sitz", ("tabler", "road", 110, WEISS), "Sitzblockade", WEISS),
+               ("verg", ("tabler", "ghost", 110, LILAMITTEL), "vergeistigt", LILAMITTEL),
+               ("unvor", ("tabler", "help", 110, HELLROT), "vorhersehbar?", HELLROT),
+               (VST_A, ("tabler", "gavel", 120, HOLZ), "Verstoß", HELLROT)]),
+    *paar([("sitz", "ruhig"), ("unvor", "denkt")], [("sitz", "denkt"), (VST_A, "ernst")]),
+])
+
+# ===========================================================================================================================
+# G1 Nur zulasten: Analogie zugunsten nicht verboten (BGH 1 StR 118/20, Leitsatz, Rn. 19–21; § 306e StGB analog)
+# ===========================================================================================================================
+PZ = "Nur zulasten"
+folie([("zug", f"{PZ} · Schutz vor Strafe"), ("zug2", f"{PZ} › Analogie zugunsten nicht verboten"),
+       ("zbsp", f"{PZ} › Beispiel: tätige Reue, § 306e StGB analog")], [
+    *tafel("zug", "Schutz vor Strafe"),
+    z("Art. 103 Abs. 2 GG schützt vor Strafe.", 110, 180, "zug", "Bold", 34),
+    *okz("Analogie zugunsten des Täters: nicht verboten", 260, "zug2", "Bold", 34, x=160),
+    zit("BGH, Beschl. v. 27.5.2020 – 1 StR 118/20, Rn. 21", 160, 310, "zug2"),
+    blk(110, 380, 1040, 176, HELLGRUEN, beim("zbsp", "tätige"), [("Beispiel: tätige Reue, § 306e StGB analog", "ExtraBold", 33, INK),
+                                                             ("Täter beseitigt die Lebensgefahr freiwillig", "Regular", 32, INK),
+                                                             ("auf andere Weise als durch Löschen", "Regular", 32, INK)]),
+    zit("BGH, Beschl. v. 27.5.2020 – 1 StR 118/20, Leitsatz, Rn. 19 f.", 110, 570, beim("zbsp", "tätige")),
+    *requisit([("zug", ("tabler", "shield-check", 110, WEISS), "Schutz vor Strafe", WEISS),
+               ("zug2", ("tabler", "circle-check", 110, GRUEN), "zugunsten: erlaubt", GRUEN),
+               ("zbsp", ("tabler", "lifebuoy", 110, HELLGRUEN), "tätige Reue", HELLGRUEN)]),
+    *paar([("zug", "ruhig"), ("zug2", "froh")], [("zug", "denkt"), ("zbsp", "ruhig")]),
+])
+
+# ===========================================================================================================================
+# G2 § 3 OWiG (Wortlautkarte)
+# ===========================================================================================================================
+W3 = ["„Eine Handlung kann als Ordnungswidrigkeit nur geahndet werden,",
+      "wenn die Möglichkeit der Ahndung gesetzlich bestimmt war,",
+      "bevor die Handlung begangen wurde.“"]
+w3, w3_y = wortlaut(80, 175, 1100, W3, "§ 3 OWiG – Keine Ahndung ohne Gesetz", "owi2", marken=[
+    (1, "gesetzlich bestimmt", beim("owi2", "gesetzlich")), (2, "bevor", beim("owi2", "bevor"))], size=31)
+folie([("owi", f"{PZ} · auch für Ordnungswidrigkeiten"), ("owi2", f"{PZ} › § 3 OWiG")], [
+    *tafel("owi", "Auch für Ordnungswidrigkeiten"),
+    *w3,
+    *requisit([("owi", ("tabler", "receipt", 110, WEISS), "Ordnungswidrigkeit", WEISS),
+               ("owi2", ("tabler", "book", 110, GELB), "§ 3 OWiG", GELB)]),
+    *paar([("owi", "ruhig"), ("owi2", "denkt")], [("owi", "denkt"), ("owi2", "ruhig")]),
+])
+
+# ===========================================================================================================================
+# H Lösung: zurück am See (gleiche Bühne wie A, weil die Geschichte an den Steg zurückkehrt)
+# ===========================================================================================================================
+folie([("loes", "Lösung · zurück am See"), ("l1", "Lösung › Diebstahl scheidet aus"),
+       (beim("l1", "Paragraf"), "Lösung › § 248b erfasst kein Tretboot"), ("l2", "Ergebnis · Wieland bleibt straflos"),
+       ("ha2", "Ergebnis · „Einfach erlaubt?“"), ("pech", "Ergebnis · Pech für den Staat"),
+       ("lg", "Ergebnis › Lücken schließt nur der Gesetzgeber")], [
+    *seekulisse("loes"),
+    *tretboot(BOOT_X, "loes"), seil("loes"),
+    *fig("WI", WIX, WIU, FH, [("loes", "ruhig_r"), ("l2", "froh_r"), ("ha2", "denkt_r"), ("lg", "ruhig_r")], erst="cut"),
+    hart(ns("Wieland", WIX, WIU, "loes", TUERKIS)),
+    *fig("HA", HAX, BODEN, FH + 20, [("loes", "ernst"), ("l2", "sorge")], bis="ha2", erst="cut"),
+    *redet("HA_fragt", HAX, BODEN, FH + 20, "ha2", "pech"),
+    *fig("HA", HAX, BODEN, FH + 20, [("pech", "muede"), ("lg", "denkt")], erst="cut"),
+    hart(ns("Hartwin", HAX, BODEN, "loes", ORANGE)),
+    pl("Diebstahl scheidet aus", 70, 40, beim("l1", "Diebstahl"), fill=HELLROT, size=32, bis="ha2"),
+    pl("§ 248b StGB erfasst kein Tretboot", 70, 104, beim("l1", "Paragraf"), fill=HELLROT, size=32, bis="ha2"),
+    pl("Wieland bleibt straflos", 70, 168, "l2", fill=GRUEN, size=34, bis="ha2"),
+    blase("sprech", 500, 200, "ha2", 1380, 220, inhalt=["Das ist also", "einfach erlaubt?"], textsize=32,
+          figur=("HA_fragt", HAX, BODEN, FH + 20), bis="pech"),
+    pl("Strafbar ist es jedenfalls nicht. Pech für den Staat.", 70, 40, "pech", fill=PINK, size=32),
+    pl("Strafbarkeitslücken schließt nur der Gesetzgeber,", 70, 104, "lg", fill=WEISS, size=32),
+    pl("und zwar nur für künftige Taten.", 70, 168, beim("lg", "und"), fill=WEISS, size=32),
+    zit("BVerfGE 126, 170, Rn. 77; Art. 103 Abs. 2 GG", 80, 252, beim("lg", "und")),
+])
+
+# ===========================================================================================================================
+# I Klausurtipp (Lexi) – Formulierung als „üblich“ gekennzeichnet
+# ===========================================================================================================================
+folie([("tipp", "Klausurtipp · auslegen bis zur Wortlautgrenze"), ("tipp2", "Klausurtipp · dann Schluss"),
+       ("tipp3", "Klausurtipp · übliche Formulierung")], [
+    *tafel("tipp", "Klausurtipp", fill=HELL),
+    warnung_i(150, 225, "tipp", gr=26),
+    z("Tatbestand auslegen,", 200, 200, beim("tipp", "Lege"), "Bold", 36),
+    z("bis zur Grenze des Wortlauts", 200, 248, beim("tipp", "Grenze"), "Bold", 36),
+    linienzug([(130, 330), (1130, 330)], "tipp2", breite=3),
+    *neinz("passt der Fall dann nicht: Schluss", 365, "tipp2", "Bold", 36, x=200),
+    z("keine Analogie zulasten des Täters", 200, 415, beim("tipp2", "keine"), "Bold", 36),
+    blk(130, 500, 1000, 200, GELBHELL, "tipp3", [("üblich etwa:", "ExtraBold", 33, INK),
+                                              ("„Eine Anwendung auf das Tretboot wäre", "Bold", 33, INK),
+                                              ("eine nach Art. 103 Abs. 2 GG", "Bold", 33, INK),
+                                              ("verbotene Analogie.“", "Bold", 33, INK)]),
+    *redet("LX_warnt", FX, FB, FR + 40, "tipp", "sch"),
+    ns("Lexi", FX, FB, "tipp", GELB, d=0.2),
+])
+
+# ===========================================================================================================================
+# J Prüfraster (Farbpunkte der vier Gewährleistungen, Reihenfolge wie gesprochen)
+# ===========================================================================================================================
+REIHEN = [("k1", "1. Gibt es ein geschriebenes Gesetz?", "lex scripta", BLAU),
+          ("k2", "2. Galt es schon zur Tatzeit?", "lex praevia", GRUEN),
+          ("k3", "3. Ist es bestimmt genug?", "lex certa", GELB),
+          ("k4", "4. Erfasst sein Wortlaut den Fall?", "lex stricta", LILA)]
+els_sch = [karte(60, 50, 1800, 940, "sch"), titel("Prüfraster: Art. 103 Abs. 2 GG", 110, 90, "sch", 46)]
+y = 210
+for c, text, lat, farbe in REIHEN:
+    im = Image.new("RGBA", (34, 34)); ImageDraw.Draw(im).ellipse((0, 0, 33, 33), fill=farbe, outline=INK, width=4)
+    els_sch.append(El(im, 130, y + 12, c, "pop", 0.0, None, name="punkt"))
+    els_sch.append(z(text, 190, y, c, "ExtraBold", 42, rechts=1800))
+    els_sch.append(z(lat, 1100, y + 8, c, "Regular", 34, farbe=TEXT, rechts=1800))
+    y += 110
+els_sch.append(blk(130, y + 20, 1100, 90, GELBHELL, "k5", [("Nur wenn alles zutrifft, darf bestraft werden.", "ExtraBold", 38, INK)]))
+assert y + 110 <= 970, y
+folie([("sch", "Prüfraster"), ("k1", "Prüfraster › 1. geschriebenes Gesetz"), ("k2", "Prüfraster › 2. zur Tatzeit"),
+       ("k3", "Prüfraster › 3. bestimmt genug"), ("k4", "Prüfraster › 4. Wortlaut erfasst den Fall"),
+       ("k5", "Prüfraster › nur dann Strafe")], els_sch)
+
+# ===========================================================================================================================
+# K Merksatz (Lexi)
+# ===========================================================================================================================
+folie([("merke", "Merksatz")], [
+    karte(80, 100, 1340, 840, "merke", fill=HELL),
+    titel("Merke", 750, 150, "merke", 84, anker="m"),
+    *markertext([[("Keine Strafe ohne ", 0), ("geschriebenes", "a"), (",", 0)],
+                 [("bestimmtes", "b"), (" und ", 0), ("vorher geltendes", "c"), (" Gesetz.", 0)]],
+                750, 300, 44, "merke", {"a": beim("merke", "geschriebenes"), "b": beim("merke", "bestimmtes"),
+                                       "c": beim("merke", "vorher")}),
+    *markertext([[("Was der Wortlaut nicht erfasst,", 0)], [("bleibt ", 0), ("straflos", "d"), (".", 0)],
+                 [("Lücken schließt nur der ", 0), ("Gesetzgeber", "e"), (".", 0)]], 750, 500, 44, "m2",
+                {"d": beim("m2", "straflos"), "e": beim("m2", "Gesetzgeber")}),
+    *redet("LX_erklaert", 1680, 950, 680, "merke", lexi_bis_ende("merke")),
+    ns("Lexi", 1680, 950, "merke", GELB, d=0.2),
 ])
