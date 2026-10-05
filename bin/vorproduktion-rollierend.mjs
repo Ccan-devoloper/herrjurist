@@ -27,6 +27,9 @@ for (let i = 1; i <= HORIZONT && faellig.length < MAX_JE_LAUF; i++) {
   const d = plus(heute, i);
   const quelle = new URL(`${d}.json`, repoDir);
   if (!fs.existsSync(quelle)) continue;
+  /* Tage mit Open-Peeps-Beschreibung (op/tage/<datum>.json) rendert „Vorproduktion · Open Peeps“;
+     der alte Stil darf sie nicht überschreiben. */
+  if (fs.existsSync(new URL(`../op/tage/${d}.json`, import.meta.url))) continue;
   const sha = crypto.createHash("sha256").update(fs.readFileSync(quelle)).digest("hex");
   const assetPfad = path.join(host.dir, "vorproduktion", `${d}.json`);
   if (!fs.existsSync(assetPfad)) { faellig.push(d); continue; }

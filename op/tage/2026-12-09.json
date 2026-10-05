@@ -1,0 +1,929 @@
+{
+ "datum": "2026-12-09",
+ "beitraege": [
+  {
+   "slot": "b1",
+   "zeit": "08:00",
+   "format": "pruefungsfrage",
+   "klausur": 1,
+   "fach": "zpo",
+   "fachLabel": "Zivilprozessrecht",
+   "klausurLabel": "Staatsexamen",
+   "themaId": "zpo-547",
+   "themaTitel": "Sachliche und örtliche Zuständigkeit",
+   "figuren": {
+    "A": {
+     "name": "Vera",
+     "kopf": "Medium Straight",
+     "haut": "#F3D0B5",
+     "haar": "#6B3E26",
+     "oberteil": "#F4A3B5",
+     "bueste": "Shirt and Coat"
+    },
+    "B": {
+     "name": "Malik",
+     "kopf": "Short 2",
+     "haut": "#8D5524",
+     "haar": "#2B2B2B",
+     "oberteil": "#F9D56E",
+     "bueste": "Hoodie"
+    }
+   },
+   "folien": [
+    {
+     "typ": "cover",
+     "badge": "Prüfungsfrage",
+     "badgeFarbe": "WEISS",
+     "zeilen": [
+      "12.000 € Mietschulden:",
+      "trotzdem Amtsgericht"
+     ],
+     "norm": "§ 23 Nr. 2 lit. a GVG",
+     "unter": "Welches Gericht?",
+     "teaser": "+ Gutachten-Baustein",
+     "motiv": {
+      "typ": "icon",
+      "name": "tabler:home",
+      "farbe": "GELB"
+     },
+     "figur": "A:staunt"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Der Fall",
+     "punkte": [
+      [
+       "V vermietet M eine Wohnung in München.",
+       "ok",
+       "Regular",
+       null
+      ],
+      [
+       "M zieht nach Köln. 12.000 € Miete bleiben offen.",
+       "ok",
+       "Regular",
+       null
+      ]
+     ],
+     "extra": [
+      "Jetzt du: Welches Gericht ist zuständig?",
+      "GELB",
+      null
+     ],
+     "figur": "B:denkt",
+     "x": 790,
+     "blase": "Landgericht in Köln?"
+    },
+    {
+     "typ": "inhalt",
+     "falle": true,
+     "titel": "Der typische Fehler",
+     "punkte": [
+      [
+       "Hoher Streitwert, also Landgericht.",
+       "nein",
+       "Bold",
+       "§ 23 Nr. 1, § 71 Abs. 1 GVG"
+      ],
+      [
+       "M wohnt in Köln, also Köln.",
+       "nein",
+       "Bold",
+       "§§ 12, 13 ZPO"
+      ],
+      [
+       "Übersehen: Wohnraummiete hat ausschließliche Sonderregeln.",
+       "ok",
+       "Regular",
+       null
+      ]
+     ],
+     "figur": "A:skeptisch",
+     "x": 290,
+     "blase": "Erst die Sonderregel!"
+    },
+    {
+     "typ": "schritte",
+     "titel": "Der Lösungsweg",
+     "schritte": [
+      [
+       "Ausschließlich zuerst",
+       "§ 40 Abs. 2 ZPO",
+       "verdrängt alle anderen Gerichtsstände"
+      ],
+      [
+       "Sachlich: Amtsgericht",
+       "§ 23 Nr. 2 lit. a GVG",
+       "Wohnraummiete ohne Rücksicht auf den Streitwert"
+      ],
+      [
+       "Örtlich: Lage der Wohnung",
+       "§ 29a Abs. 1 ZPO",
+       "ausschließlich das Gericht am Ort der Räume"
+      ]
+     ],
+     "teaser": "Am Ende: Baustein fürs Gutachten"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Die Prüfungsreihenfolge",
+     "punkte": [
+      [
+       "Ausschließliche Gerichtsstände",
+       "ok",
+       "Bold",
+       "z. B. §§ 24, 29a ZPO"
+      ],
+      [
+       "Gerichtsstandsvereinbarung oder rügelose Einlassung",
+       "ok",
+       "Regular",
+       "§§ 38, 39 ZPO"
+      ],
+      [
+       "Sonst wählt der Kläger: allgemeiner oder besonderer Gerichtsstand",
+       "ok",
+       "Regular",
+       "§§ 12 ff., 29, 32, 35 ZPO"
+      ]
+     ],
+     "figur": "B:erklaert",
+     "x": 790,
+     "blase": "Von oben nach unten!"
+    },
+    {
+     "typ": "merke",
+     "oben": [
+      "Lösung: Amtsgericht München",
+      "§ 23 Nr. 2 lit. a GVG, § 29a Abs. 1 ZPO",
+      "GRUEN"
+     ],
+     "zeilen": [
+      [
+       [
+        "Wohnraummiete",
+        "a"
+       ],
+       [
+        ":",
+        null
+       ]
+      ],
+      [
+       [
+        "sachlich das ",
+        null
+       ],
+       [
+        "AG",
+        "b"
+       ],
+       [
+        ",",
+        null
+       ]
+      ],
+      [
+       [
+        "örtlich die ",
+        null
+       ],
+       [
+        "Wohnung",
+        "c"
+       ],
+       [
+        ".",
+        null
+       ]
+      ]
+     ],
+     "speichern": "Speichern fürs Examen",
+     "frage": "Hättest du zum LG gegriffen?",
+     "teaser": "Weiterwischen: Gutachten-Baustein"
+    },
+    {
+     "typ": "schritte",
+     "titel": "So im Gutachten",
+     "schritte": [
+      [
+       "Obersatz",
+       null,
+       "Das AG München müsste zuständig sein."
+      ],
+      [
+       "Norm",
+       "§ 23 Nr. 2 lit. a GVG, § 29a Abs. 1 ZPO",
+       "Wohnraummiete: AG, örtlich ausschließlich der Ort der Räume."
+      ],
+      [
+       "Subsumtion",
+       null,
+       "Mietrückstand aus Wohnraummiete, Wohnung in München."
+      ],
+      [
+       "Ergebnis",
+       null,
+       "Das AG München ist zuständig, Streitwert und Wohnsitz egal."
+      ]
+     ]
+    }
+   ],
+   "caption": "12.000 € Mietschulden – und trotzdem ist das Amtsgericht zuständig.\n\n▸ Für Streitigkeiten über Ansprüche aus einem Mietverhältnis über Wohnraum ist das Amtsgericht ohne Rücksicht auf den Streitwert zuständig (§ 23 Nr. 2 lit. a GVG).\n▸ Örtlich ist ausschließlich das Gericht zuständig, in dessen Bezirk sich die Räume befinden (§ 29a Abs. 1 ZPO). Bei ausschließlichem Gerichtsstand ist eine Gerichtsstandsvereinbarung unzulässig (§ 40 Abs. 2 ZPO).\n▸ Typischer Fehler: wegen des Streitwerts zum Landgericht (§ 23 Nr. 1, § 71 Abs. 1 GVG) oder an den Wohnsitz des Beklagten (§§ 12, 13 ZPO). Beides kommt erst, wenn keine ausschließliche Zuständigkeit greift.\n▸ Reihenfolge: ausschließliche Gerichtsstände (etwa §§ 24, 29a ZPO), dann Vereinbarung oder rügelose Einlassung (§§ 38, 39 ZPO), sonst Wahl des Klägers (§ 35 ZPO) zwischen allgemeinem (§§ 12 ff. ZPO) und besonderem Gerichtsstand (etwa §§ 29, 32 ZPO).\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
+   "quellen": [
+    "§ 23 Nr. 1, Nr. 2 lit. a GVG",
+    "§ 71 Abs. 1 GVG",
+    "§ 29a Abs. 1 ZPO",
+    "§§ 12, 13, 24, 29, 32, 35, 38, 39, 40 ZPO"
+   ],
+   "hashtags": [
+    "#jura",
+    "#jurastudium",
+    "#staatsexamen",
+    "#zivilrecht",
+    "#zpo",
+    "#zuständigkeit",
+    "#mietrecht",
+    "#jurastudent",
+    "#examensvorbereitung"
+   ]
+  },
+  {
+   "slot": "b2",
+   "zeit": "12:30",
+   "format": "pruefungsfrage",
+   "klausur": 2,
+   "fach": "strafat",
+   "fachLabel": "Strafrecht AT",
+   "klausurLabel": "Staatsexamen",
+   "themaId": "strafat-921",
+   "themaTitel": "Irrtum über den Kausalverlauf: Wann ist die Abweichung unwesentlich?",
+   "figuren": {
+    "A": {
+     "name": "Jonte",
+     "kopf": "Short 4",
+     "haut": "#F1C7A5",
+     "haar": "#C9A15A",
+     "oberteil": "#8DB3F2",
+     "bueste": "Sweater"
+    },
+    "B": {
+     "name": "Amina",
+     "kopf": "Long Afro",
+     "haut": "#6B4226",
+     "haar": "#2B2B2B",
+     "oberteil": "#C9B8F2",
+     "bueste": "Explaining"
+    }
+   },
+   "folien": [
+    {
+     "typ": "cover",
+     "badge": "Prüfungsfrage",
+     "badgeFarbe": "WEISS",
+     "zeilen": [
+      "Anders gestorben –",
+      "trotzdem vollendet"
+     ],
+     "norm": "§ 16 Abs. 1 S. 1 StGB",
+     "unter": "Kausalverlauf",
+     "teaser": "+ Gutachten-Baustein",
+     "motiv": {
+      "typ": "icon",
+      "name": "tabler:building-bridge",
+      "farbe": "GELB"
+     },
+     "figur": "A:sorge"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Der Fall",
+     "punkte": [
+      [
+       "A stößt B mit Tötungsvorsatz von einer hohen Brücke. B soll im Fluss ertrinken.",
+       "ok",
+       "Regular",
+       null
+      ],
+      [
+       "B schlägt auf einen Brückenpfeiler und stirbt sofort.",
+       "ok",
+       "Regular",
+       null
+      ]
+     ],
+     "extra": [
+      "Jetzt du: Vollendung oder nur Versuch?",
+      "GELB",
+      null
+     ],
+     "figur": "B:denkt",
+     "x": 790,
+     "blase": "Anders als geplant?"
+    },
+    {
+     "typ": "inhalt",
+     "falle": true,
+     "titel": "Der typische Fehler",
+     "punkte": [
+      [
+       "Anders gestorben, also kein Vorsatz: nur Versuch.",
+       "nein",
+       "Bold",
+       null
+      ],
+      [
+       "Der Vorsatz muss den Verlauf nur in wesentlichen Zügen erfassen.",
+       "ok",
+       "Regular",
+       null
+      ],
+      [
+       "Nur eine wesentliche Abweichung schließt ihn aus.",
+       "ok",
+       "Regular",
+       "§ 16 Abs. 1 S. 1 StGB"
+      ]
+     ],
+     "figur": "A:skeptisch",
+     "x": 290,
+     "blase": "Wesentlich?"
+    },
+    {
+     "typ": "schritte",
+     "titel": "Der Lösungsweg",
+     "schritte": [
+      [
+       "Objektiver Tatbestand",
+       null,
+       "Tod verursacht und zurechenbar: Der Aufprall verwirklicht die Sturzgefahr."
+      ],
+      [
+       "Vorsatz und Kausalverlauf",
+       null,
+       "Erfasst sein müssen nur die wesentlichen Züge."
+      ],
+      [
+       "Wesentlich abgewichen?",
+       null,
+       "Nein, wenn im Rahmen der Lebenserfahrung und keine andere Bewertung."
+      ]
+     ],
+     "teaser": "Am Ende: Baustein fürs Gutachten"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Abgrenzen",
+     "punkte": [
+      [
+       "Ganz außerhalb der Lebenserfahrung: schon die objektive Zurechnung prüfen.",
+       "warn",
+       "Regular",
+       null
+      ],
+      [
+       "Opfer irrig für tot gehalten: eigene, umstrittene Fallgruppe.",
+       "warn",
+       "Regular",
+       null
+      ],
+      [
+       "Aufbau: Die Abweichung prüfst du im subjektiven Tatbestand.",
+       "ok",
+       "Bold",
+       null
+      ]
+     ],
+     "figur": "B:erklaert",
+     "x": 790,
+     "blase": "Wo prüfe ich das?"
+    },
+    {
+     "typ": "merke",
+     "oben": [
+      "Lösung: vollendeter Totschlag",
+      "§ 212 Abs. 1 StGB",
+      "GRUEN"
+     ],
+     "zeilen": [
+      [
+       [
+        "Abweichung",
+        "a"
+       ],
+       [
+        " im Rahmen",
+        null
+       ]
+      ],
+      [
+       [
+        "der ",
+        null
+       ],
+       [
+        "Lebenserfahrung",
+        "b"
+       ],
+       [
+        ":",
+        null
+       ]
+      ],
+      [
+       [
+        "unwesentlich",
+        "c"
+       ],
+       [
+        ".",
+        null
+       ]
+      ]
+     ],
+     "speichern": "Speichern fürs Examen",
+     "frage": "Versuch oder Vollendung?",
+     "teaser": "Weiterwischen: Gutachten-Baustein"
+    },
+    {
+     "typ": "schritte",
+     "titel": "So im Gutachten",
+     "schritte": [
+      [
+       "Obersatz",
+       null,
+       "A müsste vorsätzlich gehandelt haben."
+      ],
+      [
+       "Definition",
+       "§ 16 Abs. 1 S. 1 StGB",
+       "Der Vorsatz muss den Kausalverlauf in seinen wesentlichen Zügen erfassen."
+      ],
+      [
+       "Subsumtion",
+       null,
+       "Aufprall statt Ertrinken ist beim Brückensturz vorhersehbar."
+      ],
+      [
+       "Ergebnis",
+       "§ 212 Abs. 1 StGB",
+       "Vorsatz liegt vor; A ist wegen Totschlags strafbar."
+      ]
+     ]
+    }
+   ],
+   "caption": "Ertrinken geplant, am Brückenpfeiler gestorben – ist die Tat vollendet? Ja.\n\n▸ Der Vorsatz muss den Kausalverlauf nur in seinen wesentlichen Zügen erfassen. Nur eine wesentliche Abweichung lässt den Vorsatz nach § 16 Abs. 1 S. 1 StGB entfallen.\n▸ Unwesentlich ist eine Abweichung, die sich im Rahmen der allgemeinen Lebenserfahrung hält und keine andere Bewertung der Tat rechtfertigt.\n▸ Der Aufprall am Pfeiler ist beim Sturz von der Brücke vorhersehbar: vollendeter Totschlag (§ 212 Abs. 1 StGB).\n▸ Abgrenzen: Liegt der Verlauf ganz außerhalb der Lebenserfahrung, kann schon die objektive Zurechnung fehlen. Hält der Täter das Opfer irrig für tot und führt erst eine zweite Handlung den Tod herbei, ist das eine eigene, umstrittene Fallgruppe.\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
+   "quellen": [
+    "§ 16 Abs. 1 S. 1 StGB",
+    "§ 212 Abs. 1 StGB"
+   ],
+   "hashtags": [
+    "#jura",
+    "#jurastudium",
+    "#staatsexamen",
+    "#strafrecht",
+    "#vorsatz",
+    "#16stgb",
+    "#kausalverlauf",
+    "#jurastudent",
+    "#examensvorbereitung"
+   ]
+  },
+  {
+   "slot": "b3",
+   "zeit": "17:30",
+   "format": "reel",
+   "reelTyp": "klausurfalle",
+   "klausur": 3,
+   "fach": "vwgo",
+   "fachLabel": "Verwaltungsprozessrecht",
+   "klausurLabel": "Staatsexamen",
+   "layout": "D",
+   "themaId": "vwgo-405",
+   "themaTitel": "Wann ist ein Vorverfahren erforderlich?",
+   "figuren": {
+    "A": {
+     "name": "Henrike",
+     "kopf": "Long Curly",
+     "haut": "#F1C7A5",
+     "haar": "#8B4A2B",
+     "oberteil": "#F4A3B5",
+     "bueste": "Tee 1"
+    }
+   },
+   "sprecher": [
+    {
+     "id": "hook",
+     "text": "Anfechtungsklage nur nach Widerspruch? Nicht immer. Viele Länder haben das Vorverfahren abgeschafft."
+    },
+    {
+     "id": "s1",
+     "text": "Die Regel: Vor Anfechtungs- und Verpflichtungsklage steht das Vorverfahren."
+    },
+    {
+     "id": "s2",
+     "text": "Ein Gesetz kann es ausschließen, und genau das steht oft im Landesrecht."
+    },
+    {
+     "id": "s3",
+     "text": "Ohne Widerspruch geht es auch, wenn eine oberste Behörde entschieden hat."
+    },
+    {
+     "id": "cta",
+     "text": "Merke: Erst die Klageart, dann das Landesrecht."
+    }
+   ],
+   "hook": {
+    "zeilen": [
+     "Klage nur nach",
+     "Widerspruch?"
+    ],
+    "pille": "Vorverfahren · § 68 VwGO",
+    "figur": "A/skeptisch",
+    "name": "Henrike",
+    "icons": [],
+    "stil": "split",
+    "split": [
+     {
+      "label": "Regel",
+      "wert": "Widerspruch",
+      "farbe": "WEISS",
+      "wort": "Anfechtungsklage"
+     },
+     {
+      "label": "Viele Länder",
+      "wert": "abgeschafft",
+      "farbe": "GELB",
+      "wort": "abgeschafft"
+     }
+    ],
+    "stempel": {
+     "text": "Nicht immer!",
+     "wort": "Nicht"
+    }
+   },
+   "szenen": [
+    {
+     "seg": "s1",
+     "titel": "Regel: Vorverfahren",
+     "elemente": [
+      {
+       "typ": "text",
+       "text": "Anfechtung + Verpflichtung",
+       "unter": "nicht Leistung, Feststellung",
+       "wort": "Anfechtungs",
+       "farbe": "WEISS",
+       "ls": 60
+      },
+      {
+       "typ": "block",
+       "label": "vorher",
+       "wert": "Widerspruch",
+       "farbe": "GELB",
+       "wort": "Vorverfahren",
+       "zs": 90
+      },
+      {
+       "typ": "norm",
+       "text": "§ 68 Abs. 1 S. 1, Abs. 2 VwGO",
+       "wort": "Regel"
+      }
+     ]
+    },
+    {
+     "seg": "s2",
+     "titel": "Ausschluss durch Gesetz",
+     "elemente": [
+      {
+       "typ": "block",
+       "label": "Ausführungsgesetz",
+       "wert": "Landesrecht prüfen",
+       "farbe": "GELB",
+       "wort": "Landesrecht",
+       "zs": 80
+      },
+      {
+       "typ": "norm",
+       "text": "§ 68 Abs. 1 S. 2 VwGO",
+       "wort": "Gesetz"
+      }
+     ]
+    },
+    {
+     "seg": "s3",
+     "titel": "Oberste Behörde",
+     "elemente": [
+      {
+       "typ": "block",
+       "label": "oberste Bundes- oder Landesbehörde",
+       "wert": "kein Widerspruch",
+       "farbe": "WEISS",
+       "wort": "oberste",
+       "zs": 80,
+       "ls": 44
+      },
+      {
+       "typ": "text",
+       "text": "Außer: Gesetz verlangt ihn",
+       "wort": "entschieden",
+       "farbe": "ROT",
+       "ls": 56
+      },
+      {
+       "typ": "norm",
+       "text": "§ 68 Abs. 1 S. 2 Nr. 1 VwGO",
+       "wort": "Behörde"
+      }
+     ]
+    }
+   ],
+   "merke": {
+    "seg": "cta",
+    "zeilen": [
+     "Erst",
+     "die Klageart,",
+     "dann das",
+     "Landesrecht"
+    ],
+    "woerter": [
+     "Erst",
+     "Klageart",
+     "dann",
+     "Landesrecht"
+    ],
+    "cta": "Speichern fürs Examen",
+    "cta_wort": "Landesrecht",
+    "hinweis": "Alle Fundstellen in der Beschreibung"
+   },
+   "caption": "Anfechtungsklage nur nach Widerspruch? Nicht immer.\n\n▸ Regel: Vor der Anfechtungsklage und vor der Verpflichtungsklage nach Ablehnung eines Antrags ist ein Vorverfahren durchzuführen (§ 68 Abs. 1 S. 1, Abs. 2 VwGO), vor Leistungs- und Feststellungsklagen grundsätzlich nicht.\n▸ Ein Gesetz kann das Vorverfahren ausschließen (§ 68 Abs. 1 S. 2 Hs. 1 VwGO). Viele Länder haben es in ihren Ausführungsgesetzen weitgehend abgeschafft, oft mit Rückausnahmen – Landesrecht prüfen.\n▸ Ausnahmen in der VwGO selbst: Verwaltungsakt einer obersten Bundes- oder Landesbehörde, außer ein Gesetz schreibt die Nachprüfung vor (§ 68 Abs. 1 S. 2 Nr. 1 VwGO); erstmalige Beschwer durch Abhilfe- oder Widerspruchsbescheid (Nr. 2).\n▸ Untätige Behörde: Klage ohne Widerspruchsbescheid, in der Regel nicht vor Ablauf von drei Monaten (§ 75 VwGO).\n▸ Klassiker Beamtenrecht: Vorverfahren vor allen Klagen (§ 54 Abs. 2 BeamtStG, § 126 Abs. 2 BBG); nach § 54 Abs. 2 S. 3 BeamtStG kann ein Landesgesetz es ausschließen.\n\nSpeichern fürs Examen 📌",
+   "quellen": [
+    "§ 68 VwGO",
+    "§ 75 VwGO",
+    "§ 54 Abs. 2 BeamtStG",
+    "§ 126 Abs. 2 BBG"
+   ],
+   "hashtags": [
+    "#jura",
+    "#jurastudium",
+    "#staatsexamen",
+    "#öffentlichesrecht",
+    "#vwgo",
+    "#widerspruchsverfahren",
+    "#vorverfahren",
+    "#verwaltungsrecht",
+    "#examensvorbereitung"
+   ]
+  }
+ ],
+ "stories": [
+  {
+   "slot": "s4",
+   "zeit": "07:18",
+   "art": "frage",
+   "klausur": 3,
+   "fachLabel": "Grundrechte",
+   "themaId": "grundr-612",
+   "frage": [
+    "Art. 3 Abs. 3 GG:",
+    "Wo ist Bevorzugung",
+    "nicht verboten?"
+   ],
+   "optionen": [
+    "Beim Geschlecht",
+    "Bei der Behinderung",
+    "Beim Glauben"
+   ],
+   "figuren": {
+    "Q": {
+     "name": "Selma",
+     "kopf": "Bangs",
+     "haut": "#E8B98F",
+     "haar": "#2B2B2B",
+     "oberteil": "#F7B26A",
+     "bueste": "Tee 1"
+    }
+   },
+   "figur": "Q:fragt"
+  },
+  {
+   "slot": "s5",
+   "zeit": "07:18",
+   "art": "antwort",
+   "klausur": 3,
+   "fachLabel": "Grundrechte",
+   "themaId": "grundr-612",
+   "titel": [
+    "Behinderung:",
+    "Förderung erlaubt"
+   ],
+   "optionen": [
+    "Beim Geschlecht",
+    "Bei der Behinderung",
+    "Beim Glauben"
+   ],
+   "richtig": 1,
+   "text": "Satz 2 verbietet nur die Benachteiligung. Satz 1 verbietet bei Geschlecht und Glauben auch die Bevorzugung.",
+   "norm": "Art. 3 Abs. 3 S. 1, 2 GG",
+   "figuren": {
+    "Q": {
+     "name": "Selma",
+     "kopf": "Bangs",
+     "haut": "#E8B98F",
+     "haar": "#2B2B2B",
+     "oberteil": "#F7B26A",
+     "bueste": "Tee 1"
+    }
+   },
+   "figur": "Q:froh"
+  },
+  {
+   "slot": "s1",
+   "zeit": "08:00",
+   "art": "teaser",
+   "beitragSlot": "b1",
+   "titel": [
+    "12.000 € Mietschulden: trotzdem AG"
+   ],
+   "unter": "Prüfungsfrage + Gutachten-Baustein · im Profil"
+  },
+  {
+   "slot": "s6",
+   "zeit": "12:05",
+   "art": "norm",
+   "klausur": 1,
+   "fachLabel": "Handels-/GesR",
+   "themaId": "handelsg-264",
+   "titel": [
+    "Kaufmann auch",
+    "ohne Eintragung"
+   ],
+   "norm": "§ 1 HGB",
+   "punkte": [
+    [
+     "Handelsgewerbe: Eintragung nur deklaratorisch.",
+     "ok",
+     "§ 1 Abs. 2 HGB"
+    ],
+    [
+     "Kannkaufmann: erst die Eintragung zählt.",
+     "warn",
+     "§ 2 HGB"
+    ]
+   ],
+   "figuren": {
+    "N": {
+     "name": "Piet",
+     "kopf": "Short 1",
+     "haut": "#F3D0B5",
+     "haar": "#4A2C1A",
+     "oberteil": "#F9D56E",
+     "bueste": "Button Shirt 1",
+     "bart": "Goatee 1"
+    }
+   },
+   "figur": "N:erklaert"
+  },
+  {
+   "slot": "s2",
+   "zeit": "12:30",
+   "art": "teaser",
+   "beitragSlot": "b2",
+   "titel": [
+    "Anders gestorben – trotzdem vollendet"
+   ],
+   "unter": "Prüfungsfrage + Gutachten-Baustein · im Profil"
+  },
+  {
+   "slot": "s7",
+   "zeit": "14:35",
+   "art": "streitstand",
+   "klausur": 3,
+   "fachLabel": "Grundrechte",
+   "themaId": "streit-09",
+   "titel": [
+    "Stadionverbot:",
+    "Grundrechte unter Privaten?"
+   ],
+   "ansichten": [
+    [
+     "BVerfG: mittelbar",
+     "Bei Macht fast wie der Staat."
+    ],
+    [
+     "Andere Ansicht: unmittelbar",
+     "Dagegen: Privatautonomie."
+    ]
+   ],
+   "klausur_tipp": "Klausur: über Generalklauseln.",
+   "norm": "BVerfGE 148, 267",
+   "figuren": {
+    "S": {
+     "name": "Esra",
+     "kopf": "Medium 2",
+     "haut": "#C99470",
+     "haar": "#3B2219",
+     "oberteil": "#8DB3F2",
+     "bueste": "Sweater"
+    }
+   },
+   "figur": "S:denkt"
+  },
+  {
+   "slot": "s8",
+   "zeit": "16:58",
+   "art": "merksatz",
+   "klausur": 3,
+   "fachLabel": "Verwaltungsrecht AT",
+   "themaId": "verwalt-640",
+   "titel": [
+    "Bekanntgabe:",
+    "für jeden einzeln"
+   ],
+   "zeilen": [
+    [
+     [
+      "Wirksam",
+      "a"
+     ],
+     [
+      " erst mit",
+      null
+     ]
+    ],
+    [
+     [
+      "Bekanntgabe",
+      "b"
+     ],
+     [
+      " an ihn,",
+      null
+     ]
+    ],
+    [
+     [
+      "Frist",
+      "c"
+     ],
+     [
+      " für jeden",
+      null
+     ]
+    ],
+    [
+     [
+      "gesondert.",
+      null
+     ]
+    ]
+   ],
+   "norm": "§ 43 Abs. 1 S. 1 VwVfG",
+   "figuren": {
+    "M": {
+     "name": "Ruben",
+     "kopf": "Dreads 1",
+     "haut": "#8D5524",
+     "haar": "#2B2B2B",
+     "oberteil": "#F4A3B5",
+     "bueste": "Coffee"
+    }
+   },
+   "figur": "M:ruhig"
+  },
+  {
+   "slot": "s3",
+   "zeit": "17:30",
+   "art": "teaser",
+   "beitragSlot": "b3",
+   "titel": [
+    "Klage nur nach Widerspruch?"
+   ],
+   "unter": "Neues Reel · im Profil"
+  },
+  {
+   "slot": "s9",
+   "zeit": "19:27",
+   "art": "begriff",
+   "klausur": 2,
+   "fachLabel": "Strafrecht AT",
+   "themaId": "strafat-312",
+   "titel": [
+    "Tateinheit"
+   ],
+   "kopf": "Definition",
+   "text": "Dieselbe Handlung verletzt mehrere Gesetze oder eines mehrmals; teilweise Überschneidung genügt. Folge: eine Strafe nach dem schwersten Gesetz.",
+   "norm": "§ 52 StGB",
+   "figuren": {
+    "B": {
+     "name": "Lina",
+     "kopf": "Bun",
+     "haut": "#F1C7A5",
+     "haar": "#6B3E26",
+     "oberteil": "#9AD48F",
+     "bueste": "Explaining"
+    }
+   },
+   "figur": "B:erklaert"
+  }
+ ]
+}

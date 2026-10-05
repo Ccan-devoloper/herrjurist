@@ -1,0 +1,951 @@
+{
+ "datum": "2026-10-26",
+ "beitraege": [
+  {
+   "slot": "b1",
+   "fachLabel": "Strafprozessrecht",
+   "figuren": {
+    "A": {
+     "name": "Svea",
+     "kopf": "Medium Bangs 3",
+     "haut": "#F3D0B5",
+     "haar": "#A0522D",
+     "oberteil": "#8DB3F2",
+     "bueste": "Sweater"
+    },
+    "B": {
+     "name": "Ömer",
+     "kopf": "Short 4",
+     "haut": "#B07A55",
+     "haar": "#1E1E1E",
+     "oberteil": "#F9D56E",
+     "bueste": "Button Shirt 1",
+     "bart": "Full 3"
+    }
+   },
+   "folien": [
+    {
+     "typ": "cover",
+     "badge": "Prüfungsfrage",
+     "badgeFarbe": "WEISS",
+     "zeilen": [
+      "Garage der Freundin:",
+      "Vermutung reicht nicht"
+     ],
+     "norm": "§ 103 Abs. 1 S. 1 StPO",
+     "unter": "Durchsuchung",
+     "teaser": "+ Gutachten-Baustein",
+     "motiv": {
+      "typ": "icon",
+      "name": "tabler:car-garage",
+      "farbe": "GELB"
+     },
+     "figur": "A:fragt"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Der Fall",
+     "punkte": [
+      [
+       "Gegen B wird wegen Diebstahls ermittelt.",
+       "ok",
+       "Regular",
+       null
+      ],
+      [
+       "Die Polizei vermutet die Beute in der Garage seiner Freundin F. F ist nicht verdächtig.",
+       "warn",
+       "Regular",
+       null
+      ]
+     ],
+     "extra": [
+      "Jetzt du: Gleicher Maßstab wie bei B?",
+      "GELB",
+      null
+     ],
+     "figur": "B:denkt",
+     "x": 790,
+     "blase": "Vermutung genügt?"
+    },
+    {
+     "typ": "vergleich",
+     "titel": "Zwei Normen, zwei Maßstäbe",
+     "links": {
+      "kopf": "Verdächtiger",
+      "farbe": "GELB",
+      "punkte": [
+       [
+        "Vermutung, dass Beweismittel gefunden werden",
+        "§ 102 StPO"
+       ]
+      ]
+     },
+     "rechts": {
+      "kopf": "Andere Personen",
+      "farbe": "GRUEN",
+      "punkte": [
+       [
+        "bestimmte Gegenstände",
+        null
+       ],
+       [
+        "Tatsachen für genau diesen Ort",
+        "§ 103 Abs. 1 S. 1 StPO"
+       ]
+      ]
+     },
+     "figur": "A:erklaert",
+     "x": 290,
+     "blase": "Mehr bei Dritten!"
+    },
+    {
+     "typ": "schritte",
+     "titel": "Der Lösungsweg",
+     "schritte": [
+      [
+       "Status der F",
+       null,
+       "selbst verdächtig, etwa der Hehlerei? Sonst § 103"
+      ],
+      [
+       "Zweck und Gegenstand",
+       null,
+       "Beschlagnahme bestimmter Beute"
+      ],
+      [
+       "Tatsachen zum Fundort",
+       null,
+       "etwa eine Beobachtung; die Beziehung allein reicht kaum"
+      ],
+      [
+       "Anordnung",
+       "§ 105 Abs. 1 S. 1 StPO",
+       "Richter, bei Gefahr im Verzug StA"
+      ]
+     ],
+     "teaser": "Am Ende: Gutachten-Baustein"
+    },
+    {
+     "typ": "inhalt",
+     "falle": true,
+     "titel": "Der typische Fehler",
+     "punkte": [
+      [
+       "Die Garage wie Bs Wohnung behandeln.",
+       "nein",
+       "Bold",
+       null
+      ],
+      [
+       "Begründung: Dort könnten Beweismittel sein.",
+       "nein",
+       "Bold",
+       null
+      ],
+      [
+       "Beim Unverdächtigen: bestimmte Gegenstände und Tatsachen für den Ort.",
+       "ok",
+       "Regular",
+       "§ 103 Abs. 1 S. 1 StPO"
+      ]
+     ],
+     "figur": "B:skeptisch",
+     "x": 290,
+     "blase": "Das ist § 102!"
+    },
+    {
+     "typ": "merke",
+     "oben": [
+      "Lösung: nur nach § 103 StPO",
+      "Tatsachen müssen auf die Garage zeigen",
+      "GRUEN"
+     ],
+     "zeilen": [
+      [
+       [
+        "Verdächtig:",
+        "a"
+       ],
+       [
+        " Vermutung,",
+        null
+       ]
+      ],
+      [
+       [
+        "Unverdächtig:",
+        "b"
+       ],
+       [
+        " Tatsachen,",
+        null
+       ]
+      ],
+      [
+       [
+        "Gesuchtes",
+        "c"
+       ],
+       [
+        " genau benennen.",
+        null
+       ]
+      ]
+     ],
+     "speichern": "Speichern fürs Examen",
+     "frage": "Hättest du § 103 geprüft?",
+     "teaser": "Weiterwischen: Gutachten-Baustein"
+    },
+    {
+     "typ": "schritte",
+     "titel": "So im Gutachten",
+     "schritte": [
+      [
+       "Obersatz",
+       "§ 103 Abs. 1 S. 1 StPO",
+       "Die Durchsuchung bei F ist zulässig, wenn ihre Voraussetzungen vorliegen."
+      ],
+      [
+       "Maßstab",
+       null,
+       "bestimmte Gegenstände und Tatsachen für den Fundort"
+      ],
+      [
+       "Subsumtion",
+       null,
+       "Bloße Vermutung, keine Tatsachen zur Garage."
+      ],
+      [
+       "Ergebnis",
+       null,
+       "Durchsuchung so unzulässig."
+      ]
+     ]
+    }
+   ],
+   "caption": "Durchsuchung bei Dritten: Die Garage der unverdächtigen Freundin braucht mehr als eine Vermutung.\n\n▸ Beim Verdächtigen (Täter, Teilnehmer, Datenhehlerei, Begünstigung, Strafvereitelung, Hehlerei) genügt, dass die Durchsuchung vermutlich zur Auffindung von Beweismitteln führt (§ 102 StPO).\n▸ Bei anderen Personen ist sie nur zur Ergreifung des Beschuldigten, zur Spurenverfolgung oder zur Beschlagnahme bestimmter Gegenstände zulässig – und nur, wenn Tatsachen den Schluss tragen, dass sich das Gesuchte gerade in diesen Räumen befindet (§ 103 Abs. 1 S. 1 StPO).\n▸ Deshalb zuerst klären: Ist die Betroffene selbst verdächtig, etwa der Hehlerei? Dann § 102 StPO.\n▸ Anordnung durch den Richter, bei Gefahr im Verzug auch durch die Staatsanwaltschaft und ihre Ermittlungspersonen (§ 105 Abs. 1 S. 1 StPO). Gegenüber Unverdächtigen ist die Verhältnismäßigkeit streng zu prüfen (Art. 13 GG).\n\nZum Schluss: der Baustein für dein Gutachten. Speichern fürs Examen 📌",
+   "quellen": [
+    "§ 102 StPO",
+    "§ 103 Abs. 1 S. 1 StPO",
+    "§ 105 Abs. 1 StPO",
+    "Art. 13 GG"
+   ],
+   "zeit": "08:00",
+   "format": "pruefungsfrage",
+   "klausur": 2,
+   "fach": "stpo",
+   "themaId": "stpo-772",
+   "themaTitel": "Durchsuchung bei Dritten",
+   "klausurLabel": "Staatsexamen",
+   "hashtags": [
+    "#jura",
+    "#jurastudium",
+    "#staatsexamen",
+    "#strafrecht",
+    "#stpo",
+    "#durchsuchung",
+    "#103stpo",
+    "#jurastudent",
+    "#examensvorbereitung"
+   ]
+  },
+  {
+   "slot": "b2",
+   "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+   "figuren": {
+    "A": {
+     "name": "Helga",
+     "kopf": "Gray Bun",
+     "haut": "#F1C7A5",
+     "haar": "#BDBDBD",
+     "oberteil": "#F4A3B5",
+     "bueste": "Blazer Black Tee",
+     "brille": "Glasses"
+    }
+   },
+   "folien": [
+    {
+     "typ": "cover",
+     "badge": "Klausurschema",
+     "badgeFarbe": "WEISS",
+     "zeilen": [
+      "Anordnen,",
+      "nicht wiederherstellen"
+     ],
+     "norm": "§ 212a Abs. 1 BauGB",
+     "unter": "Der Tenor",
+     "teaser": "+ Baustein Beschluss",
+     "motiv": {
+      "typ": "icon",
+      "name": "tabler:crane",
+      "farbe": "GELB"
+     },
+     "figur": "A:fragt"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Der Fall",
+     "punkte": [
+      [
+       "Nachbar N legt Widerspruch gegen die Baugenehmigung des Bauherrn B ein.",
+       "ok",
+       "Regular",
+       null
+      ],
+      [
+       "Die aufschiebende Wirkung entfällt kraft Gesetzes. N beantragt Eilrechtsschutz.",
+       "warn",
+       "Regular",
+       "§ 212a Abs. 1 BauGB"
+      ]
+     ],
+     "extra": [
+      "Jetzt du: Wie lautet der Tenor, wenn N gewinnt?",
+      "GELB",
+      null
+     ],
+     "figur": "A:denkt",
+     "x": 790,
+     "blase": "Wiederherstellen?"
+    },
+    {
+     "typ": "schritte",
+     "titel": "Der Tenor in drei Teilen",
+     "schritte": [
+      [
+       "Sachentscheidung",
+       "§§ 80a Abs. 3, 80 Abs. 5 S. 1 VwGO",
+       "aufschiebende Wirkung wird angeordnet"
+      ],
+      [
+       "Kosten",
+       "§ 154 Abs. 1, 3 VwGO",
+       "Antragsgegner; Beigeladener nur mit eigenem Antrag"
+      ],
+      [
+       "Streitwert",
+       "§§ 52, 53 Abs. 2 Nr. 2 GKG",
+       "wird auf … € festgesetzt"
+      ]
+     ],
+     "teaser": "Am Ende: Baustein Beschluss"
+    },
+    {
+     "typ": "vergleich",
+     "titel": "Anordnen oder wiederherstellen?",
+     "links": {
+      "kopf": "Anordnen",
+      "farbe": "GRUEN",
+      "punkte": [
+       [
+        "Wirkung entfällt kraft Gesetzes",
+        "§ 80 Abs. 2 S. 1 Nr. 3 VwGO"
+       ],
+       [
+        "z. B. Baugenehmigung",
+        "§ 212a Abs. 1 BauGB"
+       ]
+      ]
+     },
+     "rechts": {
+      "kopf": "Wiederherstellen",
+      "farbe": "GELB",
+      "punkte": [
+       [
+        "Behörde ordnet Sofortvollzug an",
+        "§ 80 Abs. 2 S. 1 Nr. 4 VwGO"
+       ],
+       [
+        "Wirkung bestand und wurde beseitigt",
+        null
+       ]
+      ]
+     },
+     "figur": "A:erklaert",
+     "x": 790,
+     "blase": "Warum fehlt sie?"
+    },
+    {
+     "typ": "inhalt",
+     "falle": true,
+     "titel": "Der typische Fehler",
+     "punkte": [
+      [
+       "„Die aufschiebende Wirkung wird wiederhergestellt.“",
+       "nein",
+       "Bold",
+       null
+      ],
+      [
+       "„Die Baugenehmigung wird aufgehoben.“",
+       "nein",
+       "Bold",
+       null
+      ],
+      [
+       "Bauherr B ist notwendig beizuladen und steht im Rubrum.",
+       "ok",
+       "Regular",
+       "§ 65 Abs. 2 VwGO"
+      ]
+     ],
+     "figur": "A:skeptisch",
+     "x": 290,
+     "blase": "Kraft Gesetzes!"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Problemhinweise",
+     "punkte": [
+      [
+       "Außergerichtliche Kosten des Beigeladenen nur aus Billigkeit.",
+       "warn",
+       "Regular",
+       "§ 162 Abs. 3 VwGO"
+      ],
+      [
+       "Kein Ausspruch zur vorläufigen Vollstreckbarkeit, anders als im Urteil.",
+       "warn",
+       "Regular",
+       null
+      ]
+     ],
+     "figur": "A:redet",
+     "x": 790,
+     "blase": "Kein Urteil!"
+    },
+    {
+     "typ": "merke",
+     "oben": [
+      "Lösung: aufschiebende Wirkung wird angeordnet",
+      "§ 212a Abs. 1 BauGB: kraft Gesetzes entfallen",
+      "GRUEN"
+     ],
+     "zeilen": [
+      [
+       [
+        "Kraft Gesetzes:",
+        "a"
+       ],
+       [
+        " anordnen,",
+        null
+       ]
+      ],
+      [
+       [
+        "Sofortvollzug:",
+        "b"
+       ],
+       [
+        " wiederherstellen,",
+        null
+       ]
+      ],
+      [
+       [
+        "Bauherr",
+        "c"
+       ],
+       [
+        " beiladen.",
+        null
+       ]
+      ]
+     ],
+     "speichern": "Speichern fürs Examen",
+     "frage": "Welches Verb hättest du?",
+     "teaser": "Weiterwischen: Baustein Beschluss"
+    },
+    {
+     "typ": "schritte",
+     "titel": "So im Beschluss",
+     "schritte": [
+      [
+       "Sachentscheidung",
+       "§§ 80a Abs. 3, 80 Abs. 5 S. 1 Alt. 1 VwGO",
+       "Die aufschiebende Wirkung des Widerspruchs wird angeordnet."
+      ],
+      [
+       "Kosten",
+       "§ 154 Abs. 1 VwGO",
+       "Der Antragsgegner trägt die Kosten."
+      ],
+      [
+       "Beigeladener",
+       "§ 162 Abs. 3 VwGO",
+       "trägt seine Kosten selbst"
+      ],
+      [
+       "Streitwert",
+       "§§ 52, 53 Abs. 2 Nr. 2 GKG",
+       "wird auf … € festgesetzt"
+      ]
+     ]
+    }
+   ],
+   "caption": "Nachbar gegen Baugenehmigung: Im Eilbeschluss wird die aufschiebende Wirkung angeordnet, nicht wiederhergestellt.\n\n▸ Widerspruch und Anfechtungsklage eines Dritten gegen die bauaufsichtliche Zulassung eines Vorhabens haben keine aufschiebende Wirkung (§ 212a Abs. 1 BauGB, § 80 Abs. 2 S. 1 Nr. 3 VwGO). Eilrechtsschutz über §§ 80a Abs. 3, 80 Abs. 5 S. 1 Alt. 1 VwGO: Die aufschiebende Wirkung wird angeordnet.\n▸ Wiederhergestellt wird sie nur, wenn die Behörde die sofortige Vollziehung angeordnet hat (§ 80 Abs. 2 S. 1 Nr. 4, Abs. 5 S. 1 Alt. 2 VwGO).\n▸ Der Bauherr ist notwendig beizuladen (§ 65 Abs. 2 VwGO) und steht im Rubrum. Kosten können ihm nur auferlegt werden, wenn er Anträge gestellt hat (§ 154 Abs. 3 VwGO); seine außergerichtlichen Kosten sind nur aus Billigkeit erstattungsfähig (§ 162 Abs. 3 VwGO).\n▸ Streitwert nach §§ 52, 53 Abs. 2 Nr. 2 GKG. Ein Ausspruch zur vorläufigen Vollstreckbarkeit entfällt.\n\nZum Schluss: der Baustein für den Beschluss. Speichern fürs Examen 📌",
+   "quellen": [
+    "§ 80 Abs. 2 S. 1 Nr. 3, 4, Abs. 5 VwGO",
+    "§ 80a Abs. 3 VwGO",
+    "§ 212a Abs. 1 BauGB",
+    "§ 65 Abs. 2 VwGO",
+    "§ 154 Abs. 1, 3 VwGO",
+    "§ 162 Abs. 3 VwGO",
+    "§§ 52, 53 Abs. 2 GKG"
+   ],
+   "zeit": "12:30",
+   "format": "schema",
+   "klausur": 3,
+   "fach": "assessoroer",
+   "themaId": "assessoroer-838",
+   "themaTitel": "Wie tenoriert man im vorläufigen Rechtsschutz?",
+   "klausurLabel": "Staatsexamen",
+   "hashtags": [
+    "#jura",
+    "#rechtsreferendariat",
+    "#zweitesstaatsexamen",
+    "#öffentlichesrecht",
+    "#vwgo",
+    "#eilrechtsschutz",
+    "#baurecht",
+    "#referendariat",
+    "#examensvorbereitung"
+   ]
+  },
+  {
+   "slot": "b3",
+   "reelTyp": "klausurfalle",
+   "fachLabel": "Schuldrecht BT",
+   "layout": "D",
+   "figuren": {
+    "A": {
+     "name": "Timo",
+     "kopf": "Short 5",
+     "haut": "#E8B98F",
+     "haar": "#6B3E26",
+     "oberteil": "#F6A26B",
+     "bueste": "Polo and Sweater"
+    }
+   },
+   "sprecher": [
+    {
+     "id": "hook",
+     "text": "„Gekauft wie gesehen“, also keine Mängelrechte? Falsch. Beim Händler bleiben sie."
+    },
+    {
+     "id": "s1",
+     "text": "Erst prüfen: Kauft ein Verbraucher eine Ware vom Unternehmer?"
+    },
+    {
+     "id": "s2",
+     "text": "Dann kann sich der Händler auf einen Ausschluss vor der Mängelanzeige nicht berufen."
+    },
+    {
+     "id": "s3",
+     "text": "Halten kann nur eine eigens mitgeteilte, ausdrücklich und gesondert vereinbarte Abweichung."
+    },
+    {
+     "id": "cta",
+     "text": "Merke: Der Pauschalausschluss läuft beim Verbraucher leer."
+    }
+   ],
+   "hook": {
+    "zeilen": [
+     "Gekauft wie gesehen:",
+     "keine Mängelrechte?"
+    ],
+    "pille": "Verbrauchsgüterkauf",
+    "figur": "A/skeptisch",
+    "name": "Timo",
+    "icons": [
+     [
+      "tabler:car",
+      "GELB",
+      "Falsch"
+     ]
+    ],
+    "stil": "split",
+    "stempel": {
+     "text": "Falsch!",
+     "wort": "Falsch"
+    },
+    "split": [
+     {
+      "label": "Vertrag sagt",
+      "wert": "wie gesehen",
+      "farbe": "WEISS",
+      "wort": "gesehen"
+     },
+     {
+      "label": "Mängelrechte",
+      "wert": "bleiben",
+      "farbe": "GRUEN",
+      "wort": "bleiben"
+     }
+    ]
+   },
+   "szenen": [
+    {
+     "seg": "s1",
+     "titel": "Verbrauchsgüterkauf?",
+     "elemente": [
+      {
+       "typ": "block",
+       "label": "Verbraucher kauft vom",
+       "wert": "Unternehmer",
+       "farbe": "GELB",
+       "wort": "Verbraucher",
+       "zs": 100
+      },
+      {
+       "typ": "norm",
+       "text": "§ 474 Abs. 1 BGB",
+       "wort": "Unternehmer"
+      }
+     ]
+    },
+    {
+     "seg": "s2",
+     "titel": "Kein Ausschluss vorab",
+     "elemente": [
+      {
+       "typ": "text",
+       "text": "vor der Mängelanzeige",
+       "unter": "Händler kann sich nicht berufen",
+       "farbe": "WEISS",
+       "wort": "Ausschluss"
+      },
+      {
+       "typ": "norm",
+       "text": "§ 476 Abs. 1 S. 1 BGB",
+       "wort": "berufen"
+      }
+     ]
+    },
+    {
+     "seg": "s3",
+     "titel": "Ausweg: gesondert vereinbart",
+     "elemente": [
+      {
+       "typ": "block",
+       "label": "eigens mitgeteilt",
+       "wert": "gesondert",
+       "farbe": "GRUEN",
+       "wort": "eigens",
+       "zs": 110
+      },
+      {
+       "typ": "norm",
+       "text": "§ 476 Abs. 1 S. 2 BGB",
+       "wort": "Abweichung"
+      }
+     ]
+    }
+   ],
+   "merke": {
+    "seg": "cta",
+    "zeilen": [
+     "Pauschal-",
+     "ausschluss",
+     "läuft leer",
+     "beim Verbraucher"
+    ],
+    "woerter": [
+     "Pauschalausschluss",
+     "Pauschalausschluss",
+     "leer",
+     "Verbraucher"
+    ],
+    "cta": "Speichern fürs Examen",
+    "cta_wort": "leer",
+    "hinweis": "Alle Fundstellen in der Beschreibung"
+   },
+   "caption": "„Gekauft wie gesehen“ – beim Händler bringt das gegenüber Verbrauchern nichts.\n\n▸ Verbrauchsgüterkauf: Ein Verbraucher kauft von einem Unternehmer eine Ware (§ 474 Abs. 1 BGB).\n▸ Auf eine vor Mitteilung eines Mangels getroffene Vereinbarung, die zum Nachteil des Verbrauchers von den Mängelrechten abweicht, kann sich der Unternehmer nicht berufen (§ 476 Abs. 1 S. 1 BGB).\n▸ Ausweg: Abweichung von den objektiven Anforderungen, wenn der Verbraucher vor seiner Vertragserklärung eigens davon in Kenntnis gesetzt wurde und die Abweichung ausdrücklich und gesondert vereinbart ist (§ 476 Abs. 1 S. 2 BGB).\n▸ Verjährung: Verkürzung bei gebrauchten Waren auf nicht weniger als ein Jahr, ebenfalls nur eigens mitgeteilt und gesondert vereinbart (§ 476 Abs. 2 BGB). Schadensersatz kann nur in den Grenzen der §§ 307 bis 309 BGB beschränkt werden (§ 476 Abs. 3 BGB).\n▸ Beispiel: Gebrauchtwagen vom Händler mit „unter Ausschluss jeder Gewährleistung“ – Nacherfüllung, Rücktritt und Minderung bleiben.\n\nSpeichern fürs Examen 📌",
+   "quellen": [
+    "§ 474 Abs. 1 BGB",
+    "§ 476 Abs. 1–3 BGB",
+    "§§ 307–309 BGB"
+   ],
+   "zeit": "17:30",
+   "format": "reel",
+   "klausur": 1,
+   "fach": "schuldbt",
+   "themaId": "schuldbt-190",
+   "themaTitel": "Wer trägt die Beweislast für einen Mangel und wann kehrt sie sich um?",
+   "klausurLabel": "Staatsexamen",
+   "hashtags": [
+    "#jura",
+    "#jurastudium",
+    "#staatsexamen",
+    "#zivilrecht",
+    "#schuldrecht",
+    "#kaufrecht",
+    "#476bgb",
+    "#verbrauchsgüterkauf",
+    "#jurastudent",
+    "#examensvorbereitung"
+   ]
+  }
+ ],
+ "stories": [
+  {
+   "slot": "s4",
+   "art": "frage",
+   "fachLabel": "Schuldrecht AT",
+   "frage": [
+    "Bürgschaft für einen",
+    "Kredit, im Formular",
+    "auf alles erweitert?"
+   ],
+   "optionen": [
+    "Ganz unwirksam",
+    "Erweiterung gilt nicht",
+    "Alles gilt, unterschrieben ist unterschrieben"
+   ],
+   "figuren": {
+    "Q": {
+     "name": "Anouk",
+     "kopf": "Bun",
+     "haut": "#8D5A3B",
+     "haar": "#1E1E1E",
+     "oberteil": "#F9D56E",
+     "bueste": "Tee 1"
+    }
+   },
+   "figur": "Q:fragt",
+   "zeit": "07:18",
+   "themaId": "schuld-181",
+   "klausur": 1,
+   "fach": "schuld"
+  },
+  {
+   "slot": "s5",
+   "art": "antwort",
+   "fachLabel": "Schuldrecht AT",
+   "titel": [
+    "Erweiterung wird",
+    "nicht Bestandteil"
+   ],
+   "optionen": [
+    "Ganz unwirksam",
+    "Erweiterung gilt nicht",
+    "Alles gilt, unterschrieben ist unterschrieben"
+   ],
+   "richtig": 1,
+   "text": "Überraschende Klausel. Für den Anlasskredit haftet der Bürge weiter.",
+   "norm": "§ 305c Abs. 1, § 306 Abs. 1 BGB",
+   "figuren": {
+    "Q": {
+     "name": "Anouk",
+     "kopf": "Bun",
+     "haut": "#8D5A3B",
+     "haar": "#1E1E1E",
+     "oberteil": "#F9D56E",
+     "bueste": "Tee 1"
+    }
+   },
+   "figur": "Q:froh",
+   "zeit": "07:18",
+   "themaId": "schuld-181",
+   "klausur": 1,
+   "fach": "schuld"
+  },
+  {
+   "slot": "s1",
+   "art": "teaser",
+   "titel": [
+    "Garage der Freundin: Vermutung reicht nicht"
+   ],
+   "unter": "Prüfungsfrage + Gutachten-Baustein · im Profil",
+   "zeit": "08:00",
+   "beitragSlot": "b1"
+  },
+  {
+   "slot": "s6",
+   "art": "norm",
+   "fachLabel": "Familien-/Erbrecht",
+   "titel": [
+    "Nach der Scheidung:",
+    "Eigenverantwortung"
+   ],
+   "norm": "§ 1569 BGB",
+   "punkte": [
+    [
+     "Unterhalt nur aus gesetzlichen Tatbeständen, etwa Kinder, Alter, Krankheit.",
+     "ok",
+     "§§ 1570 ff. BGB"
+    ],
+    [
+     "Trennungszeit: eigene Norm.",
+     "warn",
+     "§ 1361 BGB"
+    ]
+   ],
+   "figuren": {
+    "N": {
+     "name": "Ella",
+     "kopf": "Long",
+     "haut": "#F3D0B5",
+     "haar": "#C9A15A",
+     "oberteil": "#F4A3B5",
+     "bueste": "Dress"
+    }
+   },
+   "figur": "N:erklaert",
+   "zeit": "12:13",
+   "themaId": "famerb-518",
+   "klausur": 1,
+   "fach": "famerb"
+  },
+  {
+   "slot": "s2",
+   "art": "teaser",
+   "titel": [
+    "Anordnen, nicht wiederherstellen"
+   ],
+   "unter": "Klausurschema + Baustein Beschluss · im Profil",
+   "zeit": "12:30",
+   "beitragSlot": "b2"
+  },
+  {
+   "slot": "s7",
+   "art": "tipp",
+   "fachLabel": "Strafrecht AT",
+   "titel": [
+    "Subsumtionsirrtum:",
+    "Vorsatz bleibt"
+   ],
+   "punkte": [
+    [
+     "Alle Umstände gekannt, rechtlich falsch eingeordnet.",
+     "ok",
+     null
+    ],
+    [
+     "Kein Tatumstandsirrtum.",
+     "nein",
+     "§ 16 Abs. 1 StGB"
+    ],
+    [
+     "Allenfalls Verbotsirrtum.",
+     "warn",
+     "§ 17 StGB"
+    ]
+   ],
+   "icon": "tabler:brain",
+   "iconFarbe": "GELB",
+   "figuren": {
+    "T": {
+     "name": "Kofi",
+     "kopf": "Short 1",
+     "haut": "#6F4630",
+     "haar": "#1E1E1E",
+     "oberteil": "#9AD48F",
+     "bueste": "Hoodie"
+    }
+   },
+   "figur": "T/laessig",
+   "zeit": "14:38",
+   "themaId": "strafat-297",
+   "klausur": 2,
+   "fach": "strafat"
+  },
+  {
+   "slot": "s8",
+   "art": "zahl",
+   "fachLabel": "Revision (StPO)",
+   "zahl": "4",
+   "einheit": "Punkte",
+   "titel": [
+    "Sach- oder",
+    "Verfahrensrüge?"
+   ],
+   "punkte": [
+    [
+     "Verfahren: Wie wurde verhandelt?",
+     "warn",
+     null
+    ],
+    [
+     "Sache: Recht falsch angewandt?",
+     "ok",
+     null
+    ],
+    [
+     "Verfahrensrüge: alle Tatsachen angeben.",
+     "nein",
+     "§ 344 Abs. 2 S. 2 StPO"
+    ],
+    [
+     "Sachrüge: ein Satz genügt.",
+     "ok",
+     null
+    ]
+   ],
+   "figuren": {
+    "Z": {
+     "name": "Jana",
+     "kopf": "Medium 1",
+     "haut": "#F1C7A5",
+     "haar": "#3B2219",
+     "oberteil": "#F4A3B5",
+     "bueste": "Coffee"
+    }
+   },
+   "figur": "Z:erklaert",
+   "zeit": "16:51",
+   "themaId": "revision-888",
+   "klausur": 2,
+   "fach": "revision"
+  },
+  {
+   "slot": "s3",
+   "art": "teaser",
+   "titel": [
+    "Gekauft wie gesehen: keine Mängelrechte?"
+   ],
+   "unter": "Neues Reel · im Profil",
+   "zeit": "17:30",
+   "beitragSlot": "b3"
+  },
+  {
+   "slot": "s9",
+   "art": "streitstand",
+   "fachLabel": "2. Examen ÖR",
+   "titel": [
+    "Beiladung vergessen:",
+    "Urteil wirksam?"
+   ],
+   "ansichten": [
+    [
+     "Überwiegend",
+     "Wirksam, bindet den Dritten aber nicht."
+    ],
+    [
+     "Andere Ansicht",
+     "Insgesamt wirkungslos."
+    ]
+   ],
+   "klausur_tipp": "Klausur: Verfahrensmangel, in der Revision nachholbar.",
+   "norm": "§§ 65 Abs. 2, 121, 142 Abs. 1 S. 2 VwGO",
+   "figuren": {
+    "S": {
+     "name": "Rolf",
+     "kopf": "No Hair 3",
+     "haut": "#E8B98F",
+     "haar": "#6B3E26",
+     "oberteil": "#F9D56E",
+     "bueste": "Shirt and Coat",
+     "bart": "Full"
+    }
+   },
+   "figur": "S:denkt",
+   "zeit": "19:18",
+   "themaId": "assessoroer-845",
+   "klausur": 3,
+   "fach": "assessoroer"
+  }
+ ]
+}

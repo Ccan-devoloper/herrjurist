@@ -1,0 +1,112 @@
+name: Vorproduktion · Open Peeps (täglich nachrendern)
+
+# Rendert die Tagesbeschreibungen aus op/tage/ (Herrjurist) in den Asset-Zweig instagram-assets/vorproduktion.
+# Ersetzt „Vorproduktion · rollierend rendern“ (alter Stil) für alle Tage mit op/tage/<datum>.json.
+# Täglich: alle Tage von heute bis heute+14, die noch nicht mit dem Open-Peeps-Renderer gerendert sind
+# (oder deren Tagesbeschreibung seit dem letzten Rendern geändert wurde). Kosten: nur das ElevenLabs-Kontingent
+# für die Reel-Stimme; gleiche Sprechertexte kommen aus dem Cache.
+
+on:
+  schedule:
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+    inputs:
+      tage:
+        description: "Bestimmte Tage (YYYY-MM-DD, Leerzeichen getrennt) – leer = automatisch heute bis heute+14"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram-bot
+  cancel-in-progress: false
+
+jobs:
+  rendern:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      OP_RES: ${{ github.workspace }}/.op-res
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Abhängigkeiten
+        run: |
+          npm ci
+          sudo apt-get update -qq >/dev/null && sudo apt-get install -y -qq libcairo2 >/dev/null
+          bash op/einrichten.sh
+          (cd "$OP_RES/bl2" && npx playwright install --with-deps chromium)
+
+      - name: Cache Stimme und Figuren
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ github.workspace }}/.op-res/cache
+            ${{ github.workspace }}/.op-res/peeps
+          key: op-res-${{ github.run_id }}
+          restore-keys: op-res-
+
+      - name: Asset-Zweig auschecken
+        run: |
+          git clone --filter=blob:none --no-checkout --branch instagram-assets \
+            "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" .ia
+          cd .ia
+          git sparse-checkout set --no-cone '/README.md' '/vorproduktion/*.json'
+          git checkout instagram-assets
+
+      - name: Tage rendern
+        env:
+          TAGE: ${{ inputs.tage }}
+        run: |
+          python3 - <<'EOF' > tage.txt
+          import datetime as dt, json, os, subprocess
+          heute = dt.date.today()
+          wunsch = os.environ.get("TAGE", "").split()
+          if wunsch:
+              print(" ".join(wunsch)); raise SystemExit
+          tage = []
+          for n in range(0, 15):
+              d = (heute + dt.timedelta(days=n)).isoformat()
+              spec = f"op/tage/{d}.json"
+              if not os.path.exists(spec):
+                  continue
+              ziel = f".ia/vorproduktion/{d}.json"
+              alt = json.load(open(ziel)) if os.path.exists(ziel) else {}
+              rv = alt.get("renderVorschau") or {}
+              geaendert = subprocess.run(["git", "log", "-1", "--format=%cI", "--", spec], capture_output=True, text=True).stdout.strip()
+              if rv.get("renderer") != "open-peeps-v4" or (geaendert and geaendert > (rv.get("erzeugtAm") or "")):
+                  tage.append(d)
+          print(" ".join(tage))
+          EOF
+          echo "Zu rendern: $(cat tage.txt)"
+          for d in $(cat tage.txt); do
+            (cd .ia && git sparse-checkout add "/vorproduktion/$d/")
+            python3 op/tag.py "$d" --ziel .ia
+            (cd .ia && git add -A vorproduktion && git -c user.name=instagram-bot -c user.email=41898282+github-actions[bot]@users.noreply.github.com \
+              commit -q -m "Vorproduktion $d: Open-Peeps-Render" || true)
+          done
+
+      - name: Pushen
+        run: |
+          cd .ia
+          for i in 1 2 3 4; do
+            git pull -q --rebase origin instagram-assets && git push -q origin HEAD:instagram-assets && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
