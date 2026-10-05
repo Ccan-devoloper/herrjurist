@@ -29,24 +29,24 @@
      "badge": "Prüfungsfrage",
      "badgeFarbe": "WEISS",
      "zeilen": [
-      "Fass 7 geschrieben,",
-      "Fass 9 gekauft"
+      "Nur angefragt –",
+      "trotzdem bestellt?"
      ],
-     "norm": "§§ 133, 157 BGB",
+     "norm": "BGHZ 91, 324",
      "unter": "Was gilt?",
      "teaser": "+ Gutachten-Baustein",
      "motiv": {
       "typ": "zahlblock",
       "zeilen": [
        [
-        "Vertrag: Fass 7",
+        "C meint: Anfrage",
         "ExtraBold",
-        54
+        48
        ],
        [
-        "gemeint: Fass 9",
+        "R liest: Bestellung",
         "ExtraBold",
-        54
+        48
        ]
       ]
      },
@@ -57,56 +57,56 @@
      "titel": "Der Fall",
      "punkte": [
       [
-       "V verkauft K schriftlich „Fass 7“ aus seinem Weinkeller.",
+       "Cafébetreiberin C will bei Rösterei R Preise erfragen.",
        "ok",
        "Regular",
        null
       ],
       [
-       "Beide meinen das Fass mit dem Spätburgunder. Es trägt aber die Nummer 9.",
+       "Sie schickt ein Formular, das sie für eine Anfrage hält. Oben: „Verbindliche Bestellung: 30 kg Espresso“.",
        "ok",
        "Regular",
        null
       ],
       [
-       "K verlangt nun Fass 7, das wertvollere.",
+       "R liefert und will 600 €.",
        "warn",
        "Regular",
        null
       ]
      ],
      "extra": [
-      "Jetzt du: Welches Fass ist verkauft?",
+      "Jetzt du: Hat C wirksam bestellt?",
       "GELB",
       null
      ],
      "figur": "B:denkt",
      "x": 790,
-     "blase": "Steht doch da!"
+     "blase": "Nur gefragt?"
     },
     {
      "typ": "schritte",
      "titel": "Der Lösungsweg",
      "schritte": [
       [
-       "Auslegung zuerst",
-       "§§ 133, 157 BGB",
-       "der wirkliche Wille vor dem Wortlaut"
-      ],
-      [
-       "Gemeinsamer Wille",
+       "Handlungswille",
        null,
-       "beide meinten das Spätburgunder-Fass"
+       "C schickt das Formular bewusst ab"
       ],
       [
-       "Falsa demonstratio",
+       "Erklärungsbewusstsein",
        null,
-       "die falsche Nummer schadet nicht"
+       "fehlt: C glaubt, nur anzufragen"
       ],
       [
-       "Keine Anfechtung",
-       "§ 119 Abs. 1 BGB",
-       "Wille und Erklärung decken sich"
+       "Zurechnung",
+       "BGHZ 91, 324",
+       "Überschrift bei Sorgfalt bemerkbar, R liest eine Bestellung"
+      ],
+      [
+       "Anfechtung",
+       "§§ 119 Abs. 1, 121 BGB analog",
+       "unverzüglich, dann Vertrauensschaden"
       ]
      ],
      "teaser": "Am Ende: Gutachten-Baustein"
@@ -117,104 +117,114 @@
      "titel": "Der typische Fehler",
      "punkte": [
       [
-       "Mit dem Wortlaut starten: Fass 7 ist verkauft.",
+       "Kein Erklärungsbewusstsein, also keine Willenserklärung – Prüfung beendet.",
        "nein",
        "Bold",
        null
       ],
       [
-       "Dann über die Irrtumsanfechtung streiten.",
-       "nein",
-       "Bold",
-       "§ 119 Abs. 1 BGB"
-      ],
-      [
-       "Richtig: erst auslegen. Ein Irrtum bleibt nur, wenn das Ergebnis vom Willen abweicht.",
+       "Richtig: Die Rechtsprechung rechnet die Erklärung zu, wenn C den Anschein vermeiden konnte und R darauf vertraute.",
        "ok",
        "Regular",
-       null
+       "§§ 133, 157 BGB"
+      ],
+      [
+       "Wer zögert, verliert die Anfechtung.",
+       "warn",
+       "Regular",
+       "§ 121 Abs. 1 BGB"
       ]
      ],
      "figur": "A:skeptisch",
      "x": 290,
-     "blase": "Erst auslegen!"
+     "blase": "Erst zurechnen!"
     },
     {
      "typ": "vergleich",
-     "titel": "Gemeinsam oder einseitig?",
+     "titel": "Zwei Wege, zwei Folgen",
      "links": {
-      "kopf": "Beide meinen dasselbe",
-      "farbe": "GRUEN",
+      "kopf": "Rechtsprechung",
+      "farbe": "GELB",
       "punkte": [
        [
-        "Das Gemeinte gilt",
-        "§ 133 BGB"
+        "Erklärung gilt als abgegeben",
+        "BGHZ 91, 324"
        ],
        [
-        "keine Anfechtung",
-        null
+        "C wählt: festhalten oder anfechten",
+        "§ 119 Abs. 1 BGB analog"
        ]
       ]
      },
      "rechts": {
-      "kopf": "Nur einer irrt",
-      "farbe": "GELB",
+      "kopf": "Gegenansicht",
+      "farbe": "HELL",
       "punkte": [
        [
-        "objektiver Empfängerhorizont",
-        "§ 157 BGB"
+        "Erklärungsbewusstsein ist Voraussetzung",
+        null
        ],
        [
-        "dann Anfechtung prüfen",
-        "§ 119 Abs. 1 BGB"
+        "Erklärung nichtig, R bekommt den Vertrauensschaden",
+        "§§ 118, 122 BGB analog"
        ]
       ]
      },
      "figur": "B:erklaert",
      "x": 790,
-     "blase": "Erst der Wille!"
+     "blase": "C darf wählen!"
     },
     {
      "typ": "merke",
      "oben": [
-      "Lösung: Verkauft ist Fass 9",
-      "gemeinsamer Wille vor Wortlaut, §§ 133, 157 BGB",
+      "Lösung: Bestellung wirksam, aber anfechtbar",
+      "BGHZ 91, 324; §§ 119 Abs. 1, 121, 122 BGB",
       "GRUEN"
      ],
      "zeilen": [
       [
        [
-        "Gemeinsam gemeint",
+        "Sorgfalt",
         "a"
        ],
        [
-        " gilt,",
+        " verletzt,",
         null
        ]
       ],
       [
        [
-        "falsch bezeichnet",
+        "Empfänger",
         "b"
        ],
        [
-        " schadet nicht,",
+        " vertraut:",
         null
        ]
       ],
       [
        [
-        "Anfechtung",
+        "zugerechnet",
         "c"
        ],
        [
-        " erst danach.",
+        " – aber",
+        null
+       ]
+      ],
+      [
+       [
+        "anfechtbar",
+        "d"
+       ],
+       [
+        ".",
         null
        ]
       ]
      ],
      "speichern": "Speichern fürs Examen",
-     "frage": "Hättest du ausgelegt?",
+     "frage": "Hättest du zugerechnet?",
      "teaser": "Weiterwischen: Gutachten-Baustein"
     },
     {
@@ -223,32 +233,33 @@
      "schritte": [
       [
        "Obersatz",
-       "§ 433 Abs. 1 S. 1 BGB",
-       "Anspruch auf Fass 7, wenn es verkauft ist."
+       "§ 433 Abs. 2 BGB",
+       "R kann 600 € verlangen, wenn ein Kaufvertrag besteht."
       ],
       [
        "Maßstab",
-       "§§ 133, 157 BGB",
-       "Der gemeinsame Wille geht dem Wortlaut vor."
+       "BGHZ 91, 324",
+       "Zugerechnet wird, was C bei Sorgfalt vermeiden konnte."
       ],
       [
        "Subsumtion",
        null,
-       "V und K meinten beide das Spätburgunder-Fass."
+       "Überschrift deutlich; R verstand eine Bestellung."
       ],
       [
        "Ergebnis",
-       null,
-       "Verkauft ist Fass 9, nicht Fass 7."
+       "§§ 121, 142 Abs. 1 BGB",
+       "Vertrag wirksam, bis C unverzüglich anficht."
       ]
      ]
     }
    ],
-   "caption": "Falsa demonstratio non nocet: Meinen beide Parteien dasselbe, gilt das Gemeinte – auch wenn sie es falsch bezeichnen.\n\n▸ Der Fall: V verkauft K schriftlich „Fass 7“. Beide meinen das Fass mit dem Spätburgunder, das tatsächlich die Nummer 9 trägt.\n▸ Auslegung zuerst: Bei der Auslegung ist der wirkliche Wille zu erforschen (§ 133 BGB), Verträge sind nach Treu und Glauben mit Rücksicht auf die Verkehrssitte auszulegen (§ 157 BGB). Ein übereinstimmender Wille beider Parteien geht dem Wortlaut vor.\n▸ Ergebnis: Verkauft ist Fass 9 (§ 433 Abs. 1 S. 1 BGB). Eine Anfechtung nach § 119 Abs. 1 BGB scheidet aus, weil Wille und Erklärung nach der Auslegung übereinstimmen.\n▸ Anders, wenn nur eine Seite die Bezeichnung falsch versteht: Dann gilt der objektive Empfängerhorizont, und erst danach stellt sich die Frage der Anfechtung.\n\nZum Schluss: der Baustein für dein Gutachten. Speichern fürs Examen 📌",
+   "caption": "Fehlendes Erklärungsbewusstsein: nur angefragt – und trotzdem bestellt? Nach der Rechtsprechung ja, aber anfechtbar.\n\n▸ Der Fall: C schickt der Rösterei R ein Formular, das sie für eine Preisanfrage hält. Darüber steht „Verbindliche Bestellung: 30 kg Espresso“. R liefert und will 600 €.\n▸ C handelt willentlich, ihr fehlt aber das Bewusstsein, überhaupt etwas rechtlich Erhebliches zu erklären.\n▸ Rechtsprechung: Trotzdem liegt eine Willenserklärung vor, wenn der Erklärende bei der im Verkehr erforderlichen Sorgfalt hätte erkennen und vermeiden können, dass seine Äußerung nach Treu und Glauben und der Verkehrssitte als Willenserklärung aufgefasst werden durfte, und der Empfänger sie auch so verstanden hat (BGH, Urt. v. 7.6.1984 – IX ZR 66/83, BGHZ 91, 324; Auslegung nach §§ 133, 157 BGB).\n▸ Folge: C kann wie bei einem Erklärungsirrtum anfechten (§ 119 Abs. 1 BGB analog), aber nur unverzüglich (§ 121 Abs. 1 BGB). Dann ist die Erklärung nichtig (§ 142 Abs. 1 BGB), und C ersetzt R den Vertrauensschaden (§ 122 Abs. 1 BGB).\n▸ Gegenansicht: Ohne Erklärungsbewusstsein gibt es keine Willenserklärung; nichtig wie in § 118 BGB, Haftung auf den Vertrauensschaden analog § 122 BGB. Für die Rechtsprechung spricht: C kann das Geschäft auch gelten lassen.\n\nZum Schluss: der Baustein für dein Gutachten. Speichern fürs Examen 📌",
    "quellen": [
+    "BGHZ 91, 324",
     "§§ 133, 157 BGB",
-    "§ 119 Abs. 1 BGB",
-    "§ 433 Abs. 1 S. 1 BGB"
+    "§§ 118, 119 Abs. 1, 121, 122, 142 BGB",
+    "§ 433 Abs. 2 BGB"
    ],
    "zeit": "08:00",
    "format": "pruefungsfrage",
@@ -264,7 +275,7 @@
     "#zivilrecht",
     "#bgbat",
     "#willenserklärung",
-    "#auslegung",
+    "#erklärungsbewusstsein",
     "#jurastudent",
     "#examensvorbereitung"
    ]
@@ -773,7 +784,7 @@
    "slot": "s1",
    "art": "teaser",
    "titel": [
-    "Fass 7 geschrieben, Fass 9 gekauft"
+    "Nur angefragt – trotzdem bestellt?"
    ],
    "unter": "Prüfungsfrage + Gutachten-Baustein · im Profil",
    "zeit": "08:00",

@@ -36,16 +36,26 @@
      "badge": "Prüfungsfrage",
      "badgeFarbe": "WEISS",
      "zeilen": [
-      "Deutscher – und",
-      "trotzdem ausgeliefert"
+      "Sicherer Herkunftsstaat –",
+      "trotzdem Asyl?"
      ],
-     "norm": "Art. 16 Abs. 2 S. 2 GG",
-     "unter": "EU-Haftbefehl",
+     "norm": "Art. 16a Abs. 3 GG",
+     "unter": "GG und EU-Recht",
      "teaser": "+ Gutachten-Baustein",
      "motiv": {
-      "typ": "icon",
-      "name": "tabler:plane-departure",
-      "farbe": "GELB"
+      "typ": "zahlblock",
+      "zeilen": [
+       [
+        "Art. 16a GG",
+        "ExtraBold",
+        58
+       ],
+       [
+        "+ Unionsrecht",
+        "ExtraBold",
+        58
+       ]
+      ]
      },
      "figur": "A:staunt"
     },
@@ -54,60 +64,32 @@
      "titel": "Der Fall",
      "punkte": [
       [
-       "Gegen den Deutschen D liegt ein Europäischer Haftbefehl aus Frankreich vor: Betrug in Paris.",
+       "Journalist J aus Staat S kritisiert die Regierung. Er wird verhaftet und misshandelt.",
        "ok",
        "Regular",
        null
       ],
       [
-       "Frankreich sichert die Rücküberstellung zur Strafvollstreckung zu.",
+       "J fliegt direkt nach Frankfurt und beantragt Asyl.",
        "ok",
        "Regular",
        null
       ],
       [
-       "D: „Kein Deutscher darf ausgeliefert werden.“",
-       "ok",
+       "S gilt per Gesetz als sicherer Herkunftsstaat.",
+       "warn",
        "Regular",
        null
       ]
      ],
      "extra": [
-      "Jetzt du: Hat D recht?",
+      "Jetzt du: Hat J Chancen?",
       "GELB",
       null
      ],
      "figur": "B:denkt",
      "x": 790,
-     "blase": "Absolutes Verbot?"
-    },
-    {
-     "typ": "inhalt",
-     "falle": true,
-     "titel": "Der typische Fehler",
-     "punkte": [
-      [
-       "Art. 16 Abs. 2 GG als absolutes Verbot lesen.",
-       "nein",
-       "Bold",
-       null
-      ],
-      [
-       "Satz 2: Ein Gesetz kann die Auslieferung an EU-Staaten oder internationale Gerichtshöfe zulassen.",
-       "ok",
-       "Regular",
-       "Art. 16 Abs. 2 S. 2 GG"
-      ],
-      [
-       "Grenze: rechtsstaatliche Grundsätze.",
-       "ok",
-       "Regular",
-       null
-      ]
-     ],
-     "figur": "A:skeptisch",
-     "x": 290,
-     "blase": "Lies Satz 2!"
+     "blase": "Sicher – für wen?"
     },
     {
      "typ": "schritte",
@@ -115,101 +97,168 @@
      "schritte": [
       [
        "Schutzbereich",
-       "Art. 16 Abs. 2 S. 1 GG",
-       "Schutz vor fremder Hoheitsgewalt"
+       "Art. 16a Abs. 1 GG",
+       "politische, grundsätzlich staatliche Verfolgung"
       ],
       [
-       "Gesetzesvorbehalt",
-       "Art. 16 Abs. 2 S. 2 GG",
-       "EU-Staat oder internationaler Gerichtshof"
+       "Drittstaat?",
+       "Art. 16a Abs. 2 GG",
+       "Direktflug aus S: kein Ausschluss"
       ],
       [
-       "Grenze",
-       null,
-       "Rechtsstaat, Verhältnismäßigkeit"
+       "Herkunftsstaat",
+       "Art. 16a Abs. 3 S. 2 GG",
+       "Vermutung, die J widerlegen kann"
       ],
       [
-       "Ausgestaltung",
-       "§ 80 Abs. 1 IRG",
-       "Rücküberstellung, Tatbezug"
+       "Unionsrecht",
+       "§ 1 Abs. 1 Nr. 2 AsylG",
+       "internationaler Schutz wird daneben geprüft"
       ]
      ],
-     "teaser": "Am Ende: Baustein fürs Gutachten"
+     "teaser": "Am Ende: Gutachten-Baustein"
     },
     {
      "typ": "inhalt",
-     "titel": "Lösung",
+     "falle": true,
+     "titel": "Der typische Fehler",
      "punkte": [
       [
-       "Tat in Paris begangen: maßgeblicher Bezug zu Frankreich.",
-       "ok",
-       "Regular",
-       "§ 80 Abs. 1 S. 1 Nr. 2 IRG"
+       "Sicherer Herkunftsstaat heißt: Antrag chancenlos.",
+       "nein",
+       "Bold",
+       null
       ],
       [
-       "Rücküberstellung zugesichert.",
+       "Die Vermutung fällt, wenn J ein individuelles Verfolgungsschicksal schlüssig vorträgt.",
        "ok",
        "Regular",
-       "§ 80 Abs. 1 S. 1 Nr. 1 IRG"
+       "BVerfGE 94, 115"
       ],
       [
-       "Die Auslieferung ist zulässig. D hat nicht recht.",
+       "Ebenso falsch: nur Art. 16a GG prüfen und das Unionsrecht vergessen.",
        "nein",
        "Bold",
        null
       ]
      ],
-     "figur": "B:sorge",
+     "figur": "A:skeptisch",
      "x": 290,
-     "blase": "Doch nach Paris?"
+     "blase": "Und die EU?"
+    },
+    {
+     "typ": "vergleich",
+     "titel": "Grundrecht und Unionsrecht",
+     "links": {
+      "kopf": "Art. 16a GG",
+      "farbe": "GELB",
+      "punkte": [
+       [
+        "grundsätzlich nur staatliche Verfolgung",
+        "BVerfGE 80, 315"
+       ],
+       [
+        "gesperrt bei Einreise über EU-Staat oder sicheren Drittstaat",
+        "Art. 16a Abs. 2 GG"
+       ]
+      ]
+     },
+     "rechts": {
+      "kopf": "Unionsrecht",
+      "farbe": "GRUEN",
+      "punkte": [
+       [
+        "auch nichtstaatliche Verfolger",
+        "Art. 6 VO (EU) 2024/1347"
+       ],
+       [
+        "Recht auf Asyl in der Charta",
+        "Art. 18 GRCh"
+       ]
+      ]
+     },
+     "figur": "B:erklaert",
+     "x": 790,
+     "blase": "Zwei Ebenen!"
+    },
+    {
+     "typ": "inhalt",
+     "titel": "Wo die EU übernimmt",
+     "punkte": [
+      [
+       "Über Land eingereist: Art. 16a Abs. 1 GG ist grundsätzlich gesperrt.",
+       "warn",
+       "Regular",
+       "Art. 16a Abs. 2 GG, § 26a AsylG"
+      ],
+      [
+       "Abs. 5 öffnet das Grundrecht für europäische Zuständigkeitsregeln.",
+       "ok",
+       "Regular",
+       "Art. 16a Abs. 5 GG"
+      ],
+      [
+       "Welcher Staat prüft, regelt heute das Unionsrecht.",
+       "ok",
+       "Regular",
+       "§ 1 Abs. 4 AsylG"
+      ]
+     ],
+     "figur": "A:erklaert",
+     "x": 290,
+     "blase": "Meist zählt die EU!"
     },
     {
      "typ": "merke",
      "oben": [
-      "Lösung: Auslieferung zulässig",
-      "Art. 16 Abs. 2 S. 2 GG, § 80 Abs. 1 IRG",
+      "Lösung: J hat eine Chance",
+      "Vermutung widerlegbar, Art. 16a Abs. 3 S. 2 GG",
       "GRUEN"
      ],
      "zeilen": [
       [
        [
-        "Deutsche",
+        "Sicher",
         "a"
        ],
        [
-        " geschützt –",
+        " ist nur vermutet,",
         null
        ]
       ],
       [
        [
-        "EU-Staaten",
+        "Einzelschicksal",
         "b"
        ],
        [
-        " per Gesetz",
+        " widerlegt,",
         null
        ]
       ],
       [
        [
-        "ausgenommen,",
-        null
-       ]
-      ],
-      [
-       [
-        "Rechtsstaat",
+        "EU-Schutz",
         "c"
        ],
        [
-        " als Grenze.",
+        " prüfst du",
+        null
+       ]
+      ],
+      [
+       [
+        "immer",
+        "d"
+       ],
+       [
+        " mit.",
         null
        ]
       ]
      ],
      "speichern": "Speichern fürs Examen",
-     "frage": "Kanntest du Satz 2?",
+     "frage": "Prüfst du beide Ebenen?",
      "teaser": "Weiterwischen: Gutachten-Baustein"
     },
     {
@@ -218,31 +267,37 @@
      "schritte": [
       [
        "Obersatz",
-       null,
-       "Die Auslieferung könnte D in Art. 16 Abs. 2 GG verletzen."
+       "Art. 16a Abs. 1 GG",
+       "J könnte als politisch Verfolgter Asylrecht genießen."
       ],
       [
        "Norm",
-       "Art. 16 Abs. 2 S. 2 GG",
-       "Gesetz darf Auslieferung an EU-Staaten zulassen."
+       "Art. 16a Abs. 3 S. 2 GG",
+       "Für S wird vermutet: keine Verfolgung – widerlegbar."
       ],
       [
        "Subsumtion",
-       "§ 80 Abs. 1 IRG",
-       "Tatort Paris, Rücküberstellung zugesichert."
+       null,
+       "Haft und Misshandlung wegen Kritik: individuelles Schicksal."
       ],
       [
        "Ergebnis",
-       null,
-       "Keine Verletzung; die Auslieferung ist zulässig."
+       "§ 31 Abs. 2 AsylG",
+       "Vermutung widerlegt; daneben internationalen Schutz prüfen."
       ]
      ]
     }
    ],
-   "caption": "Deutscher Staatsbürger – und trotzdem ausgeliefert? Ja, innerhalb der EU unter Voraussetzungen.\n\n▸ Art. 16 Abs. 2 S. 1 GG: Kein Deutscher darf an das Ausland ausgeliefert werden.\n▸ Satz 2 enthält einen qualifizierten Gesetzesvorbehalt: Durch Gesetz kann eine abweichende Regelung für Auslieferungen an einen Mitgliedstaat der EU oder an einen internationalen Gerichtshof getroffen werden, soweit rechtsstaatliche Grundsätze gewahrt sind. Das BVerfG verlangt eine schonende, verhältnismäßige Ausgestaltung.\n▸ Das IRG lässt die Auslieferung Deutscher zur Strafverfolgung nur zu, wenn die Rücküberstellung zur Vollstreckung gesichert ist und die Tat einen maßgeblichen Bezug zum ersuchenden Mitgliedstaat aufweist (§ 80 Abs. 1 S. 1 Nr. 1, 2 IRG) – etwa weil sie dort begangen wurde.\n▸ Typischer Fehler: Art. 16 Abs. 2 GG als absolutes Verbot lesen.\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
+   "caption": "Sicherer Herkunftsstaat – trotzdem Asyl? Ja, wenn die Vermutung widerlegt ist. Und neben dem Grundgesetz steht das Unionsrecht.\n\n▸ Art. 16a Abs. 1 GG: Politisch Verfolgte genießen Asylrecht. Politische Verfolgung ist grundsätzlich staatliche Verfolgung (BVerfGE 80, 315).\n▸ Abs. 2: Wer aus einem EU-Mitgliedstaat oder einem sicheren Drittstaat einreist, kann sich nicht auf Abs. 1 berufen (BVerfGE 94, 49; § 26a Abs. 1 S. 1 AsylG, Ausnahmen in S. 3, etwa wenn Deutschland nach Unionsrecht zuständig ist).\n▸ Abs. 3: Für sichere Herkunftsstaaten wird vermutet, dass keine Verfolgung droht, solange der Ausländer nicht Tatsachen vorträgt, die eine Verfolgung begründen. Dazu genügt nur ein individuelles Verfolgungsschicksal (BVerfGE 94, 115; § 29a Abs. 1 AsylG).\n▸ Abs. 5: Die Absätze 1 bis 4 stehen völkerrechtlichen Verträgen über die Zuständigkeit für Asylverfahren nicht entgegen. Welcher Mitgliedstaat zuständig ist, bestimmt heute die VO (EU) 2024/1351 (§ 1 Abs. 4 AsylG).\n▸ Unionsrechtliche Überlagerung: Das Asylverfahren erfasst auch den internationalen Schutz nach der VO (EU) 2024/1347 (§ 1 Abs. 1 Nr. 2, § 3 AsylG), der auch vor nichtstaatlichen Verfolgern schützt (Art. 6 VO (EU) 2024/1347). Art. 18 GRCh gewährleistet das Recht auf Asyl nach Maßgabe der Genfer Flüchtlingskonvention.\n▸ Das Bundesamt entscheidet über beides: Flüchtlingseigenschaft oder subsidiärer Schutz und Anerkennung als Asylberechtigter (§ 31 Abs. 2 S. 1 AsylG). Asylberechtigte erhalten die Rechtsstellung nach der Genfer Flüchtlingskonvention (§ 2 Abs. 1 AsylG).\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
    "quellen": [
-    "Art. 16 Abs. 2 GG",
-    "§ 80 Abs. 1 IRG"
+    "Art. 16a Abs. 1–3, 5 GG",
+    "BVerfGE 80, 315",
+    "BVerfGE 94, 49",
+    "BVerfGE 94, 115",
+    "§§ 1, 2, 3, 26a, 29a, 31 AsylG",
+    "VO (EU) 2024/1347",
+    "VO (EU) 2024/1351",
+    "Art. 18 GRCh"
    ],
    "hashtags": [
     "#jura",
@@ -250,7 +305,7 @@
     "#staatsexamen",
     "#öffentlichesrecht",
     "#verfassungsrecht",
-    "#auslieferung",
+    "#asylrecht",
     "#europarecht",
     "#jurastudent",
     "#examensvorbereitung"
@@ -793,7 +848,7 @@
    "art": "teaser",
    "beitragSlot": "b1",
    "titel": [
-    "Deutscher – und trotzdem ausgeliefert"
+    "Sicherer Herkunftsstaat – trotzdem Asyl?"
    ],
    "unter": "Prüfungsfrage + Gutachten-Baustein · im Profil"
   },

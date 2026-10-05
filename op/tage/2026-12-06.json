@@ -300,15 +300,25 @@
      "badge": "Klausurschema",
      "badgeFarbe": "WEISS",
      "zeilen": [
-      "Mutmaßliche Einwilligung:",
-      "erst fragen"
+      "Angriff vorbei –",
+      "trotzdem § 33 StGB?"
      ],
      "unter": "4 Schritte",
      "teaser": "+ Gutachten-Baustein",
      "motiv": {
-      "typ": "icon",
-      "name": "tabler:stethoscope",
-      "farbe": "GELB"
+      "typ": "zahlblock",
+      "zeilen": [
+       [
+        "intensiv: zu stark",
+        "ExtraBold",
+        50
+       ],
+       [
+        "extensiv: zu spät",
+        "ExtraBold",
+        50
+       ]
+      ]
      },
      "figur": "A:fragt"
     },
@@ -317,26 +327,26 @@
      "titel": "Der Fall",
      "punkte": [
       [
-       "Chirurgin C operiert die narkotisierte O. Sie entdeckt eine akut lebensgefährliche Blutung und stillt sie sofort.",
+       "O schlägt F im Treppenhaus. F stößt ihn weg, O stürzt und bleibt benommen liegen.",
        "ok",
        "Regular",
        null
       ],
       [
-       "O zu wecken und zu fragen, ginge nur unter Lebensgefahr.",
-       "ok",
+       "F sieht, dass der Angriff vorbei ist. Vor Angst tritt sie zweimal zu.",
+       "warn",
        "Regular",
        null
       ]
      ],
      "extra": [
-      "Jetzt du: Ist C gerechtfertigt?",
+      "Jetzt du: Ist F entschuldigt?",
       "GELB",
       null
      ],
      "figur": "B:denkt",
      "x": 790,
-     "blase": "Ohne Einwilligung?"
+     "blase": "Aus Angst?"
     },
     {
      "typ": "inhalt",
@@ -344,146 +354,164 @@
      "titel": "Der typische Fehler",
      "punkte": [
       [
-       "Gleich prüfen, was objektiv vernünftig wäre.",
+       "Furcht festgestellt, also § 33 StGB.",
        "nein",
        "Bold",
        null
       ],
       [
-       "Zuerst: Konnte eine echte Einwilligung rechtzeitig eingeholt werden? Wer fragen kann, muss fragen.",
+       "Zuerst die Zeitfrage: Lief der Angriff bei der Tat noch?",
        "ok",
        "Regular",
-       null
+       "§ 32 Abs. 2 StGB"
+      ],
+      [
+       "Ohne Notwehrlage gibt es keine Grenze, die man überschreiten könnte.",
+       "ok",
+       "Regular",
+       "BGHSt 39, 133"
       ]
      ],
      "figur": "A:skeptisch",
      "x": 290,
-     "blase": "Erst fragen!"
+     "blase": "Wann genau?"
     },
     {
      "typ": "schritte",
      "titel": "Das Schema",
      "schritte": [
       [
-       "Disponibles Rechtsgut",
-       null,
-       "wie bei der echten Einwilligung"
+       "Notwehrlage",
+       "§ 32 Abs. 2 StGB",
+       "Angriff bei der Tat noch gegenwärtig"
       ],
       [
-       "Subsidiarität",
+       "Überschreitung",
        null,
-       "echte Einwilligung nicht rechtzeitig einholbar"
+       "Abwehr nicht erforderlich oder nicht geboten"
       ],
       [
-       "Mutmaßlicher Wille",
-       null,
-       "des Betroffenen, nicht objektive Vernunft"
+       "Asthenischer Affekt",
+       "§ 33 StGB",
+       "Verwirrung, Furcht, Schrecken – mitursächlich genügt"
       ],
       [
-       "Subjektives Element",
+       "Folge",
        null,
-       "in Kenntnis der Umstände, um diesem Willen zu folgen"
+       "entschuldigt, die Tat bleibt rechtswidrig"
       ]
      ],
      "teaser": "Am Ende: Baustein fürs Gutachten"
     },
     {
      "typ": "vergleich",
-     "titel": "Wille vor Vernunft",
+     "titel": "Zu stark oder zu spät?",
      "links": {
-      "kopf": "Objektiv vernünftig",
-      "farbe": "HELL",
+      "kopf": "Intensiver Exzess",
+      "farbe": "GRUEN",
       "punkte": [
        [
-        "nur ein Indiz für den mutmaßlichen Willen",
+        "Angriff läuft noch",
         null
+       ],
+       [
+        "Abwehr zu heftig: § 33 anwendbar",
+        "§ 33 StGB"
        ]
       ]
      },
      "rechts": {
-      "kopf": "Bekannter Wille",
+      "kopf": "Extensiver Exzess",
       "farbe": "GELB",
       "punkte": [
        [
-        "geht vor",
+        "Angriff noch nicht oder nicht mehr gegenwärtig",
         null
        ],
        [
-        "auch wenn er unvernünftig ist",
-        null
+        "Rechtsprechung: § 33 greift nicht",
+        "BGHSt 39, 133"
        ]
       ]
      },
      "figur": "B:erklaert",
      "x": 790,
-     "blase": "Ihr Wille zählt!"
+     "blase": "Der Zeitpunkt zählt!"
     },
     {
      "typ": "inhalt",
-     "titel": "Das Zivilrecht denkt gleich",
+     "titel": "Wo der Streit liegt",
      "punkte": [
       [
-       "Unaufschiebbare Maßnahme, Einwilligung nicht rechtzeitig einholbar: Der mutmaßliche Wille entscheidet.",
-       "ok",
+       "Vorzeitig, vor dem Angriff: kein § 33 StGB.",
+       "nein",
        "Regular",
-       "§ 630d Abs. 1 S. 4 BGB"
+       null
       ],
       [
-       "Lässt sich die Maßnahme aufschieben: fragen.",
+       "Nachzeitig, eng nach dem Angriff: Teile der Lehre wenden § 33 an.",
        "warn",
-       "Bold",
+       "Regular",
        null
+      ],
+      [
+       "Klausur: mit der Rechtsprechung nur bei Notwehrlage.",
+       "ok",
+       "Bold",
+       "BGHSt 39, 133"
+      ],
+      [
+       "Angriff nur eingebildet: auch kein § 33.",
+       "nein",
+       "Regular",
+       "BGH NStZ 1987, 20"
       ]
      ],
      "figur": "A:erklaert",
      "x": 290,
-     "blase": "Gleicher Gedanke!"
+     "blase": "Erst die Zeit!"
     },
     {
      "typ": "merke",
      "oben": [
-      "Lösung: C ist gerechtfertigt",
-      "Rettung entspricht dem Willen der O",
+      "Lösung: F ist nicht entschuldigt",
+      "Angriff beendet: extensiver Exzess, kein § 33 StGB",
       "GRUEN"
      ],
      "zeilen": [
       [
        [
-        "Erst fragen, ob",
-        null
-       ]
-      ],
-      [
-       [
-        "man ",
-        null
-       ],
-       [
-        "fragen kann",
+        "Zu stark",
         "a"
        ],
        [
-        ",",
+        ": § 33 hilft,",
         null
        ]
       ],
       [
        [
-        "dann zählt der ",
-        null
-       ],
-       [
-        "Wille",
+        "zu spät",
         "b"
        ],
        [
-        ".",
+        ": nach BGH nicht,",
+        null
+       ]
+      ],
+      [
+       [
+        "eingebildet",
+        "c"
+       ],
+       [
+        ": auch nicht.",
         null
        ]
       ]
      ],
      "speichern": "Speichern fürs Examen",
-     "frage": "Prüfst du die Subsidiarität zuerst?",
+     "frage": "Prüfst du den Zeitpunkt zuerst?",
      "teaser": "Weiterwischen: Baustein fürs Gutachten"
     },
     {
@@ -493,41 +521,44 @@
       [
        "Obersatz",
        null,
-       "C könnte durch mutmaßliche Einwilligung gerechtfertigt sein."
+       "F könnte nach § 33 StGB entschuldigt sein."
       ],
       [
-       "Definition",
-       null,
-       "Echte Einwilligung nicht einholbar, Handeln im mutmaßlichen Willen."
+       "Voraussetzung",
+       "§ 33 StGB",
+       "Überschreitung der Notwehr bei bestehender Notwehrlage."
       ],
       [
        "Subsumtion",
-       null,
-       "O war narkotisiert, Warten lebensgefährlich; Rettung in ihrem Sinn."
+       "§ 32 Abs. 2 StGB",
+       "O lag benommen am Boden; der Angriff war beendet."
       ],
       [
        "Ergebnis",
        "§ 223 Abs. 1 StGB",
-       "Die Körperverletzung ist gerechtfertigt."
+       "Kein Notwehrexzess; F handelt schuldhaft."
       ]
      ]
     }
    ],
-   "caption": "Mutmaßliche Einwilligung: Erst fragst du, ob man den Betroffenen hätte fragen können.\n\n▸ Gewohnheitsrechtlich anerkannter Rechtfertigungsgrund, etwa für eine Körperverletzung (§ 223 Abs. 1 StGB).\n▸ Schema: disponibles Rechtsgut – Subsidiarität (eine echte Einwilligung ist nicht rechtzeitig einholbar; wer fragen kann, muss fragen) – Handeln entsprechend dem mutmaßlichen Willen des Betroffenen – subjektives Rechtfertigungselement.\n▸ Maßstab ist der mutmaßliche Wille, nicht die objektive Vernunft; sie ist nur ein Indiz. Ein bekannter entgegenstehender Wille geht vor.\n▸ Zivilrechtliche Parallele für ärztliche Maßnahmen: Kann die Einwilligung für eine unaufschiebbare Maßnahme nicht rechtzeitig eingeholt werden, darf sie durchgeführt werden, wenn sie dem mutmaßlichen Willen entspricht (§ 630d Abs. 1 S. 4 BGB).\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
+   "caption": "Notwehrexzess: Der Angriff ist vorbei, die Angst nicht – hilft dann noch § 33 StGB? Nach der Rechtsprechung nicht.\n\n▸ Überschreitet der Täter die Grenzen der Notwehr aus Verwirrung, Furcht oder Schrecken, wird er nicht bestraft (§ 33 StGB). Nach h. M. ein Entschuldigungsgrund: Die Tat bleibt rechtswidrig.\n▸ Intensiver Exzess: Der Angriff ist noch gegenwärtig (§ 32 Abs. 2 StGB), die Abwehr aber zu heftig. Das ist der Kernfall des § 33 StGB.\n▸ Extensiver Exzess: Der Täter wehrt sich, bevor der Angriff gegenwärtig ist (vorzeitig) oder nachdem er beendet ist (nachzeitig). Rechtsprechung: § 33 StGB erfasst nur ein Handeln, das mit der unmittelbaren Abwehr des Angriffs zusammenhängt (BGH, Urt. v. 3.2.1993 – 3 StR 356/92, BGHSt 39, 133). Teile der Lehre wenden § 33 StGB auf den nachzeitigen Exzess in engem zeitlichem Zusammenhang an; den vorzeitigen erfasst die h. M. nicht.\n▸ Asthenische Affekte: Verwirrung, Furcht oder Schrecken müssen den Exzess nicht allein oder überwiegend verursacht haben, mitursächlich genügt (BGH, Urt. v. 21.3.2001 – 1 StR 48/01, NJW 2001, 3200). Zorn oder Kampfeslust allein reichen nicht.\n▸ Putativnotwehrexzess: Wer einen Angriff nur annimmt und dann auch noch zu heftig reagiert, ist nach der Rechtsprechung nicht über § 33 StGB entschuldigt (BGH NStZ 1987, 20). Es bleibt bei den Irrtumsregeln.\n▸ Im Fall: O lag benommen am Boden, der Angriff war beendet. Die Tritte sind eine Körperverletzung (§ 223 Abs. 1 StGB), F ist nicht nach § 33 StGB entschuldigt.\n\nZum Schluss: der Baustein fürs Gutachten. Speichern fürs Examen 📌",
    "hashtags": [
     "#jura",
     "#jurastudium",
     "#staatsexamen",
     "#strafrecht",
-    "#einwilligung",
-    "#rechtfertigung",
+    "#notwehrexzess",
+    "#33stgb",
     "#jurastudent",
     "#klausurtraining",
     "#examensvorbereitung"
    ],
    "quellen": [
+    "§§ 32, 33 StGB",
     "§ 223 Abs. 1 StGB",
-    "§ 630d Abs. 1 S. 4 BGB"
+    "BGHSt 39, 133",
+    "BGH NJW 2001, 3200",
+    "BGH NStZ 1987, 20"
    ]
   },
   {
@@ -821,7 +852,7 @@
    "art": "teaser",
    "beitragSlot": "b2",
    "titel": [
-    "Mutmaßliche Einwilligung: erst fragen"
+    "Angriff vorbei – trotzdem § 33 StGB?"
    ],
    "unter": "Klausurschema + Gutachten-Baustein · im Profil"
   },
