@@ -5,7 +5,7 @@
 
 **Einordnung:** Mo · Der Fall · Zivilrecht/BGB AT, Format „Klassiker-Fall“. Angebot und Annahme sowie der Rechtsbindungswille beim Angebot sind Folge 014 und werden nur mit einem Satz („den du schon vom Angebot nach § 145 kennst“) vorausgesetzt.
 
-**Fallannahmen (fiktiv, Personen erfunden, keine Lotterie-Marke):** Erna, Ulf und Hilmar sind Kollegen; als Tipprunde zahlt jeder wöchentlich 5 € an Hilmar, der den Lottoschein mit festen Zahlen ausfüllt und in der Annahmestelle abgibt, ohne Entgelt. Keine ausdrückliche Absprache über Haftung oder eine Pflicht zum Einreichen; keine geschäftlichen Zwecke, keine besonders hohen Einsätze. Hilmar vergisst den Schein an einem Samstag, an dem er lange arbeiten muss; mit den Zahlen hätte die Runde 12.000 € gewonnen; Ulf verlangt für sich und Erna je 4.000 € (ein Drittel). Staatlich genehmigte Lotterie (für § 763 S. 1). Keine strafrechtlichen Fragen (kein Geld unterschlagen; die Einsätze dieser Woche werden nicht thematisiert).
+**Fallannahmen (fiktiv, Personen erfunden, keine Lotterie-Marke):** Erna, Ulf und Gerold sind Kollegen; als Tipprunde zahlt jeder wöchentlich 5 € an Gerold, der den Lottoschein mit festen Zahlen ausfüllt und in der Annahmestelle abgibt, ohne Entgelt. Keine ausdrückliche Absprache über Haftung oder eine Pflicht zum Einreichen; keine geschäftlichen Zwecke, keine besonders hohen Einsätze. Gerold vergisst den Schein an einem Samstag, an dem er lange arbeiten muss; mit den Zahlen hätte die Runde 12.000 € gewonnen; Ulf verlangt für sich und Erna je 4.000 € (ein Drittel). Staatlich genehmigte Lotterie (für § 763 S. 1). Keine strafrechtlichen Fragen (kein Geld unterschlagen; die Einsätze dieser Woche werden nicht thematisiert).
 
 **Gesamtwissen** (UNCERTIFIED; Fundstelle laut Plan „Band 11 – 3. Vertragsschluss, Auslegung und Konsens – Streitstände, Abgrenzungen und Konkurrenzfragen“, Anker `#zr-vertragsschluss`, Auszug nur im Scratchpad): „Rechtsbindungswille bei Gefälligkeiten: Art, Grund, wirtschaftliche und rechtliche Bedeutung, Interessenlage und erkennbare Risikoverteilung.“ Deckt sich mit BGH III ZR 346/14 Rn. 8, 9 und der Leitentscheidung; nur Wegweiser, kein Beleg. Zum Lotto-Fall selbst enthält der Korpus keinen Eintrag (Suche „Lotto“ ohne Treffer).
 
@@ -51,13 +51,13 @@
 
 | Cue | Aussage | Beleg |
 |---|---|---|
-| `fall`–`gratis` | Hook laut Plan; Tipprunde, 5 € pro Woche, Hilmar füllt aus und gibt ab, ohne Entgelt | Fallannahme; Plan (Hook) |
+| `fall`–`gratis` | Hook laut Plan; Tipprunde, 5 € pro Woche, Gerold füllt aus und gibt ab, ohne Entgelt | Fallannahme; Plan (Hook) |
 | `samstag`–`u1` | vergisst den Schein; 12.000 € entgangen; Figurenrede; je 4.000 € verlangt | Fallannahme |
 | `frage`/`frage2` | Ersatz des entgangenen Gewinns oder nur Gefälligkeit? | Plan (Kernfrage) |
 | `bgh` | BGH hat 1974 entschieden | II ZR 12/73 (16.5.1974), NJW 1974, 1705 |
 | `ansp`/`pfl` | Schadensersatz aus § 280 Abs. 1; setzt Pflichtverletzung aus einem Schuldverhältnis voraus | § 280 Abs. 1 S. 1 BGB |
 | `p241` | § 241 Abs. 1 S. 1 (Wortlaut) | § 241 BGB |
-| `frage3` | Schuldete Hilmar das Einreichen? | BGH II. („ob die … übernommene Aufgabe … auch als solche vereinbart worden ist“) |
+| `frage3` | Schuldete Gerold das Einreichen? | BGH II. („ob die … übernommene Aufgabe … auch als solche vereinbart worden ist“) |
 | `rbw` | hängt vom Rechtsbindungswillen ab, wie beim Angebot (§ 145) | III ZR 346/14 Rn. 8; Folge 014 (Rechtsbindungswille beim Angebot, BGH III ZR 220/25 Rn. 13 dort) |
 | `gef` | bloßer Gefallen → keine Rechtspflicht | III ZR 346/14 Rn. 8 („(außerrechtliche) Gefälligkeit“); VI ZR 467/15 Rn. 8 |
 | `obj` | Maßstab: objektiver Beobachter, Treu und Glauben, Verkehrssitte | III ZR 346/14 Rn. 8; BGH 1974 II. 2. |
@@ -71,7 +71,7 @@
 | `kern`/`lsatz` | Wer ausfüllt und einreicht, übernimmt insoweit in der Regel keine rechtsgeschäftliche Verpflichtung | BGH 1974, Leitsatz |
 | `warum`–`niemand` | Interessenabwägung; Fehler leicht; Schaden selten, aber außergewöhnlich hoch, bis Existenzvernichtung; unentgeltlich; kein normaler Gewinn wie Arbeitslohn, sondern Glücksfall; gemeinsames Spiel; niemand würde das Risiko übernehmen oder zumuten | BGH 1974, II. 2. (Zitate oben); NJW 1974, 1705, 1706 |
 | `anders`/`verein` | anders bei Entgelt (Annahmestelle) oder geschäftlichen Zwecken; sonst besondere Vereinbarung | BGH 1974, II. 2. a. E. |
-| `erg` | Hilmar: keine Pflicht zum Einreichen, keine Pflichtverletzung | Subsumtion; keine besondere Vereinbarung, unentgeltlich, keine geschäftlichen Zwecke (Fallannahmen) |
+| `erg` | Gerold: keine Pflicht zum Einreichen, keine Pflichtverletzung | Subsumtion; keine besondere Vereinbarung, unentgeltlich, keine geschäftlichen Zwecke (Fallannahmen) |
 | `delikt`–`verm` | § 823 Abs. 1 schützt die genannten Rechtsgüter und sonstige Rechte; Gewinnchance gehört nicht dazu, Vermögen als solches nicht geschützt | § 823 Abs. 1 BGB; III ZR 211/17 Rn. 19; Subsumtion (entgangene Gewinnchance = reiner Vermögensnachteil, kein absolutes Recht) |
 | `garten`/`fahrl` | Gefälligkeit mit Rechtsgutsverletzung (Wasserschaden beim Gießen des Nachbargartens): deliktische Haftung schon für einfache Fahrlässigkeit, § 276 Abs. 2 | VI ZR 467/15 Rn. 2, 8; § 276 Abs. 2 BGB (Begriff der Fahrlässigkeit) |
 | `still` | stillschweigende Haftungsbeschränkung nur ausnahmsweise | VI ZR 467/15 Rn. 10 |
@@ -84,7 +84,7 @@
 
 - dass die Tipprunde eine (rechtsfähige oder nicht rechtsfähige) GbR **ist** – der BGH ließ das offen; deshalb keine § 705-Wortlautkarte und keine Prüfung nach §§ 705 ff. n. F. (etwa § 708 a. F./§ 105 Abs. 3 HGB-Analogie, Sorgfalt in eigenen Angelegenheiten).
 - dass die Einsätze stets eingeklagt werden können (BGH: „können … verpflichtet sein“, insbesondere bei Vorlage).
-- eine Haftung Hilmars bei besonderer Vereinbarung, Entgelt oder geschäftlichen Zwecken im Einzelnen; ob Hilmar die 5 € dieser Woche zurückzahlen muss (Bereicherung, Auftragsrecht) – nicht erörtert.
+- eine Haftung Gerolds bei besonderer Vereinbarung, Entgelt oder geschäftlichen Zwecken im Einzelnen; ob Gerold die 5 € dieser Woche zurückzahlen muss (Bereicherung, Auftragsrecht) – nicht erörtert.
 - dass § 276 bei Gefälligkeiten allgemein „gemildert“ sei oder §§ 521, 599, 690 entsprechend gelten (VI ZR 467/15 Rn. 8 verneint das für die deliktische Haftung).
 - Strafrechtliches; Steuerfragen; Glücksspielrecht (GlüStV) und Online-Spielgemeinschaften; gewerbliche Tippgemeinschaften (Spielvermittler) im Einzelnen.
 - konkrete Lotterie-Produktnamen, Gewinnklassen oder Quoten.
