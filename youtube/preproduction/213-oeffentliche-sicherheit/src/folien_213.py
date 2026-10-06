@@ -552,7 +552,7 @@ folie([("gegen", "Gegenfall · Die Garage ist gemietet"), ("di1", "Gegenfall · 
 # ===========================================================================================================================
 GF = "Gegenfall"
 folie([("gfremd", f"{GF} › fremde Sache"), ("g303", f"{GF} › Sachbeschädigung, § 303 Abs. 2 StGB"),
-       ("gschutz", f"{GF} › Rechtsordnung und Eigentum verletzt"), ("ggefahr", f"{GF} › konkrete Gefahr"),
+       ("gschutz", f"{GF} › Rechtsordnung und Eigentum verletzt"), (beim("ggefahr", "konkrete"), f"{GF} › konkrete Gefahr"),
        ("gdarf", f"{GF} › Polizei darf einschreiten")], rechts_frei([
     *tafel("gfremd", "Gegenfall: die Garage ist gemietet", size=44),
     *okz("Garage gehört Frau Dietz: für Frau Schulze fremd", 180, beim("gfremd", "fremde"), "Bold", 32),
@@ -595,7 +595,7 @@ w12, w12_y = wortlaut(70, 140, 1120, W12, "§ 1 Abs. 2 PolG NRW (Schutz privater
                       marken=[("nur dann", beim("wl12", "nur")), ("gerichtlicher Schutz", beim("wl12", "gerichtlicher")),
                               ("rechtzeitig", beim("wl12", "rechtzeitig")), ("vereitelt", beim("wl12", "vereitelt")),
                               ("wesentlich", beim("wl12", "wesentlich"))])
-folie([("wl12", f"{PR} › § 1 Abs. 2 PolG NRW"), ("kgericht", f"{PR} › Gericht erreichbar"),
+folie([("wl12", f"{PR} › § 1 Abs. 2 PolG NRW"), (beim("kgericht", "Gericht"), f"{PR} › Gericht erreichbar"),
        ("straf", f"{PR} › bei drohender Straftat: Rechtsordnung")], rechts_frei([
     titel(glyphen("Subsidiarität beim Schutz privater Rechte"), 100, 70, "wl12", 40),
     *w12,
@@ -645,7 +645,7 @@ els_t += [zelle("+ nur auf Antrag der berechtigten Person", CP - 380, TY + 10 + 
           ficon("tabler", "map-2", IX, IU, 140, "tab", fuell=WEISS),
           *allein("NE", [("tab", "ruhig"), ("tsn", "denkt"), ("teigen", "froh")])]
 folie([("tab", "Länder-Overlay · gleiche Struktur, andere Nummern"), ("tnrw", "Länder-Overlay › Nordrhein-Westfalen"),
-       ("tbb", "Länder-Overlay › Brandenburg"), ("tsn", "Länder-Overlay › Sachsen: zusätzlich Antrag"),
+       ("tbb", "Länder-Overlay › Brandenburg"), ("tsn", "Länder-Overlay › Sachsen"), (beim("tsn", "Antrag"), "Länder-Overlay › Sachsen: zusätzlich Antrag"),
        ("teigen", "Länder-Overlay › dein Landesgesetz")], rechts_frei(els_t))
 
 # ===========================================================================================================================
