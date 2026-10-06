@@ -9,7 +9,9 @@ Entgelt/geschäftlichen Zwecken; sonst besondere Vereinbarung). Kriterien des Re
 Rn. 8. Delikt: III ZR 211/17 Rn. 19 (Vermögen als solches nicht geschützt). Haftungsmaßstab bei Gefälligkeit (Abgrenzung):
 VI ZR 467/15 Rn. 8, 10. § 705 vom BGH nicht tragend → keine Wortlautkarte, nur „offengelassen“.
 Namen mit eindeutig deutscher Aussprache, in früheren Folgen nicht vergeben (Liste des Auftrags, Volltextsuche 06.10.2026):
-Hilmar (vergisst den Schein, Stimme william), Erna (Kollegin, sabrina), Ulf (Kollege, marc) – nie im Genitiv. Lexi = Carla.
+Gerold (vergisst den Schein, Stimme william), Erna (Kollegin, sabrina), Ulf (Kollege, marc) – nie im Genitiv. Lexi = Carla.
+Revision v1.2 (06.10.2026): „Hilmar“ auf Weisung des Koordinators in „Gerold“ umbenannt (Namensdopplung mit der parallelen
+Folge 203); nachvertont nur die Segmente mit dem Namen (1, 2, 4, 7, 9, 14).
 Revision v1.1 (06.10.2026): Segment 16 umgestellt („Also gehen Erna und Ulf leer aus.“), weil small und medium „Erna“ am
 Segmentanfang als „Gerner“ hörten; einmal nachvertont.
 Segmente: (text, pause) = Erzählerin Carla (auch Lexi), (text, pause, rolle) = Figurenrede. [marke] = Cue; jede Marke genau
@@ -17,31 +19,31 @@ einmal. Zahlen und Paragrafen im Sprechtext als Wörter. Belege: ../RECHTSSTAND.
 
 P, PS = 0.3, 0.5
 
-STIMMEN = {"Hilmar": "william", "Erna": "sabrina", "Ulf": "marc"}  # Lexi = Erzählerstimme (Carla)
+STIMMEN = {"Gerold": "william", "Erna": "sabrina", "Ulf": "marc"}  # Lexi = Erzählerstimme (Carla)
 
 SEGMENTE = [
     # --- A1 Fall: die Tipprunde im Büro ------------------------------------------------------------------------------------
     ("[fall]Deine Tipprunde hätte gewonnen – aber der Kollege hat vergessen, den Schein abzugeben. [runde]So geht es Erna "
-     "und Ulf. [hilmar]Seit Jahren spielen sie mit ihrem Kollegen Hilmar Lotto. [geld]Jede Woche zahlt jeder fünf Euro an "
-     "Hilmar. [schein]Hilmar füllt den Lottoschein mit ihren festen Zahlen aus und gibt ihn in der Annahmestelle ab. "
+     "und Ulf. [hilmar]Seit Jahren spielen sie mit ihrem Kollegen Gerold Lotto. [geld]Jede Woche zahlt jeder fünf Euro an "
+     "Gerold. [schein]Gerold füllt den Lottoschein mit ihren festen Zahlen aus und gibt ihn in der Annahmestelle ab. "
      "[gratis]Dafür bekommt er nichts.", P),
     # --- A2 Fall: der vergessene Samstag -----------------------------------------------------------------------------------
-    ("[samstag]An einem Samstag muss Hilmar lange arbeiten [vergisst]und vergisst den Schein. [ziehung]Am Abend wird gezogen: "
+    ("[samstag]An einem Samstag muss Gerold lange arbeiten [vergisst]und vergisst den Schein. [ziehung]Am Abend wird gezogen: "
      "Mit ihren Zahlen hätte die Runde zwölftausend Euro gewonnen.", P),
     # --- A3 Fall: Montag in der Teeküche -----------------------------------------------------------------------------------
     ("[montag]Am Montag in der Teeküche.", P),
-    ("[e1]Hilmar, mit unseren Zahlen hätten wir zwölftausend Euro gewonnen!", P, "Erna"),
-    ("[h1]Ich weiß. Ich habe den Schein diesmal nicht abgegeben. Es tut mir leid.", P, "Hilmar"),
+    ("[e1]Gerold, mit unseren Zahlen hätten wir zwölftausend Euro gewonnen!", P, "Erna"),
+    ("[h1]Ich weiß. Ich habe den Schein diesmal nicht abgegeben. Es tut mir leid.", P, "Gerold"),
     ("[u1]Dann schuldest du Erna und mir je viertausend Euro.", P, "Ulf"),
-    ("[frage]Muss Hilmar den entgangenen Gewinn ersetzen? [frage2]Oder war das Einreichen nur eine Gefälligkeit? "
+    ("[frage]Muss Gerold den entgangenen Gewinn ersetzen? [frage2]Oder war das Einreichen nur eine Gefälligkeit? "
      "[bgh]Diesen Fall hat der Bundesgerichtshof schon neunzehnhundertvierundsiebzig entschieden.", PS),
     # --- B Sachverhalt -----------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
     # --- C Anspruch: Schuldverhältnis? -------------------------------------------------------------------------------------
     ("[ansp]Erna und Ulf könnten Schadensersatz aus Paragraf zweihundertachtzig Absatz eins BGB verlangen. [pfl]Dafür muss "
-     "Hilmar eine Pflicht aus einem Schuldverhältnis verletzt haben. [p241]Paragraf zweihunderteinundvierzig Absatz eins: "
+     "Gerold eine Pflicht aus einem Schuldverhältnis verletzt haben. [p241]Paragraf zweihunderteinundvierzig Absatz eins: "
      "Kraft des Schuldverhältnisses ist der Gläubiger berechtigt, von dem Schuldner eine Leistung zu fordern. "
-     "[frage3]Schuldete Hilmar also das Einreichen des Scheins?", PS),
+     "[frage3]Schuldete Gerold also das Einreichen des Scheins?", PS),
     # --- D Rechtsbindungswille oder Gefälligkeit ---------------------------------------------------------------------------
     ("[rbw]Das hängt vom Rechtsbindungswillen ab, den du schon vom Angebot nach Paragraf hundertfünfundvierzig kennst. [gef]Wer einem anderen nur einen Gefallen tut, geht keine Rechtspflicht "
      "ein. [obj]Maßgeblich ist, wie ein objektiver Beobachter das Verhalten nach Treu und Glauben und der Verkehrssitte "
@@ -69,7 +71,7 @@ SEGMENTE = [
      "Mitspieler zumuten.", PS),
     ("[anders]Anders kann es liegen, wenn der Beauftragte ein Entgelt bekommt, wie eine Annahmestelle, oder wenn "
      "geschäftliche Zwecke im Vordergrund stehen. [verein]Sonst braucht es für eine Pflicht eine besondere Vereinbarung. "
-     "[erg]Für Hilmar heißt das: Eine Pflicht zum Einreichen gab es nicht, also auch keine Pflichtverletzung.", PS),
+     "[erg]Für Gerold heißt das: Eine Pflicht zum Einreichen gab es nicht, also auch keine Pflichtverletzung.", PS),
     # --- G Delikt und Haftungsmaßstab --------------------------------------------------------------------------------------
     ("[delikt]Bleibt das Deliktsrecht. [w823]Paragraf achthundertdreiundzwanzig Absatz eins schützt Leben, Körper, "
      "Gesundheit, Freiheit, Eigentum und sonstige Rechte. [verm]Eine entgangene Gewinnchance gehört nicht dazu, denn das "

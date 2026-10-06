@@ -50,3 +50,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 121 Bildhalte aus dem MP4, Fall- und Tafelszenen als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen, die zwei Geräusche); Leitentscheidung nur in nicht amtlicher Volltextwiedergabe; Namensdopplung „Hilmar“ mit der parallelen Folge 203; Themenplan-Ergänzung durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 06.10.2026
+
+## Drive (Readback 06.10.2026, rclone)
+
+Ordner `LexVerse Produktion/202 Lottogemeinschaft Gefälligkeit/`, ID `1AId-080oYulsQAu9qWHfTZnWjOe0X0-Q` (nur per rclone angelegt, kein Doppelordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `202-Lottogemeinschaft-Gefaelligkeit.mp4` | 26.714.437 |
+| `202-Lottogemeinschaft-Gefaelligkeit-Hauptfilm.mp4` | 19.565.914 |
+| `master.zip` | 53.075.269 |
+| `thumb_A.jpg` | 147.482 |
+| `thumb_B.jpg` | 140.738 |
+| `beschreibung.txt` | 2.968 |
+| `kapitel.txt` | 469 |
+| `untertitel.srt` | 8.337 |
+| `metadaten.json` | 4.202 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 323 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`ab2172da99ff…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.

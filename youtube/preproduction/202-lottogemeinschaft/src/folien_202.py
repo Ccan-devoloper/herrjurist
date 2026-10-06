@@ -1,8 +1,8 @@
 """Folge 202 · Tippgemeinschaft ohne Tippschein: Gefälligkeitsverhältnis und Haftung – Serienstandard Open Peeps (Katzenkönig).
-Fiktiver Fall nach BGH, Urt. v. 16.5.1974 – II ZR 12/73, NJW 1974, 1705: Hilmar gibt für die Tipprunde (Erna, Ulf) jede Woche
+Fiktiver Fall nach BGH, Urt. v. 16.5.1974 – II ZR 12/73, NJW 1974, 1705: Gerold gibt für die Tipprunde (Erna, Ulf) jede Woche
 ohne Entgelt den Lottoschein ab, vergisst ihn einmal; mit ihren Zahlen hätte die Runde 12.000 € gewonnen. Szenen laut ../SZENENPLAN.md.
 DARSTELLUNG: neutraler „Lottoschein“ ohne Lotterie-Marke oder Logo (Schein aus Grundformen), kein Glücksspiel-Werbeton.
-Zwei Handlungsgeräusche (Münzen beim Einsammeln, Tastatur, als Hilmar am Samstag arbeitet; ../geraeusche_herkunft.json).
+Zwei Handlungsgeräusche (Münzen beim Einsammeln, Tastatur, als Gerold am Samstag arbeitet; ../geraeusche_herkunft.json).
 Namensschild jeder Figur, solange sie im Bild ist. Hilfsfunktionen glyphen/z/pl/tafel/blk/wortlaut/redet/fig/ns/okz/neinz
 als eigene Kopie aus Folge 199 (gemeinsame Dateien unverändert); neu: tisch(), lottoschein(), kugeln().
 Zahlen auf Tafeln, Pillen und Blasen als Ziffern."""
@@ -215,7 +215,7 @@ X1, X2 = 1430, 1730                         # zwei Figuren neben der Tafel
 FB, FR = 930, 480                           # Figuren neben der Tafel: Unterkante, Höhe
 FX = 1560                                   # eine Figur neben der Tafel
 PX, PY, PU = 1575, 160, 380                 # Requisit über den Figuren: Mitte, Pillenhöhe, Unterkante
-NAME = {"HI": "Hilmar", "EN": "Erna", "UL": "Ulf"}
+NAME = {"HI": "Gerold", "EN": "Erna", "UL": "Ulf"}
 NFARBE = {"HI": GRUEN, "EN": GELB, "UL": BLAU}
 
 
@@ -329,13 +329,13 @@ def kugeln(cx, cy, zahlen, r, c, d=0.0, bis=None):
 ZAHLEN = (4, 9, 17, 23, 31, 42)
 
 # ===========================================================================================================================
-# A1 Fall: die Tipprunde im Büro (Hook, Erna, Ulf, Hilmar, Einsätze, Lottoschein, Annahmestelle, ohne Entgelt)
+# A1 Fall: die Tipprunde im Büro (Hook, Erna, Ulf, Gerold, Einsätze, Lottoschein, Annahmestelle, ohne Entgelt)
 # ===========================================================================================================================
 G0 = 900                                     # Boden der Fallszenen
 FHA = 430                                    # Figurenhöhe in den Fallszenen
-EX, UX, HX = 930, 1180, 1660                 # Erna, Ulf (blicken nach rechts), Hilmar (blickt nach links)
-folie([(NULL, "Fall · Die Tipprunde"), ("runde", "Fall · Erna und Ulf"), ("hilmar", "Fall · Hilmar spielt mit"),
-       ("geld", "Fall · Jede Woche 5 € pro Kopf"), ("schein", "Fall · Hilmar gibt den Schein ab"),
+EX, UX, HX = 930, 1180, 1660                 # Erna, Ulf (blicken nach rechts), Gerold (blickt nach links)
+folie([(NULL, "Fall · Die Tipprunde"), ("runde", "Fall · Erna und Ulf"), ("hilmar", "Fall · Gerold spielt mit"),
+       ("geld", "Fall · Jede Woche 5 € pro Kopf"), ("schein", "Fall · Gerold gibt den Schein ab"),
        ("gratis", "Fall · ohne Entgelt")], [
     hart(boden_(G0, NULL)),
     hart(tisch(110, 560, 720, G0, NULL)),
@@ -350,11 +350,11 @@ folie([(NULL, "Fall · Die Tipprunde"), ("runde", "Fall · Erna und Ulf"), ("hil
     *fig("UL", UX, G0, FHA, [(beim("runde", "Ulf"), "ruhig_r"), ("geld", "froh_r")]),
     ns("Ulf", UX, G0, beim("runde", "Ulf"), BLAU, d=0.1),
     pl("seit Jahren Lotto", 70, 170, beim("hilmar", "Seit"), fill=WEISS, size=32),
-    *fig("HI", HX, G0, FHA, [(beim("hilmar", "Hilmar"), "froh"), ("gratis", "ruhig")]),
-    ns("Hilmar", HX, G0, beim("hilmar", "Hilmar"), GRUEN, d=0.1),
-    szene(bewegt(ficon("tabler", "coin-euro", 1450, 820, 64, "geld", fuell=GELB), "geld", beim("geld", "Hilmar"), -520, -80),
+    *fig("HI", HX, G0, FHA, [(beim("hilmar", "Gerold"), "froh"), ("gratis", "ruhig")]),
+    ns("Gerold", HX, G0, beim("hilmar", "Gerold"), GRUEN, d=0.1),
+    szene(bewegt(ficon("tabler", "coin-euro", 1450, 820, 64, "geld", fuell=GELB), "geld", beim("geld", "Gerold"), -520, -80),
           "202muenzen*", 0.5, 0.0),
-    bewegt(ficon("tabler", "coin-euro", 1500, 860, 64, "geld", fuell=GELB), "geld", beim("geld", "Hilmar"), -320, -60),
+    bewegt(ficon("tabler", "coin-euro", 1500, 860, 64, "geld", fuell=GELB), "geld", beim("geld", "Gerold"), -320, -60),
     pl("je 5 € pro Woche", 760, 30, beim("geld", "fünf"), fill=GELB, size=32),
     lottoschein(1370, 400, 160, "schein"),
     pl("feste Zahlen", 1450, 330, beim("schein", "festen"), fill=WEISS, size=28, anker="m"),
@@ -364,10 +364,10 @@ folie([(NULL, "Fall · Die Tipprunde"), ("runde", "Fall · Erna und Ulf"), ("hil
 ])
 
 # ===========================================================================================================================
-# A2 Fall: der vergessene Samstag (Hilmar arbeitet lange, vergisst den Schein, Ziehung am Abend)
+# A2 Fall: der vergessene Samstag (Gerold arbeitet lange, vergisst den Schein, Ziehung am Abend)
 # ===========================================================================================================================
 HX2 = 680
-folie([("samstag", "Fall · Samstag: Hilmar arbeitet lange"), ("vergisst", "Fall · Der Schein bleibt liegen"),
+folie([("samstag", "Fall · Samstag: Gerold arbeitet lange"), ("vergisst", "Fall · Der Schein bleibt liegen"),
        ("ziehung", "Fall · Die Ziehung am Abend")], [
     boden_(G0, "samstag"),
     tisch(110, 560, 720, G0, "samstag"),
@@ -377,7 +377,7 @@ folie([("samstag", "Fall · Samstag: Hilmar arbeitet lange"), ("vergisst", "Fall
     pl("Samstag", 70, 30, beim("samstag", "Samstag"), fill=GELB, size=32),
     pl("lange arbeiten", 330, 470, beim("samstag", "lange"), fill=WEISS, size=28, anker="m"),
     *fig("HI", HX2, G0, FHA, [("samstag", "muede")], erst="cut"),
-    ns("Hilmar", HX2, G0, "samstag", GRUEN),
+    ns("Gerold", HX2, G0, "samstag", GRUEN),
     lottoschein(1000, 480, 150, "vergisst"),
     pl("Schein vergessen", 1075, 410, beim("vergisst", "vergisst"), fill=HELLROT, size=28, anker="m"),
     ficon("tabler", "device-tv", 1560, 760, 380, "ziehung", fuell=WEISS),
@@ -387,11 +387,11 @@ folie([("samstag", "Fall · Samstag: Hilmar arbeitet lange"), ("vergisst", "Fall
 ])
 
 # ===========================================================================================================================
-# A3 Fall: Montag in der Teeküche (Erna, Hilmar, Ulf reden; die Frage; Leitentscheidung)
+# A3 Fall: Montag in der Teeküche (Erna, Gerold, Ulf reden; die Frage; Leitentscheidung)
 # ===========================================================================================================================
 EX3, UX3, HX3 = 880, 1140, 1640
 folie([("montag", "Fall · Montag in der Teeküche"), ("e1", "Fall · Erna: 12.000 € gewonnen"),
-       ("h1", "Fall · Hilmar: Schein nicht abgegeben"), ("u1", "Fall · Ulf: je 4.000 €"), ("frage", "Fall · Die Frage"),
+       ("h1", "Fall · Gerold: Schein nicht abgegeben"), ("u1", "Fall · Ulf: je 4.000 €"), ("frage", "Fall · Die Frage"),
        ("bgh", "Fall · Der Lottogemeinschaft-Fall des BGH")], [
     boden_(G0, "montag", fill=(236, 230, 220, 255), h=100),
     zeile_kueche(80, 640, 700, G0, "montag"),
@@ -411,14 +411,14 @@ folie([("montag", "Fall · Montag in der Teeküche"), ("e1", "Fall · Erna: 12.0
     *fig("HI", HX3, G0, FHA, [("montag", "sorge")], bis="h1", erst="cut"),
     *redet("HI_klagt", HX3, G0, FHA, "h1", "u1"),
     *fig("HI", HX3, G0, FHA, [("u1", "still"), ("bgh", "ruhig")], erst="cut"),
-    ns("Hilmar", HX3, G0, "montag", GRUEN),
-    blase("sprech", 980, 220, "e1", 1180, 240, inhalt=["Hilmar, mit unseren Zahlen", "hätten wir 12.000 € gewonnen!"],
+    ns("Gerold", HX3, G0, "montag", GRUEN),
+    blase("sprech", 980, 220, "e1", 1180, 240, inhalt=["Gerold, mit unseren Zahlen", "hätten wir 12.000 € gewonnen!"],
           textsize=34, figur=("EN_redet_r", EX3, G0, FHA), bis="h1"),
     blase("sprech", 1060, 230, "h1", 1180, 240, inhalt=["Ich weiß. Ich habe den Schein diesmal", "nicht abgegeben. Es tut mir leid."],
           textsize=34, figur=("HI_klagt", HX3, G0, FHA), bis="u1"),
     blase("sprech", 900, 220, "u1", 1300, 240, inhalt=["Dann schuldest du Erna", "und mir je 4.000 €."],
           textsize=34, figur=("UL_redet_r", UX3, G0, FHA), bis="frage"),
-    pl("Muss Hilmar den entgangenen Gewinn ersetzen?", 70, 100, "frage", fill=PINK, size=32),
+    pl("Muss Gerold den entgangenen Gewinn ersetzen?", 70, 100, "frage", fill=PINK, size=32),
     pl("Oder nur eine Gefälligkeit?", 70, 170, "frage2", fill=PINK, size=32),
     pl("BGH, Urt. v. 16.5.1974 – II ZR 12/73", 70, 240, beim("bgh", "neunzehnhundert"), fill=GELB, size=32),
     zit("NJW 1974, 1705", 80, 308, beim("bgh", "neunzehnhundert")),
@@ -440,13 +440,13 @@ def sachverhalt_202(cue, absaetze, frage):
 
 
 sachverhalt_202("sv", [
-    "Erna, Ulf und Hilmar sind Kollegen und spielen seit Jahren als Tipprunde Lotto. Jede Woche zahlt jeder 5 € an Hilmar. "
-    "Hilmar füllt den Lottoschein mit ihren festen Zahlen aus und gibt ihn in der Annahmestelle ab. Dafür bekommt er nichts.",
-    "An einem Samstag muss Hilmar lange arbeiten und vergisst den Schein. Am Abend wird gezogen: Mit ihren Zahlen hätte die "
+    "Erna, Ulf und Gerold sind Kollegen und spielen seit Jahren als Tipprunde Lotto. Jede Woche zahlt jeder 5 € an Gerold. "
+    "Gerold füllt den Lottoschein mit ihren festen Zahlen aus und gibt ihn in der Annahmestelle ab. Dafür bekommt er nichts.",
+    "An einem Samstag muss Gerold lange arbeiten und vergisst den Schein. Am Abend wird gezogen: Mit ihren Zahlen hätte die "
     "Runde 12.000 € gewonnen.",
-    "Am Montag sagt Hilmar: „Ich habe den Schein diesmal nicht abgegeben.“ Ulf verlangt: „Dann schuldest du Erna und mir "
+    "Am Montag sagt Gerold: „Ich habe den Schein diesmal nicht abgegeben.“ Ulf verlangt: „Dann schuldest du Erna und mir "
     "je 4.000 €.“",
-], "Muss Hilmar den entgangenen Gewinn ersetzen?")
+], "Muss Gerold den entgangenen Gewinn ersetzen?")
 
 # ===========================================================================================================================
 # C Anspruch: §§ 280 Abs. 1, 241 Abs. 1 BGB – Schuldverhältnis? (Wortlautkarte § 241 Abs. 1 Satz 1)
@@ -461,10 +461,10 @@ folie([("ansp", PC), ("pfl", f"{PC} › Pflicht aus einem Schuldverhältnis"),
        ("p241", f"{PC} › Schuldverhältnis, § 241 Abs. 1 BGB"), ("frage3", f"{PC} › Pflicht zum Einreichen?")], rechts_frei([
     *tafel("ansp", "Schadensersatz für Erna und Ulf?"),
     z("Erna und Ulf: Schadensersatz aus § 280 Abs. 1 BGB", 110, 180, "ansp", "Bold", 32),
-    z("Voraussetzung: Hilmar hat eine Pflicht aus", 110, 228, "pfl", "Bold", 32),
+    z("Voraussetzung: Gerold hat eine Pflicht aus", 110, 228, "pfl", "Bold", 32),
     z("einem Schuldverhältnis verletzt", 110, 272, beim("pfl", "einem"), "Bold", 32),
     *w241,
-    blk(110, w241_y + 40, 1040, 90, PINK, "frage3", [("Schuldete Hilmar das Einreichen des Scheins?", "ExtraBold", 33, INK)]),
+    blk(110, w241_y + 40, 1040, 90, PINK, "frage3", [("Schuldete Gerold das Einreichen des Scheins?", "ExtraBold", 33, INK)]),
     *requisit([("ansp", ("tabler", "coin-euro", 110, GELB), "je 4.000 €", GELB),
                ("pfl", ("tabler", "scale", 120, WEISS), "Pflicht verletzt?", WEISS),
                ("frage3", ("tabler", "ticket", 120, ROT), "Einreichen geschuldet?", PINK)]),
@@ -587,7 +587,7 @@ folie([("warum", PF), ("fehler", f"{PF} › Fehler passiert leicht"), ("hoch", f
 ]))
 
 # ===========================================================================================================================
-# F2 Anders bei Entgelt; besondere Vereinbarung; Ergebnis für Hilmar
+# F2 Anders bei Entgelt; besondere Vereinbarung; Ergebnis für Gerold
 # ===========================================================================================================================
 PF2 = "Rechtsbindungswille › Ausnahmen"
 folie([("anders", PF2 + " › Entgelt, geschäftliche Zwecke"), ("verein", PF2 + " › besondere Vereinbarung"),
@@ -598,7 +598,7 @@ folie([("anders", PF2 + " › Entgelt, geschäftliche Zwecke"), ("verein", PF2 +
                                            ("geschäftliche Zwecke im Vordergrund stehen", "Bold", 32, INK)]),
     z("Sonst nötig: eine besondere Vereinbarung", 110, 390, "verein", "Bold", 32),
     zit("BGH, NJW 1974, 1705, 1706", 110, 438, "verein"),
-    blk(110, 520, 1040, 170, GRUEN, "erg", [("Hilmar:", "Bold", 32, INK), ("keine Pflicht zum Einreichen,", "ExtraBold", 33, INK),
+    blk(110, 520, 1040, 170, GRUEN, "erg", [("Gerold:", "Bold", 32, INK), ("keine Pflicht zum Einreichen,", "ExtraBold", 33, INK),
                                          ("also keine Pflichtverletzung", "ExtraBold", 33, INK)]),
     *neinz("Anspruch aus § 280 Abs. 1 BGB", 730, beim("erg", "also"), "Bold", 32, x=160),
     *requisit([("anders", ("tabler", "building-store", 140, HELLBLAU), "Annahmestelle: Entgelt", LILA),
@@ -669,7 +669,7 @@ folie([("leer", "Fall · Erna und Ulf gehen leer aus"), ("e2", "Fall · Erna gib
     *fig("UL", UX3, G0, FHA, [("leer", "ernst_r"), ("e2", "froh_r")], erst="cut"),
     ns("Ulf", UX3, G0, "leer", BLAU),
     *fig("HI", HX3, G0, FHA, [("leer", "ruhig"), ("e2", "froh")], erst="cut"),
-    ns("Hilmar", HX3, G0, "leer", GRUEN),
+    ns("Gerold", HX3, G0, "leer", GRUEN),
     lottoschein(530, 563, 110, beim("e2", "Schein")),
     blase("sprech", 980, 220, "e2", 1250, 250, inhalt=["Dann spielen wir eben weiter. Aber", "den Schein gebe ab jetzt ich ab."],
           textsize=34, figur=("EN_froh_redet_r", EX3, G0, FHA)),

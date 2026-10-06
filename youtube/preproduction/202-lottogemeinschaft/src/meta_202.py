@@ -26,7 +26,7 @@ open(f"{U}/kapitel.txt", "w").write(kapitel + "\n")
 
 BESCHR = f"""Gefälligkeitsverhältnis oder Vertrag? Der Lottogemeinschaft-Fall (BGH NJW 1974, 1705): Haftet der Kollege nach §§ 280 Abs. 1, 241 BGB, wenn er den Tippschein vergisst?
 
-Der Fall: Erna, Ulf und Hilmar spielen seit Jahren als Tipprunde Lotto. Jede Woche zahlt jeder 5 € an Hilmar, der den Lottoschein ohne Entgelt ausfüllt und abgibt. An einem Samstag vergisst er ihn – mit ihren Zahlen hätte die Runde 12.000 € gewonnen. Ulf verlangt: „Dann schuldest du Erna und mir je 4.000 €.“
+Der Fall: Erna, Ulf und Gerold spielen seit Jahren als Tipprunde Lotto. Jede Woche zahlt jeder 5 € an Gerold, der den Lottoschein ohne Entgelt ausfüllt und abgibt. An einem Samstag vergisst er ihn – mit ihren Zahlen hätte die Runde 12.000 € gewonnen. Ulf verlangt: „Dann schuldest du Erna und mir je 4.000 €.“
 
 Inhalt:
 – Anspruch aus § 280 Abs. 1 BGB, Schuldverhältnis nach § 241 Abs. 1 BGB im Wortlaut

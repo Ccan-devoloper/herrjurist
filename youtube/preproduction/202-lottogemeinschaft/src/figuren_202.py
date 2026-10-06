@@ -1,5 +1,5 @@
 """Figuren für Folge 202 (Lottogemeinschaft) aus der LexVerse-Figma-Bibliothek (Open Peeps, CC0). Personen fiktiv.
-Hilmar (HI, um 55, gibt den Schein ab, vergisst ihn einmal; Stimme william): standing/robot_dance-3 (Pullover Grün #8FD694,
+Gerold (HI, um 55, gibt den Schein ab, vergisst ihn einmal; Stimme william): standing/robot_dance-3 (Pullover Grün #8FD694,
   Hose Dunkelblau #3D3D58, weiße Schuhe, offene Hand), Kopf Gray Short (graues Haar), Brille Glasses 4, Haut #E8B894, kein Bart.
 Erna (EN, um 45, Kollegin; Stimme sabrina): standing/blazer-3 (Blazer Rot #F07A6A über schwarzem Oberteil, Hose Schiefer
   #3F4A5A, Hand an der Hüfte), Kopf Medium 3, Haut #C99470, keine Brille.
