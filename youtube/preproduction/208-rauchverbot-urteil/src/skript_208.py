@@ -47,7 +47,7 @@ SEGMENTE = [
     ("[strikt]Mehr noch: Der Gesetzgeber dürfte sogar ein striktes Rauchverbot ohne Ausnahmen verhängen, [eck]auch für "
      "Eckkneipen.", PS),
     # --- E Folgerichtigkeit (Rn. 116, 128–147) ----------------------------------------------------------------------------
-    ("[aber]Baden-Württemberg und Berlin wählten aber ein anderes Konzept: [ausn]Raucherräume sind erlaubt, in "
+    ("[aber]Baden-Württemberg und Berlin haben aber ein anderes Konzept gewählt: [ausn]Raucherräume sind erlaubt, in "
      "Baden-Württemberg sind sogar Bier-, Wein- und Festzelte ausgenommen. [vermind]Der Gesundheitsschutz wird also mit "
      "verminderter Intensität verfolgt.", P),
     ("[folge]Dann gilt: Wer ein Regelungskonzept wählt, muss diese Entscheidung auch folgerichtig weiterverfolgen. "
