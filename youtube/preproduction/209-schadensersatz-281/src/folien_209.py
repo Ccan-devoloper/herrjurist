@@ -315,7 +315,7 @@ IX, JX = 1180, 1650
 folie([(NULL, "Fall · Die Felgen"), ("laden", "Fall · Der Kauf im Reifenhandel"), ("zahlt", "Fall · Jörn zahlt sofort"),
        ("in1", "Fall · Lieferung bis 8. September")], [
     *laden(NULL),
-    *felgen(NULL),
+    *felgen(NULL, fuell=WEISS),
     pl("Händler liefert bezahlte Felgen nicht", 70, 30, beim("fall", "liefert"), fill=GELB, size=32),
     pl("Du kaufst woanders teurer ein", 70, 100, beim("fall", "teurer"), fill=HELLROT, size=32),
     *fig("JO", JX, G0, FHA, [(beim("joern", "Jörn"), "froh")], bis="in1"),
@@ -326,45 +326,45 @@ folie([(NULL, "Fall · Die Felgen"), ("laden", "Fall · Der Kauf im Reifenhandel
     ns("Ingolf", IX, G0, beim("laden", "Ingolf"), GRUEN, d=0.1),
     pl("1. September", 520, 360, beim("laden", "ersten"), fill=WEISS, size=28, anker="m"),
     pl("Reifenhandel von Ingolf", 1180, 140, beim("laden", "Reifenhandel"), fill=WEISS, size=28, anker="m", bis="in1"),
-    pl("4 Felgen: 1.200 €", 520, 560, beim("laden", "tausend"), fill=GELB, size=30, anker="m"),
+    pl("4 Felgen: 1.200 €", 520, 660, beim("laden", "tausend"), fill=GELB, size=30, anker="m"),
     ficon("tabler", "cash-banknote", 1420, 640, 120, "zahlt", fuell=GRUEN),
     pl("sofort bezahlt", 1420, 670, beim("zahlt", "sofort"), fill=GRUEN, size=28, anker="m"),
-    blase("sprech", 780, 200, "in1", 1240, 230, inhalt=["Die Felgen liefere ich Ihnen", "bis zum 8. September."],
+    blase("sprech", 720, 200, "in1", 1380, 250, inhalt=["Die Felgen liefere ich Ihnen", "bis zum 8. September."],
           textsize=34, figur=("IN_redet_r", IX, G0, FHA), bis="warten"),
 ])
 
 # ===========================================================================================================================
 # A2 Fall: Warten am Carport, E-Mail „umgehend“
 # ===========================================================================================================================
-JX2 = 1560
+JX2 = 1600
 folie([("warten", "Fall · Das Warten"), ("mail", "Fall · Die E-Mail"), ("jo1", "Fall · Jörn: „umgehend“")], [
     *carport("warten"),
     hart(ficon("tabler", "car", 560, G0 + 4, 560, "warten", fuell=BLAU, anim="cut")),
     tisch(1220, "warten"),
     hart(ficon("tabler", "device-laptop", 1220, G0 - 206, 150, "warten", fuell=WEISS, anim="cut")),
     pl("8. September", 70, 30, beim("warten", "achte"), fill=GELB, size=32),
-    ficon("tabler", "package-off", 1220, 420, 110, beim("warten", "nichts"), fuell=WEISS, bis="mail"),
-    pl("nichts kommt", 1220, 450, beim("warten", "nichts"), fill=HELLROT, size=28, anker="m", bis="mail"),
+    ficon("tabler", "package-off", 1220, 560, 110, beim("warten", "nichts"), fuell=WEISS, bis="mail"),
+    pl("nichts kommt", 1220, 380, beim("warten", "nichts"), fill=HELLROT, size=28, anker="m", bis="mail"),
     pl("10. September", 70, 100, beim("mail", "zehnten"), fill=GELB, size=32),
     szene(ficon("tabler", "mail", 1220, 560, 100, beim("mail", "E-Mail"), fuell=WEISS), "209tippen*", 0.45),
-    pl("E-Mail an Ingolf", 1220, 450, beim("mail", "E-Mail"), fill=WEISS, size=28, anker="m"),
+    pl("E-Mail an Ingolf", 1220, 380, beim("mail", "E-Mail"), fill=WEISS, size=28, anker="m"),
     *fig("JO", JX2, G0, FHA, [("warten", "ruhig"), (beim("warten", "nichts"), "denkt"), ("mail", "ernst")], bis="jo1", erst="cut"),
     *redet("JO_redet", JX2, G0, FHA, "jo1", "antw"),
     ns("Jörn", JX2, G0, "warten", BLAU),
-    blase("sprech", 700, 200, "jo1", 1380, 230, inhalt=["Bitte liefern Sie die", "Felgen umgehend."],
+    blase("sprech", 700, 200, "jo1", 1330, 230, inhalt=["Bitte liefern Sie die", "Felgen umgehend."],
           textsize=34, figur=("JO_redet", JX2, G0, FHA), bis="antw"),
 ])
 
 # ===========================================================================================================================
 # A3 Fall: Ingolf antwortet aus seinem Laden
 # ===========================================================================================================================
-IX3 = 1450
+IX3 = 1520
 folie([("antw", "Fall · Ingolf antwortet")], [
     *laden("antw"),
-    tisch(1120, "antw"),
-    hart(ficon("tabler", "device-laptop", 1120, G0 - 206, 150, "antw", fuell=WEISS, anim="cut")),
-    ficon("tabler", "mail", 1120, 560, 100, "antw", fuell=WEISS),
-    pl("Antwort an Jörn", 1120, 450, beim("antw", "antwortet"), fill=WEISS, size=28, anker="m"),
+    tisch(1190, "antw"),
+    hart(ficon("tabler", "device-laptop", 1190, G0 - 206, 150, "antw", fuell=WEISS, anim="cut")),
+    ficon("tabler", "mail", 1190, 560, 100, "antw", fuell=WEISS),
+    pl("Antwort an Jörn", 1190, 380, beim("antw", "antwortet"), fill=WEISS, size=28, anker="m"),
     *fig("IN", IX3, G0, FHA, [("antw", "denkt")], bis="in2", erst="cut"),
     *redet("IN_redet", IX3, G0, FHA, "in2", "drei"),
     ns("Ingolf", IX3, G0, "antw", GRUEN),
@@ -378,8 +378,8 @@ folie([("antw", "Fall · Ingolf antwortet")], [
 HX, JX4 = 1180, 1660
 folie([("drei", "Fall · Drei Wochen später"), ("herta", "Fall · Bei Herta"), ("kauft", "Fall · Jörn kauft bei Herta")], [
     *laden("drei", wand=WAND2),
-    *felgen("drei", fuell=BLAU),
-    *felgen("drei", fuell=BLAU, reihe=1),
+    *felgen("drei", fuell=WEISS),
+    *felgen("drei", fuell=WEISS, reihe=1),
     pl("3 Wochen später: immer noch nichts da", 70, 30, beim("drei", "Drei"), fill=HELLROT, size=32),
     pl("1. Oktober", 70, 100, beim("herta", "ersten"), fill=GELB, size=32),
     *fig("JO", JX4, G0, FHA, [("drei", "muede"), ("herta", "ruhig"), ("kauft", "freut")], erst="cut"),
@@ -391,7 +391,7 @@ folie([("drei", "Fall · Drei Wochen später"), ("herta", "Fall · Bei Herta"), 
     pl("gleichwertige Felgen?", 1660, 380, beim("herta", "gleichwertigen"), fill=WEISS, size=28, anker="m", bis="he1"),
     blase("sprech", 700, 200, "he1", 1260, 230, inhalt=["Die habe ich da,", "für 1.450 €."],
           textsize=34, figur=("HE_redet", HX, G0, FHA), bis="kauft"),
-    szene(ficon("tabler", "cash-register", 1420, 660, 130, beim("kauft", "kauft"), fuell=WEISS), "209kasse*", 0.40),
+    szene(ficon("tabler", "receipt-euro", 1420, 640, 110, beim("kauft", "kauft"), fuell=WEISS), "209kasse*", 0.40),
     pl("1.450 € bezahlt", 1420, 350, beim("kauft", "kauft"), fill=GRUEN, size=30, anker="m"),
     ficon("tabler", "mail", 1660, 330, 80, beim("kauft", "schreibt"), fuell=WEISS),
 ])
@@ -411,6 +411,8 @@ folie([("jo2", "Fall · Jörn: Geld zurück und Mehrkosten"), ("in3", "Fall · I
        ("frage", "Fall · Die Frage")], [
     hart(boden_(G0, "jo2", fill=(226, 226, 222, 255), h=100)),
     trenner("jo2"),
+    ficon("tabler", "mail", 800, 560, 90, "jo2", fuell=WEISS),
+    ficon("tabler", "mail", 1120, 560, 90, beim("in3", "Aber"), fuell=WEISS),
     hart(ficon("tabler", "car", 250, G0 + 4, 380, "jo2", fuell=BLAU, anim="cut")),
     *redet("JO_fordert_r", JX5, G0, FHA, "jo2", "in3"),
     *fig("JO", JX5, G0, FHA, [("in3", "ernst_r")], erst="cut"),
@@ -451,7 +453,7 @@ sachverhalt_209("sv", [
     "antwortet: „Die Felgen kommen bald, versprochen.“ Einen Grund für die Verzögerung nennt er nicht.",
     "Drei Wochen später ist immer noch nichts geliefert. Am 1. Oktober kauft Jörn gleichwertige Felgen bei Herta für "
     "1.450 €. Dann schreibt er Ingolf: „Ihre Felgen will ich nicht mehr. Ich will mein Geld zurück, und die 250 € "
-    "Mehrkosten zahlen Sie auch!“",
+    "Mehrkosten zahlen Sie auch!“ Ingolf antwortet: „Aber die Felgen kommen doch nächste Woche!“",
 ], "Kann Jörn die 250 € Mehrkosten verlangen?")
 
 _zl = lambda W, wort: next(i for i, t in enumerate(W) if wort in t)
@@ -462,7 +464,7 @@ _zl = lambda W, wort: next(i for i, t in enumerate(W) if wort in t)
 PC = "A. Anspruchsgrundlage"
 folie([("agl", f"{PC} › Schadensersatz statt der Leistung"), ("agl2", f"{PC} › §§ 280 Abs. 1, 3, 281 BGB"),
        ("sys", f"{PC} › System der §§ 280 ff. BGB")], rechts_frei([
-    *tafel("agl", "Die Anspruchsgrundlage"),
+    *tafel("agl", "Die Anspruchsgrundlage", h=560),
     z("Jörn verlangt die Mehrkosten als", 110, 190, "agl", "Regular", 34),
     z("Schadensersatz statt der Leistung", 110, 240, beim("agl", "Schadensersatz"), "ExtraBold", 36),
     blk(110, 330, 1040, 110, GELB, "agl2", [("§§ 280 Abs. 1, 3, 281 BGB", "ExtraBold", 40, INK)]),
@@ -488,7 +490,7 @@ w2803, w2803_y = wortlaut(80, w2801_y + 30, 1100, W2803, "§ 280 Abs. 3 BGB", "w
                           marken=[(_zl(W2803, "zusätzlichen"), "zusätzlichen Voraussetzungen", beim("w3", "zusätzlichen")),
                                   (_zl(W2803, "§ 281"), "§ 281", beim("w3", "Paragrafen"))], size=31)
 PD = "A. Anspruchsgrundlage › § 280 BGB"
-folie([("w280", f"{PD} Abs. 1"), ("w3", f"{PD} Abs. 3: zusätzlich § 281 BGB")], rechts_frei([
+folie([("w280", "A. Anspruchsgrundlage › § 280 Abs. 1 BGB"), ("w3", "A. Anspruchsgrundlage › § 280 Abs. 3 BGB: zusätzlich § 281 BGB")], rechts_frei([
     *tafel("w280", "Der Ausgangspunkt: § 280 BGB"),
     *w2801, *w2803,
     *requisit([("w280", ("tabler", "scale", 120, WEISS), "Pflichtverletzung", WEISS),
@@ -509,7 +511,7 @@ w2811, w2811_y = wortlaut(80, 180, 1100, W2811, "§ 281 Abs. 1 Satz 1 BGB", "w28
                                   (_zl(W2811, "angemessene"), "angemessene Frist", beim("w281b", "angemessene"))], size=31)
 PE = "A. Anspruchsgrundlage › § 281 Abs. 1 Satz 1 BGB"
 folie([("w281", PE), ("w281a", f"{PE} › Leistung nicht erbracht"), ("w281b", f"{PE} › erfolglose Frist"),
-       ("plan", "Das Schema in 6 Schritten")], rechts_frei([
+       ("plan", "B. Schema · 6 Schritte")], rechts_frei([
     *tafel("w281", "Die Zusatzvoraussetzungen"),
     *w2811,
     *pkt("fällige Leistung nicht erbracht", w2811_y + 40, "w281a", "Bold", 32, x=160),
@@ -527,12 +529,11 @@ assert w2811_y + 270 <= 930, w2811_y
 # F 1. Schuldverhältnis
 # ===========================================================================================================================
 folie([("s1", "B. Schema › 1. Schuldverhältnis"), ("s1b", "B. Schema › 1. Schuldverhältnis › Kaufvertrag, § 433 BGB")], rechts_frei([
-    *tafel("s1", "1. Schuldverhältnis"),
+    *tafel("s1", "1. Schuldverhältnis", h=400),
     *okz("Kaufvertrag zwischen Jörn und Ingolf", 200, "s1b", "Bold", 34, x=160),
     zit("§ 433 BGB", 160, 255, beim("s1b", "Paragraf")),
-    *pkt("Ingolf schuldet 4 Felgen, Jörn den Kaufpreis: 1.200 €", 330, beim("s1b", "Kaufvertrag"), "Regular", 32, x=160),
     *requisit([("s1", ("tabler", "file-text", 110, WEISS), "Schuldverhältnis", WEISS),
-               ("s1b", ("tabler", "arrows-exchange", 110, None), "Felgen gegen 1.200 €", GELB)]),
+               ("s1b", ("tabler", "arrows-exchange", 110, None), "Kaufvertrag", GELB)]),
     *zwei("JO", [("s1", "ruhig")], "IN", [("s1", "ruhig"), ("s1b", "froh")]),
 ]))
 
@@ -541,13 +542,13 @@ folie([("s1", "B. Schema › 1. Schuldverhältnis"), ("s1b", "B. Schema › 1. S
 # ===========================================================================================================================
 PG = "B. Schema › 2. Pflichtverletzung"
 folie([("p1", PG), ("p2", f"{PG} › fällig"), ("p3", f"{PG} › durchsetzbar")], rechts_frei([
-    *tafel("p1", "2. Pflichtverletzung"),
+    *tafel("p1", "2. Pflichtverletzung", h=560),
     z("fällige, durchsetzbare Leistung nicht erbracht", 110, 190, beim("p1", "Ingolf"), "ExtraBold", 34),
     *okz("fällig: Lieferung bis 8.9.2026 vereinbart", 280, "p2", "Bold", 32, x=160),
     z("spätestens dann fällig, und sie bleibt aus", 160, 325, beim("p2", "Spätestens"), "Regular", 32),
     zit("§ 271 Abs. 2 BGB", 160, 375, beim("p2", "Spätestens")),
     *okz("durchsetzbar: Jörn hat bezahlt, keine Einrede", 450, "p3", "Bold", 32, x=160),
-    zit("§ 320 Abs. 1 BGB; Formulierung wie Video „Rücktritt, § 323 BGB“", 160, 500, beim("p3", "Jörn")),
+    zit("§ 320 Abs. 1 BGB", 160, 500, beim("p3", "Jörn")),
     *requisit([("p1", ("tabler", "package-off", 110, WEISS), "nicht geliefert", HELLROT),
                ("p2", ("tabler", "calendar-event", 100, WEISS), "bis 8.9.2026", GELB),
                ("p3", ("tabler", "cash-banknote", 120, GRUEN), "bezahlt", GRUEN)]),
@@ -630,7 +631,7 @@ assert w2812_y + 360 <= 900, w2812_y
 # ===========================================================================================================================
 PJ = "B. Schema › 5. Vertretenmüssen"
 folie([("v1", PJ), ("v2", f"{PJ} › vermutet, § 280 Abs. 1 Satz 2 BGB"), ("v3", f"{PJ} › keine Entlastung")], rechts_frei([
-    *tafel("v1", "5. Vertretenmüssen"),
+    *tafel("v1", "5. Vertretenmüssen", h=480),
     blk(110, 190, 1040, 110, GELB, "v2", [("vermutet: § 280 Abs. 1 Satz 2 BGB", "ExtraBold", 34, INK)]),
     *pkt("Ingolf müsste sich entlasten", 350, beim("v2", "Ingolf"), "Bold", 32, x=160),
     *pkt("er nennt keinen Grund für die Verzögerung", 415, "v3", "Bold", 32, x=160),
@@ -707,7 +708,7 @@ folie([("ab1", PM), ("ab2", f"{PM} › Verzögerungsschaden"), ("ab2b", f"{PM} �
     blk(110, 530, 1040, 130, GELB, "ab3", [("bezahlte 1.200 € zurück:", "Bold", 31, INK),
                                         ("Rücktritt, § 323 BGB", "ExtraBold", 33, INK)]),
     zit("Video „Rücktritt, § 323 BGB“; Rückgewähr nach § 346 Abs. 1 BGB", 110, 675, beim("ab3", "Rücktritt")),
-    *okz("§ 325 BGB: Rücktritt schließt Schadensersatz nicht aus", 740, "ab4", "Bold", 31, x=160),
+    *pkt("§ 325 BGB: Rücktritt schließt Schadensersatz nicht aus", 740, "ab4", "Bold", 31, x=160),
     *requisit([("ab1", ("tabler", "arrows-split", 110, None), "Abgrenzung", WEISS),
                ("ab2", ("tabler", "clock", 100, HELLBLAU), "Verspätung", HELLBLAU),
                ("ab3", ("tabler", "arrow-back-up", 100, None), "Rücktritt", GELB),
