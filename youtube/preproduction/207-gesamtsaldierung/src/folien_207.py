@@ -532,7 +532,7 @@ folie([("indiv", f"{PI}"), ("i1", f"{PI} › a) Zweck verfehlt"), ("i2", f"{PI} 
        ("i3", f"{PI} › c) Mittel der Lebensführung"), ("i4", f"{PI} › im Fall (−)")], rechts_frei([
     *tafel("indiv", "Individueller Schadenseinschlag"),
     pl("1. Korrektur", 110, 180, beim("indiv", "Erstens"), fill=WEISS, size=30),
-    pl("auch bei gleichem Wert ein Schaden, wenn …", 330, 180, beim("indiv", "Auch"), fill=GELB, size=30),
+    pl("auch bei gleichem Wert ein Schaden, wenn …", 355, 180, beim("indiv", "Auch"), fill=GELB, size=30),
     z("a) die Sache nicht zum vertraglich vorausgesetzten", 110, 260, "i1", "Bold", 30),
     z("Zweck und nicht anders zumutbar verwendbar ist", 150, 302, beim("i1", "auch"), "Bold", 30),
     z("b) die Verpflichtung zu vermögensschädigenden", 110, 365, "i2", "Bold", 30),
