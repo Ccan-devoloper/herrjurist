@@ -21,13 +21,13 @@
 - Keine Prothesen-Posen, keine Bärte, keine Polka Dots, keine Karikatur; der Angeklagte in Alltagskleidung ohne Herkunfts- oder Hautfarben-Klischee; keine realen Personen. Hellmers zuerst in `resting-1` erprobt: wirkte im Kontaktbild wie eine Schwangerschaftssilhouette → `crossed_arms-2`.
 - Figuren-PNGs: `../peeps/op_204/` (66 Dateien, nicht im Repository, im Drive-Master). Kontaktbild `out/besetzung_204.png`.
 
-**Abweichung von den letzten Folgen:** 201 (`pointing_finger-2`, `blazer-4`), 202 (`robot_dance-3`, `blazer-3`, `shirt-4`), 203 (`crossed_arms-1`, `pointing_finger-2`) – Posen `shirt-3`, `crossed_arms-2`, `easing-2` in keiner der drei Vorfolgen; Farben Graublau/Lila/Grün-Anthrazit, keine Muster. Schauplätze: Kanzlei mit Aktenregal, Fenster und vergrößerter Urteilsurkunde (die Kanzlei in 066/168 sah anders aus: Schreibtisch, Fristenkalender), Oldtimer-Halle mit Rolltor (neu). Kein Sitzungssaal, weil die Geschichte beim schriftlichen Urteil beginnt.
+**Abweichung von den letzten Folgen:** 201 (`pointing_finger-2`, `blazer-4`), 202 (`robot_dance-3`, `blazer-3`, `shirt-4`), 203 (`crossed_arms-1`, `pointing_finger-2`) – Posen `shirt-3`, `crossed_arms-2`, `easing-2` in keiner der drei Vorfolgen; Farben Graublau/Lila/Grün-Anthrazit, keine Muster. Schauplätze: Kanzlei mit Aktenregal und vergrößerter Urteilsurkunde (die Kanzlei in 066/168 sah anders aus: Schreibtisch, Fristenkalender), Oldtimer-Halle mit Rolltor (neu). Kein Sitzungssaal, weil die Geschichte beim schriftlichen Urteil beginnt.
 
 ## Szenen
 
 | Szene | Ort / Handlung | Requisiten (Iconset:Name, Füllung) | Tafel / Prüfpfad | Bildhalte (Zwiebelschale) | Geräusch |
 |---|---|---|---|---|---|
-| **A1 Kanzlei** `fall`→`liest` | Aktenregal, Fenster; Hellmers und Wichmann ab 0,0 s mit Namensschildern | Grundformen `regal()`, `fenster()`, `urkunde()` | `Fall · In der Kanzlei` (ab 0,0 s) → `· Das Urteil des Landgerichts` → `· Die Urteilsgründe` | Grundbild · Pille Betrug · Pille 2 Jahre 6 Monate, Wichmann besorgt · Urkunde erscheint, Hellmers liest | – |
+| **A1 Kanzlei** `fall`→`liest` | Aktenregal; Hellmers und Wichmann ab 0,0 s mit Namensschildern | Grundformen `regal()`, `urkunde()` (Fenster nach der Sichtprüfung entfernt) | `Fall · In der Kanzlei` (ab 0,0 s) → `· Das Urteil des Landgerichts` → `· Die Urteilsgründe` | Grundbild · Pille Betrug · Pille 2 Jahre 6 Monate, Wichmann besorgt · Urkunde erscheint, Hellmers liest | – |
 | **A2 Rückblick: Oldtimer-Halle** `rueck`→`zahlt` | Halle mit Rolltor, Wagen in der Mitte; Wichmann links, Danner rechts | tabler:`car` (Rot), `car-crash`, `cash-banknote` (Grün) | `Fall · Rückblick: der Verkauf` → `· „unfallfrei“` → `· Der Unfallschaden` → `· Die Zahlung` | Grundbild · Preis 85.000 € · Blase Wichmann · Blase Danner · Unfall-Icon und Pille · „wusste das“ · Geld, Danner froh | Geldscheine (`szene_204geld_1`) |
 | **A3 Kanzlei** `h1`→`frage2` | wie A1 (Rückkehr nach dem Rückblick); Urkunde mit Prüfliste | wie A1 | `Fall · Was steht im Urteil?` → `· Und der Schaden?` → `· „das Geld wert“` → `· Die Fragen` | Haken Täuschung/Irrtum/Zahlung zum Wort · „Schaden: ?“ · „kein Wort“ · Blase Wichmann · zwei Fragepillen | – |
 | **B Sachverhalt** `sv` | Karte vollständig, ≈ 9,7 s | – | `Sachverhalt` | 1 | – |
@@ -47,7 +47,7 @@
 **Übergänge:** stumme Schiebeblenden nur zwischen den 16 Folien; innerhalb harte Schnitte und Pops; keine Figurenbewegung, kein Zoom.
 **Geräusche:** ein Handlungsgeräusch aus Freesound CC0 (Geldscheine, als Frau Danner zahlt), Herkunft in [`geraeusche_herkunft.json`](geraeusche_herkunft.json).
 **Blasen:** Stil C, wortgleich mit dem Gesprochenen. Wortlautkarten wörtlich nach gesetze-im-internet.de (Abruf 06.10.2026), Auslassungen mit „…“, amtlich „daß“/„muß“.
-**Lizenzen der Requisiten:** Tabler Icons (MIT), Haken/Kreuz Fluent Emoji High Contrast (MIT), Warnsymbol Streamline Freehand (CC BY 4.0, Namensnennung in `beschreibung.txt`). Regal, Fenster, Urkunde und Halle programmatisch.
+**Lizenzen der Requisiten:** Tabler Icons (MIT), Haken/Kreuz Fluent Emoji High Contrast (MIT), Warnsymbol Streamline Freehand (CC BY 4.0, Namensnennung in `beschreibung.txt`). Regal, Urkunde und Halle programmatisch.
 
 ## Sachverhaltskarte (Szene B, erscheint vollständig)
 
