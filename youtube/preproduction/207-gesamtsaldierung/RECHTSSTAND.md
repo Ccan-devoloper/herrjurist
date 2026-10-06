@@ -1,0 +1,86 @@
+# Folge 207 · Gesamtsaldierung: Der Vermögensschaden beim Betrug § 263 erklärt – Rechtsstand und Belege
+
+**Abruf aller Quellen:** 06.10.2026. Normtexte auf gesetze-im-internet.de (Einzelnormseiten). BGH-Entscheidungen ab 2018 als **amtliche Volltexte (PDF) von bundesgerichtshof.de**, Randnummern aus dem PDF abgelesen; gefunden über hrr-strafrecht.de (HRRS). Das amtliche PDF von 3 StR 171/17 hat keine Randnummern (zitiert nach Umdruckseite, HRRS-Rn. zur Orientierung). BVerfG-Entscheidungen im Volltext auf bundesverfassungsgericht.de (Randnummern = amtliche Absatzzählung, Anker `absNNN`). BGHSt 16, 321 (1961) ist amtlich nicht online; Volltext über Das Fallrecht (DFR, servat.unibe.ch), Seitenzahl 326 und „st. Rspr. seit“ über das amtliche PDF von BGH 3 StR 171/17 gegengeprüft.
+**Gesetzesstand:** StGB laut gesetze-im-internet.de (Abruf 06.10.2026). Gelesen: §§ 12, 22, 23, 263 StGB.
+
+**Fallannahmen (Übungsfall nach dem Plan-Hook):**
+- Samstagvormittag, Garagenverkauf. Alwin bietet einen „Designer-Sessel“ (keine reale Marke, kein reales Modell) für 300 € an. Er weiß, dass es ein Nachbau ist, und hält 300 € für den richtigen Preis (also keine Vorstellung, Gundula zu schädigen).
+- Gundula fragt: „Ist das wirklich ein Original?“ Alwin: „Ja, ein echtes Designerstück.“ (Täuschung über eine Tatsache.) Gundula glaubt ihm, zahlt 300 € bar (Zug um Zug, Erfüllung; kein Kredit) und nimmt den Sessel mit. Sie wollte einen bequemen Sessel für ihre Leseecke und nutzt ihn dafür (vertraglich vorausgesetzter Zweck erreicht). Sie kommt finanziell weiter gut zurecht.
+- Gutachterin Ulla: gut gemachter Nachbau, Verkehrswert genau 300 € (Fallannahme, wie im Hook). Gegenfall: Wert 120 €.
+- Keine Erörterung von Markenrecht, Urheberrecht, Zivilrecht (Anfechtung § 123 BGB, Mängelrechte) und von Strafantrag (§ 263 Abs. 4, § 248a StGB).
+- Alle Personen erfunden, Figurenrede ist Dramatisierung. Verkäufer gewöhnlich dargestellt (kein Klischee).
+
+**Gesamtwissen** (UNCERTIFIED; Fundstelle laut Plan „Band 13 › 15. › Vermögensschaden“; gefunden als `#sr-betrug` „15. Betrug § 263 – vollständige Vermögensdeliktsdogmatik“ › Vermögensschaden, dazu `#persönlicher-schadenseinschlag` und `#fach-personlicher-schadenseinschlag`): Gesamtsaldierung vor/nach Verfügung; wirtschaftlicher Vermögensbegriff mit normativen Korrekturen; konkrete Vermögensgefährdung; persönlicher Schadenseinschlag (unbrauchbar, Folgemaßnahmen, notwendige Mittel). Nur Wegweiser; jede Aussage unten an Norm oder Volltext belegt. Auszüge nur im Scratchpad, nicht im Repository.
+
+## Normen (gesetze-im-internet.de, Abruf 06.10.2026)
+
+| Norm | Wortlaut | URL |
+|---|---|---|
+| § 263 Abs. 1 StGB (**Wortlautkarte**, vollständig, amtliche Schreibung „daß“; gesprochen nur das Merkmal „das Vermögen eines anderen beschädigt“, Marker „Vermögen eines anderen“, „beschädigt“) | „Wer in der Absicht, sich oder einem Dritten einen rechtswidrigen Vermögensvorteil zu verschaffen, das Vermögen eines anderen dadurch beschädigt, daß er durch Vorspiegelung falscher oder durch Entstellung oder Unterdrückung wahrer Tatsachen einen Irrtum erregt oder unterhält, wird mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe bestraft.“ | https://www.gesetze-im-internet.de/stgb/__263.html |
+| § 263 Abs. 2 StGB (**Wortlautkarte**) | „Der Versuch ist strafbar.“ | ebd. |
+| § 22 StGB | „Eine Straftat versucht, wer nach seiner Vorstellung von der Tat zur Verwirklichung des Tatbestandes unmittelbar ansetzt.“ (Zitat „nach seiner Vorstellung von der Tat“ auf der Tafel) | https://www.gesetze-im-internet.de/stgb/__22.html |
+| §§ 23 Abs. 1, 12 Abs. 2 StGB | Versuch eines Vergehens nur strafbar, wo das Gesetz es bestimmt (hier § 263 Abs. 2); Betrug ist Vergehen (nur gelesen) | …/__23.html, …/__12.html |
+
+## Entscheidungen (Volltext gelesen)
+
+| Entscheidung | Kernaussage für das Video | Quelle |
+|---|---|---|
+| **BGH, Beschl. v. 6.4.2018 – 1 StR 13/18** (amtliches PDF) | **Rn. 8:** Vermögensschaden, „wenn die Vermögensverfügung des Getäuschten bei wirtschaftlicher Betrachtungsweise unmittelbar zu einer nicht durch Zuwachs ausgeglichenen Minderung des Gesamtwerts seines Vermögens führt (Prinzip der Gesamtsaldierung; st. Rspr. …). Maßgeblich ist der Zeitpunkt der Vermögensverfügung, also der Vergleich des Vermögenswerts unmittelbar vor und nach der Verfügung“. **Rn. 9:** „Wurde der Getäuschte zum Abschluss eines Vertrages verleitet, sind … der Geldwert des erworbenen Anspruchs gegen den Vertragspartner und der Geldwert der eingegangenen Verpflichtung miteinander zu vergleichen (Eingehungsschaden). Der Getäuschte ist geschädigt, wenn sich dabei ein Negativsaldo zu seinem Nachteil ergibt“; Erfüllungsschaden = Differenz zwischen Leistung und Gegenleistung. | https://www.bundesgerichtshof.de/SharedDocs/Entscheidungen/DE/Strafsenate/1_StS/2018/1_StR__13-18.pdf?__blob=publicationFile |
+| **BGH, Beschl. v. 19.7.2023 – 2 StR 77/22** (amtliches PDF; wie Folge 204) | **Rn. 8:** Gesamtsaldierung wie oben („wirtschaftlichen Gesamtwerts“); „Danach ist dem jeweils angelegten Betrag der Wert des gleichzeitig erlangten Rückzahlungsanspruchs gegenüberzustellen“; der Wert ist „nach der Rechtsprechung des Bundesverfassungsgerichts … konkret festzustellen und zu beziffern“. | https://www.bundesgerichtshof.de/SharedDocs/Entscheidungen/DE/Strafsenate/2_StS/2022/2_StR__77-22.pdf?__blob=publicationFile |
+| **BGH, Beschl. v. 13.8.2025 – 2 StR 283/25** (amtliches PDF; wie Folge 204) | **Rn. 2:** Käufer über Alter und Herkunft eines **Nachbaus** (statt Originalfahrzeug) getäuscht. **Rn. 10:** Gesamtsaldierung; „Wird bei einem Kauf über Umstände getäuscht, die den Verkehrswert der Sache maßgeblich mitbestimmen, erleidet der dadurch zum Kaufabschluss bewogene Kunde einen Schaden regelmäßig nur dann, wenn die Sache objektiv den vereinbarten Preis nicht wert ist“. **Rn. 13:** nicht auszuschließen, „dass der Nachbau sogar den vertragsgemäß entrichteten Preis wert war und dem Käufer kein Vermögensschaden entstand“ – Schuldspruch wegen vollendeten Betrugs ohne Boden. | https://www.bundesgerichtshof.de/SharedDocs/Entscheidungen/DE/Strafsenate/2_StS/2025/2_StR_283-25.pdf?__blob=publicationFile |
+| **BGH, Beschl. v. 16.8.1961 – 4 StR 166/61, BGHSt 16, 321 („Melkmaschine“)** (Volltext DFR, nicht amtlich) | **Leitsatz:** Wer sich aufgrund einer Täuschung zu einer Leistung verpflichtet und eine gleichwertige Gegenleistung erhalten soll, ist allein durch die Beeinträchtigung seiner wirtschaftlichen Bewegungsfreiheit nicht ohne weiteres geschädigt; ein Schaden liegt vor, wenn der Erwerber „a) die angebotene Leistung nicht oder nicht in vollem Umfange zu dem vertraglich vorausgesetzten Zweck oder in anderer zumutbaren Weise verwenden kann oder b) durch die eingegangene Verpflichtung zu vermögensschädigenden Maßnahmen genötigt wird oder c) infolge der Verpflichtung nicht mehr über die Mittel verfügen kann, die zur ordnungsmäßigen Erfüllung seiner Verbindlichkeiten oder sonst für eine seinen persönlichen Verhältnissen angemessene Wirtschafts- oder Lebensführung unerläßlich sind“. **Gründe III a):** Eine Vermögensbeschädigung liegt „nicht schon dann vor, wenn jemand infolge eines durch eine Täuschung hervorgerufenen Irrtums eine Vermögensverfügung getroffen hat, die er nicht getroffen haben würde, wenn er die Wahrheit gekannt hätte“; sonst würde der Betrug „lediglich zu einem Angriff auf die Verfügungsfreiheit“, die „nur gegen Gewalt und Drohung (§ 240 StGB), nicht aber gegen Täuschung strafrechtlich geschützt“ ist; als Beispiel für b): „Aufnahme eines hoch zu verzinsenden Darlehens“. | https://www.servat.unibe.ch/dfr/bs016321.html |
+| **BGH, Beschl. v. 12.6.2018 – 3 StR 171/17** (amtliches PDF ohne Rn., Umdruck S. 5; HRRS 2018 Nr. 620, Rn. 4) | „sog. persönlicher Schadenseinschlag, st. Rspr. seit BGH, Beschluss vom 16. August 1961 - 4 StR 166/61, BGHSt 16, 321“: subjektiv wertlose Gegenleistung „nach dem Urteil eines objektiven Dritten“; Schaden, „wenn die Gegenleistung nicht oder nicht in vollem Umfange zu dem vertraglich vorausgesetzten Zweck brauchbar ist und er sie auch nicht in anderer zumutbarer Weise verwenden … kann (BGH … BGHSt 16, 321, 326 …)“. | https://www.bundesgerichtshof.de/SharedDocs/Entscheidungen/DE/Strafsenate/3_StS/2017/3_StR_171-17.pdf?__blob=publicationFile |
+| **BGH, Beschl. v. 1.6.2016 – 2 StR 335/15** (Anfragebeschluss; HRRS, amtliches PDF nicht geprüft) | **Rn. 4:** „Der Begriff des Vermögens entspricht hier demjenigen des Betrugstatbestands. Nach der Rechtsprechung des Bundesgerichtshofs … weil der strafrechtliche Vermögensbegriff wirtschaftlich betrachtet werden soll.“ **Rn. 6** (Wiedergabe RGSt 44, 230): Vermögen „wirtschaftliche Macht …; Da jeder Wert in Geld ausgedrückt werden könne, gehe es letztlich um die Summe der geldwerten Güter einer Person“. (Gegenstand der Anfrage – Drogenbesitz – im Video nicht berührt.) | https://www.hrr-strafrecht.de/hrr/2/15/2-335-15.php |
+| **BVerfG, Beschl. v. 23.6.2010 – 2 BvR 2559/08 u. a.** (BVerfGE 126, 170) | **Rn. 85:** Vermögen „im Sinne der Gesamtheit der geldwerten Güter einer Person“ (zu § 266). **Rn. 102:** Vermögen als „wirtschaftliche Größe“, normative Erwägungen. **Rn. 112:** „Von einfach gelagerten und eindeutigen Fällen – etwa bei einem ohne weiteres greifbaren Mindestschaden – abgesehen, werden die Strafgerichte den von ihnen angenommenen Nachteil der Höhe nach beziffern und dessen Ermittlung in wirtschaftlich nachvollziehbarer Weise in den Urteilsgründen darlegen müssen.“ **Rn. 113:** ggf. Sachverständiger. **Rn. 136 f.:** schadensgleiche Vermögensgefährdung/Gefährdungsschaden: Gefahr eines zukünftigen Verlusts als gegenwärtige Minderung (§§ 263, 266); konkrete, nicht abstrakte Gefährdung. **Rn. 150:** auch Gefährdungsschäden wirtschaftlich nachvollziehbar festzustellen. | https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2010/06/rs20100623_2bvr255908.html |
+| **BVerfG, Beschl. v. 7.12.2011 – 2 BvR 2500/09 u. a.** (BVerfGE 130, 1) | **Rn. 174:** Schaden bei konkreter Gefährdung (schadensgleiche Vermögensgefährdung/Gefährdungsschaden) im Rahmen des § 263. **Rn. 175:** mit dem Bestimmtheitsgrundsatz vereinbar, auch für Fallgestaltungen des Eingehungsbetrugs. **Rn. 176:** Schadensmerkmal kennzeichnet § 263 als Vermögens- und Erfolgsdelikt; „von einfach gelagerten und eindeutigen Fällen … abgesehen, [muss] der Vermögensschaden der Höhe nach beziffert und dies in wirtschaftlich nachvollziehbarer Weise in den Urteilsgründen dargelegt werden“; normative Gesichtspunkte dürfen die wirtschaftliche Betrachtung nicht verdrängen. | https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2011/12/rs20111207_2bvr250009.html |
+
+**Gelesen, nicht zitiert:** BGH 1 StR 20/16 (HRRS; Gesamtsaldierung, Zeitpunkt der Verfügung – Gegenprobe zu 1 StR 13/18 Rn. 8); BGH 1 StR 435/15 (HRRS führt unter dieser Nummer eine andere Entscheidung, daher nicht verwendet); BGH 2 StR 77/22 Rn. 10–12 (Täuschung über die Art des Geschäfts allein begründet keinen Schaden; Schaden für jeden Verfügungszeitpunkt zu ermitteln – Hintergrund).
+
+## Aussage-Beleg-Tabelle (Cue-Marken aus `src/skript_207.py`)
+
+| Cue | Aussage | Beleg |
+|---|---|---|
+| `fall`–`frage2` | Sachverhalt (Garagenverkauf, „Designer-Sessel“ 300 €, Nachbau, Frage/Antwort, Barzahlung, Gutachten 300 €) | Fallannahmen |
+| `p263`, `beschaedigt` | § 263 Abs. 1 verlangt, dass der Täter das Vermögen eines anderen beschädigt | § 263 Abs. 1 (Wortlaut) |
+| `kette`, `kette2` | Täuschung („Original“), Irrtum, Vermögensverfügung (Zahlung) liegen vor | Subsumtion; Prüfung im Einzelnen Folge 065 (Belege dort) |
+| `v065` | Verweis Folge 065 (Betrugsschema) | – |
+| `vbegr` | Vermögen nach der Rechtsprechung: Summe der geldwerten Güter einer Person, wirtschaftlich betrachtet | BGH 2 StR 335/15 Rn. 4, 6; BVerfG 2 BvR 2559/08 Rn. 85, 102 |
+| `saldo`–`minder` | Gesamtsaldierung: Vergleich unmittelbar vor und nach der Verfügung; gleichzeitiger Zuwachs (vor allem Gegenleistung) gleicht aus; Schaden nur bei verbleibender Minderung | BGH 1 StR 13/18 Rn. 8; 2 StR 77/22 Rn. 8 („gleichzeitig erlangten … gegenüberzustellen“); 2 StR 283/25 Rn. 10 |
+| `rech`–`null` | 300 € − 300 € = 0 €, kein Schaden | Subsumtion (Wert laut Fallannahme) |
+| `dispo` | Betrug schützt das Vermögen, nicht die Freiheit, ohne Täuschung zu entscheiden | BGHSt 16, 321 (Gründe III a: Verfügungsfreiheit nicht gegen Täuschung geschützt); BVerfG 2 BvR 2500/09 Rn. 176 (Vermögensdelikt) |
+| `melk` | BGH seit dem Melkmaschinen-Fall: wer wegen einer Täuschung verfügt, ist nicht schon deshalb geschädigt | BGHSt 16, 321 (Leitsatz, Gründe III a); 3 StR 171/17 („st. Rspr. seit“) |
+| `nb` | Täuschung über wertbestimmende Umstände (Nachbau statt Original): Schaden regelmäßig nur, wenn die Sache objektiv den Preis nicht wert ist | BGH 2 StR 283/25 Rn. 2, 10, 13 |
+| `kein` | kein vollendeter Betrug von Alwin | Subsumtion |
+| `indiv`–`i3` | individueller Schadenseinschlag: auch bei Gleichwertigkeit Schaden möglich bei a) Zweckverfehlung/keine zumutbare andere Verwendung, b) Zwang zu vermögensschädigenden Maßnahmen (z. B. teurer Kredit), c) fehlende Mittel für angemessene Lebensführung | BGHSt 16, 321 (Leitsatz a–c; Gründe III b: „hoch zu verzinsenden Darlehens“); BGH 3 StR 171/17 (S. 5) |
+| `i4` | hier nicht: Gundula liest im Sessel, zahlte bar, kommt gut zurecht | Fallannahmen, Subsumtion |
+| `eing` | Eingehungsschaden: schon bei Vertragsschluss, wenn Anspruch weniger wert als eigene Verpflichtung | BGH 1 StR 13/18 Rn. 9 |
+| `gef`, `gef2` | Gefährdungsschaden: konkrete Gefahr eines künftigen Verlusts mindert das Vermögen gegenwärtig; der Höhe nach zu beziffern | BVerfG 2 BvR 2559/08 Rn. 136 f., 150; 2 BvR 2500/09 Rn. 174–176 |
+| `gegen`–`grech2` | Gegenfall: Wert 120 € → 300 € − 120 € = 180 € Schaden | Subsumtion nach 1 StR 13/18 Rn. 9 (Differenz Leistung/Gegenleistung) |
+| `gerg` | mit Vorsatz und Bereicherungsabsicht ist der Betrugstatbestand erfüllt | § 263 Abs. 1 (Wortlaut „in der Absicht …“); Vorsatz § 15 StGB (Systematik); Stoffgleichheit/Rechtswidrigkeit nur in Folge 065 |
+| `versuch` | Versuch nach Abs. 2 scheidet aus: Alwin hält 300 € für den richtigen Preis, stellt sich keinen Schaden vor | § 263 Abs. 2; § 22 („nach seiner Vorstellung von der Tat“); Tatentschluss muss alle Tatbestandsmerkmale umfassen (Lehrbuchsystematik, ohne eigenen Primärbeleg) |
+| `tipp`–`tipp3` | Schaden immer beziffern, Rechnung Leistung − Gegenleistung in Euro; BVerfG verlangt Bezifferung von den Strafgerichten außer in einfach gelagerten Fällen | BVerfG 2 BvR 2500/09 Rn. 176; 2 BvR 2559/08 Rn. 112; BGH 2 StR 77/22 Rn. 8 |
+| `v204` | Verweis Folge 204 (Sachrüge: Urteil ohne Wertfeststellung) | Folge 204, BGH 2 StR 283/25 Rn. 11, 13 |
+| `tipp4` | bleibt nichts übrig: kein Schaden, kein vollendeter Betrug | Subsumtion; 2 StR 283/25 Rn. 13 |
+| `sch`–`s4` | Prüfschema: 1. Vermögen vor, 2. danach samt Gegenleistung, 3. Differenz beziffert, 4. Korrekturen | obige Belege; Gliederung = Lehrbuchsystematik |
+| `merke`, `mk2` | Merksatz | Zusammenfassung |
+
+## Bewusst nicht behauptet
+
+- **Keine Zuordnung „juristisch-ökonomischer Vermögensbegriff = h. M.“:** Der Plan schlägt sie vor („nur mit Beleg“); eine Primärquelle mit dieser Bezeichnung wurde nicht gefunden (die Rechtsprechung spricht vom wirtschaftlichen Vermögensbegriff, normative Gesichtspunkte dürfen die wirtschaftliche Betrachtung nicht verdrängen, BVerfG 2 BvR 2500/09 Rn. 176). Gesprochen wird nur der Satz zur Rechtsprechung.
+- Keine Aussage zur Zweckverfehlungslehre, zu Spenden-/Bettelbetrug, zu Markenrecht/Produktpiraterie, zu Anfechtung und Mängelrechten als Kompensation, zu Stoffgleichheit und Rechtswidrigkeit des Vorteils (Folge 065).
+- Keine Aussage, ein Nachbau sei stets gleich viel wert wie ein Original oder nie; der Wert ist Fallannahme (2 StR 283/25 Rn. 10: „regelmäßig“).
+- Der Gegenfall behauptet nicht Vorsatz und Absicht, sondern formuliert sie als Bedingung.
+- Melkmaschinen-Fall: nur der Rechtssatz, kein Sachverhaltsdetail im Bild (keine realen Personen).
+
+## Offene Einschränkungen
+
+- BGHSt 16, 321 nur über DFR (nicht amtlich) gelesen; Rechtssatz und Seitenzahl 326 durch das amtliche PDF von 3 StR 171/17 gegengeprüft.
+- 2 StR 335/15 nur in HRRS gelesen (Rn. dort; amtliche Zählung kann um eins abweichen, siehe Folge 204). Gegenprobe des Vermögensbegriffs: BVerfG 2 BvR 2559/08 Rn. 85 (amtlich).
+- 3 StR 171/17: amtliches PDF ohne Randnummern; Zitat nach Umdruckseite.
+
+## Themenplan (Abweichungen, dem Koordinator gemeldet)
+
+- **Leitentscheidung** leer → Vorschlag: `Leitentscheidung = BGH, Beschl. v. 6.4.2018 – 1 StR 13/18, Rn. 8 f. (Gesamtsaldierung, Eingehungsschaden); BGH, Beschl. v. 13.8.2025 – 2 StR 283/25, Rn. 10 (Nachbau: Schaden nur bei objektivem Minderwert); BGHSt 16, 321 (Melkmaschine, persönlicher Schadenseinschlag); BVerfG, Beschl. v. 7.12.2011 – 2 BvR 2500/09, Rn. 174–176 (Gefährdungsschaden, Bezifferung)`
+- **Fundstelle** „Band 13 › 15. › Vermögensschaden“ zutreffend (Anker `#sr-betrug`).
+- Hinweis aus dem Auftrag „Vermögensbegriff juristisch-ökonomisch, h. M./Rspr.“: nicht primär belegt, daher nur die Rechtsprechungsformel (siehe oben).
+- Titel, Hook, Kernfrage, Beschreibung (Anfang), Tags, Thumbnail-Text und Thumbnail B: zutreffend. „FAKE = SCHADEN?“ ist eine offene Frage, die das Video verneint – zulässig.

@@ -77,7 +77,7 @@ SEGMENTE = [
     # --- J Klausurtipp (Lexi) ---------------------------------------------------------------------------------------------
     ("[tipp]Klausurtipp: Beziffere den Schaden immer. [tipp2]Schreib die Rechnung hin: Leistung minus Gegenleistung, in "
      "Euro. [tipp3]Das verlangt auch das Bundesverfassungsgericht von den Strafgerichten, außer in einfach gelagerten Fällen. "
-     "[tipp4]Und bleibt nichts übrig, schreib klar: kein Schaden, kein vollendeter Betrug.", PS),
+     "[v204]Wie ein Urteil scheitert, das den Wert nicht feststellt, zeigt unsere Folge zur Sachrüge. [tipp4]Und bleibt nichts übrig, schreib klar: kein Schaden, kein vollendeter Betrug.", PS),
     # --- K Prüfschema -----------------------------------------------------------------------------------------------------
     ("[sch]Dein Prüfschema für den Vermögensschaden. [s1]Erstens: der Vermögenswert unmittelbar vor der Verfügung. "
      "[s2]Zweitens: der Vermögenswert unmittelbar danach, samt Gegenleistung. [s3]Drittens: die Differenz, in Euro "
