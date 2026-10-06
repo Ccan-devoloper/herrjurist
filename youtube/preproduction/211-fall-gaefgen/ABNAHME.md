@@ -2,8 +2,8 @@
 
 **Folge/Titel (Nr. laut Themenplan):** 211 · „Fall Gäfgen: Folterdrohung, § 136a StPO & Fernwirkung“ (Mo · Der Fall · Strafrecht/StPO · Format Klassiker-Fall)
 **Datum/Rechtsstand:** 06.10.2026; StPO/StGB/GG nach gesetze-im-internet.de; Art. 3 EMRK nach der deutschen Übersetzung des EGMR (EMRK nicht auf gesetze-im-internet.de); EGMR (GK) Gäfgen/Deutschland, 1.6.2010, Nr. 22978/05 (HUDOC 001-99015, §§ 1–188 und Tenor gelesen); BGH 1 StR 316/05 (amtliches PDF); BGHSt 34, 362 (DFR); LG Frankfurt 20.12.2004, NJW 2005, 692 (Inhalt nur nach EGMR §§ 47–51); Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
-**MP4 (Drive):** `LexVerse Produktion/211 Fall Gäfgen § 136a/211-Fall-Gaefgen-136a.mp4`, 6:10,84 min (8,0 s Intro + 5:47,73 Hauptfilm + 15,08 s Outro), 25.917.740 Byte, SHA-256 `e46ad8dfa139601645e06d4590ed8f404751118fdb0c2a687590ee0a177f547f`
-**Hauptfilm allein (Drive):** `211-Fall-Gaefgen-136a-Hauptfilm.mp4`, 18.652.663 Byte, SHA-256 `6ebcac1830e79921a8ac5fd33aad9234573645acd19e71eba0d236148eba37fd`
+**MP4 (Drive):** `LexVerse Produktion/211 Fall Gäfgen § 136a/211-Fall-Gaefgen-136a.mp4`, 6:10,84 min (8,0 s Intro + 5:47,73 Hauptfilm + 15,08 s Outro), 25.915.213 Byte, SHA-256 `ae351a1e23b2d98a9083e4effa2f6fde24944d69cb577aaac850ab0db79d27a9`
+**Hauptfilm allein (Drive):** `211-Fall-Gaefgen-136a-Hauptfilm.mp4`, 18.639.257 Byte, SHA-256 `337c3ca9fb3b1e9207eb4cb8e06600ad68db2364a00dca9ce7fd347fb853105b`
 **Intro/Outro-Quellen:** unverändert aus `LexVerse Produktion/_Quellen/` (lokaler Cache `preproduction/_quellen/`), Endschnitt mit `tools/schnitt.py`
 **Produktionsmaster (Drive):** `LexVerse Produktion/211 Fall Gäfgen § 136a/master.zip`
 **Figuren und Stimmen:** Herr Wallmann (Open Peeps `resting-1`, spricht nicht), Herr Rombach (`blazer-3`, Stimme `william`), Kommissar Leitner (`shirt-4`, `marc`), Verteidigerin (`pointing_finger-1`, `sabrina`), Vorsitzende Richterin (`robot_dance-2`, `laura_ruhig`), Lexi (`lexi.py`), Erzählerin Carla Blum; [`src/figuren_211.py`](src/figuren_211.py)
@@ -51,3 +51,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 111 Bildhalte aus dem finalen MP4, Fallszenen als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen, besonders „Lehre“ 2:36,4; Tür 0:38,4); Abgleich Art. 3 EMRK mit der amtlichen deutschen Fassung (BGBl. II); Thumbnail-Kleidung (Generator); Themenplan-Korrektur durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 06.10.2026
+
+## Drive (Readback 06.10.2026, rclone)
+
+Ordner `LexVerse Produktion/211 Fall Gäfgen § 136a/`, ID `1wrNdYV0-1PKoufyuNiB6hWOkVIBQw7Xa` (nur per rclone angelegt, kein Doppelordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `211-Fall-Gaefgen-136a.mp4` | 25.915.213 |
+| `211-Fall-Gaefgen-136a-Hauptfilm.mp4` | 18.639.257 |
+| `master.zip` | 49.259.655 |
+| `thumb_A.jpg` | 135.820 |
+| `thumb_B.jpg` | 143.869 |
+| `beschreibung.txt` | 3.195 |
+| `kapitel.txt` | 504 |
+| `untertitel.srt` | 8.078 |
+| `metadaten.json` | 4.520 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 324 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`d2623a566077…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.

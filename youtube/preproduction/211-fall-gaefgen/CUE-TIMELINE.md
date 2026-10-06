@@ -23,7 +23,7 @@ Quelle: `bildhalt_manifest.json` (111 Bildhalte, davon 111 eigenständig), `cues
 | 17 | 0:49.38 | 0:52.12 | Carla (Erzählerin/Lexi) | Darf das Gericht seine Aussage verwerten? | Die Fragen · Ist die Aussage verwertbar? | `3b1837374726` |
 | 18 | 0:52.12 | 0:54.36 | Carla (Erzählerin/Lexi) | Was ist mit den Spuren vom Versteck? | Die Fragen · Und die Spuren vom Versteck? | `5150d9016714` |
 | 19 | 0:54.36 | 0:57.16 | Carla (Erzählerin/Lexi) | Und durfte die Polizei so handeln? | Die Fragen · Durfte die Polizei so handeln? | `38d63eba6cab` |
-| 20 | 0:57.16 | 1:04.42 | Carla (Erzählerin/Lexi) | Unser Fall folgt einem echten Fall, den zweitausendzehn der Europäische Gerichtshof für Menschenrechte ents … | Die Fragen · Fall Gäfgen, EGMR 2010 | `71899fada84b` |
+| 20 | 0:57.16 | 1:04.42 | Carla (Erzählerin/Lexi) | Unser Fall folgt einem echten Fall, den zweitausendzehn der Europäische Gerichtshof für Menschenrechte ents … | Die Fragen · Fall Gäfgen, EGMR 2010 | `1811126c4a5d` |
 | 21 | 1:04.42 | 1:14.06 | Carla (Erzählerin/Lexi) | Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an. | Sachverhalt | `d986dd74bc6e` |
 | 22 | 1:14.16 | 1:19.38 | Carla (Erzählerin/Lexi) | Antwort beginnt in Paragraf hundertsechsunddreißig a der Strafprozessordnung. | § 136a StPO · Wortlaut | `fd43e193dff6` |
 | 23 | 1:19.38 | 1:20.70 | Carla (Erzählerin/Lexi) | Er schützt die Freiheit der | § 136a StPO › Freiheit der Willensentschließung | `25a31caca6bc` |
