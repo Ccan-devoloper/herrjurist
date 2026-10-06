@@ -9,7 +9,7 @@ D allgemeine Sachrüge (Wortlautkarte § 344 Abs. 2 S. 1), E Prüfungsgrundlage 
 Vermögensschaden (Waage), L Ergebnis (§§ 337, 353, 354), M Klausurtipp (Lexi), N Prüfschema, O Merksatz (Lexi).
 Ein Handlungsgeräusch (Geldscheine, als Frau Danner zahlt; ../geraeusche_herkunft.json). Namensschild jeder Figur, solange sie
 im Bild ist. Hilfsfunktionen glyphen/z/pl/tafel/blk/wortlaut/redet/fig/ns/okz/neinz als eigene Kopie aus Folge 168
-(gemeinsame Dateien unverändert); neu: regal(), fenster(), urkunde(), halle(), chips().
+(gemeinsame Dateien unverändert); neu: regal(), fenster() (nach Sichtprüfung nicht verwendet), urkunde(), halle(), chips(), tafelicon().
 Zahlen auf Tafeln, Pillen und Blasen als Ziffern; Wortlaut nach gesetze-im-internet.de (Abruf 06.10.2026)."""
 import sys
 sys.path.insert(0, "../../etb2/src")
@@ -322,7 +322,7 @@ HX, WX = 1230, 1640                          # Rechtsanwältin Hellmers (blickt 
 folie([(NULL, "Fall · In der Kanzlei"), ("urteil", "Fall · Das Urteil des Landgerichts"), ("liest", "Fall · Die Urteilsgründe")], [
     boden(NULL),
     regal(NULL),
-    fenster(NULL, 990, 115, 220, 170),
+
     hart(pl("Kanzlei Hellmers", 70, 30, NULL, fill=LILA, size=38)),
     pl("Landgericht: Betrug", 70, 110, beim("urteil", "Betrugs"), fill=WEISS, size=34),
     pl("2 Jahre und 6 Monate Freiheitsstrafe", 70, 190, beim("urteil", "zwei"), fill=HELLROT, size=34),
@@ -362,7 +362,7 @@ folie([("rueck", "Fall · Rückblick: der Verkauf"), ("w1", "Fall · „unfallfr
 # A3 Fall: zurück in der Kanzlei – was steht im Urteil?
 # ===========================================================================================================================
 LZ = [("Täuschung: „unfallfrei“", "Täuschung"), ("Irrtum", "Irrtum"), ("Zahlung: 85.000 €", "Zahlung")]
-els_a3 = [boden("h1"), regal("h1"), fenster("h1", 990, 115, 220, 170),
+els_a3 = [boden("h1"), regal("h1"),
           hart(pl("Kanzlei Hellmers", 70, 30, "h1", fill=LILA, size=38)),
           *[hart(e) for e in urkunde("h1", anim="cut")]]
 for i, (t, w) in enumerate(LZ):
