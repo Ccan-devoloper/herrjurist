@@ -69,12 +69,17 @@ for a, b in [("tausendzweihundert Euro", "1.200 Euro"), ("tausendvierhundertfün
              ("zweihundertfünfzig Euro", "250 Euro"), ("tausendzweihundert\nEuro", "1.200\nEuro"),
              ("tausendvierhundertfünfzig\nEuro", "1.450\nEuro"), ("zweihundertfünfzig\nEuro", "250\nEuro")]:
     srt = srt.replace(a, b)
+for a, b in [("§§ 280 Absätze\neins und drei und zweihunderteinundachtzig.", "§§ 280 Abs. 1\nund 3 und 281."),
+             ("§§ 280 Absätze eins und drei,", "§§ 280 Abs. 1 und 3,"), ("\nzweihunderteinundachtzig.", "\n281."),
+             ("mit\nzweihundertsechsundachtzig", "mit\n§ 286"), ("mit zweihundertsechsundachtzig", "mit § 286"), ("\nzweihundertsechsundachtzig;", "\n§ 286;"), ("\n§§ 281.\n", "\n§ 281.\n"),
+             ("Eins: S", "1. S"), ("Zwei: P", "2. P"), ("Drei: a", "3. a"), ("vier:\n", "4.\n"), ("vier: ", "4. "), ("Fünf: V", "5. V"), ("Sechs: S", "6. S")]:
+    srt = srt.replace(a, b)
 for w, z in (("Erstens", "1."), ("Zweitens", "2."), ("Drittens", "3."), ("Viertens", "4."), ("Fünftens", "5."),
              ("Sechstens", "6.")):
     srt = re.sub(rf"(?m)^{w}: ", f"{z} ", srt)
     srt = re.sub(rf"\. {w}:", f". {z}", srt)
 assert not re.search(r"§\n|Abs\.\n", srt), "Untertitel prüfen"
-rest = re.findall(r".{20}(?:tausend|hundert|Erstens|Zweitens|Drittens|Viertens|Fünftens|Sechstens).{10}", srt, re.I)
+rest = re.findall(r".{0,20}(?:tausend|hundert|Erstens|Zweitens|Drittens|Viertens|Fünftens|Sechstens).{0,10}", srt, re.I)
 assert not rest, rest
 open(f"{U}/untertitel.srt", "w").write(srt)
 
