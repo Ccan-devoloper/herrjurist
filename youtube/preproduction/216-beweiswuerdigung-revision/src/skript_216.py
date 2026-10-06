@@ -25,7 +25,7 @@ SEGMENTE = [
     # --- A1 Fall: in der Kanzlei --------------------------------------------------------------------------------------------
     ("[fall]Eine Anwaltskanzlei. Rechtsanwalt Wegmann hat das Urteil des Amtsgerichts vor sich. [urteil]Sein Mandant, Herr "
      "Kerber, ist wegen Körperverletzung zu sechzig Tagessätzen verurteilt worden. [lager]Er soll seine Kollegin, Frau Bremer, "
-     "in der Spätschicht eines Paketlagers gegen ein Regal gestoßen haben. [aga]Zeugen gab es keine. Aussage steht gegen Aussage.", P),
+     "in der Spätschicht eines Paketlagers gegen ein Regal gestoßen haben. [aga]Es gab keine Zeugen. Aussage steht gegen Aussage.", P),
     ("[k1]Ich habe sie nicht angefasst.", P, "Kerber"),
     # --- A2 Fall: die drei Schilderungen (Rückblick) ------------------------------------------------------------------------
     ("[drei]Laut den Urteilsgründen hat Frau Bremer den Vorfall dreimal geschildert. [v1]Noch am selben Abend der Schichtleiterin:", P),
