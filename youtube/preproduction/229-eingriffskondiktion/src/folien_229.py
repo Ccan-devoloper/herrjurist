@@ -8,7 +8,7 @@ Danach: § 812 Abs. 1 Satz 1 BGB (Wortlautkarte), Vorrang der Leistungskondiktio
 2. auf Kosten (Zuweisungsgehalt; Wortlautkarte § 22 Satz 1 KUG), 3. ohne rechtlichen Grund, Rechtsfolge (Wortlautkarte
 § 818 Abs. 2 BGB, fiktive Lizenz), Einwand, Entreicherung, parallele Ansprüche, Ergebnis, Klausurtipp, Schema, Merksatz.
 Szenen laut ../SZENENPLAN.md. Hilfsfunktionen glyphen/z/pl/tafel/blk/wortlaut/redet/fig/ns/okz/neinz/feld/tisch als eigene
-Kopie aus Folge 226 (gemeinsame Dateien unverändert); neu: plakat(), haltestelle(), baum(), park(), buero(), kopfbild().
+Kopie aus Folge 226 (gemeinsame Dateien unverändert); neu: plakat(), haltestelle(), baum(), buero(), kopfbild().
 Handlungsgeräusch: Kameraauslöser im Stadtpark (A2); ../geraeusche_herkunft.json.
 Zahlen auf Tafeln, Pillen und Blasen als Ziffern; Wortlaut nach gesetze-im-internet.de (BGB, KUG), Abruf 07.10.2026."""
 import sys

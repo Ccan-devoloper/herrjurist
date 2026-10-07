@@ -9,8 +9,7 @@ U = sys.argv[1]
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"] + 8.0
 KAP = [(0.0, "Der Fall: Dein Foto auf dem Werbeplakat"),
-       (T("sv"), "Sachverhalt"),
-       (T("norm"), "§ 812 I 1 Alt. 2 BGB: Eingriffskondiktion"),
+       (T("sv"), "Sachverhalt; § 812 I 1 Alt. 2 BGB"),
        (T("erl"), "1. Etwas erlangt: die Nutzung"),
        (T("kosten"), "2. Auf Kosten: Zuweisungsgehalt, § 22 KUG"),
        (T("org"), "3. Ohne rechtlichen Grund"),
@@ -73,7 +72,7 @@ for a, b in ERSATZ:
     assert a in srt, a
     srt = srt.replace(a, b)
 for a, b in [(r"hundertzwanzig", "120"), (r"dreitausend(\s)Euro", r"3.000\1€"),
-             (r"Neunzehnhundertsechsundfünfzig", "1956")]:
+             (r"um die Alt\. 2,", "um die zweite Alternative,")]:
     assert re.search(a, srt), a
     srt = re.sub(a, b, srt)
 srt = re.sub(r"\n\n\n+", "\n\n", srt)
