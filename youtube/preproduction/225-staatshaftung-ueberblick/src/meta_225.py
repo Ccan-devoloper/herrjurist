@@ -72,7 +72,8 @@ srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?|Art\.)\n(\S+) ", r"\1 \2\n", srt)
 srt = re.sub(r"(Abs\.|S\.|Nr\.)\n(\d+[a-z]?[,.:;]?) ?", r"\1 \2\n", srt)
 srt = re.sub(r"\n +", "\n", srt)
-srt = srt.replace("zwölfhundert Euro", "1.200 Euro")
+for a_, b_ in [("zwölfhundert Euro", "1.200 Euro"), ("dreißig Euro", "30 Euro"), ("VWGO", "VwGO")]:
+    srt = srt.replace(a_, b_)
 for alt, neu in [("\nBergner: ", "\nHerr Bergner: "), ("\nWilmsen: ", "\nFrau Wilmsen: ")]:
     assert alt in srt, alt
     srt = srt.replace(alt, neu)
