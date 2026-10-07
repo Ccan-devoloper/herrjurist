@@ -46,7 +46,7 @@ SEGMENTE = [
     # --- E Der echte Fall (BVerfGE 75, 369 <369–371, 376>) -------------------------------------------------------------
     ("[echt]Nun der echte Fall von neunzehnhundertsiebenundachtzig. [echt1]Ein Karikaturist zeichnete in einer "
      "Zeitschrift den damaligen bayerischen Ministerpräsidenten mehrfach als Schwein, in ähnlichen Posen, [robe]dazu "
-     "Schweine in Richterrobe. [olg]Das Oberlandesgericht verurteilte ihn wegen Beleidigung in drei Fällen. "
+     "Schweine in Richterrobe. [olg]Das Oberlandesgericht sprach ihn der Beleidigung in drei Fällen schuldig. "
      "[vb]Dagegen erhob er Verfassungsbeschwerde.", P),
     # --- F Deutung: Aussagekern und Einkleidung (<377 f.>) ------------------------------------------------------------
     ("[deut]Wie prüft man Satire? [verfr]Sie arbeitet mit Übertreibungen, Verzerrungen und Verfremdungen. "
@@ -70,10 +70,10 @@ SEGMENTE = [
      "den Kern ihrer Menschenwürde. [zv]Die Verurteilung nach Paragraf hundertfünfundachtzig verletzt seine "
      "Kunstfreiheit nicht.", PS),
     # --- I Gegenfall: Tiergestalt allein (<379>) -----------------------------------------------------------------------
-    ("[gegen]Darf man Politiker also nie als Tiere zeichnen? Doch.", 0.2),
+    ("[gegen]Darf man Politiker also nie als Tiere zeichnen? Das folgt daraus nicht.", 0.2),
     ("[me2]Dann zeichne ich sie eben als Fuchs.", P, "Meinrad"),
     ("[fuchs]Ein Fuchs, der Investoren die Tür aufhält, überspitzt einen Charakterzug. [ueblich]Das ist die übliche "
-     "Karikatur, die das Gericht ausdrücklich abgrenzt: Die Tiergestalt allein reicht nicht. [abw2]Dann ist die "
+     "Karikatur, die das Gericht ausdrücklich abgrenzt: Die Tiergestalt allein greift die Würde nicht an. [abw2]Dann ist die "
      "Menschenwürde nicht berührt, und es bleibt bei der Abwägung, mit dem milderen Maßstab für die Einkleidung.", PS),
     # --- J Klausurtipp (Lexi) ------------------------------------------------------------------------------------------
     ("[tipp]Klausurtipp: Steckt eine Meinung in einem Kunstwerk, prüfst du Artikel fünf Absatz drei, nicht Absatz eins, "
