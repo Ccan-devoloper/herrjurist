@@ -27,16 +27,16 @@ Quelle: `bildhalt_manifest.json` (151 Bildhalte, davon 151 eigenständig), `cues
 | 21 | 0:35.10 | 0:36.22 | Carla (Erzählerin/Lexi) | In der Hauptverhandlung | Fall 2 · Hauptverhandlung: Widerspruch | `58830c18401e` |
 | 22 | 0:36.22 | 0:38.06 | Carla (Erzählerin/Lexi) | widerspricht seine Verteidigerin | Fall 2 · Hauptverhandlung: Widerspruch | `6e6e480121d7` |
 | 23 | 0:38.06 | 0:41.76 | Carla (Erzählerin/Lexi) | rechtzeitig der Verwertung dieser Aussage. | Fall 2 · Hauptverhandlung: Widerspruch | `70e385aba2aa` |
-| 24 | 0:41.76 | 0:44.36 | Carla (Erzählerin/Lexi) | Dritter Fall: Über das Verkaufskonto | Fall 3 · Gestohlene Laptops im Internet | `7207e951c017` |
-| 25 | 0:44.36 | 0:44.80 | Carla (Erzählerin/Lexi) | von Frau | Fall 3 · Verkaufskonto von Frau Ruhnke | `0e5ff7cddfd1` |
-| 26 | 0:44.80 | 0:46.36 | Carla (Erzählerin/Lexi) | Ruhnke werden gestohlene | Fall 3 · Verkaufskonto von Frau Ruhnke | `5ec4cedd2621` |
-| 27 | 0:46.36 | 0:48.04 | Carla (Erzählerin/Lexi) | Laptops angeboten. | Fall 3 · Verkaufskonto von Frau Ruhnke | `33a3a56c1c1d` |
-| 28 | 0:48.04 | 0:50.80 | Carla (Erzählerin/Lexi) | Ein Polizist ruft den Bereitschaftsrichter an, | Fall 3 · Richter nicht sofort erreicht | `18c154372202` |
-| 29 | 0:50.80 | 0:52.84 | Carla (Erzählerin/Lexi) | erreicht ihn aber nicht sofort. | Fall 3 · Richter nicht sofort erreicht | `954e242565ed` |
-| 30 | 0:52.84 | 0:56.08 | Carla (Erzählerin/Lexi) | Aus Sorge, die Geräte könnten verschwinden, ordnet er die | Fall 3 · „Gefahr im Verzug“ | `cf9da80666c5` |
-| 31 | 0:56.08 | 0:57.80 | Carla (Erzählerin/Lexi) | Durchsuchung selbst an: | Fall 3 · „Gefahr im Verzug“ | `44fbc6a57c33` |
-| 32 | 0:57.80 | 0:59.88 | Carla (Erzählerin/Lexi) | Gefahr im Verzug, meint er. | Fall 3 · „Gefahr im Verzug“ | `46d08cb8d242` |
-| 33 | 0:59.88 | 1:03.08 | Carla (Erzählerin/Lexi) | Konkrete Anhaltspunkte dafür gibt es nicht. | Fall 3 · Keine konkreten Anhaltspunkte | `55e74c87c357` |
+| 24 | 0:41.76 | 0:44.36 | Carla (Erzählerin/Lexi) | Dritter Fall: Über das Verkaufskonto | Fall 3 · Ein Verkaufskonto im Internet | `6399f82cff4b` |
+| 25 | 0:44.36 | 0:44.80 | Carla (Erzählerin/Lexi) | von Frau | Fall 3 · Konto von Frau Ruhnke: gestohlene Laptops | `bf8ae37eb2a3` |
+| 26 | 0:44.80 | 0:46.36 | Carla (Erzählerin/Lexi) | Ruhnke werden gestohlene | Fall 3 · Konto von Frau Ruhnke: gestohlene Laptops | `47d44d78976f` |
+| 27 | 0:46.36 | 0:48.04 | Carla (Erzählerin/Lexi) | Laptops angeboten. | Fall 3 · Konto von Frau Ruhnke: gestohlene Laptops | `49800f4f63f4` |
+| 28 | 0:48.04 | 0:50.80 | Carla (Erzählerin/Lexi) | Ein Polizist ruft den Bereitschaftsrichter an, | Fall 3 · Richter nicht sofort erreicht | `fc407b49bda0` |
+| 29 | 0:50.80 | 0:52.84 | Carla (Erzählerin/Lexi) | erreicht ihn aber nicht sofort. | Fall 3 · Richter nicht sofort erreicht | `8ef201a3d1f8` |
+| 30 | 0:52.84 | 0:56.08 | Carla (Erzählerin/Lexi) | Aus Sorge, die Geräte könnten verschwinden, ordnet er die | Fall 3 · „Gefahr im Verzug“ | `ada59fd4f603` |
+| 31 | 0:56.08 | 0:57.80 | Carla (Erzählerin/Lexi) | Durchsuchung selbst an: | Fall 3 · „Gefahr im Verzug“ | `b045fc9dc5c6` |
+| 32 | 0:57.80 | 0:59.88 | Carla (Erzählerin/Lexi) | Gefahr im Verzug, meint er. | Fall 3 · „Gefahr im Verzug“ | `35d741040e26` |
+| 33 | 0:59.88 | 1:03.08 | Carla (Erzählerin/Lexi) | Konkrete Anhaltspunkte dafür gibt es nicht. | Fall 3 · Keine konkreten Anhaltspunkte | `a50f9d20aa61` |
 | 34 | 1:03.08 | 1:05.91 | Ruhnke | Haben Sie überhaupt einen Durchsuchungsbeschluss? | Fall 3 · Keine konkreten Anhaltspunkte | `1388cd97315f` |
 | 35 | 1:05.91 | 1:06.91 | Carla (Erzählerin/Lexi) | Im Schrank liegen die | Fall 3 · Die Laptops im Schrank | `ec7823c87abf` |
 | 36 | 1:06.91 | 1:10.41 | Carla (Erzählerin/Lexi) | Laptops. | Fall 3 · Die Laptops im Schrank | `d460e6035035` |
@@ -97,16 +97,16 @@ Quelle: `bildhalt_manifest.json` (151 Bildhalte, davon 151 eigenständig), `cues
 | 91 | 3:54.66 | 3:57.86 | Carla (Erzählerin/Lexi) | Hätte man den Beweis auch rechtmäßig erlangen können? | Zweite Gruppe: ungeschrieben › Abwägung: Gewicht des Verstoßes | `e228e16d1519` |
 | 92 | 3:57.86 | 4:01.94 | Carla (Erzählerin/Lexi) | Ein Verwertungsverbot nimmt der Bundesgerichtshof vor allem bei bewusster | Zweite Gruppe: ungeschrieben › bewusst oder grob? | `a6c3bf8ce919` |
 | 93 | 4:01.94 | 4:05.61 | Carla (Erzählerin/Lexi) | Missachtung oder grober Verkennung der Rechtslage an. | Zweite Gruppe: ungeschrieben › bewusst oder grob? | `07ce98bf59c8` |
-| 94 | 4:05.91 | 4:08.17 | Carla (Erzählerin/Lexi) | Dazu kommt die Rechtskreistheorie: | Zweite Gruppe: ungeschrieben › Rechtskreistheorie | `72886f0855ca` |
-| 95 | 4:08.17 | 4:11.81 | Carla (Erzählerin/Lexi) | Dient die verletzte Vorschrift nicht dem Schutz des Beschuldigten, | Zweite Gruppe: ungeschrieben › Rechtskreistheorie | `8b471417f7dc` |
-| 96 | 4:11.81 | 4:13.93 | Carla (Erzählerin/Lexi) | kann er sich nicht auf ein Verwertungsverbot | Zweite Gruppe: ungeschrieben › Rechtskreistheorie | `7cba1c4dd9c5` |
-| 97 | 4:13.93 | 4:14.92 | Carla (Erzählerin/Lexi) | berufen. | Zweite Gruppe: ungeschrieben › Rechtskreistheorie | `522dde9e67cd` |
+| 94 | 4:05.91 | 4:08.17 | Carla (Erzählerin/Lexi) | Dazu kommt die Rechtskreistheorie: | Zweite Gruppe: ungeschrieben › Rechtskreistheorie | `d4da5cfee984` |
+| 95 | 4:08.17 | 4:11.81 | Carla (Erzählerin/Lexi) | Dient die verletzte Vorschrift nicht dem Schutz des Beschuldigten, | Zweite Gruppe: ungeschrieben › Rechtskreistheorie | `4049c63c7cbd` |
+| 96 | 4:11.81 | 4:13.93 | Carla (Erzählerin/Lexi) | kann er sich nicht auf ein Verwertungsverbot | Zweite Gruppe: ungeschrieben › Rechtskreistheorie | `0c338c7372de` |
+| 97 | 4:13.93 | 4:14.92 | Carla (Erzählerin/Lexi) | berufen. | Zweite Gruppe: ungeschrieben › Rechtskreistheorie | `16e2b54bddf8` |
 | 98 | 4:14.92 | 4:18.72 | Carla (Erzählerin/Lexi) | Beim Belehrungsfehler verlangt der Bundesgerichtshof zudem: | Zweite Gruppe: ungeschrieben › Widerspruchslösung | `14468be2710f` |
 | 99 | 4:18.72 | 4:23.72 | Carla (Erzählerin/Lexi) | Der verteidigte Angeklagte muss der Verwertung in der Hauptverhandlung widersprechen, | Zweite Gruppe: ungeschrieben › Widerspruchslösung | `490cfde7ec8a` |
 | 100 | 4:23.72 | 4:25.84 | Carla (Erzählerin/Lexi) | spätestens in seiner Erklärung nach der | Zweite Gruppe: ungeschrieben › Widerspruchslösung | `3b762c2e3942` |
 | 101 | 4:25.84 | 4:27.32 | Carla (Erzählerin/Lexi) | Beweiserhebung. | Zweite Gruppe: ungeschrieben › Widerspruchslösung | `1a34d9982089` |
-| 102 | 4:27.32 | 4:29.92 | Carla (Erzählerin/Lexi) | Sonst bleibt die Aussage verwertbar. | Zweite Gruppe: ungeschrieben › ohne Widerspruch verwertbar | `8aee062ce4c2` |
-| 103 | 4:29.92 | 4:35.86 | Carla (Erzählerin/Lexi) | Mehr dazu in unseren Folgen zur Widerspruchslösung und zum Belehrungsverstoß. | Zweite Gruppe: ungeschrieben › siehe Folgen 132 und 171 | `aa7420d4efbd` |
+| 102 | 4:27.32 | 4:29.92 | Carla (Erzählerin/Lexi) | Sonst bleibt die Aussage verwertbar. | Zweite Gruppe: ungeschrieben › ohne Widerspruch verwertbar | `347f630c08c0` |
+| 103 | 4:29.92 | 4:35.86 | Carla (Erzählerin/Lexi) | Mehr dazu in unseren Folgen zur Widerspruchslösung und zum Belehrungsverstoß. | Zweite Gruppe: ungeschrieben › siehe Folgen 132 und 171 | `e3a24ffdf3d5` |
 | 104 | 4:36.16 | 4:38.27 | Carla (Erzählerin/Lexi) | wie weit reicht ein Verbot? | Reichweite | `cacafcdfc3bf` |
 | 105 | 4:38.27 | 4:41.46 | Carla (Erzählerin/Lexi) | Erfasst es auch Beweise, die die Polizei erst durch eine | Reichweite › Fernwirkung | `a6a70dc924e7` |
 | 106 | 4:41.46 | 4:43.70 | Carla (Erzählerin/Lexi) | unverwertbare Aussage findet? | Reichweite › Fernwirkung | `b48c25f74d54` |
@@ -132,11 +132,11 @@ Quelle: `bildhalt_manifest.json` (151 Bildhalte, davon 151 eigenständig), `cues
 | 126 | 5:30.87 | 5:36.06 | Carla (Erzählerin/Lexi) | Die Polizistin hat die Tat selbst gesehen und kann als Zeugin aussagen. | Lösung › Fall 2: Polizistin als Zeugin | `a323f8ba518c` |
 | 127 | 5:36.36 | 5:39.18 | Carla (Erzählerin/Lexi) | Frau Ruhnke genügte die bloße Befürchtung nicht für | Lösung › Fall 3: keine Gefahr im Verzug | `1dd6bc8b9cae` |
 | 128 | 5:39.18 | 5:40.69 | Carla (Erzählerin/Lexi) | Gefahr im Verzug. | Lösung › Fall 3: keine Gefahr im Verzug | `7a93e26ebb5c` |
-| 129 | 5:40.69 | 5:43.86 | Carla (Erzählerin/Lexi) | Die Durchsuchung verletzte den Richtervorbehalt. | Lösung › Fall 3: Richtervorbehalt verletzt | `69f398503a74` |
-| 130 | 5:43.86 | 5:47.30 | Carla (Erzählerin/Lexi) | Aber der Polizist hatte versucht, den Richter zu erreichen, | Lösung › Fall 3: Abwägung | `0cc8afc5c46f` |
-| 131 | 5:47.30 | 5:51.78 | Carla (Erzählerin/Lexi) | und wegen des Verkaufskontos hätte er den Beschluss sehr wahrscheinlich bekommen. | Lösung › Fall 3: Abwägung | `1f0fcac461c9` |
-| 132 | 5:51.78 | 5:53.42 | Carla (Erzählerin/Lexi) | Bewusst oder grob war der | Lösung › Fall 3: Abwägung | `ec535802f9a8` |
-| 133 | 5:53.42 | 5:54.77 | Carla (Erzählerin/Lexi) | Verstoß nicht. | Lösung › Fall 3: Abwägung | `5ecd4bb2f525` |
+| 129 | 5:40.69 | 5:43.86 | Carla (Erzählerin/Lexi) | Die Durchsuchung verletzte den Richtervorbehalt. | Lösung › Fall 3: Richtervorbehalt verletzt | `a064f8e86e02` |
+| 130 | 5:43.86 | 5:47.30 | Carla (Erzählerin/Lexi) | Aber der Polizist hatte versucht, den Richter zu erreichen, | Lösung › Fall 3: Abwägung | `f9279bbdf397` |
+| 131 | 5:47.30 | 5:51.78 | Carla (Erzählerin/Lexi) | und wegen des Verkaufskontos hätte er den Beschluss sehr wahrscheinlich bekommen. | Lösung › Fall 3: Abwägung | `6f73f5388288` |
+| 132 | 5:51.78 | 5:53.42 | Carla (Erzählerin/Lexi) | Bewusst oder grob war der | Lösung › Fall 3: Abwägung | `7ba44238f091` |
+| 133 | 5:53.42 | 5:54.77 | Carla (Erzählerin/Lexi) | Verstoß nicht. | Lösung › Fall 3: Abwägung | `de3945b7c4c1` |
 | 134 | 5:54.77 | 5:56.50 | Carla (Erzählerin/Lexi) | Die Abwägung spricht deshalb für | Lösung › Fall 3: Laptops verwertbar | `d8024990a3b4` |
 | 135 | 5:56.50 | 5:59.78 | Carla (Erzählerin/Lexi) | die Verwertung: Die Laptops sind verwertbar. | Lösung › Fall 3: Laptops verwertbar | `8ad692ab7681` |
 | 136 | 5:59.78 | 6:03.64 | Carla (Erzählerin/Lexi) | Mehr dazu in unserer Folge zur Durchsuchung. | Lösung › siehe Folge 151 | `b2fbe2285114` |
