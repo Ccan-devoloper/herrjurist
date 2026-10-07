@@ -73,7 +73,8 @@ SEGMENTE = [
     ("[fall2]Und im Fall? [offen]Doris hat die Bons offen eingelöst, vor den Augen ihres Vorgesetzten. [heiml]Das war "
      "nicht auf Heimlichkeit angelegt [unr]und spricht dafür, dass sie sich eines schweren Unrechts nicht bewusst war. "
      "[jahre]Vor allem: fast einunddreißig Jahre ohne vergleichbare Pflichtverletzung. [vorrat]Das Gericht spricht von einem "
-     "erarbeiteten Vorrat an Vertrauen, [aufg]Je länger die Zusammenarbeit ungestört war, desto eher zehrt ein erster Vorfall ihn nicht vollständig auf. "
+     "erarbeiteten Vorrat an Vertrauen. [aufg]Je länger die Zusammenarbeit ungestört war, desto eher wird er durch einen "
+     "ersten Vorfall nicht vollständig aufgezehrt. "
      "[obj]Maßgeblich ist ein objektiver Maßstab, nicht das Gefühl des Arbeitgebers. [schad]Dazu kommt der geringe "
      "Nachteil: Nach zehn Tagen war mit einer Nachfrage nach den Bons nicht mehr zu rechnen.", P),
     ("[proz]Und dass Doris ihre Erklärungen im Prozess mehrmals geändert hat? [zug]Das zählt nicht gegen sie. Maßgeblich "

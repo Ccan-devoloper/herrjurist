@@ -1,0 +1,45 @@
+# Folge 235 · Objektive Zurechnung: Der Neffe, das Gewitter und der Blitz – Szenenplan
+
+**Stand:** 07.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_235.py`](src/skript_235.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
+**Format:** Mo · Der Fall · StGB AT · Klassiker-Fall (Lehrbuchfall „Gewitterfall“). Ablauf laut Auftrag: 1. Hook (Terrasse, Unwetterwarnung, Rat zum Spaziergang, Blitz) → Frage → Sachverhalt → 2. § 212 Abs. 1 als Wortlautkarte (Mord aus Habgier ein Satz), Erfolg und Kausalität (Verweis Folge 026) → 3. Reicht Kausalität? Objektive Zurechnung als Lehre → 4. Gewitterfall: allgemeines Lebensrisiko, nicht beherrschbar → nicht zurechenbar; Weg der Rechtsprechung über den Vorsatz → 5. Abwandlung (Täter wartet im Wald, Sonderwissen) → 6. § 222 als Wortlautkarte, entfällt ebenso → 7. weitere Fallgruppen (Schutzzweck, Selbstgefährdung – Verweis 058/203, atypischer Kausalverlauf, rechtmäßiges Alternativverhalten) → 8. Klausurtipp, Schema, Merksatz mit Lexi. Hauptfilm 5:30,1.
+
+**Darstellung (Vorgabe Koordinator):** Tod nur angedeutet: Unwetterwarnung (Handy mit Warndreieck), Gewitterwolken, Blitzsymbol (Tabler `bolt`); bei „trifft“ ist Hildegard per hartem Schnitt nicht mehr im Bild, dazu nur die Pille „Ein Blitz schlägt ein und trifft Hildegard tödlich.“ – keine Leiche, keine Verletzung. Hildegard freundlich (Kaffee auf der Terrasse, `Eyes Closed`/`Smile`), Rupert ruhig und unauffällig (Sakko, keine fiesen Mimiken; „hofft“ nur als Denkblase „Ein Blitz …?“). Nach dem Tod erscheint Hildegard nicht mehr neben den Tafeln; dort steht nur Rupert (bzw. Lexi).
+
+## Besetzung
+
+| Figur | Rolle | Open Peeps | Stimme |
+|---|---|---|---|
+| Hildegard (HI), Mitte 70 | wohlhabende Witwe, Tante | `standing/walking-3` (dunkles Shirt und Hose der Pose, weiße Schuhe), Kopf `Gray Bun`, Brille `Glasses 2`, Haut `#F1C9A5`; 93 % Höhe; Mimiken `Smile`, `Calm`, `Eyes Closed`, `Concerned\|Serious`, `Awe`; redet: `Smile` | `laura_ruhig` (Frau, ruhig) |
+| Rupert (RU), um 40 | Neffe, einziger Erbe | `standing/blazer-4` (Sakko Petrol `#3E7C74`, Shirt Weiß), Kopf `Short 2`, Haut `#E0AC85`; Mimiken `Calm`, `Smile`, `Serious`, `Suspicious`, `Tired`, `Concerned\|Serious`, `Solemn`, `Awe`; redet: `Smile` | `marc` (Mann, mittel) |
+| Lexi | Klausurtipp (warnt), Schema und Merksatz (erklärt) | nach `lexi.py` (`robot_dance-1`) | Carla Blum |
+| Erzählerin | – | – | Carla Blum |
+
+- **Blickrichtung:** Posen blicken im Original nach rechts; Grundansicht gespiegelt (nach links), `_r` nach rechts (Kontaktbild `out/richtung2.png`). A1: Rupert (links) blickt nach rechts zu Hildegard, Hildegard nach links zu ihm; bei „spaziert“ dreht sie sich (`_r`) und geht nach rechts in den Wald. A2: Hildegard geht nach rechts, zum Baum, in den der Blitz einschlägt. Tafelfolien: Rupert und Lexi nach links zur Tafel.
+- **Grundmimiken alle mit geschlossenem Mund**; Mundzustände a/o/e nur in `HI_redet`, `RU_redet` (je links/rechts) und Lexi. Keine Bärte, keine Prothesen-Posen, keine Polka Dots. 50 Figuren-PNGs in `../peeps/op_235/` (Drive-Master).
+- **Namen:** Hildegard, Rupert – eindeutig deutsch, nicht auf der Koordinatorliste, nicht in `namen_reserviert.txt`; `grep -rliw` über `youtube/` (`*.py/*.md/*.json/*.csv`) ohne Treffer. Verworfen: Ralf (Folge 007), Erich (146, reale Person), Hilde (im Repository schon verwendet). Vor der Vertonung als „235: Hildegard, Rupert“ eingetragen.
+- **Stimmen** aus dem Pool: marc, laura_ruhig (anders als 231: sabrina, william). Für eine Frau Mitte 70 hat der Pool keine ältere Frauenstimme; `laura_ruhig` gewählt, weil ruhig und warm (nur eine kurze Replik).
+
+**Abweichung von den letzten Folgen:** 229 (`blazer-3`, `easing-2`, `walking-1`, `robot_dance-3`), 230 (`pointing_finger-2`, `shirt-3`, `shirt-4`), 231 (`walking-2`, `robot_dance-3`), 232 parallel (`crossed_arms-1`, `easing-1`, `resting-1`) – in 235 keine dieser Posen; `walking-3` und `blazer-4` zuletzt 226/227. Kleidung: Petrol-Sakko und schwarze Kleidung mit grauem Dutt sind neu gegenüber den Farben von 229–231 (Grün/Blau-Oberteile, Lila, Ocker, Beere). Schauplätze **Terrasse am Waldrand** (Haus, Tisch mit Tasse, Bäume, Sonne) und **Wald im Gewitter** – neu gegenüber 231 (Stadtpark bei Nacht), 230, 229 und den Referenzfolgen 026 (Dorfkiosk/Scheune), 058, 203. **Gewitterhimmel** (grauer Verlauf) nur in Szene A2, weil das Unwetter den Fall trägt; alle übrigen Szenen Cremegrund.
+
+## Szenen
+
+| Nr. | Cue(s) | Ort / Handlung | Figuren | Tafel / Pillen / Requisiten (Iconset:Name) | Prüfpfad | Geräusch |
+|---|---|---|---|---|---|---|
+| A1 | `fall`–`wald` | Terrasse am Waldrand: Hildegard ab 0,0 s (genießt), Rupert ab „Ihr Neffe“, Geldsack bei „Erbe“, Handy mit Warndreieck bei „Unwetterwarnung“, kleine Gewitterwolke am Horizont; Rupert redet, Hildegard antwortet, Denkblase Rupert; Hildegard dreht sich und spaziert zum Wald (Bewegung) | HI geniesst → froh → ruhig → froh → redet → froh → froh_r (gehend); RU ruhig_r → ernst_r → redet_r → froh_r → denkt_r → ruhig_r | Pillen „Ein schwüler Sommernachmittag am Waldrand“, „Hildegard, eine wohlhabende Witwe, Mitte 70“, „trinkt Kaffee auf ihrer Terrasse“, „Ihr Neffe Rupert ist zu Besuch.“, „Er ist ihr einziger Erbe.“, „Unwetterwarnung: Ein Gewitter zieht auf.“, „Rupert hofft insgeheim auf einen Blitz.“, „Hildegard spaziert in den Wald.“; Blasen (Stil C) Rupert, Hildegard; Denkblase „Ein Blitz …?“; tabler:home, mug, trees, tree, sun, moneybag, device-mobile, alert-triangle, cloud-storm; Tisch programmatisch | Fall · Ein Sommernachmittag am Waldrand … Fall · Hildegard geht in den Wald (7 Stände) | – |
+| A2 | `gewitter`, `blitz` | Wald im Gewitter (grauer Himmel): Wolken bei „Gewitter“, Regenwolke; Hildegard besorgt, erschrickt; Blitz bei „schlägt“; ab „trifft“ ist Hildegard nicht mehr im Bild | HI froh_r → sorge_r → schreck_r | Pillen „Dann bricht das Gewitter los.“, „Ein Blitz schlägt ein und trifft Hildegard tödlich.“; tabler:trees, tree, cloud-storm, cloud-rain, bolt; Waldweg programmatisch | Fall · Das Gewitter bricht los / Der Blitz | Donnergrollen (`szene_235grollen_1`) mit den Wolken; Einschlag (`szene_235donner_1`) beim Blitz |
+| A3 | `frage`, `frage2` | Tafel „Die Frage“ | RU | tabler:cloud-bolt „Tod gewünscht“, link „verursacht = getötet?“ | Die Frage · … | – |
+| B | `sv` | Sachverhaltskarte (≈ 9,8 s, Hinweis zum Anhalten, ohne Fiktiv-Hinweis) | – | Pille „Hat sich Rupert strafbar gemacht?“ | Sachverhalt | – |
+| C | `p212`–`mord2` | Wortlautkarte § 212 Abs. 1 (Marker „Menschen tötet“, „Totschläger“); Mord aus Habgier?; Zitatzeile § 211 Abs. 2; „Beide setzen voraus: einen Menschen töten“ | RU | tabler:book, moneybag | A. Rupert, § 212 Abs. 1 StGB · Wortlaut / Mord … | – |
+| D | `erfolg`–`opfer` | Tafel I. Objektiver Tatbestand: Erfolg (Haken), Kausalität (Formel, Folge 026, Haken bei „Kausal“), Opfer und Natur wirken mit (BGH 3 StR 394/20 Rn. 5) | RU | tabler:cloud-bolt, link, walk | … › I. Objektiver Tatbestand › 1. Erfolg / 2. Kausalität … | – |
+| E | `reicht`–`werk` | Tafel „Reicht Kausalität?“: bloßer Rat wäre Tötung; Lehre; Definition in zwei Schritten zum Wort; Werk oder Zufall | RU | tabler:link, scale, alert-triangle, target, dice-5 | … › 3. Objektive Zurechnung (Lehre) … | – |
+| F | `gef`–`tsneg` | Tafel „Rechtlich missbilligte Gefahr?“: allgemeines Lebensrisiko, Rat nicht verboten, Blitz nicht lenkbar, Kreuz, nicht zuzurechnen, Totschlag (−), Mord (−) | RU | tabler:alert-triangle, cloud-storm, bolt, shield-x | … › 3. Objektive Zurechnung › … (−) / Ergebnis | – |
+| G | `rspr`–`gleich` | Tafel „Weg der Rechtsprechung“: Lösung beim Vorsatz (Freiburg KK 201), BGH 3 StR 394/20 Rn. 8, Wunsch ≠ Vorsatz, gleiches Ergebnis | RU | tabler:gavel, target, bulb, scale | A. Rupert › Rechtsprechung: Vorsatz › … | – |
+| H | `abw` | Tafel „Abwandlung“: Täter wartet im Wald; Sonderwissen → rechtlich missbilligte Gefahr (Haken) | RU | tabler:alert-triangle, eye | Abwandlung · … | – |
+| I | `p222`–`straflos` | Wortlautkarte § 222 (Marker „Fahrlässigkeit“, „verursacht“); BGH 4 StR 19/20 Rn. 21; Kreuz keine Sorgfaltspflichtverletzung; Ergebnis | RU | tabler:book, gavel, shield-x, scale | B. Rupert, § 222 StGB › … / Ergebnis | – |
+| J | `gruppen`–`g4` | Tafel „Weitere Fallgruppen (Lehre)“, Punkt für Punkt zum Wort | RU | tabler:list-check, shield-check, walk, route, arrows-split | Fallgruppen der objektiven Zurechnung › 1.–4. | – |
+| K | `tipp`–`k2` | Klausurtipp | Lexi (warnt) | Warnsymbol (Streamline Freehand) | Klausurtipp › … | – |
+| L | `sch`–`s5` | Klausurschema progressiv | Lexi (erklärt) | (+)/(−) | Klausurschema › … | – |
+| M | `merke`, `m2` | Merksatz mit Markern „Kausalität“, „rechtlich missbilligte Gefahr“, „verwirklicht“ | Lexi | – | Merksatz | – |
+
+**Sachverhaltskarte:** wörtlich in `src/folien_235.py` (`sachverhalt_235`), Schrift 36 px, ohne Fiktiv-Hinweis.
+**Lizenzen:** Open Peeps (CC0), Tabler Icons (MIT), Fluent Emoji High Contrast (MIT, Haken/Kreuz), Streamline Freehand (CC BY 4.0, Warnsymbol, Namensnennung in der Beschreibung); Geräusche Freesound CC0 (`geraeusche_herkunft.json`).
