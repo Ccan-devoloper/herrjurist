@@ -460,7 +460,8 @@ folie([("verl", f"{PV} › Verlobung: keine Form"), ("heir", f"{PV} › beide wo
     pl("formlos", MB, 160, "verl", fill=ROSE, size=28, anker="m", bis="heir"),
     pl("Heiratswille beider", MB, 160, "heir", fill=ROSE, size=28, anker="m", anim="cut", bis="zusatz"),
     ficon("tabler", "calendar-heart", MB, 380, 100, "zusatz", fuell=BLAUHELL, anim="cut", bis="nicht"),
-    pl("nur solange verlobt", MB, 160, "zusatz", fill=BLAUHELL, size=28, anker="m", anim="cut", bis="nicht"),
+    pl("Zusatz fehlt", MB, 160, "zusatz", fill=BLAUHELL, size=28, anker="m", anim="cut", bis=beim("zusatz", "Es")),
+    pl("nur solange verlobt", MB, 160, beim("zusatz", "Es"), fill=BLAUHELL, size=28, anker="m", anim="cut", bis="nicht"),
     ficon("tabler", "home", MB, 380, 100, "nicht", fuell=WEISS, anim="cut"),
     pl("Mitbewohner: nicht erfasst", MB, 160, "nicht", fill=ROTHELL, size=28, anker="m", anim="cut"),
 ]))
@@ -528,9 +529,9 @@ folie([("a252", f"{P252} › frühere Aussage"), ("a252b", f"{P252} › nicht ve
     peep_voll("EJ_denkt", X2, BR, FR, "richter", anim="cut"),
     namensschild("Ermittlungsrichter", X2 - 40, BR, "a252", BLAU, d=0.3),
     ficon("tabler", "file-text", MB, 380, 100, "a252", fuell=WEISS, bis="rspr"),
-    pl("nicht verlesen", MB, 160, beim("a252b", "verlesen"), fill=ROTHELL, size=28, anker="m", bis="rspr"),
+    pl("nicht verlesen", MB, 160, beim("a252b", "verlesen"), fill=ROTHELL, size=28, anker="m", bis=beim("rspr", "Polizisten")),
     ficon("tabler", "microphone-off", MB, 380, 100, "rspr", fuell=ROTHELL, anim="cut", bis="richter"),
-    pl("Polizist: nicht", MB, 160, "rspr", fill=ROTHELL, size=28, anker="m", anim="cut", bis="richter"),
+    pl("Polizist: nicht", MB, 160, beim("rspr", "Polizisten"), fill=ROTHELL, size=28, anker="m", bis="richter"),
     ficon("tabler", "gavel", MB, 380, 100, "richter", fuell=GELB, anim="cut", bis="verw221"),
     pl("Richter: ja", MB, 160, "richter", fill=GELB, size=28, anker="m", anim="cut", bis="verw221"),
     ficon("tabler", "player-play", MB, 380, 100, "verw221", fuell=BLAUHELL, anim="cut"),
@@ -539,7 +540,8 @@ folie([("a252", f"{P252} › frühere Aussage"), ("a252b", f"{P252} › nicht ve
 
 # M § 53 StPO -----------------------------------------------------------------------------------------------------------------------
 P53 = "§ 53 StPO"
-folie([("a53", f"{P53} › Berufsgeheimnisträger"), ("a53b", f"{P53} › anvertraut oder bekannt geworden"),
+folie([("a53", f"{P53} › Berufsgeheimnisträger"), ("a53b", f"{P53} › Berufsgeheimnisse, nicht die Familie"),
+       (beim("a53b", "anvertraut"), f"{P53} › anvertraut oder bekannt geworden"),
        ("a53c", f"{P53} › entbunden: Aussagepflicht")], rechts_frei([
     *tafel("a53", "§ 53 StPO: Berufsgeheimnisträger"),
     z("schützt Berufsgeheimnisse, nicht die Familie", 110, 180, "a53b", "Bold", 32),
@@ -570,7 +572,8 @@ folie([("a53", f"{P53} › Berufsgeheimnisträger"), ("a53b", f"{P53} › anvert
 
 # N § 55 StPO (Wortlaut) --------------------------------------------------------------------------------------------------------
 P55 = "§ 55 StPO"
-folie([("a55", f"{P55} › Auskunftsverweigerung"), ("a55b", f"{P55} › Gefahr eigener Verfolgung"),
+folie([("a55", f"{P55} › Auskunftsverweigerung"), ("a55b", f"{P55} › Auskunft auf Fragen verweigern"),
+       (beim("a55b", "Gefahr"), f"{P55} › Gefahr eigener Verfolgung"),
        ("a55c", f"{P55} › nur einzelne Fragen"), ("a55d", f"{P55} › Belehrung, Abs. 2")], rechts_frei([
     *tafel("a55", "§ 55 StPO: Auskunftsverweigerung"),
     *wortlaut(110, 170, 1040, 245, "a55", [
@@ -592,10 +595,10 @@ folie([("a55", f"{P55} › Auskunftsverweigerung"), ("a55b", f"{P55} › Gefahr 
     peep_voll("WE_ruhig", X2, BR, FR, "a55", d=0.2, bis="a55b"),
     peep_voll("WE_denkt", X2, BR, FR, "a55b", anim="cut"),
     namensschild("Frau Wehner", X2, BR, "a55", GELB, d=0.3),
-    ficon("tabler", "help-circle", MB, 380, 100, "a55", fuell=WEISS, bis="a55b"),
-    pl("Auskunft", MB, 160, "a55", fill=WEISS, size=28, anker="m", bis="a55b"),
-    ficon("tabler", "alert-triangle", MB, 380, 100, "a55b", fuell=ROTHELL, anim="cut", bis="a55c"),
-    pl("Gefahr der Verfolgung", MB, 160, "a55b", fill=ROTHELL, size=28, anker="m", anim="cut", bis="a55c"),
+    ficon("tabler", "help-circle", MB, 380, 100, "a55", fuell=WEISS, bis=beim("a55b", "Gefahr")),
+    pl("Auskunft", MB, 160, "a55", fill=WEISS, size=28, anker="m", bis=beim("a55b", "Gefahr")),
+    ficon("tabler", "alert-triangle", MB, 380, 100, beim("a55b", "Gefahr"), fuell=ROTHELL, anim="cut", bis="a55c"),
+    pl("Gefahr der Verfolgung", MB, 160, beim("a55b", "Gefahr"), fill=ROTHELL, size=28, anker="m", anim="cut", bis="a55c"),
     ficon("tabler", "list-check", MB, 380, 100, "a55c", fuell=GELB, anim="cut", bis="a55d"),
     pl("einzelne Fragen", MB, 160, "a55c", fill=GELB, size=28, anker="m", anim="cut", bis="a55d"),
     ficon("tabler", "info-circle", MB, 380, 100, "a55d", fuell=GRUENHELL, anim="cut"),
@@ -627,8 +630,8 @@ folie([("l1", f"{PL} › gegen Herrn Störmer"), ("l1a", f"{PL} › verlobt, § 
     peep_voll("ST_ruhig", X2, BR, FR, "l1", d=0.2, bis="l1d"),
     peep_voll("ST_sorge", X2, BR, FR, "l1d", anim="cut"),
     namensschild("Herr Störmer", X2, BR, "l1", GELB, d=0.3),
-    ficon("tabler", "heart", MB, 380, 100, "l1a", fuell=ROSE, bis="l1c"),
-    pl("verlobt", MB, 160, "l1a", fill=ROSE, size=28, anker="m", bis="l1b"),
+    ficon("tabler", "heart", MB, 380, 100, beim("l1a", "verlobt"), fuell=ROSE, bis="l1c"),
+    pl("verlobt", MB, 160, beim("l1a", "verlobt"), fill=ROSE, size=28, anker="m", bis="l1b"),
     pl("darf schweigen", MB, 160, "l1b", fill=GRUENHELL, size=28, anker="m", anim="cut", bis="l1c"),
     ficon("tabler", "file-off", MB, 380, 100, "l1c", fuell=ROTHELL, anim="cut", bis="l1d"),
     pl("Polizei: gesperrt", MB, 160, "l1c", fill=ROTHELL, size=28, anker="m", anim="cut", bis="l1d"),
@@ -657,8 +660,8 @@ folie([("l2", f"{PL} › gegen Herrn Ladewig"), ("l2a", f"{PL} › Aussagepflich
     peep_voll("LA_ruhig", X2, BR, FR, "l2", d=0.2, bis="l2a"),
     peep_voll("LA_sorge", X2, BR, FR, "l2a", anim="cut"),
     namensschild("Herr Ladewig", X2, BR, "l2", GELB, d=0.3),
-    ficon("tabler", "home", MB, 380, 100, "l2", fuell=WEISS, bis="l2a"),
-    pl("kein Angehöriger", MB, 160, "l2", fill=ROTHELL, size=28, anker="m", bis="l2a"),
+    ficon("tabler", "home", MB, 380, 100, beim("l2", "kein"), fuell=WEISS, bis="l2a"),
+    pl("kein Zeugnisverweigerungsrecht", MB, 160, beim("l2", "kein"), fill=ROTHELL, size=28, anker="m", bis="l2a"),
     ficon("tabler", "scale", MB, 380, 110, "l2a", fuell=WEISS, anim="cut", bis="l2b"),
     pl("Aussagepflicht", MB, 160, "l2a", fill=ROTHELL, size=28, anker="m", anim="cut", bis="l2b"),
     ficon("tabler", "list-check", MB, 380, 100, "l2b", fuell=GELB, anim="cut", bis="l2c"),
