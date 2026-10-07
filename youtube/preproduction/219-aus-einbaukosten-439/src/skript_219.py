@@ -45,12 +45,12 @@ SEGMENTE = [
      "Verbrauchsgüterkaufrichtlinie muss der Verkäufer die mangelhafte Sache selbst ausbauen und die neue einbauen, oder "
      "die Kosten dafür tragen, [eu2]auch wenn er den Einbau gar nicht schuldete. [eu3]Sonst wäre die Ersatzlieferung "
      "nicht unentgeltlich: Der Käufer müsste den Einbau zweimal bezahlen. [eu4]Die einzig mögliche Abhilfe darf der "
-     "Verkäufer nicht verweigern. [eu5]Er darf die Erstattung aber auf einen angemessenen Betrag begrenzen.", P),
+     "Verkäufer nicht wegen hoher Kosten verweigern. [eu5]Er darf die Erstattung aber auf einen angemessenen Betrag begrenzen.", P),
     ("[bgh]Der Bundesgerichtshof setzte das um und begrenzte im deutschen Fliesen-Fall die Ausbaukosten auf sechshundert "
      "Euro. [bgh2]Zwischen Unternehmern galt die Lösung aber nicht, etwa für einen Handwerker, der Material kauft und beim "
      "Kunden einbaut.", PS),
     # --- E II. § 439 Abs. 3 BGB heute (Wortlaut) -----------------------------------------------------------------------
-    ("[heute]Seit zweitausendachtzehn steht die Lösung im Gesetz, für alle Kaufverträge: Paragraf vierhundertneununddreißig "
+    ("[heute]Seit zweitausendachtzehn regelt das Gesetz die Frage für alle Kaufverträge: Paragraf vierhundertneununddreißig "
      "Absatz drei. [w1]Hat der Käufer die mangelhafte Sache gemäß ihrer Art und ihrem Verwendungszweck eingebaut, "
      "[w2]bevor der Mangel offenbar wurde, [w3]muss der Verkäufer im Rahmen der Nacherfüllung die erforderlichen "
      "Aufwendungen für das Entfernen und den Einbau ersetzen.", PS),
@@ -68,8 +68,8 @@ SEGMENTE = [
      "der Wert der Sache ohne Mangel und die Bedeutung des Mangels. [v3]Hier stehen fünftausendzweihundert Euro "
      "Einbaukosten neben Fliesen für tausendvierhundert Euro.", P),
     ("[v4]Die Sonderregel aus Weber und Putz für Verbraucher, früher Paragraf vierhundertfünfundsiebzig Absatz vier, ist "
-     "seit zweitausendzweiundzwanzig gestrichen. [v5]Wer berechtigt verweigert, muss gar nicht nacherfüllen; [v6]der "
-     "Käufer kann dann zurücktreten oder mindern. [v7]Frau Reinecke verweigert aber nicht, sie bietet neue Fliesen an.", PS),
+     "seit zweitausendzweiundzwanzig gestrichen. [v5]Nach der Gesetzesbegründung muss der Verkäufer auch beim Verbraucher keine "
+     "unverhältnismäßige Leistung erbringen; [v6]der Käufer kann dann zurücktreten oder mindern. [v7]Frau Reinecke verweigert aber nicht, sie bietet neue Fliesen an.", PS),
     # --- G Ergebnis, Regress ------------------------------------------------------------------------------------------
     ("[erg]Ergebnis: Frau Reinecke muss neue Fliesen liefern [erg2]und Herrn Oltmann die fünftausendzweihundert Euro "
      "für Ausbau und Einbau ersetzen. [regr]Darauf sitzen bleibt sie nicht: Nach Paragraf vierhundertfünfundvierzig a "
@@ -85,6 +85,6 @@ SEGMENTE = [
      "gemäß Art und Verwendungszweck, bevor der Mangel offenbar wurde. [k3]Römisch drei: erforderliche Aufwendungen für "
      "Entfernen und Einbau. [k4]Römisch vier: keine berechtigte Verweigerung nach Absatz vier.", PS),
     # --- J Merksatz (Lexi) --------------------------------------------------------------------------------------------
-    ("[merke]Merke: Wer mangelhafte Ware einbaut, bevor der Mangel offenbar wird, [mk2]bekommt Ausbau und Einbau im "
+    ("[merke]Merke: Wer mangelhafte Ware bestimmungsgemäß einbaut, bevor der Mangel offenbar wird, [mk2]bekommt Ausbau und Einbau im "
      "Rahmen der Nacherfüllung ersetzt, auch ohne Verschulden des Verkäufers.", 1.4),
 ]
