@@ -66,7 +66,7 @@ srt = re.sub(r"(Abs\.|Art\.|S\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
 srt = re.sub(r"Römisch (eins|zwei|drei|vier):( |\n)",
              lambda m: {"eins": "I.", "zwei": "II.", "drei": "III.", "vier": "IV."}[m.group(1)] + m.group(2), srt)
 for muster, ersatz in [(r"sechzig(\s+)Tagessätzen", r"60\1Tagessätzen"),
-                       (r"Artikel(\s+)sechs(\s+)Absatz(\s+)zwei", r"Art.\g<1>6\2Abs.\g<3>2")]:
+                       (r"Zwei(\s+)Wochen", r"2\1Wochen")]:
     srt, n = re.subn(muster, ersatz, srt)
     assert n, muster
 srt = (srt.replace("\nKerber: ", "\nHerr Kerber: ").replace("\nBremer: ", "\nFrau Bremer: ")

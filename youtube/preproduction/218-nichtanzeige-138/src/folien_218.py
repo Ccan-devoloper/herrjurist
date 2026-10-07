@@ -447,7 +447,7 @@ sachverhalt_218("sv", [
     "Donnerstagabend: Sören liest auf seinem Handy einen privaten Chat mit seinem Freund Mirko. Mirko schreibt: „Am "
     "Samstag überfalle ich den Juwelier am Markt. Ich bedrohe die Verkäuferin, dann gibt sie mir den Schmuck.“ Sören fragt "
     "zurück, ob das ein Witz ist. Mirko antwortet: „Nein. Ich brauche das Geld. Samstag, 18 Uhr, kurz vor Ladenschluss.“",
-    "Sören denkt: „Mirko ist mein Freund. Den verrate ich nicht.“ Er sagt niemandem etwas, weder der Polizei noch dem "
+    "Sören sagt sich: „Mirko ist mein Freund. Den verrate ich nicht.“ Er sagt niemandem etwas, weder der Polizei noch dem "
     "Juwelier. Am Samstag um 18 Uhr versucht Mirko den Überfall. Die Verkäuferin löst den Alarm aus, niemand wird verletzt. "
     "Die Polizei fasst Mirko noch am selben Abend.",
 ], "Hat sich Sören strafbar gemacht?")
