@@ -51,3 +51,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 97 Bildhalte aus dem finalen MP4, Fallszene als Einzelbilder, Blasen in voller Auflösung, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen und die Schritte 0:29,0); § 264 Nr. 2 ZPO im BVerwG-Volltext nur für die Verpflichtungsklage; Hilfsantrag nicht eigens belegt; Thumbnail-Kleidung (Generator); Themenplan-Korrektur durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 07.10.2026
+
+## Drive (Readback 07.10.2026, rclone)
+
+Ordner `LexVerse Produktion/234 Fortsetzungsfeststellungsklage Tenor/`, ID `10MMVNyqnWxmi14y4cmn-sxkMCcI1zW7R` (nur per rclone angelegt, kein Doppelordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `234-FFK-Tenor-Feststellungsinteresse.mp4` | 26.641.814 |
+| `234-FFK-Tenor-Feststellungsinteresse-Hauptfilm.mp4` | 19.539.047 |
+| `master.zip` | 48.214.348 |
+| `thumb_A.jpg` | 153.376 |
+| `thumb_B.jpg` | 164.304 |
+| `beschreibung.txt` | 3.385 |
+| `kapitel.txt` | 433 |
+| `untertitel.srt` | 8.823 |
+| `metadaten.json` | 4.712 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; MD5 `master.zip` lokal = Drive (`e9c30239b413a143f514de6cb277f1ec`), 285 Einträge, `unzip -t` fehlerfrei. `out/ton_mix.wav` nach dem Upload gelöscht; MP4s, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung. Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt).
