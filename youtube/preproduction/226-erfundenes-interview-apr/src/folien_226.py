@@ -9,7 +9,7 @@ Pressefreiheit (Wortlautkarte Art. 5 Abs. 1 Satz 2 GG), Verschulden, Rechtsfolge
 Höhe), Ergebnis, Klausurtipp, Schema, Merksatz. Szenen laut ../SZENENPLAN.md.
 Hilfsfunktionen glyphen/z/pl/tafel/blk/wortlaut/redet/fig/ns/okz/neinz/tuer/feld als eigene Kopie aus Folge 205 (gemeinsame
 Dateien unverändert); neu: regal(), tisch(), kopfbild(), heft(), platzhalter(), kiosk(), kanzlei().
-Handlungsgeräusche: Tippen (A2), Anklopfen (A3); ../geraeusche_herkunft.json.
+Handlungsgeräusch: Tippen in der Redaktion (A2); ../geraeusche_herkunft.json.
 Zahlen auf Tafeln, Pillen und Blasen als Ziffern; Wortlaut nach gesetze-im-internet.de (BGB, GG), Abruf 07.10.2026."""
 import sys
 sys.path.insert(0, "../../etb2/src")
@@ -385,23 +385,28 @@ folie([(NULL, "Fall · Am Kiosk: das neue Funkelblatt"), ("titel", "Fall · Exkl
 # ===========================================================================================================================
 # A2 Fall: In der Redaktion (Chefredakteur Kettler, fiktiv; sachlich, keine Karikatur)
 # ===========================================================================================================================
-KEX = 1450
+KEX = 1010
+MX, MY = 430, 380                          # Monitor auf dem Schreibtisch
 folie([("redakt", "Fall · In der Redaktion"), ("auflage", "Fall · Auflage: 400.000 Exemplare"),
        ("ke1", "Fall · Der Chefredakteur")], [
     boden("redakt"),
-    tisch(160, 640, "redakt", h=230),
-    hart(feld(320, 380, 330, 210, "redakt", fill=INK, rand=4, rund=14, name="monitor")),
-    hart(feld(338, 398, 294, 174, "redakt", fill=WEISS, rand=3, rund=6, name="bildschirm")),
-    hart(feld(458, 590, 54, 24, "redakt", fill=INK, rand=3, rund=2, name="fuss")),
-    hart(feld(415, 610, 140, 14, "redakt", fill=INK, rand=3, rund=6, name="sockel")),
+    tisch(200, 660, "redakt", h=230),
+    hart(feld(MX, MY, 330, 210, "redakt", fill=INK, rand=4, rund=14, name="monitor")),
+    hart(feld(MX + 18, MY + 18, 294, 174, "redakt", fill=WEISS, rand=3, rund=6, name="bildschirm")),
+    hart(feld(MX + 138, MY + 210, 54, 24, "redakt", fill=INK, rand=3, rund=2, name="fuss")),
+    hart(feld(MX + 95, MY + 230, 140, 14, "redakt", fill=INK, rand=3, rund=6, name="sockel")),
     hart(pl("In der Redaktion weiß man das", 70, 30, "redakt", fill=GELB, size=32)),
-    *heft(860, 120, 330, 410, "redakt", anim="cut"),
-    pl("Auflage: 400.000 Exemplare", 860, 560, "auflage", fill=WEISS, size=30),
-    szene(z("Das Interview …", 360, 420, beim("ke1", "Interview"), "Bold", 28, rechts=625), "226tippen*", 0.8, -1.2),
+    # Kettler tippt: Textzeilen erscheinen nacheinander (Handlung zum Tippgeräusch), ohne lesbaren Wortlaut
+    szene(feld(MX + 40, MY + 44, 230, 18, ("redakt", 0.9), fill=HELLGRAU, rand=2, rund=6, name="zeile1"), "226tippen*", 0.8, -0.1),
+    feld(MX + 40, MY + 80, 200, 18, ("redakt", 1.6), fill=HELLGRAU, rand=2, rund=6, name="zeile2"),
+    feld(MX + 40, MY + 116, 240, 18, ("redakt", 2.3), fill=HELLGRAU, rand=2, rund=6, name="zeile3"),
+    feld(MX + 40, MY + 152, 150, 18, ("redakt", 2.9), fill=HELLGRAU, rand=2, rund=6, name="zeile4"),
+    *heft(1450, 120, 330, 410, "redakt", anim="cut"),
+    pl("Auflage: 400.000 Exemplare", 1615, 570, "auflage", fill=WEISS, size=30, anker="m"),
     *fig("KE", KEX, BODEN, FH, [("redakt", "ruhig"), ("auflage", "froh")], bis="ke1", erst="cut"),
     *redet("KE_redet", KEX, BODEN, FH, "ke1", "kanzlei"),
     hart(ns(NAME["KE"], KEX, BODEN, "redakt", BLAU)),
-    blase("sprech", 690, 250, "ke1", 1470, 250, inhalt=["Mit ihrem Namen auf dem Titel", "verkaufen wir mehr Hefte.",
+    blase("sprech", 690, 250, "ke1", 1060, 220, inhalt=["Mit ihrem Namen auf dem Titel", "verkaufen wir mehr Hefte.",
                                                        "Das Interview schreiben wir", "eben selbst."], textsize=32,
           figur=("KE_redet", KEX, BODEN, FH)),
 ])
@@ -421,7 +426,7 @@ folie([("kanzlei", "Fall · In der Kanzlei"), ("r1", "Fall · Die Forderungen"),
        ("bgh", "Die Frage · BGHZ 128, 1 (Caroline von Monaco)")], [
     *kanzlei("kanzlei"),
     hart(pl("In der Kanzlei", 560, 30, "kanzlei", fill=GELB, size=32, bis="frage")),
-    szene(peep_voll("JU_ernst_r", JUX3, BODEN, FH, "kanzlei", anim="pop", bis="j1"), "226klopfen*", 0.8, -0.6),
+    peep_voll("JU_ernst_r", JUX3, BODEN, FH, "kanzlei", anim="pop", bis="j1"),
     *redet("JU_redet_r", JUX3, BODEN, FH, "j1", "r1"),
     *fig("JU", JUX3, BODEN, FH, [("r1", "denkt_r"), ("frage", "ernst_r")], erst="cut"),
     ns(NAME["JU"], JUX3, BODEN, "kanzlei", PINK),
@@ -431,7 +436,7 @@ folie([("kanzlei", "Fall · In der Kanzlei"), ("r1", "Fall · Die Forderungen"),
     hart(ns(NAME["RU"], RUX, BODEN, "kanzlei", GRUEN)),
     blase("sprech", 560, 120, "j1", 900, 280, inhalt=["Ich habe nie mit diesem", "Magazin gesprochen!"], textsize=34,
           figur=("JU_redet_r", JUX3, BODEN, FH), bis="r1"),
-    blase("sprech", 880, 190, "r1", 1040, 270, inhalt=["Dann verlangen wir Unterlassung, Widerruf",
+    blase("sprech", 880, 190, "r1", 1040, 270, inhalt=["Dann verlangen wir: Unterlassung, Widerruf",
                                                       "und eine Geldentschädigung."], textsize=32,
           figur=("RU_redet", RUX, BODEN, FH), bis="frage"),
     pl("Zu Recht? Und wonach richtet sich die Höhe?", 560, 30, "frage", fill=PINK, size=34),
@@ -717,7 +722,7 @@ folie([("erg", "Ergebnis · Unterlassung und Widerruf"), ("erg2", "Ergebnis › 
     *okz("Geldentschädigung: (+), bei der Höhe zählt", 100, "erg2", "Bold", 32, x=600, rechts=1880),
     z("auch der angestrebte Gewinn", 600, 146, beim("erg2", "angestrebten"), "Bold", 32, rechts=1880),
     pl("BGHZ 128, 1: Gewinnerzielung als Bemessungsfaktor", 555, 210, "echt", fill=GELB, size=30),
-    ficon("tabler", "coin-euro", 1110, BODEN, 130, beim("erg2", "Geldentschädigung"), fuell=GELB),
+    ficon("tabler", "coin-euro", 1700, 330, 120, beim("erg2", "Geldentschädigung"), fuell=GELB),
 ])
 
 # ===========================================================================================================================

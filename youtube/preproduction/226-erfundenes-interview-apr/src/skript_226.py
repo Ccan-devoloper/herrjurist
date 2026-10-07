@@ -27,7 +27,7 @@ SEGMENTE = [
     ("[ke1]Mit ihrem Namen auf dem Titel verkaufen wir mehr Hefte. Das Interview schreiben wir eben selbst.", P, "Kettler"),
     ("[kanzlei]Frau Hellberg geht zu ihrem Anwalt.", P),
     ("[j1]Ich habe nie mit diesem Magazin gesprochen!", P, "Juliane"),
-    ("[r1]Dann verlangen wir Unterlassung, Widerruf und eine Geldentschädigung.", P, "Ruhnau"),
+    ("[r1]Dann verlangen wir: Unterlassung, Widerruf und eine Geldentschädigung.", P, "Ruhnau"),
     ("[frage]Zu Recht? Und wonach richtet sich die Höhe der Geldentschädigung? [klassiker]Unser Fall ist einem Klassiker "
      "nachgebildet: Im echten Fall ging es um ein erfundenes Interview mit einer Prinzessin. [bgh]Der Bundesgerichtshof "
      "entschied am fünfzehnten November neunzehnhundertvierundneunzig.", PS),
