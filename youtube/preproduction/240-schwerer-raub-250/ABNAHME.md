@@ -50,3 +50,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 119 Bildhalte aus dem MP4, Fallszenen als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung mit Gruppen- und Hinweisgegenprobe, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. „Wiltrud“ 0:27,2/1:21,4, „Beteiligter“ 2:06,5, Satzende 2:24,9, Geräuschpegel); Themenplan-Ergänzung durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 07.10.2026
+
+## Drive (Readback 07.10.2026, rclone)
+
+Ordner `LexVerse Produktion/240 Schwerer Raub § 250/`, ID `1DwIHUzLXoFVf5VK7esq4ylS4n_vNrdbi` (nur per rclone angelegt, kein Doppelordner, keine doppelten Dateien):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `240-Schwerer-Raub-250.mp4` | 26.771.324 |
+| `240-Schwerer-Raub-250-Hauptfilm.mp4` | 19.430.613 |
+| `master.zip` | 52.438.811 |
+| `thumb_A.jpg` | 169.908 |
+| `thumb_B.jpg` | 158.013 |
+| `beschreibung.txt` | 3.044 |
+| `kapitel.txt` | 474 |
+| `untertitel.srt` | 8.329 |
+| `metadaten.json` | 4.299 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 301 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`36da5ca5a68d…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
