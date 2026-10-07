@@ -62,13 +62,14 @@ srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
 srt = re.sub(r"(Abs\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
 ERSATZ = [("eintausendfünfhundert Euro", "1.500 Euro"), ("eintausendsechshundertfünfzig Euro", "1.650 Euro"),
           ("Rehberg: Ich will", "Herr Rehberg: Ich will"), ("Pohlmann: Das Parkett", "Frau Pohlmann: Das Parkett"),
-          ("Folge achtzehn", "Folge 18"), ("Folge neununddreißig", "Folge 39"), ("Folge fünfundvierzig", "Folge 45"),
+          ("Folge achtzehn", "Folge 18"), ("neununddreißig.", "39."), ("Folge fünfundvierzig", "Folge 45"),
           ("Römisch eins,", "I.,"), ("Römisch zwei,", "II.,"), ("Römisch drei,", "III.,")]
 for alt, neu in ERSATZ:
     muster = r"\s+".join(re.escape(w) for w in alt.split())
     n = len(re.findall(muster, srt))
     assert n, alt
     srt = re.sub(muster, lambda m: neu if "\n" not in m.group(0) else neu.replace(" ", "\n", 1) if neu.count(" ") else neu, srt)
+srt = srt.replace("VWGO", "VwGO").replace("STPO", "StPO")
 srt = re.sub(r"\n\n\n+", "\n\n", srt)
 assert not re.search(r"tausend|Römisch|\n(Rehberg|Pohlmann):", srt), "Untertitel prüfen"
 open(f"{U}/untertitel.srt", "w").write(srt)
