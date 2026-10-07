@@ -1,6 +1,6 @@
 # Folge 224 · Cue-Timeline (Ton-Bild-Gate)
 
-Quelle: `bildhalt_manifest.json` (126 Bildhalte, davon 126 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
+Quelle: `bildhalt_manifest.json` (127 Bildhalte, davon 127 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
 
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
@@ -46,20 +46,20 @@ Quelle: `bildhalt_manifest.json` (126 Bildhalte, davon 126 eigenständig), `cues
 | 40 | 1:20.65 | 1:26.69 | Carla (Erzählerin/Lexi) | Paragraf achtundvierzig: Sie haben die Pflicht auszusagen, wenn keine im Gesetz zugelassene | Grundsatz › § 48 Abs. 1 S. 2 StPO | `f155e2c6928a` |
 | 41 | 1:26.69 | 1:28.20 | Carla (Erzählerin/Lexi) | Ausnahme vorliegt. | Grundsatz › § 48 Abs. 1 S. 2 StPO | `2f3692aeb341` |
 | 42 | 1:28.20 | 1:33.20 | Carla (Erzählerin/Lexi) | Die wichtigste Ausnahme für die Familie steht in Paragraf zweiundfünfzig. | Grundsatz › Ausnahme: § 52 StPO | `e7ecc11e133e` |
-| 43 | 1:33.50 | 1:36.44 | Carla (Erzählerin/Lexi) | Verweigerung des Zeugnisses berechtigt sind: | § 52 Abs. 1 StPO › Wer darf schweigen? | `02193d6de3ca` |
-| 44 | 1:36.44 | 1:37.60 | Carla (Erzählerin/Lexi) | erstens der | § 52 Abs. 1 StPO › Nr. 1: Verlobte | `f42d09e2bdcc` |
-| 45 | 1:37.60 | 1:39.64 | Carla (Erzählerin/Lexi) | Verlobte des Beschuldigten. | § 52 Abs. 1 StPO › Nr. 1: Verlobte | `a5eb37128a35` |
-| 46 | 1:39.64 | 1:40.88 | Carla (Erzählerin/Lexi) | Zweitens der | § 52 Abs. 1 StPO › Nr. 2: Ehegatten | `37e1118643f6` |
-| 47 | 1:40.88 | 1:42.72 | Carla (Erzählerin/Lexi) | Ehegatte, auch wenn die Ehe | § 52 Abs. 1 StPO › Nr. 2: Ehegatten | `408d400ce3d2` |
-| 48 | 1:42.72 | 1:44.12 | Carla (Erzählerin/Lexi) | nicht mehr besteht. | § 52 Abs. 1 StPO › Nr. 2: Ehegatten | `ea42295437ca` |
-| 49 | 1:44.12 | 1:44.96 | Carla (Erzählerin/Lexi) | Ebenso der | § 52 Abs. 1 StPO › Nr. 2a: Lebenspartner | `48b4d73a4aa0` |
-| 50 | 1:44.96 | 1:46.24 | Carla (Erzählerin/Lexi) | Lebenspartner. | § 52 Abs. 1 StPO › Nr. 2a: Lebenspartner | `1407199f2b06` |
-| 51 | 1:46.24 | 1:47.60 | Carla (Erzählerin/Lexi) | Drittens bestimmte | § 52 Abs. 1 StPO › Nr. 3: Verwandte, Verschwägerte | `046a0a386a10` |
-| 52 | 1:47.60 | 1:48.44 | Carla (Erzählerin/Lexi) | Verwandte und | § 52 Abs. 1 StPO › Nr. 3: Verwandte, Verschwägerte | `ff9dba771a78` |
-| 53 | 1:48.44 | 1:49.88 | Carla (Erzählerin/Lexi) | Verschwägerte, etwa | § 52 Abs. 1 StPO › Nr. 3: Verwandte, Verschwägerte | `3814f7b813ae` |
-| 54 | 1:49.88 | 1:52.20 | Carla (Erzählerin/Lexi) | Eltern, Kinder und Geschwister. | § 52 Abs. 1 StPO › Nr. 3: Verwandte, Verschwägerte | `df8eb490ae33` |
-| 55 | 1:52.20 | 1:54.72 | Carla (Erzählerin/Lexi) | Der Grund: Der Zeuge soll nicht zwischen | § 52 Abs. 1 StPO › Zweck | `26b31d7d2362` |
-| 56 | 1:54.72 | 1:58.99 | Carla (Erzählerin/Lexi) | Wahrheitspflicht und enger persönlicher Bindung zerrieben werden. | § 52 Abs. 1 StPO › Zweck | `89f1802b8b89` |
+| 43 | 1:33.50 | 1:36.44 | Carla (Erzählerin/Lexi) | Verweigerung des Zeugnisses berechtigt sind: | § 52 Abs. 1 StPO › Wer darf schweigen? | `5f9994cf215f` |
+| 44 | 1:36.44 | 1:37.60 | Carla (Erzählerin/Lexi) | erstens der | § 52 Abs. 1 StPO › Nr. 1: Verlobte | `53406acb00d5` |
+| 45 | 1:37.60 | 1:39.64 | Carla (Erzählerin/Lexi) | Verlobte des Beschuldigten. | § 52 Abs. 1 StPO › Nr. 1: Verlobte | `23f2e3029577` |
+| 46 | 1:39.64 | 1:40.88 | Carla (Erzählerin/Lexi) | Zweitens der | § 52 Abs. 1 StPO › Nr. 2: Ehegatten | `00f1a5c8f198` |
+| 47 | 1:40.88 | 1:42.72 | Carla (Erzählerin/Lexi) | Ehegatte, auch wenn die Ehe | § 52 Abs. 1 StPO › Nr. 2: Ehegatten | `cde7d3a7f51a` |
+| 48 | 1:42.72 | 1:44.12 | Carla (Erzählerin/Lexi) | nicht mehr besteht. | § 52 Abs. 1 StPO › Nr. 2: Ehegatten | `9f4f130606ee` |
+| 49 | 1:44.12 | 1:44.96 | Carla (Erzählerin/Lexi) | Ebenso der | § 52 Abs. 1 StPO › Nr. 2a: Lebenspartner | `2eca015035f4` |
+| 50 | 1:44.96 | 1:46.24 | Carla (Erzählerin/Lexi) | Lebenspartner. | § 52 Abs. 1 StPO › Nr. 2a: Lebenspartner | `69ff1e8d73c2` |
+| 51 | 1:46.24 | 1:47.60 | Carla (Erzählerin/Lexi) | Drittens bestimmte | § 52 Abs. 1 StPO › Nr. 3: Verwandte, Verschwägerte | `d4702501b461` |
+| 52 | 1:47.60 | 1:48.44 | Carla (Erzählerin/Lexi) | Verwandte und | § 52 Abs. 1 StPO › Nr. 3: Verwandte, Verschwägerte | `7ee994369174` |
+| 53 | 1:48.44 | 1:49.88 | Carla (Erzählerin/Lexi) | Verschwägerte, etwa | § 52 Abs. 1 StPO › Nr. 3: Verwandte, Verschwägerte | `b0fe77fd36fe` |
+| 54 | 1:49.88 | 1:52.20 | Carla (Erzählerin/Lexi) | Eltern, Kinder und Geschwister. | § 52 Abs. 1 StPO › Nr. 3: Verwandte, Verschwägerte | `4de363e19d9d` |
+| 55 | 1:52.20 | 1:54.72 | Carla (Erzählerin/Lexi) | Der Grund: Der Zeuge soll nicht zwischen | § 52 Abs. 1 StPO › Zweck | `b980b6a2caa3` |
+| 56 | 1:54.72 | 1:58.99 | Carla (Erzählerin/Lexi) | Wahrheitspflicht und enger persönlicher Bindung zerrieben werden. | § 52 Abs. 1 StPO › Zweck | `0217ac3495a0` |
 | 57 | 1:59.29 | 2:01.35 | Carla (Erzählerin/Lexi) | Verlobung braucht keine Form. | § 52 Abs. 1 Nr. 1 StPO › Verlobung: keine Form | `709f13124606` |
 | 58 | 2:01.35 | 2:04.83 | Carla (Erzählerin/Lexi) | Entscheidend ist, dass beide wirklich heiraten wollen. | § 52 Abs. 1 Nr. 1 StPO › beide wollen wirklich heiraten | `10921899af63` |
 | 59 | 2:04.83 | 2:07.62 | Carla (Erzählerin/Lexi) | Ob das so ist, beurteilt das Gericht. | § 52 Abs. 1 Nr. 1 StPO › beide wollen wirklich heiraten | `19ce1a73dcf7` |
@@ -77,56 +77,57 @@ Quelle: `bildhalt_manifest.json` (126 Bildhalte, davon 126 eigenständig), `cues
 | 71 | 2:40.70 | 2:42.06 | Carla (Erzählerin/Lexi) | unverwertbar. | § 52 Abs. 3 StPO › Belehrung fehlt: unverwertbar | `4c21f7516e07` |
 | 72 | 2:42.06 | 2:44.98 | Carla (Erzählerin/Lexi) | Und wer schon ausgesagt hat, darf sich später noch | § 52 Abs. 3 StPO › später umentscheiden | `f7069b1665eb` |
 | 73 | 2:44.98 | 2:46.25 | Carla (Erzählerin/Lexi) | umentscheiden. | § 52 Abs. 3 StPO › später umentscheiden | `9d05b761334f` |
-| 74 | 2:46.55 | 2:50.29 | Carla (Erzählerin/Lexi) | Genau dafür gibt es Paragraf zweihundertzweiundfünfzig: | § 252 StPO › frühere Aussage | `d23c008b0482` |
-| 75 | 2:50.29 | 2:55.93 | Carla (Erzählerin/Lexi) | Verweigert ein Zeuge erst in der Hauptverhandlung das Zeugnis, darf seine frühere Aussage nicht | § 252 StPO › nicht verlesen | `7e859042c865` |
-| 76 | 2:55.93 | 2:57.33 | Carla (Erzählerin/Lexi) | verlesen werden. | § 252 StPO › nicht verlesen | `60cdbdb78971` |
-| 77 | 2:57.33 | 3:02.33 | Carla (Erzählerin/Lexi) | Nach der Rechtsprechung darf sie grundsätzlich auch sonst nicht verwertet werden, etwa durch den | § 252 StPO › Verwertungsverbot | `d5b00adabce4` |
-| 78 | 3:02.33 | 3:05.17 | Carla (Erzählerin/Lexi) | Polizisten, der den Zeugen vernommen hat. | § 252 StPO › Verwertungsverbot | `8f796c259978` |
-| 79 | 3:05.17 | 3:12.45 | Carla (Erzählerin/Lexi) | Ausnahme: Ein Richter hat den Zeugen vorher über sein Recht belehrt. Dann darf der Richter als Zeuge gehört … | § 252 StPO › Ausnahme: Richter belehrte | `cd72802ad197` |
-| 80 | 3:12.45 | 3:15.81 | Carla (Erzählerin/Lexi) | Eine weitergehende Belehrung ist dafür nicht nötig. | § 252 StPO › keine weitergehende Belehrung | `94439413e15c` |
-| 81 | 3:15.81 | 3:20.39 | Carla (Erzählerin/Lexi) | Mehr dazu in unserer Folge zu den Beweisverwertungsverboten. | § 252 StPO › siehe Folge 221 | `89868b49b31e` |
-| 82 | 3:20.69 | 3:24.03 | Carla (Erzählerin/Lexi) | Davon zu trennen ist Paragraf dreiundfünfzig. | § 53 StPO › Berufsgeheimnisträger | `a758b8c33b98` |
-| 83 | 3:24.03 | 3:28.39 | Carla (Erzählerin/Lexi) | Er schützt nicht die Familie, sondern Berufsgeheimnisse: etwa von | § 53 StPO › anvertraut oder bekannt geworden | `9627c197f55c` |
-| 84 | 3:28.39 | 3:29.19 | Carla (Erzählerin/Lexi) | Geistlichen, | § 53 StPO › anvertraut oder bekannt geworden | `d1ccbae41258` |
-| 85 | 3:29.19 | 3:30.23 | Carla (Erzählerin/Lexi) | Verteidigern und | § 53 StPO › anvertraut oder bekannt geworden | `a948d2e9fb62` |
-| 86 | 3:30.23 | 3:31.06 | Carla (Erzählerin/Lexi) | Ärzten, | § 53 StPO › anvertraut oder bekannt geworden | `e1bf3ecf45a2` |
-| 87 | 3:31.06 | 3:33.27 | Carla (Erzählerin/Lexi) | für das, was ihnen in dieser Eigenschaft | § 53 StPO › anvertraut oder bekannt geworden | `9db1f8acd04c` |
-| 88 | 3:33.27 | 3:35.47 | Carla (Erzählerin/Lexi) | anvertraut oder bekannt wurde. | § 53 StPO › anvertraut oder bekannt geworden | `565ffd9863c7` |
-| 89 | 3:35.47 | 3:38.63 | Carla (Erzählerin/Lexi) | Wird ein Arzt von der Schweigepflicht entbunden, muss er | § 53 StPO › entbunden: Aussagepflicht | `63d80a736cbb` |
-| 90 | 3:38.63 | 3:39.94 | Carla (Erzählerin/Lexi) | aussagen. | § 53 StPO › entbunden: Aussagepflicht | `848be0b1fd0f` |
-| 91 | 3:40.24 | 3:42.54 | Carla (Erzählerin/Lexi) | Paragraf fünfundfünfzig: | § 55 StPO › Auskunftsverweigerung | `43cb2d4c706a` |
-| 92 | 3:42.54 | 3:43.86 | Carla (Erzählerin/Lexi) | Jeder Zeuge darf die | § 55 StPO › Gefahr eigener Verfolgung | `8af3fe839675` |
-| 93 | 3:43.86 | 3:48.86 | Carla (Erzählerin/Lexi) | Auskunft auf Fragen verweigern, deren Antwort ihn selbst oder einen Angehörigen in | § 55 StPO › Gefahr eigener Verfolgung | `52f33ca3eca3` |
-| 94 | 3:48.86 | 3:54.22 | Carla (Erzählerin/Lexi) | Gefahr bringen würde, wegen einer Straftat oder Ordnungswidrigkeit verfolgt zu werden. | § 55 StPO › Gefahr eigener Verfolgung | `b9c3fbe51338` |
-| 95 | 3:54.22 | 3:58.50 | Carla (Erzählerin/Lexi) | Das ist kein Recht, ganz zu schweigen, sondern grundsätzlich nur zu | § 55 StPO › nur einzelne Fragen | `9906e35eaab5` |
-| 96 | 3:58.50 | 3:59.90 | Carla (Erzählerin/Lexi) | einzelnen Fragen. | § 55 StPO › nur einzelne Fragen | `d56c33eee713` |
-| 97 | 3:59.90 | 4:02.96 | Carla (Erzählerin/Lexi) | Auch darüber ist der Zeuge zu belehren. | § 55 StPO › Belehrung, Abs. 2 | `d2f1289d1984` |
-| 98 | 4:03.26 | 4:04.76 | Carla (Erzählerin/Lexi) | Zurück zu Frau Wehner. | Lösung › gegen Herrn Störmer | `9b4cfbf9553e` |
-| 99 | 4:04.76 | 4:08.00 | Carla (Erzählerin/Lexi) | Sie und Herr Störmer wollen im Sommer heiraten, sie sind | Lösung › verlobt, § 52 Abs. 1 Nr. 1 | `193a58881eac` |
-| 100 | 4:08.00 | 4:09.00 | Carla (Erzählerin/Lexi) | verlobt. | Lösung › verlobt, § 52 Abs. 1 Nr. 1 | `29b078733fd5` |
-| 101 | 4:09.00 | 4:13.37 | Carla (Erzählerin/Lexi) | Sie darf das Zeugnis verweigern, auch wenn sie früher ausgesagt hat. | Lösung › Zeugnisverweigerung trotz früherer Aussagen | `0fd47c2a4534` |
-| 102 | 4:13.37 | 4:16.88 | Carla (Erzählerin/Lexi) | hat. Ihre Aussage bei der Polizei darf nicht verlesen werden, und der | Lösung › Polizei: nicht verwertbar | `2e6381ee197d` |
-| 103 | 4:16.88 | 4:19.67 | Carla (Erzählerin/Lexi) | Polizist darf nicht darüber aussagen. | Lösung › Polizei: nicht verwertbar | `a253924d876e` |
-| 104 | 4:19.81 | 4:26.11 | Carla (Erzählerin/Lexi) | Ermittlungsrichter hat sie dagegen belehrt: Er darf als Zeuge über ihre Aussage gehört werden. | Lösung › Ermittlungsrichter: darf gehört werden | `82d3f480a276` |
-| 105 | 4:26.41 | 4:30.15 | Carla (Erzählerin/Lexi) | Herrn Ladewig hat sie kein Zeugnisverweigerungsrecht, denn ein | Lösung › gegen Herrn Ladewig | `30ad1a5ef141` |
-| 106 | 4:30.15 | 4:32.51 | Carla (Erzählerin/Lexi) | Mitbewohner ist kein Angehöriger. | Lösung › gegen Herrn Ladewig | `ce36d621202b` |
-| 107 | 4:32.51 | 4:34.15 | Carla (Erzählerin/Lexi) | Sie muss aussagen. | Lösung › Aussagepflicht | `2c079534fe0a` |
-| 108 | 4:34.15 | 4:37.63 | Carla (Erzählerin/Lexi) | Nur wenn einzelne Antworten sie selbst belasten könnten, | Lösung › § 55 für einzelne Fragen | `99fa6a5ab4ec` |
-| 109 | 4:37.63 | 4:41.55 | Carla (Erzählerin/Lexi) | etwa weil sie ihm den Laptop billig abgekauft hätte, darf sie diese Fragen | Lösung › § 55 für einzelne Fragen | `1f7ac802a14e` |
-| 110 | 4:41.55 | 4:42.59 | Carla (Erzählerin/Lexi) | verweigern. | Lösung › § 55 für einzelne Fragen | `d101baaa50ea` |
-| 111 | 4:42.59 | 4:46.75 | Carla (Erzählerin/Lexi) | Anders wäre es, wenn ihr Verlobter in diesem Verfahren wegen derselben Tat | Lösung › anders: Verlobter mitbeschuldigt | `8ff8a799ae7a` |
-| 112 | 4:46.75 | 4:48.81 | Carla (Erzählerin/Lexi) | mitbeschuldigt wäre. | Lösung › anders: Verlobter mitbeschuldigt | `464a9af9585b` |
-| 113 | 4:49.01 | 4:50.13 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Zeuge in drei Schritten | `113a8ed35da2` |
-| 114 | 4:50.13 | 4:52.61 | Carla (Erzählerin/Lexi) | Prüf den Zeugen in drei Schritten. | Klausurtipp · Zeuge in drei Schritten | `c6797cf58477` |
-| 115 | 4:52.61 | 4:57.25 | Carla (Erzählerin/Lexi) | Erstens: Gehört er zum Kreis des Paragrafen zweiundfünfzig? | Klausurtipp · I. Kreis des § 52 StPO? | `a091ca2f7f9f` |
-| 116 | 4:57.25 | 5:01.01 | Carla (Erzählerin/Lexi) | Zweitens: Wurde er vor jeder Vernehmung belehrt? | Klausurtipp · II. Vor jeder Vernehmung belehrt? | `b97f70e7c3e1` |
-| 117 | 5:01.01 | 5:04.89 | Carla (Erzählerin/Lexi) | Drittens: Schweigt er erst in der Hauptverhandlung, prüf | Klausurtipp · III. Erst in der HV: § 252 StPO | `0b3a803ed1a7` |
-| 118 | 5:04.89 | 5:09.30 | Carla (Erzählerin/Lexi) | Paragraf zweihundertzweiundfünfzig und die Ausnahme für den Richter. | Klausurtipp · III. Erst in der HV: § 252 StPO | `59114b57e92b` |
-| 119 | 5:09.30 | 5:11.05 | Carla (Erzählerin/Lexi) | Richter. Gehört er nicht dazu, prüf | Klausurtipp · Sonst: § 53, § 55 StPO | `3da5191845d2` |
-| 120 | 5:11.05 | 5:17.35 | Carla (Erzählerin/Lexi) | Paragraf dreiundfünfzig und das Auskunftsverweigerungsrecht für einzelne Fragen. | Klausurtipp · Sonst: § 53, § 55 StPO | `0493898ee05e` |
-| 121 | 5:17.55 | 5:20.79 | Carla (Erzählerin/Lexi) | Merke: Paragraf zweiundfünfzig schützt nur die | Merksatz | `4c086219cb17` |
-| 122 | 5:20.79 | 5:23.19 | Carla (Erzählerin/Lexi) | Angehörigen, die das Gesetz nennt. | Merksatz | `82064baa04d6` |
-| 123 | 5:23.19 | 5:27.19 | Carla (Erzählerin/Lexi) | Wer erst in der Hauptverhandlung schweigt, sperrt grundsätzlich auch seine | Merksatz | `463617830140` |
-| 124 | 5:27.19 | 5:29.67 | Carla (Erzählerin/Lexi) | früheren Aussagen. Nur was er nach | Merksatz | `884e0b708f60` |
-| 125 | 5:29.67 | 5:30.59 | Carla (Erzählerin/Lexi) | Belehrung vor einem | Merksatz | `64926bfa0bc1` |
-| 126 | 5:30.59 | 5:34.06 | Carla (Erzählerin/Lexi) | Richter gesagt hat, bleibt nutzbar. | Merksatz | `c1892f31e02e` |
+| 74 | 2:46.55 | 2:50.29 | Carla (Erzählerin/Lexi) | Genau dafür gibt es Paragraf zweihundertzweiundfünfzig: | § 252 StPO › frühere Aussage | `037180f97d73` |
+| 75 | 2:50.29 | 2:55.93 | Carla (Erzählerin/Lexi) | Verweigert ein Zeuge erst in der Hauptverhandlung das Zeugnis, darf seine frühere Aussage nicht | § 252 StPO › nicht verlesen | `786c36ad382d` |
+| 76 | 2:55.93 | 2:57.33 | Carla (Erzählerin/Lexi) | verlesen werden. | § 252 StPO › nicht verlesen | `7c498a981029` |
+| 77 | 2:57.33 | 3:02.33 | Carla (Erzählerin/Lexi) | Nach der Rechtsprechung darf sie grundsätzlich auch sonst nicht verwertet werden, etwa durch den | § 252 StPO › Verwertungsverbot | `d5d660e2c07a` |
+| 78 | 3:02.33 | 3:05.17 | Carla (Erzählerin/Lexi) | Polizisten, der den Zeugen vernommen hat. | § 252 StPO › Verwertungsverbot | `945ddf24cff5` |
+| 79 | 3:05.17 | 3:12.45 | Carla (Erzählerin/Lexi) | Ausnahme: Ein Richter hat den Zeugen vorher über sein Recht belehrt. Dann darf der Richter als Zeuge gehört … | § 252 StPO › Ausnahme: Richter belehrte | `39c59d20b0fc` |
+| 80 | 3:12.45 | 3:15.81 | Carla (Erzählerin/Lexi) | Eine weitergehende Belehrung ist dafür nicht nötig. | § 252 StPO › keine weitergehende Belehrung | `d304c8fd3154` |
+| 81 | 3:15.81 | 3:20.39 | Carla (Erzählerin/Lexi) | Mehr dazu in unserer Folge zu den Beweisverwertungsverboten. | § 252 StPO › siehe Folge 221 | `383dfdd02a6c` |
+| 82 | 3:20.69 | 3:24.03 | Carla (Erzählerin/Lexi) | Davon zu trennen ist Paragraf dreiundfünfzig. | § 53 StPO › Berufsgeheimnisträger | `b441aa49aa92` |
+| 83 | 3:24.03 | 3:26.31 | Carla (Erzählerin/Lexi) | Er schützt nicht die Familie, sondern | § 53 StPO › anvertraut oder bekannt geworden | `bf3f50c75f6b` |
+| 84 | 3:26.31 | 3:28.39 | Carla (Erzählerin/Lexi) | Berufsgeheimnisse: etwa von | § 53 StPO › anvertraut oder bekannt geworden | `9627c197f55c` |
+| 85 | 3:28.39 | 3:29.19 | Carla (Erzählerin/Lexi) | Geistlichen, | § 53 StPO › anvertraut oder bekannt geworden | `d1ccbae41258` |
+| 86 | 3:29.19 | 3:30.23 | Carla (Erzählerin/Lexi) | Verteidigern und | § 53 StPO › anvertraut oder bekannt geworden | `a948d2e9fb62` |
+| 87 | 3:30.23 | 3:31.06 | Carla (Erzählerin/Lexi) | Ärzten, | § 53 StPO › anvertraut oder bekannt geworden | `e1bf3ecf45a2` |
+| 88 | 3:31.06 | 3:33.27 | Carla (Erzählerin/Lexi) | für das, was ihnen in dieser Eigenschaft | § 53 StPO › anvertraut oder bekannt geworden | `9db1f8acd04c` |
+| 89 | 3:33.27 | 3:35.47 | Carla (Erzählerin/Lexi) | anvertraut oder bekannt wurde. | § 53 StPO › anvertraut oder bekannt geworden | `565ffd9863c7` |
+| 90 | 3:35.47 | 3:38.63 | Carla (Erzählerin/Lexi) | Wird ein Arzt von der Schweigepflicht entbunden, muss er | § 53 StPO › entbunden: Aussagepflicht | `63d80a736cbb` |
+| 91 | 3:38.63 | 3:39.94 | Carla (Erzählerin/Lexi) | aussagen. | § 53 StPO › entbunden: Aussagepflicht | `848be0b1fd0f` |
+| 92 | 3:40.24 | 3:42.54 | Carla (Erzählerin/Lexi) | Paragraf fünfundfünfzig: | § 55 StPO › Auskunftsverweigerung | `d2609025c523` |
+| 93 | 3:42.54 | 3:43.86 | Carla (Erzählerin/Lexi) | Jeder Zeuge darf die | § 55 StPO › Gefahr eigener Verfolgung | `db13c2cb5474` |
+| 94 | 3:43.86 | 3:48.86 | Carla (Erzählerin/Lexi) | Auskunft auf Fragen verweigern, deren Antwort ihn selbst oder einen Angehörigen in | § 55 StPO › Gefahr eigener Verfolgung | `eadf5d3b5493` |
+| 95 | 3:48.86 | 3:54.22 | Carla (Erzählerin/Lexi) | Gefahr bringen würde, wegen einer Straftat oder Ordnungswidrigkeit verfolgt zu werden. | § 55 StPO › Gefahr eigener Verfolgung | `bcb2c68e8fe0` |
+| 96 | 3:54.22 | 3:58.50 | Carla (Erzählerin/Lexi) | Das ist kein Recht, ganz zu schweigen, sondern grundsätzlich nur zu | § 55 StPO › nur einzelne Fragen | `498ad0e57f4f` |
+| 97 | 3:58.50 | 3:59.90 | Carla (Erzählerin/Lexi) | einzelnen Fragen. | § 55 StPO › nur einzelne Fragen | `047a851c297f` |
+| 98 | 3:59.90 | 4:02.96 | Carla (Erzählerin/Lexi) | Auch darüber ist der Zeuge zu belehren. | § 55 StPO › Belehrung, Abs. 2 | `2e0b6dd9329f` |
+| 99 | 4:03.26 | 4:04.76 | Carla (Erzählerin/Lexi) | Zurück zu Frau Wehner. | Lösung › gegen Herrn Störmer | `9b4cfbf9553e` |
+| 100 | 4:04.76 | 4:08.00 | Carla (Erzählerin/Lexi) | Sie und Herr Störmer wollen im Sommer heiraten, sie sind | Lösung › verlobt, § 52 Abs. 1 Nr. 1 | `0961cb5289fc` |
+| 101 | 4:08.00 | 4:09.00 | Carla (Erzählerin/Lexi) | verlobt. | Lösung › verlobt, § 52 Abs. 1 Nr. 1 | `29b078733fd5` |
+| 102 | 4:09.00 | 4:13.37 | Carla (Erzählerin/Lexi) | Sie darf das Zeugnis verweigern, auch wenn sie früher ausgesagt hat. | Lösung › Zeugnisverweigerung trotz früherer Aussagen | `0fd47c2a4534` |
+| 103 | 4:13.37 | 4:16.88 | Carla (Erzählerin/Lexi) | hat. Ihre Aussage bei der Polizei darf nicht verlesen werden, und der | Lösung › Polizei: nicht verwertbar | `2e6381ee197d` |
+| 104 | 4:16.88 | 4:19.67 | Carla (Erzählerin/Lexi) | Polizist darf nicht darüber aussagen. | Lösung › Polizei: nicht verwertbar | `a253924d876e` |
+| 105 | 4:19.81 | 4:26.11 | Carla (Erzählerin/Lexi) | Ermittlungsrichter hat sie dagegen belehrt: Er darf als Zeuge über ihre Aussage gehört werden. | Lösung › Ermittlungsrichter: darf gehört werden | `82d3f480a276` |
+| 106 | 4:26.41 | 4:27.63 | Carla (Erzählerin/Lexi) | Herrn Ladewig hat sie | Lösung › gegen Herrn Ladewig | `ace86df589bf` |
+| 107 | 4:27.63 | 4:32.51 | Carla (Erzählerin/Lexi) | kein Zeugnisverweigerungsrecht, denn ein Mitbewohner ist kein Angehöriger. | Lösung › gegen Herrn Ladewig | `ce36d621202b` |
+| 108 | 4:32.51 | 4:34.15 | Carla (Erzählerin/Lexi) | Sie muss aussagen. | Lösung › Aussagepflicht | `2c079534fe0a` |
+| 109 | 4:34.15 | 4:37.63 | Carla (Erzählerin/Lexi) | Nur wenn einzelne Antworten sie selbst belasten könnten, | Lösung › § 55 für einzelne Fragen | `99fa6a5ab4ec` |
+| 110 | 4:37.63 | 4:41.55 | Carla (Erzählerin/Lexi) | etwa weil sie ihm den Laptop billig abgekauft hätte, darf sie diese Fragen | Lösung › § 55 für einzelne Fragen | `1f7ac802a14e` |
+| 111 | 4:41.55 | 4:42.59 | Carla (Erzählerin/Lexi) | verweigern. | Lösung › § 55 für einzelne Fragen | `d101baaa50ea` |
+| 112 | 4:42.59 | 4:46.75 | Carla (Erzählerin/Lexi) | Anders wäre es, wenn ihr Verlobter in diesem Verfahren wegen derselben Tat | Lösung › anders: Verlobter mitbeschuldigt | `8ff8a799ae7a` |
+| 113 | 4:46.75 | 4:48.81 | Carla (Erzählerin/Lexi) | mitbeschuldigt wäre. | Lösung › anders: Verlobter mitbeschuldigt | `464a9af9585b` |
+| 114 | 4:49.01 | 4:50.13 | Carla (Erzählerin/Lexi) | Klausurtipp: | Klausurtipp · Zeuge in drei Schritten | `113a8ed35da2` |
+| 115 | 4:50.13 | 4:52.61 | Carla (Erzählerin/Lexi) | Prüf den Zeugen in drei Schritten. | Klausurtipp · Zeuge in drei Schritten | `c6797cf58477` |
+| 116 | 4:52.61 | 4:57.25 | Carla (Erzählerin/Lexi) | Erstens: Gehört er zum Kreis des Paragrafen zweiundfünfzig? | Klausurtipp · I. Kreis des § 52 StPO? | `a091ca2f7f9f` |
+| 117 | 4:57.25 | 5:01.01 | Carla (Erzählerin/Lexi) | Zweitens: Wurde er vor jeder Vernehmung belehrt? | Klausurtipp · II. Vor jeder Vernehmung belehrt? | `b97f70e7c3e1` |
+| 118 | 5:01.01 | 5:04.89 | Carla (Erzählerin/Lexi) | Drittens: Schweigt er erst in der Hauptverhandlung, prüf | Klausurtipp · III. Erst in der HV: § 252 StPO | `0b3a803ed1a7` |
+| 119 | 5:04.89 | 5:09.30 | Carla (Erzählerin/Lexi) | Paragraf zweihundertzweiundfünfzig und die Ausnahme für den Richter. | Klausurtipp · III. Erst in der HV: § 252 StPO | `59114b57e92b` |
+| 120 | 5:09.30 | 5:11.05 | Carla (Erzählerin/Lexi) | Richter. Gehört er nicht dazu, prüf | Klausurtipp · Sonst: § 53, § 55 StPO | `3da5191845d2` |
+| 121 | 5:11.05 | 5:17.35 | Carla (Erzählerin/Lexi) | Paragraf dreiundfünfzig und das Auskunftsverweigerungsrecht für einzelne Fragen. | Klausurtipp · Sonst: § 53, § 55 StPO | `0493898ee05e` |
+| 122 | 5:17.55 | 5:20.79 | Carla (Erzählerin/Lexi) | Merke: Paragraf zweiundfünfzig schützt nur die | Merksatz | `4c086219cb17` |
+| 123 | 5:20.79 | 5:23.19 | Carla (Erzählerin/Lexi) | Angehörigen, die das Gesetz nennt. | Merksatz | `82064baa04d6` |
+| 124 | 5:23.19 | 5:27.19 | Carla (Erzählerin/Lexi) | Wer erst in der Hauptverhandlung schweigt, sperrt grundsätzlich auch seine | Merksatz | `7f339bc1f7c7` |
+| 125 | 5:27.19 | 5:29.67 | Carla (Erzählerin/Lexi) | früheren Aussagen. Nur was er nach | Merksatz | `2e94db912b40` |
+| 126 | 5:29.67 | 5:30.59 | Carla (Erzählerin/Lexi) | Belehrung vor einem | Merksatz | `d670a07743bf` |
+| 127 | 5:30.59 | 5:34.06 | Carla (Erzählerin/Lexi) | Richter gesagt hat, bleibt nutzbar. | Merksatz | `6f2df9178040` |
