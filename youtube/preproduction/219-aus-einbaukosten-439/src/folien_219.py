@@ -644,7 +644,7 @@ folie([("erg", "Ergebnis"), ("regr", "Ausblick · Regress, § 445a BGB")], recht
     *tafel("erg", "Ergebnis"),
     *okz("neue Fliesen liefern", 190, beim("erg", "neue"), "Bold", 36, x=160),
     *okz("5.200 € für Ausbau und Einbau ersetzen", 260, "erg2", "Bold", 36, x=160, haken=beim("erg2", "ersetzen")),
-    z("Regress, § 445a Abs. 1 BGB:", 110, 370, beim("regr", "Paragraf"), "ExtraBold", 34),
+    z("§ 445a Abs. 1 BGB: Aufwendungen vom Lieferanten", 110, 370, beim("regr", "Paragraf"), "ExtraBold", 34),
     dicon("tabler", "building-factory-2", 240, RY + 120, 130, beim("regr", "Lieferanten"), fuell=WEISS),
     pfeil(500, RY + 50, 340, RY + 50, beim("regr", "Lieferanten"), breite=7, kopf=22, farbe=INK),
     dicon("tabler", "building-store", 620, RY + 120, 130, beim("regr", "Paragraf"), fuell=GELB),
@@ -656,7 +656,7 @@ folie([("erg", "Ergebnis"), ("regr", "Ausblick · Regress, § 445a BGB")], recht
     z("wenn der Mangel schon bei der Lieferung an sie bestand", 110, RY + 240, beim("regr", "schon"), "Bold", 32),
     *requisit([("erg", ("tabler", "package", 110, BLAU), "neue Fliesen", GRUEN),
                ("erg2", ("tabler", "cash-banknote", 120, GRUEN), "5.200 €", GRUEN),
-               ("regr", ("tabler", "building-factory-2", 110, WEISS), "Regress", WEISS)]),
+               (beim("regr", "Lieferanten"), ("tabler", "building-factory-2", 110, WEISS), "vom Lieferanten", WEISS)]),
     *paar([("erg", "froh")], [("erg", "ruhig"), ("regr", "froh")]),
 ]))
 
