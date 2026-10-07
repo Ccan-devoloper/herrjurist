@@ -1,6 +1,6 @@
 # Folge 243 · Cue-Timeline (Ton-Bild-Gate)
 
-Quelle: `bildhalt_manifest.json` (115 Bildhalte, davon 115 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
+Quelle: `bildhalt_manifest.json` (116 Bildhalte, davon 116 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
 
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
@@ -9,8 +9,8 @@ Quelle: `bildhalt_manifest.json` (115 Bildhalte, davon 115 eigenständig), `cues
 | 3 | 0:05.88 | 0:07.00 | Carla (Erzählerin/Lexi) | Gegen ihn wird wegen | Fall · Ermittlungen wegen Betrugs | `c8ce783753c2` |
 | 4 | 0:07.00 | 0:08.80 | Carla (Erzählerin/Lexi) | Betrugs ermittelt: Er soll | Fall · Ermittlungen wegen Betrugs | `8feca7df7a96` |
 | 5 | 0:08.80 | 0:09.28 | Carla (Erzählerin/Lexi) | Kunden | Fall · Vorwurf: Arbeiten berechnet, nie gemacht | `f3411e636a7d` |
-| 6 | 0:09.43 | 0:11.00 | Carla (Erzählerin/Lexi) | Arbeiten berechnet haben, die | Fall · Vorwurf: Arbeiten berechnet, nie gemacht | `755f8d94cba9` |
-| 7 | 0:11.00 | 0:12.66 | Carla (Erzählerin/Lexi) | nie gemacht wurden. | Fall · Vorwurf: Arbeiten berechnet, nie gemacht | `b5f820527470` |
+| 6 | 0:09.43 | 0:11.00 | Carla (Erzählerin/Lexi) | Arbeiten berechnet haben, die | Fall · Vorwurf: Arbeiten berechnet, nie gemacht | `78a5b7cfc1b8` |
+| 7 | 0:11.00 | 0:12.66 | Carla (Erzählerin/Lexi) | nie gemacht wurden. | Fall · Vorwurf: Arbeiten berechnet, nie gemacht | `9b1b1bee497b` |
 | 8 | 0:12.66 | 0:16.42 | Carla (Erzählerin/Lexi) | Ein Polizeibeamter vernimmt Frau Hasselbach als Zeugin und | Fall · Zeugenvernehmung bei der Polizei | `0a9c90a6331a` |
 | 9 | 0:16.42 | 0:17.90 | Carla (Erzählerin/Lexi) | belehrt sie. | Fall · Belehrung | `80f2d8ceae92` |
 | 10 | 0:17.90 | 0:21.13 | Polizeibeamter | Gegen Ihren Ehemann müssen Sie nicht aussagen. | Fall · Belehrung | `933d837004c6` |
@@ -48,14 +48,14 @@ Quelle: `bildhalt_manifest.json` (115 Bildhalte, davon 115 eigenständig), `cues
 | 42 | 1:59.14 | 2:00.70 | Carla (Erzählerin/Lexi) | Polizeibeamten. | Rspr. zu § 252 StPO › Verhörsperson gesperrt | `ee389d0e3f23` |
 | 43 | 2:00.70 | 2:06.66 | Carla (Erzählerin/Lexi) | Der Grund: Die Zeugin soll bis zur Hauptverhandlung frei entscheiden, ob ihre frühere, vielleicht | Rspr. zu § 252 StPO › Zweck | `ae514445d9e2` |
 | 44 | 2:06.66 | 2:09.25 | Carla (Erzählerin/Lexi) | voreilige Aussage verwertet wird. | Rspr. zu § 252 StPO › Zweck | `5ab82a8bfedc` |
-| 45 | 2:09.55 | 2:14.45 | Carla (Erzählerin/Lexi) | Gegenansicht hält sich an den Wortlaut: Verboten sei nur das Verlesen, | Streit: Verhörsperson als Zeuge? › Wortlaut-Ansicht | `fcdc3571da9b` |
-| 46 | 2:14.45 | 2:19.13 | Carla (Erzählerin/Lexi) | jede Vernehmungsperson, die ordnungsgemäß belehrt hat, dürfe aussagen. | Streit: Verhörsperson als Zeuge? › Wortlaut-Ansicht | `ddd86eb4c939` |
-| 47 | 2:19.13 | 2:20.57 | Carla (Erzählerin/Lexi) | Andere gehen weiter und | Streit: Verhörsperson als Zeuge? › umfassendes Verbot | `83e0dce3cfe0` |
-| 48 | 2:20.57 | 2:23.26 | Carla (Erzählerin/Lexi) | sperren alles, sogar den Richter. | Streit: Verhörsperson als Zeuge? › umfassendes Verbot | `9632a4a63f1e` |
-| 49 | 2:23.26 | 2:27.37 | Carla (Erzählerin/Lexi) | Richter. Der Große Senat musste die Frage zur Polizei nicht entscheiden und hat den | Streit: Verhörsperson als Zeuge? › Großer Senat: offen | `c52de84bcb68` |
-| 50 | 2:27.37 | 2:29.29 | Carla (Erzählerin/Lexi) | Gesetzgeber aufgerufen. | Streit: Verhörsperson als Zeuge? › Großer Senat: offen | `7832402dad71` |
-| 51 | 2:29.29 | 2:31.53 | Carla (Erzählerin/Lexi) | Der Bundesgerichtshof hält seitdem an der | Streit: Verhörsperson als Zeuge? › BGH: Sperre bleibt | `1eeb4fecc9d0` |
-| 52 | 2:31.53 | 2:34.51 | Carla (Erzählerin/Lexi) | Sperre für die Verhörsperson fest. | Streit: Verhörsperson als Zeuge? › BGH: Sperre bleibt | `721b275973f4` |
+| 45 | 2:09.55 | 2:14.45 | Carla (Erzählerin/Lexi) | Gegenansicht hält sich an den Wortlaut: Verboten sei nur das Verlesen, | Streit: Verhörsperson als Zeuge? › Wortlaut-Ansicht | `123347a81530` |
+| 46 | 2:14.45 | 2:19.13 | Carla (Erzählerin/Lexi) | jede Vernehmungsperson, die ordnungsgemäß belehrt hat, dürfe aussagen. | Streit: Verhörsperson als Zeuge? › Wortlaut-Ansicht | `5ef0a3bac3d9` |
+| 47 | 2:19.13 | 2:20.57 | Carla (Erzählerin/Lexi) | Andere gehen weiter und | Streit: Verhörsperson als Zeuge? › umfassendes Verbot | `0fc280a7b270` |
+| 48 | 2:20.57 | 2:23.26 | Carla (Erzählerin/Lexi) | sperren alles, sogar den Richter. | Streit: Verhörsperson als Zeuge? › umfassendes Verbot | `3dc04053dad5` |
+| 49 | 2:23.26 | 2:27.37 | Carla (Erzählerin/Lexi) | Richter. Der Große Senat musste die Frage zur Polizei nicht entscheiden und hat den | Streit: Verhörsperson als Zeuge? › Großer Senat: offen | `8184cbce3033` |
+| 50 | 2:27.37 | 2:29.29 | Carla (Erzählerin/Lexi) | Gesetzgeber aufgerufen. | Streit: Verhörsperson als Zeuge? › Großer Senat: offen | `48984326d600` |
+| 51 | 2:29.29 | 2:31.53 | Carla (Erzählerin/Lexi) | Der Bundesgerichtshof hält seitdem an der | Streit: Verhörsperson als Zeuge? › BGH: Sperre bleibt | `2f8cbba25ba8` |
+| 52 | 2:31.53 | 2:34.51 | Carla (Erzählerin/Lexi) | Sperre für die Verhörsperson fest. | Streit: Verhörsperson als Zeuge? › BGH: Sperre bleibt | `8e5deac2d0a9` |
 | 53 | 2:34.81 | 2:41.15 | Carla (Erzählerin/Lexi) | wichtigste Ausnahme: Hat ein Richter die Zeugin vorher über ihr Zeugnisverweigerungsrecht belehrt, | Ausnahme 1: Richter › hat belehrt | `808f07a89ddb` |
 | 54 | 2:41.15 | 2:44.47 | Carla (Erzählerin/Lexi) | darf er als Zeuge über ihre Aussage gehört werden. | Ausnahme 1: Richter › darf als Zeuge gehört werden | `e7898233af0d` |
 | 55 | 2:44.47 | 2:48.39 | Carla (Erzählerin/Lexi) | Eine weitergehende Belehrung über die spätere Verwertbarkeit ist nicht | Ausnahme 1: Richter › keine weitergehende Belehrung | `6b66f855e3f1` |
@@ -115,7 +115,8 @@ Quelle: `bildhalt_manifest.json` (115 Bildhalte, davon 115 eigenständig), `cues
 | 109 | 5:18.05 | 5:19.59 | Carla (Erzählerin/Lexi) | Beruhen. | Klausurtipp · IV. Revision: Rüge und Beruhen | `dc8fb06a72c8` |
 | 110 | 5:19.79 | 5:25.11 | Carla (Erzählerin/Lexi) | Merke: Paragraf zweihundertzweiundfünfzig verbietet dem Wortlaut nach nur das | Merksatz | `80fa60b63a49` |
 | 111 | 5:25.11 | 5:26.11 | Carla (Erzählerin/Lexi) | Verlesen. | Merksatz | `e50706f18caa` |
-| 112 | 5:26.11 | 5:28.31 | Carla (Erzählerin/Lexi) | Nach der Rechtsprechung sperrt er auch die | Merksatz | `3d26092c7b7a` |
-| 113 | 5:28.31 | 5:30.91 | Carla (Erzählerin/Lexi) | Verhörsperson. Berichten darf nur der | Merksatz | `dda4c66abf14` |
-| 114 | 5:30.91 | 5:33.83 | Carla (Erzählerin/Lexi) | Richter, der belehrt hat, es sei denn, die Zeugin | Merksatz | `f213ee9e9ba3` |
-| 115 | 5:33.83 | 5:36.78 | Carla (Erzählerin/Lexi) | gestattet die Verwertung. | Merksatz | `1bbcbb418f92` |
+| 112 | 5:26.11 | 5:28.31 | Carla (Erzählerin/Lexi) | Nach der Rechtsprechung sperrt er auch die | Merksatz | `c9175d1fc179` |
+| 113 | 5:28.31 | 5:29.59 | Carla (Erzählerin/Lexi) | Verhörsperson. | Merksatz | `71fffe3cb2bf` |
+| 114 | 5:29.59 | 5:30.91 | Carla (Erzählerin/Lexi) | Berichten darf nur der | Merksatz | `ce832b8d7ccd` |
+| 115 | 5:30.91 | 5:33.83 | Carla (Erzählerin/Lexi) | Richter, der belehrt hat, es sei denn, die Zeugin | Merksatz | `d9c53cab86bb` |
+| 116 | 5:33.83 | 5:36.78 | Carla (Erzählerin/Lexi) | gestattet die Verwertung. | Merksatz | `4ef9bedeab87` |
