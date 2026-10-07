@@ -45,9 +45,9 @@ elif art == "lippen":
         while t <= b:
             r = subprocess.run([FF, "-v", "error", "-ss", f"{t:.3f}", "-i", mp4, "-frames:v", "1", "-f", "image2pipe",
                                 "-vcodec", "png", "-"], capture_output=True)
-            im = Image.open(io.BytesIO(r.stdout)).convert("RGB").crop((x, y, x + w, y + h)).resize((241, 241))
+            im = Image.open(io.BytesIO(r.stdout)).convert("RGB").crop((x, y, x + w, y + h)).resize((160, 160))
             bilder.append((f"{t:.1f}", im)); t = round(t + 0.1, 3)
-        bogen(bilder, 15, 241, 241, f"../out/lip_{name}.png")
+        bogen(bilder, 15, 160, 160, f"../out/lip_{name}.png")
         print(name, len(bilder))
 elif art == "schnitt":
     ts = [float(v) for v in sys.argv[3].split(",")]

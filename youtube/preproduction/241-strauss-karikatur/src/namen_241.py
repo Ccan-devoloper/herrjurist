@@ -14,10 +14,10 @@ from scipy.signal import resample_poly
 cj = json.load(open("../cues.json"))
 w = wave.open("../stimme.wav"); sr = w.getframerate()
 x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
-NAMEN = ("Meinrad", "Achenbach", "Strauß", "Mephisto")  # Figurennamen und Fallbezeichnungen (nur gesprochen)
+NAMEN = ("Meinrad", "Achenbach", "Strauß", "Mephisto")  # Figurenname und Fallbezeichnungen (nur gesprochen)
 
 
-def mel_fb(n_fft=512, n_mel=26, sr=24100):
+def mel_fb(n_fft=512, n_mel=26, sr=16000):
     hz = lambda m: 700 * (10 ** (m / 2595) - 1)
     mel = np.linspace(0, 2595 * np.log10(1 + sr / 2 / 700), n_mel + 2)
     bins = np.floor((n_fft + 1) * hz(mel) / sr).astype(int)
@@ -34,7 +34,7 @@ FB = mel_fb()
 
 def mfcc(y):
     y = resample_poly(y, 1, 3)
-    fr = np.lib.stride_tricks.sliding_window_view(np.pad(y, (0, 400)), 400)[::241] * np.hamming(400)
+    fr = np.lib.stride_tricks.sliding_window_view(np.pad(y, (0, 400)), 400)[::160] * np.hamming(400)
     p = np.abs(np.fft.rfft(fr, 512)) ** 2
     m = dct(np.log(p @ FB.T + 1e-10), norm="ortho")[:, 1:13]
     return (m - m.mean(0)) / (m.std(0) + 1e-6)
