@@ -10,7 +10,9 @@ Figuren: Anneke (julia), Gero (niklas), Herr Wittkamp (helmut); Erzählerin und 
 DARSTELLUNG: keine echte Bank, kein Logo; Anneke sachlich und selbstbestimmt, Gero ohne Klischee, die Bank sachlich.
 Segmente: (text, pause) = Erzählerin, (text, pause, rolle) = Figurenrede. [marke] = Cue; jede Marke genau einmal.
 Zahlen, Artikel und Paragrafen im Sprechtext als Wörter; „BVerfG“/„GG“ ausgeschrieben (synth_el buchstabiert Abkürzungen).
-Kein Genitiv der Namen. Belege: ../RECHTSSTAND.md."""
+Kein Genitiv der Namen. Belege: ../RECHTSSTAND.md.
+Nach der ersten Vertonung Segment 2 umformuliert („… wenn Ihre Frau dafür bürgt.“ → „… eine Bürgschaft übernimmt.“), weil
+whisper small und medium „bürgt“ übereinstimmend als „birgt“ hörten; einmalig nachvertont."""
 
 P, PS = 0.3, 0.5
 
@@ -21,7 +23,7 @@ SEGMENTE = [
     ("[fall]Gero ist Tischlermeister und hat eine eigene Werkstatt. [kredit]Für neue Maschinen braucht er von der Bank "
      "einen Firmenkredit über zweihunderttausend Euro, [zins]die Zinsen betragen tausend Euro im Monat. [bank]Herr "
      "Wittkamp von der Bank sagt:", 0.3),
-    ("[wi1]Den Kredit gibt es nur, wenn Ihre Frau dafür bürgt.", P, "Wittkamp"),
+    ("[wi1]Den Kredit gibt es nur, wenn Ihre Frau eine Bürgschaft übernimmt.", P, "Wittkamp"),
     ("[anneke]Anneke ist seit acht Jahren mit Gero verheiratet. [mittel]Sie hat kein eigenes Einkommen und kein "
      "Vermögen, und das wird absehbar so bleiben.", 0.25),
     ("[ge1]Anneke, ohne deine Bürgschaft bekomme ich den Kredit nicht.", 0.25, "Gero"),
