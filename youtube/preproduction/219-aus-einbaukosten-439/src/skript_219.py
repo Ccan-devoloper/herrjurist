@@ -37,11 +37,11 @@ SEGMENTE = [
      "Absatz eins. [ne2]Nachbessern lässt sich der Fehler nicht, also bleibt die Lieferung neuer Fliesen. [v063]Alle "
      "Käuferrechte im Überblick zeigt die Folge zu Paragraf vierhundertsiebenunddreißig.", PS),
     # --- D Hintergrund: vor 2018, EuGH Weber/Putz, BGH ----------------------------------------------------------------
-    ("[alt]Doch umfasst die Lieferung neuer Fliesen auch den Ausbau der alten und das Verlegen der neuen? [alt1]Früher "
+    ("[alt]Doch umfasst die Lieferung neuer Fliesen auch den Ausbau der alten und das Verlegen der neuen? [alt1]Lange "
      "hieß es in Deutschland: Der Verkäufer bringt nur neue Fliesen. [alt2]Ausbau und Einbau gab es allenfalls als "
      "Schadensersatz, also nur bei Verschulden. [alt3]Und eine Händlerin, die einen Fehler aus der Herstellung nicht "
      "kennt, trifft in der Regel kein Verschulden.", P),
-    ("[eugh]Dann kam ein Fliesen-Fall vor den Europäischen Gerichtshof: Weber und Putz, zweitausendelf. [eu1]Nach der "
+    ("[eugh]Dann kam ein Fliesen-Fall vor den Gerichtshof der Europäischen Union: Weber und Putz, zweitausendelf. [eu1]Nach der "
      "Verbrauchsgüterkaufrichtlinie muss der Verkäufer die mangelhafte Sache selbst ausbauen und die neue einbauen, oder "
      "die Kosten dafür tragen, [eu2]auch wenn er den Einbau gar nicht schuldete. [eu3]Sonst wäre die Ersatzlieferung "
      "nicht unentgeltlich: Der Käufer müsste den Einbau zweimal bezahlen. [eu4]Die einzig mögliche Abhilfe darf der "
