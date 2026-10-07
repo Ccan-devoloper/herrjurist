@@ -63,8 +63,10 @@ srt = re.sub(r"(§§?|Art\.)\n(\S+) ", r"\1 \2\n", srt)
 srt = re.sub(r"(Abs\.|S\.|Nr\.)\n(\d+[a-z]?[,.:;]?) ?", r"\1 \2\n", srt)
 srt = re.sub(r"\n +", "\n", srt)
 for a_, b_ in [("tausend Euro", "1.000 Euro"), ("zwölften Mai", "12. Mai"), ("21 Uhr 47", "21:47 Uhr"),
-               ("einundzwanzig Uhr siebenundvierzig", "21:47 Uhr")]:
+               ("einundzwanzig Uhr siebenundvierzig", "21:47 Uhr"),
+               ("Abs. 1 und zwei", "Abs. 1 und 2"), ("Römisch eins:", "I."), ("Römisch zwei:", "II."), ("Römisch drei:", "III."), ("Römisch vier:", "IV.")]:
     srt = srt.replace(a_, b_)
+assert "Römisch" not in srt and "Paragraf" not in srt
 open(f"{U}/untertitel.srt", "w").write(srt)
 
 m = json.load(open(f"{U}/metadaten.json"))
