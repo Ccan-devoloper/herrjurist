@@ -64,10 +64,10 @@ Figuren: Open Peeps (Pablo Stanley, CC0). Icons: Tabler Icons, Fluent Emoji (MIT
 open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 
 srt = open(f"{U}/untertitel.srt").read()
-for alt, neu in (("\nHasselbach: ", "\nFrau Hasselbach: "),):
+for alt, neu in (("\nHasselbach: ", "\nFrau Hasselbach: "), ("darf sie nach §\n52 das", "darf sie nach\n§ 52 das")):
     assert alt in srt, alt
     srt = srt.replace(alt, neu)
-assert "Paragraf" not in srt
+assert "Paragraf" not in srt and "§\n" not in srt
 open(f"{U}/untertitel.srt", "w").write(srt)
 
 m = json.load(open(f"{U}/metadaten.json"))
