@@ -3,7 +3,7 @@
 **Stand:** 08.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_258.py`](src/skript_258.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
 **Format:** Fr · 2. Examen · Klausurtechnik, Format Schema, ohne vollständige Fallprüfung. Beispielfall nach dem Plan-Hook („Die Mandantin will nicht wissen, wer recht hat, sondern was sie jetzt konkret tun soll“): Frau Steinhoff hat einem Gartenbaubetrieb 3.000 € für eine Terrasse angezahlt, fertig sein sollte sie Ende April (E-Mail), passiert ist nichts. In der Kanzlei: Referendarin Isolde und ihr Ausbilder Rechtsanwalt Hohlfeld.
 Ablauf nach Auftrag: 1. Hook (Fall, Frage) → Sachverhalt → 2. Perspektivwechsel (parteiisch, aber gebunden; § 43a Abs. 3 BRAO, § 43a Abs. 4/5 BRAO als Wortlautkarten) → 3. Aufbau: vorweg Mandantenbegehren, I. Gutachten (§ 323 Abs. 1 BGB als Wortlautkarte, § 346 BGB, Amtsgericht), II. Zweckmäßigkeit, III. Praktischer Teil (je nach Bearbeitervermerk, Verweis 222) → 4. echte Zweckmäßigkeit vs. zweites Gutachten (Tafel Zeit, Kosten, Beweisbarkeit, Vergleich, Eilrechtsschutz, sicherster Weg) → Ergebnis in der Kanzlei → 5. Kurzblick Zivil (§ 253 Abs. 2 ZPO), Öffentliches Recht (§ 81 Abs. 1 S. 1 VwGO), Strafrecht (§ 137 Abs. 1 S. 1 StPO, Verweis 039) → 6. Klausurtipp (Lexi) → Schema → Merksatz (Lexi).
-**Länge:** Hauptfilm 6:35,0 (5.545 vertonte Zeichen). Begründung in ABNAHME.md.
+**Länge:** Hauptfilm 6:34,5 (5.545 vertonte Zeichen, davon 82 nachvertont). Begründung in ABNAHME.md.
 
 ## Besetzung
 

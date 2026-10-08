@@ -60,8 +60,8 @@ srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
 srt = re.sub(r"(Abs\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
 ERSATZ = [("dreitausend Euro", "3.000 Euro"), ("Folge zweihundertzweiundzwanzig", "Folge 222"),
-          ("Folge neununddreißig", "Folge 39"), ("Römisch eins:", "I.:"), ("Römisch zwei:", "II.:"),
-          ("Römisch drei:", "III.:"), ("Steinhoff: Ich habe", "Frau Steinhoff: Ich habe"),
+          ("Folge neununddreißig", "Folge 39"), ("Römisch eins:", "I."), ("Römisch zwei:", "II."),
+          ("Römisch drei:", "III."), ("Steinhoff: Ich habe", "Frau Steinhoff: Ich habe"),
           ("Hohlfeld: Sie schreiben", "Herr Hohlfeld: Sie schreiben")]
 for alt, neu in ERSATZ:
     muster = r"\s+".join(re.escape(w) for w in alt.split())

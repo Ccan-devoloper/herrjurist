@@ -5,7 +5,7 @@ Isolde (IS, Mitte 20, Referendarin in der Anwaltsstation; Stimme lucy): standing
 Frau Steinhoff (ST, um 70, Mandantin; Stimme hilde): standing/crossed_arms-2 (schwarzes Oberteil, lila Hose #B8A9F5,
   verschränkte Arme = verärgert), Kopf Gray Medium (Haar grau #C8C8C8), Brille Glasses 4, Haut #EDC3A0.
 Herr Hohlfeld (HO, um 55, Rechtsanwalt und Ausbilder; Stimme stephan): standing/blazer-3 (Sakko graublau #5B6B8C über
-  schwarzem Shirt, Hose #3D3D48, Hand an der Hüfte), Kopf Short 2 (Haar grau meliert #6E6E78), Brille Glasses 2, Haut #DDA882.
+  schwarzem Shirt, Hose #3D3D48, Hand an der Hüfte), Kopf Short 2 (dunkles Haar; die Hair-Farbe #6E6E78 greift bei diesem Kopf nicht), Brille Glasses 2, Haut #DDA882.
 Keine Prothesen-Posen (blazer-1/-2, shirt-1/-2), keine Bärte, keine Polka Dots; keine Pose aus den Folgen 253–256
 (crossed_arms-1, resting-1/-2, shirt-3, Blazer Black Tee, walking-1/-3, robot_dance-3, blazer-4, easing-2).
 Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und blickt nach links (Figur rechts neben der
