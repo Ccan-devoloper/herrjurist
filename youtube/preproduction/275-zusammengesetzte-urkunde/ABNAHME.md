@@ -50,3 +50,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 115 Bildhalte aus dem finalen MP4, Fall- und Tafelfenster als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen und die drei Geräusche); Themenplan-Korrektur durch den Koordinator; OLG Düsseldorf/Köln und BGHSt 9, 235/16, 94 nicht im Volltext geprüft (nur über OLG Karlsruhe bzw. BGH 3 StR 521/18 zitiert).
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 08.10.2026
+
+## Drive (Readback 08.10.2026, rclone)
+
+Ordner `LexVerse Produktion/275 Zusammengesetzte Urkunde/`, ID `1UodgYXvitKBn7FcksAOwB5uixe1KQkFH` (nur per rclone angelegt, vorher kein Ordner „275 …“ vorhanden, kein Doppelordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `275-Zusammengesetzte-Urkunde.mp4` | 25.743.398 |
+| `275-Zusammengesetzte-Urkunde-Hauptfilm.mp4` | 18.308.915 |
+| `master.zip` | 47.403.136 |
+| `thumb_A.jpg` | 174.371 |
+| `thumb_B.jpg` | 167.510 |
+| `beschreibung.txt` | 2.433 |
+| `kapitel.txt` | 395 |
+| `untertitel.srt` | 8.257 |
+| `metadaten.json` | 3.555 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 269 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`9649aab7c098…`), MP4-MD5 lokal = Drive (`dcc212894a4d…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` und `stimme_48k.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
