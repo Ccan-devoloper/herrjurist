@@ -70,6 +70,10 @@ for a, b in [("Teuber: Der Schimmel", "Frau Teuber: Der Schimmel"), ("Römisch e
              ("Römisch zwei:", "Römisch II:"), ("Römisch drei:", "Römisch III:")]:
     if a in srt:
         srt = srt.replace(a, b)
+srt, n = re.subn(r"§§ 536 und 536\n\n(\d+\n[^\n]+\n)a nicht zu\.", r"§§ 536 und 536a\n\n\1nicht zu.", srt)
+assert n == 1, "536a"
+srt, n = re.subn(r"aus § 535\n\n(\d+\n[^\n]+\n)Abs\. 2: ", r"aus § 535 Abs. 2:\n\n\1", srt)
+assert n == 1, "535 Abs. 2"
 srt, n = re.subn(r"achthundertfünfzig(\s)Euro", r"850\1€", srt)
 assert n == 2, n
 srt = re.sub(r"\n\n\n+", "\n\n", srt)
