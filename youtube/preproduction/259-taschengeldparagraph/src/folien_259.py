@@ -346,8 +346,8 @@ folie([(NULL, "Fall · Im Radladen"), ("h1", "Fall · Herr Heinemann: 300 € je
     blase("sprech", 700, 230, "h1", 1180, 250, inhalt=["300 € jetzt, den Rest in", "6 Monatsraten zu je 100 €."],
           textsize=34, figur=("HN_redet", HNX, BODEN, FH), bis="anz"),
     # Anzahlung: der Geldschein wandert von Fridolin zu Herrn Heinemann
-    szene(bewegt(ficon("tabler", "cash-banknote", FRX + 120, 700, 100, beim("anz", "zahlt"), fuell=GRUEN_P, bis="raten"),
-                 beim("anz", "zahlt"), beim("anz", "dreihundert", ende=True), HNX - 150 - (FRX + 120), 0),
+    szene(bewegt(ficon("tabler", "cash-banknote", HNX - 150, 700, 100, beim("anz", "zahlt"), fuell=GRUEN_P, bis="raten"),
+                 beim("anz", "zahlt"), beim("anz", "dreihundert", ende=True), (FRX + 120) - (HNX - 150), 0),
           "259geld*", 0.9, 0.0),
     pl("aus gespartem Taschengeld", FRX, 330, beim("anz", "Taschengeld"), fill=WEISS, size=28, anker="m", bis="raten"),
     *leiste_a,
@@ -425,11 +425,27 @@ folie([("anruf", "Fall · Am nächsten Tag: Anruf im Radladen"), ("m2", "Fall ·
 # ===========================================================================================================================
 # D Sachverhalt
 # ===========================================================================================================================
+def absatz_nb(text, x, y, breite, cue, size=38, stil="Regular", zeilenabstand=1.35, farbe=INK):
+    """Wie bausteine.absatz, aber Umbruch nur an normalen Leerzeichen (geschütztes Leerzeichen hält „900 €“ zusammen)."""
+    f = F(stil, size)
+    zeilen, cur = [], ""
+    for w in text.split(" "):
+        t = (cur + " " + w).strip(" ")
+        if f.getlength(t) <= breite:
+            cur = t
+        else:
+            zeilen.append(cur); cur = w
+    if cur:
+        zeilen.append(cur)
+    els = [OT(z_, x, y + i * size * zeilenabstand, cue, stil, size, farbe=farbe, anim="fade") for i, z_ in enumerate(zeilen)]
+    return els, y + len(zeilen) * size * zeilenabstand
+
+
 def sachverhalt_259(cue, absaetze, frage, size=34):
     els = [karte(140, 60, 1640, 900, cue, fill=HELL), titel("Sachverhalt", 210, 100, cue, 60)]
     y = 205
     for a in absaetze:
-        e, y = absatz(glyphen(a), 210, y, 1500, cue, size=size, zeilenabstand=1.28)
+        e, y = absatz_nb(glyphen(a), 210, y, 1500, cue, size=size, zeilenabstand=1.28)
         els += e; y += 14
     assert y + 70 <= 950, f"Sachverhalt zu lang ({y})"
     els.append(pille(glyphen(frage), 210, y + 6, cue, fill=PINK, size=32))
@@ -437,9 +453,9 @@ def sachverhalt_259(cue, absaetze, frage, size=34):
 
 
 sachverhalt_259("sv", [
-    "Der 16-jährige Fridolin kauft im Radladen von Herrn Heinemann ein gebrauchtes E-Bike für 900 €. Er zahlt 300 € "
-    "sofort aus gespartem Taschengeld an, das ihm die Eltern zur freien Verfügung geben. Die übrigen 600 € soll er in "
-    "6 Monatsraten zu je 100 € aus seinem künftigen Taschengeld zahlen. Die Eltern hat er nicht gefragt. Herr Heinemann "
+    "Der 16-jährige Fridolin kauft im Radladen von Herrn Heinemann ein gebrauchtes E-Bike für 900 €. Er zahlt 300 € "
+    "sofort aus gespartem Taschengeld an, das ihm die Eltern zur freien Verfügung geben. Die übrigen 600 € soll er in "
+    "6 Monatsraten zu je 100 € aus seinem künftigen Taschengeld zahlen. Die Eltern hat er nicht gefragt. Herr Heinemann "
     "gibt ihm das E-Bike gleich mit.",
     "Am nächsten Tag ruft die Mutter, auch für den Vater, bei Herrn Heinemann an: „Diesen Ratenkauf genehmigen wir "
     "nicht.“",
@@ -700,8 +716,8 @@ folie([("merke", "Merksatz")], [
     *markertext([[("Der Taschengeldparagraf hilft erst,", 0)], [("wenn ", 0), ("alles", "a"), (" aus dem Taschengeld", 0)],
                  [("bezahlt ist.", 0)]],
                 750, 270, 44, "merke", {"a": beim("merke", "alles")}),
-    *markertext([[("Beim Ratenkauf also erst", 0)], [("mit der ", 0), ("letzten Rate", "b"), (".", 0)],
-                 [("Bis dahin entscheiden die ", 0), ("Eltern", "c"), (".", 0)]],
+    *markertext([[("Beim Ratenkauf also erst", 0)], [("mit der ", 0), ("letzten Rate.", "b")],
+                 [("Bis dahin entscheiden die ", 0), ("Eltern.", "c")]],
                 750, 540, 44, "merk2", {"b": beim("merk2", "letzten"), "c": beim("merk2", "Eltern")}),
     *redet("LX_erklaert", 1680, 950, 680, "merke", lexi_bis_ende("merke")),
     ns("Lexi", 1680, 950, "merke", GELB, d=0.2),
