@@ -1,6 +1,6 @@
 # Folge 265 · Gekauft-wie-gesehen · Cue-Timeline (Ton-Bild-Gate)
 
-Quelle: `bildhalt_manifest.json` (130 Bildhalte, davon 130 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
+Quelle: `bildhalt_manifest.json` (135 Bildhalte, davon 135 eigenständig), `cues.json` (ElevenLabs-Wortzeiten). Zeiten im Hauptfilm, im fertigen Video jeweils +8,000 s (Intro). Die Wortzeiten stammen aus der tatsächlich verwendeten Sprachspur; die Startpunkte von Bild, Tafel und Pfad sind an diese Wortgrenzen gebunden (`beim()` im Folienskript).
 
 | Nr. | Start | Ende | Sprecher | gesprochen (Wortgrenzen) | Prüfpfad | SHA-256 (Keyframe) |
 |---:|---|---|---|---|---|---|
@@ -56,81 +56,86 @@ Quelle: `bildhalt_manifest.json` (130 Bildhalte, davon 130 eigenständig), `cues
 | 50 | 1:57.18 | 1:59.91 | Carla (Erzählerin/Lexi) | Den Ausschluss haben beide selbst formuliert. | B. Gewährleistungsausschluss › selbst formuliert: wirksam | `0bfb2b743131` |
 | 51 | 1:59.91 | 2:01.26 | Carla (Erzählerin/Lexi) | Er ist also grundsätzlich | B. Gewährleistungsausschluss › selbst formuliert: wirksam | `d88c7ee0e02b` |
 | 52 | 2:01.26 | 2:02.30 | Carla (Erzählerin/Lexi) | wirksam. | B. Gewährleistungsausschluss › selbst formuliert: wirksam | `4a5b709f6562` |
-| 53 | 2:02.30 | 2:16.28 | Carla (Erzählerin/Lexi) | Stünde er in vorformulierten Allgemeinen Geschäftsbedingungen, könnte er nach Paragraf dreihundertneun Numm … | B. Gewährleistungsausschluss › falls AGB: § 309 Nr. 7 BGB | `f2fa78971e9f` |
-| 54 | 2:16.38 | 2:19.76 | Carla (Erzählerin/Lexi) | Dritter Schritt: Wie weit reicht der Ausschluss? | B. Gewährleistungsausschluss › 3. Reichweite | `c9b10eb03a58` |
-| 55 | 2:19.76 | 2:23.88 | Carla (Erzählerin/Lexi) | Gekauft wie gesehen allein meint nach dem Bundesgerichtshof in aller | B. Gewährleistungsausschluss › „wie gesehen“: nur wahrnehmbare Mängel | `3a92eb3a0719` |
-| 56 | 2:23.88 | 2:26.32 | Carla (Erzählerin/Lexi) | Regel nur Mängel, die man bei der Besichtigung | B. Gewährleistungsausschluss › „wie gesehen“: nur wahrnehmbare Mängel | `f883b6ced0e7` |
-| 57 | 2:26.32 | 2:27.88 | Carla (Erzählerin/Lexi) | wahrnehmen kann, vor allem | B. Gewährleistungsausschluss › „wie gesehen“: nur wahrnehmbare Mängel | `d69e803b66e5` |
-| 58 | 2:27.88 | 2:29.04 | Carla (Erzählerin/Lexi) | sichtbare. | B. Gewährleistungsausschluss › „wie gesehen“: nur wahrnehmbare Mängel | `d00c5ade401a` |
-| 59 | 2:29.04 | 2:30.92 | Carla (Erzählerin/Lexi) | Den Motorschaden konnte Christel | B. Gewährleistungsausschluss › Motorschaden: nicht sichtbar | `b5e665bca572` |
-| 60 | 2:30.92 | 2:31.88 | Carla (Erzählerin/Lexi) | nicht sehen. | B. Gewährleistungsausschluss › Motorschaden: nicht sichtbar | `3f4d58f0aac7` |
-| 61 | 2:31.88 | 2:35.76 | Carla (Erzählerin/Lexi) | Aber hier steht zusätzlich: keine Gewährleistung. | B. Gewährleistungsausschluss › dazu: „keine Gewährleistung“ | `3e5c8667bae0` |
-| 62 | 2:36.04 | 2:38.48 | Carla (Erzählerin/Lexi) | Verbindung versteht der Bundesgerichtshof als | B. Gewährleistungsausschluss › umfassender Ausschluss | `a9f271c25059` |
-| 63 | 2:38.48 | 2:40.08 | Carla (Erzählerin/Lexi) | umfassenden Ausschluss. | B. Gewährleistungsausschluss › umfassender Ausschluss | `a3bedfdc14dd` |
-| 64 | 2:40.08 | 2:44.46 | Carla (Erzählerin/Lexi) | Er erfasst also grundsätzlich auch den versteckten Motorschaden. | B. Gewährleistungsausschluss › Motorschaden grundsätzlich erfasst | `1b517d7e1c2c` |
-| 65 | 2:44.56 | 2:52.38 | Carla (Erzählerin/Lexi) | Grenzen zieht Paragraf vierhundertvierundvierzig: Auf eine Vereinbarung, durch welche die Rechte des Käufer … | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `c621fe09192d` |
-| 66 | 2:52.38 | 2:55.98 | Carla (Erzählerin/Lexi) | ausgeschlossen oder beschränkt werden, kann sich der Verkäufer nicht | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `56ed31dac5cc` |
-| 67 | 2:55.98 | 2:57.90 | Carla (Erzählerin/Lexi) | berufen, soweit er den Mangel | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `e592a8b32ccf` |
-| 68 | 2:57.90 | 2:59.90 | Carla (Erzählerin/Lexi) | arglistig verschwiegen oder eine | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `2b39deb087cc` |
-| 69 | 2:59.90 | 3:03.30 | Carla (Erzählerin/Lexi) | Garantie für die Beschaffenheit der Sache übernommen hat. | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `33cb0086607f` |
-| 70 | 3:03.30 | 3:03.98 | Carla (Erzählerin/Lexi) | Arglist | B. Gewährleistungsausschluss › § 444 BGB: Arglist (−) | `51952a930283` |
-| 71 | 3:03.98 | 3:07.62 | Carla (Erzählerin/Lexi) | scheidet aus: Herr Burmeister wusste nichts vom Schaden. | B. Gewährleistungsausschluss › § 444 BGB: Arglist (−) | `47a92832f5d2` |
-| 72 | 3:07.62 | 3:14.26 | Carla (Erzählerin/Lexi) | Den Händler, der einen Unfallschaden verschweigt, und die Anfechtung zeigt unsere Folge zum Unfallwagen. | B. Gewährleistungsausschluss › Händler und Anfechtung: Folge „Unfallwagen verschwiegen“ | `55428ba1afeb` |
-| 73 | 3:14.36 | 3:18.78 | Carla (Erzählerin/Lexi) | Und eine Garantie? Sie geht weiter als eine bloße Angabe: Der | B. Gewährleistungsausschluss › § 444 BGB: Garantie? | `544bb60c1e5d` |
-| 74 | 3:18.78 | 3:21.58 | Carla (Erzählerin/Lexi) | Verkäufer haftet dann sogar ohne Verschulden auf | B. Gewährleistungsausschluss › § 444 BGB: Garantie? | `c088d96c1ddd` |
-| 75 | 3:21.58 | 3:22.87 | Carla (Erzählerin/Lexi) | Schadensersatz. | B. Gewährleistungsausschluss › § 444 BGB: Garantie? | `3389152e24f5` |
-| 76 | 3:22.87 | 3:28.30 | Carla (Erzählerin/Lexi) | Schadensersatz. Beim Privatverkauf nimmt der Bundesgerichtshof eine Garantie ohne ausdrückliche Abrede | B. Gewährleistungsausschluss › Garantie beim Privatverkauf: nur ausnahmsweise | `01fca3818de5` |
-| 77 | 3:28.30 | 3:29.42 | Carla (Erzählerin/Lexi) | nur unter besonderen | B. Gewährleistungsausschluss › Garantie beim Privatverkauf: nur ausnahmsweise | `4b53278eb1ce` |
-| 78 | 3:29.42 | 3:30.58 | Carla (Erzählerin/Lexi) | Umständen an. | B. Gewährleistungsausschluss › Garantie beim Privatverkauf: nur ausnahmsweise | `f2f7bf8b3044` |
-| 79 | 3:30.58 | 3:31.54 | Carla (Erzählerin/Lexi) | Die gibt es hier | B. Gewährleistungsausschluss › Garantie (−): § 444 BGB hilft nicht | `83aebf03a645` |
-| 80 | 3:31.54 | 3:32.33 | Carla (Erzählerin/Lexi) | nicht. | B. Gewährleistungsausschluss › Garantie (−): § 444 BGB hilft nicht | `2bc38e0e4b5d` |
-| 81 | 3:32.33 | 3:36.64 | Carla (Erzählerin/Lexi) | Paragraf vierhundertvierundvierzig hilft Christel also nicht. | B. Gewährleistungsausschluss › Garantie (−): § 444 BGB hilft nicht | `363e8490ed0a` |
-| 82 | 3:36.74 | 3:41.12 | Carla (Erzählerin/Lexi) | Hat Christel damit verloren? Nein. Entscheidend ist der Satz: | B. Gewährleistungsausschluss › vereinbarte Beschaffenheit geht vor | `e9647b0870d2` |
-| 83 | 3:41.12 | 3:43.40 | Carla (Erzählerin/Lexi) | Motor läuft einwandfrei. | B. Gewährleistungsausschluss › vereinbarte Beschaffenheit geht vor | `e03d44231420` |
-| 84 | 3:43.40 | 3:52.29 | Carla (Erzählerin/Lexi) | Der Bundesgerichtshof hat zweitausendsechs entschieden: Vereinbaren die Parteien eine bestimmte Beschaffenh … | B. Gewährleistungsausschluss › BGHZ 170, 86: Ausschluss gilt nicht dafür | `85fe3cc23793` |
-| 85 | 3:52.29 | 3:54.60 | Carla (Erzählerin/Lexi) | gilt der Ausschluss in der Regel nicht für das | B. Gewährleistungsausschluss › BGHZ 170, 86: Ausschluss gilt nicht dafür | `7a9482557a30` |
-| 86 | 3:54.60 | 3:57.04 | Carla (Erzählerin/Lexi) | Fehlen der vereinbarten Beschaffenheit. | B. Gewährleistungsausschluss › BGHZ 170, 86: Ausschluss gilt nicht dafür | `174f5b0ae8ad` |
-| 87 | 3:57.04 | 4:00.92 | Carla (Erzählerin/Lexi) | Sonst wäre die Vereinbarung für den Käufer ohne Sinn und Wert. | B. Gewährleistungsausschluss › sonst „ohne Sinn und Wert“ | `efd0bd83bfe2` |
-| 88 | 4:00.92 | 4:05.04 | Carla (Erzählerin/Lexi) | Das ist ständige Rechtsprechung, auch bei alten Autos und | B. Gewährleistungsausschluss › ständige Rechtsprechung | `b24a1d8addb3` |
-| 89 | 4:05.20 | 4:06.84 | Carla (Erzählerin/Lexi) | Teilen, die verschleißen. | B. Gewährleistungsausschluss › ständige Rechtsprechung | `5ae231dac6b6` |
-| 90 | 4:06.84 | 4:08.84 | Carla (Erzählerin/Lexi) | Der Ausschluss gilt hier also nur | B. Gewährleistungsausschluss › Haftung für den Motor (+) | `990156bfb9ef` |
-| 91 | 4:08.84 | 4:13.86 | Carla (Erzählerin/Lexi) | für andere Mängel. Für den vereinbarten Motor haftet Herr Burmeister. | B. Gewährleistungsausschluss › Haftung für den Motor (+) | `de25ed28bd3a` |
-| 92 | 4:13.96 | 4:17.66 | Carla (Erzählerin/Lexi) | Ergebnis hängt also an einzelnen Sätzen im Vertrag. | C. Ergebnis je Variante | `a0de1543b7fd` |
-| 93 | 4:17.66 | 4:19.30 | Carla (Erzählerin/Lexi) | Ohne den Satz zum Motor | C. Ergebnis je Variante › ohne Satz zum Motor: Ausschluss greift | `5e8a9bde8288` |
-| 94 | 4:19.30 | 4:21.62 | Carla (Erzählerin/Lexi) | greift der Ausschluss, und Christel hat | C. Ergebnis je Variante › ohne Satz zum Motor: Ausschluss greift | `8d80a3ff51d3` |
-| 95 | 4:21.62 | 4:23.10 | Carla (Erzählerin/Lexi) | keine Mängelrechte. | C. Ergebnis je Variante › ohne Satz zum Motor: Ausschluss greift | `d625eb7ad425` |
-| 96 | 4:23.10 | 4:26.34 | Carla (Erzählerin/Lexi) | Stünde dort nur gekauft wie gesehen, wäre der | C. Ergebnis je Variante › nur „gekauft wie gesehen“: nicht erfasst | `c822e16862db` |
-| 97 | 4:26.34 | 4:28.66 | Carla (Erzählerin/Lexi) | unsichtbare Motorschaden in der Regel nicht | C. Ergebnis je Variante › nur „gekauft wie gesehen“: nicht erfasst | `541f3a9bd5ca` |
-| 98 | 4:28.66 | 4:29.63 | Carla (Erzählerin/Lexi) | erfasst. | C. Ergebnis je Variante › nur „gekauft wie gesehen“: nicht erfasst | `474422dee314` |
-| 99 | 4:29.63 | 4:34.58 | Carla (Erzählerin/Lexi) | erfasst. Hätte Herr Burmeister den Schaden arglistig verschwiegen oder eine Garantie übernommen, | C. Ergebnis je Variante › Arglist oder Garantie: § 444 BGB | `ece25b5e3b52` |
-| 100 | 4:34.58 | 4:38.58 | Carla (Erzählerin/Lexi) | könnte er sich nach Paragraf vierhundertvierundvierzig nicht auf den Ausschluss | C. Ergebnis je Variante › Arglist oder Garantie: § 444 BGB | `ddcd1483f318` |
-| 101 | 4:38.58 | 4:39.61 | Carla (Erzählerin/Lexi) | berufen. | C. Ergebnis je Variante › Arglist oder Garantie: § 444 BGB | `7e6568eb2a70` |
-| 102 | 4:39.61 | 4:41.10 | Carla (Erzählerin/Lexi) | Und in unserem Fall geht die | C. Ergebnis je Variante › unser Fall: Beschaffenheit vereinbart | `88c167e66da7` |
-| 103 | 4:41.10 | 4:43.14 | Carla (Erzählerin/Lexi) | vereinbarte Beschaffenheit vor: | C. Ergebnis je Variante › unser Fall: Beschaffenheit vereinbart | `177d56ae2bab` |
-| 104 | 4:43.14 | 4:45.74 | Carla (Erzählerin/Lexi) | Christel kann ihre Mängelrechte geltend machen, | C. Ergebnis je Variante › unser Fall: Beschaffenheit vereinbart | `f013eee94399` |
-| 105 | 4:45.74 | 4:47.78 | Carla (Erzählerin/Lexi) | zuerst die Nacherfüllung. | C. Ergebnis je Variante › Folge „Die Käuferrechte auf einen Blick“ | `98b067bdca4e` |
-| 106 | 4:47.78 | 4:51.64 | Carla (Erzählerin/Lexi) | Mehr dazu in unserer Folge zu den Käuferrechten. | C. Ergebnis je Variante › Folge „Die Käuferrechte auf einen Blick“ | `34976d298259` |
-| 107 | 4:51.84 | 4:56.28 | Carla (Erzählerin/Lexi) | Klausurtipp: Prüfe einen Ausschluss immer in drei Schritten. | Klausurtipp · Ausschluss in drei Schritten | `5e6a0982d0af` |
-| 108 | 4:56.28 | 4:57.64 | Carla (Erzählerin/Lexi) | Ist er wirksam? | Klausurtipp · Ausschluss in drei Schritten | `207636f58abf` |
-| 109 | 4:57.64 | 4:59.32 | Carla (Erzählerin/Lexi) | Wie weit reicht er? | Klausurtipp · Ausschluss in drei Schritten | `1de058883c6b` |
-| 110 | 4:59.32 | 5:04.24 | Carla (Erzählerin/Lexi) | Und darf sich der Verkäufer nach Paragraf vierhundertvierundvierzig darauf berufen? | Klausurtipp · Ausschluss in drei Schritten | `54b2848e4c97` |
-| 111 | 5:04.24 | 5:06.80 | Carla (Erzählerin/Lexi) | Lies dafür den ganzen Vertrag, nicht nur die | Klausurtipp · den ganzen Vertrag lesen | `d13cd091e2b8` |
-| 112 | 5:06.80 | 5:07.92 | Carla (Erzählerin/Lexi) | Klausel. | Klausurtipp · den ganzen Vertrag lesen | `c527dd906a7d` |
-| 113 | 5:07.92 | 5:08.60 | Carla (Erzählerin/Lexi) | Ist daneben | Klausurtipp · Beschaffenheit vereinbart? Keine Garantie nötig | `b3ba1aecb06e` |
-| 114 | 5:08.60 | 5:10.72 | Carla (Erzählerin/Lexi) | eine Beschaffenheit vereinbart, nimmt der | Klausurtipp · Beschaffenheit vereinbart? Keine Garantie nötig | `d0119425b67f` |
-| 115 | 5:10.72 | 5:15.98 | Carla (Erzählerin/Lexi) | Ausschluss sie in der Regel aus. Eine Garantie braucht es dafür nicht. | Klausurtipp · Beschaffenheit vereinbart? Keine Garantie nötig | `6e58aef18300` |
-| 116 | 5:15.98 | 5:19.98 | Carla (Erzählerin/Lexi) | Dein Prüfungsschema: Christel gegen Herrn Burmeister, | Prüfungsschema | `0a5b0a92a120` |
-| 117 | 5:19.98 | 5:23.54 | Carla (Erzählerin/Lexi) | Mängelrechte aus Paragraf vierhundertsiebenunddreißig. | Prüfungsschema | `9b14b40b281f` |
-| 118 | 5:23.54 | 5:28.02 | Carla (Erzählerin/Lexi) | Römisch eins: Kaufvertrag und Sachmangel bei Gefahrübergang. | Prüfungsschema › I. Sachmangel | `adbd60880940` |
-| 119 | 5:28.02 | 5:31.30 | Carla (Erzählerin/Lexi) | Römisch zwei: der Gewährleistungsausschluss. | Prüfungsschema › II. Gewährleistungsausschluss | `42871844e7db` |
-| 120 | 5:31.30 | 5:35.78 | Carla (Erzählerin/Lexi) | Erstens: wirksam vereinbart, kein Verbrauchsgüterkauf. | Prüfungsschema › II. Gewährleistungsausschluss | `93dde5cd2386` |
-| 121 | 5:35.78 | 5:43.82 | Carla (Erzählerin/Lexi) | Zweitens: die Reichweite. Gekauft wie gesehen, keine Gewährleistung, schließt grundsätzlich umfassend aus. | Prüfungsschema › II. 2. Reichweite | `7484abba5152` |
-| 122 | 5:43.82 | 5:49.50 | Carla (Erzählerin/Lexi) | Drittens: Paragraf vierhundertvierundvierzig. Arglist und Garantie fehlen. | Prüfungsschema › II. 3. § 444 BGB | `403934920e71` |
-| 123 | 5:49.50 | 5:53.94 | Carla (Erzählerin/Lexi) | Viertens: Der Ausschluss gilt nicht für die vereinbarte Beschaffenheit. | Prüfungsschema › II. 4. vereinbarte Beschaffenheit | `4a54fff4331b` |
-| 124 | 5:53.94 | 5:58.80 | Carla (Erzählerin/Lexi) | Römisch drei: Ergebnis. Christel hat ihre Mängelrechte. | Prüfungsschema › III. Ergebnis | `2bee385a4dbb` |
-| 125 | 5:59.00 | 6:04.16 | Carla (Erzählerin/Lexi) | Merke: Gekauft wie gesehen, keine Gewährleistung, schließt beim Privatkauf | Merksatz | `408d75f8da5c` |
-| 126 | 6:04.16 | 6:05.32 | Carla (Erzählerin/Lexi) | viel aus. | Merksatz | `5743ab8031a6` |
-| 127 | 6:05.32 | 6:06.40 | Carla (Erzählerin/Lexi) | Aber regelmäßig | Merksatz | `bf51d0e38e88` |
-| 128 | 6:06.40 | 6:07.28 | Carla (Erzählerin/Lexi) | nicht, was als | Merksatz | `550df14e9810` |
-| 129 | 6:07.28 | 6:09.36 | Carla (Erzählerin/Lexi) | Beschaffenheit vereinbart ist, und | Merksatz | `25457347055d` |
-| 130 | 6:09.36 | 6:12.80 | Carla (Erzählerin/Lexi) | nie bei Arglist oder Garantie. | Merksatz | `c1a6d95a962f` |
+| 53 | 2:02.30 | 2:06.90 | Carla (Erzählerin/Lexi) | Stünde er in vorformulierten Allgemeinen Geschäftsbedingungen, könnte er nach | B. Gewährleistungsausschluss › falls AGB: § 309 Nr. 7 BGB | `6310719d2544` |
+| 54 | 2:06.90 | 2:09.38 | Carla (Erzählerin/Lexi) | Paragraf dreihundertneun Nummer sieben die | B. Gewährleistungsausschluss › falls AGB: § 309 Nr. 7 BGB | `0a9427ae9531` |
+| 55 | 2:09.38 | 2:13.26 | Carla (Erzählerin/Lexi) | Haftung für Schäden an Leben, Körper und Gesundheit und für | B. Gewährleistungsausschluss › falls AGB: § 309 Nr. 7 BGB | `dc213d9ea297` |
+| 56 | 2:13.26 | 2:16.28 | Carla (Erzählerin/Lexi) | grobes Verschulden nicht ausschließen. | B. Gewährleistungsausschluss › falls AGB: § 309 Nr. 7 BGB | `b0046527b39b` |
+| 57 | 2:16.38 | 2:19.76 | Carla (Erzählerin/Lexi) | Dritter Schritt: Wie weit reicht der Ausschluss? | B. Gewährleistungsausschluss › 3. Reichweite | `c9b10eb03a58` |
+| 58 | 2:19.76 | 2:23.88 | Carla (Erzählerin/Lexi) | Gekauft wie gesehen allein meint nach dem Bundesgerichtshof in aller | B. Gewährleistungsausschluss › „wie gesehen“: nur wahrnehmbare Mängel | `3a92eb3a0719` |
+| 59 | 2:23.88 | 2:26.32 | Carla (Erzählerin/Lexi) | Regel nur Mängel, die man bei der Besichtigung | B. Gewährleistungsausschluss › „wie gesehen“: nur wahrnehmbare Mängel | `f883b6ced0e7` |
+| 60 | 2:26.32 | 2:27.88 | Carla (Erzählerin/Lexi) | wahrnehmen kann, vor allem | B. Gewährleistungsausschluss › „wie gesehen“: nur wahrnehmbare Mängel | `d69e803b66e5` |
+| 61 | 2:27.88 | 2:29.04 | Carla (Erzählerin/Lexi) | sichtbare. | B. Gewährleistungsausschluss › „wie gesehen“: nur wahrnehmbare Mängel | `d00c5ade401a` |
+| 62 | 2:29.04 | 2:30.92 | Carla (Erzählerin/Lexi) | Den Motorschaden konnte Christel | B. Gewährleistungsausschluss › Motorschaden: nicht sichtbar | `b5e665bca572` |
+| 63 | 2:30.92 | 2:31.88 | Carla (Erzählerin/Lexi) | nicht sehen. | B. Gewährleistungsausschluss › Motorschaden: nicht sichtbar | `3f4d58f0aac7` |
+| 64 | 2:31.88 | 2:35.76 | Carla (Erzählerin/Lexi) | Aber hier steht zusätzlich: keine Gewährleistung. | B. Gewährleistungsausschluss › dazu: „keine Gewährleistung“ | `3e5c8667bae0` |
+| 65 | 2:36.04 | 2:38.48 | Carla (Erzählerin/Lexi) | Verbindung versteht der Bundesgerichtshof als | B. Gewährleistungsausschluss › umfassender Ausschluss | `a9f271c25059` |
+| 66 | 2:38.48 | 2:40.08 | Carla (Erzählerin/Lexi) | umfassenden Ausschluss. | B. Gewährleistungsausschluss › umfassender Ausschluss | `a3bedfdc14dd` |
+| 67 | 2:40.08 | 2:44.46 | Carla (Erzählerin/Lexi) | Er erfasst also grundsätzlich auch den versteckten Motorschaden. | B. Gewährleistungsausschluss › Motorschaden grundsätzlich erfasst | `1b517d7e1c2c` |
+| 68 | 2:44.56 | 2:52.38 | Carla (Erzählerin/Lexi) | Grenzen zieht Paragraf vierhundertvierundvierzig: Auf eine Vereinbarung, durch welche die Rechte des Käufer … | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `c621fe09192d` |
+| 69 | 2:52.38 | 2:55.98 | Carla (Erzählerin/Lexi) | ausgeschlossen oder beschränkt werden, kann sich der Verkäufer nicht | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `56ed31dac5cc` |
+| 70 | 2:55.98 | 2:57.90 | Carla (Erzählerin/Lexi) | berufen, soweit er den Mangel | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `e592a8b32ccf` |
+| 71 | 2:57.90 | 2:59.90 | Carla (Erzählerin/Lexi) | arglistig verschwiegen oder eine | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `2b39deb087cc` |
+| 72 | 2:59.90 | 3:03.30 | Carla (Erzählerin/Lexi) | Garantie für die Beschaffenheit der Sache übernommen hat. | B. Gewährleistungsausschluss › Grenze: § 444 BGB | `33cb0086607f` |
+| 73 | 3:03.30 | 3:03.98 | Carla (Erzählerin/Lexi) | Arglist | B. Gewährleistungsausschluss › § 444 BGB: Arglist (−) | `51952a930283` |
+| 74 | 3:03.98 | 3:07.62 | Carla (Erzählerin/Lexi) | scheidet aus: Herr Burmeister wusste nichts vom Schaden. | B. Gewährleistungsausschluss › § 444 BGB: Arglist (−) | `47a92832f5d2` |
+| 75 | 3:07.62 | 3:14.26 | Carla (Erzählerin/Lexi) | Den Händler, der einen Unfallschaden verschweigt, und die Anfechtung zeigt unsere Folge zum Unfallwagen. | B. Gewährleistungsausschluss › Händler und Anfechtung: Folge „Unfallwagen verschwiegen“ | `55428ba1afeb` |
+| 76 | 3:14.36 | 3:18.78 | Carla (Erzählerin/Lexi) | Und eine Garantie? Sie geht weiter als eine bloße Angabe: Der | B. Gewährleistungsausschluss › § 444 BGB: Garantie? | `544bb60c1e5d` |
+| 77 | 3:18.78 | 3:21.58 | Carla (Erzählerin/Lexi) | Verkäufer haftet dann sogar ohne Verschulden auf | B. Gewährleistungsausschluss › § 444 BGB: Garantie? | `c088d96c1ddd` |
+| 78 | 3:21.58 | 3:22.87 | Carla (Erzählerin/Lexi) | Schadensersatz. | B. Gewährleistungsausschluss › § 444 BGB: Garantie? | `3389152e24f5` |
+| 79 | 3:22.87 | 3:28.30 | Carla (Erzählerin/Lexi) | Schadensersatz. Beim Privatverkauf nimmt der Bundesgerichtshof eine Garantie ohne ausdrückliche Abrede | B. Gewährleistungsausschluss › Garantie beim Privatverkauf: nur ausnahmsweise | `01fca3818de5` |
+| 80 | 3:28.30 | 3:29.42 | Carla (Erzählerin/Lexi) | nur unter besonderen | B. Gewährleistungsausschluss › Garantie beim Privatverkauf: nur ausnahmsweise | `4b53278eb1ce` |
+| 81 | 3:29.42 | 3:30.58 | Carla (Erzählerin/Lexi) | Umständen an. | B. Gewährleistungsausschluss › Garantie beim Privatverkauf: nur ausnahmsweise | `f2f7bf8b3044` |
+| 82 | 3:30.58 | 3:31.54 | Carla (Erzählerin/Lexi) | Die gibt es hier | B. Gewährleistungsausschluss › Garantie (−): § 444 BGB hilft nicht | `83aebf03a645` |
+| 83 | 3:31.54 | 3:32.33 | Carla (Erzählerin/Lexi) | nicht. | B. Gewährleistungsausschluss › Garantie (−): § 444 BGB hilft nicht | `2bc38e0e4b5d` |
+| 84 | 3:32.33 | 3:36.64 | Carla (Erzählerin/Lexi) | Paragraf vierhundertvierundvierzig hilft Christel also nicht. | B. Gewährleistungsausschluss › Garantie (−): § 444 BGB hilft nicht | `363e8490ed0a` |
+| 85 | 3:36.74 | 3:41.12 | Carla (Erzählerin/Lexi) | Hat Christel damit verloren? Nein. Entscheidend ist der Satz: | B. Gewährleistungsausschluss › vereinbarte Beschaffenheit geht vor | `e9647b0870d2` |
+| 86 | 3:41.12 | 3:43.40 | Carla (Erzählerin/Lexi) | Motor läuft einwandfrei. | B. Gewährleistungsausschluss › vereinbarte Beschaffenheit geht vor | `e03d44231420` |
+| 87 | 3:43.40 | 3:46.56 | Carla (Erzählerin/Lexi) | Der Bundesgerichtshof hat zweitausendsechs entschieden: | B. Gewährleistungsausschluss › BGHZ 170, 86: Ausschluss gilt nicht dafür | `7a31811815d8` |
+| 88 | 3:46.56 | 3:50.76 | Carla (Erzählerin/Lexi) | Vereinbaren die Parteien eine bestimmte Beschaffenheit und zugleich einen | B. Gewährleistungsausschluss › BGHZ 170, 86: Ausschluss gilt nicht dafür | `bd61a71789c5` |
+| 89 | 3:50.76 | 3:52.29 | Carla (Erzählerin/Lexi) | pauschalen Ausschluss, | B. Gewährleistungsausschluss › BGHZ 170, 86: Ausschluss gilt nicht dafür | `759d09ab1f1f` |
+| 90 | 3:52.29 | 3:54.60 | Carla (Erzählerin/Lexi) | gilt der Ausschluss in der Regel nicht für das | B. Gewährleistungsausschluss › BGHZ 170, 86: Ausschluss gilt nicht dafür | `67bbc60e2c17` |
+| 91 | 3:54.60 | 3:57.04 | Carla (Erzählerin/Lexi) | Fehlen der vereinbarten Beschaffenheit. | B. Gewährleistungsausschluss › BGHZ 170, 86: Ausschluss gilt nicht dafür | `a23439dc04c2` |
+| 92 | 3:57.04 | 4:00.92 | Carla (Erzählerin/Lexi) | Sonst wäre die Vereinbarung für den Käufer ohne Sinn und Wert. | B. Gewährleistungsausschluss › sonst „ohne Sinn und Wert“ | `fe54b428c7ef` |
+| 93 | 4:00.92 | 4:05.04 | Carla (Erzählerin/Lexi) | Das ist ständige Rechtsprechung, auch bei alten Autos und | B. Gewährleistungsausschluss › ständige Rechtsprechung | `254b85c05d05` |
+| 94 | 4:05.20 | 4:06.84 | Carla (Erzählerin/Lexi) | Teilen, die verschleißen. | B. Gewährleistungsausschluss › ständige Rechtsprechung | `5a4d5549a912` |
+| 95 | 4:06.84 | 4:08.84 | Carla (Erzählerin/Lexi) | Der Ausschluss gilt hier also nur | B. Gewährleistungsausschluss › Haftung für den Motor (+) | `4d80b60307d4` |
+| 96 | 4:08.84 | 4:13.86 | Carla (Erzählerin/Lexi) | für andere Mängel. Für den vereinbarten Motor haftet Herr Burmeister. | B. Gewährleistungsausschluss › Haftung für den Motor (+) | `405ba2b1eb16` |
+| 97 | 4:13.96 | 4:17.66 | Carla (Erzählerin/Lexi) | Ergebnis hängt also an einzelnen Sätzen im Vertrag. | C. Ergebnis je Variante | `a0de1543b7fd` |
+| 98 | 4:17.66 | 4:19.30 | Carla (Erzählerin/Lexi) | Ohne den Satz zum Motor | C. Ergebnis je Variante › ohne Satz zum Motor: Ausschluss greift | `5e8a9bde8288` |
+| 99 | 4:19.30 | 4:21.62 | Carla (Erzählerin/Lexi) | greift der Ausschluss, und Christel hat | C. Ergebnis je Variante › ohne Satz zum Motor: Ausschluss greift | `8d80a3ff51d3` |
+| 100 | 4:21.62 | 4:23.10 | Carla (Erzählerin/Lexi) | keine Mängelrechte. | C. Ergebnis je Variante › ohne Satz zum Motor: Ausschluss greift | `d625eb7ad425` |
+| 101 | 4:23.10 | 4:26.34 | Carla (Erzählerin/Lexi) | Stünde dort nur gekauft wie gesehen, wäre der | C. Ergebnis je Variante › nur „gekauft wie gesehen“: nicht erfasst | `c822e16862db` |
+| 102 | 4:26.34 | 4:28.66 | Carla (Erzählerin/Lexi) | unsichtbare Motorschaden in der Regel nicht | C. Ergebnis je Variante › nur „gekauft wie gesehen“: nicht erfasst | `541f3a9bd5ca` |
+| 103 | 4:28.66 | 4:29.63 | Carla (Erzählerin/Lexi) | erfasst. | C. Ergebnis je Variante › nur „gekauft wie gesehen“: nicht erfasst | `474422dee314` |
+| 104 | 4:29.63 | 4:34.58 | Carla (Erzählerin/Lexi) | erfasst. Hätte Herr Burmeister den Schaden arglistig verschwiegen oder eine Garantie übernommen, | C. Ergebnis je Variante › Arglist oder Garantie: § 444 BGB | `ece25b5e3b52` |
+| 105 | 4:34.58 | 4:38.58 | Carla (Erzählerin/Lexi) | könnte er sich nach Paragraf vierhundertvierundvierzig nicht auf den Ausschluss | C. Ergebnis je Variante › Arglist oder Garantie: § 444 BGB | `ddcd1483f318` |
+| 106 | 4:38.58 | 4:39.61 | Carla (Erzählerin/Lexi) | berufen. | C. Ergebnis je Variante › Arglist oder Garantie: § 444 BGB | `7e6568eb2a70` |
+| 107 | 4:39.61 | 4:41.10 | Carla (Erzählerin/Lexi) | Und in unserem Fall geht die | C. Ergebnis je Variante › unser Fall: Beschaffenheit vereinbart | `88c167e66da7` |
+| 108 | 4:41.10 | 4:43.14 | Carla (Erzählerin/Lexi) | vereinbarte Beschaffenheit vor: | C. Ergebnis je Variante › unser Fall: Beschaffenheit vereinbart | `177d56ae2bab` |
+| 109 | 4:43.14 | 4:45.74 | Carla (Erzählerin/Lexi) | Christel kann ihre Mängelrechte geltend machen, | C. Ergebnis je Variante › unser Fall: Beschaffenheit vereinbart | `f013eee94399` |
+| 110 | 4:45.74 | 4:47.78 | Carla (Erzählerin/Lexi) | zuerst die Nacherfüllung. | C. Ergebnis je Variante › Folge „Die Käuferrechte auf einen Blick“ | `98b067bdca4e` |
+| 111 | 4:47.78 | 4:51.64 | Carla (Erzählerin/Lexi) | Mehr dazu in unserer Folge zu den Käuferrechten. | C. Ergebnis je Variante › Folge „Die Käuferrechte auf einen Blick“ | `34976d298259` |
+| 112 | 4:51.84 | 4:56.28 | Carla (Erzählerin/Lexi) | Klausurtipp: Prüfe einen Ausschluss immer in drei Schritten. | Klausurtipp · Ausschluss in drei Schritten | `5e6a0982d0af` |
+| 113 | 4:56.28 | 4:57.64 | Carla (Erzählerin/Lexi) | Ist er wirksam? | Klausurtipp · Ausschluss in drei Schritten | `207636f58abf` |
+| 114 | 4:57.64 | 4:59.32 | Carla (Erzählerin/Lexi) | Wie weit reicht er? | Klausurtipp · Ausschluss in drei Schritten | `1de058883c6b` |
+| 115 | 4:59.32 | 5:04.24 | Carla (Erzählerin/Lexi) | Und darf sich der Verkäufer nach Paragraf vierhundertvierundvierzig darauf berufen? | Klausurtipp · Ausschluss in drei Schritten | `54b2848e4c97` |
+| 116 | 5:04.24 | 5:06.80 | Carla (Erzählerin/Lexi) | Lies dafür den ganzen Vertrag, nicht nur die | Klausurtipp · den ganzen Vertrag lesen | `d13cd091e2b8` |
+| 117 | 5:06.80 | 5:07.92 | Carla (Erzählerin/Lexi) | Klausel. | Klausurtipp · den ganzen Vertrag lesen | `c527dd906a7d` |
+| 118 | 5:07.92 | 5:10.72 | Carla (Erzählerin/Lexi) | Ist daneben eine Beschaffenheit vereinbart, nimmt der | Klausurtipp · Beschaffenheit vereinbart? Keine Garantie nötig | `b3ba1aecb06e` |
+| 119 | 5:10.72 | 5:12.84 | Carla (Erzählerin/Lexi) | Ausschluss sie in der Regel aus. | Klausurtipp · Beschaffenheit vereinbart? Keine Garantie nötig | `70273ad65b1e` |
+| 120 | 5:12.84 | 5:15.98 | Carla (Erzählerin/Lexi) | Eine Garantie braucht es dafür nicht. | Klausurtipp · Beschaffenheit vereinbart? Keine Garantie nötig | `6e58aef18300` |
+| 121 | 5:15.98 | 5:19.98 | Carla (Erzählerin/Lexi) | Dein Prüfungsschema: Christel gegen Herrn Burmeister, | Prüfungsschema | `0a5b0a92a120` |
+| 122 | 5:19.98 | 5:23.54 | Carla (Erzählerin/Lexi) | Mängelrechte aus Paragraf vierhundertsiebenunddreißig. | Prüfungsschema | `9b14b40b281f` |
+| 123 | 5:23.54 | 5:28.02 | Carla (Erzählerin/Lexi) | Römisch eins: Kaufvertrag und Sachmangel bei Gefahrübergang. | Prüfungsschema › I. Sachmangel | `adbd60880940` |
+| 124 | 5:28.02 | 5:31.30 | Carla (Erzählerin/Lexi) | Römisch zwei: der Gewährleistungsausschluss. | Prüfungsschema › II. Gewährleistungsausschluss | `42871844e7db` |
+| 125 | 5:31.30 | 5:35.78 | Carla (Erzählerin/Lexi) | Erstens: wirksam vereinbart, kein Verbrauchsgüterkauf. | Prüfungsschema › II. Gewährleistungsausschluss | `93dde5cd2386` |
+| 126 | 5:35.78 | 5:43.82 | Carla (Erzählerin/Lexi) | Zweitens: die Reichweite. Gekauft wie gesehen, keine Gewährleistung, schließt grundsätzlich umfassend aus. | Prüfungsschema › II. 2. Reichweite | `7484abba5152` |
+| 127 | 5:43.82 | 5:49.50 | Carla (Erzählerin/Lexi) | Drittens: Paragraf vierhundertvierundvierzig. Arglist und Garantie fehlen. | Prüfungsschema › II. 3. § 444 BGB | `403934920e71` |
+| 128 | 5:49.50 | 5:53.94 | Carla (Erzählerin/Lexi) | Viertens: Der Ausschluss gilt nicht für die vereinbarte Beschaffenheit. | Prüfungsschema › II. 4. vereinbarte Beschaffenheit | `4a54fff4331b` |
+| 129 | 5:53.94 | 5:58.80 | Carla (Erzählerin/Lexi) | Römisch drei: Ergebnis. Christel hat ihre Mängelrechte. | Prüfungsschema › III. Ergebnis | `2bee385a4dbb` |
+| 130 | 5:59.00 | 6:04.16 | Carla (Erzählerin/Lexi) | Merke: Gekauft wie gesehen, keine Gewährleistung, schließt beim Privatkauf | Merksatz | `408d75f8da5c` |
+| 131 | 6:04.16 | 6:05.32 | Carla (Erzählerin/Lexi) | viel aus. | Merksatz | `5743ab8031a6` |
+| 132 | 6:05.32 | 6:06.40 | Carla (Erzählerin/Lexi) | Aber regelmäßig | Merksatz | `bf51d0e38e88` |
+| 133 | 6:06.40 | 6:07.28 | Carla (Erzählerin/Lexi) | nicht, was als | Merksatz | `550df14e9810` |
+| 134 | 6:07.28 | 6:09.36 | Carla (Erzählerin/Lexi) | Beschaffenheit vereinbart ist, und | Merksatz | `25457347055d` |
+| 135 | 6:09.36 | 6:12.80 | Carla (Erzählerin/Lexi) | nie bei Arglist oder Garantie. | Merksatz | `c1a6d95a962f` |
