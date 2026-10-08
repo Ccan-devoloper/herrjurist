@@ -39,7 +39,7 @@ SEGMENTE = [
     # --- B Sachverhalt -----------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
     # --- C 1. Vorverfahren ------------------------------------------------------------------------------------------------
-    ("[vv]Erstens: Gibt es überhaupt ein Vorverfahren? Vor der Anfechtungsklage sind Rechtmäßigkeit und Zweckmäßigkeit des "
+    ("[vv]Erstens. Gibt es überhaupt ein Vorverfahren? Vor der Anfechtungsklage sind Rechtmäßigkeit und Zweckmäßigkeit des "
      "Verwaltungsakts nachzuprüfen, Paragraf achtundsechzig Absatz eins. [wl68]Einer solchen Nachprüfung bedarf es aber "
      "nicht, wenn ein Gesetz dies bestimmt. [land]Viele Länder haben den Widerspruch so weitgehend abgeschafft, etwa "
      "Nordrhein-Westfalen und Niedersachsen, jeweils mit Ausnahmen. [land2]Prüfe also immer dein Landesrecht. In unserem "
