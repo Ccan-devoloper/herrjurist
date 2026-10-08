@@ -300,6 +300,17 @@ mix = stimme + sfx[:, None]
 spitze = float(np.abs(mix).max())
 if spitze > 0.97:
     mix *= 0.97 / spitze
+# Folge 258: Spitzenbegrenzer (Vorgriff auf die statische Verstärkung in tools/schnitt.py, dort ≈ +3 dB): Ein einzelner
+# Plosiv in Segment 18 (Isolde, +5,1 dB Angleichung) ergab im Endschnitt −0,9 dBFS. Hüllkurve wie angleichen() in synth_el.py:
+# Minimum über 12 ms, 6 ms geglättet; wirkt nur auf Spitzen über 0,58 (wenige Millisekunden), Lautheit unverändert.
+from scipy.ndimage import minimum_filter1d, uniform_filter1d
+GRENZE = 0.58
+g = np.minimum(1.0, GRENZE / np.maximum(np.abs(mix).max(axis=1), 1e-9))
+g = uniform_filter1d(minimum_filter1d(g, int(0.012 * SR)), int(0.006 * SR))
+g = np.minimum(g, minimum_filter1d(np.minimum(1.0, GRENZE / np.maximum(np.abs(mix).max(axis=1), 1e-9)), 3))
+begrenzt = int((g < 0.999).sum())
+mix *= g[:, None]
+print("Begrenzer:", begrenzt, "Samples, neue Spitze", round(float(np.abs(mix).max()), 3))
 with wave.open(f"{OUT}/ton_mix.wav", "wb") as w:
     w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
     w.writeframes((np.clip(mix, -1, 1) * 32767).astype(np.int16).tobytes())
@@ -307,6 +318,14 @@ json.dump(protokoll, open(f"{OUT}/sfx_cues.json", "w"), indent=1)
 print("SFX:", len(protokoll), "Einsätze, Spitze", round(spitze, 3))
 
 ff = imageio_ffmpeg.get_ffmpeg_exe()
+if "--nur-ton" in sys.argv:                     # nur Tonspur neu: vorhandenes Bild unverändert übernehmen (-c:v copy)
+    ziel = f"{OUT}/" + os.environ.get("VIDEONAME", "258-Anwaltsklausur-Hauptfilm") + ".mp4"
+    subprocess.run([ff, "-y", "-loglevel", "error", "-i", ziel, "-i", f"{OUT}/ton_mix.wav", "-map", "0:v", "-map", "1:a",
+                    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", "-movflags", "+faststart",
+                    "-shortest", ziel + ".neu.mp4"], check=True)
+    os.replace(ziel + ".neu.mp4", ziel)
+    print("nur Ton neu gemischt ->", ziel)
+    sys.exit()
 cmd = [ff, "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
        "-i", f"{OUT}/ton_mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
        "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
