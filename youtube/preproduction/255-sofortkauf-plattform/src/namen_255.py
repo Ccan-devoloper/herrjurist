@@ -14,7 +14,7 @@ from scipy.signal import resample_poly
 cj = json.load(open("../cues.json"))
 w = wave.open("../stimme.wav"); sr = w.getframerate()
 x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
-NAMEN = ("Kübler", "Wetzel")  # Figurennamen
+NAMEN = ("Eichler", "Hegemann")  # Figurennamen
 
 
 def mel_fb(n_fft=512, n_mel=26, sr=16000):
