@@ -8,8 +8,7 @@ U = sys.argv[1]
 cj = json.load(open("../cues.json"))
 T = lambda c: cj["cues"][c]["t"] + 8.0
 KAP = [(0.0, "Der Fall: Unfallschaden verschwiegen"),
-       (T("ansp"), "Zwei Wege: Anfechtung oder Rücktritt"),
-       (T("p123"), "Arglistige Täuschung, § 123 I BGB"),
+       (T("ansp"), "Zwei Wege; arglistige Täuschung, § 123 I BGB"),
        (T("luege"), "Täuschung durch Schweigen: Aufklärungspflicht"),
        (T("irrtum"), "Irrtum, Kausalität und Arglist"),
        (T("p124"), "Frist § 124 BGB und Rechtsfolge § 142 I BGB"),
@@ -71,10 +70,12 @@ srt = re.sub(r"(Abs\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
 ERSATZ = [("Hecker: Achttausend", "Herr Hecker: Achttausend"), ("Pruefer:", "Prüfer:")]
 for a, b in ERSATZ:
     srt = srt.replace(a, b)
+srt = re.sub(r"(achttausend)\n\n(\d+)\n([^\n]+)\nEuro([.,]) ?", r"\1 Euro\4\n\n\2\n\3\n", srt)  # Einheit nicht vom Betrag trennen
 ZAHL = [(r"[Aa]chttausend(\s)Euro", r"8.000\1€"), (r"[Dd]rei(\s)Monate", r"3\1Monate")]
 for a, b in ZAHL:
     srt = re.sub(a, b, srt)
 srt = re.sub(r"(\d)\n€ ?", r"\1 €\n", srt)
+srt = re.sub(r"€\n([,.;:]) ?", r"€\1\n", srt)
 srt = re.sub(r"\n\n\n+", "\n\n", srt)
 assert not re.search(r"§\n|Abs\.\n|achttausend|Pruefer", srt, re.I), re.findall(r".{0,30}(?:achttausend|Pruefer).{0,30}", srt, re.I)
 open(f"{U}/untertitel.srt", "w").write(srt)

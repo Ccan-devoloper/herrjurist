@@ -23,8 +23,8 @@ STIMMEN = {"Angelika": "sabrina", "Hecker": "marc", "Pruefer": "william"}  # Lex
 
 SEGMENTE = [
     # --- A1 Fall: beim Gebrauchtwagenhändler ------------------------------------------------------------------------
-    ("[fall]Angelika ist selbständige Hebamme und braucht ein Auto für ihre Hausbesuche. [hof]Beim Gebrauchtwagenhändler "
-     "Herrn Hecker findet sie einen Kombi für achttausend Euro. [vorher]Was sie nicht weiß: Herr Hecker hat den Wagen als "
+    ("[fall]Angelika ist selbständige Hebamme und braucht ein Auto für ihre Hausbesuche. [hof]Beim Gebrauchtwagenhändler, "
+     "Herrn Hecker, findet sie einen Kombi für achttausend Euro. [vorher]Was sie nicht weiß: Herr Hecker hat den Wagen als "
      "Unfallwagen angekauft und den schweren Frontschaden in seiner eigenen Werkstatt reparieren lassen.", P),
     ("[h1]Achttausend Euro, aber ohne jede Gewährleistung.", P, "Hecker"),
     ("[kauf]Nach Unfällen fragt Angelika nicht, und Herr Hecker sagt nichts. [unterschr]Sie unterschreibt.", P),
