@@ -51,3 +51,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 119 Bildhalte aus dem finalen MP4, Fallszenen als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen oben, besonders „ad incertas personas“ bei 2:28,8, „an seinen Preis“ bei 4:38,2 und „nichtig“ bei 5:07,3); Thumbnail-Oberteile (Generator); Themenplan-Ergänzung durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 08.10.2026
+
+## Drive (Readback 08.10.2026, rclone)
+
+Ordner `LexVerse Produktion/255 Sofort kaufen Plattform/`, ID `1U8OknnmygXI3_IXE_r9KaAD5vKsvf1UF` (nur per rclone angelegt, genau ein Ordner dieses Namens):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `255-Sofort-kaufen-Plattform.mp4` | 25.835.745 |
+| `255-Sofort-kaufen-Plattform-Hauptfilm.mp4` | 18.542.628 |
+| `master.zip` | 48.845.042 |
+| `thumb_A.jpg` | 159.867 |
+| `thumb_B.jpg` | 158.632 |
+| `beschreibung.txt` | 3.315 |
+| `kapitel.txt` | 458 |
+| `untertitel.srt` | 8.339 |
+| `metadaten.json` | 4.514 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; `master.zip` 286 Dateien, `unzip -t` fehlerfrei, MD5 lokal = Drive (`d21efaccf738…`). Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
