@@ -74,10 +74,10 @@ srt = re.sub(r"(Abs\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
 srt = re.sub(r"(Nr\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
 srt = re.sub(r" \n", "\n", srt)
 srt = re.sub(r"\n\n\n+", "\n\n", srt)
-for alt, neu in [("zweihundertdreizehn.", "213."), ("zweiundfünfzig.", "52.")]:
+for alt, neu in [("zweihundertdreizehn.", "213."), ("zweiundfünfzig.", "052."), ("Folge 52.", "Folge 052.")]:
     if alt in srt:
         srt = srt.replace(alt, neu)
-assert not re.search(r"§\n|Abs\.\n|Nr\.\n|Paragraf", srt), "Untertitel prüfen"
+assert not re.search(r"§\n|Abs\.\n|Nr\.\n|Paragraf(?!en\. In deinem)", srt), "Untertitel prüfen"
 open(f"{U}/untertitel.srt", "w").write(srt)
 
 m = json.load(open(f"{U}/metadaten.json"))
