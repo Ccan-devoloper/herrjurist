@@ -56,10 +56,10 @@ SEGMENTE = [
     ("[bghrn]Der BGH: Paragraf zweihundertneununddreißig schützt die potenzielle persönliche Bewegungsfreiheit. Ob der "
      "Betroffene seine Freiheitsbeschränkung überhaupt realisiert, ist ohne Belang. [bgherg]Das erschlichene "
      "Einverständnis half den Angeklagten deshalb nicht; die Verurteilung wegen Freiheitsberaubung blieb bestehen.", P),
-    ("[bghgr]Die Gründe: der Wortlaut und das hohe Gut der Bewegungsfreiheit. [bghsys]Außerdem wird die "
-     "Freiheitsberaubung schwerer bestraft als die Nötigung und steht vor ihr im Gesetz; ein bloßer Spezialfall sei sie "
-     "nicht. [bghvers]Und für den Versuch bleibt Raum: etwa, wenn der Täter jemanden einschließen will, aber der Schlüssel "
-     "nicht passt.", PS),
+    ("[bghgr]Die Gründe: erstens der Wortlaut, zweitens das hohe Gut der Bewegungsfreiheit. [bghsys]Außerdem wird die "
+     "Freiheitsberaubung schwerer bestraft als die Nötigung und steht im Strafgesetzbuch vor ihr; ein bloßer Spezialfall "
+     "sei sie nicht. [bghvers]Und auch für den Versuch bleibt ein Anwendungsbereich: etwa, wenn der Täter jemanden "
+     "einschließen will, aber der Schlüssel nicht passt.", PS),
     # --- G Lösung im Fall ------------------------------------------------------------------------------------------------
     ("[loes]Zurück zu Gerber. [loes1]Nach der ersten Ansicht und dem BGH ist Joscha der Freiheit beraubt: Zwei Stunden lang "
      "hätte er sein Zimmer nicht verlassen können, wenn er gewollt hätte. [loes2]Dass er schlief und nichts merkte, ist "
