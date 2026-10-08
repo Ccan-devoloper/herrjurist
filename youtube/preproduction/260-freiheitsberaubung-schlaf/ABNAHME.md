@@ -51,3 +51,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 117 Bildhalte aus dem finalen MP4, Fallszene als Einzelbilder in voller Auflösung, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium) je Segment, Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen und das Geräusch); Thumbnail-Kleidung (Generator); Themenplan-Ergänzung durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 08.10.2026
+
+## Drive (Readback 08.10.2026, rclone)
+
+Ordner `LexVerse Produktion/260 Freiheitsberaubung im Schlaf/`, ID `19E7YfOa6OnebXuw4F-HNPAMtoPn475mA` (nur per rclone angelegt, ein Ordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `260-Freiheitsberaubung-im-Schlaf.mp4` | 25.082.593 |
+| `260-Freiheitsberaubung-im-Schlaf-Hauptfilm.mp4` | 17.744.540 |
+| `master.zip` | 44.875.051 |
+| `thumb_A.jpg` | 159.271 |
+| `thumb_B.jpg` | 162.937 |
+| `beschreibung.txt` | 2.372 |
+| `kapitel.txt` | 407 |
+| `untertitel.srt` | 8.139 |
+| `metadaten.json` | 3.612 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; MD5 `master.zip` lokal = Drive (`aa2a28f731463b8ef5d0f68ea83369d8`), 276 Einträge, `unzip -t` fehlerfrei. `out/ton_mix.wav` nach dem Upload gelöscht; MP4s, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung. Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt).
