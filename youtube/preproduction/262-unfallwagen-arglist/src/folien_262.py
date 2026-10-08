@@ -412,7 +412,7 @@ folie([("hu", "Fall · Drei Monate später: Hauptuntersuchung"), ("p1", "Fall ·
     hart(feld(CARB - 300, 420, 34, BODEN - 424, "hu", fill=HELLGRAU, rand=4, rund=6, name="saeule1")),
     hart(feld(CARB + 266, 420, 34, BODEN - 424, "hu", fill=HELLGRAU, rand=4, rund=6, name="saeule2")),
     szene(bewegt(hart(feld(CARB - 262, PLAT, 524, 24, "hu", fill=HELLGRAU, rand=4, rund=6, name="plattform")),
-                 H0, H1, 0, HUB), "262hebebuehne*", 0.6, 0.0),
+                 H0, H1, 0, HUB), "262hebebuehne*", 0.6, round(T_(H0) - T_("hu"), 3)),   # Klang mit der Hubbewegung
     bewegt(kombi(CARB, PLAT + 4, 420, "hu"), H0, H1, 0, HUB),
     # Prüfer (rechts, blickt nach links zum Kombi und zeigt darauf)
     *fig("PR", PRX, BODEN, FH, [("hu", "ruhig")], bis="p1", erst="pop"),
