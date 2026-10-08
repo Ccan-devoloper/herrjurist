@@ -12,12 +12,12 @@ Quelle: `bildhalt_manifest.json` (111 Bildhalte, davon 111 eigenständig), `cues
 | 6 | 0:11.56 | 0:14.86 | Carla (Erzählerin/Lexi) | zweites Examen in Bayern schon am Laptop geschrieben. | Fall · Prüfungssaal kurz vor dem Examen | `dcc17f9ee124` |
 | 7 | 0:14.86 | 0:16.06 | Telse | Tippen oder mit der | Fall · tippen oder mit der Hand schreiben? | `0a1d7fe00ce3` |
 | 8 | 0:16.06 | 0:19.56 | Telse | Hand schreiben? Was ändert sich da wirklich? | Fall · tippen oder mit der Hand schreiben? | `73d242af0224` |
-| 9 | 0:19.56 | 0:21.72 | Jost | Mehr als die Tastatur. Aber das | Fall · mehr als die Tastatur, das Wichtigste bleibt | `eac241a069bc` |
-| 10 | 0:21.72 | 0:23.62 | Jost | Wichtigste bleibt gleich. | Fall · mehr als die Tastatur, das Wichtigste bleibt | `803f7dec0f32` |
+| 9 | 0:19.56 | 0:21.72 | Jost | Mehr als die Tastatur. Aber das | Fall · mehr als die Tastatur, das Wichtigste bleibt | `a32c74706cb2` |
+| 10 | 0:21.72 | 0:23.62 | Jost | Wichtigste bleibt gleich. | Fall · mehr als die Tastatur, das Wichtigste bleibt | `71273a15f2c4` |
 | 11 | 0:24.02 | 0:25.22 | Carla (Erzählerin/Lexi) | Stift jetzt | Einstieg · statt Stift jetzt Tastatur | `b503a08c9b49` |
 | 12 | 0:25.22 | 0:26.42 | Carla (Erzählerin/Lexi) | Tastatur. | Einstieg · statt Stift jetzt Tastatur | `1dff913e6da7` |
-| 13 | 0:26.42 | 0:27.14 | Carla (Erzählerin/Lexi) | Das ist das | Einstieg › E-Examen: Klausuren am Computer | `55bc5b9e0fc8` |
-| 14 | 0:27.14 | 0:31.34 | Carla (Erzählerin/Lexi) | E-Examen: Du schreibst die Examensklausuren am Computer. | Einstieg › E-Examen: Klausuren am Computer | `383c7d7f6487` |
+| 13 | 0:26.42 | 0:27.14 | Carla (Erzählerin/Lexi) | Das ist das | Einstieg › E-Examen: Klausuren am Computer | `22082410c13e` |
+| 14 | 0:27.14 | 0:31.34 | Carla (Erzählerin/Lexi) | E-Examen: Du schreibst die Examensklausuren am Computer. | Einstieg › E-Examen: Klausuren am Computer | `d86f7dd02ce2` |
 | 15 | 0:31.34 | 0:32.66 | Carla (Erzählerin/Lexi) | Hier siehst du, wo das | Einstieg › geregelt? ändert sich? bleibt? vorbereiten? | `92f8ba219933` |
 | 16 | 0:32.66 | 0:34.26 | Carla (Erzählerin/Lexi) | geregelt ist, was sich | Einstieg › geregelt? ändert sich? bleibt? vorbereiten? | `ddfef4a67ec4` |
 | 17 | 0:34.26 | 0:35.14 | Carla (Erzählerin/Lexi) | ändert, was | Einstieg › geregelt? ändert sich? bleibt? vorbereiten? | `53a01a7f7342` |
@@ -28,9 +28,9 @@ Quelle: `bildhalt_manifest.json` (111 Bildhalte, davon 111 eigenständig), `cues
 | 22 | 0:50.88 | 0:55.20 | Carla (Erzählerin/Lexi) | Im Deutschen Richtergesetz, Paragraf fünf d Absatz sechs. | Rechtsgrundlage › § 5d Abs. 6 DRiG | `706ab18e18da` |
 | 23 | 0:55.20 | 0:56.52 | Carla (Erzählerin/Lexi) | Das Nähere regelt das | Rechtsgrundlage › § 5d Abs. 6 DRiG | `39d048298921` |
 | 24 | 0:56.52 | 0:57.68 | Carla (Erzählerin/Lexi) | Landesrecht. | Rechtsgrundlage › § 5d Abs. 6 DRiG | `b6e5f7f16d20` |
-| 25 | 0:57.68 | 1:02.00 | Carla (Erzählerin/Lexi) | Es kann auch bestimmen, dass in den staatlichen Prüfungen schriftliche Leistungen | Rechtsgrundlage › Land darf elektronische Klausuren zulassen | `727bd7e7ebc9` |
-| 26 | 1:02.00 | 1:03.44 | Carla (Erzählerin/Lexi) | elektronisch erbracht werden | Rechtsgrundlage › Land darf elektronische Klausuren zulassen | `81a5c414d52a` |
-| 27 | 1:03.44 | 1:04.16 | Carla (Erzählerin/Lexi) | dürfen. | Rechtsgrundlage › Land darf elektronische Klausuren zulassen | `d62c9583c41c` |
+| 25 | 0:57.68 | 1:02.00 | Carla (Erzählerin/Lexi) | Es kann auch bestimmen, dass in den staatlichen Prüfungen schriftliche Leistungen | Rechtsgrundlage › Land darf elektronische Klausuren zulassen | `7f0fbb36c75a` |
+| 26 | 1:02.00 | 1:03.44 | Carla (Erzählerin/Lexi) | elektronisch erbracht werden | Rechtsgrundlage › Land darf elektronische Klausuren zulassen | `b8b3bdaa3f15` |
+| 27 | 1:03.44 | 1:04.16 | Carla (Erzählerin/Lexi) | dürfen. | Rechtsgrundlage › Land darf elektronische Klausuren zulassen | `7d0dd5e0bc1b` |
 | 28 | 1:04.16 | 1:07.72 | Carla (Erzählerin/Lexi) | Ob und wie, entscheidet also dein Land. Hier zwei | Rechtsgrundlage › ob und wie: dein Land | `5b90d4ab724b` |
 | 29 | 1:07.72 | 1:08.98 | Carla (Erzählerin/Lexi) | Beispiele. | Rechtsgrundlage › ob und wie: dein Land | `1f575aec6d53` |
 | 30 | 1:09.08 | 1:12.14 | Carla (Erzählerin/Lexi) | Nordrhein-Westfalen müssen die Prüfungsämter seit dem | Länder › NRW: seit 1.1.2024 im 1. und 2. Examen | `95f09746f29c` |
@@ -45,9 +45,9 @@ Quelle: `bildhalt_manifest.json` (111 Bildhalte, davon 111 eigenständig), `cues
 | 39 | 1:55.24 | 1:58.88 | Carla (Erzählerin/Lexi) | Erstens die Gliederung: Überschriften setzt du mit | Was ändert sich › 1. Gliederung | `235dad66224e` |
 | 40 | 1:58.88 | 2:01.40 | Carla (Erzählerin/Lexi) | Absätzen und Einzügen. Eine | Was ändert sich › 1. Gliederung | `7cf65be3f604` |
 | 41 | 2:01.40 | 2:05.24 | Carla (Erzählerin/Lexi) | automatische Gliederung bietet die bayerische Software nicht. | Was ändert sich › 1. Gliederung | `15066a51f1dd` |
-| 42 | 2:05.24 | 2:08.68 | Carla (Erzählerin/Lexi) | Zweitens das Korrigieren und Umstellen: Du | Was ändert sich › 2. Korrigieren und Umstellen | `899ebcdde13d` |
-| 43 | 2:08.68 | 2:13.00 | Carla (Erzählerin/Lexi) | löschst, fügst ein und verschiebst ganze Absätze, ohne dass etwas | Was ändert sich › 2. Korrigieren und Umstellen | `bf9ba294e1bc` |
-| 44 | 2:13.00 | 2:14.68 | Carla (Erzählerin/Lexi) | durchgestrichen ist. | Was ändert sich › 2. Korrigieren und Umstellen | `4b6487843993` |
+| 42 | 2:05.24 | 2:08.68 | Carla (Erzählerin/Lexi) | Zweitens das Korrigieren und Umstellen: Du | Was ändert sich › 2. Korrigieren und Umstellen | `1d323d205be9` |
+| 43 | 2:08.68 | 2:13.00 | Carla (Erzählerin/Lexi) | löschst, fügst ein und verschiebst ganze Absätze, ohne dass etwas | Was ändert sich › 2. Korrigieren und Umstellen | `e05cfbc4eb53` |
+| 44 | 2:13.00 | 2:14.68 | Carla (Erzählerin/Lexi) | durchgestrichen ist. | Was ändert sich › 2. Korrigieren und Umstellen | `89f55b80d204` |
 | 45 | 2:14.68 | 2:16.52 | Carla (Erzählerin/Lexi) | Eine Rechtschreibprüfung kannst du in | Was ändert sich › Rechtschreibprüfung | `3771e8dc7fd6` |
 | 46 | 2:16.52 | 2:19.52 | Carla (Erzählerin/Lexi) | Nordrhein-Westfalen ein- und ausschalten, in | Was ändert sich › Rechtschreibprüfung | `91b9584ae128` |
 | 47 | 2:19.52 | 2:21.42 | Carla (Erzählerin/Lexi) | Bayern gibt es keine. | Was ändert sich › Rechtschreibprüfung | `111f654801c0` |
@@ -73,8 +73,8 @@ Quelle: `bildhalt_manifest.json` (111 Bildhalte, davon 111 eigenständig), `cues
 | 67 | 3:10.42 | 3:11.62 | Carla (Erzählerin/Lexi) | Gutachtenstil, | Was bleibt › Gutachtenstil, Argumente, Schwerpunkte | `59991b8343f7` |
 | 68 | 3:11.62 | 3:13.50 | Carla (Erzählerin/Lexi) | Argumente und die richtigen | Was bleibt › Gutachtenstil, Argumente, Schwerpunkte | `5f39ab094451` |
 | 69 | 3:13.50 | 3:14.62 | Carla (Erzählerin/Lexi) | Schwerpunkte. | Was bleibt › Gutachtenstil, Argumente, Schwerpunkte | `1258510341e3` |
-| 70 | 3:14.62 | 3:18.02 | Carla (Erzählerin/Lexi) | Tippen geht schneller und verführt zu langen Texten. | Was bleibt › mehr Text ist nicht besser | `64003ee80915` |
-| 71 | 3:18.02 | 3:21.04 | Carla (Erzählerin/Lexi) | Mehr Text ist aber nicht automatisch besser. | Was bleibt › mehr Text ist nicht besser | `1690bf7e1d6d` |
+| 70 | 3:14.62 | 3:18.02 | Carla (Erzählerin/Lexi) | Tippen geht schneller und verführt zu langen Texten. | Was bleibt › mehr Text ist nicht besser | `e0957ef6f49c` |
+| 71 | 3:18.02 | 3:21.04 | Carla (Erzählerin/Lexi) | Mehr Text ist aber nicht automatisch besser. | Was bleibt › mehr Text ist nicht besser | `57879e371b8d` |
 | 72 | 3:21.14 | 3:23.00 | Carla (Erzählerin/Lexi) | Wie bereitest du dich vor? | Vorbereitung · Wie bereitest du dich vor? | `e4206ad11e16` |
 | 73 | 3:23.00 | 3:25.76 | Carla (Erzählerin/Lexi) | Schreib deine Probeklausuren am Rechner, in | Vorbereitung › Probeklausuren am Rechner | `33c64ca1647c` |
 | 74 | 3:25.76 | 3:28.20 | Carla (Erzählerin/Lexi) | voller Länge und mit fester Zeit. | Vorbereitung › Probeklausuren am Rechner | `fe5186f1caee` |
@@ -107,11 +107,11 @@ Quelle: `bildhalt_manifest.json` (111 Bildhalte, davon 111 eigenständig), `cues
 | 101 | 4:36.80 | 4:40.56 | Carla (Erzählerin/Lexi) | Römisch drei: Probeklausuren am Rechner schreiben. | E-Examen › III. Probeklausuren am Rechner | `92f4219a58ba` |
 | 102 | 4:40.56 | 4:44.80 | Carla (Erzählerin/Lexi) | Römisch vier: Lösungsskizze auf Papier, dann tippen. | E-Examen › IV. erst Papier, dann tippen | `b8167c996f04` |
 | 103 | 4:44.80 | 4:49.18 | Carla (Erzählerin/Lexi) | Römisch fünf: Zeit und Schwerpunkte im Blick behalten. | E-Examen › V. Zeit und Schwerpunkte | `902afc279959` |
-| 104 | 4:49.38 | 4:52.02 | Carla (Erzählerin/Lexi) | Merke: Im E-Examen ändert sich das | Merksatz | `0d23d64a36c4` |
-| 105 | 4:52.02 | 4:53.46 | Carla (Erzählerin/Lexi) | Werkzeug, nicht der | Merksatz | `73d1a194370b` |
-| 106 | 4:53.46 | 4:54.42 | Carla (Erzählerin/Lexi) | Maßstab. | Merksatz | `4d06a6f4c6ab` |
-| 107 | 4:54.42 | 4:55.10 | Carla (Erzählerin/Lexi) | Es zählen | Merksatz | `bf6aa430bb89` |
-| 108 | 4:55.10 | 4:56.34 | Carla (Erzählerin/Lexi) | Gutachtenstil und | Merksatz | `9d925de574f3` |
-| 109 | 4:56.34 | 4:57.46 | Carla (Erzählerin/Lexi) | Schwerpunkte. | Merksatz | `22b8c4e87950` |
-| 110 | 4:57.46 | 5:01.70 | Carla (Erzählerin/Lexi) | Ob und wie du am Laptop schreibst, regelt dein Land, also frag dein | Merksatz | `778d13e17b49` |
-| 111 | 5:01.70 | 5:04.06 | Carla (Erzählerin/Lexi) | Prüfungsamt. | Merksatz | `af2a08adbb42` |
+| 104 | 4:49.38 | 4:52.02 | Carla (Erzählerin/Lexi) | Merke: Im E-Examen ändert sich das | Merksatz | `3eb31bfdb9c3` |
+| 105 | 4:52.02 | 4:53.46 | Carla (Erzählerin/Lexi) | Werkzeug, nicht der | Merksatz | `0cd55fe94c78` |
+| 106 | 4:53.46 | 4:54.42 | Carla (Erzählerin/Lexi) | Maßstab. | Merksatz | `ea073be05226` |
+| 107 | 4:54.42 | 4:55.10 | Carla (Erzählerin/Lexi) | Es zählen | Merksatz | `4e218b7d3406` |
+| 108 | 4:55.10 | 4:56.34 | Carla (Erzählerin/Lexi) | Gutachtenstil und | Merksatz | `3079e555348e` |
+| 109 | 4:56.34 | 4:57.46 | Carla (Erzählerin/Lexi) | Schwerpunkte. | Merksatz | `91c0a1232d6d` |
+| 110 | 4:57.46 | 5:01.70 | Carla (Erzählerin/Lexi) | Ob und wie du am Laptop schreibst, regelt dein Land, also frag dein | Merksatz | `a15e651f4a37` |
+| 111 | 5:01.70 | 5:04.06 | Carla (Erzählerin/Lexi) | Prüfungsamt. | Merksatz | `63960bba6fc9` |

@@ -8,7 +8,7 @@
 
 | Figur | Rolle | Open Peeps | Stimme |
 |---|---|---|---|
-| Telse (TE/TS), Anfang 20 | Jurastudentin in NRW, bald Pflichtfachprüfung | stehend `standing/robot_dance-3` (offene Geste; Oberteil Lila `#B8A9F5`, Hose Schwarz `#151515`, weiße Schuhe), sitzend am Laptop `sitting/mid-2` (Oberteil Lila, schwarze Hose der Pose) – gleiche Kleidung; Kopf `Long Bangs` (schwarzes Haar, nicht einfärbbar), Haut `#F2CBA8`, keine Brille, kein Bart; Mimiken `Suspicious` (denkt), `Concerned\|Serious` (Sorge, redet t1), `Smile`, `Smile Big\|Smile` (lacht), `Awe` (staunt), `Driven`, `Calm` (sitzend redet t2) | `ela_froh` (Frau, jung, fröhlich) |
+| Telse (TE/TS), Anfang 20 | Jurastudentin in NRW, bald Pflichtfachprüfung | stehend `standing/robot_dance-3` (offene Geste; Oberteil Lila `#B8A9F5`, Hose Schwarz `#151515`, weiße Schuhe), sitzend am Laptop `sitting/mid-2` (Oberteil Lila, schwarze Hose der Pose) – gleiche Kleidung; Kopf `Long Bangs` (schwarzes Haar, nicht einfärbbar), Haut `#F2CBA8`, keine Brille, kein Bart; Mimiken `Suspicious` (denkt), `Concerned\|Serious` (Sorge, redet t1), `Smile`, `Smile Big\|Smile` (lacht), `Cute` (staunt/freut sich; `Awe` verworfen, weil die runden Augen wie eine Brille wirken), `Driven`, `Calm` (sitzend redet t2) | `ela_froh` (Frau, jung, fröhlich) |
 | Jost (JO), Ende 20 | Bruder, 2. Examen in Bayern am Laptop | `standing/blazer-4` (Sakko Petrol `#8CCBC0`, Shirt Weiß, schwarze Hose der Pose), Kopf `Short 1` (schwarzes Haar), Haut `#B07552`, keine Brille, kein Bart; Mimiken `Calm` (redet j1), `Smile` (redet j2/j3), `Serious`, `Suspicious` | `niklas` (Mann, jung) |
 | Lexi | Klausurtipp (warnt), Merksatz (erklärt) | nach `lexi.py` (`robot_dance-1`, `Serious`/`Smile`) | Carla Blum |
 | Erzählerin | – | – | Carla Blum |

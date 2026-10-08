@@ -12,7 +12,7 @@ Figurenrezept; zusätzlich 273–275: crossed_arms-2, shirt-4, easing-2, resting
 bleibt Lexi; keine Polka Dots, keine Prothesen-Posen (blazer-1/-2, shirt-1/-2), keine Bärte, keine Karikatur. Präfixe
 TE_/JO_ (nie ER_). Die Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und blickt nach links,
 Suffix _r blickt nach rechts.
-Grundmimik immer mit geschlossenem Mund (FOLGE-ABLAUF.md): Calm, Smile, Suspicious, Serious, Driven, Awe bzw.
+Grundmimik immer mit geschlossenem Mund (FOLGE-ABLAUF.md): Calm, Smile, Suspicious, Serious, Driven, Cute bzw.
 „Augen|geschlossener Mund“ (Concerned|Serious, Smile Big|Smile). Sprechende Ansichten TE_redet, TE_redet2, JO_redet,
 JO_redetfroh (und Lexi) zusätzlich mit a/o/e: Augen der Grundmimik + Mund Explaining / Concerned Fear / Hectic, Schnitt
 bei 60 %."""
@@ -34,7 +34,7 @@ P = {   # Person: (Pose, Kopf, Bart, Brille, Farben)
 # (Name, Person, Grundmimik, mit Mundzuständen); jede Ansicht zusätzlich als _r (blickt nach rechts)
 LISTE = [
     ("TE_ruhig", "TE", "Calm", 0), ("TE_sorge", "TE", "Concerned|Serious", 0), ("TE_denkt", "TE", "Suspicious", 0),
-    ("TE_froh", "TE", "Smile", 0), ("TE_entschlossen", "TE", "Driven", 0), ("TE_staunt", "TE", "Awe", 0),
+    ("TE_froh", "TE", "Smile", 0), ("TE_entschlossen", "TE", "Driven", 0), ("TE_staunt", "TE", "Cute", 0),
     ("TE_lacht", "TE", "Smile Big|Smile", 0),
     ("TE_redet", "TE", "Concerned|Serious", 1), ("TE_redet2", "TE", "Driven", 1),
     ("TS_tippt", "TS", "Calm", 0), ("TS_froh", "TS", "Smile", 0), ("TS_redet", "TS", "Calm", 1),
