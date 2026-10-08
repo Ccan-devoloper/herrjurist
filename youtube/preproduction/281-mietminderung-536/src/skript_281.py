@@ -30,7 +30,7 @@ SEGMENTE = [
     ("[teub]Frau Teuber, die Vermieterin, sieht sich alles an.", P),
     ("[t1]Der Schimmel kommt vom Lüften. Und für die Baustelle nebenan kann ich nichts.", P, "Teuber"),
     ("[f1]Dann überweise ich ab Februar nur noch die halbe Miete.", P, "Friedemann"),
-    ("[frage]Ist die Miete gemindert? [frage2]Muss Friedemann etwas erklären? [frage3]Und was riskiert er, wenn er "
+    ("[frage]Ist seine Miete gemindert? [frage2]Muss Friedemann etwas erklären? [frage3]Und was riskiert er, wenn er "
      "zu viel abzieht?", PS),
     # --- B Sachverhalt -------------------------------------------------------------------------------------------------
     ("[sv]Hier ist der Sachverhalt zum Nachlesen. Halte das Video ruhig kurz an.", 5.0),
@@ -40,8 +40,8 @@ SEGMENTE = [
      "Tauglichkeit nur gemindert, zahlt er eine angemessen herabgesetzte Miete. [w536s3]Eine unerhebliche Minderung "
      "bleibt außer Betracht.", P),
     ("[kraft]Das geschieht kraft Gesetzes. Friedemann muss nichts erklären, anders als ein Käufer, der den Kaufpreis nach "
-     "Paragraf vierhunderteinundvierzig durch Erklärung mindert. [mangel]Ein Mangel ist jede für den Mieter nachteilige "
-     "Abweichung des tatsächlichen Zustands vom vertraglich vorausgesetzten. [unerh]Unerheblich ist etwa ein Fehler, der leicht "
+     "Paragraf vierhunderteinundvierzig durch Erklärung mindert. [mangel]Ein Mangel liegt vor, wenn der tatsächliche "
+     "Zustand zum Nachteil des Mieters vom vertraglich vorausgesetzten abweicht. [unerh]Unerheblich ist etwa ein Fehler, der leicht "
      "erkennbar ist und schnell und mit geringen Kosten behoben werden kann. [brutto]Gerechnet wird nach dem "
      "Bundesgerichtshof von der Bruttomiete, also samt Nebenkosten: bei Friedemann von achthundertfünfzig Euro.", PS),
     # --- D1 Beispiel 1: Schimmel (Ursache, Beweislast nach Verantwortungsbereichen, Baustandard) ----------------------
@@ -59,7 +59,7 @@ SEGMENTE = [
      "keine Ansprüche zu haben, muss sie die Tatsachen aus ihrem Bereich beweisen.", P),
     # --- D3 Beispiel 3: kalte Heizung ---------------------------------------------------------------------------------
     ("[s3]Drittens die kalte Heizung. Auch die Wärme schuldet die Vermieterin. "
-     "[s3b]Fällt die Heizung im Januar aus, ist die Tauglichkeit für diese Zeit gemindert. [s3c]Um wie viel, hängt vom "
+     "[s3b]Fällt die Heizung im Januar aus, ist die Tauglichkeit der Wohnung für diese Zeit gemindert. [s3c]Um wie viel, hängt vom "
      "Einzelfall ab, etwa von Dauer und Außentemperatur.", PS),
     # --- E § 536c (Wortlautkarte Abs. 1 S. 1, Abs. 2 S. 2 Nr. 1) -------------------------------------------------------
     ("[w536c]Paragraf fünfhundertsechsunddreißig c: Zeigt sich im Laufe der Mietzeit ein Mangel, so hat "
