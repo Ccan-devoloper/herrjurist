@@ -52,3 +52,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 113 Bildhalte aus dem finalen MP4, Fallszene als Einzelbilder in voller Auflösung, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium) je Segment, Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen und die respektvolle Darstellung von Herrn Mehring); VG Neustadt nur nach Sekundärquellen; Thumbnail-Kleidung (Generator); Länderliste in der Beschreibung unvollständig (Portale); Themenplan-Korrektur durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 08.10.2026
+
+## Drive (Readback 08.10.2026, rclone)
+
+Ordner `LexVerse Produktion/269 Öffentliche Ordnung Omega/`, ID `1vanJsqYkhqLNJLKXwVyjpmHOFJPvDrNT` (nur per rclone angelegt, ein Ordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `269-Oeffentliche-Ordnung-Omega.mp4` | 26.735.122 |
+| `269-Oeffentliche-Ordnung-Omega-Hauptfilm.mp4` | 19.431.035 |
+| `master.zip` | 47.096.250 |
+| `thumb_A.jpg` | 140.361 |
+| `thumb_B.jpg` | 131.695 |
+| `beschreibung.txt` | 3.383 |
+| `kapitel.txt` | 358 |
+| `untertitel.srt` | 8.611 |
+| `metadaten.json` | 4.607 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; MD5 `master.zip` lokal = Drive (`8be2ef350c81e88ab45b2083b654f95d`), 285 Einträge, `unzip -t` fehlerfrei. `out/ton_mix.wav` nach dem Upload gelöscht; MP4s, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung. Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt).
