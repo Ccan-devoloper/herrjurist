@@ -51,3 +51,21 @@ Maßstab: [Serienstandard Open Peeps](../../MASTERSTANDARD-09.md), Referenz Katz
 
 **Schlussprüfung:** Kontaktbögen aller 117 Bildhalte aus dem finalen MP4, Fallszenen als Einzelbilder, Sprechfenster in 0,1-s-Schritten aus dem MP4, Schnittstellen Intro/Hauptfilm/Outro; Spracherkennung (small, medium), Namensprüfung je Nennung, Segmentkanten, Lautheit, Decode. **Offene Mängel:** abschließende Hör- und Sichtprüfung des fertigen MP4 durch den Kanalinhaber (u. a. die „bitte anhören“-Stellen, Schrittgeräusch 0:32,7); amtliche Fassungen von BGHSt 37, 214 und GA 7, 322 nicht eingesehen; Thumbnail-Bart und -Kleidung (Generator); Themenplan-Korrektur durch den Koordinator.
 **Freigabe:** `noch nicht bestanden` (abschließende menschliche Prüfung des fertigen MP4 offen) · 08.10.2026
+
+## Drive (Readback 08.10.2026, rclone)
+
+Ordner `LexVerse Produktion/250 Rose-Rosahl-Fall/`, ID `109NmnKeqZIWTCn525BbwD_-IvXCxqePi` (nur per rclone angelegt, kein Doppelordner):
+
+| Datei | Größe (Byte) |
+|---|---:|
+| `250-Rose-Rosahl-Fall.mp4` | 27.507.428 |
+| `250-Rose-Rosahl-Fall-Hauptfilm.mp4` | 20.101.142 |
+| `master.zip` | 48.317.638 |
+| `thumb_A.jpg` | 144.476 |
+| `thumb_B.jpg` | 145.754 |
+| `beschreibung.txt` | 2.363 |
+| `kapitel.txt` | 324 |
+| `untertitel.srt` | 8.922 |
+| `metadaten.json` | 3.453 |
+
+`rclone check --one-way`: 0 Abweichungen, 9 übereinstimmende Dateien; MD5 aller 9 Dateien lokal = Drive (`master.zip` `48319342096c…`); `master.zip` 288 Dateien, `unzip -t` fehlerfrei. Der `master.zip` enthält diesen Bogen im Stand vor dem Upload (ohne diesen Abschnitt). `out/ton_mix.wav` nach dem Upload gelöscht; `out/*.mp4`, `stimme*.wav` und `el_cache` bleiben bis zur Koordinatorprüfung im Container. Im Repository nur Text und Code.
