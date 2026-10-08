@@ -62,7 +62,7 @@ SEGMENTE = [
      "nahmen sie den Tod notfalls hin. [s_unerw]Dass er ihnen höchst unerwünscht war, zeigen die Wiederbelebungsversuche. Am "
      "Billigen im Rechtssinne ändert das nichts. [s_ev]Beide handelten mit Eventualvorsatz.", P),
     # --- G Ergebnis: Totschlag, Mord ---------------------------------------------------------------------------------------
-    ("[erg]Damit ist der Totschlag erfüllt. [mord]Weil sie würgten, um zu rauben, kommt sogar Mord in Betracht: aus Habgier "
+    ("[erg]Damit ist der Totschlag erfüllt. [mord]Weil sie ihn drosselten, um ihn auszurauben, kommt sogar Mord in Betracht: aus Habgier "
      "und um eine andere Straftat zu ermöglichen. [mord2]Die Ermöglichungsabsicht verträgt sich nach dem Bundesgerichtshof auch "
      "mit bedingtem Tötungsvorsatz. [urteil]Im echten Fall wurden beide wegen Mordes verurteilt, und der Bundesgerichtshof "
      "bestätigte das.", PS),
