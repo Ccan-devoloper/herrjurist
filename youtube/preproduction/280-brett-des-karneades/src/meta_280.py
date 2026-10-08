@@ -57,10 +57,10 @@ open(f"{U}/beschreibung.txt", "w").write(BESCHR)
 
 srt = open(f"{U}/untertitel.srt").read()
 srt = re.sub(r"(§§?)\n(\S+) ", r"\1 \2\n", srt)
-for muster, ersatz in [(r"Mitte vierzig", "Mitte 40"), (r"Absatz eins Satz eins", "Abs. 1 S. 1"),
+for muster, ersatz in [(r"Mitte vierzig", "Mitte 40"),
                        (r"Eins, Tatbestand", "1. Tatbestand"), (r"Zwei, Rechtswidrigkeit", "2. Rechtswidrigkeit"),
                        (r"Drei, Schuld", "3. Schuld"), (r"Vier, Ergebnis", "4. Ergebnis"),
-                       (r"Satz zwei", "Satz 2"), (r"Absatz zwei", "Absatz 2")]:
+                       (r"(Aber|aus|vergiss|nach) S\. 2", r"\1 Satz 2"), (r"(hilft|Irrtum) Abs\. 2", r"\1 Absatz 2")]:
     srt, n = re.subn(muster, ersatz, srt)
     assert n, muster
 srt = srt.replace("\nTamm: ", "\nHerr Tamm: ").replace("\nPetzold: ", "\nKommissarin Petzold: ")
