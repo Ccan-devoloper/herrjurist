@@ -68,6 +68,10 @@ srt = re.sub(r"(Abs\.)\n(\d+[,.:;]?) ?", r"\1 \2\n", srt)
 srt = re.sub(r"(Art\.)\n(\d+) ", r"\1 \2\n", srt)
 srt = re.sub(r" \n", "\n", srt)
 srt = re.sub(r"\n\n\n+", "\n\n", srt)
+for alt, neu in [("neunzehn Uhr", "19 Uhr"), ("fünfzehn Uhr", "15 Uhr"), ("sechs bis\neinundzwanzig Uhr", "6 bis\n21 Uhr"),
+                 ("hunderteinundfünfzig.", "151."), ("zweihunderteinundzwanzig.", "221.")]:
+    assert alt in srt, alt
+    srt = srt.replace(alt, neu)
 assert not re.search(r"§\n|Abs\.\n|Art\.\n|Paragraf", srt), "Untertitel prüfen"
 open(f"{U}/untertitel.srt", "w").write(srt)
 
