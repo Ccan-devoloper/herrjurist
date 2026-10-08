@@ -1,0 +1,54 @@
+# Folge 249 · Gefahr im Verzug: Durchsuchung ohne Richter? (Art. 13 II GG) – Szenenplan
+
+**Stand:** 08.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_249.py`](src/skript_249.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
+**Format:** Fr · Klausurpraxis · Grundrechte, Themenplan-Format „Klassiker-Fall“. Fall nach dem Plan-Hook („Polizisten klingeln am Sonntagabend und wollen sofort deine Wohnung durchsuchen – ein Richter sei nicht erreichbar“): Sonntag, 19 Uhr; Verdacht wegen gefälschter Konzertkarten; keine Gewalt, keine Waffen, kein Rammbock, kein Blaulicht, keine Abzeichen oder Wappen; Polizei sachlich, Bewohnerin sympathisch. Ablauf: Fall (Wohnungstür → was vorher geschah → Atelier) → Frage → Sachverhalt → 1. Schutzbereich und 2. Eingriff (Wortlautkarte Art. 13 Abs. 1) → 3. Rechtfertigung (Wortlautkarte Art. 13 Abs. 2) → Anforderungen an Gefahr im Verzug (BVerfGE 103, 142) → Bereitschaftsdienst (Tagesband, BVerfGE 151, 67) → einfaches Recht (Wortlautkarte § 105 Abs. 1 S. 1 StPO; § 102; Verweis 151) → Lösung → Gegenfall und Verwertung (ein Satz, Verweis 221) → Klausurtipp → Schema → Merksatz. Hauptfilm 6:04,9 (Begründung für mehr als fünf Minuten in ABNAHME.md).
+
+## Besetzung
+
+| Figur | Rolle | Open Peeps | Stimme |
+|---|---|---|---|
+| Ines (IN), um 30 | Grafikerin, Bewohnerin; im Verdacht, gefälschte Karten verkauft zu haben (Tatbestand nicht geprüft) | Pose `standing/easing-2` (offenes Hemd Türkis `#7FD6D0` über schwarzem Shirt, dunkelgraue Hose `#3D3D48`), Kopf `Medium Straight` (Haar `#5A3A28`), Haut `#F2D0B4`; Mimiken `Calm`, `Concerned|Serious` (redet, sorgt sich), `Awe` (öffnet die Tür), `Suspicious`, `Solemn`, `Smile`, `Driven` (widerspricht) | `lucy` (Frau, jung) |
+| Kommissar Bader (BA), um 45 | Ermittlungsperson der Staatsanwaltschaft, spricht | `standing/blazer-2` (Sakko Graublau `#4A5568`, weißes Shirt; in Zivil, ohne Abzeichen, Wappen oder Waffe; Beinprothese der Pose – keine Täterrolle), Kopf `Short 2`, Haut `#E2B48E`, kein Bart; `Calm`, `Serious` (redet, ernst), `Suspicious`, `Solemn`, `Concerned|Serious` | `stephan` (Mann, mittel) |
+| Kommissarin Ebner (EB), um 35 | Ermittlungsperson, spricht nicht | `standing/shirt-3` (Hemd Hellblau `#8DB3F2`, schwarze Hose), Kopf `Bangs 2`, Haut `#C68E6A`; `Calm`, `Serious`, `Suspicious`, `Solemn` | – |
+| Bereitschaftsrichterin (RI), um 60 | Funktionsrolle, zu Hause mit dem Diensttelefon, spricht nicht | `standing/resting-1` (Pullover Lila `#B8A9F5`), Kopf `Gray Medium`, `Glasses 2`, Haut `#EBC29E`; `Calm`, `Tired` (wartet), `Smile` | – |
+| Lexi | Klausurtipp (warnt) und Merksatz (erklärt) | nach `lexi.py` (`robot_dance-1`, `Serious`/`Smile`) | Carla Blum |
+| Erzählerin | – | – | Carla Blum |
+
+Alle Posen blicken im Original nach rechts; Grundansicht gespiegelt (blickt nach links), `_r` nach rechts (Bader und Ebner an der Tür und im Atelier zu Ines). **Alle Grundmimiken mit geschlossenem Mund**; Mundzustände a/o/e nur in `IN_redet`, `BA_redet` (je links/rechts) und Lexi. Keine Bärte, keine Polka Dots, keine Karikatur. **Stimmen** nur aus dem Pool (lucy, stephan; christian und hilde nicht verwendet). **Namen** mit eindeutig deutscher Aussprache, nicht in der Liste vergebener Namen, nicht in `namen_reserviert.txt` und in keiner Datei unter `youtube/` (grep über *.py, *.md, *.csv, *.json; „Ida“ (173) und „Hahn“ (17 Treffer) verworfen): **Ines**, **Bader**, **Ebner** (nie im Genitiv), eingetragen als „249: Ines, Bader, Ebner“. Figuren-PNGs: `../peeps/op_249/` (62 Dateien, nicht im Repository, im Drive-Master).
+
+**Abweichung von den letzten Folgen:** 246 (`resting-2`, `crossed_arms-2`), 247 (`easing-1`, `walking-1`), 248 (`blazer-3`, `pointing_finger-2`, `blazer-4`, `crossed_arms-1`) – in 249 keine dieser Posen für die Hauptfiguren; Kleidungsfarben neu (Türkis-Hemd, graublaues Sakko, hellblaues Hemd), keine Muster. Schauplätze neu: **Treppenhaus am Sonntagabend** (Fliesen, Wanduhr 7 Uhr-Stellung, brennende Deckenlampe), **Atelier** (Arbeitstisch, Drucker, Farbpalette), **Wohnzimmer der Bereitschaftsrichterin** (Beistelltisch mit Telefon) – keine Wiederholung gegenüber 246 (Haus mit Garten, Ämter), 151 (Treppenhaus bei Nacht, Wache): das Treppenhaus ist ähnlich gebaut wie in 151, aber taghell (Cremegrund), weil 19 Uhr nach BVerfGE 151, 67 **Tageszeit** ist – genau darauf kommt es in der Lösung an.
+
+## Szenen
+
+| Szene | Ort / Handlung | Requisiten (Iconset:Name, Füllung) | Tafel / Prüfpfad | Bildhalte | Geräusch |
+|---|---|---|---|---|---|
+| **A1 Wohnungstür, Sonntag 19 Uhr** `fall`→`b2` | Treppenhaus: Fliesenboden, Wanduhr, Deckenlampe mit Lichtkegel, Wohnungstür (zu); Klingel bei „Bei“; Tür hell bei „Vor“, Ines davor; Bader bei „Kommissar“, Ebner bei „Kommissarin“; drei Blasen (Bader, Ines, Bader) | tabler:`door` (Holz, offen hellgelb), `bell-ringing` (Gelb), `clock-hour-7`, `bulb` (Gelb); Lichtkegel `ostil` | `Fall · Sonntag, 19 Uhr` (ab 0,0 s) → `· Es klingelt` → `· Kommissar Bader, Kommissarin Ebner` → `· „Kein Richter zu erreichen“` → `· Bereitschaftsdienst?` → `· „Das dauert zu lange“` | 8 | Klingel (`szene_249klingel_1`), Tür (`szene_249tuer_1`) |
+| **A2 Was vorher geschah** `vorher`→`ahnt` | Holzboden; Pillen in Sprechreihenfolge; Uhr, Eintrittskarte, Konto, Palette, Amtsgericht wechseln oben rechts; Ines mit Palette (ab „Ines ist Grafikerin“); Bereitschaftsrichterin mit Telefon am Beistelltisch (ab „obwohl“) | tabler:`clock-2`, `ticket` (Gelb), `credit-card` (Blau), `palette` (Gelb), `building-bank` (Blau), `phone` | `Fall · Was vorher geschah` → `· 15 Uhr: die Anzeige` → `· Konto von Ines` → `· Ines, Grafikerin mit Atelier` → `· Bereitschaftsdienst: kein Versuch` → `· Die Richterin war erreichbar` → `· Ines weiß von nichts` | 8 | – |
+| **A3 Atelier** `wider`→`frage` | Arbeitstisch mit Drucker und Palette, Lampe; Ines rechts (widerspricht), Bader und Ebner; Kartenstapel erscheint bei „Stapel“, Ring bei „Konzertkarten“; zwei Fragepillen | tabler:`printer`, `palette`, `ticket` (4 ×), `bulb` | `Fall · Ines widerspricht` → `· Durchsuchung von Wohnung und Atelier` → `· Ein Stapel Konzertkarten` → `· Die Frage` | 5 | – |
+| **B Sachverhalt** `sv` | Karte vollständig, ≈ 9,8 s, Hinweis zum Anhalten | – | `Sachverhalt` | 1 | – |
+| **C 1. Schutzbereich, 2. Eingriff** `art13`→`schwer` | **Wortlautkarte Art. 13 Abs. 1 GG** (Marker „unverletzlich“), räumliche Sphäre (2 BvR 460/25 Rn. 28), Haken „auch Arbeits- und Geschäftsräume (Atelier)“, Durchsuchungsbegriff (Rn. 36), roter Block „schwerer Eingriff“ (BVerfGE 103, 142 Rn. 26); Ines | tabler:`home`, `palette`, `search`, `alert-triangle` | `Art. 13 GG › 1. Schutzbereich › …` (4) → `Art. 13 GG › 2. Eingriff › …` (2) | 13 | – |
+| **D 3. Rechtfertigung** `abs2`→`eng` | **Wortlautkarte Art. 13 Abs. 2 GG** (Marker zum Wort), gelber Block Regel/Ausnahme (Rn. 31), „Richter prüft vorher – unabhängig und neutral“ (Rn. 27), roter Block „eng auszulegen“ (Rn. 32); Ines, Bader | tabler:`scale`, `building-bank`, `hourglass`, `eye` | `Art. 13 GG › 3. Rechtfertigung › …` (6) | 12 | – |
+| **E Anforderungen** `def`→`doku` | fünf nummerierte Punkte mit Rn. (34, 38, 40, 39, 54); Bader, Ebner | tabler:`hourglass`, `list-check`, `phone-call`, `clock`, `file-text` | `… › Gefahr im Verzug › …` (5) | 6 | – |
+| **F Bereitschaftsdienst** `bereit`→`abstr` | Tagesband 0–24 Uhr (6–21 Uhr grün), BVerfGE 151, 67 Rn. 58, 67, Kreuz „gewöhnlich kein Richter erreichbar: reicht nicht“ (Rn. 40; 151, 67 Rn. 56); Bereitschaftsrichterin am Beistelltisch | tabler:`building-bank`, `sun`, `moon`, `phone-off`, `phone` | `… › Bereitschaftsdienst › …` (4) | 10 | – |
+| **G Einfaches Recht** `p105`→`f151` | **Wortlautkarte § 105 Abs. 1 S. 1 StPO**, Haken „Bader und Ebner: Ermittlungspersonen“, gelber Block, § 102, Verweis Folge 151; Bader, Ebner | tabler:`book`, `hourglass`, `id-badge`, `search` | `… › einfaches Recht › …` (5) | 9 | – |
+| **H Lösung** `loes`→`erg` | Tagesband mit roter Marke „So, 19 Uhr“, Haken/Kreuze in Sprechreihenfolge, BVerfGE 139, 245 Rn. 71, Blöcke „Gefahr im Verzug (−)“, „Art. 13 GG verletzt“; Ines, Bader | tabler:`door`, `sun`, `phone-off`, `phone-call`, `hourglass`, `home` | `Lösung › …` (7) | 11 | – |
+| **I Gegenfall, Verwertung** `gegen`→`verw` | Haken „Tatsache des Einzelfalls“, „Versuch kann zu spät kommen“ (Rn. 38, 40), gelber Block Verwertung/Abwägung, Folge 221 (2 BvR 2225/08 Rn. 16 f.); Ines, Ebner | tabler:`ticket`, `list-check`, `clock`, `scale` | `Gegenfall › …` (3) → `Verwertung › Abwägung: Folge 221` | 8 | – |
+| **J Klausurtipp** `tipp`→`tipp3` | hellgelbe Tafel, Lexi warnt (redet): Prüfungsort Rechtfertigung, Begriff der Verfassung/volle Kontrolle (Rn. 44 f.), Abgrenzung Betreten (Art. 13 Abs. 2, 7; 2 BvR 460/25) | Warnsymbol (Streamline Freehand) | `Klausurtipp · …` (4) | 8 | – |
+| **K Schema** `sch`→`s4` | breite Karte I.–IV. mit III. 1.–4. | – | `Schema › …` (7) | 11 | – |
+| **L Merksatz** `merke`, `m2` | Lexi erklärt (redet), vier Marker | – | `Merksatz` | 6 | – |
+
+**Blasen:** Stil C (Standard seit 02.10.2026; Assertion gegen stillen Rückfall auf Stil E). **Zahlen** auf Blasen, Tafeln und Pillen in Ziffern („19 Uhr“, „15 Uhr“, „6 bis 21 Uhr“, „Folge 151“, „Folge 221“, „§ 105“); Wortlautkarten wörtlich (amtlich „im Verzuge“ in Art. 13 GG).
+**Übergänge:** stumme Schiebeblenden nur zwischen den 14 Folien; innerhalb harte Schnitte und Pops; keine Bewegung, kein Zoom.
+**Geräusche:** zwei Handlungsgeräusche, Freesound CC0 (442280 Klingel, 648830 Tür); Freesound-API am 08.10.2026 über den Proxy HTTP 403, daher unveränderte Kopien der Dateien aus Folge 151 unter eigenem Namen, Herkunft in `geraeusche_herkunft.json`.
+**Gericht ohne Richterhammer:** Amtsgericht als Säulengebäude (`building-bank`), Abwägung als Waage (`scale`).
+**Lizenzen der Requisiten:** Tabler Icons (MIT), Haken/Kreuz Fluent Emoji High Contrast (MIT), Warnsymbol Streamline Freehand (CC BY 4.0, Namensnennung in `beschreibung.txt`). Boden, Tische, Tagesband programmatisch; Lichtkegel aus `ostil.py`.
+
+## Sachverhaltskarte (Szene B, erscheint vollständig)
+
+> Sonntag, 19 Uhr: Kommissar Bader und Kommissarin Ebner, Ermittlungspersonen der Staatsanwaltschaft, klingeln bei Ines. Sie wollen sofort ihre Wohnung und ihr Atelier durchsuchen; ein Richter sei am Sonntagabend nicht zu erreichen. Einen Beschluss haben sie nicht.
+>
+> Um 15 Uhr hatte ein Konzertbesucher angezeigt, dass seine online gekauften Eintrittskarten gefälscht sind; bezahlt hatte er auf ein Konto von Ines. Ines ist Grafikerin und arbeitet in einem Atelier neben ihrer Wohnung. Niemand hat versucht, den Bereitschaftsdienst des Amtsgerichts zu erreichen, obwohl die Bereitschaftsrichterin an diesem Abend erreichbar war. Nichts deutet darauf hin, dass Ines von der Anzeige weiß.
+>
+> Ines widerspricht. Die beiden durchsuchen trotzdem und finden im Atelier einen Stapel Konzertkarten.
+>
+> **Verletzt die Durchsuchung Ines in ihrem Grundrecht aus Art. 13 GG?**

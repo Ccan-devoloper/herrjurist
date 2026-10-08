@@ -58,7 +58,7 @@ SEGMENTE = [
     # --- E 3. Anforderungen an Gefahr im Verzug (BVerfGE 103, 142) ----------------------------------------------------
     ("[def]Gefahr im Verzug liegt nur vor, wenn schon die vorherige Einholung der richterlichen Anordnung den Erfolg der "
      "Durchsuchung gefährden würde. [tats]Das muss mit Tatsachen des Einzelfalls begründet werden; Spekulationen oder "
-     "fallunabhängige Vermutungen aus kriminalistischer Alltagserfahrung genügen nicht. [versuch]Regelmäßig muss die Polizei zuerst "
+     "fallunabhängige Vermutungen aus kriminalistischer Alltagserfahrung reichen nicht. [versuch]Regelmäßig muss die Polizei zuerst "
      "versuchen, einen Richter zu erreichen. [selbst]Die Eile darf sie nicht selbst herbeiführen, [doku]und ihre Gründe "
      "muss sie in den Akten dokumentieren, auch ob sie einen Richter zu erreichen versucht hat.", P),
     ("[bereit]Dafür müssen die Gerichte einen Ermittlungsrichter erreichbar halten, auch durch einen Bereitschaftsdienst. "
