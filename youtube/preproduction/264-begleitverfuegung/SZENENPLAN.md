@@ -2,7 +2,7 @@
 
 **Stand:** 08.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_264.py`](src/skript_264.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
 **Format:** Fr · 2. Examen · StPO-Praxis, Themenplan-Format „Formulierung“ mit selbst formuliertem Muster. Beispielfall nach dem Plan-Hook („Der Beschuldigte sitzt seit drei Monaten in Untersuchungshaft, als deine Anklage fertig ist“): Referendarin Ortlieb hat die Anklage gegen Herrn Wittig fertig (Einbruch ins Baumarktlager, Werkzeug für 7.800 €); Wittig sitzt seit dem 9.7.2026 wegen Fluchtgefahr in Untersuchungshaft und hat eine Pflichtverteidigerin; eine zweite Anzeige (E-Bike von Herrn Dengler) trägt keinen hinreichenden Tatverdacht. Oberstaatsanwältin Pfaff fragt nach der Begleitverfügung. Gleiche erfundene Staatsanwaltschaft Ahornstadt wie Folge 252 (Voraussetzung), neuer Fall.
-Ablauf: Fall → Frage → Sachverhalt → Wozu (Abgrenzung zur Anklage, kein Widerspruch, Form je Land) → **Muster I.–VI.** (Kopf mit Vermerk „Haft“ und I. Vermerk § 169a [Wortlaut] → II. Teileinstellung § 170 Abs. 2 [Wortlautkarte], § 154, Bescheid § 171 S. 1 [Wortlautkarte] mit Belehrung → III. Haft: Fortdauerantrag in der Anklage, Sechsmonatsfrist § 121 Abs. 1 [Wortlautkarte] → IV. Pflichtverteidigung § 140 Abs. 1 Nr. 4, 5 [Wortlautkarte] → V. Mitteilungen und Asservate → VI. Anklage mit den Akten an das Gericht) → zwei typische Fehler → Klausurtipp (Lexi) → Schema → Merksatz (Lexi). Hauptfilm 6:33,8 (5.782 Zeichen), Begründung in ABNAHME.md.
+Ablauf: Fall → Frage → Sachverhalt → Wozu (Abgrenzung zur Anklage, kein Widerspruch, Form je Land) → **Muster I.–VI.** (Kopf mit Vermerk „Haft“ und I. Vermerk § 169a [Wortlaut] → II. Teileinstellung § 170 Abs. 2 [Wortlautkarte], § 154, Bescheid § 171 S. 1 [Wortlautkarte] mit Belehrung → III. Haft: Fortdauerantrag in der Anklage, Sechsmonatsfrist § 121 Abs. 1 [Wortlautkarte] → IV. Pflichtverteidigung § 140 Abs. 1 Nr. 4, 5 [Wortlautkarte] → V. Mitteilungen und Asservate → VI. Anklage mit den Akten an das Gericht) → zwei typische Fehler → Klausurtipp (Lexi) → Schema → Merksatz (Lexi). Hauptfilm 6:34,3 (5.782 Zeichen; Segment 4 einmal nachvertont), Begründung in ABNAHME.md.
 
 ## Besetzung
 
@@ -35,12 +35,12 @@ Alle Posen blicken im Original nach rechts; die Grundansicht ist gespiegelt und 
 | **G1 III. Haft** `h`→`h3` | Musterblatt III., Haken „passen zusammen“ | tabler:`folder` + Pille „Haft“, `scale`, `file-text`, `check` | `Muster › III. Haft › …` | 7 | – |
 | **G2 Sechsmonatsfrist** `h121`→`h6` | Wortlautkarte § 121 Abs. 1 (sieben Marker), Musterblatt Frist | tabler:`hourglass`, `calendar-event`, `building-bank` | `› Sechsmonatsfrist …` → `› Frist notieren, Vorlage an das OLG` | 11 | – |
 | **H IV.** `pv`→`pv4` | Wortlautkarte § 140 Abs. 1 Nr. 4, 5 (sechs Marker), Musterblatt IV. | tabler:`briefcase`, `building-bank`, `folder` + Pille „Haft“, `file-text` | `Muster › IV. Pflichtverteidigung › …` | 13 | – |
-| **I V.** `mi`→`as2` | Musterblatt V. 1.–4., Fundstellen, Block | tabler:`mail-forward`, `briefcase`, `mailbox`, `tools`, `device-usb` | `Muster › V. Mitteilungen und Asservate › …` | 8 | – |
+| **I V.** `mi`→`as2` | Musterblatt V. 1.–4., Fundstellen, Block | tabler:`mail-forward`, `briefcase`, `mailbox`, `tools`, `device-usb` | `Muster › V. Mitteilungen und Asservate › …` | 9 | – |
 | **J VI.** `vi`→`p2` | Musterblatt VI., Haken § 199, Block; Pfaff liest gegen (Blase) | tabler:`building-bank`, `folders` | `Muster › VI. …` → `Fall · Pfaff liest gegen` | 5 | – |
 | **K Fehler** `fehler`→`f2c` | zwei Fehler mit Kreuz, Block „Widerspruch“, Haken „Frist ruht“ | tabler:`alert-triangle`, `file-x`, ph:`bicycle-bold`, tabler:`hourglass`, `building-bank` | `Typische Fehler › …` | 12 | – |
 | **L Klausurtipp** `tipp`→`tipp2` | hellgelbe Tafel, Lexi warnt (redet) | Warnsymbol (Streamline Freehand) | `Klausurtipp · …` | 6 | – |
 | **M Schema** `sch`→`s6` | I.–VI. | – | `Schema › …` | 7 | – |
-| **N Merksatz** `merke`, `m2` | Lexi erklärt (redet), Marker | – | `Merksatz` | Marker zum Wort | – |
+| **N Merksatz** `merke`, `m2` | Lexi erklärt (redet), Marker | – | `Merksatz` | 6 (Marker zum Wort) | – |
 
 **Übergänge:** stumme Schiebeblenden nur zwischen den 18 Folien; innerhalb harte Schnitte und Pops; keine Bewegung, kein Zoom. Das erste Bild nach dem Intro zeigt ab 0,0 s das Büro (Aktenschrank, Kalender, Tisch mit Akte, Pflanze, geschlossene Tür, Titelpille, Prüfpfad).
 **Geräusche:** ein Handlungsgeräusch (Tür, wenn Pfaff hereinschaut). Freesound-API über den Proxy am 08.10.2026 erreichbar (HTTP 200); Datei neu zugeschnitten, Herkunft in `geraeusche_herkunft.json`.
