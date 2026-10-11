@@ -1,0 +1,39 @@
+name: StB G03 Produktionsvorlage prüfen
+on:
+  push:
+    branches: ['production/stb-g03-20261011']
+    paths: ['.github/workflows/stb-g03-production.yml']
+permissions:
+  contents: read
+jobs:
+  template:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Drive-Master und Produktionszugänge prüfen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+        shell: python
+        run: |
+          import os, json, urllib.request, urllib.parse, zipfile, io
+          if not os.environ.get('ELEVENLABS_API_KEY'):
+              raise RuntimeError('ELEVENLABS_API_KEY fehlt')
+          names=['GDRIVE_CLIENT_ID','GDRIVE_CLIENT_SECRET','GDRIVE_REFRESH_TOKEN']
+          if not all(os.environ.get(k) for k in names):
+              raise RuntimeError('Drive-OAuth-Zugang fehlt; keine Credits verbraucht')
+          body=urllib.parse.urlencode({'client_id':os.environ[names[0]],'client_secret':os.environ[names[1]],'refresh_token':os.environ[names[2]],'grant_type':'refresh_token'}).encode()
+          with urllib.request.urlopen(urllib.request.Request('https://oauth2.googleapis.com/token',data=body),timeout=60) as r:
+              token=json.load(r)['access_token']
+          req=urllib.request.Request('https://www.googleapis.com/drive/v3/files/1dSJLKEXSHew1R4Fh18yJe4iemSeevdWq?alt=media',headers={'Authorization':'Bearer '+token})
+          with urllib.request.urlopen(req,timeout=120) as r:
+              z=zipfile.ZipFile(io.BytesIO(r.read()))
+          print('G02-Masterdateien:')
+          for item in z.infolist():
+              print(item.filename, item.file_size)
+          for item in z.infolist():
+              if item.filename.endswith(('.py','.json','.mjs','.md')) and item.file_size<60000 and not any(x in item.filename.lower() for x in ['secret','credential','token','.env']):
+                  print('VORLAGE',item.filename)
+                  print(z.read(item).decode('utf-8',errors='replace')[:20000])
