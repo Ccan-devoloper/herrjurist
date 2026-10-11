@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: Drive-Master und Produktionszugänge prüfen
         env:
+          RCLONE_CONFIG_INHALT: ${{ secrets.RCLONE_CONFIG }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
           GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
@@ -21,6 +22,11 @@ jobs:
           import os, json, urllib.request, urllib.parse, zipfile, io
           if not os.environ.get('ELEVENLABS_API_KEY'):
               raise RuntimeError('ELEVENLABS_API_KEY fehlt')
+          print('RCLONE_CONFIG vorhanden:',bool(os.environ.get('RCLONE_CONFIG_INHALT')))
+          req=urllib.request.Request('https://api.elevenlabs.io/v1/user/subscription',headers={'xi-api-key':os.environ['ELEVENLABS_API_KEY']})
+          with urllib.request.urlopen(req,timeout=60) as r:
+              sub=json.load(r)
+          print('ElevenLabs-Kontingent:',max(0,sub.get('character_limit',0)-sub.get('character_count',0)))
           names=['GDRIVE_CLIENT_ID','GDRIVE_CLIENT_SECRET','GDRIVE_REFRESH_TOKEN']
           if not all(os.environ.get(k) for k in names):
               raise RuntimeError('Drive-OAuth-Zugang fehlt; keine Credits verbraucht')
