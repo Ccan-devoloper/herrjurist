@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { sendezeitenAnwenden } from "./sendezeiten.mjs";
 
 const files = (dir, re) => fs.readdirSync(dir, { withFileTypes: true })
   .filter((e) => e.isFile() && re.test(e.name))
@@ -44,12 +45,12 @@ export function planAusVorproduktion(vp, alt = null) {
   const b = new Map((alt?.beitraege || []).map((e) => [e.slot, e]));
   const s = new Map((alt?.stories || []).map((e) => [e.slot, e]));
   const base = (e) => ({ ...e, status: "geplant" });
-  return {
+  return sendezeitenAnwenden({
     datum: vp.tag.datum, erzeugt: alt?.erzeugt || new Date().toISOString(), anlass: vp.tag.plan.anlass || null, abendAnlass: vp.tag.plan.abendAnlass || null, trocken: false,
     vorproduktion: { aktiv: true, quelle: vp.rel.replaceAll("\\", "/"), fertig: vp.fertigRel.replaceAll("\\", "/"), kostenfrei: true },
     beitraege: vp.tag.plan.beitraege.map((e) => merge(base(e), b.get(e.slot))),
     stories: vp.tag.plan.stories.map((e) => merge(base(e), s.get(e.slot))),
-  };
+  });
 }
 
 export function inhalteUebernehmen(hosting, vp, plan) {
