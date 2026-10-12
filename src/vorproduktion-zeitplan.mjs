@@ -3,7 +3,8 @@
 
    Bewusst ohne Abhängigkeiten außer zeit.mjs und sendezeiten.mjs: Die Weckkette
    lädt dieses Modul ohne npm ci. Status und Fehler kommen aus dem gespeicherten
-   Tagesplan; ab 13.10.2026 gelten die gemeinsamen Betreiber-Sendezeiten.
+   Tagesplan, Uhrzeiten aus dem Dashboard. Nur am 13.10.2026 gilt die gemeinsame
+   Betreiber-Ausnahme; spaetere Dashboard-Zeiten werden nicht ueberschrieben.
    ========================================================================== */
 
 import { zeitpunktVon } from "./zeit.mjs";
