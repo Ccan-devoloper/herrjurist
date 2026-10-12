@@ -110,7 +110,7 @@ test("actual 27 September assets: all nine stories and quiz pass offline", { ski
       // Simulate successful question publication locally; never call Instagram.
       if (p.art === "frage") p.status = "veroeffentlicht";
     }
-    if (["s7", "s8"].includes(p.art)) assert.equal(storyFreigabe(s).frei, false, "without verified asset context the length gate remains active");
+    if (["s7", "s8"].includes(p.slot)) assert.equal(storyFreigabe(s).frei, false, "without verified asset context the length gate remains active");
   }
   assert.equal(JSON.stringify(vp.tag), before, "no text, image metadata, schedule or publication status mutations");
 });
