@@ -22,7 +22,7 @@ export function planFuerWecker(tag, gespeichert = null) {
   const alt = new Map([...(gespeichert?.beitraege || []), ...(gespeichert?.stories || [])].map((e) => [e.slot, e]));
   const eintrag = (e) => {
     const a = alt.get(e.slot);
-    return { ...e, status: a?.status && a.status !== "geplant" ? a.status : "geplant", fehler: a?.fehler || null };
+    return { ...e, zeit: a?.status === "veroeffentlicht" ? (a.zeit || e.zeit) : e.zeit, status: a?.status && a.status !== "geplant" ? a.status : "geplant", fehler: a?.fehler || null };
   };
   return sendezeitenAnwenden({
     beitraege: (tag?.plan?.beitraege || []).map(eintrag),
