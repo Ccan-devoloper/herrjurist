@@ -26,17 +26,23 @@ const planAlt = () => ({
   ],
 });
 
-test("Neue Betreiberzeiten ab 13.10.; alte Plaene und Eingabe bleiben unveraendert", () => {
+test("Betreiberzeiten gelten nur am 13.10.; alle anderen Tage bleiben unveraendert", () => {
   const alt = planAlt();
   const copy = structuredClone(alt);
   const neu = sendezeitenAnwenden(alt);
   assert.deepEqual(neu.beitraege.map((e) => e.zeit), Object.values(SENDEZEITEN));
   assert.deepEqual(neu.stories.map((e) => e.zeit), ["06:30", "10:30", "17:30", "07:06"]);
   assert.deepEqual(alt, copy);
-  assert.equal(sendezeitenAnwenden(alt, "2026-10-12"), alt);
+  for (const datum of ["2026-10-12", "2026-10-14", "2026-10-25", "2026-12-31", "2027-01-02", "ungueltig"]) {
+    assert.equal(sendezeitenAnwenden(alt, datum), alt, datum);
+    const andererTag = { ...alt, datum };
+    assert.equal(sendezeitenAnwenden(andererTag), andererTag, datum);
+  }
   assert.equal(sendezeitenAnwenden(alt, undefined).beitraege[0].zeit, "06:30");
-  assert.equal(sendezeitenAnwenden(alt, "2027-01-02").beitraege[0].zeit, "06:30");
-  assert.equal(sendezeitenAnwenden(alt, "ungueltig"), alt);
+  const ohneDatum = { beitraege: alt.beitraege, stories: alt.stories };
+  assert.equal(sendezeitenAnwenden(ohneDatum), ohneDatum);
+  assert.equal(sendezeitenAnwenden(null), null);
+  assert.equal(sendezeitenAnwenden(undefined), undefined);
 });
 
 test("Veroeffentlichte Slots, IDs, Sperren und fremde Slots bleiben erhalten", () => {
@@ -66,7 +72,7 @@ test("Live-Plan und Weckkette verwenden identische Uhrzeiten", () => {
   assert.equal(naechsterTermin(wecker, alt.datum, vorher), zeitpunktVon(alt.datum, "06:30"));
 });
 
-test("Zeitumstellung veraendert UTC, aber nicht 06:30 Berliner Ortszeit", () => {
+test("Zeitumstellung veraendert UTC, aber nicht eine vorgegebene Berliner Ortszeit", () => {
   assert.equal(new Date(zeitpunktVon("2026-10-13", "06:30")).toISOString(), "2026-10-13T04:30:00.000Z");
   assert.equal(new Date(zeitpunktVon("2026-10-25", "06:30")).toISOString(), "2026-10-25T05:30:00.000Z");
   assert.equal(new Date(zeitpunktVon("2026-12-01", "17:30")).toISOString(), "2026-12-01T16:30:00.000Z");

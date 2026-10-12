@@ -1,11 +1,12 @@
-/* Betreiber-Vorgabe ab 13.10.2026: Berliner Ortszeit, auch nach der Zeitumstellung.
-   Gemeinsame Quelle fuer Live-Uebernahme und Weckkette. Keine Aenderung an
-   Inhalten, Freigaben, Medien-IDs oder bereits abgeschlossenen Slots. */
-export const SENDEZEITEN_AB = "2026-10-13";
+/* Einmalige Betreiber-Vorgabe NUR am 13.10.2026, in Berliner Ortszeit.
+   An allen anderen Tagen bleiben Dashboard-Zeiten und die lernende Zeitwahl
+   unveraendert. Gemeinsame Ausnahme fuer Live-Uebernahme und Weckkette;
+   keine Aenderung an Inhalten, Freigaben oder abgeschlossenen Slots. */
+export const SENDEZEITEN_DATUM = "2026-10-13";
 export const SENDEZEITEN = Object.freeze({ b1: "06:30", b2: "10:30", b3: "17:30" });
 
 export function sendezeitenAnwenden(plan, datum = plan?.datum) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(datum || "") || datum < SENDEZEITEN_AB) return plan;
+  if (datum !== SENDEZEITEN_DATUM) return plan;
   const abgeschlossen = (e) => ["veroeffentlicht", "uebersprungen"].includes(e.status);
   const beitraege = (plan?.beitraege || []).map((e) =>
     !abgeschlossen(e) && Object.hasOwn(SENDEZEITEN, e.slot) ? { ...e, zeit: SENDEZEITEN[e.slot] } : e);
