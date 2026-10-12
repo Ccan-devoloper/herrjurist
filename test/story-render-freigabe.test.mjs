@@ -79,7 +79,10 @@ test("production wiring preserves the image upload and has no paid fallback", ()
   const workflow = fs.readFileSync(new URL("../.github/workflows/instagram.yml", import.meta.url), "utf8");
   assert.match(workflow, /IG_PROVIDERKOSTEN_GESPERRT: "true"/);
   assert.doesNotMatch(workflow, /secrets\.(ANTHROPIC_API_KEY|OPENAI_API_KEY|ELEVENLABS_API_KEY)/);
-  assert.match(workflow, /cron: "0 5-20 \* \* \*"/);
+  // 04 UTC bereitet B1 um 06:30 Berlin auch in der Sommerzeit rechtzeitig vor.
+  assert.match(workflow, /cron: "0 4-20 \* \* \*"/);
+  assert.match(workflow, /cron: "15 4,5,8,9,15,16 \* \* \*"/);
+  assert.match(workflow, /run: bash bin\/weckruf\.sh/);
 });
 
 test("actual 27 September assets: all nine stories and quiz pass offline", { skip: !process.env.IG_PREFLIGHT_ASSET_DIR }, () => {
@@ -107,7 +110,7 @@ test("actual 27 September assets: all nine stories and quiz pass offline", { ski
       // Simulate successful question publication locally; never call Instagram.
       if (p.art === "frage") p.status = "veroeffentlicht";
     }
-    if (["s7", "s8"].includes(p.slot)) assert.equal(storyFreigabe(s).frei, false, "without verified asset context the length gate remains active");
+    if (["s7", "s8"].includes(p.art)) assert.equal(storyFreigabe(s).frei, false, "without verified asset context the length gate remains active");
   }
   assert.equal(JSON.stringify(vp.tag), before, "no text, image metadata, schedule or publication status mutations");
 });
