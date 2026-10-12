@@ -1,13 +1,13 @@
 /* ==========================================================================
    Nächster Veröffentlichungstermin der Vorproduktion – für die Weckkette.
 
-   Bewusst ohne Abhängigkeiten außer zeit.mjs: Die Weckkette im Workflow lädt
-   dieses Modul ohne npm ci. Der Plan entsteht wie im Lauf aus der
-   Dashboard-Datei vorproduktion/<datum>.json; Status und Fehler kommen aus
-   dem gespeicherten Tagesplan state/plaene/<datum>.json.
+   Bewusst ohne Abhängigkeiten außer zeit.mjs und sendezeiten.mjs: Die Weckkette
+   lädt dieses Modul ohne npm ci. Status und Fehler kommen aus dem gespeicherten
+   Tagesplan; ab 13.10.2026 gelten die gemeinsamen Betreiber-Sendezeiten.
    ========================================================================== */
 
 import { zeitpunktVon } from "./zeit.mjs";
+import { sendezeitenAnwenden } from "./sendezeiten.mjs";
 
 /* Diese Zeitspanne vor dem Termin startet die Weckkette den Lauf: Job-Start,
    Abhängigkeiten, Token-/Insight-Arbeit und die Container-Verarbeitung bei
@@ -22,12 +22,12 @@ export function planFuerWecker(tag, gespeichert = null) {
   const alt = new Map([...(gespeichert?.beitraege || []), ...(gespeichert?.stories || [])].map((e) => [e.slot, e]));
   const eintrag = (e) => {
     const a = alt.get(e.slot);
-    return { ...e, status: a?.status && a.status !== "geplant" ? a.status : "geplant", fehler: a?.fehler || null };
+    return { ...e, zeit: a?.status === "veroeffentlicht" ? (a.zeit || e.zeit) : e.zeit, status: a?.status && a.status !== "geplant" ? a.status : "geplant", fehler: a?.fehler || null };
   };
-  return {
+  return sendezeitenAnwenden({
     beitraege: (tag?.plan?.beitraege || []).map(eintrag),
     stories: (tag?.plan?.stories || []).map(eintrag),
-  };
+  }, tag?.datum || gespeichert?.datum);
 }
 
 /**
