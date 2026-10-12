@@ -38,7 +38,7 @@ export function vorproduktionLaden(hosting, datum) {
 }
 
 const merge = (neu, alt) => alt?.status === "veroeffentlicht"
-  ? { ...neu, status: alt.status, medienId: alt.medienId, veroeffentlicht: alt.veroeffentlicht, kanaele: alt.kanaele, interaktiv: alt.interaktiv }
+  ? { ...neu, zeit: alt.zeit || neu.zeit, status: alt.status, medienId: alt.medienId, veroeffentlicht: alt.veroeffentlicht, kanaele: alt.kanaele, interaktiv: alt.interaktiv }
   : neu;
 
 export function planAusVorproduktion(vp, alt = null) {
