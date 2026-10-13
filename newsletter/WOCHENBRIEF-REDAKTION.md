@@ -1,21 +1,22 @@
 # LexVerse: Redaktion und Bauplan für künftige Wochenbriefe
 
-Diese Vorlage ist das **redaktionelle Muster** für eine Ausgabe zum veröffentlichten Instagram-Wochenrückblick. Sie erzeugt nur lokales E-Mail-HTML aus einer lokalen JSON-Datei und prüft formale Anforderungen. Die Kit-Ausgabe bleibt ein Entwurf; weder der Befehl noch das Dashboard versendet oder veröffentlicht etwas. Die bestehenden Anmelde- und Bestätigungsmails sind ein anderes Modul.
+**Wochenbrief 02 ist der verbindliche Gestaltungs-Master.** Diese Vorlage erzeugt lokales E-Mail-HTML aus einer lokalen JSON-Datei und prüft formale Anforderungen. Die Kit-Ausgabe bleibt ein Entwurf; weder der Befehl noch das Dashboard versendet oder veröffentlicht etwas. Die bestehenden Anmelde- und Bestätigungsmails sind ein anderes Modul.
 
 ## Reihenfolge und feste Gestaltung
 
 1. **Betreff, Preheader und starker Hook:** Eine konkrete Irritation, Klausurfrage oder überraschende Folge aus dieser Woche. Präzise und wahr; keine austauschbare Überschrift und keine Zusage, die der Inhalt nicht einlöst. Der Betreff und Preheader ergänzen einander. Der Hook steht als große Titelzeile.
-2. **LexVerse-Header:** Logo, direkt darunter linksbündig ausschließlich die gelbe Pille `by herrjurist`, Inter-Schrift, dunkles Navy und Akzente in Gelb, Blau, Orange und Grün. Danach die wiederverwendbare intergalaktische Szene mit Mara, Rex, FORM-7, Flux, Zylla und Brakk. HTML für E-Mail-Clients mit Tabellen und Inline-Stilen, maximal 600 px breit.
+2. **LexVerse-Header:** Logo, direkt darunter linksbündig ausschließlich die gelbe Pille `by herrjurist`, Inter-Schrift, dunkles Navy und Akzente in Gelb, Blau, Orange und Grün. Danach die wiederverwendbare intergalaktische Szene mit Mara, Rex, FORM-7, Flux, Zylla und Brakk. HTML für E-Mail-Clients mit Tabellen und Inline-Stilen, maximal 690 px Webbreite und mobil 100 %.
 3. **Kurze Leseanweisung.** Der Wochenrückblick und seine Einzelbeiträge werden im Newsletter weder verlinkt noch mit Vorproduktions-IDs bezeichnet.
-4. **Rechtsgebiete als farbige Abschnitte:** je Thema in derselben nachvollziehbaren Reihenfolge wie im Wochenrückblick eine Karte mit Kennzeichnung `1. Staatsexamen` und/oder `2. Staatsexamen`, prägnantem Themen-Hook, kurzem Einstieg, gelb hervorgehobener Einordnung der Prüfungsrelevanz, neuem Minifall, eingerückter Lösungsskizze, typischer Fehlerquelle sowie Links zu überprüfbaren Rechtsgrundlagen.
-5. **Drei Wiederholungsfragen** und kurzer Abschluss. Die Zahl der Fälle entspricht den Themen des Wochenrückblicks; acht ist nur die Zahl des ersten Beispiels.
+4. **Rechtsgebiete als farbige Abschnitte:** Blau für Zivilrecht, Orange für Strafrecht, Grün für Öffentliches Recht. Jede fachliche Karte hat getrennte Examensbadges, Themen-Hook, Einstieg, die gelbe Box „WARUM PRÜFUNGSRELEVANT?“, einen quellengestützten Minifall oder eine konkrete fachliche Prüffrage, die eingerückte Lösung A./I./II./B./I./II., einen Fehlerhinweis oder Merksatz und Links zu überprüfbaren Rechtsgrundlagen.
+5. **Klausurtechnik & Kopfsache:** blauer Bereichskopf wie in Ausgabe 02, praktische Karte „DIREKT ANWENDEN“ mit zwei bis vier konkreten Schritten. Für diese Themen gibt es keine Fall-Leiste und keine juristische Lösungsskizze.
+6. **Drei Wiederholungsfragen** und kurzer Abschluss. Die Themenzahl folgt den jeweiligen Beiträgen der Woche; sie wird nicht auf die neun Themen der Master-Ausgabe gekürzt.
 
 ## Didaktischer Maßstab pro Thema
 
 - **Einstieg:** Worum geht es, und welche Vorfrage entscheidet den Fall? Ein bis drei Sätze.
 - **Prüfungsrelevanz:** Lehrbuchartig in einem knappen Absatz: Regel und Anspruchsgrundlage bzw. Prüfungsmaßstab, Voraussetzungen, Gegenansicht/Abgrenzung oder Rechtsfolge soweit relevant, typische Klausurposition und Aussage des Wochenbeitrags. Die verschlüsselten HerrJurist-Themenpools dienen für die fachliche Vertiefung; sie werden nicht im Klartext ins öffentliche Repo kopiert. Jeder Inhalt wird an aktueller Norm und gegebenenfalls einschlägiger Rechtsprechung überprüft.
-- **Minifall:** Neuer Sachverhalt mit konkreter Prüfungsfrage und entscheidenden Tatsachen; keine bloße Wiederholung des Beitrags. Der Fall muss mit den danach genannten Tatsachen lösbar sein.
-- **Lösungsskizze:** Juristische Prüfungsreihenfolge: Frage/Anspruch, Zulässigkeit oder Eröffnung, Voraussetzungen, Subsumtion und Ergebnis in der passenden Ebene. Keine zusätzliche Gliederungsebene allein wegen der Optik. Geschwisterpunkte immer mindestens paarweise: kein `A.` ohne `B.`, kein `I.` ohne `II.`, kein `1.` ohne `2.`; das gilt ebenso für `a)`/`b)` und `aa)`/`bb)`. Ebenen werden um je 22 px eingerückt. Ein bloßes Ergebnis ohne Subsumtion gilt redaktionell nicht als fertige Skizze.
+- **Minifall oder Prüffrage:** Ein Minifall braucht einen konkreten Sachverhalt mit entscheidenden Tatsachen und lösbarer Frage. Fehlen Tatsachen in der geprüften Quelle, steht eine fachliche Prüffrage statt eines erfundenen Falls. Nur Themen aus Zivilrecht, Strafrecht und Öffentlichem Recht erhalten diesen Baustein.
+- **Lösungsskizze:** Juristische Prüfungsreihenfolge: Frage/Anspruch, Zulässigkeit oder Eröffnung, Voraussetzungen, Subsumtion und Ergebnis in den Master-Ebenen `A./I./II./B./I./II.`. Die zweite Ebene ist sichtbar eingerückt. Ein bloßes Ergebnis ohne Subsumtion gilt redaktionell nicht als fertige Skizze.
 - **Examensbadge:** Kennzeichnung je Fall, ob erstes, zweites oder beide Staatsexamina; fachlich anhand der Tätigkeit und des Prüfungsstoffs gegenlesen.
 - **Rechtsgrundlagen:** Mindestens eine zitierfähige Norm oder Entscheidung pro Thema verlinken. Der Wochenrückblick und die Einzelbeiträge dienen beim Schreiben zur Themenauswahl und zum fachlichen Abgleich; ihre IDs und URLs erscheinen nicht im Newsletter.
 
@@ -36,7 +37,7 @@ Die JSON-Quelldatei enthält unveröffentlichte Inhalte und bleibt **außerhalb 
     "preheader": "[ergänzender Vorschautext]",
     "hook": "[starker Einstieg auf der Titelseite]",
     "deck": "[ein Satz zum Nutzen dieser Woche]",
-    "topic_count": 1,
+    "topic_count": 2,
     "quick_check": ["[konkrete Frage 1]", "[konkrete Frage 2]", "[konkrete Frage 3]"]
   },
   "sections": [{
@@ -55,11 +56,23 @@ Die JSON-Quelldatei enthält unveröffentlichte Inhalte und bleibt **außerhalb 
         { "marker": "A.", "text": "[erster Prüfungsschritt]" },
         { "marker": "I.", "text": "[erste Voraussetzung und Subsumtion]" },
         { "marker": "II.", "text": "[zweite Voraussetzung und Subsumtion]" },
-        { "marker": "B.", "text": "[zweiter Prüfungsschritt mit Ergebnis]" }
+        { "marker": "B.", "text": "[zweiter Prüfungsschritt]" },
+        { "marker": "I.", "text": "[Anwendung im Sachverhalt]" },
+        { "marker": "II.", "text": "[Ergebnis und Rechtsfolge]" }
       ],
       "trap": "[typische Fehlleistung und richtige Abgrenzung]",
       "sources": [{ "label": "[Norm oder Entscheidung]", "url": "https://www.gesetze-im-internet.de/..." }]
     }]
+  }],
+  "method_subtitle": "Konkrete Übungen für die nächste Klausur",
+  "methods": [{
+    "id": "02",
+    "field": "KOPFSACHE",
+    "headline": "[praktischer Nutzen in einer konkreten Situation]",
+    "exams": [1, 2],
+    "intro": "[Problem und Nutzen der Übung in zwei Sätzen]",
+    "steps": ["[erster ausführbarer Schritt]", "[zweiter ausführbarer Schritt]"],
+    "note": "[ein konkreter Merksatz für die Anwendung]"
   }]
 }
 ```
@@ -73,4 +86,4 @@ node bin/wochenbrief-entwurf.mjs /pfad/entwurf.json /pfad/wochenbrief.html
 
 Die zweite Form schreibt nur eine HTML-Datei. **Betreff und Preheader** stehen im JSON für die spätere manuelle Übernahme nach Kit; das HTML ist nur der Mailkörper. Erst nach inhaltlicher Sichtung den HTML-Körper manuell in einen **Kit-Entwurf** übernehmen. Für die Dashboard-Vorschau wie in `PREVIEW-VERSCHLUESSELUNG.md` beschrieben mit dem öffentlichen Schlüssel verschlüsseln und ausschließlich die `.enc.json` im Asset-Zweig ablegen. Kein automatischer Kit-Abgleich, keine Sendefunktion, keine automatische Veröffentlichung.
 
-Die Zuordnung zu den Vorproduktionsbeiträgen bleibt eine interne Redaktionsaufgabe. Die JSON-Quelldatei für die E-Mail benötigt dazu keine IDs und keine Instagram-URLs; der Renderer gibt solche Angaben auch dann nicht aus, wenn sie in älteren Entwurfsdateien noch vorhanden sind.
+Die Zuordnung zu den Vorproduktionsbeiträgen bleibt eine interne Redaktionsaufgabe. Die JSON-Quelldatei für die E-Mail benötigt dazu keine Pool-IDs und keine Instagram-URLs; der Renderer gibt solche Angaben auch dann nicht aus, wenn sie in älteren Entwurfsdateien noch vorhanden sind. Der Mailkörper darf 100 KB nicht überschreiten; je nach Mailprogramm und Kit-Template kann selbst darunter eine Darstellungskontrolle sinnvoll sein.
