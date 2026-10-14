@@ -1,0 +1,127 @@
+name: Einmalig · B1 Story-Teaser S1 am 2026-10-14
+on:
+  push:
+    branches: [publish-b1-teaser-2026-10-14-now]
+    paths: [.github/workflows/publish-b1-teaser-2026-10-14-now.yml]
+permissions:
+  contents: write
+jobs:
+  nur-s1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: instagram-bot
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: a292bfd0d243500a5fc3363b2c8a01c3f52e4092
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Nur fehlenden freigegebenen B1-Teaser veröffentlichen und quittieren
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
+          IG_GRAPH_HOST: ${{ vars.IG_GRAPH_HOST }}
+          IG_DRY_RUN: "false"
+          IG_PROVIDERKOSTEN_GESPERRT: "true"
+          GIT_AUTHOR_NAME: instagram-bot
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          import { Hosting } from './src/hosting.mjs';
+          import { Instagram } from './src/instagram.mjs';
+          import { vorproduktionLaden, storyAsset } from './src/vorproduktion-live.mjs';
+          import { echteMedienId, veroeffentlichtBestaetigt, veroeffentlichungEintragen } from './src/veroeffentlichung.mjs';
+          const datum = '2026-10-14';
+          const lokalDatum = (t) => new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(t));
+          assert.equal(lokalDatum(Date.now()), datum, 'Einmalauftrag ist nur heute erlaubt.');
+          assert.ok(process.env.IG_ACCESS_TOKEN && process.env.IG_ACCOUNT_ID && process.env.GITHUB_TOKEN, 'Zugangsdaten fehlen.');
+          const hosting = new Hosting({zweig:'instagram-assets',verzeichnis:'.oneoff-s1-assets',pushen:true}).vorbereiten();
+          const plan = hosting.jsonLesen(`plaene/${datum}.json`, null);
+          assert.equal(plan?.datum, datum, 'Heutiger Liveplan fehlt.');
+          const b1 = plan.beitraege?.find(e => e.slot === 'b1');
+          assert.ok(veroeffentlichtBestaetigt(b1), 'B1 muss bereits veröffentlicht sein.');
+          assert.equal(b1.medienId, '18116463224083561', 'Unerwarteter B1-Beitrag.');
+          const eintrag = plan.stories?.find(e => e.slot === 's1');
+          assert.equal(eintrag?.art, 'teaser');
+          assert.equal(eintrag?.beitragSlot, 'b1');
+          const andereSlots = () => JSON.stringify({beitraege:plan.beitraege,stories:plan.stories.filter(e => e.slot !== 's1')});
+          const vorherAndere = andereSlots();
+          const ig = new Instagram({trockenlauf:false,tresorDatei:path.join(hosting.stateDir,'token.enc')});
+          ig.tresorLaden();
+          const {konto,limit} = await ig.pruefen();
+          assert.equal(String(konto.username).toLowerCase(), 'herrjurist', 'Falsches Instagram-Konto.');
+          const ledger = hosting.jsonLesen('ledger.json', {veroeffentlicht:[],fachZaehler:{}});
+          ledger.veroeffentlicht ||= [];
+          let medienId = veroeffentlichtBestaetigt(eintrag) ? eintrag.medienId : null;
+          let neuGesendet = false;
+          if (!medienId) {
+            assert.equal(eintrag.status, 'geplant', 'Unklarer oder gesperrter Sendestatus.');
+            assert.ok(!eintrag.veroeffentlichungUnklar, 'Unbestätigte Veröffentlichung zuerst klären.');
+            const vp = vorproduktionLaden(hosting, datum);
+            assert.equal(vp?.tag?.freigabeBetreiber, true, 'Tagespaket ist nicht freigegeben.');
+            const story = vp.tag.inhalte?.s1;
+            assert.equal(story?.freigabeBetreiber, true, 'Teaser ist nicht freigegeben.');
+            assert.equal(story?.art, 'teaser');
+            assert.equal(story?.beitragSlot, 'b1');
+            const {bildUrl} = storyAsset(vp, 's1');
+            const quittiert = ledger.veroeffentlicht.filter(e => e.datum === datum && e.art === 'story' && e.slot === 's1' && echteMedienId(e.medienId));
+            assert.ok(quittiert.length <= 1, 'Mehrere S1-Quittungen; kein weiterer Post.');
+            let zeitpunkt;
+            if (quittiert.length === 1) {
+              const m = await ig.anfrage('GET', quittiert[0].medienId, {fields:'id,timestamp'});
+              assert.equal(m.id, quittiert[0].medienId);
+              medienId = m.id;
+              zeitpunkt = m.timestamp ? new Date(m.timestamp).toISOString() : quittiert[0].veroeffentlicht;
+              console.log('S1 bereits veröffentlicht; nur Planstatus abgleichen.');
+            } else {
+              const aktive = await ig.alleSeiten(`${ig.kontoId}/stories`, {fields:'id,timestamp',limit:50}, {maxSeiten:3});
+              const bekannteIds = new Set([...ledger.veroeffentlicht, ...plan.stories].map(e => e.medienId).filter(echteMedienId));
+              const unklar = aktive.filter(m => m.timestamp && lokalDatum(m.timestamp) === datum && !bekannteIds.has(m.id));
+              assert.equal(unklar.length, 0, 'Unquittierte Storys von heute vorhanden; zur Vermeidung eines Doppelposts gestoppt.');
+              assert.ok(limit.genutzt < limit.maximum, 'Instagram-Tageskontingent ausgeschöpft.');
+              await hosting.erreichbar(bildUrl);
+              console.log('S1_VORPRUEFUNG: B1 online, Teaser freigegeben, keine unquittierten heutigen Storys.');
+              medienId = await ig.storyPosten({bildUrl});
+              neuGesendet = true;
+              zeitpunkt = new Date().toISOString();
+            }
+            assert.ok(echteMedienId(medienId), 'Instagram hat keine echte Medien-ID bestätigt.');
+            assert.ok(veroeffentlichungEintragen(eintrag, medienId, {jetzt:zeitpunkt}).bestaetigt);
+            if (!ledger.veroeffentlicht.some(e => e.medienId === medienId)) {
+              ledger.veroeffentlicht.push({datum,art:'story',slot:'s1',storyArt:'teaser',thema:story.themaId || null,fach:story.fach,titel:story.titel || '',medienId,veroeffentlicht:zeitpunkt});
+              hosting.jsonSchreiben('ledger.json', ledger);
+            }
+            assert.equal(andereSlots(), vorherAndere, 'Andere Slots dürfen nicht verändert werden.');
+            hosting.jsonSchreiben(`plaene/${datum}.json`, plan);
+            hosting.commit(`Instagram ${datum}: Story-Teaser S1 zu B1 auf ausdrücklichen Auftrag veröffentlicht (${medienId})`);
+            await hosting.push();
+          }
+          let medium = {};
+          let sichtbarBestaetigt = false;
+          try {
+            medium = await ig.anfrage('GET', medienId, {fields:'id,timestamp,permalink'});
+            const aktive = await ig.alleSeiten(`${ig.kontoId}/stories`, {fields:'id',limit:50}, {maxSeiten:3});
+            sichtbarBestaetigt = aktive.some(m => m.id === medienId);
+          } catch {
+            console.warn('Zusätzliche Sichtbarkeitsabfrage fehlgeschlagen; bestätigte Medien-ID und Quittung bleiben maßgeblich.');
+          }
+          const ergebnis = {konto:'herrjurist',datum,slot:'s1',art:'teaser',beitragSlot:'b1',titel:'Detektiv gestoßen – kein § 252?',medienId,permalink:medium.permalink || null,veroeffentlicht:medium.timestamp || eintrag.veroeffentlicht,neuGesendet,sichtbarBestaetigt,status:'veroeffentlicht'};
+          fs.writeFileSync('s1-ergebnis.json', JSON.stringify(ergebnis,null,2));
+          console.log('S1_ERGEBNIS', JSON.stringify(ergebnis));
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `## B1-Story-Teaser S1 veröffentlicht\n\n${JSON.stringify(ergebnis,null,2)}\n`);
+          NODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s1-veroeffentlichungsbeleg
+          path: s1-ergebnis.json
+          if-no-files-found: ignore
+          retention-days: 7
