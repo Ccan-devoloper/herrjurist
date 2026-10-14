@@ -1,0 +1,111 @@
+name: Einmalig · B1 2026-10-14 jetzt veröffentlichen
+on:
+  push:
+    branches: [publish-b1-2026-10-14-now]
+    paths: [.github/workflows/publish-b1-2026-10-14-now.yml]
+permissions:
+  contents: write
+jobs:
+  nur-b1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: instagram-bot
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: a292bfd0d243500a5fc3363b2c8a01c3f52e4092
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Nur freigegebenes B1 veröffentlichen und quittieren
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
+          IG_GRAPH_HOST: ${{ vars.IG_GRAPH_HOST }}
+          IG_DRY_RUN: "false"
+          IG_PROVIDERKOSTEN_GESPERRT: "true"
+          GIT_AUTHOR_NAME: instagram-bot
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          import { Hosting } from './src/hosting.mjs';
+          import { Instagram } from './src/instagram.mjs';
+          import { vorproduktionLaden, feedAssets } from './src/vorproduktion-live.mjs';
+          import { echteMedienId, veroeffentlichtBestaetigt, veroeffentlichungEintragen } from './src/veroeffentlichung.mjs';
+          const datum = '2026-10-14';
+          const lokal = new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+          assert.equal(lokal, datum, 'Einmalauftrag ist nur am angegebenen Tag erlaubt.');
+          assert.ok(process.env.IG_ACCESS_TOKEN && process.env.IG_ACCOUNT_ID && process.env.GITHUB_TOKEN, 'Zugangsdaten fehlen.');
+          const hosting = new Hosting({zweig:'instagram-assets',verzeichnis:'.oneoff-b1-assets',pushen:true}).vorbereiten();
+          const plan = hosting.jsonLesen(`plaene/${datum}.json`, null);
+          assert.equal(plan?.datum, datum, 'Heutiger Liveplan fehlt.');
+          const eintrag = plan.beitraege?.find(e => e.slot === 'b1');
+          assert.equal(eintrag?.themaId, 'strafbt-752', 'B1 entspricht nicht dem angeforderten Beitrag.');
+          const ig = new Instagram({trockenlauf:false,tresorDatei:path.join(hosting.stateDir,'token.enc')});
+          ig.tresorLaden();
+          const {konto} = await ig.pruefen();
+          assert.equal(String(konto.username).toLowerCase(), 'herrjurist', 'Falsches Instagram-Konto.');
+          let medienId = veroeffentlichtBestaetigt(eintrag) ? eintrag.medienId : null;
+          let neuGesendet = false;
+          if (!medienId) {
+            assert.equal(eintrag.status, 'geplant', 'Unklarer oder gesperrter Sendestatus.');
+            const vp = vorproduktionLaden(hosting, datum);
+            assert.ok(vp?.tag?.freigabeBetreiber, 'Tagespaket ist nicht freigegeben.');
+            const beitrag = vp.tag.inhalte?.b1;
+            assert.equal(beitrag?.themaId, 'strafbt-752');
+            assert.equal(beitrag?.freigabeBetreiber, true, 'B1 ist nicht freigegeben.');
+            assert.equal(beitrag?.format, 'pruefungsfrage');
+            const caption = [beitrag.caption, (beitrag.hashtags || []).join(' ')].filter(Boolean).join('\n\n');
+            assert.ok(caption.length > 100 && caption.length <= 2200, 'Unerwartete Caption-Länge.');
+            const {bildUrls} = feedAssets(vp, eintrag);
+            assert.ok(bildUrls.length >= 2 && bildUrls.length <= 10, 'Unerwartete Carousel-Bildzahl.');
+            const normal = s => String(s || '').replace(/\s+/g,' ').trim();
+            const aktuelle = await ig.anfrage('GET', `${ig.kontoId}/media`, {fields:'id,caption,timestamp,permalink',limit:50});
+            const bereits = (aktuelle.data || []).filter(m => m.timestamp && new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(m.timestamp)) === datum && normal(m.caption).startsWith(normal(beitrag.caption).slice(0,180)));
+            assert.ok(bereits.length <= 1, 'Mehrere passende Posts gefunden; kein weiterer Post.');
+            if (bereits.length === 1) {
+              medienId = bereits[0].id;
+              console.log('B1 ist bereits auf Instagram vorhanden; nur Sendestatus abgleichen.');
+            } else {
+              for (const url of bildUrls) await hosting.erreichbar(url);
+              medienId = await ig.beitragPosten({bildUrls,caption});
+              neuGesendet = true;
+            }
+            assert.ok(echteMedienId(medienId), 'Instagram hat keine echte Medien-ID bestätigt.');
+            const zeitpunkt = bereits[0]?.timestamp ? new Date(bereits[0].timestamp).toISOString() : new Date().toISOString();
+            assert.ok(veroeffentlichungEintragen(eintrag, medienId, {jetzt:zeitpunkt}).bestaetigt);
+            const ledger = hosting.jsonLesen('ledger.json', {veroeffentlicht:[],fachZaehler:{}});
+            ledger.veroeffentlicht ||= [];
+            if (!ledger.veroeffentlicht.some(e => e.medienId === medienId)) {
+              const letzter = [...ledger.veroeffentlicht].reverse().find(e => e.art === 'beitrag' && echteMedienId(e.medienId) && e.variante != null);
+              ledger.veroeffentlicht.push({datum,art:'beitrag',slot:'b1',zeit:eintrag.zeit,stunde:Number(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Berlin',hour:'2-digit',hourCycle:'h23'}).format(new Date(zeitpunkt))),format:eintrag.format,thema:eintrag.themaId,fach:eintrag.fach,klausur:eintrag.klausur,titel:beitrag.kurztitel || eintrag.themaTitel,hookTyp:beitrag.hookTyp,hookMuster:beitrag.hookMuster,medienId,variante:beitrag.variante ?? (letzter ? 1-letzter.variante : 0),hashtags:beitrag.hashtags || [],veroeffentlicht:zeitpunkt,karteUrl:bildUrls[1] || bildUrls[0]});
+              ledger.fachZaehler ||= {};
+              ledger.fachZaehler[eintrag.fach] = (ledger.fachZaehler[eintrag.fach] || 0) + 1;
+              hosting.jsonSchreiben('ledger.json', ledger);
+            }
+            hosting.jsonSchreiben(`plaene/${datum}.json`, plan);
+            hosting.commit(`Instagram ${datum}: B1 auf ausdrücklichen Sofortauftrag veröffentlicht (${medienId})`);
+            await hosting.push();
+          }
+          let medium = {};
+          try { medium = await ig.anfrage('GET', medienId, {fields:'id,permalink,timestamp'}); }
+          catch (e) { console.warn('Permalink-Abfrage fehlgeschlagen; bestätigte Medien-ID bleibt maßgeblich.'); }
+          const ergebnis = {konto:'herrjurist',datum,slot:'b1',thema:'Räuberischer Diebstahl',medienId,permalink:medium.permalink || null,veroeffentlicht:medium.timestamp || eintrag.veroeffentlicht,neuGesendet,status:'veroeffentlicht'};
+          fs.writeFileSync('b1-ergebnis.json', JSON.stringify(ergebnis,null,2));
+          console.log('B1_ERGEBNIS', JSON.stringify(ergebnis));
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `## B1 veröffentlicht\n\n${JSON.stringify(ergebnis,null,2)}\n`);
+          NODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: b1-veroeffentlichungsbeleg
+          path: b1-ergebnis.json
+          if-no-files-found: ignore
+          retention-days: 7
