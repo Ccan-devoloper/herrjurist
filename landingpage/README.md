@@ -7,7 +7,8 @@ Figuren: Lexi aus `op/ressourcen/peeps-bibliothek/lexi.py` (Open Peeps, CC0).
 
 ## Einrichten (gleiches Cloudflare-Konto wie Examenscampus)
 1. Workers & Pages → KV → Namespace `herrjurist-anmeldungen` anlegen.
-2. Workers & Pages → Pages → Projekt aus diesem Repo: Build-Befehl leer, Ausgabeordner `landingpage`.
+2. Bereitstellung per GitHub Action `.github/workflows/landingpage-deploy.yml` (Direct Upload; die Git-Anbindung scheitert an der Repo-Größe).
+   GitHub-Secrets `CLOUDFLARE_API_TOKEN` (Cloudflare Pages: Edit) und `CLOUDFLARE_ACCOUNT_ID` setzen; der erste Lauf legt das Projekt `herrjurist` an.
 3. Projekt → Settings (Production): KV-Binding `ANMELDUNGEN` → `herrjurist-anmeldungen`;
    Secret `BREVO_API_KEY`; Variable `BREVO_LISTE` (Listen-ID); optional `BREVO_VORLAGE_WILLKOMMEN` (Vorlagen-ID der Begrüßungsmail).
 4. GitHub → Settings → Variables → `LANDINGPAGE_URL` = Adresse der Seite (z. B. `https://herrjurist.pages.dev`), sonst läuft das Nachtragen nicht.
