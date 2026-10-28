@@ -42,7 +42,6 @@
   button{font:900 20px Nunito,sans-serif;padding:16px;border:3px solid var(--ink);border-radius:12px;background:var(--lila);color:#fff;cursor:pointer;box-shadow:4px 4px 0 var(--ink);transition:transform .1s}
   button:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
   .klein{font-size:13px;color:var(--grau);line-height:1.4}
-  .klein a{color:inherit}
   .figur{width:100%;max-width:300px;justify-self:center}
   .figur img{width:100%;height:auto;display:block}
   section{padding-top:40px;padding-bottom:40px}
@@ -59,8 +58,6 @@
   .duo img{width:100%;max-width:150px;height:auto;justify-self:center}
   .cta{text-align:center;padding-top:56px;padding-bottom:72px}
   .cta .karte{max-width:520px;margin:0 auto;text-align:left}
-  footer{padding:20px 0;font-size:14px;color:var(--grau)}
-  footer a{color:inherit;margin-right:16px}
   .ok{display:none;text-align:center}
   .ok.zeigen{display:block}
   .ok img{width:110px;height:auto;display:block;margin:0 auto 6px}
@@ -102,7 +99,7 @@
           <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
           <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" aria-hidden="true">
           <button type="submit">Wochenbrief abonnieren</button>
-          <p class="klein" style="margin:0;text-align:center">Einmal pro Woche, kein Spam. Infos zum Datenschutz in der <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+          <p class="klein" style="margin:0;text-align:center">Einmal pro Woche, kein Spam. Jederzeit abbestellbar.</p>
         </form>
         <div class="ok"><img src="jubel.webp" alt="" width="387" height="1089"><span class="hand">Geschafft!</span><p>Du bist dabei. Der nächste Wochenbrief landet in deinem Postfach.</p></div>
       </div>
@@ -141,7 +138,6 @@
   </section>
 </main>
 
-<footer class="wrap"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></footer>
 
 <script>
   // Anmeldung läuft über die eigene Pages Function (functions/api/anmelden.js im Repo-Root) → KV → Brevo-API

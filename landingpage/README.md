@@ -11,4 +11,3 @@ Figuren: Lexi aus `op/ressourcen/peeps-bibliothek/lexi.py` (Open Peeps, CC0).
 3. Projekt → Settings (Production): KV-Binding `ANMELDUNGEN` → `herrjurist-anmeldungen`;
    Secret `BREVO_API_KEY`; Variable `BREVO_LISTE` (Listen-ID); optional `BREVO_VORLAGE_WILLKOMMEN` (Vorlagen-ID der Begrüßungsmail).
 4. GitHub → Settings → Variables → `LANDINGPAGE_URL` = Adresse der Seite (z. B. `https://herrjurist.pages.dev`), sonst läuft das Nachtragen nicht.
-5. Vor dem ersten öffentlichen Link: `impressum.html` und `datenschutz.html` ergänzen (Pflichtangaben; private Anschrift nicht ins öffentliche Repo).
