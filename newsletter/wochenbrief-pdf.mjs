@@ -113,24 +113,25 @@ a{color:#583EBE;font-weight:800;text-decoration:none}
 .pille{display:inline-block;border:solid #16161d;border-width:1.5px 3px 3px 1.5px;border-radius:99px;padding:1.5px 9px;font:800 8.5pt Nunito}
 .hand{font-family:Gochi,cursive}
 /* Titelseite */
-.titel{background:#7C5CFF;color:#fff;padding:0}
-.titel .oben{padding:16mm 16mm 0}
+.titel{background:#7C5CFF;color:#fff;padding:0;display:flex;flex-direction:column}
+.titel .oben{padding:16mm 16mm 4mm}
+.titel .zeile{display:grid;grid-template-columns:1fr 80mm;gap:6mm;align-items:end}
 .titel .meta{display:flex;justify-content:space-between;align-items:center}
 .titel .meta .pille{color:#16161d}
-.titel .hand{color:#FFDE59;font-size:20pt;margin:12mm 0 2mm;display:block;transform:rotate(-1.5deg)}
-.titel h1{font:900 42pt/1.15 Nunito;margin:0;max-width:130mm}
+.titel .hand{color:#FFDE59;font-size:18pt;margin:8mm 0 2mm;display:block;transform:rotate(-1.5deg)}
+.titel h1{font:900 38pt/1.15 Nunito;margin:0;max-width:130mm}
 .titel h1 span{color:#16161d;padding:0 8px;border-radius:10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.titel .deck{font:700 12pt/1.5 Nunito;margin:6mm 0 0;max-width:92mm}
-.titel .held{position:absolute;right:10mm;top:104mm;width:86mm;z-index:1}
-.titel .unten{position:absolute;left:0;right:0;bottom:0;height:150mm;background:#FFF8EC;color:#16161d;padding:16mm 16mm 12mm}
+.titel .deck{font:700 11pt/1.5 Nunito;margin:5mm 0 6mm}
+.titel .held{width:72mm;display:block;margin-bottom:-4mm;position:relative;z-index:1}
+.titel .unten{position:relative;flex:1;background:#FFF8EC;color:#16161d;padding:10mm 16mm 8mm}
 .titel .welle{position:absolute;left:0;right:0;top:-9mm;height:10mm;background:radial-gradient(10mm 7mm at 10mm 0,#7C5CFF 98%,transparent) 0 0/20mm 10mm repeat-x}
-.schritte3{display:flex;gap:4mm;margin-bottom:7mm}
+.schritte3{display:flex;gap:4mm;margin-bottom:5mm}
 .schritte3 div{flex:1;background:#fff;border:solid #16161d;border-width:1.5px 4px 4px 1.5px;border-radius:12px;padding:3mm;text-align:center;font:800 9.5pt/1.3 Nunito}
 .schritte3 b{display:inline-block;font:900 15pt Nunito;padding:0 7px;border-radius:7px;margin-bottom:1mm}
 .inhalt{columns:2;column-gap:8mm}
-.inhalt-gruppe{break-inside:avoid;margin-bottom:4mm}
+.inhalt-gruppe{break-inside:avoid;margin-bottom:3mm}
 .inhalt-titel{font:900 10pt Nunito;color:var(--farbe);border-bottom:2px solid var(--farbe);margin-bottom:1.5mm;padding-bottom:.5mm}
-.inhalt-zeile{display:flex;gap:2mm;font:700 9pt/1.35 Nunito;padding:.8mm 0}
+.inhalt-zeile{display:flex;gap:2mm;font:700 8.5pt/1.3 Nunito;padding:.5mm 0}
 .i-nr{color:var(--farbe);font-weight:900;width:5mm}.i-titel{flex:1}.i-seite{color:#5c5c68;font-weight:900}
 /* Fallseite: beginnt auf neuer Seite und darf auf die nächste fließen */
 .fall{height:auto;min-height:297mm;overflow:visible;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding-bottom:12mm}
@@ -185,9 +186,8 @@ a{color:#583EBE;font-weight:800;text-decoration:none}
     <div class="meta"><span>${pille('LexVerse', '#FFDE59')} ${pille('by herrjurist')}</span>${pille(`Wochenbrief ${String(a.nr).padStart(2, '0')} · ${datumDe(a.datum)}`)}</div>
     <span class="hand">Für Studium, 1. und 2. Staatsexamen</span>
     <h1>${a.hook.map((z, i) => `<span style="background:${farben[i % 3]}">${esc(z)}</span>`).join('<br>')}</h1>
-    <p class="deck">${esc(a.deck)}</p>
+    <div class="zeile"><p class="deck">${esc(a.deck)}</p>${a.bild ? `<img class="held" src="${bild(a.bild)}" alt="">` : '<span></span>'}</div>
   </div>
-  ${a.bild ? `<img class="held" src="${bild(a.bild)}" alt="">` : ''}
   <div class="unten"><div class="welle"></div>
     <div class="schritte3">
       <div><b style="background:#8DB3F2">1</b><br>Minifall lesen</div>
