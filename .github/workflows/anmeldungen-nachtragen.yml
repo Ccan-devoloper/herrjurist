@@ -1,0 +1,18 @@
+name: Anmeldungen nachtragen
+
+# Stündlich: Anmeldungen, die während einer Brevo-Störung nur im Cloudflare-Speicher
+# landeten („offen:“), erneut an Brevo schicken (functions/api/nachtragen.js).
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  nachtragen:
+    if: vars.LANDINGPAGE_URL != ''   # Adresse der Landingpage, z. B. https://herrjurist.pages.dev
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: curl -sS --fail-with-body -m 120 -X POST "${{ vars.LANDINGPAGE_URL }}/api/nachtragen"
