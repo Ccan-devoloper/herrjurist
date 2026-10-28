@@ -178,9 +178,6 @@ a{color:#583EBE;font-weight:800;text-decoration:none}
 /* Schluss */
 .check{background:#FFF3B0;border:2px solid #16161d;border-radius:14px;padding:5mm;break-inside:avoid}
 .check ol{margin:3mm 0 0;padding-left:6mm;font:800 11.5pt/1.5 Nunito}.check li{margin:2mm 0}
-.schluss{display:flex;gap:5mm;align-items:flex-end;margin-top:8mm;break-inside:avoid}
-.schluss .hand{font-size:18pt;color:#7C5CFF}
-.fuss{font:600 7.5pt/1.4 Nunito;color:#5c5c68;margin-top:6mm}
 </style></head><body>
 
 <section class="seite titel">
@@ -206,8 +203,6 @@ ${methoden.map(f => methodenseite(a, f, bild)).join('')}
 
 <section class="seite schlussseite" id="schluss">
   <div class="check"><span class="pille" style="background:#FFDE59">Dein 60-Sekunden-Check</span><ol>${a.check.map(q => `<li>${esc(q)}</li>`).join('')}</ol></div>
-  <div class="schluss"><div><div class="hand">Bei welchem Fall musstest du stoppen?</div><b>Antworte einfach auf die Mail – mit der Nummer.</b><br><br><b>Bis nächsten Sonntag – dein Herr Jurist</b></div></div>
-  <p class="fuss">Lernmaterial zur Examensvorbereitung, keine Rechtsberatung. Die verlinkten Normen dienen der eigenen Nachprüfung. Illustrationen: Open Peeps von Pablo Stanley (CC0).</p>
 </section>
 </body></html>`;
 }
