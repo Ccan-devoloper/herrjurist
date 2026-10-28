@@ -1,0 +1,75 @@
+name: Wochenbrief-Versand
+
+# Freitag 17 Uhr (Berlin): Vorschau der Sonntagsausgabe an WOCHENBRIEF_VORSCHAU_AN – Einspruch bis Sonntag
+# möglich („STOPP“ in den Kampagnennamen in Brevo schreiben oder die Kampagne löschen).
+# Sonntag 10 Uhr (Berlin): fällige PDF veröffentlichen, prüfen, Brevo-Kampagne senden.
+# Zwei Sonntags-Zeiten in UTC decken Sommer- und Winterzeit ab; das Skript sendet nur um 10 Uhr Berlin.
+# Benötigt: Secrets BREVO_API_KEY, WOCHENBRIEF_SCHLUESSEL, CLOUDFLARE_*; Variablen WOCHENBRIEF_VORSCHAU_AN, LANDINGPAGE_URL.
+on:
+  schedule:
+    - cron: "3 15,16 * * 5"   # Freitag
+    - cron: "1 8,9 * * 0"     # Sonntag
+  workflow_dispatch:
+    inputs:
+      modus:
+        description: vorschau oder senden
+        default: vorschau
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wochenbrief-versand
+
+jobs:
+  vorschau:
+    if: (github.event_name == 'schedule' && github.event.schedule == '3 15,16 * * 5') || (github.event_name == 'workflow_dispatch' && inputs.modus == 'vorschau')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            bin
+            newsletter/wochenbriefe
+      - name: Nur einmal um 17 Uhr Berlin
+        id: zeit
+        run: echo "jetzt=$(TZ=Europe/Berlin date +%H)" >> "$GITHUB_OUTPUT"
+      - if: steps.zeit.outputs.jetzt == '17' || github.event_name == 'workflow_dispatch'
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          WOCHENBRIEF_VORSCHAU_AN: ${{ vars.WOCHENBRIEF_VORSCHAU_AN }}
+        run: node bin/wochenbrief-versand.mjs vorschau
+
+  zeit:
+    if: (github.event_name == 'schedule' && github.event.schedule == '1 8,9 * * 0') || (github.event_name == 'workflow_dispatch' && inputs.modus == 'senden')
+    runs-on: ubuntu-latest
+    outputs:
+      jetzt: ${{ steps.z.outputs.jetzt }}
+    steps:
+      - id: z
+        run: echo "jetzt=$(TZ=Europe/Berlin date +%H)" >> "$GITHUB_OUTPUT"
+
+  veroeffentlichen:
+    needs: zeit
+    if: needs.zeit.outputs.jetzt == '10' || github.event_name == 'workflow_dispatch'
+    uses: ./.github/workflows/landingpage-deploy.yml
+    secrets: inherit
+
+  senden:
+    needs: [zeit, veroeffentlichen]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            bin
+            newsletter/wochenbriefe
+      - name: Kurz warten, bis Cloudflare die neue Fassung ausliefert
+        run: sleep 45
+      - env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          LANDINGPAGE_URL: ${{ vars.LANDINGPAGE_URL }}
+          SOFORT: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
+        run: node bin/wochenbrief-versand.mjs senden

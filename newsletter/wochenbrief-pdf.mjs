@@ -206,3 +206,53 @@ ${methoden.map(f => methodenseite(a, f, bild)).join('')}
 </section>
 </body></html>`;
 }
+
+/* Formale Prüfung einer Ausgabe-JSON vor dem Druck. Juristische Richtigkeit prüft sie nicht. */
+const MARKER = [
+  Array.from('ABCDEFGH', x => `${x}.`),
+  ['I.', 'II.', 'III.', 'IV.', 'V.', 'VI.', 'VII.', 'VIII.'],
+  Array.from({ length: 30 }, (_, i) => `${i + 1}.`),
+  Array.from('abcdefgh', x => `${x})`),
+  Array.from('abcdefgh', x => `${x}${x})`),
+];
+export function pruefeAusgabe(a) {
+  const f = [];
+  const txt = (v, min, max, wo) => { if (typeof v !== 'string' || v.trim().length < min || v.trim().length > max) f.push(`${wo}: ${min}–${max} Zeichen erwartet`); };
+  if (!Number.isInteger(a?.nr)) f.push('nr fehlt');
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(a?.datum ?? '')) f.push('datum fehlt');
+  if (!Array.isArray(a?.hook) || a.hook.length < 2 || a.hook.length > 3) f.push('hook: 2–3 kurze Zeilen');
+  else a.hook.forEach((z, i) => txt(z, 3, 22, `hook[${i}]`));
+  txt(a?.deck, 60, 260, 'deck');
+  if (!Array.isArray(a?.check) || a.check.length !== 3) f.push('check: genau drei Fragen');
+  for (const k of Object.keys(a?.bereiche ?? {})) { if (!BEREICHE[k]) f.push(`bereiche.${k} unbekannt`); txt(a.bereiche[k]?.untertitel, 8, 70, `bereiche.${k}.untertitel`); }
+  const faelle = a?.faelle ?? [];
+  if (faelle.length < 6 || faelle.length > 14) f.push(`faelle: 6–14 erwartet, ${faelle.length} vorhanden`);
+  faelle.forEach((c, i) => {
+    const wo = `faelle[${i}]`;
+    if (c.nr !== String(i + 1).padStart(2, '0')) f.push(`${wo}.nr: ${String(i + 1).padStart(2, '0')} erwartet`);
+    if (!a.bereiche?.[c.bereich]) f.push(`${wo}.bereich ${c.bereich} fehlt in bereiche`);
+    txt(c.feld, 3, 32, `${wo}.feld`); txt(c.titel, 15, 75, `${wo}.titel`); txt(c.einstieg, 40, 260, `${wo}.einstieg`);
+    if (!c.normen?.length || c.normen.some(n => !/^https:\/\//.test(n.url ?? '') || !n.label)) f.push(`${wo}.normen: mindestens eine Norm mit https-Link`);
+    if (c.bereich === 'methode') { if (!c.text?.length) f.push(`${wo}.text fehlt`); return; }
+    txt(c.klassiker, 40, 300, `${wo}.klassiker`); txt(c.wissen, 200, 900, `${wo}.wissen`); txt(c.minifall, 80, 520, `${wo}.minifall`);
+    txt(c.sprechblase, 5, 45, `${wo}.sprechblase`); txt(c.falle, 30, 300, `${wo}.falle`);
+    const g = c.gliederung;
+    if (!Array.isArray(g) || g.length < 4) { f.push(`${wo}.gliederung: mindestens 4 Zeilen`); return; }
+    const stapel = []; const wurzel = { m: 'Wurzel', k: [] };
+    g.forEach((z, j) => {
+      const m = (z.text ?? '').split(/\s/)[0];
+      const ebene = MARKER.findIndex(l => l.includes(m));
+      if (ebene < 0 || ebene !== z.ebene) { f.push(`${wo}.gliederung[${j}]: Marker ${m} passt nicht zu Ebene ${z.ebene}`); return; }
+      const eltern = ebene === 0 ? wurzel : stapel[ebene - 1];
+      if (!eltern) { f.push(`${wo}.gliederung[${j}]: Oberpunkt fehlt`); return; }
+      if (m !== MARKER[ebene][eltern.k.length]) f.push(`${wo}.gliederung[${j}]: ${MARKER[ebene][eltern.k.length]} erwartet statt ${m}`);
+      const knoten = { m, k: [] }; eltern.k.push(knoten); stapel[ebene] = knoten; stapel.length = ebene + 1;
+      (z.hinweise ?? []).forEach((h, k) => { if (!HINWEIS[h.typ]) f.push(`${wo}.gliederung[${j}].hinweise[${k}].typ`); txt(h.titel, 4, 80, `${wo}.gliederung[${j}].hinweise[${k}].titel`); txt(h.text, 40, 650, `${wo}.gliederung[${j}].hinweise[${k}].text`); });
+    });
+    const allein = n => { if (n.k.length === 1) f.push(`${wo}.gliederung: ${n.k[0].m} unter ${n.m} ohne Gegenstück`); n.k.forEach(allein); };
+    allein(wurzel);
+    const zahl = g.reduce((s, z) => s + (z.hinweise?.length ?? 0), 0);
+    if (zahl < 2) f.push(`${wo}: mindestens zwei Hinweise (Definition, Streitstand, Fehlerklassiker, Merke)`);
+  });
+  return f;
+}

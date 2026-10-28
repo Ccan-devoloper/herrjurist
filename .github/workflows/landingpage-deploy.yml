@@ -3,12 +3,18 @@ name: Landingpage bereitstellen
 # Lädt landingpage/ + functions/ per Wrangler direkt zu Cloudflare Pages hoch (Projekt „herrjurist“).
 # Die Git-Anbindung von Cloudflare scheitert an der Repo-Größe (~2 GB, Klonen bricht nach 10 Minuten ab),
 # deshalb holt dieser Lauf nur die beiden Ordner (sparse checkout).
-# Benötigt: Secrets CLOUDFLARE_API_TOKEN (Recht „Cloudflare Pages: Edit“) und CLOUDFLARE_ACCOUNT_ID.
+# Fällige Wochenbrief-PDFs (newsletter/wochenbriefe/*.pdf.enc) werden vor dem Hochladen entschlüsselt.
+# Benötigt: Secrets CLOUDFLARE_API_TOKEN (Recht „Cloudflare Pages: Edit“), CLOUDFLARE_ACCOUNT_ID, WOCHENBRIEF_SCHLUESSEL.
 on:
   push:
     branches: [main]
-    paths: [landingpage/**, functions/**, .github/workflows/landingpage-deploy.yml]
+    paths: [landingpage/**, functions/**, newsletter/wochenbriefe/**, .github/workflows/landingpage-deploy.yml]
   workflow_dispatch:
+  workflow_call:   # vom Wochenbrief-Versand vor dem Senden aufgerufen
+    secrets:
+      CLOUDFLARE_API_TOKEN:
+      CLOUDFLARE_ACCOUNT_ID:
+      WOCHENBRIEF_SCHLUESSEL:
 
 permissions:
   contents: read
@@ -30,10 +36,16 @@ jobs:
           sparse-checkout: |
             landingpage
             functions
+            bin
+            newsletter/wochenbriefe
           sparse-checkout-cone-mode: true
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Fällige Wochenbrief-PDFs entschlüsseln
+        env:
+          WOCHENBRIEF_SCHLUESSEL: ${{ secrets.WOCHENBRIEF_SCHLUESSEL }}
+        run: if [ -n "$WOCHENBRIEF_SCHLUESSEL" ]; then node bin/wochenbrief-veroeffentlichen.mjs; fi
       # Legt das Projekt beim ersten Lauf an; existiert es schon, schlägt nur dieser Schritt still fehl
       - if: env.CLOUDFLARE_API_TOKEN != ''   # ohne Secrets (noch nicht eingerichtet) nichts tun
         run: npx --yes wrangler@4 pages project create herrjurist --production-branch main || true
