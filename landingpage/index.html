@@ -9,7 +9,7 @@
 <meta property="og:description" content="Aus dem Wochenrückblick wird dein Klausurtraining: Minifälle, Lösungsskizze, Zusatzwissen. Für Studium, 1. und 2. Staatsexamen.">
 <link rel="preload" href="fonts/nunito-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/nunito-900.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/caveat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/gochi-hand.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   /*
    * Brevo-Anbindung: Das Formular sendet an /api/anmelden (functions/api/anmelden.js im Repo-Root), die die Anmeldung
@@ -78,6 +78,27 @@
     .duo{grid-template-columns:1fr}
     .duo img{max-width:140px;justify-self:center}
   }
+  /* Design „C3 – Lila Bühne“ (28.10.2026): lila Kopf mit Wellenkante, gelbe Markierung, Handschrift Gochi Hand (OFL): gelber Hero mit Wellenkante, größere Lexi, zentrierte Abschnitte, lila Schlussband */
+  header.wrap{max-width:none;background:var(--buehne);padding:20px max(16px,calc((100% - 1008px)/2)) 0;margin:0}
+  header small{background:#fff}
+  main>.hero{max-width:none;background:var(--buehne);padding:36px max(16px,calc((100% - 1008px)/2)) 40px;position:relative}
+  main>.hero::after{content:"";position:absolute;left:0;right:0;bottom:-28px;height:30px;background:radial-gradient(30px 22px at 30px 0,var(--buehne) 98%,transparent) 0 0/60px 30px repeat-x}
+  .mark{background:linear-gradient(transparent 55%,#fff 55%)}
+  .figur{max-width:340px}
+  section.wrap{padding-top:96px;padding-bottom:32px;text-align:center}
+  .liste{text-align:left}
+  .duo{text-align:left}
+  section.cta{max-width:none;background:var(--lila);margin-top:56px;padding:64px 16px 72px}
+  .cta .karte{box-shadow:6px 6px 0 var(--ink)}
+  .cta h2{color:var(--ink)}
+  button{background:var(--ink);box-shadow:4px 4px 0 var(--lila)}
+  @media (max-width:760px){main>.hero{padding:12px 16px 32px}header.wrap{padding:14px 16px 0}section.wrap{padding-top:52px}section.cta{padding:44px 16px 52px}}
+  @font-face{font-family:Gochi;font-display:block;src:url(fonts/gochi-hand.woff2) format("woff2")}
+  .hand{font-family:Gochi,cursive;font-size:30px;color:var(--gelb)}
+  :root{--buehne:#7c5cff} main>.hero,header.wrap{color:#fff} header span{color:var(--gelb)} header small{background:var(--gelb);color:var(--ink)} .hero .mark{background:var(--gelb);color:var(--ink);padding:0 8px;border-radius:6px} .vorteile li::before{border-color:var(--ink)} .hero .karte{color:var(--ink)} button{background:var(--gelb);color:var(--ink);box-shadow:4px 4px 0 var(--ink)} section.cta{background:var(--ink)} section .hand{color:var(--lila)}
+  section.duo{text-align:left}
+  .ok .hand{color:var(--lila)}
+  @media (max-width:760px){.hand{font-size:22px}}
 </style>
 </head>
 <body>
