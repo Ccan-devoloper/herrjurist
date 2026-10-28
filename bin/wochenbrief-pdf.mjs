@@ -35,15 +35,14 @@ await page.evaluate(() => {
   const seitenNr = el => {
     const sec = el.closest('section.seite');
     let nr = 1;
-    for (const s of seiten) { if (s === sec) break; nr += Math.max(1, Math.round(s.getBoundingClientRect().height / seiteH)); }
+    for (const s of seiten) { if (s === sec) break; nr += Math.max(1, Math.ceil(s.getBoundingClientRect().height / seiteH - 0.02)); }
     return nr + Math.floor((el.getBoundingClientRect().top - sec.getBoundingClientRect().top) / seiteH);
   };
-  document.querySelectorAll('[data-loesung]').forEach(b => { b.textContent = seitenNr(document.getElementById('l' + b.dataset.loesung)); });
   document.querySelectorAll('[data-fall]').forEach(s => {
     const k = document.querySelector(`section.fall .kopf-nr`) && [...document.querySelectorAll('section.fall')].find(x => x.querySelector('.kopf-nr').textContent === s.dataset.fall);
     if (k) s.textContent = 'S. ' + seitenNr(k);
   });
-  document.querySelectorAll('[data-loesungsteil]').forEach(s => { s.textContent = 'S. ' + seitenNr(document.getElementById('loesungsteil')); });
+  document.querySelectorAll('[data-loesungsteil]').forEach(s => { s.textContent = 'S. ' + seitenNr(document.getElementById('schluss')); });
 });
 await page.pdf({ path: output, format: 'A4', printBackground: true, preferCSSPageSize: true });
 await browser.close();
