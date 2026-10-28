@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Willkommen beim Wochenbrief</title>
+</head>
+<!-- Brevo-Transaktionsvorlage „Wochenbrief – Begrüßung“ (ID als BREVO_VORLAGE_WILLKOMMEN in Cloudflare Pages).
+     Bild-URL auf die endgültige Adresse der Seite anpassen. Betreff: „Willkommen beim Wochenbrief, {{ params.VORNAME | default : "schön, dass du da bist" }}“ -->
+<body style="margin:0;padding:0;background:#fffbe6;font-family:Nunito,'Segoe UI',Arial,sans-serif;color:#16161d">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0">Ab jetzt kommt jede Woche ein Minifall mit Lösungsskizze in dein Postfach.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fffbe6">
+<tr><td align="center" style="padding:28px 12px 8px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px">
+
+<tr><td style="padding:0 4px 14px;font-weight:900;font-size:17px;letter-spacing:.2px">Lex<span style="color:#7c5cff">Verse</span> <span style="font-size:12px;background:#ffde59;border:2px solid #16161d;border-radius:999px;padding:1px 8px">by herrjurist</span></td></tr>
+
+<tr><td style="background:#ffffff;border:3px solid #16161d;border-radius:18px;padding:0">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td style="padding:24px 28px 0">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+<td valign="top">
+<p style="margin:0 0 6px;font-size:15px;color:#ff7a45;font-weight:800">Du bist dabei!</p>
+<h1 style="margin:0 0 14px;font-size:26px;line-height:1.2;font-weight:900">Hallo {{ params.VORNAME | default : "du" }}, willkommen beim Wochenbrief</h1>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#3c3c46">Ich bin Lexi und begleite dich ab jetzt jede Woche. Aus den Themen unserer Instagram-Beiträge machen wir prüfungsnahe Minifälle – damit aus „schon mal gesehen“ ein „kann ich in der Klausur“ wird.</p>
+</td>
+<td width="110" valign="bottom" style="padding-left:12px"><img src="https://herrjurist.pages.dev/lexi-mail.png" alt="" width="92" style="display:block;width:92px;height:auto;border:0"></td>
+</tr></table>
+</td></tr>
+<tr><td style="padding:24px 28px 0">
+<p style="margin:0 0 10px;font-size:16px;font-weight:900">So ist jeder Wochenbrief aufgebaut:</p>
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:15px;line-height:1.5;color:#3c3c46">
+<tr><td valign="top" style="padding:0 10px 8px 0;color:#23d98b;font-weight:900">1</td><td style="padding:0 0 8px"><b style="color:#16161d">Die Woche, auf den Punkt:</b> die Themen der Beiträge, rechtlich eingeordnet</td></tr>
+<tr><td valign="top" style="padding:0 10px 8px 0;color:#7c5cff;font-weight:900">2</td><td style="padding:0 0 8px"><b style="color:#16161d">Ein Minifall pro Thema:</b> neuer Sachverhalt, echte Lösungsskizze</td></tr>
+<tr><td valign="top" style="padding:0 10px 8px 0;color:#ff7a45;font-weight:900">3</td><td style="padding:0 0 8px"><b style="color:#16161d">Mehr Wissen für die Klausur:</b> Normen, Abgrenzungen, typische Fehler</td></tr>
+</table>
+</td></tr>
+<tr><td style="padding:18px 28px 0">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff6c7;border-radius:12px">
+<tr><td style="padding:16px 18px;font-size:15px;line-height:1.55">
+<b>Kleiner Tipp:</b> Zieh diese Mail in deinen Posteingang oder füge unsere Adresse zu deinen Kontakten hinzu. Dann landet der Wochenbrief nicht im Spam.
+</td></tr></table>
+</td></tr>
+<tr><td style="padding:22px 28px 0">
+<p style="margin:0 0 14px;font-size:16px;line-height:1.6">Bis dahin findest du jeden Tag neue Beiträge auf Instagram:</p>
+<table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:#7c5cff;border:3px solid #16161d;border-radius:12px">
+<a href="https://www.instagram.com/herrjurist/" style="display:inline-block;padding:13px 24px;color:#ffffff;font-weight:900;font-size:16px;text-decoration:none">@herrjurist folgen →</a>
+</td></tr></table>
+</td></tr>
+<tr><td style="padding:22px 28px 28px">
+<p style="margin:0;font-size:16px;line-height:1.6">Viel Erfolg beim Lernen!<br><b>Lexi &amp; das Team von LexVerse</b></p>
+</td></tr>
+</table>
+</td></tr>
+
+<tr><td align="center" style="padding:18px 8px 26px;font-size:11px;line-height:1.5;color:#a9a593">
+Du erhältst diese E-Mail, weil du dich für den Wochenbrief eingetragen hast. <a href="{{ unsubscribe }}" style="color:#a9a593;text-decoration:underline">Abmelden</a>
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>

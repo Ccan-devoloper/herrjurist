@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wochenbrief · LexVerse by herrjurist</title>
+<meta name="description" content="Jede Woche die Themen unserer Instagram-Beiträge als prüfungsnahe Minifälle mit Lösungsskizze und Klausurwissen – kostenlos per Mail.">
+<meta property="og:title" content="Der Wochenbrief von LexVerse – kostenlos">
+<meta property="og:description" content="Aus dem Wochenrückblick wird dein Klausurtraining: Minifälle, Lösungsskizze, Zusatzwissen. Für Studium, 1. und 2. Staatsexamen.">
+<link rel="preload" href="fonts/nunito-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/nunito-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/caveat.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /*
+   * Brevo-Anbindung: Das Formular sendet an /api/anmelden (functions/api/anmelden.js im Repo-Root), die die Anmeldung
+   * zuerst in Cloudflare-KV sichert und dann per Brevo-API in die Liste BREVO_LISTE einträgt.
+   * Stil und Aufbau wie die Examenscampus-Landingpage (Repo steuerberater), Figur: Lexi aus op/ressourcen/peeps-bibliothek.
+   */
+  @font-face{font-family:Nunito;font-weight:400 799;font-display:block;src:url(fonts/nunito-700.woff2) format("woff2")}
+  @font-face{font-family:Nunito;font-weight:800 1000;font-display:block;src:url(fonts/nunito-900.woff2) format("woff2")}
+  @font-face{font-family:Caveat;font-display:block;src:url(fonts/caveat.woff2) format("woff2")}
+  :root{--ink:#16161d;--paper:#fffbe6;--lila:#7c5cff;--orange:#ff7a45;--gruen:#23d98b;--gelb:#ffde59;--grau:#5c5c68}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:600 18px/1.5 Nunito,system-ui,sans-serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+  header{padding:18px 0;font-weight:900;letter-spacing:.02em;display:flex;align-items:center;gap:0}
+  header small{margin-left:12px}
+  header span{color:var(--lila)}
+  header small{font:800 13px Nunito,sans-serif;background:var(--gelb);border:2px solid var(--ink);border-radius:999px;padding:2px 10px}
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding-top:24px;padding-bottom:48px}
+  h1{font-size:clamp(34px,6vw,58px);line-height:1.05;font-weight:900;margin:0 0 16px}
+  .mark{background:linear-gradient(transparent 55%,var(--gelb) 55%)}
+  .hand{font-family:Caveat,cursive;color:var(--orange);font-size:30px;transform:rotate(-2deg);display:inline-block}
+  .vorteile{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:8px;font-size:18px}
+  .vorteile li{position:relative;padding-left:40px}
+  .vorteile li::before{content:"";position:absolute;left:0;top:2px;width:24px;height:24px;border:2.5px solid var(--ink);border-radius:50% 45% 52% 48%;background:var(--gelb)}
+  .vorteile li::after{content:"";position:absolute;left:8px;top:6px;width:7px;height:12px;border:solid var(--ink);border-width:0 3px 3px 0;transform:rotate(40deg)}
+  .karte{background:#fff;border:3px solid var(--ink);border-radius:18px;box-shadow:6px 6px 0 var(--ink);padding:22px}
+  form{display:flex;flex-direction:column;gap:12px}
+  input[type=email],input[type=text]{font:inherit;padding:14px 16px;border:3px solid var(--ink);border-radius:12px;width:100%}
+  input:focus{outline:none;border-color:var(--lila)}
+  button{font:900 20px Nunito,sans-serif;padding:16px;border:3px solid var(--ink);border-radius:12px;background:var(--lila);color:#fff;cursor:pointer;box-shadow:4px 4px 0 var(--ink);transition:transform .1s}
+  button:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+  .klein{font-size:13px;color:var(--grau);line-height:1.4}
+  .figur{width:100%;max-width:300px;justify-self:center}
+  .figur img{width:100%;height:auto;display:block}
+  section{padding-top:40px;padding-bottom:40px}
+  h2{font-size:clamp(26px,4vw,38px);font-weight:900;margin:0 0 20px}
+  .liste{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;padding:0;list-style:none;margin:0}
+  .liste li{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:16px 18px}
+  .liste li h3{margin:0 0 6px;font-size:20px;font-weight:900}
+  .liste li p{margin:0;font-size:16px;color:var(--grau)}
+  .liste b{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;color:#fff;border:2px solid var(--ink);margin-bottom:8px}
+  .liste li:nth-child(1) b{background:var(--gruen)}
+  .liste li:nth-child(2) b{background:var(--lila)}
+  .liste li:nth-child(3) b{background:var(--orange)}
+  .duo{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center}
+  .duo img{width:100%;max-width:150px;height:auto;justify-self:center}
+  .cta{text-align:center;padding-top:56px;padding-bottom:72px}
+  .cta .karte{max-width:520px;margin:0 auto;text-align:left}
+  .ok{display:none;text-align:center}
+  .ok.zeigen{display:block}
+  .ok img{width:110px;height:auto;display:block;margin:0 auto 6px}
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr}
+    .figur{display:none}
+    header{padding:12px 0 6px}
+    .hero{padding-top:4px;gap:0}
+    h1{font-size:30px;margin-bottom:12px}
+    .hand{font-size:24px}
+    .vorteile{font-size:15px;gap:6px;margin-bottom:16px}
+    .vorteile li{padding-left:34px}
+    .vorteile li::before{width:20px;height:20px}
+    .vorteile li::after{left:7px;top:5px;width:6px;height:10px}
+    .karte{padding:16px}
+    form{gap:10px}
+    input[type=email],input[type=text]{padding:12px 14px}
+    .duo{grid-template-columns:1fr}
+    .duo img{max-width:140px;justify-self:center}
+  }
+</style>
+</head>
+<body>
+<header class="wrap">Lex<span>Verse</span> <small>by herrjurist</small></header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <span class="hand">Für Studium, 1. und 2. Staatsexamen</span>
+      <h1>Aus dem Wochenrückblick wird dein <span class="mark">Klausurtraining</span></h1>
+      <ul class="vorteile">
+        <li><b>Jede Woche:</b> die Themen unserer Instagram-Beiträge als prüfungsnahe Minifälle</li>
+        <li><b>Mit Lösungsskizze:</b> sauberer Prüfungsaufbau statt bloßer Kurzantwort</li>
+        <li>Kostenlos, jederzeit abbestellbar</li>
+      </ul>
+      <div class="karte" id="anmelden">
+        <form class="lead-form" method="POST">
+          <input type="text" name="FIRSTNAME" placeholder="Vorname (optional)" autocomplete="given-name">
+          <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+          <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" aria-hidden="true">
+          <button type="submit">Wochenbrief abonnieren</button>
+          <p class="klein" style="margin:0;text-align:center">Einmal pro Woche, kein Spam. Jederzeit abbestellbar.</p>
+        </form>
+        <div class="ok"><img src="jubel.webp" alt="" width="387" height="1089"><span class="hand">Geschafft!</span><p>Du bist dabei. Der nächste Wochenbrief landet in deinem Postfach.</p></div>
+      </div>
+    </div>
+    <div class="figur"><img src="held.webp" alt="Lexi, Moderatorin von LexVerse, erklärt" width="481" height="1090"></div>
+  </div>
+
+  <section class="wrap">
+    <h2>Was in deinem Wochenbrief steckt</h2>
+    <ul class="liste">
+      <li><b>1</b><h3>Die Woche, auf den Punkt</h3><p>Die Themen unserer Beiträge der vergangenen Woche – gebündelt, rechtlich eingeordnet, verständlich aufbereitet.</p></li>
+      <li><b>2</b><h3>Ein Minifall pro Thema</h3><p>Du wendest den Stoff auf einen neuen Sachverhalt an. Danach folgt eine echte Lösungsskizze mit klar eingerückten Gliederungsebenen.</p></li>
+      <li><b>3</b><h3>Mehr Wissen für die Klausur</h3><p>Normen, typische Abgrenzungen und häufige Fehler. Jeder Fall zeigt, ob er fürs 1. oder 2. Staatsexamen relevant ist.</p></li>
+    </ul>
+  </section>
+
+  <section class="wrap duo">
+    <img src="kommt.webp" alt="" width="379" height="1088">
+    <div>
+      <span class="hand">Warum das hilft</span>
+      <h2>Wissen sitzt erst, wenn du es anwendest</h2>
+      <p>Ein Beitrag erklärt dir eine Regel. Die Klausur verlangt, dass du sie an einem fremden Fall sauber prüfst. Genau diese Lücke schließt der Wochenbrief – jede Woche, mit dem Stoff, den du ohnehin gerade gesehen hast.</p>
+    </div>
+  </section>
+
+  <section class="wrap cta">
+    <div class="karte">
+      <h2 style="font-size:28px;margin-bottom:12px">Jetzt kostenlos eintragen</h2>
+      <form class="lead-form" method="POST">
+        <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+        <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" aria-hidden="true">
+        <button type="submit">Wochenbrief abonnieren</button>
+      </form>
+      <div class="ok"><span class="hand">Geschafft!</span><p>Du bist dabei. Der nächste Wochenbrief landet in deinem Postfach.</p></div>
+    </div>
+  </section>
+</main>
+
+
+<script>
+  // Anmeldung läuft über die eigene Pages Function (functions/api/anmelden.js im Repo-Root) → KV → Brevo-API
+  const ANMELDE_URL = "/api/anmelden";
+  document.querySelectorAll(".lead-form").forEach((form) => {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const karte = form.closest(".karte");
+      const btn = form.querySelector("button");
+      btn.disabled = true; btn.textContent = "Wird gesendet …";
+      try {
+        const res = await fetch(ANMELDE_URL, { method: "POST", body: new FormData(form), signal: AbortSignal.timeout(20000) });
+        const daten = await res.json().catch(() => ({}));
+        if (!res.ok || !daten.ok) throw new Error(daten.fehler || res.status);
+        karte.style.minHeight = karte.offsetHeight + "px";   // Höhe halten, damit nichts nach oben rutscht
+        form.style.display = "none";
+        karte.querySelector(".ok").classList.add("zeigen");
+      } catch {
+        btn.disabled = false; btn.textContent = "Hat nicht geklappt – nochmal versuchen";
+      }
+    });
+  });
+</script>
+</body>
+</html>
