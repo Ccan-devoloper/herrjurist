@@ -1,0 +1,60 @@
+# Folge 232 · Kündigung wegen 1,30 Euro? Der Fall Emmely (§ 626 BGB) – Szenenplan
+
+**Stand:** 07.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_232.py`](src/skript_232.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
+**Format:** Mo · Der Fall · Zivilrecht/Arbeitsrecht, Klassiker-Fall. Fiktiver Rahmen, der dem echten Fall folgt (BAG, Urt. v. 10.6.2010 – 2 AZR 541/09). Ablauf laut Auftrag: 1. Hook mit Zahlen als Ziffern (fast 31 Jahre, 1,30 €) → Frage → Sachverhalt → 2. § 626 Abs. 1 BGB (Wortlautkarte), zwei Stufen; Stufe 1: an sich geeignet, auch geringwertig, keine Wertgrenze, Prognoseprinzip; Feststellung und Subsumtion im Fall → 3. Stufe 2: Abwägungskriterien, mildere Mittel, Abmahnung aus der Verhältnismäßigkeit (§ 314 Abs. 2 S. 1 BGB als Wortlautkarte, „gesetzgeberische Bestätigung“), Ausnahmen; Abwägung im Fall (offen statt heimlich, fast 31 Jahre, „Vorrat an Vertrauen“, objektiver Maßstab, geringer Nachteil), Prozessverhalten → 4. Ergebnis: unwirksam, Abmahnung hätte ausgereicht → 5. § 626 Abs. 2 (Wortlautkarte) ein Satz; hilfsweise ordentliche Kündigung, § 1 Abs. 2 S. 1 KSchG (Wortlautkarte kurz) ein Satz, Verweis Folge 152 → 6. Klausurtipp (Lexi), Prüfschema I.–IV., Merksatz (Lexi).
+**Länge:** Hauptfilm 6:24,7 bei 5.651 Zeichen (Grenze 7:00/6.200); Begründung in [`ABNAHME.md`](ABNAHME.md).
+
+**Darstellung (Vorgabe Auftrag):** Die reale Klägerin wird weder als Figur gezeigt noch benannt; „Emmely“ erscheint nur als Fallbezeichnung auf der Tafel („Fall „Emmely““ mit Gericht, Datum, Az.) und in der Quellenzeile der Sachverhaltskarte, nicht im Sprechtext. Kassiererin, Kollegin und Filialleiter sind fiktive Figuren, der Supermarkt ist ein namenloser fiktiver Markt (keine echte Handelskette, keine Logos). Doris ist sympathisch gezeichnet (freundliche Mimik, kein Diebes-Klischee, keine Heimlichkeitsgeste); ihr Bestreiten wird ausdrücklich genannt.
+
+## Besetzung
+
+| Figur | Rolle | Open Peeps | Stimme |
+|---|---|---|---|
+| Doris (DO), um 55 | Kassiererin seit fast 31 Jahren, Arbeitnehmerin; spricht nicht | `standing/resting-1` (Langarm-Oberteil Petrol `#5FA8A0`, schwarze Hose der Pose), Kopf `Gray Medium` (Haar in der Bibliotheksfarbe Kupferrot), Brille `Glasses 4`, Haut `#F0C8A8`; Mimiken `Smile` (froh), `Calm`, `Serious`, `Concerned\|Serious` (Sorge), `Fear` (Schreck), `Tired`, `Solemn` (still), `Awe` (staunt) | – (keine Frauenstimme passenden Alters im Pool) |
+| Merle (ME), um 25 | Kassiererin, Kollegin; findet die Bons, kassiert später | `standing/easing-1` (offene Jacke Rot `#F07A6A`, weißes Oberteil, schwarze Hose der Pose), Kopf `Long Bangs`, Haut `#C68E6A`; Mimiken `Smile` (froh, redet), `Calm`, `Concerned\|Serious`, `Awe`, `Serious` | `ela_froh` (Frau, jung; heiterer, harmloser Satz) |
+| Herr Bartels (BT), um 60 | Filialleiter (spricht für den Arbeitgeber) | `standing/crossed_arms-1` (Oberteil Hellblau `#8DB3F2`, schwarze Hose der Pose), Kopf `Gray Short` (Haar nur als Kontur, Fläche hautfarben – wirkt hell), Brille `Glasses`, Haut `#E8B48F`, kein Bart; Mimiken `Calm`, `Serious` (redet, ernst), `Suspicious`, `Solemn`, `Smile` | `helmut` (Mann, älter) |
+| Lexi | Klausurtipp (warnt) und Merksatz (erklärt) | nach `lexi.py` (`robot_dance-1`, `Serious`/`Smile`) | Carla Blum |
+| Erzählerin | – | – | Carla Blum |
+
+- **Namen** mit eindeutig deutscher Aussprache, weder auf der Koordinatorliste noch in `namen_reserviert.txt` (dort vor der Vertonung als „232: Doris, Bartels, Merle“ eingetragen), per Volltextsuche in den Skripten früherer Folgen ohne Treffer. Keine Genitivformen („bei Merle an der Kasse“ statt „an Merles Kasse“).
+- **Stimmen nur aus dem Pool** (niklas, helmut, ela_froh, julia): gebraucht `ela_froh` (nur für Merles heiteren Fundsatz, keine ernste Rolle) und `helmut`; `julia` und `niklas` nicht benötigt. Doris spricht bewusst nicht: Pool ohne Frauenstimme um 55 (Alter muss zur Rolle passen).
+- **Blickrichtung:** Posen blicken im Original nach rechts; Grundansicht gespiegelt (nach links), `_r` nach rechts. Szene A: Doris hinter der Kasse (`_r`) blickt zu Merle und Herrn Bartels, beide blicken nach links zu ihr. Szene B: Doris blickt nach links zur Ablage. Szene C: Merle hinter der Kasse (`_r`) blickt zu Doris, Doris (Kundin) und Herr Bartels blicken nach links zur Kasse. Tafelfolien: alle nach links zur Tafel.
+- **Alle Grundmimiken mit geschlossenem Mund**; Mundzustände a/o/e nur in `ME_redet`, `BT_redet` (je links/rechts) und Lexi. Keine Prothesen-Posen, keine Bärte, keine Polka Dots, keine Karikatur. 60 Figuren-PNGs in `../peeps/op_232/` (Drive-Master).
+
+**Abweichung von den letzten Folgen:** 229 (`robot_dance-3`, `blazer-3`, `easing-2`, `walking-1`), 230 (`pointing_finger-2`, `shirt-3`, `shirt-4`), 231 (`walking-2`, `robot_dance-3`, Nacht im Stadtpark) – in 232 keine dieser Posen; Petrol-Oberteil, rote offene Jacke und hellblaues Oberteil mit verschränkten Armen neu gegenüber diesen Folgen. Schauplätze **Supermarktkasse mit Kassentheke, Kasse und Warenregal**, **Kassenbüro mit Ablage und Tür** – neu gegenüber 229–231; die Rückkehr an die Kasse in Szene C folgt der Geschichte (Einkauf zehn Tage später). Arbeitsrechtliche Vorgänger 152 (Gärtnerei) und 050 (Fahrradwerkstatt) nur über Verweis. Cremegrund durchgehend, Tageslicht.
+
+## Szenen
+
+| Szene | Ort / Handlung | Requisiten (Iconset:Name, Füllung) | Tafel / Prüfpfad | Bildhalte (Zwiebelschale) | Geräusch |
+|---|---|---|---|---|---|
+| **A Kasse** `fall`→`ba1` | Kassentheke (Grundform) mit Kassenband, Warenregal; Doris hinter der Kasse ab 0,0 s; Merle findet zwei Bons am Boden; Herr Bartels kommt von rechts, die Bons liegen danach bei Doris auf der Theke | tabler:`cash-register`, `receipt` (×2), Regal mit `bottle`, `milk`, `apple`, `bread`, `cheese`, `carrot` | `Fall · Im Supermarkt` (ab 0,0 s) → `· Zwei Pfandbons` → `· Der Filialleiter` | Kasse + Doris · seit fast 31 Jahren · ohne Beanstandung · Merle + Bons + Pille · Merle redet, Blase · Bartels kommt · Bons bei Doris · Bartels redet, Blase | Schritte (`szene_232schritte_1`) |
+| **B Kassenbüro** `ablage` | Wand, Tür, Brett als Ablage mit Ordner und Box; die Bons wandern aus Doris' Hand auf die Ablage | tabler:`folder`, `archive`, `receipt` | `Fall · Im Kassenbüro` | Büro + Doris · Bons unterwegs · auf der Ablage + Pille | – |
+| **C Kasse, 10 Tage später** `zehn`→`echt` | Merle hinter der Kasse, Doris als Kundin, Korb auf dem Band; Bons wandern zur Kasse; Herr Bartels steht daneben; Kündigung; Frage; echter Fall | tabler:`calendar-event`, `basket`, `cash-register`, `receipt`, `file-text` | `Fall · Zehn Tage später` → `· Zwei Pfandbons an der Kasse` → `· Die Kündigung` → `· Die Frage` → `· Der echte Fall: BAG 2010` | 10 Tage · privat · Bons an der Kasse · nicht abgezeichnet · 1,30 € billiger · Bartels daneben · Verdacht · fristlos · Bartels redet · Frage · Karte „Fall „Emmely““ | Kassenscanner (`szene_232scanner_1`) |
+| **D Sachverhalt** `sv` | Karte vollständig, ≈ 9,6 s, Quellenzeile | – | `Sachverhalt` | 1 | – |
+| **E § 626 Abs. 1** `p626`→`absolut` | Wortlautkarte (Merkmale gesprochen), zwei Stufen | tabler:`book`, `stack-2`, `scale` | `§ 626 Abs. 1 BGB › wichtiger Grund` → `› zwei Stufen` → `› keine absoluten Kündigungsgründe` | Karte · 5 Marker · Stufe 1 · Stufe 2 · keine absoluten Gründe | – |
+| **F Stufe 1 abstrakt** `s1`→`prog` | Tafel, Doris allein | tabler:`receipt`, `coin-euro`, `crystal-ball` | `Stufe 1 › an sich geeignet` → `› Vermögen des Arbeitgebers` → `› auch bei geringem Wert` → `› keine Wertgrenze` → `› Prognoseprinzip` | Titel · Vermögen · ✓ geringer Wert · ✗ Wertgrenze · Vertrauen · Prognose-Block · Frage | – |
+| **G Stufe 1 im Fall** `fest`→`ansich` | Tafel, beide Figuren | tabler:`gavel`, `receipt`, `alert-triangle`, `cash-register`, `file-check` | `Stufe 1 › im Fall › Feststellung des LAG` → `› Pflichtverletzung` → `› wichtiger Grund an sich (+)` | LAG · bestreitet · gebunden · ✓ Vorteil · ✓ Anweisung · ✓ Kernbereich · Block (+) | – |
+| **H Stufe 2** `abw`→`abm` | Tafel, beide Figuren, zwei Karten für mildere Mittel | tabler:`scale`, `hand-stop`, `file-alert`, `calendar-time` | `Stufe 2 › Interessenabwägung` → `› Dauer, störungsfreier Verlauf` → `› mildere Mittel` | Kriterien 1–3 · Dauer · Block mildere Mittel · Karte Abmahnung · Karte ordentliche Kündigung | – |
+| **I Abmahnung** `verh`→`vb` | Tafel, Wortlautkarte § 314 Abs. 2 S. 1, Herr Bartels allein | tabler:`scale`, `book`, `file-alert`, `coin-euro` | `Stufe 2 › Abmahnung › Verhältnismäßigkeit` → `› § 314 Abs. 2 BGB` → `› entbehrlich nur ausnahmsweise` → `› auch bei Vermögensdelikten` | Verhältnismäßigkeit · Karte + Marker · Ausnahme 1 · Ausnahme 2 · Block | – |
+| **J Abwägung im Fall** `fall2`→`jahre` | Tafel mit (+)-Punkten, Doris allein | tabler:`scale`, `eye`, `calendar` | `Stufe 2 › Abwägung im Fall` → `› offen statt heimlich` → `› fast 31 Jahre` | offen · heimlich · Unrecht · 31 Jahre | – |
+| **K Vorrat an Vertrauen** `vorrat`→`schad` | Balken aus 31 Feldern, das letzte wird rot („1. Vorfall“) | tabler:`heart-handshake`, `scale`, `receipt` | `Stufe 2 › Vorrat an Vertrauen` → `› nicht vollständig aufgezehrt` → `› objektiver Maßstab` → `Stufe 2 › geringer Nachteil` | Balken · Text · rotes Feld · objektiv · geringer Nachteil | – |
+| **L Prozessverhalten** `proz`→`rueck` | Tafel, beide Figuren | tabler:`message-2`, `mail`, `user-check` | `Stufe 2 › Prozessverhalten` → `› Zeitpunkt des Zugangs` → `› keine Rückschlüsse` | geändert · zählt nicht · Zugang · keine Rückschlüsse | – |
+| **M Ergebnis** `erg`→`ausr` | Tafel, beide Figuren | tabler:`gavel`, `file-alert` | `Ergebnis` → `› fristlose Kündigung unwirksam` → `› Abmahnung hätte gereicht` | ✗ unwirksam · Block Abmahnung | – |
+| **N Noch zwei Punkte** `p2`→`v152` | Wortlautkarten § 626 Abs. 2 S. 1, 2 und § 1 Abs. 2 S. 1 KSchG (gekürzt mit „…“) | tabler:`hourglass`, `calendar-time`, `book` | `Noch zwei Punkte › § 626 Abs. 2 BGB: 2 Wochen` → `› hilfsweise ordentliche Kündigung` → `› § 1 Abs. 2 S. 1 KSchG` → `› Video „Kündigungsschutz“` | Karte + 2 Marker · Frage · Karte + Marker · Ergebnis · Verweis | – |
+| **O Klausurtipp** `tipp`→`t3` | hellgelbe Tafel, Lexi warnt (redet) | Warnsymbol (Streamline Freehand) | `Klausurtipp · Bagatellfall` → `· geringer Wert: Interessenabwägung` → `· Abmahnung prüfen` | 3 Punkte nacheinander | – |
+| **P Prüfschema** `sch`→`k4` | breite Karte, Aufbau Punkt für Punkt | – | `Prüfschema` → `› I. …` bis `› IV. Zwei-Wochen-Frist` | Titel · I. · II. · III. · 1. · 2. · IV. | – |
+| **Q Merksatz** `merke`/`m2` | Lexi erklärt (redet), Marker | – | `Merksatz` | Satz 1 + Marker · Satz 2 + Marker | – |
+
+**Übergänge:** stumme Schiebeblenden nur zwischen den 17 Folien; innerhalb harte Schnitte und Pops; Bewegung nur: Herr Bartels kommt 140 px von rechts an die Kasse, die Bons wandern aus Doris' Hand auf die Ablage und später zur Kasse.
+**Geräusche:** zwei Handlungsgeräusche aus Freesound CC0, Herkunft in [`geraeusche_herkunft.json`](geraeusche_herkunft.json).
+**Blasen:** Stil C, wortgleich mit dem Gesprochenen. Wortlautkarten wörtlich nach gesetze-im-internet.de (Abruf 07.10.2026), Auslassungen mit „…“.
+
+## Sachverhaltskarte (Szene D, erscheint vollständig)
+
+> Doris arbeitet seit fast 31 Jahren als Kassiererin in einem Supermarkt, bisher ohne Beanstandung. Ihre Kollegin Merle findet im Kassenbereich zwei Pfandbons über 0,48 € und 0,82 €. Filialleiter Bartels gibt sie Doris: Sie soll sie im Kassenbüro aufbewahren, falls sich noch jemand meldet. Doris legt sie dort auf eine Ablage.
+>
+> Zehn Tage später kauft Doris außerhalb ihrer Arbeitszeit privat ein und reicht bei Merle an der Kasse zwei nicht abgezeichnete Pfandbons. Ihr Einkauf wird 1,30 € billiger; Herr Bartels steht daneben.
+>
+> Der Arbeitgeber verdächtigt sie, die Bons aus dem Kassenbüro eingelöst zu haben, und kündigt fristlos, hilfsweise ordentlich. Doris bestreitet ein bewusstes Fehlverhalten und ändert ihre Erklärungen im Prozess mehrmals.
+>
+> **Ist die fristlose Kündigung wirksam?** — *Nach BAG, Urt. v. 10.6.2010 – 2 AZR 541/09 (Fall „Emmely“)*

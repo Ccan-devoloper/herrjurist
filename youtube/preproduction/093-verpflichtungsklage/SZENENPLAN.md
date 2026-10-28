@@ -1,0 +1,52 @@
+# Folge 093 · Verpflichtungsklage Schema: Spruchreife und Bescheidungsurteil – Szenenplan
+
+**Stand:** 03.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_093.py`](src/skript_093.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
+**Format:** Fr · Klausurpraxis, Themenplan-Format „Schema“; Voraussetzung laut Plan: Folge 069 (Anfechtungsklage), Verweis auf Folge 074 (Ermessensfehler). Übungsfall nach dem Hook („Die Stadt lehnt deinen Antrag auf Außengastronomie vor deinem Café ab.“), Beispielland Nordrhein-Westfalen, **bewusst anders als 074**: Herr Feldmann beantragt eine Sondernutzungserlaubnis für sechs Tische; Frau Siebert von der Stadt lehnt ab, weil der Gehweg zu schmal sei – er ist aber fünf Meter breit, drei Meter bleiben frei (Ermessen ausgeübt, aber auf falscher Tatsachengrundlage, kein Ermessensausfall). Ablauf: Fall → Klage und Frage → Sachverhalt → Aufbau, I. Rechtsweg → II. Statthaftigkeit (Wortlautkarte § 42 I Alt. 2; Versagungsgegenklage, Untätigkeitsklage ein Satz) → III. Klagebefugnis (möglicher Anspruch) → IV. Vorverfahren (NRW § 110 JustG) und V. Frist → VI. Klagegegner, zulässig → B. Begründetheit (Wortlautkarte § 113 V) → anspruchsorientiert, maßgeblicher Zeitpunkt → I.–IV. Anspruchsprüfung → Ermessensfehler: falscher Sachverhalt → V. Spruchreife → im Fall: Bescheidungsurteil → Tenorformeln → Urteil (Richterin) → Klausurtipp → Klausurschema → Merksatz.
+**Länge:** Hauptfilm 6:48,2 (5.818 gesprochene Zeichen); Begründung in ABNAHME.md.
+
+## Besetzung
+
+| Figur | Rolle | Open Peeps | Stimme |
+|---|---|---|---|
+| Herr Feldmann (FE), um 40 | führt ein Café, Kläger | Pose `standing/robot_dance-2` (schwarzes Shirt, Jeans-blaue Hose `#5B7DB8`), Kopf `Short 3`, Haut `#E8B998`; Mimiken `Smile` (ruhig), `Driven` (redet), `Smile` (redet froh), `Cute` (hofft), `Concerned|Serious` (Sorge), `Suspicious` (denkt), `Smile Big|Smile` (froh) | `stephan` (Mann, mittel) |
+| Frau Siebert (SI), um 60 | Sachbearbeiterin der Stadt | Pose `standing/blazer-3` (graublauer Blazer `#8F9DB8`, dunkelblaue Hose `#3D4A7A`), Kopf `Gray Bun`, Brille `Glasses 2`, Haut `#F2C7A8`; Mimiken `Calm` (ruhig), `Serious` (redet), `Solemn` (denkt) | `hilde` (Frau, älter) |
+| die Richterin (RI), um 40 | Verwaltungsgericht (Funktionsrolle ohne Namen) | Pose `standing/pointing_finger-1` (ganz in Schwarz, wirkt wie eine Robe), Kopf `Long Curly`, Brille `Glasses 4`, Haut `#A86B4A`; Mimiken `Calm` (ruhig), `Serious` (redet) | `lucy` (Frau, jung) |
+| Lexi | Klausurtipp und Merksatz | nach `lexi.py` (`robot_dance-1`, `Serious`/`Smile`) | Carla Blum |
+| Erzählerin | – | – | Carla Blum |
+
+- Grundansicht gespiegelt (blickt nach links zur Tafel), `_r` blickt nach rechts. Szene A: Herr Feldmann blickt nach rechts zu Frau Siebert, sie nach links zu ihm; Szene B: Herr Feldmann blickt nach links zum Verwaltungsgericht; Szene P: Herr Feldmann blickt nach rechts zur Richterin, die nach links zu ihm blickt; an den Tafeln alle nach links.
+- **Alle Grundmimiken mit geschlossenem Mund**; Mundzustände a/o/e nur in `FE_redet`, `FE_redetfroh`, `SI_redet`, `RI_redet` (je links/rechts) und Lexi. Keine Bärte, keine Prothesen-Posen, keine Muster.
+- **Stimmen nur aus dem Pool** (`stephan`, `hilde`, `lucy`; `christian` nicht gebraucht, damit stephan/christian nie Dialogpartner sind); Erzählerin/Lexi Carla ohne Rolle.
+- **Namen mit eindeutig deutscher Aussprache, neu:** Feldmann, Siebert (nicht in der Liste früherer Namen; `grep -w` über alle Folgenordner ohne Treffer). Die Richterin bleibt namenlos.
+- Frau Siebert ist keine Gegenspielerin: sachlich, sie hat sich geirrt; Herr Feldmann empört, am Ende zufrieden über den Teilerfolg.
+- Figuren-PNGs: `../peeps/op_093/` (56 Dateien, nicht im Repository, im Drive-Master).
+
+**Abweichung von den letzten Folgen:** 074 (Altstadt-Café, korallrote Jacke, Ermessensausfall „grundsätzlich nie“), 090 (Drittanfechtung, `easing-1`, `crossed_arms-2`, `blazer-4`), 091 (Katzenkönig, `robot_dance-3`, `shirt-4`, `walking-1`), 092 (Herausgabe, `resting-1/2`, `crossed_arms-1`). Hier **Hauptstraße mit Café (grün) und sechs halbtransparenten Tischen**, Maßband-Requisit (Tabler `ruler-measure`) für die Gehwegbreite; Posen `robot_dance-2`, `blazer-3`, `pointing_finger-1` in 089–092 nicht verwendet. Das Verwaltungsgericht (Säulengebäude, Waage) kehrt bewusst wieder, weil die Klage dort spielt. Kein Richterhammer. Tageslicht-Cremegrund.
+
+## Szenen
+
+| Szene | Ort / Handlung | Requisiten (Iconset:Name, Füllung) | Tafel / Prüfpfad | Bildhalte (Zwiebelschale) | Geräusch |
+|---|---|---|---|---|---|
+| **A Straße mit Café** `fall`–`fe1` | Café, Herr Feldmann; Antrag; sechs Tische (halbtransparent, beantragt); Frau Siebert bringt den Bescheid; Blasen Siebert/Feldmann; Kreuz auf den Tischen; Maßband, Pillen „Gehweg: 5 m breit“, „3 m bleiben frei“ | tabler:`building-store` (Grün) + Pille „Café“, tabler:`coffee`, tabler:`file-text` (Antrag, Bescheid), ph:`picnic-table` ×6 (Weiß, 40 %), tabler:`ruler-measure` (Gelb) | `Fall · Das Café an der Straße` (ab 0,0 s), `Fall · Der Bescheid der Stadt` | Café · Antrag · Tische · Pille · Siebert · Bescheid · Sorge · Blase · Kreuz · Blase Feldmann · Maßband · 3 m | Papier (`szene_093brief_1`), als der Bescheid erscheint |
+| **B Verwaltungsgericht** `klage`–`frage2` | Herr Feldmann mit Klage; zwei Fragen | fluent-hc:`classical-building`, tabler:`file-text` + Pillen „3 Wochen später“, „Klage auf die Erlaubnis“ | `Fall · Die Klage`, `Fall · Erlaubnis oder neue Entscheidung?` | Gericht · 3 Wochen · Klage · Frage 1 · Frage 2 | – |
+| **C Sachverhalt** `sv` | Karte zum Nachlesen | – | `Sachverhalt` | 1 | – |
+| **D Aufbau/Rechtsweg** `aufbau`–`rweg` | A/B, Beispiel NRW, § 40; Herr Feldmann | tabler:`building-store` + Pille „Café“ | `Aufbau · A. Zulässigkeit, B. Begründetheit`, `A. Zulässigkeit › I. Verwaltungsrechtsweg, § 40 VwGO` | A · B · NRW · I. · StrWG · öffentliches Recht · Haken | – |
+| **E Statthaftigkeit** `wl42`–`untaet` | Wortlautkarte § 42 I Alt. 2 mit zwei Markern; Versagungsgegenklage; Untätigkeitsklage; Frau Siebert | tabler:`file-text` + Pille „Bescheid“, Kreuz, tabler:`hourglass` | `A. Zulässigkeit › II. Statthaftigkeit, § 42 I Alt. 2 VwGO` | Karte · Marker · Marker · VA · Kreuz · Versagungsgegenklage · Aufhebung · Fundstelle · Frist · Untätigkeitsklage | – |
+| **F Klagebefugnis** `kb`–`kb3` | möglicher Anspruch; Ermessen; Herr Feldmann | tabler:`file-text` + Pille „Anspruch?“ | `A. Zulässigkeit › III. Klagebefugnis, § 42 II VwGO` | möglich · Fundstelle · Ermessen · fehlerfrei · Fundstelle · StrWG · klagebefugt | – |
+| **G Vorverfahren/Frist** `vv`–`frist2` | § 68 II, § 110 JustG NRW, Länderhinweis, § 74 II; Herr Feldmann | tabler:`mail` + Pille „Widerspruch?“ + Kreuz; tabler:`calendar` + Pille „1 Monat“ | `… › IV. Vorverfahren, § 68 II VwGO`, `… › V. Klagefrist, § 74 II VwGO` | Widerspruch · NRW · Kreuz · auch hier · Land · Frist · Monat · 3 Wochen · Haken | – |
+| **H Klagegegner** `kg`–`zul` | § 78 I Nr. 1, die Stadt; zulässig; Frau Siebert | tabler:`building` + Pille „Stadt“ | `… › VI. Klagegegner, § 78 VwGO`, `A. Zulässigkeit › Ergebnis: zulässig` | Körperschaft · Antrag · Stadt · zulässig | – |
+| **I § 113 V VwGO** `wl113`–`satz2` | Wortlautkarte vollständig, vier Marker; Pillen Satz 1/Satz 2; Richterin | fluent-hc:`balance-scale` | `B. Begründetheit › § 113 V VwGO` | Karte · rechtswidrig · Rechte · spruchreif · Satz 1 · bescheiden · Satz 2 | – |
+| **J Anspruch/Zeitpunkt** `anspr`–`zeit2` | vom Anspruch her; letzte mündliche Verhandlung; Herr Feldmann | tabler:`file-text` + Pille „Erlaubnis?“, tabler:`clock` + Pille „letzte Verhandlung“ | `B. Begründetheit › Anspruch auf die Erlaubnis?`, `… › maßgeblicher Zeitpunkt` | Anspruch · Erlaubnis · Zeitpunkt · Uhr · letzte Verhandlung · Fundstelle · materielles Recht | – |
+| **K Anspruchsprüfung** `agl`–`rf` | I.–IV. mit Haken; Ermessen; Herr Feldmann | ph:`picnic-table` ×6 + Pille „6 Tische“ | `B. Begründetheit › I. …, II. …, III. …, IV. Rechtsfolge: gebunden oder Ermessen?` | I. · Fundstelle · II. · Haken · III. · Pille · Gemeingebrauch · Haken · IV. · Ermessen | – |
+| **L Ermessensfehler** `fehler`–`rw` | falscher Sachverhalt; Richterin; Maßband | tabler:`ruler-measure` + Pillen „5 m breit“, „3 m frei“ | `B. Begründetheit › IV. Rechtsfolge › Ermessensfehler?`, `… › Ablehnung rechtswidrig, Rechtsverletzung` | Anspruch · Grundlage · Messung · 5 m · 3 m · Ermessensfehler · Fundstelle · rechtswidrig · verletzt | – |
+| **M Spruchreife** `spruch`–`bu` | Spruchreifmachung, gebunden/auf null, Verpflichtungsurteil, Grenze, Bescheidungsurteil; Richterin | fluent-hc:`balance-scale` | `B. Begründetheit › V. Spruchreife` | 11 Aufbaustufen | – |
+| **N Im Fall** `fall2`–`erg` | Stadtbild, Lärm; nicht auf null, nicht spruchreif; Bescheidungsurteil; Herr Feldmann | tabler:`building`, tabler:`volume` + Pillen | `… › V. Spruchreife › im Fall`, `Ergebnis · Bescheidungsurteil` | Raum · Stadtbild · Lärm · Fundstelle · null · Kreuz · spruchreif · Kreuz · Bescheidungsurteil | – |
+| **O Tenor** `tenor`–`tim` | zwei Formeln, Zeile für Zeile; Richterin | fluent-hc:`balance-scale` | `Tenor · Verpflichtung oder Bescheidung` | 11 Aufbaustufen | – |
+| **P Urteil** `urteil`–`fe2` | Verwaltungsgericht: Richterin verkündet, Feldmann antwortet | fluent-hc:`balance-scale` | `Ergebnis · Das Urteil` | Szene · Blase Richterin · denkt · Blase Feldmann | – |
+| **Q Klausurtipp** `tipp`–`tipp2` | Lexi warnt | Warnsymbol (Streamline Freehand) | `Klausurtipp · Antrag, Spruchreife und Tenor` | 5 Zeilen | – |
+| **R Klausurschema** `sch`–`s11` | zweispaltig progressiv A I–VI, B Zeitpunkt, I–V | – | `Klausurschema · Verpflichtungsklage` | 16 Aufbaustufen | – |
+| **S Merksatz** `merke`–`m2` | Lexi erklärt | – | `Merksatz` | Marker | – |
+
+## Sachverhaltskarte
+
+„Herr Feldmann führt ein Café an einer Gemeindestraße in einer Stadt in Nordrhein-Westfalen. Er beantragt bei der Stadt eine Sondernutzungserlaubnis: Von Mai bis September will er 6 Tische auf den Gehweg vor dem Café stellen. Frau Siebert von der Stadt übergibt den Bescheid mit Rechtsbehelfsbelehrung: Die Stadt lehnt ab, der Gehweg sei zu schmal, Fußgänger müssten auf die Fahrbahn ausweichen. Tatsächlich ist der Gehweg 5 m breit; mit den Tischen bleiben 3 m frei. 3 Wochen nach der Übergabe klagt Herr Feldmann beim Verwaltungsgericht und verlangt die Erlaubnis.“ – Frage: „Hat die Klage Erfolg – Erlaubnis oder neue Entscheidung?“ (kein Fiktiv-Hinweis)

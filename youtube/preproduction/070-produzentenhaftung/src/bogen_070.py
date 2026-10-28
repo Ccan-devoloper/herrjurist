@@ -1,0 +1,16 @@
+"""Kontaktbögen der Bildhalt-Keyframes aus dem Manifest-Lauf (<out>/bildhalte/*.jpg) zur Sichtprüfung vor dem Vollrender.
+Aufruf: python3 bogen_070.py [<out>]  (Standard ../out)"""
+from PIL import Image, ImageDraw
+import glob, json, sys
+OUT = sys.argv[1] if len(sys.argv) > 1 else "../out"
+man = json.load(open('../bildhalt_manifest.json'))
+fs = sorted(glob.glob(f'{OUT}/bildhalte/*.jpg'))
+eig = [h for h in man['halte'] if h['eigenstaendig']]
+for k in range(0, len(fs), 30):
+    sh = Image.new('RGB', (5 * 480, 6 * 292), 'white'); d = ImageDraw.Draw(sh)
+    for i, f in enumerate(fs[k:k + 30]):
+        x, y = (i % 5) * 480, (i // 5) * 292
+        sh.paste(Image.open(f), (x, y + 22)); h = eig[k + i]
+        d.text((x + 4, y + 4), f"{k + i + 1:03d}  {h['start']:.1f}-{h['ende']:.1f}s  {h['pruefpfad'][:50]}", fill=(200, 0, 0))
+    sh.save(f'{OUT}/manifest_bogen_{k // 30 + 1}.png')
+print(len(fs))

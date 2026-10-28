@@ -1,0 +1,126 @@
+# Folge 121 · Verkehrszeichen als Verwaltungsakt: Kannst du ein Schild anfechten? – Rechtsstand und Belege
+
+**Abruf aller Quellen:** 03.10.2026. Bundesrecht im Volltext auf gesetze-im-internet.de (Einzelnormseiten bzw. Anlage 2 StVO), Landesrecht Nordrhein-Westfalen auf recht.nrw.de (als aktuell ausgewiesene Fassung), Entscheidungen des BVerwG im Volltext auf bverwg.de (Randnummern dort abgelesen), VG Münster im Volltext in NRWE. Keine Entscheidung ist aus dem Gedächtnis zitiert; was in einer gelesenen Entscheidung nur zitiert wird, steht als „zitiert nach“.
+
+**Gesetzesstand:**
+- **VwVfG** (§§ 28, 35, 41, 43), **VwGO** (§§ 40, 42, 58, 68, 70, 74, 78, 80, 113), **StVO** (§§ 39, 41, 45, 49, Anlage 2 lfd. Nr. 61, 62) laut gesetze-im-internet.de am 03.10.2026. § 45 StVO in der geltenden Fassung gelesen: Abs. 9 hat inzwischen **sechs** Sätze; die frühere „Satz 2“-Regel (qualifizierte Gefahrenlage) ist heute **Satz 3**, Satz 4 enthält die Ausnahmen Nr. 1–10.
+- **JustG NRW** (§ 110, zuletzt geändert durch Gesetz vom 10.12.2024, GV. NRW. S. 1207, in Kraft 24.12.2024): https://recht.nrw.de/lrgv/gesetz/24122024-gesetz-ueber-die-justiz-im-land-nordrhein-westfalen-justizgesetz-nordrhein/
+- **VwVfG NRW** (gültig ab 01.01.2025): § 35 Satz 2 und § 43 Abs. 1 wortgleich mit dem Bundesgesetz (NRW schreibt „bekanntgegeben“): https://recht.nrw.de/lrgv/gesetz/01012025-verwaltungsverfahrensgesetz-fuer-das-land-nordrhein-westfalen
+
+**Beispielland:** Nordrhein-Westfalen, ausdrücklich offengelegt („Ein Morgen in einer Stadt in Nordrhein-Westfalen“; „Ein Vorverfahren braucht sie in Nordrhein-Westfalen nicht … In anderen Ländern kann zuerst ein Widerspruch nötig sein“). Keine Länderliste der Vorverfahrensregeln (nur NRW geprüft).
+
+**Fallannahmen (fiktiver Fall nach dem Hook des Themenplans):**
+- Frau Wittmann (um 65) parkt seit zwanzig Jahren vor ihrem Haus in einer Stadt in NRW. Über Nacht lässt die Stadt dort ein **dauerhaftes absolutes Haltverbot (Zeichen 283, Anlage 2 lfd. Nr. 62 StVO)** aufstellen, gut sichtbar, ohne Zusatzzeichen. Sie sieht es am nächsten Morgen zum ersten Mal. Ihr Auto steht an diesem Morgen nicht unter dem Schild (Bild: früher ihr Platz, heute das Schild); Abschleppen und Vorlaufzeit sind nicht Thema.
+- Herr Buchholz von der **Straßenverkehrsbehörde der Stadt** nennt nur den pauschalen Grund „Sicherheit und Ordnung des Verkehrs“. Besondere Umstände an der Stelle nennt die Stadt auch später (bis zur letzten mündlichen Verhandlung) nicht. Zuständigkeit der Stadt als Straßenverkehrsbehörde ist Fallannahme (keine Zuständigkeitsnorm geprüft).
+- Die Nachbarin Frau Wolter und alle Figurenreden sind Dramatisierung; alle Personen sind erfunden.
+
+**Gesamtwissen** (UNCERTIFIED; Fundstelle laut Themenplan „Einzelprobleme 8.11 Verkehrszeichen“, Anker `#verkehrszeichen`): „Verkehrszeichen mit Gebots- oder Verbotswirkung werden als Allgemeinverfügungen … behandelt. Bekanntgabe erfolgt durch Aufstellung …; Fristen- und Bestandskraftfragen knüpfen an diese besondere Bekanntgabe an.“ Deckt sich mit den Primärquellen; nur Wegweiser, kein Beleg. Keine Auszüge im Repository.
+
+## Normen (Wortlaut, Abruf 03.10.2026)
+
+| Norm | Wortlaut (Auszug) | Verwendung | Quelle |
+|---|---|---|---|
+| **§ 35 Satz 2 VwVfG** | „Allgemeinverfügung ist ein Verwaltungsakt, der sich an einen nach allgemeinen Merkmalen bestimmten oder bestimmbaren Personenkreis richtet oder die öffentlich-rechtliche Eigenschaft einer Sache oder ihre Benutzung durch die Allgemeinheit betrifft.“ | **Wortlautkarte** (feste Zeilen per Assertion gegen den Normtext), drei Varianten markiert | https://www.gesetze-im-internet.de/vwvfg/__35.html |
+| § 41 Abs. 3, 4 VwVfG | Abs. 3: öffentliche Bekanntgabe, wenn durch Rechtsvorschrift zugelassen; Allgemeinverfügung auch, wenn Bekanntgabe an die Beteiligten untunlich. Abs. 4 Satz 1: „Die öffentliche Bekanntgabe eines schriftlichen oder elektronischen Verwaltungsaktes wird dadurch bewirkt, dass sein verfügender Teil ortsüblich bekannt gemacht wird.“ | Tafel: „keine ortsübliche Bekanntmachung, § 41 Abs. 4 VwVfG“ (siehe Abweichung vom Themenplan) | https://www.gesetze-im-internet.de/vwvfg/__41.html |
+| **§ 43 Abs. 1 Satz 1 VwVfG** | „Ein Verwaltungsakt wird gegenüber demjenigen, für den er bestimmt ist oder der von ihm betroffen wird, in dem Zeitpunkt wirksam, in dem er ihm bekannt gegeben wird.“ | Wirksamkeit mit Bekanntgabe | https://www.gesetze-im-internet.de/vwvfg/__43.html |
+| § 28 Abs. 2 Nr. 4 VwVfG | „Von der Anhörung kann abgesehen werden, wenn sie nach den Umständen des Einzelfalls nicht geboten ist, insbesondere wenn … 4. die Behörde eine Allgemeinverfügung … erlassen will“ | formell: Anhörung entbehrlich | https://www.gesetze-im-internet.de/vwvfg/__28.html |
+| § 39 Abs. 1 StVO | „… werden örtliche Anordnungen durch Verkehrszeichen nur dort getroffen, wo dies auf Grund der besonderen Umstände zwingend geboten ist.“ | Fundstelle „vgl. § 39 Abs. 1, § 45 Abs. 4 StVO“ (Bekanntgabe durch Aufstellen, nach BVerwG) | https://www.gesetze-im-internet.de/stvo_2013/__39.html |
+| § 41 Abs. 1 StVO | „Wer am Verkehr teilnimmt, hat die durch Vorschriftzeichen nach Anlage 2 angeordneten Ge- oder Verbote zu befolgen.“ | Hintergrund | https://www.gesetze-im-internet.de/stvo_2013/__41.html |
+| Anlage 2 lfd. Nr. 62 StVO (Zeichen 283) | „Absolutes Haltverbot. Ge- oder Verbot: Das Halten auf der Fahrbahn ist verboten.“ Nr. 61: gilt nur auf der Straßenseite, auf der das Zeichen steht, bis zur nächsten Kreuzung oder Einmündung | Fall („keiner darf mehr halten, nicht mal zum Ausladen“; Gegensatz Zeichen 286 Nr. 63: Be- oder Entladen erlaubt); stilisiertes Zeichen im Bild | https://www.gesetze-im-internet.de/stvo_2013/anlage_2.html |
+| **§ 45 Abs. 1 Satz 1 StVO** | „Die Straßenverkehrsbehörden können die Benutzung bestimmter Straßen oder Straßenstrecken aus Gründen der Sicherheit oder Ordnung des Verkehrs beschränken oder verbieten und den Verkehr umleiten.“ | **Wortlautkarte**, Rechtsgrundlage | https://www.gesetze-im-internet.de/stvo_2013/__45.html |
+| § 45 Abs. 4 StVO | „Die genannten Behörden dürfen den Verkehr nur durch Verkehrszeichen und Verkehrseinrichtungen regeln und lenken; …“ | Fundstelle Bekanntgabe | wie oben |
+| **§ 45 Abs. 9 Satz 1, 3 StVO** | S. 1: „Verkehrszeichen und Verkehrseinrichtungen sind nur dort anzuordnen, wo dies auf Grund der besonderen Umstände zwingend erforderlich ist.“ S. 3: „Insbesondere Beschränkungen und Verbote des fließenden Verkehrs dürfen nur angeordnet werden, wenn auf Grund der besonderen örtlichen Verhältnisse eine Gefahrenlage besteht, die das allgemeine Risiko einer Beeinträchtigung der in den vorstehenden Absätzen genannten Rechtsgüter erheblich übersteigt.“ | **Wortlautkarte** (Auszug S. 1 und S. 3, Auslassungen „…“; S. 2 Gefahrzeichen, S. 4–6 Ausnahmen nicht abgedruckt) | wie oben |
+| § 49 Abs. 3 Nr. 4 StVO | ordnungswidrig handelt, wer „entgegen § 41 Absatz 1 ein durch Vorschriftzeichen angeordnetes Ge- oder Verbot der Anlage 2 Spalte 3 nicht befolgt“ | Klausurtipp: Bußgeld | https://www.gesetze-im-internet.de/stvo_2013/__49.html |
+| § 40 Abs. 1 Satz 1 VwGO | Verwaltungsrechtsweg in öffentlich-rechtlichen Streitigkeiten nichtverfassungsrechtlicher Art | Zulässigkeit | https://www.gesetze-im-internet.de/vwgo/__40.html |
+| § 42 Abs. 1, 2 VwGO | Anfechtungsklage; Klagebefugnis („… geltend macht, durch den Verwaltungsakt … in seinen Rechten verletzt zu sein“) | Zulässigkeit | https://www.gesetze-im-internet.de/vwgo/__42.html |
+| § 68 Abs. 1 VwGO | Vorverfahren vor der Anfechtungsklage; „Einer solchen Nachprüfung bedarf es nicht, wenn ein Gesetz dies bestimmt …“ | „andere Länder: ggf. erst Widerspruch“ | https://www.gesetze-im-internet.de/vwgo/__68.html |
+| **§ 110 Abs. 1 Satz 1 JustG NRW** | „Vor Erhebung einer Anfechtungsklage bedarf es einer Nachprüfung in einem Vorverfahren abweichend von § 68 Absatz 1 Satz 1 der Verwaltungsgerichtsordnung nicht.“ Ausnahmen Abs. 2 Nr. 1–12 (Straßenverkehrsrecht nicht darunter); Abs. 3 Satz 1 nur für nicht beteiligte Dritte gegen begünstigende VA (nicht einschlägig) | „in NRW nicht nötig, in der Regel“ | recht.nrw.de (s. o.) |
+| § 74 Abs. 1 Satz 2 VwGO | ohne Widerspruchsbescheid Klage „innerhalb eines Monats nach Bekanntgabe des Verwaltungsakts“ | Tafel „1 Jahr, § 74 Abs. 1 Satz 2, § 58 Abs. 2 VwGO“ | https://www.gesetze-im-internet.de/vwgo/__74.html |
+| **§ 58 Abs. 2 Satz 1 VwGO** | „Ist die Belehrung unterblieben oder unrichtig erteilt, so ist die Einlegung des Rechtsbehelfs nur innerhalb eines Jahres seit Zustellung, Eröffnung oder Verkündung zulässig, …“ | Jahresfrist | https://www.gesetze-im-internet.de/vwgo/__58.html |
+| § 70 Abs. 2 VwGO | §§ 58, 60 gelten für den Widerspruch entsprechend | Hintergrund (Länder mit Vorverfahren; BVerwG 3 C 37.09 Rn. 14) | https://www.gesetze-im-internet.de/vwgo/__70.html |
+| § 78 Abs. 1 Nr. 1 VwGO | Klage gegen „die Körperschaft, deren Behörde den angefochtenen Verwaltungsakt erlassen … hat“ | „Verklagt wird die Stadt“ (NRW nutzt Nr. 2 nicht; geprüft in Folge 069, RECHTSSTAND dort) | https://www.gesetze-im-internet.de/vwgo/__78.html |
+| § 80 Abs. 1, Abs. 2 Satz 1 Nr. 2, Abs. 5 Satz 1 VwGO | aufschiebende Wirkung; entfällt „bei unaufschiebbaren Anordnungen und Maßnahmen von Polizeivollzugsbeamten“; „Auf Antrag kann das Gericht der Hauptsache die aufschiebende Wirkung in den Fällen des Absatzes 2 Satz 1 Nummer 1 bis 3a ganz oder teilweise anordnen …“ | keine aufschiebende Wirkung (analog), Eilantrag nur genannt | https://www.gesetze-im-internet.de/vwgo/__80.html |
+| **§ 113 Abs. 1 Satz 1, Abs. 5 Satz 2 VwGO** | Abs. 1 S. 1: „Soweit der Verwaltungsakt rechtswidrig und der Kläger dadurch in seinen Rechten verletzt ist, hebt das Gericht den Verwaltungsakt … auf.“ Abs. 5 S. 2: Bescheidungsurteil (Verpflichtungsklage) | Begründetheit, Ergebnis; „kein Bescheidungsurteil“ | https://www.gesetze-im-internet.de/vwgo/__113.html |
+| Art. 2 Abs. 1 GG | allgemeine Handlungsfreiheit | Klagebefugnis, Rechtsverletzung | https://www.gesetze-im-internet.de/gg/art_2.html |
+
+## Entscheidungen (Volltext, Abruf 03.10.2026)
+
+| Entscheidung | Kernaussage für das Video | Quelle |
+|---|---|---|
+| **BVerwG, Urt. v. 06.04.2016 – 3 C 10.15** (Leitentscheidung laut Plan; Haltverbot Zeichen 283, Berlin) | **Rn. 16:** „Nach ständiger Rechtsprechung ist das Haltverbot nach Zeichen 283, wie andere Verkehrsverbote und -gebote, ein Verwaltungsakt in der Form einer Allgemeinverfügung im Sinne des § 35 Satz 2 VwVfG“; „Es wird gemäß § 43 VwVfG … in dem Zeitpunkt wirksam, in dem es ihm bekannt gegeben wird. Die Bekanntgabe erfolgt nach den bundesrechtlichen (Spezial-)Vorschriften der Straßenverkehrs-Ordnung durch Aufstellen des Verkehrszeichens (vgl. insbesondere § 39 Abs. 1 und § 45 Abs. 4 StVO). Dies ist eine besondere Form der öffentlichen Bekanntgabe.“ Sichtbarkeitsgrundsatz („mit einem raschen und beiläufigen Blick“). Leitsatz, Rn. 19, 21: einfache Umschau beim ruhenden Verkehr (in 064 erklärt, hier nur Verweis). **Rn. 22:** Wirksamkeitsvoraussetzung ordnungsgemäße Bekanntgabe (§ 43 Abs. 1 VwVfG). | https://www.bverwg.de/060416U3C10.15.0 |
+| **BVerwG, Urt. v. 23.09.2010 – 3 C 37.09** (BVerwGE 138, 21; Lkw-Überholverbote) | **Leitsatz 1:** Frist für die Anfechtung eines durch Verkehrszeichen bekannt gegebenen Verkehrsverbots beginnt, „wenn er zum ersten Mal auf das Verkehrszeichen trifft“; nicht erneut ausgelöst bei späterer Begegnung. **Rn. 14:** einjährige Frist § 70 Abs. 2 i. V. m. § 58 Abs. 2 VwGO, Beginn erst bei erstmaligem Treffen. **Rn. 15:** VA in Form einer Allgemeinverfügung, § 43 VwVfG, Bekanntgabe durch Aufstellen. **Rn. 16:** Anfechtungsfrist erst, „wenn sich der betreffende Verkehrsteilnehmer erstmals der Regelung des Verkehrszeichens gegenübersieht“ (Art. 19 Abs. 4 GG). **Rn. 18:** kein Neubeginn bei erneutem Gegenübersehen. **Rn. 21:** „gegen einen Dauerverwaltungsakt gerichteten Klage“: maßgeblich die Sach- und Rechtslage der letzten tatsachengerichtlichen Verhandlung. **Rn. 23–25:** Maßstab § 45 Abs. 1 und Abs. 9 StVO; damaliger Satz 2 (heute Satz 3) für „Beschränkungen und Verbote des fließenden Verkehrs“: Gefahrenlage aus besonderen örtlichen Verhältnissen, die das allgemeine Risiko erheblich übersteigt; als speziellere Regel „in seinem Anwendungsbereich“ vor § 39 Abs. 1 und § 45 Abs. 9 Satz 1. **Rn. 28:** Prognose; neue Tatsachen bis zum Schluss der mündlichen Verhandlung. **Rn. 35:** Maßnahmen im Ermessen; bei der Auswahl der Mittel Verhältnismäßigkeit. **Rn. 37:** Darlegungslast „da es sich dabei um Eingriffsvoraussetzungen handelt, grundsätzlich beim Beklagten“. | https://www.bverwg.de/230910U3C37.09.0 |
+| **BVerwG, Urt. v. 06.06.2024 – 3 C 5.23** (Gehwegparken Bremen) | **Rn. 34:** § 45 Abs. 9 Satz 1 StVO: Verkehrszeichen nur, wo aufgrund der besonderen Umstände zwingend erforderlich. **Rn. 35:** Pflicht, „restriktiv zu verfahren und stets nach pflichtgemäßem Ermessen zu prüfen, ob die vorgesehene Regelung … deshalb zwingend erforderlich ist, weil die allgemeinen und besonderen Verkehrsregeln der Verordnung für einen sicheren und geordneten Verkehrsablauf nicht ausreichen“. **Rn. 36:** § 45 Abs. 9 Satz 3 StVO gilt nicht für den ruhenden Verkehr; „die Beschränkung auf den fließenden Verkehr ist abschließend“. | https://www.bverwg.de/060624U3C5.23.0 |
+| **BVerwG, Urt. v. 24.01.2019 – 3 C 7.17** (BVerwGE 164, 253; Parkverbot gegenüber Grundstückszufahrt) | **Rn. 11:** Rechtsgrundlage für ein Parkverbot § 45 Abs. 1 Satz 1 i. V. m. Abs. 9 Satz 1 StVO; „Bei dem begehrten Parkverbot handelt es sich um eine den Verkehr beschränkende Maßnahme im Sinne dieser Regelung.“ **Rn. 13:** „Eine entsprechende Ermessensentscheidung ist der Straßenverkehrsbehörde erst dann eröffnet, wenn die tatbestandlichen Voraussetzungen erfüllt sind …“ | https://www.bverwg.de/240119U3C7.17.0 |
+| **BVerwG, Urt. v. 24.05.2018 – 3 C 25.16** | **Rn. 14:** mobiles Haltverbotsschild Zeichen 283 „wie jedes andere Verkehrszeichen“ Allgemeinverfügung; „Es enthält nicht nur das Verbot, an der gekennzeichneten Stelle zu halten, sondern zugleich ein – entsprechend § 80 Abs. 2 Satz 1 Nr. 2 VwGO sofort vollziehbares – Wegfahrgebot“ (unter Berufung auf 11 C 32.92, nur zitiert nach). | https://www.bverwg.de/240518U3C25.16.0 |
+| BVerwG, Urt. v. 21.08.2003 – 3 C 15.03 (Radweg-Benutzungspflicht) | Volltext auf bverwg.de **ohne Randnummern**: Verkehrsteilnehmer wird durch einmaliges Befahren Adressat eines Dauerverwaltungsakts; bei Adressaten belastender VA „stets die Bejahung der Klagebefugnis, weil zumindest eine Verletzung der allgemeinen Freiheitsgewährleistung nach Art. 2 Abs. 1 GG in Betracht kommt“; Radweg-Benutzungsgebot „in entsprechender Anwendung von § 80 Abs. 2 Nr. 2 VwGO … sofort vollziehbar“. **Im Video und in der Beschreibung ohne Aktenzeichen** (Vorgabe: BVerwG nur mit Randnummer); Tafel ohne Fundstelle. | https://www.bverwg.de/210803U3C15.03.0 |
+| **VG Münster, Urt. v. 14.11.2011 – 1 K 605/10** | **Rn. 18:** Zeichen 314 mit Zusatzzeichen „ein Verwaltungsakt in der Form der Allgemeinverfügung im Sinne des § 35 Satz 2 dritter Fall VwVfG NRW“ | https://nrwe.justiz.nrw.de/ovgs/vg_muenster/j2011/1_K_605_10urteil20111114.html |
+| BVerwG, Urt. v. 22.01.2021 – 6 C 26.19 | Rn. 25, 33: Benennung der Varianten von § 35 Satz 2 (personenbezogen 1. Var., sachbezogen 2./3. Var.; 3. Var. = Benutzung einer Sache durch die Allgemeinheit) | https://www.bverwg.de/220121U6C26.19.0 |
+
+## Aussage-Beleg-Zuordnung (Skript `src/skript_121.py`)
+
+| Cue | Aussage | Beleg |
+|---|---|---|
+| `fall`–`bu2` | NRW; seit 20 Jahren vor dem Haus geparkt; neues absolutes Haltverbot über Nacht; „keiner darf mehr halten, nicht mal zum Ausladen“; pauschaler Grund der Straßenverkehrsbehörde | Fallannahme; Anlage 2 lfd. Nr. 62 StVO (Halten verboten; Zeichen 286 erlaubt Ladegeschäfte, Nr. 63) |
+| `frage`/`frage2` | Kann man ein Verkehrsschild anfechten? Erfolg? | Hook/Kernfrage des Plans |
+| `natur`/`strspr` | stRspr BVerwG: Haltverbot = VA in Form einer Allgemeinverfügung | 3 C 10.15 Rn. 16; 3 C 25.16 Rn. 14 |
+| `wl35` | § 35 Satz 2 kennt drei Varianten | Normtext; 6 C 26.19 Rn. 25 |
+| `var3` | dritte Variante passt: Benutzung einer Sache (Straße) durch die Allgemeinheit | VG Münster 1 K 605/10 Rn. 18 („dritter Fall“; Tafel: „so etwa“). **Hinweis:** Das BVerwG nennt in Rn. 16 nur „§ 35 Satz 2“ ohne Variante; die Zuordnung ist im Video als Einordnung („Hier passt die dritte“) mit VG-Beleg formuliert |
+| `verweis` | Merkmale des VA in Folge 44 | Querverweis |
+| `dauer` | Schild regelt die Stelle auf Dauer: Dauerverwaltungsakt | 3 C 37.09 Rn. 21; 3 C 15.03 (ohne Rn.) |
+| `bekannt` | wirksam mit Bekanntgabe, § 43 Abs. 1 VwVfG | Normtext; 3 C 10.15 Rn. 16, 22 |
+| `aufstellen` | kein Brief, keine ortsübliche Bekanntmachung nach § 41 Abs. 4; Bekanntgabe nach Spezialregeln der StVO durch Aufstellen, besondere Form der öffentlichen Bekanntgabe | 3 C 10.15 Rn. 16 (wörtlich: „(Spezial-)Vorschriften der Straßenverkehrs-Ordnung“, „besondere Form der öffentlichen Bekanntgabe“); 3 C 37.09 Rn. 15, 17. „keine ortsübliche Bekanntmachung nach § 41 Abs. 4“ ist Beschreibung des tatsächlichen Vorgangs und eigene Folgerung aus Rn. 16 (Spezialvorschriften), kein BVerwG-Zitat |
+| `sicht` | Sichtbarkeitsgrundsatz, erklärt in Folge 64 | 3 C 10.15 Leitsatz, Rn. 16; Querverweis 064 |
+| `wirksam` | gut zu sehen → wirksam | Fallannahme + 3 C 10.15 Rn. 16 |
+| `weg` | Verwaltungsrechtsweg offen | § 40 Abs. 1 Satz 1 VwGO (StVO = öffentliches Recht, Subsumtion) |
+| `statt` | Anfechtungsklage, Ziel Aufhebung | § 42 Abs. 1 VwGO |
+| `befugt` | Klagebefugt als Verkehrsteilnehmerin, die auf das Schild getroffen ist; Adressatin eines belastenden VA; Verletzung der allgemeinen Handlungsfreiheit, Art. 2 Abs. 1 GG | 3 C 15.03 (Volltext, ohne Rn.; deshalb ohne Az. im Video); § 42 Abs. 2 VwGO |
+| `vorv` | NRW: kein Vorverfahren, in der Regel; andere Länder ggf. Widerspruch | § 110 Abs. 1 Satz 1, Abs. 2 JustG NRW; § 68 Abs. 1 VwGO |
+| `frist` | keine Rechtsbehelfsbelehrung → Jahresfrist § 58 Abs. 2 VwGO | § 58 Abs. 2, § 74 Abs. 1 Satz 2 VwGO; 3 C 37.09 Rn. 14 („wegen des Fehlens einer Rechtsmittelbelehrung einjährige“ Frist) |
+| `erstmals` | Beginn erst bei der ersten Begegnung, hier an diesem Morgen | 3 C 37.09 Leitsatz 1, Rn. 14, 16 |
+| `nichtneu` | später erneut vorbei: kein Neubeginn | 3 C 37.09 Leitsatz 1, Rn. 18 |
+| `gegner` | Klage gegen die Stadt | § 78 Abs. 1 Nr. 1 VwGO; Fallannahme (Stadt als Straßenverkehrsbehörde) |
+| `aufsch` | keine aufschiebende Wirkung, Haltverbot sofort vollziehbar, entsprechend § 80 Abs. 2 Satz 1 Nr. 2 VwGO | 3 C 25.16 Rn. 14 (Wegfahrgebot des Zeichens 283); 3 C 15.03 (ohne Rn.) |
+| `eil` | Eilantrag nach § 80 Abs. 5 | § 80 Abs. 5 Satz 1 VwGO (nur genannt; Anwendung „entsprechend“ zu Nr. 2 als Klausurkonvention, nicht vertieft) |
+| `begr` | Begründet, soweit rechtswidrig und Rechtsverletzung, § 113 Abs. 1 | § 113 Abs. 1 Satz 1 VwGO |
+| `egl` | Rechtsgrundlage § 45 Abs. 1 Satz 1 StVO (Wortlaut) | Normtext; 3 C 7.17 Rn. 11 |
+| `formell` | Stadt zuständig; Anhörung bei Allgemeinverfügung entbehrlich | Fallannahme; § 28 Abs. 2 Nr. 4 VwVfG (bzw. wortgleich VwVfG NRW, nicht gesondert abgedruckt) |
+| `wl45`/`s1`/`s3` | § 45 Abs. 9 Satz 1 (zwingend erforderlich), Satz 3 (qualifizierte Gefahrenlage) | Normtext (geltende Fassung, Satz 3!); 3 C 37.09 Rn. 23–24 |
+| `fliess` | Satz 3 nur für Beschränkungen des fließenden Verkehrs, etwa Überholverbot | Normtext; 3 C 37.09 Rn. 23–25 (Lkw-Überholverbot) |
+| `ruhend` | Haltverbot = ruhender Verkehr, Satz 3 nach dem BVerwG nicht anwendbar, es bleibt bei Satz 1 | 3 C 5.23 Rn. 36; 3 C 7.17 Rn. 11 (Parkverbot: § 45 Abs. 1 Satz 1 i. V. m. Abs. 9 Satz 1). Das BVerwG entschied in 3 C 5.23 über ein Einschreiten gegen Gehwegparken, die Aussage zu Satz 3 ist allgemein formuliert („nur des fließenden und nicht des ruhenden Verkehrs“) |
+| `zwingend` | zurückhaltend; Schild nur, wenn die allgemeinen Verkehrsregeln für einen sicheren und geordneten Verkehr nicht ausreichen | 3 C 5.23 Rn. 35 („restriktiv“) |
+| `ermessen` | erst dann Ermessen; Wahl des Mittels: Verhältnismäßigkeit | 3 C 7.17 Rn. 13; 3 C 37.09 Rn. 35 |
+| `hier` | Stadt nennt nur die Worte des Gesetzes, keine besonderen Umstände | Fallannahme; Vergleich mit § 45 Abs. 1 Satz 1 StVO |
+| `last` | Eingriffsvoraussetzungen muss die Behörde darlegen | 3 C 37.09 Rn. 37 (dort zu § 45 Abs. 9 Satz 2 a. F.; Übertragung auf Satz 1 eigene Folgerung, Tafel „vgl.“) |
+| `zeit` | Dauer-VA: letzte mündliche Verhandlung maßgeblich; neue Tatsachen noch möglich, etwa Feuerwehrzufahrt | 3 C 37.09 Rn. 21, 28; Feuerwehrzufahrt = hypothetisches Beispiel ohne eigenen Beleg |
+| `erg`/`aufheb` | beim pauschalen Grund rechtswidrig, Verletzung der Handlungsfreiheit; Klage begründet, Aufhebung | § 45 Abs. 9 Satz 1 StVO (Tatbestand nicht dargetan, 3 C 5.23 Rn. 35; 3 C 7.17 Rn. 13), § 113 Abs. 1 Satz 1 VwGO; Art. 2 Abs. 1 GG |
+| `keinbesch` | kein Bescheidungsurteil, das kennt nur die Verpflichtungsklage | § 113 Abs. 5 Satz 2 VwGO (Gegenschluss zu Abs. 1 Satz 1) |
+| `tipp` | Bis zur Aufhebung gilt das Schild; Ignorieren: Bußgeld, Abschleppen (Folge 64) | § 43 Abs. 2 VwVfG; 3 C 25.16 Rn. 14 (sofort vollziehbar); § 49 Abs. 3 Nr. 4 StVO; Querverweis 064 |
+| `tipp2` | beim Haltverbot nicht die Gefahrenlage aus Satz 3 prüfen; nur fließender Verkehr | 3 C 5.23 Rn. 36 |
+| `sch`–`q2d` | Schema | wie oben (Prüfungsreihenfolge = Klausurkonvention) |
+| `merke`/`m2` | Allgemeinverfügung; anfechtbar binnen eines Jahres ab der ersten Begegnung (ohne Belehrung); Haltverbot nur rechtmäßig, wenn aufgrund besonderer Umstände zwingend erforderlich (notwendige, nicht hinreichende Bedingung) | 3 C 10.15 Rn. 16; 3 C 37.09 Leitsatz 1; § 58 Abs. 2 VwGO; § 45 Abs. 9 Satz 1 StVO |
+
+## Bewusst nicht behauptet
+
+- Kein Anspruch der Anwohnerin auf „ihren“ Parkplatz und keine Aussage zum Anliegergebrauch (keine BVerwG-Fundstelle mit Rn. gelesen); die Klagebefugnis folgt allein aus der Stellung als Verkehrsteilnehmerin/Adressatin.
+- Keine Begründungspflicht des Schildes (§ 39 Abs. 2 VwVfG nicht geprüft und nicht genannt).
+- Kein Abschleppen und keine Vorlaufzeit (BVerwG 3 C 25.16 Rn. 19 ff.) – Thema von Folge 064.
+- Keine Aussage zu Satz 4 (Ausnahmen) und Abs. 10 von § 45 StVO.
+- Keine Länderliste zu Vorverfahren; nur NRW geprüft. Klagegegner in NRW nach Folge 069 (§ 78 Abs. 1 Nr. 2 VwGO dort nicht genutzt; hier nicht neu geprüft).
+- Wie der Eilantrag (§ 80 Abs. 5) entschieden würde, bleibt offen.
+- Literaturstreit zur Variante des § 35 Satz 2 (personen- oder sachbezogen) nicht dargestellt.
+
+## Offene Einschränkungen
+
+- BVerwG 3 C 15.03 (Klagebefugnis, Art. 2 Abs. 1 GG) ist auf bverwg.de ohne Randnummern veröffentlicht; die Aussage steht im Video ohne Aktenzeichen.
+- BVerwG 3 C 5.23 Rn. 35 f. betrifft § 45 Abs. 9 StVO im Rahmen eines Verpflichtungsbegehrens (Einschreiten gegen Gehwegparken); die Übertragung auf die Anfechtung eines Haltverbots ist naheliegend (dieselbe Norm), aber nicht ausdrücklich so entschieden.
+- 3 C 37.09 Rn. 37 (Darlegungslast) betrifft die Eingriffsvoraussetzungen von § 45 Abs. 9 Satz 2 a. F.; Übertragung auf Satz 1 eigene Folgerung („vgl.“).
+- Die Zuordnung zur dritten Variante des § 35 Satz 2 stützt sich auf ein VG-Urteil (Zeichen 314), nicht auf das BVerwG.
+
+## Hinweise zum Themenplan (an den Koordinator)
+
+- **Normen** „§§ 35 S. 2, 41 III, IV, 43 VwVfG; § 45 StVO“: Das BVerwG wendet für die Bekanntgabe nicht § 41 Abs. 3, 4 VwVfG an, sondern die Spezialvorschriften der StVO (§ 39 Abs. 1, § 45 Abs. 4 StVO; „besondere Form der öffentlichen Bekanntgabe“, 3 C 10.15 Rn. 16); § 41 Abs. 4 (ortsübliche Bekanntmachung) passt gerade nicht. Vorschlag `Normen` = `§§ 35 S. 2, 43 I VwVfG; §§ 39 I, 45 I 1, IV, IX 1 und 3 StVO; §§ 42, 58 II, 74 I 2, 80 II 1 Nr. 2 analog, 113 I 1 VwGO; Beispiel NRW: § 110 I 1 JustG NRW`.
+- **Leitentscheidung** „BVerwG, Urt. v. 06.04.2016 – 3 C 10.15 (Sichtbarkeitsgrundsatz)“: zutreffend, für die Anfechtung aber ergänzungsbedürftig. Vorschlag `Leitentscheidung` = `BVerwG, Urt. v. 6.4.2016 – 3 C 10.15, Rn. 16; BVerwG, Urt. v. 23.9.2010 – 3 C 37.09, Rn. 14, 16, 18, 21 (Frist ab erster Begegnung); BVerwG, Urt. v. 6.6.2024 – 3 C 5.23, Rn. 35 f. (§ 45 IX 3 StVO nicht für den ruhenden Verkehr)`.
+- **Auftragstext** (nicht CSV): „Beschränkungen nur bei besonderen örtlichen Verhältnissen und qualifizierter Gefahrenlage“ gilt nach § 45 Abs. 9 **Satz 3** StVO (geltende Fassung; früher Satz 2) nur für den **fließenden** Verkehr; für das Haltverbot (ruhender Verkehr) bleibt es bei Satz 1 („zwingend erforderlich“), BVerwG 3 C 5.23 Rn. 36. Das Video erklärt genau diesen Unterschied (auch als Klausurtipp).
+- **Rechtsstand/Länder** leer: Vorschlag `Rechtsstand/Länder` = `Vorverfahren je nach Land (NRW: entbehrlich, § 110 I 1 JustG NRW); § 45 IX StVO: qualifizierte Gefahrenlage heute Satz 3, nur fließender Verkehr`.
+- **Kernfrage** „… Bekanntgabe durch Aufstellen, Sichtbarkeitsgrundsatz, Anfechtungsklage“: Vorschlag `Kernfrage` = `Verkehrszeichen als Allgemeinverfügung (§ 35 S. 2 VwVfG), Bekanntgabe durch Aufstellen, Anfechtungsklage: Frist ab erster Begegnung, keine aufschiebende Wirkung, § 45 IX 1 StVO beim ruhenden Verkehr`.
+- **Beschreibung (Anfang)**, Titel, Hook, Thumbnail-Texte („SCHILD ANFECHTEN?“, „SCHILD = VA?“): passen.

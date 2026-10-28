@@ -1,0 +1,47 @@
+# Folge 108 · Bescheidungsurteil oder Verpflichtungsurteil? Spruchreife erklärt – Szenenplan
+
+**Stand:** 03.10.2026 · Serienstandard Open Peeps (Katzenkönig) · Cue-Marken wie in [`src/skript_108.py`](src/skript_108.py) · Belege in [`RECHTSSTAND.md`](RECHTSSTAND.md)
+**Format:** Fr · 2. Examen · VwGO-Praxis, Themenplan-Format „Schema“; Voraussetzungsfolge 102 (Anfechtungsurteil, Tenor, Kosten, Vollstreckbarkeit), anknüpfend an 093 (Verpflichtungsklage, Spruchreife – hier nur zwei Sätze mit Verweis) und 074 (Ermessen, Sondernutzung). Übungsfall nach dem Hook („Ein Wirt klagt auf eine Sondernutzungserlaubnis für seine Terrasse, über die die Stadt nach Ermessen entscheidet“), **Beispielland Brandenburg** (Ermessen steht im Wortlaut, § 18 Abs. 2 Satz 3 BbgStrG; Widerspruchsverfahren findet statt; Behördenprinzip § 8 Abs. 2 BbgVwGG): Herr Haberland führt das Gasthaus am Marktplatz und beantragt acht Tische auf dem Platz; Frau Seeger von der Stadt lehnt ab, um die anderen Wirte vor Konkurrenz zu schützen; Widerspruch erfolglos; Verpflichtungsklage auf Erteilung; die Richterin: Konkurrenzschutz hat keinen Straßenbezug, Markttage und Wege sind noch abzuwägen. Ablauf: Fall → Gericht und Frage → Sachverhalt → Spruchreife kurz → 1. Antrag (Wortlautkarte § 88, Minus, Hilfsantrag) → 2. Tenor (Wortlautkarte § 113 V; Variante Verpflichtungsurteil mit Beklagtem; Bescheidungsurteil, „Im Übrigen …“) → 3. Kosten (Wortlautkarte § 155 I 1, je zur Hälfte) → Klausurtipp mit Kostenvergleich (Lexi) → 4. Vollstreckbarkeit (ein Satz) → vollständiger Tenor → Schema → Merksatz (Lexi).
+**Länge:** Hauptfilm 5:27,4 (4.660 gesprochene Zeichen); Begründung in ABNAHME.md.
+
+## Besetzung
+
+| Figur | Rolle | Open Peeps | Stimme |
+|---|---|---|---|
+| Herr Haberland (HA), um 50 | Wirt des Gasthauses am Marktplatz, Kläger | Pose `standing/robot_dance-3` (korallrotes Oberteil `#F07A6A`, dunkelblaue Hose `#3D4A7A`), Kopf `Short 3` (dunkles Haar), Haut `#E8B998`; Mimiken `Calm` (ruhig), `Driven` (redet), `Cute` (hofft), `Concerned\|Serious` (Sorge), `Rage\|Serious` (Ärger), `Suspicious` (denkt) | `stephan` (Mann, mittel) |
+| Frau Seeger (SE), um 60 | Sachbearbeiterin der Stadt | Pose `standing/pointing_finger-1` (schwarzes Kostüm; die Pose hat ein durchgehendes Oberteil, Einfärbung greift nicht), Kopf `Gray Bun`, Brille `Glasses 4`, Haut `#F2C7A8`; Mimiken `Calm` (ruhig), `Serious` (redet), `Solemn` (denkt) | `hilde` (Frau, älter) |
+| die Richterin (RI), um 35 | Verwaltungsgericht (Funktionsrolle ohne Namen) | Pose `standing/crossed_arms-1` (dunkelgraues Oberteil `#4A4A55`, dunkle Hose), Kopf `Long` (dunkles Haar), Brille `Glasses 2`, Haut `#D9A07A`; Mimiken `Calm` (ruhig), `Serious` (redet) | `lucy` (Frau, jung) |
+| Lexi | Klausurtipp und Merksatz | nach `lexi.py` (`robot_dance-1`, `Serious`/`Smile`) | Carla Blum |
+| Erzählerin | – | – | Carla Blum |
+
+- Grundansicht gespiegelt (blickt nach links zur Tafel), `_r` blickt nach rechts. Szene A: Herr Haberland blickt nach rechts zu Frau Seeger, sie nach links zu ihm; Szene B: Herr Haberland blickt nach rechts zur Richterin, sie nach links zu ihm; an den Tafeln alle nach links.
+- **Alle Grundmimiken mit geschlossenem Mund**; Mundzustände a/o/e nur in `HA_redet`, `SE_redet`, `RI_redet` (je links/rechts) und Lexi. Keine Bärte, keine Prothesen-Posen.
+- **Stimmen nur aus dem Pool:** `stephan`, `hilde`, `lucy`; `christian` nicht verwendet (damit nie stephan und christian in einer Szene). Erzählerin/Lexi Carla ohne Rolle.
+- **Namen mit eindeutig deutscher Aussprache, neu:** Haberland, Seeger (nicht in der Liste früherer Namen; `grep -w` über alle Folgenordner ohne Treffer). Die Richterin bleibt namenlos.
+- Herr Haberland ist kein Querulant: Er hat in der Sache teilweise recht und verlangt zu viel. Frau Seeger sachlich.
+- Figuren-PNGs: `../peeps/op_108/` (50 Dateien, nicht im Repository, im Drive-Master).
+
+**Abweichung von den letzten Folgen:** 074/093 (NRW, Café am Gehweg, Tabler `building-store`, Phosphor `picnic-table`; Ermessensausfall bzw. falsche Gehwegbreite), 102 (Wäscherei; `polka_dots`, `shirt-3`, `easing-2`), 105–107 (`resting-1/2`, `walking-2`, `blazer-2/3/4`, `crossed_arms-2`, `shirt-3`). Hier **Marktplatz in Brandenburg** mit Gasthaus (Phosphor `storefront`, gelb), Brunnen (Tabler `fountain`) und Phosphor-`table`; anderer Ablehnungsgrund (Konkurrenzschutz); Posen `robot_dance-3`, `pointing_finger-1`, `crossed_arms-1` in 102–107 nicht als Fallfigur verwendet; kein Muster. Das Verwaltungsgericht (Säulengebäude) kehrt bewusst wieder, weil die Klage dort spielt. Kein Richterhammer. Tageslicht-Cremegrund.
+
+## Szenen
+
+| Szene | Ort / Handlung | Requisiten (Iconset:Name, Füllung) | Tafel / Prüfpfad | Bildhalte (Zwiebelschale) | Geräusch |
+|---|---|---|---|---|---|
+| **A Marktplatz** `fall`–`ha1` | Gasthaus, Brunnen, Herr Haberland; Antrag; drei Tische; Frau Seeger bringt den Bescheid; Blase Seeger; Kreuz an den Tischen; Widerspruch zurückgewiesen; Blase Haberland | ph:`storefront` (Gelb), tabler:`fountain` (Blau), tabler:`file-text` (Antrag, Bescheid), ph:`table` ×3 (Weiß) | `Fall · Die Terrasse am Marktplatz` (ab 0,0 s), `Fall · Ablehnung und Widerspruch` | Platz · hofft · Antrag · Tische · Pille · Seeger · Bescheid · Blase · Sorge · Kreuz · Widerspruch · Ärger · Blase Haberland | Papier (`szene_108brief_1`), als der Bescheid erscheint |
+| **B Verwaltungsgericht** `klage`–`frage2` | Klage, Richterin, Pillen „Konkurrenzschutz …“, „offen: Markttage und Wege“, Fragen | fluent-hc:`classical-building`, tabler:`file-text` | `Fall · Die Verpflichtungsklage`, `Fall · Verpflichtung oder Bescheidung?` | Gericht · Klage · Richterin · Blase · Pillen · denkt · Frage 1 · Frage 2 | – |
+| **C Sachverhalt** `sv` | Karte zum Nachlesen | – | `Sachverhalt` | 1 | – |
+| **D Spruchreife kurz** `spr`–`verweis` | § 18 II 3 BbgStrG, Konkurrenzschutz, nicht auf null, Verweis; Richterin | tabler:`calendar` + Pille „Wochenmarkt“ | `Vorfrage · Spruchreife, § 113 V VwGO` | Ermessen · Fundstelle · Konkurrenzschutz · Kreuz · null · Markttage · nicht spruchreif · Verweis | – |
+| **E Antrag** `wl88`–`mehr` | Wortlautkarte § 88 mit Markern; Rechtsschutzziel (6 B 22.22 Rn. 19), Minus (Rn. 20), Hilfsantrag, nie mehr als beantragt; Herr Haberland | tabler:`file-text` + Pillen „Antrag: Erlaubnis erteilen“, „darin: Bescheidung“ | `1. Antrag › Klagebegehren, § 88 VwGO` | Karte · 2 Marker · Ziel · Minus · Hilfsantrag · mehr · Kreuz | – |
+| **F Tenor** `wl113`–`satz2` | Wortlautkarte § 113 V (vollständig) mit drei Markern; Pillen Satz 1/Satz 2; Richterin | fluent-hc:`balance-scale` | `2. Tenor › Verpflichtung oder Bescheidung, § 113 V VwGO` | Karte · spruchreif · Satz 1 · Andernfalls · Satz 2 · Beachtung | – |
+| **G Wäre die Sache spruchreif** `bekl`–`klar` | Beklagter (§ 8 II BbgVwGG); Tenorkasten Verpflichtungsurteil Zeile für Zeile; Aufhebung zur Klarstellung (6 B 53.19 Rn. 5); Herr Haberland | fluent-hc:`classical-building` + Pille „wenn spruchreif“ | `2. Tenor › wenn spruchreif: Verpflichtungsurteil, § 113 V 1 VwGO` | Beklagter · Fundstelle · 5 Tenorzeilen · Klarstellung · Fundstelle | – |
+| **H Bescheidungsurteil** `bu`–`ueb` | „Spruchreife fehlt“; Tenorkasten: Aufhebung, Neubescheidung, Antrag, „Im Übrigen …“ | tabler:`file-text` + Pillen „neu entscheiden“, „im Übrigen: abgewiesen“ | `2. Tenor › hier: Bescheidungsurteil, § 113 V 2 VwGO` | Block · Satz 1 · 3 Zeilen · Antrag · Im Übrigen · Sorge | – |
+| **I Kosten** `kosten`–`t3` | Wortlautkarte § 155 I 1; teilweise unterlegen; keine feste Quote; Kostentenor je zur Hälfte | tabler:`calculator` + Pille „je 1/2“ | `3. Kosten › teilweises Unterliegen, § 155 I 1 VwGO` | Karte · 2 Marker · teilweise · Quote · Tenor · Fundstelle | – |
+| **J Klausurtipp** `tipp`–`rech3` | Lexi warnt: nur Bescheidung beantragen; 3.000 € angenommen; Verpflichtungsantrag 1.500 € / Bescheidungsantrag 0 €; Einschränkung (7 C 2.09 Rn. 67) | Warnsymbol (Streamline Freehand) | `Klausurtipp · Bescheidungsantrag, wenn nicht spruchreif` | Tipp · 3.000 € · Block rot · Zeile · Block grün · Zeile · § 154 · soweit | – |
+| **K Vollstreckbarkeit** `vollstr` | § 167 II; Verweis auf Video zum Anfechtungsurteil; Richterin | tabler:`coin` (Gelb) | `4. Vorläufige Vollstreckbarkeit, § 167 II VwGO` | Kosten · Fundstelle · Verweis | – |
+| **L Vollständiger Tenor** `voll` | Karte mit dem ganzen Tenor (erscheint auf einmal, ≈ 8 s Lesezeit) | – | `Ergebnis · Der vollständige Tenor` | 1 | – |
+| **M Schema** `sch`–`s4` | progressiv: 1. Antrag – Minus – 2. Tenor – Neubescheidung – im Übrigen – 3. Kosten – 4. Vollstreckbarkeit | – | `Schema · Verpflichtungs- oder Bescheidungsurteil` | 11 Aufbaustufen | – |
+| **N Merksatz** `merke`–`m2` | Lexi erklärt | – | `Merksatz` | Marker | – |
+
+## Sachverhaltskarte
+
+„Herr Haberland führt ein Gasthaus am Marktplatz einer amtsfreien Stadt in Brandenburg. Am 2. Februar 2026 beantragt er eine Sondernutzungserlaubnis für 8 Tische auf dem Platz, von Mai bis September. Mit Bescheid vom 10. März 2026 lehnt die Stadt ab: Am Markt gebe es schon 2 Terrassen, man wolle die anderen Wirte vor Konkurrenz schützen. Der Widerspruch wird mit Widerspruchsbescheid vom 5. Mai 2026 zurückgewiesen. / Herr Haberland erhebt fristgerecht Verpflichtungsklage und beantragt, ihm die Erlaubnis zu erteilen. Das Gericht stellt fest: Andere Belange mit Bezug zur Straße (Wochenmarkt, Wege für Fußgänger) hat die Stadt noch nicht abgewogen.“ – Frage: „Verpflichtungsurteil oder Bescheidungsurteil? Und wer trägt die Kosten?“ (kein Fiktiv-Hinweis)
