@@ -54,7 +54,12 @@ const abmeldelink = email => {
   return `${basis}/abmelden?e=${Buffer.from(e).toString('base64url')}&t=${t}`;
 };
 // {{ unsubscribe }} durch einen Platzhalter je Empfänger ersetzen
-const html = kampagne.htmlContent.replace(/\{\{\s*unsubscribe\s*\}\}/g, '{{ params.ABMELDEN }}');
+// Abmeldezeile immer in der aktuellen, dezenten Fassung (ältere Entwürfe in Brevo haben noch die alte)
+const ABMELDEZEILE = `<p style="margin:18px 0 0;font:400 10px/1.4 Nunito,'Segoe UI',Arial,sans-serif;color:#D9D2C1">Du bekommst diese Mail, weil du dich für den Wochenbrief eingetragen hast. <a href="{{ params.ABMELDEN }}" style="color:#D9D2C1;text-decoration:none">Abmelden</a></p>`;
+const html = kampagne.htmlContent
+  .replace(/<p[^>]*>\s*Du bekommst diese Mail[\s\S]*?<\/p>/, ABMELDEZEILE)
+  .replace(/\{\{\s*unsubscribe\s*\}\}/g, '{{ params.ABMELDEN }}');
+if (!html.includes('params.ABMELDEN')) throw new Error('Abmeldelink fehlt im Mail-HTML – Versand abgebrochen.');
 const senden = async empfaenger => {
   for (let i = 0; i < empfaenger.length; i += 900) {
     await brevo('POST', 'smtp/email', {
