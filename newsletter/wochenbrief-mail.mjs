@@ -41,6 +41,6 @@ ${knopf}
 <tr><td style="padding:10px 24px 24px"><div style="background:#FFF3B0;border:3px solid #111;border-radius:16px;padding:14px 16px;font:700 15px/1.5 ${F};color:#111"><b>So holst du am meisten raus:</b> Minifall lesen → kurz selbst lösen → mit der Lösung direkt darunter vergleichen.</div>
 <p style="margin:16px 0 0;font:600 11px/1.5 ${F};color:#5C5C68">Lernmaterial zur Examensvorbereitung, keine Rechtsberatung.</p></td></tr>
 </table>
-<p style="margin:14px 0 0;font:600 11px/1.5 ${F};color:#5C5C68">Du bekommst diese Mail, weil du dich für den Wochenbrief eingetragen hast. <a href="{{ unsubscribe }}" style="color:#5C5C68">Abmelden</a></p>
+<p style="margin:18px 0 0;font:400 10px/1.4 ${F};color:#D9D2C1">Du bekommst diese Mail, weil du dich für den Wochenbrief eingetragen hast. <a href="{{ unsubscribe }}" style="color:#D9D2C1;text-decoration:none">Abmelden</a></p>
 </td></tr></table></body></html>`;
 }
