@@ -35,7 +35,7 @@ jobs:
             newsletter/wochenbriefe
       - name: Nur einmal um 17 Uhr Berlin
         id: zeit
-        run: echo "jetzt=$(TZ=Europe/Berlin date +%H)" >> "$GITHUB_OUTPUT"
+        run: echo "jetzt=$(TZ=Europe/Berlin date +%-H)" >> "$GITHUB_OUTPUT"
       - if: steps.zeit.outputs.jetzt == '17' || github.event_name == 'workflow_dispatch'
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
@@ -49,7 +49,7 @@ jobs:
       jetzt: ${{ steps.z.outputs.jetzt }}
     steps:
       - id: z
-        run: echo "jetzt=$(TZ=Europe/Berlin date +%H)" >> "$GITHUB_OUTPUT"
+        run: echo "jetzt=$(TZ=Europe/Berlin date +%-H)" >> "$GITHUB_OUTPUT"
 
   veroeffentlichen:
     needs: zeit
