@@ -46,7 +46,8 @@ if (modus === 'vorschau') {
   console.log(`✓ Vorschau von Wochenbrief ${ausgabe.nr} (${ausgabe.datum}) an ${an.join(', ')} geschickt.`);
 } else if (modus === 'senden') {
   const stunde = +berlin({ hour: '2-digit', hour12: false });
-  if (stunde !== 10 && !process.env.SOFORT) { console.log(`Berlin ${stunde} Uhr – Versand erst um 10 Uhr.`); process.exit(0); }
+  // GitHub startet geplante Läufe oft mit Stunden Verspätung: ab 10 Uhr senden, solange die Kampagne noch Entwurf ist
+  if (stunde < 10 && !process.env.SOFORT) { console.log(`Berlin ${stunde} Uhr – Versand erst ab 10 Uhr.`); process.exit(0); }
   const pdf = `${process.env.LANDINGPAGE_URL}/wochenbrief/${ausgabe.datum}.pdf`;
   const kopf = await fetch(pdf, { method: 'HEAD' });
   if (!kopf.ok || !/pdf/.test(kopf.headers.get('content-type') ?? '')) throw new Error(`PDF nicht erreichbar (${kopf.status}): ${pdf} – Versand abgebrochen.`);

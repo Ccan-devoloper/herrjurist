@@ -3,12 +3,13 @@ name: Wochenbrief-Versand
 # Freitag 17 Uhr (Berlin): Vorschau der Sonntagsausgabe an WOCHENBRIEF_VORSCHAU_AN – Einspruch bis Sonntag
 # möglich („STOPP“ in den Kampagnennamen in Brevo schreiben oder die Kampagne löschen).
 # Sonntag 10 Uhr (Berlin): fällige PDF veröffentlichen, prüfen, Brevo-Kampagne senden.
-# Zwei Sonntags-Zeiten in UTC decken Sommer- und Winterzeit ab; das Skript sendet nur um 10 Uhr Berlin.
+# Sonntags stündlich ab 8 UTC: GitHub verzögert geplante Läufe oft um Stunden. Gesendet wird ab 10 Uhr Berlin,
+# einmal – danach ist die Kampagne nicht mehr Entwurf und spätere Läufe tun nichts.
 # Benötigt: Secrets BREVO_API_KEY, WOCHENBRIEF_SCHLUESSEL, CLOUDFLARE_*; Variablen WOCHENBRIEF_VORSCHAU_AN, LANDINGPAGE_URL.
 on:
   schedule:
     - cron: "3 15,16 * * 5"   # Freitag
-    - cron: "1 8,9 * * 0"     # Sonntag
+    - cron: "1 8-20 * * 0"    # Sonntag
   workflow_dispatch:
     inputs:
       modus:
@@ -34,7 +35,7 @@ jobs:
             newsletter/wochenbriefe
       - name: Nur einmal um 17 Uhr Berlin
         id: zeit
-        run: echo "jetzt=$(TZ=Europe/Berlin date +%H)" >> "$GITHUB_OUTPUT"
+        run: echo "jetzt=$(TZ=Europe/Berlin date +%-H)" >> "$GITHUB_OUTPUT"
       - if: steps.zeit.outputs.jetzt == '17' || github.event_name == 'workflow_dispatch'
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
@@ -42,17 +43,17 @@ jobs:
         run: node bin/wochenbrief-versand.mjs vorschau
 
   zeit:
-    if: (github.event_name == 'schedule' && github.event.schedule == '1 8,9 * * 0') || (github.event_name == 'workflow_dispatch' && inputs.modus == 'senden')
+    if: (github.event_name == 'schedule' && github.event.schedule == '1 8-20 * * 0') || (github.event_name == 'workflow_dispatch' && inputs.modus == 'senden')
     runs-on: ubuntu-latest
     outputs:
       jetzt: ${{ steps.z.outputs.jetzt }}
     steps:
       - id: z
-        run: echo "jetzt=$(TZ=Europe/Berlin date +%H)" >> "$GITHUB_OUTPUT"
+        run: echo "jetzt=$(TZ=Europe/Berlin date +%-H)" >> "$GITHUB_OUTPUT"
 
   veroeffentlichen:
     needs: zeit
-    if: needs.zeit.outputs.jetzt == '10' || github.event_name == 'workflow_dispatch'
+    if: fromJSON(needs.zeit.outputs.jetzt) >= 10 || github.event_name == 'workflow_dispatch'
     uses: ./.github/workflows/landingpage-deploy.yml
     secrets: inherit
 
